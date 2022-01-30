@@ -125,6 +125,7 @@ var settings = require('electron-settings');
 var path = require("path");
 var logger_1 = require("./logger");
 var logger = new logger_1.Logger();
+var fs = require('fs');
 var Session = /** @class */ (function () {
     function Session() {
     }
@@ -154,6 +155,10 @@ if (!electron_1.app.isDefaultProtocolClient(clientEnv[target].protocol)) {
     // Define custom protocol handler. Deep linking works on packaged versions of the application!
     electron_1.app.setAsDefaultProtocolClient(clientEnv[target].protocol);
 }
+electron_1.protocol.registerSchemesAsPrivileged([
+    {scheme: 'inject', privileges: {bypassCSP: true}}
+]);
+
 var win;
 var modal;
 var modalShown = false;
@@ -269,20 +274,21 @@ function createModal() {
                 '--vw=' + viewportUnits.vw,
                 '--vh=' + viewportUnits.vh,
             ],
-            nodeIntegration: false
+            nodeIntegration: false,
+            contextIsolation: false
         },
         alwaysOnTop: true
     });
     modal.loadURL('http://localhost:4444/overlay');
     modal.once('ready-to-show', function () {
-        console.log('SHOWING MODAL');
+        // console.log('SHOWING MODAL');
         modal.webContents.openDevTools();
         modal.show();
     });
 }
 
 function destroyModal() {
-    console.log('Destroying modal');
+    // console.log('Destroying modal');
     win.webContents.send('destroying-apps-modal');
     modal.destroy();
     modal = null;
@@ -293,7 +299,7 @@ function createWindow(frontEndUrl) {
     console.log('Creating main electron window');
     electron_devtools_installer_1["default"](electron_devtools_installer_1.REDUX_DEVTOOLS)
         .then(function (name) {
-            return console.log("Added Extension:  " + name);
+            // return console.log("Added Extension:  " + name);
         })["catch"](function (err) {
         return console.log('An error occurred: ', err);
     });
@@ -310,7 +316,9 @@ function createWindow(frontEndUrl) {
         fullscreen: fullscreen,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
-            nodeIntegration: false
+            nodeIntegration: false,
+            enableRemoteModule: true,
+            contextIsolation: false
         },
         height: settingsWS.height,
         width: settingsWS.width,
@@ -322,17 +330,13 @@ function createWindow(frontEndUrl) {
     // ? APP BAR LOGIC
     // modalHandler(win);
     win.once('ready-to-show', function () {
-        console.log('ready to show');
+        // console.log('ready to show');
         win.show();
     });
-    if (isDev()) {
-        console.log('is dev');
-        win.webContents.openDevTools();
-    } else {
-    }
-    if (electron_1.systemPreferences.isDarkMode()) {
-        electron_1.systemPreferences.setAppLevelAppearance('dark');
-    }
+    win.webContents.openDevTools();
+    // if (electron_1.nativeTheme.shouldUseDarkColors) {
+    //     electron_1.systemPreferences.setAppLevelAppearance('dark');
+    // }
     win.loadURL(frontEndUrl);
     var handleRedirect = function (e, url) {
         if (url != win.webContents.getURL()) {
@@ -341,13 +345,27 @@ function createWindow(frontEndUrl) {
         }
     };
     win.webContents.on('will-navigate', handleRedirect);
-    win.webContents.on('new-window', handleRedirect);
+
+    electron_1.protocol.registerFileProtocol('inject', (request, callback) => {
+        const path = `${request.url.substr(9)}`;
+        callback(path);
+    });
+    electron_1.session.defaultSession.webRequest.onBeforeRequest({
+        urls: ['https://master.desktop.godsunchained.com/main.*.js']
+    }, (details, callback) => {
+        const url = path.normalize(`${__dirname}/app-main.js`);
+
+        callback({redirectURL: `inject://${url}`});
+    });
+
+    // win.webContents.on('new-window', handleRedirect);
+    win.webContents.setWindowOpenHandler(handleRedirect);
     electron_1.Menu.setApplicationMenu(electron_1.Menu.buildFromTemplate(template));
     console.log('Main electron window created', JSON.stringify(win));
 }
 
 electron_1.ipcMain.on('clear-cache', function () {
-    console.log("ipcMain.on('clear-cache')");
+    // console.log("ipcMain.on('clear-cache')");
     if (win) {
         win.webContents.session.clearCache(function () {
             console.log('cache cleared');
@@ -405,7 +423,7 @@ electron_1.ipcMain.on('toggle-fullscreen', function () {
             win.setBounds(bounds, true);
             win.setFullScreen(!win.isFullScreen());
         }
-        console.log('toggling fullscreen');
+        // console.log('toggling fullscreen');
         settings.set('fullscreen', win.isFullScreen());
     }
 });
@@ -443,7 +461,7 @@ electron_1.ipcMain.on('is-in-game', function (event, isInGame) {
 var cspRules = [
     "default-src 'self' https://*.vimeo.com;",
     // `default-src 'none';`,
-    "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.xsolla.net https://*.immutable.com https://*.godsunchained.com https://connect.facebook.net https://www.recaptcha.net https://www.google.com https://www.gstatic.com/recaptcha/ https://*.vimeocdn.com/ https://www.googletagmanager.com https://www.google-analytics.com https://*.vimeo.com https://*.vimeocdn.com https://*.newrelic.com https://*.nr-data.net;",
+    "script-src 'self' 'unsafe-eval' 'unsafe-inline' inject: inject://*.js https://cdn.xsolla.net https://*.immutable.com https://*.godsunchained.com https://connect.facebook.net https://www.recaptcha.net https://www.google.com https://www.gstatic.com/recaptcha/ https://*.vimeocdn.com/ https://www.googletagmanager.com https://www.google-analytics.com https://*.vimeo.com https://*.vimeocdn.com https://*.newrelic.com https://*.nr-data.net;",
     "img-src 'self' data: https://cdn.xsolla.net https://secure.xsolla.com https://*.immutable.com http://*.godsunchained.com https://*.godsunchained.com https://www.facebook.com https://*.vimeocdn.com/ https://www.google-analytics.com/ https://stats.g.doubleclick.net/ https://www.google.com.au/ https://www.google.com/ https://*.vimeocdn.com https://vimeo.com;",
     "font-src 'self' data: https://*.immutable.com https://*.godsunchained.com https://fonts.googleapis.com https://fonts.gstatic.com;",
     "style-src 'self' 'unsafe-inline' https://*.immutable.com https://*.godsunchained.com https://fonts.googleapis.com https://*.vimeocdn.com/;",

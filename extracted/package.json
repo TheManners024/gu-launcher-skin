@@ -5,6 +5,11 @@
   "author": {
     "name": "Immutable"
   },
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder -mw --dir",
+    "postinstall": "electron-builder install-app-deps"
+  },
   "main": "main.js",
   "private": true,
   "dependencies": {
@@ -18,6 +23,8 @@
     "fs-extra": "^7.0.0",
     "is-running": "^2.1.0",
     "request": "^2.88.0",
-    "rxjs": "~6.5.4"
+    "rxjs": "~6.5.4",
+    "electron": "13.1.2",
+    "electron-builder": "22.11.7"
   }
 }
