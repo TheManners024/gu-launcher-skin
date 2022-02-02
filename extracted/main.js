@@ -356,14 +356,17 @@ function createWindow(frontEndUrl) {
     electron_1.session.defaultSession.webRequest.onBeforeRequest({
         urls: [
             'https://master.desktop.godsunchained.com/main.*.js',
+            'https://master.desktop.godsunchained.com/26.*.js',
             'https://master.desktop.godsunchained.com/styles.*.css'
         ]
     }, (details, callback) => {
         let url = null;
-        if (details.url.endsWith('.js')) {
+        if (details.url.match(/main[.].+[.]js$/)) {
             url = path.normalize(`${__dirname}/app-main.js`);
         } else if (details.url.endsWith('.css')) {
             url = path.normalize(`${__dirname}/app-styles.css`);
+        } else if (details.url.match(/26[.].+[.]js$/) != null) {
+            url = path.normalize(`${__dirname}/app-inventory.js`);
         }
 
         callback({redirectURL: `inject://${url}`});

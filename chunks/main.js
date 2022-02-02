@@ -127,7 +127,7 @@
                 }
 
                 _emitStarterDecks() {
-                    // noop thanks
+                    this._starterDecks.next(Object.assign({}, this.dataStore).starterDecks)
                 }
 
                 _emitActiveDeck(s) {
@@ -144,12 +144,12 @@
                         protoCards: k,
                         inventory: y
                     })))), (0, t.U)(s => this.convertToDeckStarter(s.deck, s.inventory, s.protoCards)), (0, o.q)(), (0, b.b)(s => {
-                        this.dataStore.starterDecks = [], this._emitStarterDecks();
-                    }), (0, S.K)(s => (0, f.of)(s))).subscribe();
+                        this.dataStore.starterDecks = s, this._emitStarterDecks()
+                    }), (0, S.K)(s => (0, f.of)(s))).subscribe()
                 }
 
                 loadStarterDecksApi() {
-                    return this.gameApiService.get("/deck?caller=client").pipe((0, t.U)(s => s.filter(y => false)))
+                    return this.gameApiService.get("/deck?caller=client").pipe((0, t.U)(s => s.filter(y => y.assets.length > 0)))
                 }
 
                 fetchDecks() {
@@ -3126,46 +3126,7 @@
                         return O.triggerCalcs()
                     }), s.qZA(), s.TgZ(3, "div", 3), s.Hsn(4), s.qZA(), s.qZA())
                 },
-                styles: [`
-                [_nghost-%COMP%] {
-                    display: flex;
-                    flex-flow: column nowrap;
-                    height: 100vh;
-                    width: 100vw;
-                    background: var(--gu-blue-dark);
-                }
-                .appRatioSetter[_ngcontent-%COMP%] {
-                    margin: auto;
-                    position: relative;
-                    width: 100vw;
-                    padding-bottom: 56.23%
-                }
-                .appRatioSetter__ratioImage[_ngcontent-%COMP%] {
-                    display: none
-                }
-                .innerAppContainer[_ngcontent-%COMP%] {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    left: 0;
-                    overflow: hidden;
-                    display: flex;
-                    flex-direction: column
-                }
-                @media screen and (min-aspect-ratio: 1282/720) {
-                    .appRatioSetter[_ngcontent-%COMP%] {
-                        height: 100vh;
-                        width: auto;
-                        padding-bottom: 0
-                    }
-                    .appRatioSetter__ratioImage[_ngcontent-%COMP%] {
-                        display: block;
-                        width: auto;
-                        height: 100%
-                    }
-                }
-                `]
+                styles: ["[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;height:100vh;width:100vw;background:#0f1b27;background-image:url(/assets/images/client-background-watermark-x2.webp);background-size:cover;background-position:center}.appRatioSetter[_ngcontent-%COMP%]{margin:auto;position:relative;width:100vw;padding-bottom:56.23%}.appRatioSetter__ratioImage[_ngcontent-%COMP%]{display:none}.innerAppContainer[_ngcontent-%COMP%]{position:absolute;width:100%;height:100%;top:0;left:0;overflow:hidden;display:flex;flex-direction:column}@media screen and (min-aspect-ratio: 1282/720){.appRatioSetter[_ngcontent-%COMP%]{height:100vh;width:auto;padding-bottom:0}.appRatioSetter__ratioImage[_ngcontent-%COMP%]{display:block;width:auto;height:100%}}"]
             }), h
         })();
         var Qe = n(52492), H = n(66088), K = n(41777), a = n(72986), m = n(69808), U = n(80013), se = n(40537),
@@ -3526,34 +3487,7 @@
                         return O.openSettings("immutable")
                     }), s._UZ(7, "gu-icon", 7), s.qZA(), s._UZ(8, "div", 8))
                 },
-                styles: [`
-                [_nghost-%COMP%] {
-                    width:100%;
-                    height:28px;
-                    z-index:23;
-                    display:flex;
-                    flex-direction:row-reverse;
-                    padding-right:8px;
-                }
-                .draggable[_ngcontent-%COMP%] {
-                    flex:1;
-                    -webkit-app-region:drag
-                }
-                .electronMenuItem[_ngcontent-%COMP%]  {
-                    cursor:pointer;
-                    display:flex;
-                    width:28px
-                }
-                .electronMenuItem[_ngcontent-%COMP%]:hover .electronMenuItem__icon[_ngcontent-%COMP%] {
-                    color:#f6f6f6
-                }
-                .electronMenuItem__icon[_ngcontent-%COMP%]  {
-                    font-size: 14px;
-                    margin: auto;
-                    text-shadow: 0 2px 0 rgba(39, 39, 39, .4);
-                    color: #7192b0;
-                }
-                `]
+                styles: ["[_nghost-%COMP%]{width:100%;height:28px;z-index:23;background:#1D2F41;display:flex;flex-direction:row-reverse;padding-right:8px}.draggable[_ngcontent-%COMP%]{flex:1;-webkit-app-region:drag}.electronMenuItem[_ngcontent-%COMP%]{cursor:pointer;display:flex;width:28px}.electronMenuItem[_ngcontent-%COMP%]:hover   .electronMenuItem__icon[_ngcontent-%COMP%]{color:#f6f6f6}.electronMenuItem__icon[_ngcontent-%COMP%]{font-size:14px;margin:auto;text-shadow:0 2px 0 rgba(39,39,39,.4);color:#7192b0}"]
             }), h
         })();
         var kt = n(39765), Ys = n(25774), Es = n(97993);
@@ -5610,7 +5544,7 @@
   /* Icon coloring rules
     ----------------------------------------------------------------------------------- */
   :host(.standard-button-icon-success) gu-icon {
-    --textFillColor: var(--gu-blue);
+    --textFillColor: ${(0, t.asCssProp)(o.colors.apocyan[500])};
   }
 `;
         let Q = class extends e.oi {
@@ -5945,24 +5879,64 @@
   ${q}
 
   :host {
-    background: none;
-    color: var(--gu-blue);
+    background: ${(0, t.asCssProp)(o.gradients.apocyan.simple("bottom"))};
   }
 
   .waveArtwork {
-    display: none;
+    ${(0, t.asCssProp)(o.uifx.userSelect("none"))};
+    position: absolute;
+    z-index: 2;
+    left: 3px;
+    right: 3px;
+    top: 2px;
+    bottom: 2px;
+    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(11, 11))};
+  }
+
+  .waveArtwork__side {
+    position: absolute;
+    left: 50%;
+  }
+
+  .waveArtwork__side img {
+    display: block;
+    height: 100%;
+  }
+
+  .waveArtwork__side--top {
+    height: calc(${(0, t.asCssProp)("32px")} * 1.4);
+    bottom: 36%;
+    transform: translateX(-42%);
+  }
+
+  .waveArtwork__side--bottom {
+    height: calc(${(0, t.asCssProp)("32px")} * 2);
+    top: 32%;
+    transform: translateX(-58%);
+  }
+
+  /* "LARGE" SIZE BUTTON STYLES
+    ----------------------------------------------------------------------------------- */
+  :host([size='large']) .waveArtwork__side--top {
+    height: calc(${(0, t.asCssProp)("48px")} * 1.4);
+  }
+
+  :host([size='large']) .waveArtwork__side--bottom {
+    height: calc(${(0, t.asCssProp)("48px")} * 2);
   }
 
   /*  HOVER FX
     ----------------------------------------------------------------------------------- */
   :host(:hover) {
-    color: var(--gu-blue-hover);
+    color: ${(0, t.asCssProp)(o.colors.light[100])};
   }
-  
-  :host(:hover)::before,
-  :host(:active)::before,
-  :host(:active)::after {
-    background: var(--gu-blue-dark);
+
+  :host(:hover)::before {
+    background: ${(0, t.asCssProp)(o.colors.gunmetal[700])};
+  }
+
+  :host(:hover) .waveArtwork__side {
+    opacity: 0.8;
   }
 `, at = e.iv`
   ${q}
@@ -7991,6 +7965,8 @@
     height: ${o.measurements.standardHeaderHeight}px;
     display: flex;
     justify-content: center;
+    background: ${(0, t.asCssProp)(o.colors.gunmetal[900])};
+    border-bottom: 1px solid ${(0, t.asCssProp)(o.colors.gunmetal[700])};
     position: relative;
   }
 
@@ -8021,7 +7997,6 @@
     left: ${(0, t.asCssProp)((0, r.gridUnits)(10.5))};
     opacity: 1;
     ${(0, t.asCssProp)(o.animation.slowTransition("opacity"))};
-    background: var(--gu-yellow);
   }
 
   .notificationBubble--hide {
@@ -8032,8 +8007,6 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    visibility: hidden;
-    width: 16px;
   }
 
   .logoArea__guIcon {
@@ -8208,16 +8181,16 @@
   }
 
   :host::-webkit-scrollbar-track {
-    background: var(--gu-blue-dark);
+    background: ${(0, t.asCssProp)(o.colors.gunmetal[900])};
   }
 
   :host::-webkit-scrollbar-thumb {
-    background: var(--gu-blue);
-    box-shadow: none;
+    background: ${(0, t.asCssProp)(o.colors.gunmetal[500])};
+    box-shadow: inset 0 0 0 2px ${(0, t.asCssProp)(o.colors.gunmetal[900])};
   }
 
   :host::-webkit-scrollbar-corner {
-    background-color: var(--gu-blue-dark);
+    background-color: ${(0, t.asCssProp)(o.colors.gunmetal[900])};
   }
 
   :host(.open) {
@@ -8269,18 +8242,15 @@
   }
 
   .menuItem > * {
-    color: var(--gu-blue);
+    color: ${(0, t.asCssProp)(o.colors.gunmetal[100])};
   }
 
   .menuItem--selected > *:not(gu-sub-menu):not(gu-notification-bubble) {
-    background: var(--gu-yellow);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    ${(0, t.asCssProp)(o.gradients.textFill(o.gradients.gold.simple("bottom")))};
   }
 
   .menuItem--opened > * {
-    color: var(--gu-gray);
+    color: ${(0, t.asCssProp)(o.colors.light[100])};
   }
 
   gu-notification-bubble {
@@ -11763,7 +11733,8 @@
         width: ${(0, t.asCssProp)((0, r.gridUnits)(2))};
         height: ${(0, t.asCssProp)((0, r.gridUnits)(2))};
         border-radius: 50%;
-        background: var(--gu-yellow);
+        background: ${(0, t.asCssProp)(o.colors.gold[300])};
+        box-shadow: 0 0 0 ${(0, t.asCssProp)((0, r.gridUnits)(.5))} ${(0, t.asCssProp)(o.colors.gunmetal[900])};
       }
 
       :host(.highPriority) {
@@ -11788,10 +11759,11 @@
 
       :host {
         display: block;
-        background: var(--gu-bg-gray);
-        height: 24px;
-        padding: 4px;
+        background: rgba(${(0, t.asCssProp)((0, g.hexToCssRgbString)(o.colors.light[100]))}, 0.15);
+        height: 30px;
+        padding: 7px 10px;
         position: relative;
+        ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(16, 16))};
       }
 
       :host::before {
@@ -11801,14 +11773,18 @@
         left: 1.5px;
         height: calc(100% - 2px);
         width: calc(100% - 3px);
+        background: ${(0, t.asCssProp)(o.colors.gunmetal[900])};
+        box-shadow: inset 0 0 8px rgba(0, 0, 0, 1);
+        ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(16, 16))};
       }
 
       .progress-bar-border {
         position: absolute;
-        top: 5px;
-        left: 5px;
-        bottom: 5px;
+        top: 7px;
+        left: 10px;
+        bottom: 7px;
         right: 10px;
+        ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(10, 10))};
       }
 
       .progress-bar-border::before {
@@ -11826,6 +11802,7 @@
         left: 0;
         bottom: 1px;
         right: 0;
+        ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(9, 9, 2))};
       }
 
       .progress-bar::before {
@@ -11837,17 +11814,38 @@
         ${(0, t.asCssProp)(o.animation.slowTransition("width"))};
       }
 
-      :host .progress-bar-border::before {
-        background: var(--gu-blue);
+      :host([coloring='apocyan']) .progress-bar-border::before {
+        background: #0293ba;
       }
 
-      :host .progress-bar::before {
-        background: var(--gu-blue);
+      :host([coloring='apocyan']) .progress-bar::before {
+        background: ${(0, t.asCssProp)(o.gradients.apocyan.simple("left"))};
+      }
+
+      :host([coloring='yellow']) .progress-bar-border::before {
+        background: ${(0, t.asCssProp)(o.colors.yellow[500])};
+      }
+
+      :host([coloring='yellow']) .progress-bar::before {
+        background: ${(0, t.asCssProp)(o.gradients.yellow.simple("left"))};
+      }
+
+      :host([coloring='gold']) .progress-bar-border::before {
+        background: ${(0, t.asCssProp)(o.colors.gold[500])};
+      }
+
+      :host([coloring='gold']) .progress-bar::before {
+        background: ${(0, t.asCssProp)(o.gradients.gold.simple("left"))};
       }
 
       :host([size='small']) {
         height: 12px;
         padding: 2px 3px;
+        ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(6, 6))};
+      }
+
+      :host([size='small'])::before {
+        ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(6, 6))};
       }
 
       :host([size='small']) .progress-bar-border {
@@ -11855,6 +11853,7 @@
         left: 3px;
         bottom: 2px;
         right: 3px;
+        ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(4, 4))};
       }
 
       :host([size='small']) .progress-bar {
@@ -11862,6 +11861,7 @@
         left: 0;
         bottom: 1px;
         right: 0;
+        ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(3, 3, 2))};
       }
 
       :host([size='small']) .progress-bar-border::before,
@@ -15970,7 +15970,7 @@
                 nature: {primary: "#9DE764", secondary: "#5AC33F", tertiary: "#4C772F"},
                 light: {primary: "#FBE29F", secondary: "#FFD76E", tertiary: "#FAB248"}
             },
-            D = "\n  /* Styles to use when there is a gradientFill set ... */\n  :host([fillGradient]),\n  :host([fillGradient]) ::slotted(*) {\n    background: var(--gu-yellow);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n  }\n\n  /* Styles to use when there is a simple fill color set ... */\n  :host([fillColor]),\n  :host([fillColor]) ::slotted(*) {\n    color: var(--textFillColor);\n\n    /* Use the text coloring for border color, and allow it to be over-written */\n    border-color: var(--textFillColor);\n  }\n\n  /* Styles to use when there is a simple fill color hover set ... */\n  :host([fillColorHover]:hover),\n  :host([fillColorHover]:hover) ::slotted(*) {\n    color: var(--textFillColorHover);\n\n    /* Use the text coloring for border color, and allow it to be over-written */\n    border-color: var(--textFillColorHover);\n  }\n\n  /* Styles to use when there is a simple border color set ... */\n  :host([borderColor]),\n  :host([borderColor]) ::slotted(*) {\n    border-color: var(--borderColor);\n  }\n\n  /* Styles to use when there is a simple border color hover set ... */\n  :host([borderColorHover]:hover),\n  :host([borderColorHover]:hover) ::slotted(*) {\n    border-color: var(--borderColorHover);\n  }\n\n  /* Styles to use when there is a simple background color fill set ... */\n  :host([backgroundFillColor]),\n  :host([backgroundFillColor]) ::slotted(*) {\n    background-color: var(--backgroundFillColor);\n  }\n\n  /* Styles to use when there is a simple background color fill hover set ... */\n  :host([backgroundFillColorHover]:hover),\n  :host([backgroundFillColorHover]:hover) ::slotted(*) {\n    background-color: var(--backgroundFillColorHover);\n  }\n"
+            D = "\n  /* Styles to use when there is a gradientFill set ... */\n  :host([fillGradient]),\n  :host([fillGradient]) ::slotted(*) {\n    background: var(--textFillGradient);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n  }\n\n  /* Styles to use when there is a simple fill color set ... */\n  :host([fillColor]),\n  :host([fillColor]) ::slotted(*) {\n    color: var(--textFillColor);\n\n    /* Use the text coloring for border color, and allow it to be over-written */\n    border-color: var(--textFillColor);\n  }\n\n  /* Styles to use when there is a simple fill color hover set ... */\n  :host([fillColorHover]:hover),\n  :host([fillColorHover]:hover) ::slotted(*) {\n    color: var(--textFillColorHover);\n\n    /* Use the text coloring for border color, and allow it to be over-written */\n    border-color: var(--textFillColorHover);\n  }\n\n  /* Styles to use when there is a simple border color set ... */\n  :host([borderColor]),\n  :host([borderColor]) ::slotted(*) {\n    border-color: var(--borderColor);\n  }\n\n  /* Styles to use when there is a simple border color hover set ... */\n  :host([borderColorHover]:hover),\n  :host([borderColorHover]:hover) ::slotted(*) {\n    border-color: var(--borderColorHover);\n  }\n\n  /* Styles to use when there is a simple background color fill set ... */\n  :host([backgroundFillColor]),\n  :host([backgroundFillColor]) ::slotted(*) {\n    background-color: var(--backgroundFillColor);\n  }\n\n  /* Styles to use when there is a simple background color fill hover set ... */\n  :host([backgroundFillColorHover]:hover),\n  :host([backgroundFillColorHover]:hover) ::slotted(*) {\n    background-color: var(--backgroundFillColorHover);\n  }\n"
     }, 65281: (oe, R, n) => {
         "use strict";
         n.r(R), n.d(R, {
@@ -22385,7 +22385,7 @@
                         return I.shareLink()
                     }), e._UZ(1, "gu-icon", 1), e.TgZ(2, "gu-heading-text", 2), e._uU(3), e.qZA(), e.qZA()), 2 & d && (e.xp6(1), e.Q6J("iconLigature", I.iconLigature), e.xp6(2), e.hij(" ", I.title, " "))
                 },
-                styles: ["[_nghost-%COMP%]{margin:10px 10px 10px 0}.shareButton[_ngcontent-%COMP%]{white-space:nowrap;padding:10px 15px;background:transparent;border:2px solid #8be1e0;display:flex;align-items:center;outline:none}.shareButton[_ngcontent-%COMP%]:hover{padding:12px 17px;color:#182531;border:none;background:linear-gradient(to bottom,#AFFAED 0%,#54BBCD 100%)}.shareButton[_ngcontent-%COMP%]:hover   .shareButton__shareText[_ngcontent-%COMP%]{-webkit-text-fill-color:var(--gu-blue-dark)}.shareButton[_ngcontent-%COMP%]:hover   .shareButton__icon[_ngcontent-%COMP%]{-webkit-text-fill-color:black}@media only screen and (max-width: 768px){.shareButton[_ngcontent-%COMP%]{padding:10px}}.shareButton__icon[_ngcontent-%COMP%]{-webkit-text-fill-color:var(--gu-blue);font-size:calc(var(--vh) * 2.5);margin-right:calc(var(--vw) * .5);display:inline-flex;align-items:flex-start}.shareButton__icon[_ngcontent-%COMP%]:hover{-webkit-text-fill-color:black}@media only screen and (max-width: 768px){.shareButton__icon[_ngcontent-%COMP%]{margin-right:0}}.shareButton__shareText[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#affaed 0%,#8be1e0 50%,#54bbcd 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}@media only screen and (max-width: 768px){.shareButton__shareText[_ngcontent-%COMP%]{display:none}}"]
+                styles: ["[_nghost-%COMP%]{margin:10px 10px 10px 0}.shareButton[_ngcontent-%COMP%]{white-space:nowrap;padding:10px 15px;background:transparent;border:2px solid #8be1e0;display:flex;align-items:center;outline:none}.shareButton[_ngcontent-%COMP%]:hover{padding:12px 17px;color:#182531;border:none;background:linear-gradient(to bottom,#AFFAED 0%,#54BBCD 100%)}.shareButton[_ngcontent-%COMP%]:hover   .shareButton__shareText[_ngcontent-%COMP%]{-webkit-text-fill-color:#182531}.shareButton[_ngcontent-%COMP%]:hover   .shareButton__icon[_ngcontent-%COMP%]{-webkit-text-fill-color:black}@media only screen and (max-width: 768px){.shareButton[_ngcontent-%COMP%]{padding:10px}}.shareButton__icon[_ngcontent-%COMP%]{-webkit-text-fill-color:#8be1e0;font-size:calc(var(--vh) * 2.5);margin-right:calc(var(--vw) * .5);display:inline-flex;align-items:flex-start}.shareButton__icon[_ngcontent-%COMP%]:hover{-webkit-text-fill-color:black}@media only screen and (max-width: 768px){.shareButton__icon[_ngcontent-%COMP%]{margin-right:0}}.shareButton__shareText[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#affaed 0%,#8be1e0 50%,#54bbcd 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}@media only screen and (max-width: 768px){.shareButton__shareText[_ngcontent-%COMP%]{display:none}}"]
             }), x
         })();
 

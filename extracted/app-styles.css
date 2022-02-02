@@ -773,15 +773,6 @@ app-active-deck > header {
 
 }
 
-.decksListing > app-deck:nth-child(2),
-.decksListing > app-deck:nth-child(3),
-.decksListing > app-deck:nth-child(4),
-.decksListing > app-deck:nth-child(5),
-.decksListing > app-deck:nth-child(6),
-.decksListing > app-deck:nth-child(7) {
-    display: none;
-}
-
 .cardForgeArea__balanceArea__balanceRow .cardForgeArea__balanceArea__godsBalance__icon,
 .cardForgeArea__balanceArea__balanceRow .cardForgeArea__balanceArea__godsBalance__number {
     -webkit-background-clip: text !important;
