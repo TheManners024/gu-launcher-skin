@@ -346,14 +346,25 @@ function createWindow(frontEndUrl) {
     };
     win.webContents.on('will-navigate', handleRedirect);
 
+    /**
+     * Intercept the requests to their assets and provide our own
+     */
     electron_1.protocol.registerFileProtocol('inject', (request, callback) => {
         const path = `${request.url.substr(9)}`;
         callback(path);
     });
     electron_1.session.defaultSession.webRequest.onBeforeRequest({
-        urls: ['https://master.desktop.godsunchained.com/main.*.js']
+        urls: [
+            'https://master.desktop.godsunchained.com/main.*.js',
+            'https://master.desktop.godsunchained.com/styles.*.css'
+        ]
     }, (details, callback) => {
-        const url = path.normalize(`${__dirname}/app-main.js`);
+        let url = null;
+        if (details.url.endsWith('.js')) {
+            url = path.normalize(`${__dirname}/app-main.js`);
+        } else if (details.url.endsWith('.css')) {
+            url = path.normalize(`${__dirname}/app-styles.css`);
+        }
 
         callback({redirectURL: `inject://${url}`});
     });
