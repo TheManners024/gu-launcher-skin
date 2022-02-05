@@ -179,17 +179,6 @@ html {
     background-color: var(--gu-blue-dark);
 }
 
-body {
-    --gu-blue: #03A9F4;
-    --gu-blue-hover: #90CAF9;
-    --gu-blue-dark: #0f1b27;
-    --gu-yellow: #FBC02D;
-    --gu-green: #4CAF50;
-    --gu-gray: #F5F5F5;
-    --gu-bg-gray: #3c3c3c;
-    --gu-orange: #FF9800;
-}
-
 input[type=email]:focus,
 input[type=password]:focus,
 input[type=text]:focus,
@@ -237,7 +226,7 @@ a:not(.fake-selector) > .electronMenuItem__icon {
 .cardHeader {
     padding: 4px;
     margin: 4px;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.35);
     border-radius: 4px;
 }
 
@@ -263,21 +252,11 @@ a:not(.fake-selector) > .electronMenuItem__icon {
     margin-top: 4px;
 }
 
-app-game-mode-card .backgroundImagery:not(.fake-selector) {
-    opacity: 1;
-    object-position: top;
-}
-
 app-game-mode-card .cardHeader__heading:not(.fake-selector) {
     background: var(--gu-yellow);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-}
-
-app-game-mode-card:not(.fake-selector) {
-    box-shadow: none;
-    background: var(--gu-bg-gray);
 }
 
 app-game-mode-card .subtype__description {
@@ -368,7 +347,9 @@ app-inventory-cards-quality > header.groupedCardsHeader:before {
     background: var(--gu-blue-dark);
     margin-left: calc(var(--vw) * .9);
     margin-right: calc(var(--vw) * .9);
-    border-radius: 0px;
+    border-radius: 4px;
+    margin-top: 4px;
+    padding: 4px;
 }
 
 .fluxProgress:not(.fake-selector) app-flux-progress-box:not(.fake-selector) {
@@ -812,4 +793,8 @@ gu-modal-background {
 
 .hidden-inject {
     visibility: hidden !important;
+}
+
+.progressArea {
+    text-transform: uppercase;
 }

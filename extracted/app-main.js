@@ -477,7 +477,25 @@
 
                 fetchGameModes(N = !1) {
                     (0, p.aj)([this.fetchPlayerGameModes$(), this.getLock$(), this.fetchPlayerRanks$()]).pipe((0, t.q)(1), (0, S.U)(([de, _e, Ae]) => de.map(Ze => this.transformGameModes(Ze, _e, Ae))), (0, b.b)(de => {
-                        this.scheduleRefresh(de), this.handleSealedMode(de), this.dataStore.gameModes = de, this._emitGameModes(N)
+                        console.log('GAME MODES: ', de);
+                        for (const gm of de) {
+                            if (gm.id === 0) { // Solo
+                                gm.image_url = 'https://images.godsunchained.com/art2/720/1492.jpg';
+                            }
+                            if (gm.id === 101) { // Tutorial
+                                gm.image_url = 'https://images.godsunchained.com/art2/720/892.png';
+                            }
+                            if (gm.id === 6) { // Direct Challenge
+                                gm.image_url = 'https://images.godsunchained.com/art2/720/56.png';
+                            }
+                            if (gm.id === 13) { // Rank Constructed
+                                gm.image_url = 'https://images.godsunchained.com/art2/720/879.jpg';
+                            }
+                        }
+                        this.scheduleRefresh(de);
+                        this.handleSealedMode(de);
+                        this.dataStore.gameModes = de;
+                        this._emitGameModes(N);
                     })).subscribe()
                 }
 
@@ -7990,14 +8008,9 @@
     width: 100%;
     height: ${o.measurements.standardHeaderHeight}px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     position: relative;
-  }
-
-  .userArea {
-    position: absolute;
-    top: 0;
-    right: 0;
+    padding: 0 calc(var(--vw) * 3);
   }
 
   .menuToggleButton {
@@ -8029,37 +8042,12 @@
   }
 
   .logoArea {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    visibility: hidden;
-    width: 16px;
-  }
-
-  .logoArea__guIcon {
-    width: ${(0, t.asCssProp)(Ds)};
-    height: ${(0, t.asCssProp)(Ds)};
-    margin-right: ${(0, t.asCssProp)((0, r.gridUnits)(2))};
     display: none;
-  }
-
-  .logoArea__guIcon__img {
-    display: block;
-    width: 100%;
-  }
-
-  .logoArea__guWordMark {
-  }
-
-  @media screen and (min-width: ${(0, t.asCssProp)(o.breakpoints.breakpointSizeMapping["2x-small"])}) {
-    .logoArea__guIcon {
-      display: block;
-    }
   }
 
   @media screen and (min-width: ${(0, t.asCssProp)(o.breakpoints.breakpointSizeMapping.small)}) {
     :host {
-      justify-content: flex-start;
+      justify-content: space-between;
     }
 
     .notificationBubble {
@@ -8069,16 +8057,6 @@
     .menuToggleButton,
     .logoArea__guWordMark {
       display: none;
-    }
-
-    .logoArea {
-      padding: 0 ${(0, t.asCssProp)(qs)};
-    }
-
-    .logoArea__guIcon {
-      width: ${(0, t.asCssProp)(Ls)};
-      height: ${(0, t.asCssProp)(Ls)};
-      margin: 0;
     }
   }
 `;
@@ -8700,10 +8678,6 @@
     height: ${gt.standardHeaderHeight}px;
   }
 
-  gu-user-details {
-    padding-right: ${(0, t.asCssProp)((0, r.gridUnits)(4))};
-  }
-
   .signedOutArea {
     height: 100%;
     display: flex;
@@ -8744,12 +8718,7 @@
   }
 
   .userDetailsArea__imgContainer {
-    margin-top: ${(0, t.asCssProp)((0, r.gridUnits)(-.5))};
-    margin-right: ${(0, t.asCssProp)((0, r.gridUnits)(4))};
-    width: ${(0, t.asCssProp)((0, r.gridUnits)(13))};
-    height: ${(0, t.asCssProp)((0, r.gridUnits)(13))};
-    padding: ${(0, t.asCssProp)((0, r.gridUnits)(1))};
-    position: relative;
+    display: none;
   }
 
   .userDetailsArea__imgContainer::before {
@@ -8759,11 +8728,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: ${(0, t.asCssProp)(o.gradients.gold.complex("bottom"))};
-    box-shadow: 0 ${(0, t.asCssProp)((0, r.gridUnits)(1))} ${(0, t.asCssProp)((0, r.gridUnits)(2))}
-      rgba(${(0, t.asCssProp)((0, g.hexToCssRgbString)(o.colors.dark[900]))}, 0.6);
+    background: var(--gu-yellow);
     border-radius: 50%;
-    ${(0, t.asCssProp)(o.animation.slowTransition("transform"))};
     z-index: 2;
   }
 
@@ -9020,7 +8986,7 @@
 
   gu-user-details {
     border-bottom: 1px solid ${(0, t.asCssProp)(o.colors.gunmetal[700])};
-    padding: ${(0, t.asCssProp)((0, r.gridUnits)(3.5))} ${(0, t.asCssProp)(Yt)};
+    padding: 0;
     cursor: pointer;
   }
 
@@ -9157,6 +9123,7 @@
     background-image: linear-gradient(180deg, #0f1b27 0%, #1d2f41 51.56%, rgba(61, 90, 116, 0.75) 100%);
     opacity: 0;
     z-index: 0;
+    border-radius: 4px;
   }
 
   .side__part {
@@ -9270,25 +9237,7 @@
         <gu-icon iconLigature="collectable_stars" class="side__part__icon"></gu-icon>
         ${c || "0"}
       </gu-simple-text>
-      <div class="side__border"></div>
       <div class="side__hoverGradient"></div>
-    </div>
-    <div class="side side--right">
-      <div class="row row--top">
-        <div class="row__cardsCount">
-          <gu-icon iconLigature="cards_stack" class="row__cardsCount__icon"></gu-icon>
-          <gu-simple-text kind="small" class="row__cardsCount__value">
-            ${G.unique_card_count}
-          </gu-simple-text>
-        </div>
-
-        <gu-simple-text kind="small" fontWeight="bold" fillColor=${o.colors.gunmetal[100]} class="row__rank">
-          ${G.rank}
-        </gu-simple-text>
-      </div>
-      <div class="row row--bottom">
-        <gu-simple-text kind="small" class="row__userName"> ${G.username} </gu-simple-text>
-      </div>
     </div>
   `
             }, props: {properties: Gt, styles: Un}
@@ -11788,10 +11737,11 @@
 
       :host {
         display: block;
-        background: var(--gu-bg-gray);
-        height: 24px;
+        border: solid 1px var(--gu-blue-hover);
+        height: 20px;
         padding: 4px;
         position: relative;
+        border-radius: 4px;
       }
 
       :host::before {
@@ -11805,9 +11755,9 @@
 
       .progress-bar-border {
         position: absolute;
-        top: 5px;
-        left: 5px;
-        bottom: 5px;
+        top: 1px;
+        left: 1px;
+        bottom: 1px;
         right: 10px;
       }
 
@@ -11816,8 +11766,7 @@
         display: block;
         height: 100%;
         width: var(--barWidth);
-        border-radius: ${(0, t.asCssProp)((0, r.gridUnits)(1))};
-        ${(0, t.asCssProp)(o.animation.slowTransition("width"))};
+        border-radius: 2px;
       }
 
       .progress-bar {
@@ -11833,8 +11782,7 @@
         display: block;
         height: 100%;
         width: calc(var(--barWidth) - 1px);
-        border-radius: ${(0, t.asCssProp)((0, r.gridUnits)(1))};
-        ${(0, t.asCssProp)(o.animation.slowTransition("width"))};
+        border-radius: 2px;
       }
 
       :host .progress-bar-border::before {
@@ -15948,11 +15896,11 @@
             god: () => w,
             fillColoringRules: () => D
         });
-        const u = {100: "#7192B0", 300: "#527493", 500: "#3D5A74", 700: "#1D2F41", 900: "#0F1B27"},
+        const u = {100: "#90CAF9", 300: "#527493", 500: "#3D5A74", 700: "#1D2F41", 900: "#0F1B27"},
             i = {100: "#F6F6F6", 300: "#D7D7D7", 500: "#B6B6B6", 700: "#979797", 900: "#7F7F7F"}, v = "#ffffff",
             e = "#000000", f = {100: "#7F7F7F", 300: "#646464", 500: "#464646", 700: "#272727", 900: "#0A0A0A"},
-            p = {100: "#AFFAED", 300: "#8BE1E0", 500: "#54BBCD"}, g = {100: "#FCF7D4", 300: "#F7EA9B", 500: "#F2DC63"},
-            r = {100: "#FFF2D8", 300: "#EBC98B", 500: "#C6A052"}, t = {200: "#affaed", 300: "#8be1e0", 500: "#54bbcd"},
+            p = {100: "#AFFAED", 300: "#03A9F4", 500: "#54BBCD"}, g = {100: "#FCF7D4", 300: "#F7EA9B", 500: "#F2DC63"},
+            r = {100: "#FFF2D8", 300: "#FBC02D", 500: "#C6A052"}, t = {200: "#affaed", 300: "#8be1e0", 500: "#54bbcd"},
             o = {creature: "#ebd08a", spell: "#76b5ad", weapon: "#7a608c"}, b = "#FF8B01", S = {
                 plain: "#8295A2",
                 bronze: "#6A8B35",
@@ -15970,6 +15918,7 @@
                 nature: {primary: "#9DE764", secondary: "#5AC33F", tertiary: "#4C772F"},
                 light: {primary: "#FBE29F", secondary: "#FFD76E", tertiary: "#FAB248"}
             },
+            // fillGradients!
             D = "\n  /* Styles to use when there is a gradientFill set ... */\n  :host([fillGradient]),\n  :host([fillGradient]) ::slotted(*) {\n    background: var(--gu-yellow);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n  }\n\n  /* Styles to use when there is a simple fill color set ... */\n  :host([fillColor]),\n  :host([fillColor]) ::slotted(*) {\n    color: var(--textFillColor);\n\n    /* Use the text coloring for border color, and allow it to be over-written */\n    border-color: var(--textFillColor);\n  }\n\n  /* Styles to use when there is a simple fill color hover set ... */\n  :host([fillColorHover]:hover),\n  :host([fillColorHover]:hover) ::slotted(*) {\n    color: var(--textFillColorHover);\n\n    /* Use the text coloring for border color, and allow it to be over-written */\n    border-color: var(--textFillColorHover);\n  }\n\n  /* Styles to use when there is a simple border color set ... */\n  :host([borderColor]),\n  :host([borderColor]) ::slotted(*) {\n    border-color: var(--borderColor);\n  }\n\n  /* Styles to use when there is a simple border color hover set ... */\n  :host([borderColorHover]:hover),\n  :host([borderColorHover]:hover) ::slotted(*) {\n    border-color: var(--borderColorHover);\n  }\n\n  /* Styles to use when there is a simple background color fill set ... */\n  :host([backgroundFillColor]),\n  :host([backgroundFillColor]) ::slotted(*) {\n    background-color: var(--backgroundFillColor);\n  }\n\n  /* Styles to use when there is a simple background color fill hover set ... */\n  :host([backgroundFillColorHover]:hover),\n  :host([backgroundFillColorHover]:hover) ::slotted(*) {\n    background-color: var(--backgroundFillColorHover);\n  }\n"
     }, 65281: (oe, R, n) => {
         "use strict";
@@ -16005,7 +15954,7 @@
             g = s => `\n  transition: ${s} ${f}\n  ${e};\n`;
         var r = n(47925), t = n(91418);
         const o = {
-                simple: (s = "bottom") => `\n  linear-gradient(\n    to ${s},\n    ${t.gold[100]} 0%,\n    ${t.gold[500]} 100%\n  );\n`,
+                simple: (s = "bottom") => `var(--gu-orange)`,
                 mirror: (s = "bottom") => `\n  linear-gradient(\n    to ${s},\n    ${t.gold[500]} 0%,\n    ${t.gold[100]} 50%,\n    ${t.gold[500]} 100%\n  );\n`,
                 complex: (s = "top") => `\n  linear-gradient(\n    to ${s},\n    #FFFDF0 0%,\n    #FBEBC1 14%,\n    #E6C675 25%,\n    #F6DF6E 40%,\n    #B27E18 60%,\n    #DEAB61 73%,\n    #A67B4B 85%,\n    #664320 100%\n  );\n`,
                 horizontal: (s = "right") => `\n  linear-gradient(\n    to ${s},\n    ${t.gold[500]} 3%,\n    ${t.gold[300]} 25%,\n    ${t.gold[100]} 50%,\n    ${t.gold[300]} 75%,\n    ${t.gold[500]} 97%\n  );\n`
