@@ -9,6 +9,7 @@ body {
     --gu-gray: #F5F5F5;
     --gu-bg-gray: #3c3c3c;
     --gu-orange: #FF9800;
+    --gu-red: #F44336;
 }
 
 label {
@@ -212,6 +213,10 @@ gu-primary-hex-button:not(.fake-selector) {
     bottom: 0;
     font-size: 18px;
     color: var(--gu-blue);
+}
+
+gu-primary-hex-button.deleteDeck {
+    color: var(--gu-red);
 }
 
 gu-primary-hex-button:not(.fake-selector):hover {
@@ -448,6 +453,10 @@ app-flux-gauntlet-circle.highlighted:not(.fake-selector) {
     overflow: hidden;
 }
 
+.possessionGroup:hover > .possessionGroup__background {
+    opacity: .75;
+}
+
 .possessionGroup:not(.fake-selector):first-child,
 .possessionGroup:not(.fake-selector):nth-child(2),
 .possessionGroup:not(.fake-selector):nth-child(3),
@@ -456,7 +465,7 @@ app-flux-gauntlet-circle.highlighted:not(.fake-selector) {
     z-index: 1;
 }
 
-.possessionGroup > .possessionGroup__background:not(.fake-selector) {
+.possessionGroup > .possessionGroup__background {
     opacity: 1;
 }
 

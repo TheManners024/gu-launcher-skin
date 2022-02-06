@@ -1207,22 +1207,18 @@
                 
                 .progressBar__bar--yellow[_ngcontent-%COMP%] {
                     background: linear-gradient(to left, #fcf7d4 0%, #f2dc63 100%);
-                    box-shadow: 0 0 calc(var(--vh) * 2) calc(var(--vh) * .5) #f2dc6366
                 }
                 
                 .progressBar__bar--blue[_ngcontent-%COMP%] {
                     background: linear-gradient(to left, #53cbf1 0%, #05abe0 40%, #59a8cd 100%);
-                    box-shadow: 0 0 calc(var(--vh) * 2) calc(var(--vh) * .5) #53cbf166
                 }
                 
                 .progressBar__bar--aqua[_ngcontent-%COMP%] {
                     background: linear-gradient(to left, #affaed 0%, #8be1e0 50%, #54bbcd 100%);
-                    box-shadow: 0 0 calc(var(--vh) * 2) calc(var(--vh) * .5) #8be1e066
                 }
                 
                 .progressBar__bar--gold[_ngcontent-%COMP%] {
                     background: linear-gradient(to left, #fff2d8 0%, #ebc98b 50%, #c6a052 100%);
-                    box-shadow: 0 0 calc(var(--vh) * 2) calc(var(--vh) * .5) #edd5a466
                 }
                 
                 .progressBar__bar--empty[_ngcontent-%COMP%] {
@@ -2327,7 +2323,7 @@
                         return n.closeButtonClick()
                     }), e.qZA(), e.Hsn(1))
                 },
-                styles: ["[_nghost-%COMP%]{padding-top:calc(var(--vh) * 4.5);display:flex;flex-flow:column nowrap;align-items:center;width:calc(var(--vh) * 7.7);position:absolute;top:0;left:0;height:100%}.closeButton[_ngcontent-%COMP%]{width:calc(var(--vh) * 3);height:calc(var(--vh) * 3);font-size:calc(var(--vh) * 1.7);border-radius:50%;display:flex;line-height:1;border:2px solid #7192b0;color:#f6f6f6;cursor:pointer}.closeButton[_ngcontent-%COMP%]:hover{background:#7192b0}.closeButton[_ngcontent-%COMP%]     i{margin:auto;line-height:1}"]
+                styles: ["[_nghost-%COMP%]{padding-top:calc(var(--vh) * 4.5);display:flex;flex-flow:column nowrap;align-items:center;width:calc(var(--vh) * 7.7);position:absolute;top:0;left:0;height:100%}.closeButton[_ngcontent-%COMP%]{width:calc(var(--vh) * 3);height:calc(var(--vh) * 3);font-size:calc(var(--vh) * 1.7);border-radius:50%;display:flex;line-height:1;border:2px solid var(--gu-blue);color:#f6f6f6;cursor:pointer}.closeButton[_ngcontent-%COMP%]:hover{background:var(--gu-blue)}.closeButton[_ngcontent-%COMP%]     i{margin:auto;line-height:1}"]
             }), o
         })(), Je = (() => {
             class o {
@@ -2881,7 +2877,7 @@
                     1 & t && e.YNc(0, Ri, 1, 1, "img", 0), 2 & t && e.Q6J("ngIf", n.god)
                 },
                 directives: [d.O5],
-                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}[_nghost-%COMP%]{width:calc(var(--vw) * 3.64);height:calc(var(--vw) * 3.64);display:flex;background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);transition:all .5s ease-in-out;overflow:hidden;opacity:1;border:calc(var(--vh) * .3) solid #e0c58f;box-shadow:0 0 calc(var(--vw) * 3.64) #edd5a480,0 0 calc(var(--vw) * .8) #f7e3bc99;transform:rotate(45deg)}.godBadge--empty[_nghost-%COMP%]{box-shadow:none;border:calc(var(--vh) * .2) solid #527493}.godBadge--small[_nghost-%COMP%]{width:calc(var(--vw) * 2.9);height:calc(var(--vw) * 2.9);box-shadow:0 0 calc(var(--vw) * 2.9) #edd5a480,0 0 calc(var(--vw) * .8) #f7e3bc99}.godBadge__image[_ngcontent-%COMP%]{display:block;margin-left:-25%;margin-top:-25%;width:150%;height:150%;transform:rotate(-45deg)}"]
+                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}[_nghost-%COMP%]{width:calc(var(--vw) * 3.64);height:calc(var(--vw) * 3.64);display:flex;background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);transition:all .5s ease-in-out;overflow:hidden;opacity:1;border:calc(var(--vh) * .3) solid #e0c58f;transform:rotate(45deg)}.godBadge--empty[_nghost-%COMP%]{box-shadow:none;border:calc(var(--vh) * .2) solid #527493}.godBadge--small[_nghost-%COMP%]{width:calc(var(--vw) * 2.9);height:calc(var(--vw) * 2.9);box-shadow:0 0 calc(var(--vw) * 2.9) #edd5a480,0 0 calc(var(--vw) * .8) #f7e3bc99}.godBadge__image[_ngcontent-%COMP%]{display:block;margin-left:-25%;margin-top:-25%;width:150%;height:150%;transform:rotate(-45deg)}"]
             }), o
         })();
         const Qi = ["*"];
@@ -4053,7 +4049,113 @@
                     }), e.YNc(7, zr, 2, 7, "app-inventory-cards", 7), e.YNc(8, Vr, 2, 6, "app-group-quality", 8), e.qZA()), 2 & t && (e.xp6(1), e.Q6J("ngIf", n.title), e.xp6(1), e.Q6J("activeGrouping", n.activeGrouping)("groupings", n.groupings), e.xp6(1), e.Q6J("sortOptions", n.sortOptions)("selectedHeaders", n.selectedHeaders)("cardGrouping", n.activeGrouping.groupingType === n.GroupingType.Quality ? n.qualityGrouping : n.protoGrouping)("unownedCheckboxVisible", !(n.activeGrouping.groupingType === n.GroupingType.Quality || void 0 !== n.expandedViewMode)), e.xp6(1), e.Q6J("ngIf", n.god), e.xp6(1), e.Q6J("scrollWindow", !1), e.xp6(2), e.Q6J("ngIf", n.activeGrouping.groupingType !== n.GroupingType.Quality), e.xp6(1), e.Q6J("ngIf", n.activeGrouping.groupingType === n.GroupingType.Quality))
                 },
                 directives: [d.O5, vt, ft, tt, an, xt, Mt],
-                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.sectionHeader__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.godArea__label[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.sectionHeader__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.godArea__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;height:100%}.sectionHeader[_ngcontent-%COMP%]{height:calc(var(--vh) * 8.5);position:relative}.sectionHeader__groupings[_ngcontent-%COMP%]{position:absolute}.sectionHeader__title[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .3);padding-bottom:calc(var(--vh) * .8);line-height:1;position:absolute;width:100%;text-align:center;color:#f6f6f6;border-bottom:solid #1d2f41;border-width:calc(var(--vh) * .25)}.sectionHeader__rightSideArea[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .8);position:absolute;right:0;top:0;display:flex;align-items:flex-start;height:100%}.sectionHeader__filterArea[_ngcontent-%COMP%]{bottom:calc(var(--vh) * 1);right:calc(var(--vw) * 5);position:absolute;left:0}.sectionHeader__godArea[_ngcontent-%COMP%]{user-select:none;pointer-events:none;position:absolute;right:0;top:0;display:flex;align-items:flex-start}app-god-badge[_ngcontent-%COMP%]{user-select:auto;pointer-events:auto;margin-top:calc(var(--vh) * 1)}.godArea__label[_ngcontent-%COMP%]{color:#7192b0;padding-top:calc(var(--vh) * 1.1);padding-right:calc(var(--vw) * 2)}.cardsListingArea[_ngcontent-%COMP%]{overflow:hidden;overflow-y:auto;flex:1;padding:0 16px}  app-card{cursor:pointer}"]
+                styles: [`
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    margin: 0
+                }
+                
+                body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif;
+                    font-weight: 400
+                }
+                
+                .sectionHeader__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    font-family: Unchained, serif;
+                    font-weight: 700
+                }
+                
+                .godArea__label[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif
+                }
+                
+                .sectionHeader__title[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 2.96);
+                    line-height: 1.3
+                }
+                
+                .godArea__label[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 1.48)
+                }
+                
+                [_nghost-%COMP%] {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    height: 100%;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                }
+                
+                .sectionHeader[_ngcontent-%COMP%] {
+                    height: calc(var(--vh) * 8.5);
+                    position: relative
+                }
+                
+                .sectionHeader__groupings[_ngcontent-%COMP%] {
+                    position: absolute
+                }
+                
+                .sectionHeader__title[_ngcontent-%COMP%] {
+                    padding-top: calc(var(--vh) * .3);
+                    padding-bottom: calc(var(--vh) * .8);
+                    line-height: 1;
+                    position: absolute;
+                    width: 100%;
+                    text-align: center;
+                    color: #f6f6f6;
+                    border-bottom: solid #1d2f41;
+                    border-width: calc(var(--vh) * .25)
+                }
+                
+                .sectionHeader__rightSideArea[_ngcontent-%COMP%] {
+                    padding-top: calc(var(--vh) * .8);
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    display: flex;
+                    align-items: flex-start;
+                    height: 100%
+                }
+                
+                .sectionHeader__filterArea[_ngcontent-%COMP%] {
+                    bottom: calc(var(--vh) * 1);
+                    right: calc(var(--vw) * 5);
+                    position: absolute;
+                    left: 0
+                }
+                
+                .sectionHeader__godArea[_ngcontent-%COMP%] {
+                    user-select: none;
+                    pointer-events: none;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    display: flex;
+                    align-items: flex-start
+                }
+                
+                app-god-badge[_ngcontent-%COMP%] {
+                    user-select: auto;
+                    pointer-events: auto;
+                    margin-top: calc(var(--vh) * 1)
+                }
+                
+                .godArea__label[_ngcontent-%COMP%] {
+                    color: #7192b0;
+                    padding-top: calc(var(--vh) * 1.1);
+                    padding-right: calc(var(--vw) * 2)
+                }
+                
+                .cardsListingArea[_ngcontent-%COMP%] {
+                    overflow: hidden;
+                    overflow-y: auto;
+                    flex: 1;
+                    padding: 0 16px
+                }
+                
+                app-card {
+                    cursor: pointer
+                }
+                `]
             }), o
         })(), jr = (() => {
             class o {
@@ -4545,7 +4647,139 @@
                 },
                 directives: [d.O5, vt, d.sg, oa, aa],
                 pipes: [d.Nd],
-                styles: ["@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.sectionHeader__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.rightSideArea__cardsCount[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.sectionHeader__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.rightSideArea__cardsCount[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9);line-height:1.2;font-weight:600}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;position:relative}.sectionHeader[_ngcontent-%COMP%]{height:calc(var(--vh) * 5.5);margin-top:calc(var(--vh) * 2);position:relative;flex-shrink:0}.sectionHeader__groupings[_ngcontent-%COMP%]{position:absolute}.sectionHeader__title[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .3);padding-bottom:calc(var(--vh) * .8);line-height:1;position:absolute;width:100%;text-align:center;color:#f6f6f6;border-bottom:solid #1d2f41;border-width:calc(var(--vh) * .25)}.sectionHeader__rightSideArea[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .4);position:absolute;right:0;top:0;display:flex;align-items:flex-start;height:100%}.rightSideArea__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2);margin-right:calc(var(--vw) * .5);color:#f6f6f6;line-height:1}.rightSideArea__cardsCount[_ngcontent-%COMP%]{color:#f6f6f6}.rightSideArea__editButton[_ngcontent-%COMP%], .rightSideArea__saveButton[_ngcontent-%COMP%]{margin-left:calc(var(--vw) * 1.5);position:relative}.cardBundlesListing[_ngcontent-%COMP%]{flex:1;display:grid;grid-template-columns:repeat(10,1fr)}"],
+                styles: [`
+                @keyframes blink {
+                    0% {
+                        opacity: .2
+                    }
+                    20% {
+                        opacity: 1
+                    }
+                    to {
+                        opacity: .2
+                    }
+                }
+                
+                @keyframes glowing {
+                    0% {
+                        box-shadow: 0 0 -10px #28a1ee
+                    }
+                    40% {
+                        box-shadow: 0 0 10px #28a1ee
+                    }
+                    60% {
+                        box-shadow: 0 0 10px #28a1ee
+                    }
+                    to {
+                        box-shadow: 0 0 -10px #28a1ee
+                    }
+                }
+                
+                @keyframes moving-gradient {
+                    0% {
+                        background-position: left
+                    }
+                    to {
+                        background-position: right
+                    }
+                }
+                
+                @keyframes spin {
+                    to {
+                        transform: rotate(360deg)
+                    }
+                }
+                
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    margin: 0
+                }
+                
+                body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif;
+                    font-weight: 400
+                }
+                
+                .sectionHeader__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    font-family: Unchained, serif;
+                    font-weight: 700
+                }
+                
+                .rightSideArea__cardsCount[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif
+                }
+                
+                .sectionHeader__title[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 2.96);
+                    line-height: 1.3
+                }
+                
+                .rightSideArea__cardsCount[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 1.9);
+                    line-height: 1.2;
+                    font-weight: 600
+                }
+                
+                [_nghost-%COMP%] {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    position: relative
+                }
+                
+                .sectionHeader[_ngcontent-%COMP%] {
+                    height: calc(var(--vh) * 5.5);
+                    margin-top: calc(var(--vh) * 2);
+                    position: relative;
+                    flex-shrink: 0
+                }
+                
+                .sectionHeader__groupings[_ngcontent-%COMP%] {
+                    position: absolute
+                }
+                
+                .sectionHeader__title[_ngcontent-%COMP%] {
+                    padding-top: calc(var(--vh) * .3);
+                    padding-bottom: calc(var(--vh) * .8);
+                    line-height: 1;
+                    position: absolute;
+                    width: 100%;
+                    text-align: center;
+                    color: #f6f6f6;
+                    border-bottom: solid #1d2f41;
+                    border-width: calc(var(--vh) * .25)
+                }
+                
+                .sectionHeader__rightSideArea[_ngcontent-%COMP%] {
+                    padding-top: calc(var(--vh) * .4);
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    display: flex;
+                    align-items: flex-start;
+                    height: 100%
+                }
+                
+                .rightSideArea__icon[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 2);
+                    margin-right: calc(var(--vw) * .5);
+                    color: #f6f6f6;
+                    line-height: 1
+                }
+                
+                .rightSideArea__cardsCount[_ngcontent-%COMP%] {
+                    color: #f6f6f6
+                }
+                
+                .rightSideArea__editButton[_ngcontent-%COMP%], .rightSideArea__saveButton[_ngcontent-%COMP%] {
+                    margin-left: calc(var(--vw) * 1.5);
+                    position: relative
+                }
+                
+                .cardBundlesListing[_ngcontent-%COMP%] {
+                    flex: 1;
+                    display: grid;
+                    grid-template-columns:repeat(10, 1fr)
+                }
+                `],
                 data: {
                     animation: [(0, v.X$)("slideIn", [(0, v.eR)(":enter", [(0, v.oB)({
                         opacity: 0,

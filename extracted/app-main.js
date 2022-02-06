@@ -7758,7 +7758,6 @@
         text-color: black;
         background: ${(0, t.asCssProp)(o.gradients.gold.simple("bottom"))};
         border-radius: 4px;
-        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
         padding: 2px;
       }
 
@@ -7884,7 +7883,6 @@
         left: 0;
         background: ${(0, t.asCssProp)(o.gradients.gold.mirror("left"))};
         border: 1px solid ${(0, t.asCssProp)(o.colors.gunmetal[700])};
-        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.75);
       }
 
       .game-queue-panel__content {
@@ -7908,7 +7906,6 @@
         height: 60px;
         width: 50vw;
         background: ${(0, t.asCssProp)(o.gradients.gunmetal.simple("left"))};
-        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.75);
         z-index: -1;
       }
 
@@ -8257,17 +8254,13 @@
     -webkit-text-fill-color: transparent;
   }
 
-  .menuItem--opened > * {
-    color: var(--gu-gray);
-  }
-
   gu-notification-bubble {
     position: absolute;
     right: 0;
     top: ${(0, t.asCssProp)((0, r.gridUnits)(7))};
     ${(0, t.asCssProp)(o.animation.slowTransition("opacity"))};
   }
-
+  
   .menuItem--opened gu-notification-bubble {
     opacity: 0;
   }
@@ -8307,8 +8300,9 @@
       margin: 0;
     }
 
-    .menuItem:hover > * {
-      color: ${(0, t.asCssProp)(o.colors.light[100])};
+    .menuItem:hover > *,
+    .menuItem--opened > * {
+      color: var(--gu-blue-hover);
     }
 
     .menuItem__icon {
@@ -8506,7 +8500,7 @@
 
   .subMenu__item {
     padding-bottom: ${(0, t.asCssProp)((0, r.gridUnits)(5))};
-    color: ${(0, t.asCssProp)(o.colors.light[100])};
+    color: var(--gu-blue);
     line-height: 1;
     position: relative;
     white-space: normal;
@@ -8557,8 +8551,6 @@
     :host(.open) {
       max-height: var(--maxHeight);
       padding: 0;
-      box-shadow: 0px ${(0, t.asCssProp)((0, r.gridUnits)(.5))} ${(0, t.asCssProp)((0, r.gridUnits)(3))} 0px
-        rgba(${(0, t.asCssProp)((0, g.hexToCssRgbString)(o.colors.black))}, 0.5);
     }
 
     .subMenu {
@@ -8567,20 +8559,16 @@
       left: 0;
       width: 100%;
       padding: 0;
-      border-left: 1px solid ${(0, t.asCssProp)(o.colors.gunmetal[700])};
-      border-right: 1px solid ${(0, t.asCssProp)(o.colors.gunmetal[700])};
-      border-top: 1px solid ${(0, t.asCssProp)(o.colors.gunmetal[700])};
-      background: ${(0, t.asCssProp)(o.colors.gunmetal[900])};
+      background: var(--gu-blue-dark);
     }
 
     .subMenu__item,
     .subMenu__item:last-of-type {
       padding: ${(0, t.asCssProp)((0, r.gridUnits)(3))} ${(0, t.asCssProp)((0, r.gridUnits)(4))};
-      border-bottom: 1px solid ${(0, t.asCssProp)(o.colors.gunmetal[700])};
     }
 
     .subMenu__item:hover {
-      background: ${(0, t.asCssProp)(o.colors.gunmetal[700])};
+      color: var(--gu-blue-hover);
     }
 
     .subMenu__item--selected:hover {
@@ -10043,7 +10031,7 @@
 
       .radio-button__input:checked,
       :host([size='large']) .radio-button__input:checked {
-        border-color: ${(0, t.asCssProp)(o.colors.apocyan[300])};
+        border-color: var(--gu-blue);
         background-size: 18px 18px;
       }
 
@@ -10062,11 +10050,6 @@
 
       :host([layout='vertical']) {
         flex-direction: column;
-      }
-
-      .radio-button__input:focus,
-      .radio-button__input:focus-within {
-        box-shadow: 0 0 6px ${(0, t.asCssProp)(o.colors.apocyan[300])}, 0 0 2px ${(0, t.asCssProp)(o.colors.apocyan[300])} inset;
       }
     `
             }
@@ -12757,9 +12740,8 @@
         margin: ${(0, t.asCssProp)((0, r.gridUnits)(3.5))};
         flex-direction: column;
         justify-content: center;
-        background: ${(0, t.asCssProp)(o.gradients.gunmetal.mirror("left"))};
-        border: ${(0, t.asCssProp)((0, r.gridUnits)(.25))} solid ${(0, t.asCssProp)(o.colors.gunmetal[500])};
-        border-radius: ${(0, t.asCssProp)((0, r.gridUnits)(1))};
+        background: var(--gu-blue-dark);
+        border-radius: 4px;
         align-items: center;
         min-width: ${(0, t.asCssProp)((0, r.gridUnits)(85))};
         width: ${(0, t.asCssProp)((0, r.gridUnits)(85))};
@@ -12811,9 +12793,13 @@
         text-transform: uppercase;
         margin: auto;
       }
+      
+      gu-primary-hex-button:hover .middleSection__cta__price {
+        color: var(-gu-blue-hover);
+      }
 
       .middleSection__cta__price {
-        color: ${(0, t.asCssProp)(o.colors.apocyan[300])};
+        color: var(--gu-blue);
         display: flex;
         align-items: center;
       }
@@ -12829,7 +12815,6 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        background: ${(0, t.asCssProp)(o.colors.gunmetal[500])};
         padding: ${(0, t.asCssProp)((0, r.gridUnits)(2))} 0;
       }
 
@@ -12888,18 +12873,12 @@
         <img class="image__img" src="${this.imageUrl}" />
       </picture>
 
-      <img
-        src="/assets/images/ui-embellishments/ui--divider-complex-2.svg"
-        class="divider"
-        alt="extra detailed diamond divider"
-      />
-
       <gu-vertical-space top="large" bottom="x-large" class="middleSection">
         <gu-paragraph-text
           kind="large"
           fontWeight="bold"
           align="center"
-          fillColor="colors.light.100"
+          fillColor="#FBC02D"
           class="middleSection__name"
           >${this.name}
         </gu-paragraph-text>
@@ -12953,14 +12932,11 @@
             static get styles() {
                 return e.iv`
       :host {
-        border: ${(0, t.asCssProp)((0, r.gridUnits)(.25))} solid ${(0, t.asCssProp)(o.colors.gunmetal[500])};
-        background: linear-gradient(
-          90deg,
-          ${(0, t.asCssProp)(o.colors.gunmetal[300])} 0.91%,
-          ${(0, t.asCssProp)(o.colors.gunmetal[700])} 100%
-        );
         width: ${(0, t.asCssProp)((0, r.gridUnits)(56))};
-        filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+        border-bottom: 2px solid var(--gu-blue-hover);
+        border-right: solid 2px var(--gu-blue-hover);
+        background: var(--gu-blue-dark);
+        border-bottom-right-radius: 4px;
       }
 
       :host([durationType='monthly']) {
@@ -12992,10 +12968,6 @@
         width: calc(100% - ${(0, t.asCssProp)((0, r.gridUnits)(1))});
         left: calc(${(0, t.asCssProp)((0, r.gridUnits)(-1.5))} - 1px);
         top: ${(0, t.asCssProp)((0, r.gridUnits)(-1))};
-        border: ${(0, t.asCssProp)((0, r.gridUnits)(1))} solid;
-        border-image-source: ${(0, t.asCssProp)(o.gradients.gold.mirror("top"))};
-        border-image-slice: 1;
-        border-image-width: 0 0 0 ${(0, t.asCssProp)((0, r.gridUnits)(1))};
       }
     `
             }
@@ -13007,7 +12979,7 @@
         <gu-paragraph-text
           kind="large"
           fontWeight="bold"
-          fillColor=${"monthly" === this.durationType ? "colors.gunmetal.900" : "colors:light:100"}
+          fillColor="#90CAF9"
         >
           <slot></slot>
         </gu-paragraph-text>
@@ -15954,7 +15926,7 @@
             g = s => `\n  transition: ${s} ${f}\n  ${e};\n`;
         var r = n(47925), t = n(91418);
         const o = {
-                simple: (s = "bottom") => `var(--gu-orange)`,
+                simple: (s = "bottom") => `var(--gu-yellow)`,
                 mirror: (s = "bottom") => `\n  linear-gradient(\n    to ${s},\n    ${t.gold[500]} 0%,\n    ${t.gold[100]} 50%,\n    ${t.gold[500]} 100%\n  );\n`,
                 complex: (s = "top") => `\n  linear-gradient(\n    to ${s},\n    #FFFDF0 0%,\n    #FBEBC1 14%,\n    #E6C675 25%,\n    #F6DF6E 40%,\n    #B27E18 60%,\n    #DEAB61 73%,\n    #A67B4B 85%,\n    #664320 100%\n  );\n`,
                 horizontal: (s = "right") => `\n  linear-gradient(\n    to ${s},\n    ${t.gold[500]} 3%,\n    ${t.gold[300]} 25%,\n    ${t.gold[100]} 50%,\n    ${t.gold[300]} 75%,\n    ${t.gold[500]} 97%\n  );\n`
