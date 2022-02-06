@@ -333,7 +333,7 @@ function createWindow(frontEndUrl) {
         // console.log('ready to show');
         win.show();
     });
-    win.webContents.openDevTools();
+    // win.webContents.openDevTools();
     // if (electron_1.nativeTheme.shouldUseDarkColors) {
     //     electron_1.systemPreferences.setAppLevelAppearance('dark');
     // }
