@@ -731,28 +731,28 @@ app-active-deck > header {
     z-index: 1;
 }
 
-/*.cardItemWrapper {*/
-/*  overflow: visible;*/
-/*  position: relative;*/
-/*  height: 100%;*/
-/*  width: 100%;*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  justify-content: space-between;*/
-/*}*/
-/*.cardItemWrapper > app-card2 {*/
-/*  pointer-events: none !important;*/
-/*}*/
-/*.cardItemWrapper:hover > app-card2 > composited-card {*/
-/*  z-index: 1 !important;*/
-/*  position: absolute !important;*/
-/*  top: 0;*/
-/*  left: 0;*/
-/*  transform: scale(2);*/
-/*}*/
-/*.cardItemWrapper > app-card2 > composited-card {*/
-/*  width: 100%;*/
-/*}*/
+.cardItemWrapper {
+  overflow: visible;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cardItemWrapper > app-card2 {
+  pointer-events: none !important;
+}
+.cardItemWrapper:hover > app-card2 > composited-card {
+  z-index: 1 !important;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  transform: scale(2);
+}
+.cardItemWrapper > app-card2 > composited-card {
+  width: 100%;
+}
 .cardItemWrapper--greyed {
     filter: none !important;
     background: rgba(158, 158, 158, 0.3);
