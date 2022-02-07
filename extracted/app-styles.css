@@ -740,9 +740,6 @@ app-active-deck > header {
   flex-direction: column;
   justify-content: space-between;
 }
-.cardItemWrapper > app-card2 {
-  pointer-events: none !important;
-}
 .cardItemWrapper:hover > app-card2 > composited-card {
   z-index: 1 !important;
   position: absolute !important;
