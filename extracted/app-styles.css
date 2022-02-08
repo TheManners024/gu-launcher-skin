@@ -213,6 +213,7 @@ gu-primary-hex-button:not(.fake-selector) {
     bottom: 0;
     font-size: 18px;
     color: var(--gu-blue);
+    border: solid 1px var(--gu-blue);
 }
 
 gu-primary-hex-button.deleteDeck {
@@ -221,6 +222,7 @@ gu-primary-hex-button.deleteDeck {
 
 gu-primary-hex-button:not(.fake-selector):hover {
     color: var(--gu-blue-hover);
+    border: solid 1px var(--gu-blue-hover);
 }
 
 a:not(.fake-selector),
@@ -644,6 +646,7 @@ app-gauntlet-progress-modal .rightArea__gauntlet__flux__balance__icon {
 
 app-gauntlet-progress-modal .rightArea__countdown {
     color: var(--gu-yellow) !important;
+    font-weight: bold;
 }
 
 app-gauntlet-progress-modal .leftArea__item__textArea__top {
@@ -742,13 +745,12 @@ app-active-deck > header {
 }
 .cardItemWrapper:hover > app-card2 > composited-card {
   z-index: 1 !important;
-  position: absolute !important;
-  top: 0;
-  left: 0;
-  transform: scale(2);
+  transform: scale(1.5);
+  position: relative;
 }
 .cardItemWrapper > app-card2 > composited-card {
   width: 100%;
+  transition: scale 500ms linear;
 }
 .cardItemWrapper--greyed {
     filter: none !important;

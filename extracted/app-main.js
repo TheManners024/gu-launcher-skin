@@ -14141,7 +14141,6 @@
     z-index: 0;
     background: ${(0, r.asCssProp)(t.gradients.apocyan.simple())};
     opacity: 0.2;
-    ${(0, r.asCssProp)((0, r.drawHexShapePolygonMask)(11, 11))};
   }
 
   /* Primary */
@@ -14158,7 +14157,6 @@
     right: 3px;
     top: 2px;
     bottom: 2px;
-    ${(0, r.asCssProp)((0, r.drawHexShapePolygonMask)(11, 11))};
   }
 
   .button__artwork__side {
@@ -14380,7 +14378,6 @@
     position: relative;
     white-space: nowrap;
     color: ${(0, v.asCssProp)(e.colors.light[100])};
-    ${(0, v.asCssProp)((0, v.drawHexShapePolygonMask)(12, 12))};
     ${(0, v.asCssProp)(e.animation.standardTransition("all"))};
 
     /* NORMAL SIZING BY DEFAULT */
@@ -14396,7 +14393,6 @@
     ${(0, v.inset)(2, 3)}
     z-index: 0;
     background: ${(0, v.asCssProp)(e.colors.gunmetal[900])};
-    ${(0, v.asCssProp)((0, v.drawHexShapePolygonMask)(11, 11))};
     ${(0, v.asCssProp)(e.animation.standardTransition("all"))};
   }
 
@@ -14409,15 +14405,10 @@
   :host([size='large']) {
     height: ${(0, v.asCssProp)("48px")};
     line-height: ${(0, v.asCssProp)("48px")};
-    ${(0, v.asCssProp)((0, v.drawHexShapePolygonMask)(18, 18))};
   }
 
   :host([size='large']) .button__content {
     padding: 0 ${(0, v.asCssProp)("26px")};
-  }
-
-  :host([size='large'])::before {
-    ${(0, v.asCssProp)((0, v.drawHexShapePolygonMask)(17, 17))};
   }
 
   :host([size='large']) .buttonContent__icon {

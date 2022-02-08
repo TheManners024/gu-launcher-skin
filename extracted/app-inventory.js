@@ -3314,7 +3314,104 @@
                 template: function (t, n) {
                     1 & t && (e.F$t(), e.Hsn(0))
                 },
-                styles: ['@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{width:100%;display:block}.fourColumns[_nghost-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(4,1fr);align-items:start;grid-auto-rows:min-content;grid-template-areas:"item item item item" "desc desc desc desc"}.sevenColumns[_nghost-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(7,1fr);align-items:start;grid-auto-rows:min-content;grid-template-areas:"item item item item item item item" "desc desc desc desc desc desc desc"}.eightColumns[_nghost-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(8,1fr);align-items:start;grid-auto-rows:min-content;grid-template-areas:"item item item item item item item item" "desc desc desc desc desc desc desc desc"}.tenColumns[_nghost-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(10,1fr);align-items:start;grid-auto-rows:min-content;grid-template-areas:"item item item item item item item item item item" "desc desc desc desc desc desc desc desc desc desc"}.elevenColumns[_nghost-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(11,1fr);align-items:start;grid-auto-rows:min-content;grid-template-areas:"item item item item item item item item item item item" "desc desc desc desc desc desc desc desc desc desc desc"}']
+                styles: [`
+                @keyframes blink {
+                    0% {
+                        opacity: .2
+                    }
+                    20% {
+                        opacity: 1
+                    }
+                    to {
+                        opacity: .2
+                    }
+                }
+                
+                @keyframes glowing {
+                    0% {
+                        box-shadow: 0 0 -10px #28a1ee
+                    }
+                    40% {
+                        box-shadow: 0 0 10px #28a1ee
+                    }
+                    60% {
+                        box-shadow: 0 0 10px #28a1ee
+                    }
+                    to {
+                        box-shadow: 0 0 -10px #28a1ee
+                    }
+                }
+                
+                @keyframes moving-gradient {
+                    0% {
+                        background-position: left
+                    }
+                    to {
+                        background-position: right
+                    }
+                }
+                
+                @keyframes spin {
+                    to {
+                        transform: rotate(360deg)
+                    }
+                }
+                
+                [_nghost-%COMP%] {
+                    width: 100%;
+                    display: block
+                }
+                
+                .fourColumns[_nghost-%COMP%] {
+                    grid-row-gap: calc(var(--vh) * 3.5);
+                    grid-column-gap: calc(var(--vw) * 1.2);
+                    display: grid;
+                    grid-template-columns:repeat(4, 1fr);
+                    align-items: start;
+                    grid-auto-rows: min-content;
+                    grid-template-areas:"item item item item" "desc desc desc desc"
+                }
+                
+                .sevenColumns[_nghost-%COMP%] {
+                    grid-row-gap: calc(var(--vh) * 3.5);
+                    grid-column-gap: calc(var(--vw) * 1.2);
+                    display: grid;
+                    grid-template-columns:repeat(6, 1fr);
+                    align-items: start;
+                    grid-auto-rows: min-content;
+                    grid-template-areas:"item item item item item item" "desc desc desc desc desc desc"
+                }
+                
+                .eightColumns[_nghost-%COMP%] {
+                    grid-row-gap: calc(var(--vh) * 3.5);
+                    grid-column-gap: calc(var(--vw) * 1.2);
+                    display: grid;
+                    grid-template-columns:repeat(6, 1fr);
+                    align-items: start;
+                    grid-auto-rows: min-content;
+                    grid-template-areas:"item item item item item item" "desc desc desc desc desc desc"
+                }
+                
+                .tenColumns[_nghost-%COMP%] {
+                    grid-row-gap: calc(var(--vh) * 3.5);
+                    grid-column-gap: calc(var(--vw) * 1.2);
+                    display: grid;
+                    grid-template-columns:repeat(8, 1fr);
+                    align-items: start;
+                    grid-auto-rows: min-content;
+                    grid-template-areas:"item item item item item item item item" "desc desc desc desc desc desc desc desc"
+                }
+                
+                .elevenColumns[_nghost-%COMP%] {
+                    grid-row-gap: calc(var(--vh) * 3.5);
+                    grid-column-gap: calc(var(--vw) * 1.2);
+                    display: grid;
+                    grid-template-columns:repeat(8, 1fr);
+                    align-items: start;
+                    grid-auto-rows: min-content;
+                    grid-template-areas:"item item item item item item item item" "desc desc desc desc desc desc desc desc"
+                }
+                `]
             }), o
         })(), bt = (() => {
             class o {
@@ -7668,7 +7765,161 @@
                 },
                 directives: [d.O5],
                 pipes: [d.i8],
-                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}[_nghost-%COMP%]{height:calc(var(--vh) * 10);width:calc(var(--vh) * 10);display:flex;flex-direction:column;overflow:hidden;background-color:#000;position:absolute;transform:rotate(45deg)}.highlighted[_nghost-%COMP%]{background:linear-gradient(to bottom,#affaed 0%,#8be1e0 50%,#54bbcd 100%)}.unlockBorder[_nghost-%COMP%]{border:2px solid #59a8cd}.greyed[_nghost-%COMP%]{filter:grayscale(1)}.index--0[_nghost-%COMP%]{top:0;left:50%;transform:translate(-50%) rotate(45deg)}.index--1[_nghost-%COMP%]{right:0;top:17%}.index--2[_nghost-%COMP%]{right:0;bottom:17%}.index--3[_nghost-%COMP%]{bottom:0;left:50%;transform:translate(-50%) rotate(45deg)}.index--4[_nghost-%COMP%]{left:0;bottom:17%}.index--5[_nghost-%COMP%]{left:0;top:17%}.wrapper[_ngcontent-%COMP%]{height:100%;width:100%;transform:rotate(-45deg)}.godImage[_ngcontent-%COMP%]{position:relative;margin-top:calc(var(--vh) * -2);margin-top:-20%;margin-left:calc(var(--vh) * -4.2);margin-left:-42%;height:calc(var(--vh) * 20);height:200%}.godImage--noGod[_ngcontent-%COMP%]{filter:brightness(.1) contrast(0) blur(1px)}.lock[_ngcontent-%COMP%]{color:#272727;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:calc(var(--vh) * 4)}.winCircle[_ngcontent-%COMP%]{width:calc(var(--vh) * 2.5);width:25%;height:calc(var(--vh) * 2.5);height:25%;border-radius:50%;background-color:#000;position:absolute;border:1px solid #c6a052}.winCircle--0[_ngcontent-%COMP%]{left:11%;bottom:15%}.winCircle--1[_ngcontent-%COMP%]{left:50%;transform:translate(-50%);bottom:-10%}.winCircle--2[_ngcontent-%COMP%]{right:9%;bottom:15%}.winCircle--complete[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);border:none}.winCircle__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9);text-align:center;height:100%;width:100%;position:absolute;color:#000}.line[_ngcontent-%COMP%]{position:absolute;width:500px;height:1px;border:solid red 1px}.top[_ngcontent-%COMP%]{top:0;left:50%;transform:translate(-50%)}.bot[_ngcontent-%COMP%]{bottom:0;left:50%;transform:translate(-50%)}"]
+                styles: [`
+                    h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                        margin: 0
+                    }
+                    
+                    body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%] {
+                        font-family: Open Sans, sans-serif;
+                        font-weight: 400
+                    }
+                    
+                    h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                        font-family: Unchained, serif;
+                        font-weight: 700
+                    }
+                    
+                    [_nghost-%COMP%] {
+                        height: calc(var(--vh) * 10);
+                        width: calc(var(--vh) * 10);
+                        display: flex;
+                        flex-direction: column;
+                        overflow: hidden;
+                        background-color: #000;
+                        position: absolute;
+                        transform: rotate(45deg)
+                    }
+                    
+                    .unlockBorder[_nghost-%COMP%] {
+                        border: 2px solid var(--gu-blue);
+                    }
+                    
+                    .greyed[_nghost-%COMP%] {
+                        filter: grayscale(1)
+                    }
+                    
+                    .index--0[_nghost-%COMP%] {
+                        top: 0;
+                        left: 50%;
+                        transform: translate(-50%) rotate(45deg)
+                    }
+                    
+                    .index--1[_nghost-%COMP%] {
+                        right: 0;
+                        top: 17%
+                    }
+                    
+                    .index--2[_nghost-%COMP%] {
+                        right: 0;
+                        bottom: 17%
+                    }
+                    
+                    .index--3[_nghost-%COMP%] {
+                        bottom: 0;
+                        left: 50%;
+                        transform: translate(-50%) rotate(45deg)
+                    }
+                    
+                    .index--4[_nghost-%COMP%] {
+                        left: 0;
+                        bottom: 17%
+                    }
+                    
+                    .index--5[_nghost-%COMP%] {
+                        left: 0;
+                        top: 17%
+                    }
+                    
+                    .wrapper[_ngcontent-%COMP%] {
+                        height: 100%;
+                        width: 100%;
+                        transform: rotate(-45deg)
+                    }
+                    
+                    .godImage[_ngcontent-%COMP%] {
+                        position: relative;
+                        margin-top: calc(var(--vh) * -2);
+                        margin-top: -20%;
+                        margin-left: calc(var(--vh) * -4.2);
+                        margin-left: -42%;
+                        height: calc(var(--vh) * 20);
+                        height: 200%
+                    }
+                    
+                    .godImage--noGod[_ngcontent-%COMP%] {
+                        filter: brightness(.1) contrast(0) blur(1px)
+                    }
+                    
+                    .lock[_ngcontent-%COMP%] {
+                        color: #272727;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: calc(var(--vh) * 4)
+                    }
+                    
+                    .winCircle[_ngcontent-%COMP%] {
+                        width: calc(var(--vh) * 2.5);
+                        width: 25%;
+                        height: calc(var(--vh) * 2.5);
+                        height: 25%;
+                        border-radius: 50%;
+                        background-color: #000;
+                        position: absolute;
+                        border: 1px solid var(--gu-yellow);
+                    }
+                    
+                    .winCircle--0[_ngcontent-%COMP%] {
+                        left: 11%;
+                        bottom: 15%
+                    }
+                    
+                    .winCircle--1[_ngcontent-%COMP%] {
+                        left: 50%;
+                        transform: translate(-50%);
+                        bottom: -10%
+                    }
+                    
+                    .winCircle--2[_ngcontent-%COMP%] {
+                        right: 9%;
+                        bottom: 15%
+                    }
+                    
+                    .winCircle--complete[_ngcontent-%COMP%] {
+                        background: var(--gu-blue);
+                        border: none
+                    }
+                    
+                    .winCircle__icon[_ngcontent-%COMP%] {
+                        font-size: calc(var(--vh) * 1.9);
+                        text-align: center;
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        color: #000
+                    }
+                    
+                    .line[_ngcontent-%COMP%] {
+                        position: absolute;
+                        width: 500px;
+                        height: 1px;
+                        border: solid var(--gu-red) 1px;
+                    }
+                    
+                    .top[_ngcontent-%COMP%] {
+                        top: 0;
+                        left: 50%;
+                        transform: translate(-50%)
+                    }
+                    
+                    .bot[_ngcontent-%COMP%] {
+                        bottom: 0;
+                        left: 50%;
+                        transform: translate(-50%)
+                    }                
+                `]
             }), o
         })(), kn = (() => {
             class o {

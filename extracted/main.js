@@ -357,7 +357,8 @@ function createWindow(frontEndUrl) {
         urls: [
             'https://master.desktop.godsunchained.com/main.*.js',
             'https://master.desktop.godsunchained.com/26.*.js',
-            'https://master.desktop.godsunchained.com/styles.*.css'
+            'https://master.desktop.godsunchained.com/styles.*.css',
+            'https://master.desktop.godsunchained.com/gu-assets/images/rank-progress/gu-progress-rank-cracks--*.svg'
         ]
     }, (details, callback) => {
         let url = null;
@@ -367,6 +368,8 @@ function createWindow(frontEndUrl) {
             url = path.normalize(`${__dirname}/app-styles.css`);
         } else if (details.url.match(/26[.].+[.]js$/) != null) {
             url = path.normalize(`${__dirname}/app-inventory.js`);
+        } else if (details.url.match(/gu-progress-rank-cracks--[\d][.]svg$/) != null) {
+            url = path.normalize(`${__dirname}/${details.url.split('.com').pop()}`);
         }
 
         callback({redirectURL: `inject://${url}`});
