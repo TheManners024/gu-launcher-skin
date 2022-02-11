@@ -194,7 +194,7 @@
         let tt = (() => {
             class o {
                 constructor(t, n) {
-                    this.element = t, this.zone = n, this.scrolled = new e.vpe, this.scrolledUp = new e.vpe, this.infiniteScrollDistance = 2, this.infiniteScrollUpDistance = 1.5, this.infiniteScrollThrottle = 150, this.infiniteScrollDisabled = !1, this.infiniteScrollContainer = null, this.scrollWindow = !0, this.immediateCheck = !1, this.horizontal = !1, this.alwaysCallback = !1, this.fromRoot = !1
+                    this.element = t, this.zone = n, this.scrolled = new e.vpe, this.scrolledUp = new e.vpe, this.infiniteScrollDistance = 3.5, this.infiniteScrollUpDistance = 1.5, this.infiniteScrollThrottle = 50, this.infiniteScrollDisabled = !1, this.infiniteScrollContainer = null, this.scrollWindow = !0, this.immediateCheck = 1, this.horizontal = !1, this.alwaysCallback = !1, this.fromRoot = !1
                 }
 
                 ngAfterViewInit() {
@@ -1206,19 +1206,19 @@
                 }
                 
                 .progressBar__bar--yellow[_ngcontent-%COMP%] {
-                    background: linear-gradient(to left, #fcf7d4 0%, #f2dc63 100%);
+                    background: var(--gu-yellow);
                 }
                 
                 .progressBar__bar--blue[_ngcontent-%COMP%] {
-                    background: linear-gradient(to left, #53cbf1 0%, #05abe0 40%, #59a8cd 100%);
+                    background: var(--gu-blue);
                 }
                 
                 .progressBar__bar--aqua[_ngcontent-%COMP%] {
-                    background: linear-gradient(to left, #affaed 0%, #8be1e0 50%, #54bbcd 100%);
+                    background: var(--gu-blue);
                 }
                 
                 .progressBar__bar--gold[_ngcontent-%COMP%] {
-                    background: linear-gradient(to left, #fff2d8 0%, #ebc98b 50%, #c6a052 100%);
+                    background: var(--gu-yellow);
                 }
                 
                 .progressBar__bar--empty[_ngcontent-%COMP%] {
@@ -1454,7 +1454,268 @@
                 },
                 directives: [d.mk, d.O5, Ie],
                 pipes: [d.rS],
-                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.progressBarArea__level__rankInitials[_ngcontent-%COMP%], .progressBarArea__level__rankInitials--next[_ngcontent-%COMP%], .playerDetails__username[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.promoArea__text[_ngcontent-%COMP%], .progressBarArea__level__rankName[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.progressBarArea__level__rankInitials--next[_ngcontent-%COMP%], .playerDetails__username[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.progressBarArea__level__rankInitials[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 4.2);line-height:1.3}.progressBarArea__level__rankName[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9)}.promoArea__text[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.promoArea__text[_ngcontent-%COMP%]{line-height:1.4}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);height:calc(var(--vh) * 100);width:calc(var(--vw) * 100);display:flex;flex-flow:column nowrap;background:#182531;overflow:hidden}.backgroundGodImagery[_ngcontent-%COMP%]{user-select:none;pointer-events:none;width:calc(var(--vw) * 55.85);position:absolute;top:-5%;height:110%}.backgroundGodImagery.left[_ngcontent-%COMP%]{left:0}.backgroundGodImagery.right[_ngcontent-%COMP%]{right:0}.guLogo[_ngcontent-%COMP%]{position:absolute;top:28px;left:0;width:calc(var(--vh) * 7.7);height:calc(var(--vh) * 7.7);display:flex}.guLogo__img[_ngcontent-%COMP%]{width:calc(var(--vh) * 4);margin:auto}.matchCompleteHeading[_ngcontent-%COMP%]{right:calc(var(--vh) * 3);top:calc(28px + calc(var(--vh) * 3));position:absolute}.displayArea[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 11.5);padding-bottom:calc(var(--vh) * 10);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-grow:1;transition:opacity .15s ease-in-out}.displayArea--loading[_ngcontent-%COMP%]{opacity:0}.playerDetailsAvatar[_ngcontent-%COMP%]{width:calc(var(--vw) * 10);height:calc(var(--vw) * 10);position:relative;border-radius:50%;overflow:hidden;display:flex;background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%)}.playerDetailsAvatar__image[_ngcontent-%COMP%]{width:90%;height:90%;margin:auto;border-radius:50%;overflow:hidden}.playerDetails__username[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 1);text-align:center}.progressBarArea[_ngcontent-%COMP%]{width:calc(var(--vw) * 57);display:flex;flex-flow:column nowrap;position:relative;margin-top:auto}.progressBarArea__progressBar[_ngcontent-%COMP%]{height:calc(var(--vh) * 4.16);margin-left:calc(var(--vw) * 6.6);margin-right:calc(var(--vw) * 4.3);padding:0;position:relative}.progressBarArea__level[_ngcontent-%COMP%]{position:absolute;top:50%;transform:translateY(-50%)}.progressBarArea__level--current[_ngcontent-%COMP%]{width:calc(var(--vw) * 7.5);left:0}.progressBarArea__level--next[_ngcontent-%COMP%]{width:calc(var(--vw) * 5.6);right:0}.progressBarArea__level--maxRank[_ngcontent-%COMP%]{position:static;left:auto;margin:0 auto;transform:none}.progressBarArea__level__image[_ngcontent-%COMP%]{width:100%;display:block}.progressBarArea__level__image--current[_ngcontent-%COMP%]{filter:drop-shadow(0 calc(var(--vh) * .1) calc(var(--vh) * 3.24) rgba(252,247,212,.3))}.progressBarArea__level__rankInitials[_ngcontent-%COMP%]{position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);text-transform:uppercase}.progressBarArea__level__rankInitials--next[_ngcontent-%COMP%]{color:#527493}.progressBarArea__level__rankInitials--maxRank[_ngcontent-%COMP%]{transform:translate(-50%,-68%)}.progressBarArea__level__rankName[_ngcontent-%COMP%]{position:absolute;top:110%;left:0;width:100%;font-weight:700;text-align:center}.progressBarArea__level__rankName--next[_ngcontent-%COMP%]{color:#527493}.bottomContent[_ngcontent-%COMP%]{margin-top:auto;align-self:center;display:flex;flex-direction:column;align-items:center;position:relative}.promoArea__text[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 6);padding:calc(var(--vw) * 1.5);width:calc(var(--vw) * 30.5);border:calc(var(--vh) * .15) solid #3d5a74;background:#182531;text-align:center}"]
+                styles: [`
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    margin: 0
+                }
+                
+                body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif;
+                    font-weight: 400
+                }
+                
+                .progressBarArea__level__rankInitials[_ngcontent-%COMP%], .progressBarArea__level__rankInitials--next[_ngcontent-%COMP%], .playerDetails__username[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    font-family: Unchained, serif;
+                    font-weight: 700
+                }
+                
+                .promoArea__text[_ngcontent-%COMP%], .progressBarArea__level__rankName[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif
+                }
+                
+                .progressBarArea__level__rankInitials--next[_ngcontent-%COMP%], .playerDetails__username[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 2.96);
+                    line-height: 1.3
+                }
+                
+                .progressBarArea__level__rankInitials[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 4.2);
+                    line-height: 1.3
+                }
+                
+                .progressBarArea__level__rankName[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 1.9)
+                }
+                
+                .promoArea__text[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 1.48)
+                }
+                
+                .promoArea__text[_ngcontent-%COMP%] {
+                    line-height: 1.4
+                }
+                
+                @keyframes blink {
+                    0% {
+                        opacity: .2
+                    }
+                    20% {
+                        opacity: 1
+                    }
+                    to {
+                        opacity: .2
+                    }
+                }
+                
+                @keyframes glowing {
+                    0% {
+                        box-shadow: 0 0 -10px #28a1ee
+                    }
+                    40% {
+                        box-shadow: 0 0 10px #28a1ee
+                    }
+                    60% {
+                        box-shadow: 0 0 10px #28a1ee
+                    }
+                    to {
+                        box-shadow: 0 0 -10px #28a1ee
+                    }
+                }
+                
+                @keyframes moving-gradient {
+                    0% {
+                        background-position: left
+                    }
+                    to {
+                        background-position: right
+                    }
+                }
+                
+                @keyframes spin {
+                    to {
+                        transform: rotate(360deg)
+                    }
+                }
+                
+                [_nghost-%COMP%] {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    height: calc(var(--vh) * 100);
+                    width: calc(var(--vw) * 100);
+                    display: flex;
+                    flex-flow: column nowrap;
+                    background: #182531;
+                    overflow: hidden
+                }
+                
+                .backgroundGodImagery[_ngcontent-%COMP%] {
+                    user-select: none;
+                    pointer-events: none;
+                    width: calc(var(--vw) * 55.85);
+                    position: absolute;
+                    top: -5%;
+                    height: 110%
+                }
+                
+                .backgroundGodImagery.left[_ngcontent-%COMP%] {
+                    left: 0
+                }
+                
+                .backgroundGodImagery.right[_ngcontent-%COMP%] {
+                    right: 0
+                }
+                
+                .guLogo[_ngcontent-%COMP%] {
+                    position: absolute;
+                    top: 28px;
+                    left: 0;
+                    width: calc(var(--vh) * 7.7);
+                    height: calc(var(--vh) * 7.7);
+                    display: flex
+                }
+                
+                .guLogo__img[_ngcontent-%COMP%] {
+                    width: calc(var(--vh) * 4);
+                    margin: auto
+                }
+                
+                .matchCompleteHeading[_ngcontent-%COMP%] {
+                    right: calc(var(--vh) * 3);
+                    top: calc(28px + calc(var(--vh) * 3));
+                    position: absolute
+                }
+                
+                .displayArea[_ngcontent-%COMP%] {
+                    padding-top: calc(var(--vh) * 11.5);
+                    padding-bottom: calc(var(--vh) * 10);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    flex-grow: 1;
+                    transition: opacity .15s ease-in-out
+                }
+                
+                .displayArea--loading[_ngcontent-%COMP%] {
+                    opacity: 0
+                }
+                
+                .playerDetailsAvatar[_ngcontent-%COMP%] {
+                    display: none;
+                }
+                
+                .playerDetailsAvatar__image[_ngcontent-%COMP%] {
+                    width: 90%;
+                    height: 90%;
+                    margin: auto;
+                    border-radius: 50%;
+                    overflow: hidden
+                }
+                
+                .playerDetails__username[_ngcontent-%COMP%] {
+                    padding-top: calc(var(--vh) * 1);
+                    text-align: center;
+                    font-size: 32px;
+                    color: var(--gu-yellow);
+                }
+                
+                .progressBarArea[_ngcontent-%COMP%] {
+                    width: calc(var(--vw) * 57);
+                    display: flex;
+                    flex-flow: column nowrap;
+                    position: relative;
+                    margin-top: auto
+                }
+                
+                .progressBarArea__progressBar[_ngcontent-%COMP%] {
+                    height: calc(var(--vh) * 4.16);
+                    margin-left: calc(var(--vw) * 6.6);
+                    margin-right: calc(var(--vw) * 4.3);
+                    padding: 0;
+                    position: relative
+                }
+                
+                .progressBarArea__level[_ngcontent-%COMP%] {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%)
+                }
+                
+                .progressBarArea__level--current[_ngcontent-%COMP%] {
+                    width: calc(var(--vw) * 7.5);
+                    left: 0
+                }
+                
+                .progressBarArea__level--next[_ngcontent-%COMP%] {
+                    width: calc(var(--vw) * 5.6);
+                    right: 0
+                }
+                
+                .progressBarArea__level--maxRank[_ngcontent-%COMP%] {
+                    position: static;
+                    left: auto;
+                    margin: 0 auto;
+                    transform: none
+                }
+                
+                .progressBarArea__level__image[_ngcontent-%COMP%] {
+                    width: 100%;
+                    display: block
+                }
+                
+                .progressBarArea__level__image--current[_ngcontent-%COMP%] {
+                    filter: drop-shadow(0 calc(var(--vh) * .1) calc(var(--vh) * 3.24) rgba(252, 247, 212, .3))
+                }
+                
+                .progressBarArea__level__rankInitials[_ngcontent-%COMP%] {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -60%);
+                    text-transform: uppercase
+                }
+                
+                .progressBarArea__level__rankInitials--next[_ngcontent-%COMP%] {
+                    color: var(--gu-blue-hover);
+                }
+                
+                .progressBarArea__level__rankInitials--maxRank[_ngcontent-%COMP%] {
+                    transform: translate(-50%, -68%)
+                }
+                
+                .progressBarArea__level__rankName[_ngcontent-%COMP%] {
+                    position: absolute;
+                    top: 110%;
+                    left: 0;
+                    width: 100%;
+                    font-weight: 700;
+                    text-align: center
+                }
+                
+                .progressBarArea__level__rankName--next[_ngcontent-%COMP%] {
+                    color: var(--gu-blue-hover);
+                }
+                
+                .bottomContent[_ngcontent-%COMP%] {
+                    margin-top: auto;
+                    align-self: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative
+                }
+                
+                .promoArea__text[_ngcontent-%COMP%] {
+                    margin-top: calc(var(--vh) * 6);
+                    padding: calc(var(--vw) * 1.5);
+                    width: calc(var(--vw) * 30.5);
+                    border: calc(var(--vh) * .15) solid #3d5a74;
+                    background: #182531;
+                    text-align: center
+                }
+                `]
             }), o
         })(), Lo = (() => {
             class o {
@@ -2225,12 +2486,7 @@
                 }
                 
                 .continue[_ngcontent-%COMP%] {
-                    position: absolute;
-                    bottom: 14.5%;
-                    left: 50%;
-                    transform: translate(-50%);
-                    min-width: 180px;
-                    opacity: 0
+                    transform: none !important;
                 }
                 
                 .continueButtonPlaceholder[_ngcontent-%COMP%] {
@@ -3068,9 +3324,12 @@
                 }
 
                 initFormGroup() {
-                    this.ownershipForm = this.fb.group({ownership: ["all"]}), this.ownershipForm.get("ownership").valueChanges.pipe((0, u.R)(this.unsubscribe)).subscribe(t => {
+                    let initialOwnership = localStorage.getItem('collectionOwnership') || 'all';
+                    this.ownershipForm = this.fb.group({ownership: initialOwnership}), this.ownershipForm.get("ownership").valueChanges.pipe((0, u.R)(this.unsubscribe)).subscribe(t => {
+                        localStorage.setItem('collectionOwnership', t);
                         this.ownershipChange.emit(t)
-                    })
+                    });
+                    this.ownershipChange.emit(initialOwnership);
                 }
 
                 selectCheckbox() {
@@ -3363,7 +3622,7 @@
                 }
                 
                 .fourColumns[_nghost-%COMP%] {
-                    grid-row-gap: calc(var(--vh) * 3.5);
+                    grid-row-gap: calc(var(--vh) * 4.5);
                     grid-column-gap: calc(var(--vw) * 1.2);
                     display: grid;
                     grid-template-columns:repeat(4, 1fr);
@@ -3373,27 +3632,27 @@
                 }
                 
                 .sevenColumns[_nghost-%COMP%] {
-                    grid-row-gap: calc(var(--vh) * 3.5);
+                    grid-row-gap: calc(var(--vh) * 4.5);
                     grid-column-gap: calc(var(--vw) * 1.2);
                     display: grid;
-                    grid-template-columns:repeat(6, 1fr);
+                    grid-template-columns:repeat(8, 1fr);
                     align-items: start;
                     grid-auto-rows: min-content;
-                    grid-template-areas:"item item item item item item" "desc desc desc desc desc desc"
+                    grid-template-areas:"item item item item item item item item" "desc desc desc desc desc desc desc desc"
                 }
                 
                 .eightColumns[_nghost-%COMP%] {
-                    grid-row-gap: calc(var(--vh) * 3.5);
+                    grid-row-gap: calc(var(--vh) * 4.5);
                     grid-column-gap: calc(var(--vw) * 1.2);
                     display: grid;
-                    grid-template-columns:repeat(6, 1fr);
+                    grid-template-columns:repeat(8, 1fr);
                     align-items: start;
                     grid-auto-rows: min-content;
-                    grid-template-areas:"item item item item item item" "desc desc desc desc desc desc"
+                    grid-template-areas:"item item item item item item item item" "desc desc desc desc desc desc desc desc"
                 }
                 
                 .tenColumns[_nghost-%COMP%] {
-                    grid-row-gap: calc(var(--vh) * 3.5);
+                    grid-row-gap: calc(var(--vh) * 4.5);
                     grid-column-gap: calc(var(--vw) * 1.2);
                     display: grid;
                     grid-template-columns:repeat(8, 1fr);
@@ -3403,7 +3662,7 @@
                 }
                 
                 .elevenColumns[_nghost-%COMP%] {
-                    grid-row-gap: calc(var(--vh) * 3.5);
+                    grid-row-gap: calc(var(--vh) * 4.5);
                     grid-column-gap: calc(var(--vw) * 1.2);
                     display: grid;
                     grid-template-columns:repeat(8, 1fr);
@@ -7391,14 +7650,14 @@
             }
             if (2 & o) {
                 const t = e.oxw(2);
-                e.xp6(2), e.hij(" Next milestone - Level ", t.user.level + 1, " "), e.xp6(1), e.Q6J("progress", t.xpProgress), e.xp6(2), e.Q6J("autoClose", !t.isNewUserWithUnopenedPacks)("title", t.isNewUserWithUnopenedPacks ? "Click to see <br/> unlocked rewards" : t.nextReward.god + " Core " + t.nextReward.rarity + " pack"), e.xp6(1), e.Q6J("ngClass", e.VKq(7, Qs, t.isNewUserWithUnopenedPacks)), e.xp6(1), e.Q6J("god", t.nextReward.god)("rarity", t.nextReward.rarity)
+                e.xp6(2), e.hij(" Next milestone in " + t.user.xp_to_next + " XP - Level ", t.user.level + 1, " "), e.xp6(1), e.Q6J("progress", t.xpProgress), e.xp6(2), e.Q6J("autoClose", !t.isNewUserWithUnopenedPacks)("title", t.isNewUserWithUnopenedPacks ? "Click to see <br/> unlocked rewards" : t.nextReward.god + " Core " + t.nextReward.rarity + " pack"), e.xp6(1), e.Q6J("ngClass", e.VKq(7, Qs, t.isNewUserWithUnopenedPacks)), e.xp6(1), e.Q6J("god", t.nextReward.god)("rarity", t.nextReward.rarity)
             }
         }
 
         function Ys(o, r) {
-            if (1 & o && (e.ynx(0), e.TgZ(1, "div", 1), e._UZ(2, "img", 2), e.qZA(), e.TgZ(3, "div", 3), e.TgZ(4, "div", 4), e.TgZ(5, "gu-simple-text", 5), e._uU(6), e.qZA(), e.YNc(7, Ns, 2, 1, "gu-heading-text", 6), e.YNc(8, Rs, 2, 1, "gu-heading-text", 7), e.TgZ(9, "div", 8), e.TgZ(10, "div", 9), e._UZ(11, "gu-icon", 10), e.TgZ(12, "gu-heading-text", 11), e._uU(13), e.qZA(), e.qZA(), e.TgZ(14, "div", 9), e._UZ(15, "gu-icon", 12), e.TgZ(16, "gu-heading-text", 11), e._uU(17), e.qZA(), e.qZA(), e.qZA(), e.qZA(), e.qZA(), e.YNc(18, Hs, 8, 9, "div", 13), e.BQk()), 2 & o) {
+            if (1 & o && (e.ynx(0), e.TgZ(1, "div", 1), e._UZ(2, "img", 2), e.qZA(), e.TgZ(3, "div", 3), e.TgZ(4, "div", 4), e.TgZ(5, "gu-simple-text", 5), e._uU(6), e.qZA(), e.YNc(7, Ns, 2, 1, "gu-heading-text", 6), e.YNc(8, Rs, 2, 1, "gu-heading-text", 7), e.TgZ(9, "div", 8), e.TgZ(10, "div", 9), e._UZ(11, "gu-icon", 10), e.TgZ(12, "gu-paragraph-text", 11), e._uU(13), e.qZA(), e.qZA(), e.TgZ(14, "div", 9), e._UZ(15, "gu-icon", 12), e.TgZ(16, "gu-paragraph-text", 11), e._uU(17), e.qZA(), e.qZA(), e.qZA(), e.qZA(), e.qZA(), e.YNc(18, Hs, 8, 9, "div", 13), e.BQk()), 2 & o) {
                 const t = e.oxw();
-                e.xp6(2), e.s9C("src", t.user.image_url, e.LSH), e.xp6(3), e.Udp("color", t.user.rank_color), e.xp6(1), e.hij(" ", t.user.rank, " "), e.xp6(1), e.Q6J("ngIf", t.userNameContainsEmoji), e.xp6(1), e.Q6J("ngIf", !t.userNameContainsEmoji), e.xp6(5), e.hij(" ", null == t.user ? null : t.user.won_matches, " "), e.xp6(4), e.hij(" ", null == t.user ? null : t.user.unique_card_count, " "), e.xp6(1), e.Q6J("ngIf", t.showProgressBar && t.nextReward)
+                e.xp6(2), e.s9C("src", t.user.image_url, e.LSH), e.xp6(3), e.Udp("color", t.user.rank_color), e.xp6(1), e.hij(" ", t.user.rank, " "), e.xp6(1), e.Q6J("ngIf", t.userNameContainsEmoji), e.xp6(1), e.Q6J("ngIf", !t.userNameContainsEmoji), e.xp6(5), e.hij(" ", null == t.user ? null : t.user.won_matches + ' wins (' + (t.user.won_matches + t.user.lost_matches) + ' played)', " "), e.xp6(4), e.hij(" ", null == t.user ? null : t.user.unique_card_count + ' unique cards', " "), e.xp6(1), e.Q6J("ngIf", t.showProgressBar && t.nextReward)
             }
         }
 
@@ -7470,7 +7729,138 @@
                     1 & t && e.YNc(0, Ys, 19, 9, "ng-container", 0), 2 & t && e.Q6J("ngIf", n.user)
                 },
                 directives: [d.O5, xe.K, d.mk],
-                styles: ['h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}[_nghost-%COMP%]{height:100%;display:flex;flex-wrap:wrap}.textArea[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 2.2);flex:1;display:flex;flex-direction:column;align-items:flex-start}.textArea__centered[_ngcontent-%COMP%]{margin:auto 0}.avatarArea[_ngcontent-%COMP%]{width:calc(var(--vw) * 8);height:calc(var(--vw) * 8);position:relative;border-radius:50%;overflow:hidden;border:calc(var(--vh) * .6) solid #1D2F41;box-shadow:0 calc(var(--vh) * .6) calc(var(--vh) * 1.3) #0a0a0a99}.avatar__profileImage[_ngcontent-%COMP%]{display:block;width:100%;border-radius:50%}.playerName[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .4);margin-bottom:calc(var(--vh) * 1.2)}.statDisplays[_ngcontent-%COMP%]{display:flex;justify-content:space-between}.statDisplays__stat[_ngcontent-%COMP%]{display:flex;margin-right:calc(var(--vw) * 1.5)}.statDisplays__stat__icon[_ngcontent-%COMP%]{margin-right:calc(var(--vw) * .5);font-size:20px}.progressBarArea[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2.2);display:flex;width:100%;position:relative}.progressBarArea__nextMilestone[_ngcontent-%COMP%]{position:absolute;bottom:120%;right:8%}.progressBarArea__nextReward[_ngcontent-%COMP%]{position:absolute;top:0;right:0;width:52px;height:52px;display:flex;transform:translate(50%,-27%)}.progressBarArea__nextReward[_ngcontent-%COMP%]     .tooltipBubble--top{margin-top:-24px}.progressBarArea__nextReward__innerSquares[_ngcontent-%COMP%]{position:absolute;width:100%;height:100%;transform:rotate(45deg);border:1px solid #C6A052;padding:4.8px;background:#0F1B27}.progressBarArea__nextReward__innerSquares[_ngcontent-%COMP%]:before{content:"";display:block;width:100%;height:100%;border:1px solid #AFFAED}.glow[_ngcontent-%COMP%]{box-shadow:0 0 10px #e5e5e5}.progressBarArea__nextReward__packImage[_ngcontent-%COMP%]{margin:auto;width:48px;transform:translateY(-6%)}gu-hex-progress-bar[_ngcontent-%COMP%]{flex:1}']
+                styles: [`
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    margin: 0
+                }
+                
+                body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif;
+                    font-weight: 400
+                }
+                
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    font-family: Unchained, serif;
+                    font-weight: 700
+                }
+                
+                [_nghost-%COMP%] {
+                    height: 100%;
+                    display: flex;
+                    flex-wrap: wrap
+                }
+                
+                .textArea[_ngcontent-%COMP%] {
+                    padding-left: calc(var(--vw) * 2.2);
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start
+                }
+                
+                .textArea__centered[_ngcontent-%COMP%] {
+                    margin: auto 0
+                }
+                
+                .avatarArea[_ngcontent-%COMP%] {
+                    width: calc(var(--vw) * 8);
+                    height: calc(var(--vw) * 8);
+                    position: relative;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    border: calc(var(--vh) * .6) solid #1D2F41;
+                    box-shadow: 0 calc(var(--vh) * .6) calc(var(--vh) * 1.3) #0a0a0a99
+                }
+                
+                .avatar__profileImage[_ngcontent-%COMP%] {
+                    display: block;
+                    width: 100%;
+                    border-radius: 50%
+                }
+                
+                .playerName[_ngcontent-%COMP%] {
+                    margin-top: calc(var(--vh) * .4);
+                    margin-bottom: calc(var(--vh) * 1.2)
+                }
+                
+                .statDisplays[_ngcontent-%COMP%] {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                
+                .statDisplays__stat[_ngcontent-%COMP%] {
+                    display: flex;
+                    margin-right: calc(var(--vw) * 1.5);
+                }
+                
+                .statDisplays__stat__icon[_ngcontent-%COMP%] {
+                    margin-right: calc(var(--vw) * .5);
+                    font-size: .9rem;
+                }
+                
+                .statDisplays__stat__value[_ngcontent-%COMP%] {
+                    font-size: .9rem;
+                }
+                
+                .progressBarArea[_ngcontent-%COMP%] {
+                    margin-top: calc(var(--vh) * 2.2);
+                    display: flex;
+                    width: 100%;
+                    position: relative
+                }
+                
+                .progressBarArea__nextMilestone[_ngcontent-%COMP%] {
+                    position: absolute;
+                    bottom: 120%;
+                    right: 8%
+                }
+                
+                .progressBarArea__nextReward[_ngcontent-%COMP%] {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 52px;
+                    height: 52px;
+                    display: flex;
+                    transform: translate(50%, -27%)
+                }
+                
+                .progressBarArea__nextReward[_ngcontent-%COMP%] .tooltipBubble--top {
+                    margin-top: -24px
+                }
+                
+                .progressBarArea__nextReward__innerSquares[_ngcontent-%COMP%] {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    transform: rotate(45deg);
+                    border: 1px solid #C6A052;
+                    padding: 4.8px;
+                    background: #0F1B27
+                }
+                
+                .progressBarArea__nextReward__innerSquares[_ngcontent-%COMP%]:before {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid #AFFAED
+                }
+                
+                .glow[_ngcontent-%COMP%] {
+                    box-shadow: 0 0 10px #e5e5e5
+                }
+                
+                .progressBarArea__nextReward__packImage[_ngcontent-%COMP%] {
+                    margin: auto;
+                    width: 48px;
+                    transform: translateY(-6%)
+                }
+                
+                gu-hex-progress-bar[_ngcontent-%COMP%] {
+                    flex: 1
+                }
+                `]
             }), o
         })();
 

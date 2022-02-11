@@ -9213,7 +9213,7 @@
     <div class="side side--left">
       <gu-simple-text kind="small" fontWeight="bold" fillColor=${o.colors.gold[300]} class="side__part side__part--flux">
         <gu-icon iconLigature="flux_symbol" class="side__part__icon"></gu-icon>
-        ${$ || "0"}
+        ${$ || "0"} FLUX
       </gu-simple-text>
 
       <gu-simple-text
@@ -9223,7 +9223,7 @@
         class="side__part side__part--stars"
       >
         <gu-icon iconLigature="collectable_stars" class="side__part__icon"></gu-icon>
-        ${c || "0"}
+        ${c || "0"} STARS
       </gu-simple-text>
       <div class="side__hoverGradient"></div>
     </div>

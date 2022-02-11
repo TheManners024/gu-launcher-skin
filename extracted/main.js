@@ -333,7 +333,7 @@ function createWindow(frontEndUrl) {
         // console.log('ready to show');
         win.show();
     });
-    // win.webContents.openDevTools();
+    win.webContents.openDevTools();
     // if (electron_1.nativeTheme.shouldUseDarkColors) {
     //     electron_1.systemPreferences.setAppLevelAppearance('dark');
     // }
@@ -350,7 +350,7 @@ function createWindow(frontEndUrl) {
      * Intercept the requests to their assets and provide our own
      */
     electron_1.protocol.registerFileProtocol('inject', (request, callback) => {
-        const path = `${request.url.substr(9)}`;
+        const path = `${request.url.substring(9)}`;
         callback(path);
     });
     electron_1.session.defaultSession.webRequest.onBeforeRequest({
@@ -358,7 +358,8 @@ function createWindow(frontEndUrl) {
             'https://master.desktop.godsunchained.com/main.*.js',
             'https://master.desktop.godsunchained.com/26.*.js',
             'https://master.desktop.godsunchained.com/styles.*.css',
-            'https://master.desktop.godsunchained.com/gu-assets/images/rank-progress/gu-progress-rank-cracks--*.svg'
+            'https://master.desktop.godsunchained.com/gu-assets/images/rank-progress/gu-progress-rank-cracks--*.svg',
+            'https://master.desktop.godsunchained.com/new-relic.*.js'
         ]
     }, (details, callback) => {
         let url = null;
@@ -370,6 +371,9 @@ function createWindow(frontEndUrl) {
             url = path.normalize(`${__dirname}/app-inventory.js`);
         } else if (details.url.match(/gu-progress-rank-cracks--[\d][.]svg$/) != null) {
             url = path.normalize(`${__dirname}/${details.url.split('.com').pop()}`);
+        } else if (details.url.endsWith('new-relic.prod.js')) {
+            console.log('new relic requested');
+            return callback({cancel: true, redirectURL: undefined});
         }
 
         callback({redirectURL: `inject://${url}`});
