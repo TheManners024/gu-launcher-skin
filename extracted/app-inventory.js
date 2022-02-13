@@ -4806,6 +4806,7 @@
                     height: 100%;
                     overflow-y: scroll;
                     overflow-x: hidden;
+                    padding: 48px 48px 0px;
                 }
                 
                 .sectionHeader[_ngcontent-%COMP%] {
@@ -4872,7 +4873,7 @@
                     overflow: hidden;
                     overflow-y: auto;
                     flex: 1;
-                    padding: 0 16px
+                    padding: 0 24px;
                 }
                 
                 app-card {
@@ -9031,7 +9032,21 @@
                 }
 
                 initDecks() {
-                    this.allDecks$ = (0, D.aj)([this.decksService.starterDecks$, this.decksService.userDecks$]).pipe((0, S.U)(([t, n]) => [...t, ...n.filter(a => "common" === a.deck_type)])), this.filteredDecks$ = this.allDecks$
+                    this.allDecks$ = (0, D.aj)([this.decksService.starterDecks$, this.decksService.userDecks$]).pipe((0, S.U)(([t, n]) => [...t, ...n.filter(a => "common" === a.deck_type).sort((d1, d2) => {
+                        if (d1.god < d2.god) {
+                            return -1;
+                        }
+                        if (d1.god > d2.god) {
+                            return 1;
+                        }
+                        if (d1.name < d2.name) {
+                            return -1;
+                        }
+                        if (d1.name > d2.name) {
+                            return 1;
+                        }
+                        return 0;
+                    })])), this.filteredDecks$ = this.allDecks$
                 }
 
                 initGameModes() {
@@ -9108,7 +9123,7 @@
                 template: function (t, n) {
                     1 & t && (e.YNc(0, bc, 1, 1, "app-modal-sidebar", 0), e.TgZ(1, "header", 1), e.TgZ(2, "app-grouping-bar", 2), e.NdJ("godFilterChangeList", function (a) {
                         return n.godFilterChange(a)
-                    }), e.qZA(), e.TgZ(3, "h3", 3), e._uU(4, "My Decks"), e.qZA(), e.YNc(5, wc, 2, 0, "gu-plain-square-button", 4), e.qZA(), e.TgZ(6, "div", 5), e.TgZ(7, "app-create-new-button", 6), e.NdJ("click", function () {
+                    }), e.qZA(), e.TgZ(3, "h3", 3), e._uU(4, "My Decks (Sorted by God, Name)"), e.qZA(), e.YNc(5, wc, 2, 0, "gu-plain-square-button", 4), e.qZA(), e.TgZ(6, "div", 5), e.TgZ(7, "app-create-new-button", 6), e.NdJ("click", function () {
                         return n.newDeck()
                     }), e.qZA(), e.YNc(8, xc, 1, 4, "app-deck", 7), e.ALo(9, "async"), e.qZA()), 2 & t && (e.Q6J("ngIf", n.modalHosted), e.xp6(2), e.Q6J("godFilters", n.godFilters)("displayGroupingName", !1), e.xp6(3), e.Q6J("featureFlagIf", n.Flags.deckCodesEnabled), e.xp6(3), e.Q6J("ngForOf", e.lcZ(9, 6, n.filteredDecks$))("ngForTrackBy", n.trackDecksBy))
                 },
@@ -9318,7 +9333,7 @@
         let Rc = (() => {
             class o {
                 constructor(t, n, i, a, s, c, l, g, b, C, k, A, G, U) {
-                    this.playService = t, this.auth = n, this.queueService = i, this.el = a, this.guGameService = s, this.resizeService = c, this.modalService = l, this.gameService = g, this.loadoutService = b, this.audioService = C, this.akumaService = k, this.cerberusModal = A, this.featureFlagService = G, this.environment = U, this.disabled = !1, this.openDeckSelect = new e.vpe, this.secondsElapsed = 0, this.progressCirclePercentage = 0, this.echoPercentage = 50, this.isPressed = !1, this.isHovered = !1, this.timeUntilCancel = 2e3, this.unsubscribe = new M.xQ, this.gameModeReady = !1, this.GuGameModeType = O.tO, this.disableButton = !1, this.MIN_GAMES_PLAYED = 10, this.AFTER_EVERY_X_GAMES = 5
+                    this.playService = t, this.auth = n, this.queueService = i, this.el = a, this.guGameService = s, this.resizeService = c, this.modalService = l, this.gameService = g, this.loadoutService = b, this.audioService = C, this.akumaService = k, this.cerberusModal = A, this.featureFlagService = G, this.environment = U, this.disabled = !1, this.openDeckSelect = new e.vpe, this.secondsElapsed = 0, this.progressCirclePercentage = 0, this.echoPercentage = 50, this.isPressed = !1, this.isHovered = !1, this.timeUntilCancel = 2e3, this.unsubscribe = new M.xQ, this.gameModeReady = !1, this.GuGameModeType = O.tO, this.disableButton = !1, this.MIN_GAMES_PLAYED = 10, this.AFTER_EVERY_X_GAMES = 5, this.firstTryLaunch = true
                 }
 
                 ngOnInit() {
@@ -9498,9 +9513,17 @@
                         id: this.mode.id,
                         name: this.mode.name
                     }, this.userId, new J.Qc(this.userId, this.deck, this.getLoadoutId(), this.opponentsDeck), this.mode.type === O.tO.DIRECT_CHALLENGE ? this.challengeCode : "").pipe((0, x.q)(1)).subscribe(t => {
-                        this.queue = t, this.disableButton = !1, this.initTimer()
+                        this.firstTryLaunch = true, this.queue = t, this.disableButton = !1, this.initTimer()
                     }, t => {
-                        this.disableButton = !1, this.showInfoModal("Unable to Queue", t)
+                        if (this.firstTryLaunch === true) {
+                            this.firstTryLaunch = false;
+                            setTimeout(() => {
+                                this.launchQueue();
+                            }, 500);
+                        } else {
+                            this.disableButton = !1;
+                            this.showInfoModal("Unable to Queue", t);
+                        }
                     })
                 }
 
@@ -9671,7 +9694,7 @@
                 }
                 
                 [_nghost-%COMP%]:hover {
-                    transform: scale(1.02)
+                    transform: scale(1.05);
                 }
                 
                 .queue-button-container[_ngcontent-%COMP%] {
@@ -9686,10 +9709,6 @@
                     box-shadow: inset 2px 2px 5px #000
                 }
                 
-                .queue-button-container[_ngcontent-%COMP%]:hover .inner-circle[_ngcontent-%COMP%] {
-                    background: #182531
-                }
-                
                 .queue-button-container--disabled[_ngcontent-%COMP%] {
                     user-select: none;
                     pointer-events: none;
@@ -9698,7 +9717,7 @@
                 
                 .outer-circle[_ngcontent-%COMP%] {
                     height: 100%;
-                    background: linear-gradient(to bottom, #fff2d8 0%, #ebc98b 50%, #c6a052 100%)
+                    background: var(--gu-yellow);
                 }
                 
                 .inner-circle[_ngcontent-%COMP%] {
@@ -9710,7 +9729,7 @@
                     transform: translate(-50%, -50%);
                     border-radius: 50%;
                     transition: all .15s ease;
-                    background: #0f1b27
+                    background: var(--gu-blue-dark);
                 }
                 
                 .inner-circle-content[_ngcontent-%COMP%] {
@@ -11615,7 +11634,6 @@
                 [_nghost-%COMP%] {
                     border-radius: calc(var(--vw) * .45);
                     overflow: hidden;
-                    box-shadow: 0 calc(var(--vh) * .6) calc(var(--vh) * 3) calc(var(--vh) * .2) #0000004d;
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
@@ -11653,7 +11671,6 @@
                     object-fit: cover;
                     object-position: center;
                     opacity: .6;
-                    transition: opacity .15s ease-in-out
                 }
                 
                 .cardHeader[_ngcontent-%COMP%] {
@@ -12439,23 +12456,7 @@
 
                 fetchDecks() {
                     (0, D.aj)([this.decksService.userDecks$, this.decksService.starterDecks$]).pipe((0, u.R)(this.unsubscribe), (0, w.b)(([t, n]) => {
-                        this.userDecks = t.sort((d1, d2) => {
-                            if (d1.name < d2.name) {
-                                return -1;
-                            }
-                            if (d1.name > d2.name) {
-                                return 1;
-                            }
-                            if (d1.name === d2.name) {
-                                if (d1.god < d2.god) {
-                                    return -1;
-                                }
-                                if (d1.god > d2.god) {
-                                    return 1;
-                                }
-                            }
-                            return 0;
-                        }),this.starterDecks = n, this.allDecks = [...t, ...n]
+                        this.userDecks = t,this.starterDecks = n, this.allDecks = [...t, ...n]
                     })).subscribe()
                 }
 

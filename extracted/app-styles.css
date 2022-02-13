@@ -193,7 +193,7 @@ cerberus-draggable-titlebar:not(.fake-selector) {
     background: none !important;
 }
 
-gu-plain-square-button.importDeckCta {
+gu-plain-square-button {
     --textFillColor: var(--gu-blue) !important;
     --borderColor: var(--gu-blue) !important;
     --borderColorHover: var(--gu-blue-hover) !important;
@@ -208,12 +208,30 @@ gu-primary-hex-button:not(.fake-selector) {
     font-family: Unchained;
     text-transform: uppercase;
     line-height: 32px;
-    clip-path: polygon(0px 0%, 100% 0%, 100% 0%, 100% 100%, 0px 100%, 0% 0%);
     right: 0;
     bottom: 0;
     font-size: 18px;
     color: var(--gu-blue);
     border: solid 1px var(--gu-blue);
+}
+
+gu-secondary-hex-button:not(.fake-selector) {
+    border-radius: 25px;
+    background: var(--gu-blue-dark);
+    z-index: 9;
+    text-align: center;
+    font-family: Unchained;
+    text-transform: uppercase;
+    line-height: 32px;
+    right: 0;
+    bottom: 0;
+    font-size: 18px;
+    color: var(--gu-gray);
+    border: solid 1px var(--gu-gray);
+}
+
+gu-secondary-hex-button::before {
+    inset: 0px 0px;
 }
 
 gu-primary-hex-button.deleteDeck {
@@ -296,14 +314,6 @@ app-inventory-cards-quality > header.groupedCardsHeader:before {
     background: var(--gu-yellow) !important;
 }
 
-.cardsListingArea {
-    padding: 0 48px !important;
-}
-
-.cardsListingArea__cardsListing .cardGrid {
-    grid-column-gap: 4px !important;
-}
-
 .godBadge.godBadge--small {
     border: solid 2px var(--gu-blue);
     box-shadow: none;
@@ -311,10 +321,6 @@ app-inventory-cards-quality > header.groupedCardsHeader:before {
     border-radius: 100%;
     width: calc(var(--vw) * 3.9);
     height: calc(var(--vw) * 3.9);
-}
-
-.outer-circle:not(.fake-selector) {
-    background: var(--gu-yellow);
 }
 
 .gu-simple-text {
@@ -355,8 +361,7 @@ app-inventory-cards-quality > header.groupedCardsHeader:before {
     margin-left: calc(var(--vw) * .9);
     margin-right: calc(var(--vw) * .9);
     border-radius: 4px;
-    margin-top: 4px;
-    padding: 4px;
+    padding: 4px 8px;
 }
 
 .fluxProgress:not(.fake-selector) app-flux-progress-box:not(.fake-selector) {

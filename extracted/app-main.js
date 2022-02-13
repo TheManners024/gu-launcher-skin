@@ -477,7 +477,7 @@
 
                 fetchGameModes(N = !1) {
                     (0, p.aj)([this.fetchPlayerGameModes$(), this.getLock$(), this.fetchPlayerRanks$()]).pipe((0, t.q)(1), (0, S.U)(([de, _e, Ae]) => de.map(Ze => this.transformGameModes(Ze, _e, Ae))), (0, b.b)(de => {
-                        console.log('GAME MODES: ', de);
+
                         for (const gm of de) {
                             if (gm.id === 0) { // Solo
                                 gm.image_url = 'https://images.godsunchained.com/art2/720/1492.jpg';
@@ -15592,7 +15592,7 @@
         });
         var u = n(32830), i = n(65281);
         const v = b => u.iv`${(0, u.$m)(b)}`,
-            e = (b, S, T = 0) => `\n  clip-path: polygon(\n    ${b + T}px 0%,\n    calc(100% - ${S + T}px) 0%,\n    100% 50%,\n    calc(100% - ${S + T}px) 100%,\n    ${b + T}px 100%,\n    0% 50%\n  );\n  -webkit-clip-path: polygon(\n    ${b + T}px 0%,\n    calc(100% - ${S + T}px) 0%,\n    calc(100% - ${T}px) 50%,\n    calc(100% - ${S + T}px) 100%,\n    ${b + T}px 100%,\n    ${T}px 50%\n  );\n`,
+            e = (b, S, T = 0) => ``,
             f = b => `\n  clip-path: polygon(\n    0% 0%,\n    100% 0%,\n    100% calc(100% - ${b}),\n    50% 100%,\n    0% calc(100% - ${b}),\n    0% 0%\n  );\n  -webkit-clip-path: polygon(\n    0% 0%,\n    100% 0%,\n    100% calc(100% - ${b}),\n    50% 100%,\n    0% calc(100% - ${b}),\n    0% 0%\n  );\n`,
             p = (b = "border-box") => `\n  :host,\n  :host *,\n  :host *::before,\n  :host *::after {\n    box-sizing: ${b};\n  }\n`,
             g = (b, S, T = "initial", w = .3, D = 0) => `\n  ${b} {\n    opacity: 0;\n    height: 0;\n    transition: opacity ${w}s ease, height 0s ${w}s, transform ${w}s ease;\n    ${D ? `transform: translateY(${D}px);` : ""}\n  }\n  ${S} {\n    opacity: 1;\n    height: ${T};\n    transition: opacity ${w}s ease, height 0s 0s, transform ${w}s ease;\n    ${D ? "transform: translateY(0);" : ""}\n  }\n`,

@@ -333,7 +333,7 @@ function createWindow(frontEndUrl) {
         // console.log('ready to show');
         win.show();
     });
-    win.webContents.openDevTools();
+    // win.webContents.openDevTools();
     // if (electron_1.nativeTheme.shouldUseDarkColors) {
     //     electron_1.systemPreferences.setAppLevelAppearance('dark');
     // }
@@ -372,7 +372,6 @@ function createWindow(frontEndUrl) {
         } else if (details.url.match(/gu-progress-rank-cracks--[\d][.]svg$/) != null) {
             url = path.normalize(`${__dirname}/${details.url.split('.com').pop()}`);
         } else if (details.url.endsWith('new-relic.prod.js')) {
-            console.log('new relic requested');
             return callback({cancel: true, redirectURL: undefined});
         }
 
