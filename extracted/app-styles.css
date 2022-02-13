@@ -498,6 +498,10 @@ app-flux-gauntlet-circle.highlighted:not(.fake-selector) {
     opacity: 0 !important;
 }
 
+.playerRank {
+    display: none;
+}
+
 .possessionGroup__items {
     display: none !important;
 }
