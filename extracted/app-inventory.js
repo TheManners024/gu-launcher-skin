@@ -7624,14 +7624,14 @@
         function Ns(o, r) {
             if (1 & o && (e.TgZ(0, "gu-heading-text", 14), e._uU(1), e.qZA()), 2 & o) {
                 const t = e.oxw(2);
-                e.xp6(1), e.hij(" ", null == t.account ? null : t.account.username, " ")
+                e.xp6(1), e.hij(" ", null == t.account ? null : t.account.username + ' - ' + t.user.user_id, " ")
             }
         }
 
         function Rs(o, r) {
             if (1 & o && (e.TgZ(0, "gu-heading-text", 15), e._uU(1), e.qZA()), 2 & o) {
                 const t = e.oxw(2);
-                e.xp6(1), e.hij(" ", null == t.account ? null : t.account.username, " ")
+                e.xp6(1), e.hij(" ", null == t.account ? null : t.account.username + ' - ' + t.user.user_id, " ")
             }
         }
 
@@ -7657,7 +7657,7 @@
         function Ys(o, r) {
             if (1 & o && (e.ynx(0), e.TgZ(1, "div", 1), e._UZ(2, "img", 2), e.qZA(), e.TgZ(3, "div", 3), e.TgZ(4, "div", 4), e.TgZ(5, "gu-simple-text", 5), e._uU(6), e.qZA(), e.YNc(7, Ns, 2, 1, "gu-heading-text", 6), e.YNc(8, Rs, 2, 1, "gu-heading-text", 7), e.TgZ(9, "div", 8), e.TgZ(10, "div", 9), e._UZ(11, "gu-icon", 10), e.TgZ(12, "gu-paragraph-text", 11), e._uU(13), e.qZA(), e.qZA(), e.TgZ(14, "div", 9), e._UZ(15, "gu-icon", 12), e.TgZ(16, "gu-paragraph-text", 11), e._uU(17), e.qZA(), e.qZA(), e.qZA(), e.qZA(), e.qZA(), e.YNc(18, Hs, 8, 9, "div", 13), e.BQk()), 2 & o) {
                 const t = e.oxw();
-                e.xp6(2), e.s9C("src", t.user.image_url, e.LSH), e.xp6(3), e.Udp("color", t.user.rank_color), e.xp6(1), e.hij(" ", t.user.rank, " "), e.xp6(1), e.Q6J("ngIf", t.userNameContainsEmoji), e.xp6(1), e.Q6J("ngIf", !t.userNameContainsEmoji), e.xp6(5), e.hij(" ", null == t.user ? null : t.user.won_matches + ' wins (' + (t.user.won_matches + t.user.lost_matches) + ' played)', " "), e.xp6(4), e.hij(" ", null == t.user ? null : t.user.unique_card_count + ' unique cards', " "), e.xp6(1), e.Q6J("ngIf", t.showProgressBar && t.nextReward)
+                e.xp6(2), e.s9C("src", t.user.image_url, e.LSH), e.xp6(3), e.Udp("color", t.user.rank_color), e.xp6(1), e.hij(" ", t.user.rank, " "), e.xp6(1), e.Q6J("ngIf", t.userNameContainsEmoji), e.xp6(1), e.Q6J("ngIf", !t.userNameContainsEmoji), e.xp6(5), e.hij(" ", null == t.user ? null : t.user.won_matches + ' W - ' + t.user.lost_matches + ' L (' + (t.user.won_matches + t.user.lost_matches > 0 ? ((t.user.won_matches / (t.user.won_matches + t.user.lost_matches))*100).toFixed(0) : 0) + '%)', " "), e.xp6(4), e.hij(" ", null == t.user ? null : t.user.unique_card_count + ' unique cards', " "), e.xp6(1), e.Q6J("ngIf", t.showProgressBar && t.nextReward)
             }
         }
 
@@ -10004,6 +10004,8 @@
                 }
 
                 calcTopThreeCards(t, n) {
+                    // console.log(t);
+                    // console.log(n);
                     this.topThreeCards = this.utils.calcTopCards(t, n, 3)
                 }
 
@@ -12437,7 +12439,23 @@
 
                 fetchDecks() {
                     (0, D.aj)([this.decksService.userDecks$, this.decksService.starterDecks$]).pipe((0, u.R)(this.unsubscribe), (0, w.b)(([t, n]) => {
-                        this.userDecks = t, this.starterDecks = n, this.allDecks = [...t, ...n]
+                        this.userDecks = t.sort((d1, d2) => {
+                            if (d1.name < d2.name) {
+                                return -1;
+                            }
+                            if (d1.name > d2.name) {
+                                return 1;
+                            }
+                            if (d1.name === d2.name) {
+                                if (d1.god < d2.god) {
+                                    return -1;
+                                }
+                                if (d1.god > d2.god) {
+                                    return 1;
+                                }
+                            }
+                            return 0;
+                        }),this.starterDecks = n, this.allDecks = [...t, ...n]
                     })).subscribe()
                 }
 
