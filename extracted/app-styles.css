@@ -314,15 +314,6 @@ app-inventory-cards-quality > header.groupedCardsHeader:before {
     background: var(--gu-yellow) !important;
 }
 
-.godBadge.godBadge--small {
-    border: solid 2px var(--gu-blue);
-    box-shadow: none;
-    background: transparent;
-    border-radius: 100%;
-    width: calc(var(--vw) * 3.9);
-    height: calc(var(--vw) * 3.9);
-}
-
 .gu-simple-text {
     color: var(--gu-blue);
 }
@@ -682,13 +673,28 @@ app-gauntlet-progress-modal .leftArea__item__textArea__bottom {
 }
 
 app-god-badge {
-    box-shadow: none !important;
-    border: none !important;
-    background: none !important;
+    border-radius: 100%;
+    width: calc(var(--vw) * 3.9);
+    height: calc(var(--vw) * 3.9);
 }
 
-.godBadge__image {
-    box-shadow: none !important;
+.godBadge.death {
+    border: solid 2px #009688;
+}
+.godBadge.deception {
+    border: solid 2px #7B1FA2;
+}
+.godBadge.light {
+    border: solid 2px #FFEB3B;
+}
+.godBadge.magic {
+    border: solid 2px #2196F3;
+}
+.godBadge.nature {
+    border: solid 2px #4CAF50;
+}
+.godBadge.war {
+    border: solid 2px #F44336;
 }
 
 main.addModalBlurBackground {

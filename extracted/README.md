@@ -15,5 +15,7 @@ right now.
 - removeCardsFromActiveDeck(s)
   - Called when multiple cards get removed from the currently edited deck. Typically
 this is what is called to remove a card.
+- setRankLevelLabels()
+  - Called to set the rank level labels and stuff
 
 

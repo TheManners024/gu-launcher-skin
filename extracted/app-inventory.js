@@ -942,7 +942,105 @@
                     1 & t && (e.YNc(0, _o, 2, 7, "span", 0), e.YNc(1, ho, 1, 5, "span", 1), e.YNc(2, fo, 2, 10, "div", 2)), 2 & t && (e.Q6J("ngIf", n.showDivider || n.overlayDivderText), e.xp6(1), e.Q6J("ngIf", n.showDivider), e.xp6(1), e.Q6J("ngIf", null !== n.percentage))
                 },
                 directives: [l.O5, l.mk],
-                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.progressBar__divider--text--gameModeCard[_ngcontent-%COMP%], .progressBar__divider--text--overlay[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.progressBar__divider--text--gameModeCard[_ngcontent-%COMP%], .progressBar__divider--text--overlay[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.progressBar__divider--text--gameModeCard[_ngcontent-%COMP%], .progressBar__divider--text--overlay[_ngcontent-%COMP%]{line-height:1.4}[_nghost-%COMP%]{border-radius:4px;position:relative;display:flex;padding-left:3%;padding-right:3%;background:rgba(12,22,32,.8);box-shadow:inset 0 3px 5px calc(var(--vh) * .1) #0006,0 calc(var(--vh) * .1) calc(var(--vh) * .1) #ffffff1c}.progressBar__divider[_ngcontent-%COMP%]{width:calc(var(--vw) * .15);left:50%;top:0;height:100%;position:absolute;box-shadow:0 0 14px #0009}.progressBar__divider--text[_ngcontent-%COMP%]{bottom:120%;left:50%;font-weight:700;position:absolute;transform:translate(-50%)}.progressBar__divider--text--overlay[_ngcontent-%COMP%]{bottom:0%;left:50%;font-weight:700;position:absolute;transform:translate(-50%)}.progressBar__divider--text--gameModeCard[_ngcontent-%COMP%]{font-weight:400;color:#7192b0;font-style:italic}.progressBar__divider--low[_ngcontent-%COMP%]{background:rgba(255,255,255,.1)}.progressBar__divider--medium[_ngcontent-%COMP%]{background:rgba(255,255,255,.5)}.progressBar__divider--high[_ngcontent-%COMP%]{background:rgba(255,255,255,.9)}.progressBar__bar[_ngcontent-%COMP%]{border-radius:4px;margin:auto 0;height:60%;transition:.5s all ease-in-out}.progressBar__bar--supressAnimation[_ngcontent-%COMP%]{transition:none}.progressBar__bar--yellow[_ngcontent-%COMP%]{background:linear-gradient(to left,#fcf7d4 0%,#f2dc63 100%);box-shadow:0 0 calc(var(--vh) * 2) calc(var(--vh) * .5) #f2dc6366}.progressBar__bar--blue[_ngcontent-%COMP%]{background:linear-gradient(to left,#53cbf1 0%,#05abe0 40%,#59a8cd 100%);box-shadow:0 0 calc(var(--vh) * 2) calc(var(--vh) * .5) #53cbf166}.progressBar__bar--aqua[_ngcontent-%COMP%]{background:linear-gradient(to left,#affaed 0%,#8be1e0 50%,#54bbcd 100%);box-shadow:0 0 calc(var(--vh) * 2) calc(var(--vh) * .5) #8be1e066}.progressBar__bar--gold[_ngcontent-%COMP%]{background:linear-gradient(to left,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);box-shadow:0 0 calc(var(--vh) * 2) calc(var(--vh) * .5) #edd5a466}.progressBar__bar--empty[_ngcontent-%COMP%]{box-shadow:none!important}"]
+                // Flux progress bar!
+                styles: [`
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    margin: 0
+                }
+                
+                body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif;
+                    font-weight: 400
+                }
+                
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    font-family: Unchained, serif;
+                    font-weight: 700
+                }
+                
+                .progressBar__divider--text--gameModeCard[_ngcontent-%COMP%], .progressBar__divider--text--overlay[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif
+                }
+                
+                .progressBar__divider--text--gameModeCard[_ngcontent-%COMP%], .progressBar__divider--text--overlay[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 1.48)
+                }
+                
+                .progressBar__divider--text--gameModeCard[_ngcontent-%COMP%], .progressBar__divider--text--overlay[_ngcontent-%COMP%] {
+                    line-height: 1.4
+                }
+                
+                [_nghost-%COMP%] {
+                    border-radius: 4px;
+                    position: relative;
+                    display: flex;
+                    padding-left: 3%;
+                    padding-right: 3%;
+                    background: var(--gu-blue-dark);
+                }
+                
+                .progressBar__divider[_ngcontent-%COMP%] {
+                    width: calc(var(--vw) * .15);
+                    left: 50%;
+                    top: 0;
+                    height: 100%;
+                    position: absolute;
+                    background: var(--gu-blue-hover);
+                }
+                
+                .progressBar__divider--text[_ngcontent-%COMP%] {
+                    bottom: 120%;
+                    left: 50%;
+                    font-weight: 700;
+                    position: absolute;
+                    transform: translate(-50%)
+                }
+                
+                .progressBar__divider--text--overlay[_ngcontent-%COMP%] {
+                    bottom: 0%;
+                    left: 50%;
+                    font-weight: 700;
+                    position: absolute;
+                    transform: translate(-50%)
+                }
+                
+                .progressBar__divider--text--gameModeCard[_ngcontent-%COMP%] {
+                    font-weight: 400;
+                    color: #7192b0;
+                    font-style: italic
+                }
+                
+                .progressBar__bar[_ngcontent-%COMP%] {
+                    border-radius: 2px;
+                    margin: auto 0;
+                    height: 60%;
+                    transition: .5s all ease-in-out
+                }
+                
+                .progressBar__bar--supressAnimation[_ngcontent-%COMP%] {
+                    transition: none
+                }
+                
+                .progressBar__bar--yellow[_ngcontent-%COMP%] {
+                    background: var(--gu-yellow);
+                }
+                
+                .progressBar__bar--blue[_ngcontent-%COMP%] {
+                    background: var(--gu-blue);
+                }
+                
+                .progressBar__bar--aqua[_ngcontent-%COMP%] {
+                    background: var(--gu-blue);
+                }
+                
+                .progressBar__bar--gold[_ngcontent-%COMP%] {
+                    background: var(--gu-yellow);
+                }
+                
+                .progressBar__bar--empty[_ngcontent-%COMP%] {
+                    box-shadow: none !important
+                }
+                `]
             }), o
         })();
         const Co = ["progressBar"], vo = ["leftShield"];
@@ -1172,7 +1270,226 @@
                 },
                 directives: [l.mk, l.O5, Qe],
                 pipes: [l.rS],
-                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.progressBarArea__level__rankInitials[_ngcontent-%COMP%], .progressBarArea__level__rankInitials--next[_ngcontent-%COMP%], .playerDetails__username[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.promoArea__text[_ngcontent-%COMP%], .progressBarArea__level__rankName[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.progressBarArea__level__rankInitials--next[_ngcontent-%COMP%], .playerDetails__username[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.progressBarArea__level__rankInitials[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 4.2);line-height:1.3}.progressBarArea__level__rankName[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9)}.promoArea__text[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.promoArea__text[_ngcontent-%COMP%]{line-height:1.4}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);height:calc(var(--vh) * 100);width:calc(var(--vw) * 100);display:flex;flex-flow:column nowrap;background:#182531;overflow:hidden}.backgroundGodImagery[_ngcontent-%COMP%]{user-select:none;pointer-events:none;width:calc(var(--vw) * 55.85);position:absolute;top:-5%;height:110%}.backgroundGodImagery.left[_ngcontent-%COMP%]{left:0}.backgroundGodImagery.right[_ngcontent-%COMP%]{right:0}.guLogo[_ngcontent-%COMP%]{position:absolute;top:28px;left:0;width:calc(var(--vh) * 7.7);height:calc(var(--vh) * 7.7);display:flex}.guLogo__img[_ngcontent-%COMP%]{width:calc(var(--vh) * 4);margin:auto}.matchCompleteHeading[_ngcontent-%COMP%]{right:calc(var(--vh) * 3);top:calc(28px + calc(var(--vh) * 3));position:absolute}.displayArea[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 11.5);padding-bottom:calc(var(--vh) * 10);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-grow:1;transition:opacity .15s ease-in-out}.displayArea--loading[_ngcontent-%COMP%]{opacity:0}.playerDetailsAvatar[_ngcontent-%COMP%]{width:calc(var(--vw) * 10);height:calc(var(--vw) * 10);position:relative;border-radius:50%;overflow:hidden;display:flex;background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%)}.playerDetailsAvatar__image[_ngcontent-%COMP%]{width:90%;height:90%;margin:auto;border-radius:50%;overflow:hidden}.playerDetails__username[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 1);text-align:center}.progressBarArea[_ngcontent-%COMP%]{width:calc(var(--vw) * 57);display:flex;flex-flow:column nowrap;position:relative;margin-top:auto}.progressBarArea__progressBar[_ngcontent-%COMP%]{height:calc(var(--vh) * 4.16);margin-left:calc(var(--vw) * 6.6);margin-right:calc(var(--vw) * 4.3);padding:0;position:relative}.progressBarArea__level[_ngcontent-%COMP%]{position:absolute;top:50%;transform:translateY(-50%)}.progressBarArea__level--current[_ngcontent-%COMP%]{width:calc(var(--vw) * 7.5);left:0}.progressBarArea__level--next[_ngcontent-%COMP%]{width:calc(var(--vw) * 5.6);right:0}.progressBarArea__level--maxRank[_ngcontent-%COMP%]{position:static;left:auto;margin:0 auto;transform:none}.progressBarArea__level__image[_ngcontent-%COMP%]{width:100%;display:block}.progressBarArea__level__image--current[_ngcontent-%COMP%]{filter:drop-shadow(0 calc(var(--vh) * .1) calc(var(--vh) * 3.24) rgba(252,247,212,.3))}.progressBarArea__level__rankInitials[_ngcontent-%COMP%]{position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);text-transform:uppercase}.progressBarArea__level__rankInitials--next[_ngcontent-%COMP%]{color:#527493}.progressBarArea__level__rankInitials--maxRank[_ngcontent-%COMP%]{transform:translate(-50%,-68%)}.progressBarArea__level__rankName[_ngcontent-%COMP%]{position:absolute;top:110%;left:0;width:100%;font-weight:700;text-align:center}.progressBarArea__level__rankName--next[_ngcontent-%COMP%]{color:#527493}.bottomContent[_ngcontent-%COMP%]{margin-top:auto;align-self:center;display:flex;flex-direction:column;align-items:center;position:relative}.promoArea__text[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 6);padding:calc(var(--vw) * 1.5);width:calc(var(--vw) * 30.5);border:calc(var(--vh) * .15) solid #3d5a74;background:#182531;text-align:center}"]
+                styles: [`
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    margin: 0
+                }
+                
+                body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif;
+                    font-weight: 400
+                }
+                
+                .progressBarArea__level__rankInitials[_ngcontent-%COMP%], .progressBarArea__level__rankInitials--next[_ngcontent-%COMP%], .playerDetails__username[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    font-family: Unchained, serif;
+                    font-weight: 700
+                }
+                
+                .promoArea__text[_ngcontent-%COMP%], .progressBarArea__level__rankName[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif
+                }
+                
+                .progressBarArea__level__rankInitials--next[_ngcontent-%COMP%], .playerDetails__username[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 2.96);
+                    line-height: 1.3
+                }
+                
+                .progressBarArea__level__rankInitials[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 4.2);
+                    line-height: 1.3
+                }
+                
+                .progressBarArea__level__rankName[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 1.9)
+                }
+                
+                .promoArea__text[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 1.48)
+                }
+                
+                .promoArea__text[_ngcontent-%COMP%] {
+                    line-height: 1.4
+                }
+                
+                [_nghost-%COMP%] {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    height: calc(var(--vh) * 100);
+                    width: calc(var(--vw) * 100);
+                    display: flex;
+                    flex-flow: column nowrap;
+                    background: #182531;
+                    overflow: hidden
+                }
+                
+                .backgroundGodImagery[_ngcontent-%COMP%] {
+                    user-select: none;
+                    pointer-events: none;
+                    width: calc(var(--vw) * 55.85);
+                    position: absolute;
+                    top: -5%;
+                    height: 110%
+                }
+                
+                .backgroundGodImagery.left[_ngcontent-%COMP%] {
+                    left: 0
+                }
+                
+                .backgroundGodImagery.right[_ngcontent-%COMP%] {
+                    right: 0
+                }
+                
+                .guLogo[_ngcontent-%COMP%] {
+                    position: absolute;
+                    top: 28px;
+                    left: 0;
+                    width: calc(var(--vh) * 7.7);
+                    height: calc(var(--vh) * 7.7);
+                    display: flex
+                }
+                
+                .guLogo__img[_ngcontent-%COMP%] {
+                    width: calc(var(--vh) * 4);
+                    margin: auto
+                }
+                
+                .matchCompleteHeading[_ngcontent-%COMP%] {
+                    right: calc(var(--vh) * 3);
+                    top: calc(28px + calc(var(--vh) * 3));
+                    position: absolute
+                }
+                
+                .displayArea[_ngcontent-%COMP%] {
+                    padding-top: calc(var(--vh) * 11.5);
+                    padding-bottom: calc(var(--vh) * 10);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    flex-grow: 1;
+                    transition: opacity .15s ease-in-out
+                }
+                
+                .displayArea--loading[_ngcontent-%COMP%] {
+                    opacity: 0
+                }
+                
+                .playerDetailsAvatar[_ngcontent-%COMP%] {
+                    display: none;
+                }
+                
+                .playerDetailsAvatar__image[_ngcontent-%COMP%] {
+                    width: 90%;
+                    height: 90%;
+                    margin: auto;
+                    border-radius: 50%;
+                    overflow: hidden
+                }
+                
+                .playerDetails__username[_ngcontent-%COMP%] {
+                    padding-top: calc(var(--vh) * 1);
+                    text-align: center;
+                    font-size: 32px;
+                    color: var(--gu-yellow);
+                }
+                
+                .progressBarArea[_ngcontent-%COMP%] {
+                    width: calc(var(--vw) * 57);
+                    display: flex;
+                    flex-flow: column nowrap;
+                    position: relative;
+                    margin-top: auto
+                }
+                
+                .progressBarArea__progressBar[_ngcontent-%COMP%] {
+                    height: calc(var(--vh) * 4.16);
+                    margin-left: calc(var(--vw) * 6.6);
+                    margin-right: calc(var(--vw) * 4.3);
+                    padding: 0;
+                    position: relative
+                }
+                
+                .progressBarArea__level[_ngcontent-%COMP%] {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%)
+                }
+                
+                .progressBarArea__level--current[_ngcontent-%COMP%] {
+                    width: calc(var(--vw) * 7.5);
+                    left: 0
+                }
+                
+                .progressBarArea__level--next[_ngcontent-%COMP%] {
+                    width: calc(var(--vw) * 5.6);
+                    right: 0
+                }
+                
+                .progressBarArea__level--maxRank[_ngcontent-%COMP%] {
+                    position: static;
+                    left: auto;
+                    margin: 0 auto;
+                    transform: none
+                }
+                
+                .progressBarArea__level__image[_ngcontent-%COMP%] {
+                    width: 100%;
+                    display: block
+                }
+                
+                .progressBarArea__level__image--current[_ngcontent-%COMP%] {
+                    filter: drop-shadow(0 calc(var(--vh) * .1) calc(var(--vh) * 3.24) rgba(252, 247, 212, .3))
+                }
+                
+                .progressBarArea__level__rankInitials[_ngcontent-%COMP%] {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -60%);
+                    text-transform: uppercase
+                }
+                
+                .progressBarArea__level__rankInitials--next[_ngcontent-%COMP%] {
+                    color: var(--gu-blue-hover);
+                }
+                
+                .progressBarArea__level__rankInitials--maxRank[_ngcontent-%COMP%] {
+                    transform: translate(-50%, -68%)
+                }
+                
+                .progressBarArea__level__rankName[_ngcontent-%COMP%] {
+                    position: absolute;
+                    top: 110%;
+                    left: 0;
+                    width: 100%;
+                    font-weight: 700;
+                    text-align: center
+                }
+                
+                .progressBarArea__level__rankName--next[_ngcontent-%COMP%] {
+                    color: var(--gu-blue-hover);
+                }
+                
+                .bottomContent[_ngcontent-%COMP%] {
+                    margin-top: auto;
+                    align-self: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative
+                }
+                
+                .promoArea__text[_ngcontent-%COMP%] {
+                    margin-top: calc(var(--vh) * 6);
+                    padding: calc(var(--vw) * 1.5);
+                    width: calc(var(--vw) * 30.5);
+                    border: calc(var(--vh) * .15) solid #3d5a74;
+                    background: #182531;
+                    text-align: center
+                }
+                `]
             }), o
         })(), Po = (() => {
             class o {
@@ -1589,7 +1906,284 @@
                     }), e.qZA(), e.YNc(37, Wo, 7, 0, "div", 29)), 2 & t && (e.xp6(10), e.Q6J("ngIf", !n.loading), e.xp6(1), e.ekj("progressBarArea--hidden", n.loading), e.xp6(2), e.hij(" Level ", null == n.displayProgress ? null : n.displayProgress.lvl, " "), e.xp6(2), e.hij(" Level ", (null == n.displayProgress ? null : n.displayProgress.lvl) + 1, " "), e.xp6(1), e.Q6J("animateFirstValue", !1)("percentage", n.animationState.percentage)("supressAnimation", !0), e.xp6(5), e.hij(" +", n.animationState.progressStepValue, " "), e.xp6(2), e.hij(" ", n.animationState.progressStepText, " "), e.xp6(5), e.hij(" ", n.packRewardsCount + n.specialRewardsCount > 1 ? "Rewards" : "Reward", " Earned "), e.xp6(3), e.Q6J("ngIf", n.packsReward), e.xp6(1), e.Q6J("ngIf", n.starsRewardInfo && 0 !== (null == n.starsRewardInfo ? null : n.starsRewardInfo.stars)), e.xp6(1), e.Q6J("ngForOf", n.specialRewards), e.xp6(2), e.Q6J("disabled", n.animationState.disableCta), e.xp6(2), e.Q6J("ngIf", n.gameModeId === n.GuGameModeId.RANKED_CONSTRUCTED))
                 },
                 directives: [l.O5, Qe, l.sg, l.mk, Kt],
-                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.progressBarArea__stepInfo__value[_ngcontent-%COMP%], .progressBarArea__stepInfo__label[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.progressBarArea__stepInfo__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22);line-height:1.4}.progressBarArea__stepInfo__value[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 6);line-height:1.3}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;flex-flow:column nowrap;justify-content:center;align-items:center;background:#182531;overflow:hidden;height:calc(var(--vh) * 100);width:calc(var(--vw) * 100);padding-top:calc(var(--vh) * 10)}.backgroundImagery[_ngcontent-%COMP%]{user-select:none;pointer-events:none;position:absolute;top:0;left:0;height:100%;width:100%;background:#0F1B27}.backgroundImagery__img[_ngcontent-%COMP%]{width:100%;height:100%;object-fit:cover;object-position:center;opacity:.1;filter:grayscale(100%)}.guLogo[_ngcontent-%COMP%]{position:absolute;top:28px;left:0;width:80px;height:80px;display:flex}.guLogo__img[_ngcontent-%COMP%]{width:calc(var(--vh) * 4);margin:auto}.matchCompleteHeading[_ngcontent-%COMP%]{right:calc(var(--vh) * 3);top:calc(28px + calc(var(--vh) * 3));position:absolute}.initialProgressDisplay[_ngcontent-%COMP%]{display:flex;flex-direction:column;align-items:center;justify-content:center}.playerDetails[_ngcontent-%COMP%]{margin-bottom:calc(var(--vh) * 3)}.playerDetails__avatar[_ngcontent-%COMP%]{width:calc(var(--vw) * 10);height:calc(var(--vw) * 10);background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);position:relative;border-radius:50%;overflow:hidden;display:flex}.playerDetails__avatar__img[_ngcontent-%COMP%]{width:90%;height:90%;margin:auto;border-radius:50%;overflow:hidden}.playerDetails__userName[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 1.5);position:relative}.progressBarArea[_ngcontent-%COMP%]{width:calc(var(--vw) * 50);display:flex;flex-flow:row wrap;position:relative}.progressBarArea--hidden[_ngcontent-%COMP%]{opacity:0}.progressBarArea__label[_ngcontent-%COMP%]{margin-bottom:calc(var(--vh) * 1)}.progressBarArea__label.left[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 1)}.progressBarArea__label.right[_ngcontent-%COMP%]{padding-right:calc(var(--vw) * 1);margin-left:auto}.progressBarArea__bar[_ngcontent-%COMP%]{width:100%;height:calc(var(--vh) * 3.42);padding-left:calc(var(--vw) * .5);padding-right:calc(var(--vw) * .5)}.progressBarArea__stepInfo[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2);margin-left:auto;margin-right:auto;text-align:center;color:#f6f6f6;opacity:0}.rewardContainer[_ngcontent-%COMP%]{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(.8);opacity:0;display:flex;flex-direction:column;justify-content:center;align-items:center}.rewardContainer__title[_ngcontent-%COMP%]{position:relative}.rewardContainer__rewardItems[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 3);display:flex;justify-content:center;align-items:center;position:relative}.rewardContainer__rewardItems__rewardItem[_ngcontent-%COMP%]{background:url(/assets/images/ui-embellishments/ui--reward-background.svg) no-repeat;background-size:contain;background-position:50% 34%;position:relative;margin-right:calc(var(--vw) * 4);width:calc(var(--vw) * 13)}.rewardContainer__rewardItems__rewardItem[_ngcontent-%COMP%]:last-child{margin:0}.rewardItem__innerContainer[_ngcontent-%COMP%]{width:100%;padding-bottom:113%;position:relative}.rewardItem__innerContainer--openVideoActive[_ngcontent-%COMP%]   .rewardItem__innerContainer__starPicture[_ngcontent-%COMP%], .rewardItem__innerContainer--openVideoActive[_ngcontent-%COMP%]   .rewardItem__innerContainer__video--upgradeVideo[_ngcontent-%COMP%]{opacity:0}.rewardItem__innerContainer--openVideoActive[_ngcontent-%COMP%]   .rewardItem__innerContainer__video--openVideo[_ngcontent-%COMP%]{opacity:1}.rewardItem__innerContainer--upgradeVideoActive[_ngcontent-%COMP%]   .rewardItem__innerContainer__starPicture[_ngcontent-%COMP%]{opacity:0}.rewardItem__innerContainer--upgradeVideoActive[_ngcontent-%COMP%]   .rewardItem__innerContainer__video--upgradeVideo[_ngcontent-%COMP%]{opacity:1}.rewardItem__innerContainer--upgradeVideoActive[_ngcontent-%COMP%]   .rewardItem__innerContainer__video--openVideo[_ngcontent-%COMP%]{opacity:0}.rewardItem__innerContainer__picture[_ngcontent-%COMP%]{position:absolute;width:68%;left:50%;top:27%;transform:translate(-50%)}.rewardItem__innerContainer__video[_ngcontent-%COMP%], .rewardItem__innerContainer__starPicture[_ngcontent-%COMP%]{position:absolute;width:140%;left:50%;top:2%;transform:translate(-50%);transition:opacity .2s ease-in-out}.rewardItem__innerContainer__video[_ngcontent-%COMP%]{opacity:0}.rewardItem__innerContainer__starPicture__img[_ngcontent-%COMP%]{display:block;width:100%}.rewardItem__innerContainer__icon[_ngcontent-%COMP%]{font-size:calc(var(--vw) * 10);position:absolute;top:30.5%;left:0;width:100%;text-align:center}.rewardItem__innerContainer__icon--stars[_ngcontent-%COMP%]{font-size:calc(var(--vw) * 8);top:39%;opacity:0}.rewardItem__innerContainer__starBigNumbers[_ngcontent-%COMP%]{position:absolute;top:50%;left:50%;text-shadow:0 2px 4px rgba(0,0,0,.5);transform:translate(-50%,15%);opacity:0}.rewardItem__label[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 9);min-height:50px}.fluxProgressToasts[_ngcontent-%COMP%]{bottom:calc(var(--vh) * 3.5);left:calc(var(--vh) * 3.5);width:calc(var(--vw) * 24);position:absolute;display:flex;flex-direction:column;transform:translateY(50%);opacity:0}.fluxProgressToasts[_ngcontent-%COMP%]   app-flux-progress-box[_ngcontent-%COMP%]{padding:calc(var(--vh) * 4)}.continue[_ngcontent-%COMP%]{position:absolute;bottom:14.5%;left:50%;transform:translate(-50%);min-width:180px;opacity:0}.continueButtonPlaceholder[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 7.5);height:48px;width:100%}"],
+                styles: [`
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    margin: 0
+                }
+                body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif;
+                    font-weight: 400
+                }
+                
+                .progressBarArea__stepInfo__value[_ngcontent-%COMP%], .progressBarArea__stepInfo__label[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    font-family: Unchained, serif;
+                    font-weight: 700
+                }
+                
+                .progressBarArea__stepInfo__label[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 2.22);
+                    line-height: 1.4
+                }
+                
+                .progressBarArea__stepInfo__value[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 6);
+                    line-height: 1.3
+                }
+                
+                [_nghost-%COMP%] {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    background: #182531;
+                    overflow: hidden;
+                    height: calc(var(--vh) * 100);
+                    width: calc(var(--vw) * 100);
+                    padding-top: calc(var(--vh) * 10)
+                }
+                
+                .backgroundImagery[_ngcontent-%COMP%] {
+                    user-select: none;
+                    pointer-events: none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: #0F1B27
+                }
+                
+                .backgroundImagery__img[_ngcontent-%COMP%] {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    opacity: .1;
+                    filter: grayscale(100%)
+                }
+                
+                .guLogo[_ngcontent-%COMP%] {
+                    display: none;
+                }
+                
+                .guLogo__img[_ngcontent-%COMP%] {
+                    width: calc(var(--vh) * 4);
+                    margin: auto
+                }
+                
+                .matchCompleteHeading[_ngcontent-%COMP%] {
+                    right: calc(var(--vh) * 3);
+                    top: calc(28px + calc(var(--vh) * 3));
+                    position: absolute
+                }
+                
+                .initialProgressDisplay[_ngcontent-%COMP%] {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center
+                }
+                
+                .playerDetails[_ngcontent-%COMP%] {
+                    margin-bottom: calc(var(--vh) * 3)
+                }
+                
+                .playerDetails__avatar[_ngcontent-%COMP%] {
+                    display: none;
+                }
+                
+                .playerDetails__userName[_ngcontent-%COMP%] {
+                    padding-top: calc(var(--vh) * 1.5);
+                    position: relative
+                }
+                
+                .progressBarArea[_ngcontent-%COMP%] {
+                    width: calc(var(--vw) * 50);
+                    display: flex;
+                    flex-flow: row wrap;
+                    position: relative
+                }
+                
+                .progressBarArea--hidden[_ngcontent-%COMP%] {
+                    opacity: 0
+                }
+                
+                .progressBarArea__label[_ngcontent-%COMP%] {
+                    margin-bottom: calc(var(--vh) * 1)
+                }
+                
+                .progressBarArea__label.left[_ngcontent-%COMP%] {
+                    padding-left: calc(var(--vw) * 1)
+                }
+                
+                .progressBarArea__label.right[_ngcontent-%COMP%] {
+                    padding-right: calc(var(--vw) * 1);
+                    margin-left: auto
+                }
+                
+                .progressBarArea__bar[_ngcontent-%COMP%] {
+                    width: 100%;
+                    height: calc(var(--vh) * 3.42);
+                    padding-left: calc(var(--vw) * .5);
+                    padding-right: calc(var(--vw) * .5)
+                }
+                
+                .progressBarArea__stepInfo[_ngcontent-%COMP%] {
+                    margin-top: calc(var(--vh) * 2);
+                    margin-left: auto;
+                    margin-right: auto;
+                    text-align: center;
+                    color: #f6f6f6;
+                    opacity: 0
+                }
+                
+                .rewardContainer[_ngcontent-%COMP%] {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(.8);
+                    opacity: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center
+                }
+                
+                .rewardContainer__title[_ngcontent-%COMP%] {
+                    position: relative
+                }
+                
+                .rewardContainer__rewardItems[_ngcontent-%COMP%] {
+                    margin-top: calc(var(--vh) * 3);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative
+                }
+                
+                .rewardContainer__rewardItems__rewardItem[_ngcontent-%COMP%] {
+                    background: url(/assets/images/ui-embellishments/ui--reward-background.svg) no-repeat;
+                    background-size: contain;
+                    background-position: 50% 34%;
+                    position: relative;
+                    margin-right: calc(var(--vw) * 4);
+                    width: calc(var(--vw) * 13)
+                }
+                
+                .rewardContainer__rewardItems__rewardItem[_ngcontent-%COMP%]:last-child {
+                    margin: 0
+                }
+                
+                .rewardItem__innerContainer[_ngcontent-%COMP%] {
+                    width: 100%;
+                    padding-bottom: 113%;
+                    position: relative
+                }
+                
+                .rewardItem__innerContainer--openVideoActive[_ngcontent-%COMP%] .rewardItem__innerContainer__starPicture[_ngcontent-%COMP%], .rewardItem__innerContainer--openVideoActive[_ngcontent-%COMP%] .rewardItem__innerContainer__video--upgradeVideo[_ngcontent-%COMP%] {
+                    opacity: 0
+                }
+                
+                .rewardItem__innerContainer--openVideoActive[_ngcontent-%COMP%] .rewardItem__innerContainer__video--openVideo[_ngcontent-%COMP%] {
+                    opacity: 1
+                }
+                
+                .rewardItem__innerContainer--upgradeVideoActive[_ngcontent-%COMP%] .rewardItem__innerContainer__starPicture[_ngcontent-%COMP%] {
+                    opacity: 0
+                }
+                
+                .rewardItem__innerContainer--upgradeVideoActive[_ngcontent-%COMP%] .rewardItem__innerContainer__video--upgradeVideo[_ngcontent-%COMP%] {
+                    opacity: 1
+                }
+                
+                .rewardItem__innerContainer--upgradeVideoActive[_ngcontent-%COMP%] .rewardItem__innerContainer__video--openVideo[_ngcontent-%COMP%] {
+                    opacity: 0
+                }
+                
+                .rewardItem__innerContainer__picture[_ngcontent-%COMP%] {
+                    position: absolute;
+                    width: 68%;
+                    left: 50%;
+                    top: 27%;
+                    transform: translate(-50%)
+                }
+                
+                .rewardItem__innerContainer__video[_ngcontent-%COMP%], .rewardItem__innerContainer__starPicture[_ngcontent-%COMP%] {
+                    position: absolute;
+                    width: 140%;
+                    left: 50%;
+                    top: 2%;
+                    transform: translate(-50%);
+                    transition: opacity .2s ease-in-out
+                }
+                
+                .rewardItem__innerContainer__video[_ngcontent-%COMP%] {
+                    opacity: 0
+                }
+                
+                .rewardItem__innerContainer__starPicture__img[_ngcontent-%COMP%] {
+                    display: block;
+                    width: 100%
+                }
+                
+                .rewardItem__innerContainer__icon[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vw) * 10);
+                    position: absolute;
+                    top: 30.5%;
+                    left: 0;
+                    width: 100%;
+                    text-align: center
+                }
+                
+                .rewardItem__innerContainer__icon--stars[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vw) * 8);
+                    top: 39%;
+                    opacity: 0
+                }
+                
+                .rewardItem__innerContainer__starBigNumbers[_ngcontent-%COMP%] {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    text-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+                    transform: translate(-50%, 15%);
+                    opacity: 0
+                }
+                
+                .rewardItem__label[_ngcontent-%COMP%] {
+                    margin-top: calc(var(--vh) * 9);
+                    min-height: 50px
+                }
+                
+                .fluxProgressToasts[_ngcontent-%COMP%] {
+                    bottom: calc(var(--vh) * 3.5);
+                    left: calc(var(--vh) * 3.5);
+                    width: calc(var(--vw) * 24);
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    transform: translateY(50%);
+                    opacity: 0
+                }
+                
+                .fluxProgressToasts[_ngcontent-%COMP%] app-flux-progress-box[_ngcontent-%COMP%] {
+                    padding: calc(var(--vh) * 4)
+                }
+                
+                .continue[_ngcontent-%COMP%] {
+                    transform: none !important;
+                }
+                
+                .continueButtonPlaceholder[_ngcontent-%COMP%] {
+                    margin-top: calc(var(--vh) * 7.5);
+                    height: 48px;
+                    width: 100%
+                }
+                `],
                 data: {
                     animation: [(0, C.X$)("fadeAndSlideIn", [(0, C.eR)(":enter", [(0, C.oB)({
                         opacity: 0,
@@ -2216,7 +2810,7 @@
                 consts: [[3, "inputProtoData", "quality", "responsiveSrcsetSizes", "mouseenter"]],
                 template: function (t, n) {
                     1 & t && (e.TgZ(0, "composited-card", 0), e.NdJ("mouseenter", function () {
-                        return n.onHover()
+                        // noop thanks
                     }), e.qZA()), 2 & t && e.Q6J("inputProtoData", n.cardProtoData)("quality", n.quality)("responsiveSrcsetSizes", n.responsiveSrcsetSizes)
                 },
                 styles: ["@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}[_nghost-%COMP%]{display:block;position:relative}"]
@@ -2365,9 +2959,12 @@
                 }
 
                 initFormGroup() {
-                    this.ownershipForm = this.fb.group({ownership: ["all"]}), this.ownershipForm.get("ownership").valueChanges.pipe((0, u.R)(this.unsubscribe)).subscribe(t => {
+                    let initialOwnership = localStorage.getItem('collectionOwnership') || 'all';
+                    this.ownershipForm = this.fb.group({ownership: [initialOwnership]}), this.ownershipForm.get("ownership").valueChanges.pipe((0, u.R)(this.unsubscribe)).subscribe(t => {
+                        localStorage.setItem('collectionOwnership', t);
                         this.ownershipChange.emit(t)
-                    })
+                    });
+                    this.ownershipChange.emit(initialOwnership);
                 }
 
                 selectCheckbox() {
@@ -2531,7 +3128,7 @@
                 selectors: [["app-god-badge"]],
                 hostVars: 4,
                 hostBindings: function (t, n) {
-                    2 & t && e.ekj("godBadge--small", n.isSmall)("godBadge--empty", n.isEmpty)
+                    2 & t && e.ekj("godBadge--small", n.isSmall)("godBadge--empty", n.isEmpty)(n.god + '', n.god);
                 },
                 inputs: {size: "size", god: "god"},
                 decls: 1,
@@ -2541,7 +3138,45 @@
                     1 & t && e.YNc(0, Ai, 1, 1, "img", 0), 2 & t && e.Q6J("ngIf", n.god)
                 },
                 directives: [l.O5],
-                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}[_nghost-%COMP%]{width:calc(var(--vw) * 3.64);height:calc(var(--vw) * 3.64);display:flex;background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);transition:all .5s ease-in-out;overflow:hidden;opacity:1;border:calc(var(--vh) * .3) solid #e0c58f;box-shadow:0 0 calc(var(--vw) * 3.64) #edd5a480,0 0 calc(var(--vw) * .8) #f7e3bc99;transform:rotate(45deg)}.godBadge--empty[_nghost-%COMP%]{box-shadow:none;border:calc(var(--vh) * .2) solid #527493}.godBadge--small[_nghost-%COMP%]{width:calc(var(--vw) * 2.9);height:calc(var(--vw) * 2.9);box-shadow:0 0 calc(var(--vw) * 2.9) #edd5a480,0 0 calc(var(--vw) * .8) #f7e3bc99}.godBadge__image[_ngcontent-%COMP%]{display:block;margin-left:-25%;margin-top:-25%;width:150%;height:150%;transform:rotate(-45deg)}"]
+                styles: [`
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    margin: 0
+                }
+                
+                body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif;
+                    font-weight: 400
+                }
+                
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    font-family: Unchained, serif;
+                    font-weight: 700
+                }
+                
+                [_nghost-%COMP%] {
+                    width: calc(var(--vw) * 3.64);
+                    height: calc(var(--vw) * 3.64);
+                    display: flex;
+                    transition: all .5s ease-in-out;
+                    overflow: hidden;
+                    opacity: 1;
+                    transform: rotate(45deg);
+                }
+                
+                .godBadge--empty[_nghost-%COMP%] {
+                    box-shadow: none;
+                    border: calc(var(--vh) * .2) solid #527493;
+                }
+                
+                .godBadge__image[_ngcontent-%COMP%] {
+                    display: block;
+                    margin-left: -25%;
+                    margin-top: -25%;
+                    width: 150%;
+                    height: 150%;
+                    transform: rotate(-45deg)
+                }
+                `]
             }), o
         })();
         var Ii = g(22313);
@@ -2612,7 +3247,62 @@
                 template: function (t, n) {
                     1 & t && (e.F$t(), e.Hsn(0))
                 },
-                styles: ['@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{width:100%;display:block}.fourColumns[_nghost-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(4,1fr);align-items:start;grid-auto-rows:min-content;grid-template-areas:"item item item item" "desc desc desc desc"}.sevenColumns[_nghost-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(7,1fr);align-items:start;grid-auto-rows:min-content;grid-template-areas:"item item item item item item item" "desc desc desc desc desc desc desc"}.eightColumns[_nghost-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(8,1fr);align-items:start;grid-auto-rows:min-content;grid-template-areas:"item item item item item item item item" "desc desc desc desc desc desc desc desc"}.tenColumns[_nghost-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(10,1fr);align-items:start;grid-auto-rows:min-content;grid-template-areas:"item item item item item item item item item item" "desc desc desc desc desc desc desc desc desc desc"}.elevenColumns[_nghost-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(11,1fr);align-items:start;grid-auto-rows:min-content;grid-template-areas:"item item item item item item item item item item item" "desc desc desc desc desc desc desc desc desc desc desc"}']
+                styles: [`
+                [_nghost-%COMP%] {
+                    width: 100%;
+                    display: block
+                }
+                
+                .fourColumns[_nghost-%COMP%] {
+                    grid-row-gap: calc(var(--vh) * 4.5);
+                    grid-column-gap: calc(var(--vw) * 1.2);
+                    display: grid;
+                    grid-template-columns:repeat(4, 1fr);
+                    align-items: start;
+                    grid-auto-rows: min-content;
+                    grid-template-areas:"item item item item" "desc desc desc desc"
+                }
+                
+                .sevenColumns[_nghost-%COMP%] {
+                    grid-row-gap: calc(var(--vh) * 4.5);
+                    grid-column-gap: calc(var(--vw) * 1.2);
+                    display: grid;
+                    grid-template-columns:repeat(8, 1fr);
+                    align-items: start;
+                    grid-auto-rows: min-content;
+                    grid-template-areas:"item item item item item item item item" "desc desc desc desc desc desc desc desc"
+                }
+                
+                .eightColumns[_nghost-%COMP%] {
+                    grid-row-gap: calc(var(--vh) * 4.5);
+                    grid-column-gap: calc(var(--vw) * 1.2);
+                    display: grid;
+                    grid-template-columns:repeat(8, 1fr);
+                    align-items: start;
+                    grid-auto-rows: min-content;
+                    grid-template-areas:"item item item item item item item item" "desc desc desc desc desc desc desc desc"
+                }
+                
+                .tenColumns[_nghost-%COMP%] {
+                    grid-row-gap: calc(var(--vh) * 4.5);
+                    grid-column-gap: calc(var(--vw) * 1.2);
+                    display: grid;
+                    grid-template-columns:repeat(8, 1fr);
+                    align-items: start;
+                    grid-auto-rows: min-content;
+                    grid-template-areas:"item item item item item item item item" "desc desc desc desc desc desc desc desc"
+                }
+                
+                .elevenColumns[_nghost-%COMP%] {
+                    grid-row-gap: calc(var(--vh) * 4.5);
+                    grid-column-gap: calc(var(--vw) * 1.2);
+                    display: grid;
+                    grid-template-columns:repeat(8, 1fr);
+                    align-items: start;
+                    grid-auto-rows: min-content;
+                    grid-template-areas:"item item item item item item item item" "desc desc desc desc desc desc desc desc"
+                }
+                `]
             }), o
         })(), Pt = (() => {
             class o {
@@ -2621,11 +3311,11 @@
                 }
 
                 onEnter(t) {
-                    this.showCard()
+                    // noop thanks
                 }
 
                 onLeave(t) {
-                    this.hideCard()
+                    // noop thanks
                 }
 
                 ngOnInit() {
@@ -2637,9 +3327,9 @@
                 }
 
                 initPosition() {
-                    if (void 0 === this.cardIndex || void 0 === this.columnsCount) return;
-                    const t = this.cardIndex % this.columnsCount;
-                    0 === t ? this.transformOrigin = this.leftSideOrigin : t === this.columnsCount - 1 && (this.transformOrigin = this.rightSideOrigin)
+                    // if (void 0 === this.cardIndex || void 0 === this.columnsCount) return;
+                    // const t = this.cardIndex % this.columnsCount;
+                    // 0 === t ? this.transformOrigin = this.leftSideOrigin : t === this.columnsCount - 1 && (this.transformOrigin = this.rightSideOrigin)
                 }
 
                 showCard() {
@@ -3714,7 +4404,118 @@
                     }), e.YNc(7, Ur, 2, 7, "app-inventory-cards", 7), e.YNc(8, qr, 2, 6, "app-group-quality", 8), e.qZA()), 2 & t && (e.xp6(1), e.Q6J("ngIf", n.title), e.xp6(1), e.Q6J("activeGrouping", n.activeGrouping)("groupings", n.groupings), e.xp6(1), e.Q6J("sortOptions", n.sortOptions)("selectedHeaders", n.selectedHeaders)("cardGrouping", n.activeGrouping.groupingType === n.GroupingType.Quality ? n.qualityGrouping : n.protoGrouping)("unownedCheckboxVisible", !(n.activeGrouping.groupingType === n.GroupingType.Quality || void 0 !== n.expandedViewMode)), e.xp6(1), e.Q6J("ngIf", n.god), e.xp6(1), e.Q6J("scrollWindow", !1), e.xp6(2), e.Q6J("ngIf", n.activeGrouping.groupingType !== n.GroupingType.Quality), e.xp6(1), e.Q6J("ngIf", n.activeGrouping.groupingType === n.GroupingType.Quality))
                 },
                 directives: [l.O5, Ot, yt, ut, dn, Tt, At],
-                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.sectionHeader__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.godArea__label[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.sectionHeader__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.godArea__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;height:100%}.sectionHeader[_ngcontent-%COMP%]{height:calc(var(--vh) * 8.5);position:relative}.sectionHeader__groupings[_ngcontent-%COMP%]{position:absolute}.sectionHeader__title[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .3);padding-bottom:calc(var(--vh) * .8);line-height:1;position:absolute;width:100%;text-align:center;color:#f6f6f6;border-bottom:solid #1d2f41;border-width:calc(var(--vh) * .25)}.sectionHeader__rightSideArea[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .8);position:absolute;right:0;top:0;display:flex;align-items:flex-start;height:100%}.sectionHeader__filterArea[_ngcontent-%COMP%]{bottom:calc(var(--vh) * 1);right:calc(var(--vw) * 5);position:absolute;left:0}.sectionHeader__godArea[_ngcontent-%COMP%]{user-select:none;pointer-events:none;position:absolute;right:0;top:0;display:flex;align-items:flex-start}app-god-badge[_ngcontent-%COMP%]{user-select:auto;pointer-events:auto;margin-top:calc(var(--vh) * 1)}.godArea__label[_ngcontent-%COMP%]{color:#7192b0;padding-top:calc(var(--vh) * 1.1);padding-right:calc(var(--vw) * 2)}.cardsListingArea[_ngcontent-%COMP%]{overflow:hidden;overflow-y:auto;flex:1;padding:0 16px}  app-card{cursor:pointer}"]
+                styles: [`
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    margin: 0
+                }
+                
+                body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif;
+                    font-weight: 400
+                }
+                
+                .sectionHeader__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    font-family: Unchained, serif;
+                    font-weight: 700
+                }
+                
+                .godArea__label[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif
+                }
+                
+                .sectionHeader__title[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 2.96);
+                    line-height: 1.3
+                }
+                
+                .godArea__label[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 1.48)
+                }
+                
+                [_nghost-%COMP%] {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    height: 100%;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    padding: 48px 48px 0px;
+                }
+                
+                .sectionHeader[_ngcontent-%COMP%] {
+                    height: calc(var(--vh) * 8.5);
+                    position: relative
+                }
+                
+                .sectionHeader__groupings[_ngcontent-%COMP%] {
+                    position: absolute
+                }
+                
+                .sectionHeader__title[_ngcontent-%COMP%] {
+                    padding-top: calc(var(--vh) * .3);
+                    padding-bottom: calc(var(--vh) * .8);
+                    line-height: 1;
+                    position: absolute;
+                    width: 100%;
+                    text-align: center;
+                    color: #f6f6f6;
+                    border-bottom: solid #1d2f41;
+                    border-width: calc(var(--vh) * .25)
+                }
+                
+                .sectionHeader__rightSideArea[_ngcontent-%COMP%] {
+                    padding-top: calc(var(--vh) * .8);
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    display: flex;
+                    align-items: flex-start;
+                    height: 100%
+                }
+                
+                .sectionHeader__filterArea[_ngcontent-%COMP%] {
+                    bottom: calc(var(--vh) * 1);
+                    right: calc(var(--vw) * 5);
+                    position: absolute;
+                    left: 0
+                }
+                
+                .sectionHeader__godArea[_ngcontent-%COMP%] {
+                    user-select: none;
+                    pointer-events: none;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    display: flex;
+                    align-items: flex-start
+                }
+                
+                app-god-badge[_ngcontent-%COMP%] {
+                    user-select: auto;
+                    pointer-events: auto;
+                    margin-top: calc(var(--vh) * 1)
+                }
+                
+                .godArea__label[_ngcontent-%COMP%] {
+                    color: #7192b0;
+                    padding-top: calc(var(--vh) * 1.1);
+                    padding-right: calc(var(--vw) * 2)
+                }
+                
+                .cardsListingArea[_ngcontent-%COMP%] {
+                    overflow: hidden;
+                    overflow-y: auto;
+                    flex: 1;
+                    padding: 0 16px
+                }
+                
+                app-card {
+                    cursor: pointer
+                }
+                
+                app-cards-list {
+                    display: flex;
+                }
+                `]
             }), o
         })(), Er = (() => {
             class o {
@@ -4206,7 +5007,97 @@
                 },
                 directives: [l.O5, Ot, l.sg, Jr, zr],
                 pipes: [l.Nd],
-                styles: ["@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.sectionHeader__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.rightSideArea__cardsCount[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.sectionHeader__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.rightSideArea__cardsCount[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9);line-height:1.2;font-weight:600}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;position:relative}.sectionHeader[_ngcontent-%COMP%]{height:calc(var(--vh) * 5.5);margin-top:calc(var(--vh) * 2);position:relative;flex-shrink:0}.sectionHeader__groupings[_ngcontent-%COMP%]{position:absolute}.sectionHeader__title[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .3);padding-bottom:calc(var(--vh) * .8);line-height:1;position:absolute;width:100%;text-align:center;color:#f6f6f6;border-bottom:solid #1d2f41;border-width:calc(var(--vh) * .25)}.sectionHeader__rightSideArea[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .4);position:absolute;right:0;top:0;display:flex;align-items:flex-start;height:100%}.rightSideArea__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2);margin-right:calc(var(--vw) * .5);color:#f6f6f6;line-height:1}.rightSideArea__cardsCount[_ngcontent-%COMP%]{color:#f6f6f6}.rightSideArea__editButton[_ngcontent-%COMP%], .rightSideArea__saveButton[_ngcontent-%COMP%]{margin-left:calc(var(--vw) * 1.5);position:relative}.cardBundlesListing[_ngcontent-%COMP%]{flex:1;display:grid;grid-template-columns:repeat(10,1fr)}"],
+                styles: [`
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    margin: 0
+                }
+                
+                body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif;
+                    font-weight: 400
+                }
+                
+                .sectionHeader__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    font-family: Unchained, serif;
+                    font-weight: 700
+                }
+                
+                .rightSideArea__cardsCount[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif
+                }
+                
+                .sectionHeader__title[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 2.96);
+                    line-height: 1.3
+                }
+                
+                .rightSideArea__cardsCount[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 1.9);
+                    line-height: 1.2;
+                    font-weight: 600
+                }
+                
+                [_nghost-%COMP%] {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    position: relative
+                }
+                
+                .sectionHeader[_ngcontent-%COMP%] {
+                    height: calc(var(--vh) * 5.5);
+                    margin-top: calc(var(--vh) * 2);
+                    position: relative;
+                    flex-shrink: 0
+                }
+                
+                .sectionHeader__groupings[_ngcontent-%COMP%] {
+                    position: absolute
+                }
+                
+                .sectionHeader__title[_ngcontent-%COMP%] {
+                    padding-top: calc(var(--vh) * .3);
+                    padding-bottom: calc(var(--vh) * .8);
+                    line-height: 1;
+                    position: absolute;
+                    width: 100%;
+                    text-align: center;
+                    color: #f6f6f6;
+                    border-bottom: solid #1d2f41;
+                    border-width: calc(var(--vh) * .25)
+                }
+                
+                .sectionHeader__rightSideArea[_ngcontent-%COMP%] {
+                    padding-top: calc(var(--vh) * .4);
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    display: flex;
+                    align-items: flex-start;
+                    height: 100%
+                }
+                
+                .rightSideArea__icon[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 2);
+                    margin-right: calc(var(--vw) * .5);
+                    color: #f6f6f6;
+                    line-height: 1
+                }
+                
+                .rightSideArea__cardsCount[_ngcontent-%COMP%] {
+                    color: #f6f6f6
+                }
+                
+                .rightSideArea__editButton[_ngcontent-%COMP%], .rightSideArea__saveButton[_ngcontent-%COMP%] {
+                    margin-left: calc(var(--vw) * 1.5);
+                    position: relative
+                }
+                
+                .cardBundlesListing[_ngcontent-%COMP%] {
+                    flex: 1;
+                    display: grid;
+                    grid-template-columns:repeat(10, 1fr)
+                }
+                `],
                 data: {
                     animation: [(0, C.X$)("slideIn", [(0, C.eR)(":enter", [(0, C.oB)({
                         opacity: 0,
@@ -6400,14 +7291,14 @@
         function Ls(o, r) {
             if (1 & o && (e.TgZ(0, "gu-heading-text", 14), e._uU(1), e.qZA()), 2 & o) {
                 const t = e.oxw(2);
-                e.xp6(1), e.hij(" ", null == t.account ? null : t.account.username, " ")
+                e.xp6(1), e.hij(" ", null == t.account ? null : t.account.username + ' - ' + t.user.user_id, " ")
             }
         }
 
         function Us(o, r) {
             if (1 & o && (e.TgZ(0, "gu-heading-text", 15), e._uU(1), e.qZA()), 2 & o) {
                 const t = e.oxw(2);
-                e.xp6(1), e.hij(" ", null == t.account ? null : t.account.username, " ")
+                e.xp6(1), e.hij(" ", null == t.account ? null : t.account.username + ' - ' + t.user.user_id, " ")
             }
         }
 
@@ -6426,14 +7317,14 @@
             }
             if (2 & o) {
                 const t = e.oxw(2);
-                e.xp6(2), e.hij(" Next milestone - Level ", t.user.level + 1, " "), e.xp6(1), e.Q6J("progress", t.xpProgress), e.xp6(2), e.Q6J("autoClose", !t.isNewUserWithUnopenedPacks)("title", t.isNewUserWithUnopenedPacks ? "Click to see <br/> unlocked rewards" : t.nextReward.god + " Core " + t.nextReward.rarity + " pack"), e.xp6(1), e.Q6J("ngClass", e.VKq(7, qs, t.isNewUserWithUnopenedPacks)), e.xp6(1), e.Q6J("god", t.nextReward.god)("rarity", t.nextReward.rarity)
+                e.xp6(2), e.hij(" Next milestone in " + t.user.xp_to_next + " XP - Level ", t.user.level + 1, " "), e.xp6(1), e.Q6J("progress", t.xpProgress), e.xp6(2), e.Q6J("autoClose", !t.isNewUserWithUnopenedPacks)("title", t.isNewUserWithUnopenedPacks ? "Click to see <br/> unlocked rewards" : t.nextReward.god + " Core " + t.nextReward.rarity + " pack"), e.xp6(1), e.Q6J("ngClass", e.VKq(7, qs, t.isNewUserWithUnopenedPacks)), e.xp6(1), e.Q6J("god", t.nextReward.god)("rarity", t.nextReward.rarity)
             }
         }
 
         function Ns(o, r) {
-            if (1 & o && (e.ynx(0), e.TgZ(1, "div", 1), e._UZ(2, "img", 2), e.qZA(), e.TgZ(3, "div", 3), e.TgZ(4, "div", 4), e.TgZ(5, "gu-simple-text", 5), e._uU(6), e.qZA(), e.YNc(7, Ls, 2, 1, "gu-heading-text", 6), e.YNc(8, Us, 2, 1, "gu-heading-text", 7), e.TgZ(9, "div", 8), e.TgZ(10, "div", 9), e._UZ(11, "gu-icon", 10), e.TgZ(12, "gu-heading-text", 11), e._uU(13), e.qZA(), e.qZA(), e.TgZ(14, "div", 9), e._UZ(15, "gu-icon", 12), e.TgZ(16, "gu-heading-text", 11), e._uU(17), e.qZA(), e.qZA(), e.qZA(), e.qZA(), e.qZA(), e.YNc(18, Es, 8, 9, "div", 13), e.BQk()), 2 & o) {
+            if (1 & o && (e.ynx(0), e.TgZ(1, "div", 1), e._UZ(2, "img", 2), e.qZA(), e.TgZ(3, "div", 3), e.TgZ(4, "div", 4), e.TgZ(5, "gu-simple-text", 5), e._uU(6), e.qZA(), e.YNc(7, Ls, 2, 1, "gu-heading-text", 6), e.YNc(8, Us, 2, 1, "gu-heading-text", 7), e.TgZ(9, "div", 8), e.TgZ(10, "div", 9), e._UZ(11, "gu-icon", 10), e.TgZ(12, "gu-paragraph-text", 11), e._uU(13), e.qZA(), e.qZA(), e.TgZ(14, "div", 9), e._UZ(15, "gu-icon", 12), e.TgZ(16, "gu-paragraph-text", 11), e._uU(17), e.qZA(), e.qZA(), e.qZA(), e.qZA(), e.qZA(), e.YNc(18, Es, 8, 9, "div", 13), e.BQk()), 2 & o) {
                 const t = e.oxw();
-                e.xp6(2), e.s9C("src", t.user.image_url, e.LSH), e.xp6(3), e.Udp("color", t.user.rank_color), e.xp6(1), e.hij(" ", t.user.rank, " "), e.xp6(1), e.Q6J("ngIf", t.userNameContainsEmoji), e.xp6(1), e.Q6J("ngIf", !t.userNameContainsEmoji), e.xp6(5), e.hij(" ", null == t.user ? null : t.user.won_matches, " "), e.xp6(4), e.hij(" ", null == t.user ? null : t.user.unique_card_count, " "), e.xp6(1), e.Q6J("ngIf", t.showProgressBar && t.nextReward)
+                e.xp6(2), e.s9C("src", t.user.image_url, e.LSH), e.xp6(3), e.Udp("color", t.user.rank_color), e.xp6(1), e.hij(" ", t.user.rank, " "), e.xp6(1), e.Q6J("ngIf", t.userNameContainsEmoji), e.xp6(1), e.Q6J("ngIf", !t.userNameContainsEmoji), e.xp6(5), e.hij(" ", null == t.user ? null : t.user.won_matches + ' W - ' + t.user.lost_matches + ' L (' + (t.user.won_matches + t.user.lost_matches > 0 ? ((t.user.won_matches / (t.user.won_matches + t.user.lost_matches))*100).toFixed(0) : 0) + '%)', " "), e.xp6(4), e.hij(" ", null == t.user ? null : t.user.unique_card_count + ' unique cards', " "), e.xp6(1), e.Q6J("ngIf", t.showProgressBar && t.nextReward)
             }
         }
 
@@ -6505,7 +7396,138 @@
                     1 & t && e.YNc(0, Ns, 19, 9, "ng-container", 0), 2 & t && e.Q6J("ngIf", n.user)
                 },
                 directives: [l.O5, Fe.K, l.mk],
-                styles: ['h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}[_nghost-%COMP%]{height:100%;display:flex;flex-wrap:wrap}.textArea[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 2.2);flex:1;display:flex;flex-direction:column;align-items:flex-start}.textArea__centered[_ngcontent-%COMP%]{margin:auto 0}.avatarArea[_ngcontent-%COMP%]{width:calc(var(--vw) * 8);height:calc(var(--vw) * 8);position:relative;border-radius:50%;overflow:hidden;border:calc(var(--vh) * .6) solid #1D2F41;box-shadow:0 calc(var(--vh) * .6) calc(var(--vh) * 1.3) #0a0a0a99}.avatar__profileImage[_ngcontent-%COMP%]{display:block;width:100%;border-radius:50%}.playerName[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .4);margin-bottom:calc(var(--vh) * 1.2)}.statDisplays[_ngcontent-%COMP%]{display:flex;justify-content:space-between}.statDisplays__stat[_ngcontent-%COMP%]{display:flex;margin-right:calc(var(--vw) * 1.5)}.statDisplays__stat__icon[_ngcontent-%COMP%]{margin-right:calc(var(--vw) * .5);font-size:20px}.progressBarArea[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2.2);display:flex;width:100%;position:relative}.progressBarArea__nextMilestone[_ngcontent-%COMP%]{position:absolute;bottom:120%;right:8%}.progressBarArea__nextReward[_ngcontent-%COMP%]{position:absolute;top:0;right:0;width:52px;height:52px;display:flex;transform:translate(50%,-27%)}.progressBarArea__nextReward[_ngcontent-%COMP%]     .tooltipBubble--top{margin-top:-24px}.progressBarArea__nextReward__innerSquares[_ngcontent-%COMP%]{position:absolute;width:100%;height:100%;transform:rotate(45deg);border:1px solid #C6A052;padding:4.8px;background:#0F1B27}.progressBarArea__nextReward__innerSquares[_ngcontent-%COMP%]:before{content:"";display:block;width:100%;height:100%;border:1px solid #AFFAED}.glow[_ngcontent-%COMP%]{box-shadow:0 0 10px #e5e5e5}.progressBarArea__nextReward__packImage[_ngcontent-%COMP%]{margin:auto;width:48px;transform:translateY(-6%)}gu-hex-progress-bar[_ngcontent-%COMP%]{flex:1}']
+                styles: [`
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    margin: 0
+                }
+                
+                body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif;
+                    font-weight: 400
+                }
+                
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    font-family: Unchained, serif;
+                    font-weight: 700
+                }
+                
+                [_nghost-%COMP%] {
+                    height: 100%;
+                    display: flex;
+                    flex-wrap: wrap
+                }
+                
+                .textArea[_ngcontent-%COMP%] {
+                    padding-left: calc(var(--vw) * 2.2);
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start
+                }
+                
+                .textArea__centered[_ngcontent-%COMP%] {
+                    margin: auto 0
+                }
+                
+                .avatarArea[_ngcontent-%COMP%] {
+                    width: calc(var(--vw) * 8);
+                    height: calc(var(--vw) * 8);
+                    position: relative;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    border: calc(var(--vh) * .6) solid #1D2F41;
+                    box-shadow: 0 calc(var(--vh) * .6) calc(var(--vh) * 1.3) #0a0a0a99
+                }
+                
+                .avatar__profileImage[_ngcontent-%COMP%] {
+                    display: block;
+                    width: 100%;
+                    border-radius: 50%
+                }
+                
+                .playerName[_ngcontent-%COMP%] {
+                    margin-top: calc(var(--vh) * .4);
+                    margin-bottom: calc(var(--vh) * 1.2)
+                }
+                
+                .statDisplays[_ngcontent-%COMP%] {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                
+                .statDisplays__stat[_ngcontent-%COMP%] {
+                    display: flex;
+                    margin-right: calc(var(--vw) * 1.5);
+                }
+                
+                .statDisplays__stat__icon[_ngcontent-%COMP%] {
+                    margin-right: calc(var(--vw) * .5);
+                    font-size: .9rem;
+                }
+                
+                .statDisplays__stat__value[_ngcontent-%COMP%] {
+                    font-size: .9rem;
+                }
+                
+                .progressBarArea[_ngcontent-%COMP%] {
+                    margin-top: calc(var(--vh) * 2.2);
+                    display: flex;
+                    width: 100%;
+                    position: relative
+                }
+                
+                .progressBarArea__nextMilestone[_ngcontent-%COMP%] {
+                    position: absolute;
+                    bottom: 120%;
+                    right: 8%
+                }
+                
+                .progressBarArea__nextReward[_ngcontent-%COMP%] {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 52px;
+                    height: 52px;
+                    display: flex;
+                    transform: translate(50%, -27%)
+                }
+                
+                .progressBarArea__nextReward[_ngcontent-%COMP%] .tooltipBubble--top {
+                    margin-top: -24px
+                }
+                
+                .progressBarArea__nextReward__innerSquares[_ngcontent-%COMP%] {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    transform: rotate(45deg);
+                    border: 1px solid #C6A052;
+                    padding: 4.8px;
+                    background: #0F1B27
+                }
+                
+                .progressBarArea__nextReward__innerSquares[_ngcontent-%COMP%]:before {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid #AFFAED
+                }
+                
+                .glow[_ngcontent-%COMP%] {
+                    box-shadow: 0 0 10px #e5e5e5
+                }
+                
+                .progressBarArea__nextReward__packImage[_ngcontent-%COMP%] {
+                    margin: auto;
+                    width: 48px;
+                    transform: translateY(-6%)
+                }
+                
+                gu-hex-progress-bar[_ngcontent-%COMP%] {
+                    flex: 1
+                }
+                `]
             }), o
         })();
 
@@ -6800,7 +7822,161 @@
                 },
                 directives: [l.O5],
                 pipes: [l.i8],
-                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}[_nghost-%COMP%]{height:calc(var(--vh) * 10);width:calc(var(--vh) * 10);display:flex;flex-direction:column;overflow:hidden;background-color:#000;position:absolute;transform:rotate(45deg)}.highlighted[_nghost-%COMP%]{background:linear-gradient(to bottom,#affaed 0%,#8be1e0 50%,#54bbcd 100%)}.unlockBorder[_nghost-%COMP%]{border:2px solid #59a8cd}.greyed[_nghost-%COMP%]{filter:grayscale(1)}.index--0[_nghost-%COMP%]{top:0;left:50%;transform:translate(-50%) rotate(45deg)}.index--1[_nghost-%COMP%]{right:0;top:17%}.index--2[_nghost-%COMP%]{right:0;bottom:17%}.index--3[_nghost-%COMP%]{bottom:0;left:50%;transform:translate(-50%) rotate(45deg)}.index--4[_nghost-%COMP%]{left:0;bottom:17%}.index--5[_nghost-%COMP%]{left:0;top:17%}.wrapper[_ngcontent-%COMP%]{height:100%;width:100%;transform:rotate(-45deg)}.godImage[_ngcontent-%COMP%]{position:relative;margin-top:calc(var(--vh) * -2);margin-top:-20%;margin-left:calc(var(--vh) * -4.2);margin-left:-42%;height:calc(var(--vh) * 20);height:200%}.godImage--noGod[_ngcontent-%COMP%]{filter:brightness(.1) contrast(0) blur(1px)}.lock[_ngcontent-%COMP%]{color:#272727;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:calc(var(--vh) * 4)}.winCircle[_ngcontent-%COMP%]{width:calc(var(--vh) * 2.5);width:25%;height:calc(var(--vh) * 2.5);height:25%;border-radius:50%;background-color:#000;position:absolute;border:1px solid #c6a052}.winCircle--0[_ngcontent-%COMP%]{left:11%;bottom:15%}.winCircle--1[_ngcontent-%COMP%]{left:50%;transform:translate(-50%);bottom:-10%}.winCircle--2[_ngcontent-%COMP%]{right:9%;bottom:15%}.winCircle--complete[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);border:none}.winCircle__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9);text-align:center;height:100%;width:100%;position:absolute;color:#000}.line[_ngcontent-%COMP%]{position:absolute;width:500px;height:1px;border:solid red 1px}.top[_ngcontent-%COMP%]{top:0;left:50%;transform:translate(-50%)}.bot[_ngcontent-%COMP%]{bottom:0;left:50%;transform:translate(-50%)}"]
+                styles: [`
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    margin: 0
+                }
+                
+                body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif;
+                    font-weight: 400
+                }
+                
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    font-family: Unchained, serif;
+                    font-weight: 700
+                }
+                
+                [_nghost-%COMP%] {
+                    height: calc(var(--vh) * 10);
+                    width: calc(var(--vh) * 10);
+                    display: flex;
+                    flex-direction: column;
+                    overflow: hidden;
+                    background-color: #000;
+                    position: absolute;
+                    transform: rotate(45deg)
+                }
+                
+                .unlockBorder[_nghost-%COMP%] {
+                    border: 2px solid var(--gu-blue);
+                }
+                
+                .greyed[_nghost-%COMP%] {
+                    filter: grayscale(1)
+                }
+                
+                .index--0[_nghost-%COMP%] {
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%) rotate(45deg)
+                }
+                
+                .index--1[_nghost-%COMP%] {
+                    right: 0;
+                    top: 17%
+                }
+                
+                .index--2[_nghost-%COMP%] {
+                    right: 0;
+                    bottom: 17%
+                }
+                
+                .index--3[_nghost-%COMP%] {
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%) rotate(45deg)
+                }
+                
+                .index--4[_nghost-%COMP%] {
+                    left: 0;
+                    bottom: 17%
+                }
+                
+                .index--5[_nghost-%COMP%] {
+                    left: 0;
+                    top: 17%
+                }
+                
+                .wrapper[_ngcontent-%COMP%] {
+                    height: 100%;
+                    width: 100%;
+                    transform: rotate(-45deg)
+                }
+                
+                .godImage[_ngcontent-%COMP%] {
+                    position: relative;
+                    margin-top: calc(var(--vh) * -2);
+                    margin-top: -20%;
+                    margin-left: calc(var(--vh) * -4.2);
+                    margin-left: -42%;
+                    height: calc(var(--vh) * 20);
+                    height: 200%
+                }
+                
+                .godImage--noGod[_ngcontent-%COMP%] {
+                    filter: brightness(.1) contrast(0) blur(1px)
+                }
+                
+                .lock[_ngcontent-%COMP%] {
+                    color: #272727;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: calc(var(--vh) * 4)
+                }
+                
+                .winCircle[_ngcontent-%COMP%] {
+                    width: calc(var(--vh) * 2.5);
+                    width: 25%;
+                    height: calc(var(--vh) * 2.5);
+                    height: 25%;
+                    border-radius: 50%;
+                    background-color: #000;
+                    position: absolute;
+                    border: 1px solid var(--gu-yellow);
+                }
+                
+                .winCircle--0[_ngcontent-%COMP%] {
+                    left: 11%;
+                    bottom: 15%
+                }
+                
+                .winCircle--1[_ngcontent-%COMP%] {
+                    left: 50%;
+                    transform: translate(-50%);
+                    bottom: -10%
+                }
+                
+                .winCircle--2[_ngcontent-%COMP%] {
+                    right: 9%;
+                    bottom: 15%
+                }
+                
+                .winCircle--complete[_ngcontent-%COMP%] {
+                    background: var(--gu-blue);
+                    border: none
+                }
+                
+                .winCircle__icon[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 1.9);
+                    text-align: center;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    color: #000
+                }
+                
+                .line[_ngcontent-%COMP%] {
+                    position: absolute;
+                    width: 500px;
+                    height: 1px;
+                    border: solid var(--gu-red) 1px;
+                }
+                
+                .top[_ngcontent-%COMP%] {
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%)
+                }
+                
+                .bot[_ngcontent-%COMP%] {
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%)
+                } 
+                `]
             }), o
         })(), An = (() => {
             class o {
@@ -7021,7 +8197,151 @@
                     1 & t && (e._UZ(0, "app-modal-sidebar", 0), e.YNc(1, ic, 1, 0, "app-rectangular-spinner", 1), e.YNc(2, rc, 1, 5, "app-cards-list", 2), e.YNc(3, ac, 1, 5, "app-active-deck", 3)), 2 & t && (e.Q6J("closeButtonClickFn", n.destroyModal), e.xp6(1), e.Q6J("ngIf", n.loading), e.xp6(1), e.Q6J("ngIf", !n.loading), e.xp6(1), e.Q6J("ngIf", n.activeDeck))
                 },
                 directives: [ke, l.O5, at, It, pn],
-                styles: ["[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;padding:0 calc(var(--vh) * 7.7);padding-top:calc(var(--vh) * 4.5);height:100%}app-cards-list[_ngcontent-%COMP%]{flex:1}app-active-deck[_ngcontent-%COMP%]{height:calc(var(--vh) * 37)}.spinner[_ngcontent-%COMP%]{margin:auto}.exportCta[_ngcontent-%COMP%]{position:absolute;top:calc(var(--vh) * 3);right:calc(var(--vh) * 17)}"]
+                styles: [`
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    margin: 0
+                }
+                
+                body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif;
+                    font-weight: 400
+                }
+                
+                .pageTitle[_ngcontent-%COMP%], .god__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    font-family: Unchained, serif;
+                    font-weight: 700
+                }
+                
+                .god__description[_ngcontent-%COMP%], .god__playStyle[_ngcontent-%COMP%], .pageDescription[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif
+                }
+                
+                .god__title[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 3.7);
+                    line-height: 1.3
+                }
+                
+                .pageTitle[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 5);
+                    line-height: 1.3
+                }
+                
+                .god__description[_ngcontent-%COMP%], .god__playStyle[_ngcontent-%COMP%], .pageDescription[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 1.48)
+                }
+                
+                .god__playStyle[_ngcontent-%COMP%], .pageDescription[_ngcontent-%COMP%] {
+                    line-height: 1.4
+                }
+                
+                [_nghost-%COMP%] {
+                    width: 100%;
+                    height: calc(calc(var(--vh) * 100) - 28px - 80px);
+                    display: flex;
+                    flex-flow: column nowrap;
+                    text-align: center;
+                    padding: 0 80px;
+                    padding-top: calc(var(--vh) * 5)
+                }
+                
+                .pageTitle[_ngcontent-%COMP%] {
+                    margin-bottom: calc(var(--vh) * 1);
+                    background: var(--gu-yellow);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent
+                }
+                
+                .pageDescription[_ngcontent-%COMP%] {
+                    color: var(--gu-gray);
+                }
+                
+                .godListing[_ngcontent-%COMP%] {
+                    margin-top: calc(var(--vh) * 1);
+                    grid-column-gap: calc(var(--vw) * .6);
+                    display: grid;
+                    grid-template-columns:repeat(6, 1fr)
+                }
+                
+                .god[_ngcontent-%COMP%] {
+                    width: calc(var(--vw) * 14.84);
+                    height: calc(var(--vh) * 63);
+                    display: flex;
+                    background: linear-gradient(to bottom, #affaed 0%, #8be1e0 50%, #54bbcd 100%);
+                    border-radius: calc(var(--vh) * .4);
+                    color: var(--gu-gray);
+                    cursor: pointer
+                }
+                
+                .god[_ngcontent-%COMP%]:hover:not(.god--unavailable) .god__image[_ngcontent-%COMP%] {
+                    opacity: 1;
+                    z-index: 1;
+                }
+                
+                .god--unavailable[_ngcontent-%COMP%] {
+                    color: #7192b0;
+                    background: #1d2f41;
+                    cursor: default
+                }
+                
+                .god--unavailable[_ngcontent-%COMP%] .god__inner[_ngcontent-%COMP%] {
+                    background: #0c1620
+                }
+                
+                .god--unavailable[_ngcontent-%COMP%] .god__image[_ngcontent-%COMP%] {
+                    opacity: .1;
+                }
+                
+                .god__inner[_ngcontent-%COMP%] {
+                    padding: calc(var(--vw) * 1.5);
+                    margin: calc(var(--vh) * .18);
+                    flex: 1;
+                    border-radius: calc(var(--vh) * .4);
+                    background: var(--gu-blue-dark);
+                    overflow: hidden;
+                    position: relative
+                }
+                
+                .god__image[_ngcontent-%COMP%] {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    opacity: .35;
+                }
+                
+                .god__title[_ngcontent-%COMP%] {
+                    position: relative
+                }
+                
+                .god__description[_ngcontent-%COMP%] {
+                    padding-top: calc(var(--vh) * .5);
+                    padding-bottom: calc(var(--vh) * 2.96);
+                    color: var(--gu-gray);
+                    position: relative
+                }
+                
+                .god__playStyle[_ngcontent-%COMP%] {
+                    position: relative;
+                    padding: 8px;
+                    background: rgba(0,0,0,0.25);
+                }
+                
+                .sealedPreloadSection[_ngcontent-%COMP%] {
+                    width: 1px;
+                    height: 1px;
+                    visibility: hidden;
+                    overflow: hidden
+                }
+                
+                .importDeckCta[_ngcontent-%COMP%] {
+                    position: absolute;
+                    right: 100px
+                }
+                `]
             }), o
         })();
         var sc = g(98590);
@@ -7336,7 +8656,21 @@
                 }
 
                 initDecks() {
-                    this.allDecks$ = (0, D.aj)([this.decksService.starterDecks$, this.decksService.userDecks$]).pipe((0, M.U)(([t, n]) => [...t, ...n.filter(a => "common" === a.deck_type)])), this.filteredDecks$ = this.allDecks$
+                    this.allDecks$ = (0, D.aj)([this.decksService.starterDecks$, this.decksService.userDecks$]).pipe((0, M.U)(([t, n]) => [...t, ...n.filter(a => "common" === a.deck_type).sort((d1, d2) => {
+                        if (d1.god < d2.god) {
+                            return -1;
+                        }
+                        if (d1.god > d2.god) {
+                            return 1;
+                        }
+                        if (d1.name < d2.name) {
+                            return -1;
+                        }
+                        if (d1.name > d2.name) {
+                            return 1;
+                        }
+                        return 0;
+                    })])), this.filteredDecks$ = this.allDecks$
                 }
 
                 initGameModes() {
@@ -7413,7 +8747,7 @@
                 template: function (t, n) {
                     1 & t && (e.YNc(0, mc, 1, 1, "app-modal-sidebar", 0), e.TgZ(1, "header", 1), e.TgZ(2, "app-grouping-bar", 2), e.NdJ("godFilterChangeList", function (a) {
                         return n.godFilterChange(a)
-                    }), e.qZA(), e.TgZ(3, "h3", 3), e._uU(4, "My Decks"), e.qZA(), e.YNc(5, fc, 2, 0, "gu-plain-square-button", 4), e.qZA(), e.TgZ(6, "div", 5), e.TgZ(7, "app-create-new-button", 6), e.NdJ("click", function () {
+                    }), e.qZA(), e.TgZ(3, "h3", 3), e._uU(4, "My Decks (Sorted by God, Name)"), e.qZA(), e.YNc(5, fc, 2, 0, "gu-plain-square-button", 4), e.qZA(), e.TgZ(6, "div", 5), e.TgZ(7, "app-create-new-button", 6), e.NdJ("click", function () {
                         return n.newDeck()
                     }), e.qZA(), e.YNc(8, Cc, 1, 4, "app-deck", 7), e.ALo(9, "async"), e.qZA()), 2 & t && (e.Q6J("ngIf", n.modalHosted), e.xp6(2), e.Q6J("godFilters", n.godFilters)("displayGroupingName", !1), e.xp6(3), e.Q6J("featureFlagIf", n.Flags.deckCodesEnabled), e.xp6(3), e.Q6J("ngForOf", e.lcZ(9, 6, n.filteredDecks$))("ngForTrackBy", n.trackDecksBy))
                 },
@@ -7623,7 +8957,7 @@
         let Uc = (() => {
             class o {
                 constructor(t, n, i, a, s, c, d, p, w, v, O, A, G, U) {
-                    this.playService = t, this.auth = n, this.queueService = i, this.el = a, this.guGameService = s, this.resizeService = c, this.modalService = d, this.gameService = p, this.loadoutService = w, this.audioService = v, this.akumaService = O, this.cerberusModal = A, this.featureFlagService = G, this.environment = U, this.disabled = !1, this.openDeckSelect = new e.vpe, this.secondsElapsed = 0, this.progressCirclePercentage = 0, this.echoPercentage = 50, this.isPressed = !1, this.isHovered = !1, this.timeUntilCancel = 2e3, this.unsubscribe = new y.xQ, this.gameModeReady = !1, this.GuGameModeType = S.tO, this.disableButton = !1, this.MIN_GAMES_PLAYED = 10, this.AFTER_EVERY_X_GAMES = 5
+                    this.playService = t, this.auth = n, this.queueService = i, this.el = a, this.guGameService = s, this.resizeService = c, this.modalService = d, this.gameService = p, this.loadoutService = w, this.audioService = v, this.akumaService = O, this.cerberusModal = A, this.featureFlagService = G, this.environment = U, this.disabled = !1, this.openDeckSelect = new e.vpe, this.secondsElapsed = 0, this.progressCirclePercentage = 0, this.echoPercentage = 50, this.isPressed = !1, this.isHovered = !1, this.timeUntilCancel = 2e3, this.unsubscribe = new y.xQ, this.gameModeReady = !1, this.GuGameModeType = S.tO, this.disableButton = !1, this.MIN_GAMES_PLAYED = 10, this.AFTER_EVERY_X_GAMES = 5, this.firstTryLaunch = true
                 }
 
                 ngOnInit() {
@@ -7803,9 +9137,17 @@
                         id: this.mode.id,
                         name: this.mode.name
                     }, this.userId, new X.Qc(this.userId, this.deck, this.getLoadoutId(), this.opponentsDeck), this.mode.type === S.tO.DIRECT_CHALLENGE ? this.challengeCode : "").pipe((0, x.q)(1)).subscribe(t => {
-                        this.queue = t, this.disableButton = !1, this.initTimer()
+                        this.firstTryLaunch = true, this.queue = t, this.disableButton = !1, this.initTimer()
                     }, t => {
-                        this.disableButton = !1, this.showInfoModal("Unable to Queue", t)
+                        if (this.firstTryLaunch === true) {
+                            this.firstTryLaunch = false;
+                            setTimeout(() => {
+                                this.launchQueue();
+                            }, 500);
+                        } else {
+                            this.disableButton = !1;
+                            this.showInfoModal("Unable to Queue", t);
+                        }
                     })
                 }
 
@@ -7892,7 +9234,113 @@
                 },
                 directives: [Sc, l.mk, l.PC, Ft, l.O5],
                 pipes: [Tc.u],
-                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.buttonText__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.buttonText__label[_ngcontent-%COMP%], .buttonText__hold[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.buttonText__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.buttonText__hold[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.buttonText__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.29)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:inline-block;position:relative;transform-origin:50% 50%;transition:all .15s ease-in-out}[_nghost-%COMP%]:hover{transform:scale(1.02)}.queue-button-container[_ngcontent-%COMP%]{user-select:none;cursor:pointer;height:100%;border-radius:50%;overflow:hidden}.queue-button-container.pressed[_ngcontent-%COMP%]{box-shadow:inset 2px 2px 5px #000}.queue-button-container[_ngcontent-%COMP%]:hover   .inner-circle[_ngcontent-%COMP%]{background:#182531}.queue-button-container--disabled[_ngcontent-%COMP%]{user-select:none;pointer-events:none;opacity:.6}.outer-circle[_ngcontent-%COMP%]{height:100%;background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%)}.inner-circle[_ngcontent-%COMP%]{position:absolute;left:50%;top:50%;width:88%;height:88%;transform:translate(-50%,-50%);border-radius:50%;transition:all .15s ease;background:#0f1b27}.inner-circle-content[_ngcontent-%COMP%]{height:100%;display:flex}.buttonText[_ngcontent-%COMP%]{margin:auto;display:flex;flex-flow:column nowrap;text-align:center;color:#f6f6f6}.buttonText__title[_ngcontent-%COMP%]{line-height:1}.buttonText__hold[_ngcontent-%COMP%]{font-weight:600}.buttonText__label[_ngcontent-%COMP%]{font-weight:600;text-transform:uppercase;color:#e0c58f}"]
+                styles: [`
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    margin: 0
+                }
+                
+                body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif;
+                    font-weight: 400
+                }
+                
+                .buttonText__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    font-family: Unchained, serif;
+                    font-weight: 700
+                }
+                
+                .buttonText__label[_ngcontent-%COMP%], .buttonText__hold[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif
+                }
+                
+                .buttonText__title[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 2.96);
+                    line-height: 1.3
+                }
+                
+                .buttonText__hold[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 1.48)
+                }
+                
+                .buttonText__label[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 1.29)
+                }
+                
+                [_nghost-%COMP%] {
+                    display: inline-block;
+                    position: relative;
+                    transform-origin: 50% 50%;
+                    transition: all .15s ease-in-out;
+                    background: var(--gu-blue-dark);
+                    border-radius: 50%;
+                }
+                
+                [_nghost-%COMP%]:hover {
+                    transform: scale(1.05);
+                }
+                
+                .queue-button-container[_ngcontent-%COMP%] {
+                    user-select: none;
+                    cursor: pointer;
+                    height: 100%;
+                    border-radius: 50%;
+                    overflow: hidden
+                }
+                
+                .queue-button-container.pressed[_ngcontent-%COMP%] {
+                    box-shadow: inset 2px 2px 5px #000
+                }
+                
+                .queue-button-container--disabled[_ngcontent-%COMP%] {
+                    user-select: none;
+                    pointer-events: none;
+                    opacity: .6
+                }
+                
+                .outer-circle[_ngcontent-%COMP%] {
+                    height: 100%;
+                    background: var(--gu-yellow);
+                }
+                
+                .inner-circle[_ngcontent-%COMP%] {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    width: 88%;
+                    height: 88%;
+                    transform: translate(-50%, -50%);
+                    border-radius: 50%;
+                    transition: all .15s ease;
+                    background: var(--gu-blue-dark);
+                }
+                
+                .inner-circle-content[_ngcontent-%COMP%] {
+                    height: 100%;
+                    display: flex
+                }
+                
+                .buttonText[_ngcontent-%COMP%] {
+                    margin: auto;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    text-align: center;
+                    color: #f6f6f6
+                }
+                
+                .buttonText__title[_ngcontent-%COMP%] {
+                    line-height: 1
+                }
+                
+                .buttonText__hold[_ngcontent-%COMP%] {
+                    font-weight: 600
+                }
+                
+                .buttonText__label[_ngcontent-%COMP%] {
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    color: #e0c58f
+                }
+                `]
             }), o
         })();
         const qc = [[["", "slot", "inlinebeforetext"]], [["", "slot", "inlineaftertext"]], [["", "slot", "aftereverything"]]],
@@ -7919,7 +9367,59 @@
                 template: function (t, n) {
                     1 & t && (e.F$t(qc), e._UZ(0, "gu-icon", 0), e.TgZ(1, "div", 1), e.Hsn(2), e._uU(3), e.Hsn(4, 1), e.qZA(), e.Hsn(5, 2)), 2 & t && (e.xp6(3), e.hij(" ", n.text, " "))
                 },
-                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.text[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.text[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{transition:transform .15s ease-in-out;display:flex;flex-direction:column;justify-content:center;align-items:center;height:100%;border:calc(var(--vh) * .15) solid #e0c58f;cursor:pointer}[_nghost-%COMP%]:hover{transform:scale(1.05)}.icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 3.5);margin-bottom:calc(var(--vh) * 1);line-height:1;color:#e0c58f}.text[_ngcontent-%COMP%]{color:#e0c58f;width:70%;text-align:center}"]
+                styles: [`
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    margin: 0
+                }
+                
+                body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif;
+                    font-weight: 400
+                }
+                
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    font-family: Unchained, serif;
+                    font-weight: 700
+                }
+                
+                .text[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif
+                }
+                
+                .text[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 1.48)
+                }
+                
+                [_nghost-%COMP%] {
+                    transition: transform .15s ease-in-out;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    border: calc(var(--vh) * .15) solid var(--gu-yellow);
+                    cursor: pointer
+                }
+                
+                [_nghost-%COMP%]:hover {
+                    transform: scale(1.05)
+                }
+                
+                .icon[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 3.5);
+                    margin-bottom: calc(var(--vh) * 1);
+                    line-height: 1;
+                    color: var(--gu-yellow);
+                }
+                
+                .text[_ngcontent-%COMP%] {
+                    color: var(--gu-yellow);
+                    width: 70%;
+                    text-align: center;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+                `]
             }), o
         })();
 
@@ -9353,7 +10853,570 @@
                 },
                 directives: [l.O5, Mc, kc, Uc, Gn, hl, l.sg, Qe, Kt, Fe.K, I._Y, I.JL, I.sg, I.Fj, I.JJ, I.u, l.mk, Dl, zl],
                 pipes: [l.uU, An, l.rS],
-                styles: ['h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.cardHeader__shield__rankInitials[_ngcontent-%COMP%], .cardHeader__shield__rankInitials.cardHeader__shield__rankInitials--maxRank[_ngcontent-%COMP%], .cardHeader__heading[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.subtype__description[_ngcontent-%COMP%], .directChallenge__form__inputHint[_ngcontent-%COMP%], .progressArea__rightRank[_ngcontent-%COMP%], .progressArea__leftRank[_ngcontent-%COMP%], .vsText[_ngcontent-%COMP%], .cardHeader__stats[_ngcontent-%COMP%], .cardHeader__subheading[_ngcontent-%COMP%], .directChallenge__form__field__input[_ngcontent-%COMP%], .cardHeader__timer[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.cardHeader__shield__rankInitials.cardHeader__shield__rankInitials--maxRank[_ngcontent-%COMP%], .cardHeader__heading[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 3.7);line-height:1.3}.cardHeader__shield__rankInitials[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 4.2);line-height:1.3}.cardHeader__timer[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9)}.directChallenge__form__inputHint[_ngcontent-%COMP%], .progressArea__rightRank[_ngcontent-%COMP%], .progressArea__leftRank[_ngcontent-%COMP%], .vsText[_ngcontent-%COMP%], .cardHeader__stats[_ngcontent-%COMP%], .cardHeader__subheading[_ngcontent-%COMP%], .directChallenge__form__field__input[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.directChallenge__form__field__input[_ngcontent-%COMP%]{line-height:1.4}.subtype__description[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.11)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{border-radius:calc(var(--vw) * .45);overflow:hidden;box-shadow:0 calc(var(--vh) * .6) calc(var(--vh) * 3) calc(var(--vh) * .2) #0000004d;display:flex;flex-direction:column;justify-content:flex-start;height:100%;position:relative;padding:calc(var(--vh) * 2.22) calc(var(--vw) * 1.09);background:#182531}[_nghost-%COMP%]:after{content:"";border-radius:calc(var(--vw) * .45);position:absolute;top:0;bottom:0;left:0;right:0;box-shadow:inset 0 0 calc(var(--vh) * .9) calc(var(--vh) * .3) #ffffff12,inset 0 0 calc(var(--vh) * .2) #ffffff21;pointer-events:none;user-select:none;z-index:1}.darkBackground[_nghost-%COMP%]   .backgroundImagery[_ngcontent-%COMP%]{opacity:.08}.backgroundImagery[_ngcontent-%COMP%]{user-select:none;pointer-events:none;position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.3;transition:opacity .15s ease-in-out}.cardHeader[_ngcontent-%COMP%]{display:flex;position:relative}.cardHeader[_ngcontent-%COMP%]   .columnLeft[_ngcontent-%COMP%]{min-height:calc(var(--vh) * 11.55);flex:1}.cardHeader__heading[_ngcontent-%COMP%]{text-transform:uppercase;line-height:.95;background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:calc(var(--vh) * 1)}.cardHeader__subheading[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * .05);color:#f6f6f6}.cardHeader__subheading--sealed[_ngcontent-%COMP%]{color:#7192b0}.cardHeader__subheading--link[_ngcontent-%COMP%]{text-transform:capitalize;text-decoration:underline;cursor:pointer}.cardHeader__timer[_ngcontent-%COMP%]{color:#7192b0}.cardHeader__winsAndLosses[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2);display:flex}.cardHeader__winsAndLosses__losses[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .4);margin-left:calc(var(--vh) * 1.6);padding-left:calc(var(--vh) * 1.6);position:relative}.cardHeader__winsAndLosses__losses[_ngcontent-%COMP%]:before{height:calc(var(--vh) * 1.4);top:0;left:0;width:calc(var(--vh) * .15);content:"";position:absolute;background:#7192b0}.cardHeader__winsAndLosses__losses[_ngcontent-%COMP%]     .lossSummary{margin-top:calc(var(--vh) * .7)}.cardHeader__stats[_ngcontent-%COMP%]{color:#fff9}.cardHeader__shield[_ngcontent-%COMP%]{width:calc(var(--vw) * 5);margin-right:calc(var(--vw) * .2);position:relative;align-self:flex-start}.cardHeader__shield__image[_ngcontent-%COMP%]{width:100%;display:block;filter:drop-shadow(0 calc(var(--vh) * .1) calc(var(--vh) * 3.24) rgba(252,247,212,.3))}.cardHeader__shield__rankInitials[_ngcontent-%COMP%]{position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);text-transform:uppercase;color:#f6f6f6}.cardHeader__shield__rankInitials.cardHeader__shield__rankInitials--maxRank[_ngcontent-%COMP%]{transform:translate(-50%,-68%)}.modeActionsArea[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 3);padding-right:calc(var(--vw) * .9);display:flex;justify-content:space-between;align-items:flex-start}.cardHeader__subtypeRibbon[_ngcontent-%COMP%]{position:relative;z-index:1;margin-bottom:calc(var(--vh) * .5)}.cardHeader__subtypeRibbon__image[_ngcontent-%COMP%]{position:absolute;width:calc(var(--vw) * 6.5)}.cardHeader__subtypeRibbon__label[_ngcontent-%COMP%]{position:absolute;right:calc(var(--vw) * -.4);top:3px;font-size:calc(var(--vw) * .6);color:#fff;font-weight:700}.cardHeader__subtypeRibbon__live[_ngcontent-%COMP%]{width:calc(var(--vw) * .2);height:calc(var(--vw) * .2);background-color:#fff;border-radius:50%;top:calc(var(--vw) * .5);left:calc(var(--vw) * .3);position:relative}.cardHeader__subtypeRibbon__live[_ngcontent-%COMP%]:after{content:"";display:block;width:calc(var(--vw) * .2);height:calc(var(--vw) * .2);background-color:#fff;animation:ping .8s ease-in-out infinite both;position:absolute;border-radius:50%}@keyframes ping{0%{transform:scale(1);opacity:1}80%{transform:scale(2.6);opacity:.3}to{transform:scale(3.2);opacity:0}}.gameCardDecks[_ngcontent-%COMP%]{display:flex;flex-flow:column nowrap;justify-content:space-between;width:calc(var(--vw) * 6.5);margin-top:calc(var(--vh) * -1)}.gameCardDecks__deck[_ngcontent-%COMP%]     .emptyDeckContainer{margin-top:calc(var(--vh) * 1)}.gameCardDecks__deck[_ngcontent-%COMP%]     .emptyDeckContainer .emptyDeckContainer__inner:before{margin-bottom:calc(var(--vh) * .5);font-size:calc(var(--vh) * 2);font-family:gu-cons;font-feature-settings:"liga" 1,normal;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;vertical-align:middle;letter-spacing:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"add_item";line-height:1;display:block;color:inherit}.modeActionsArea__ctas[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.5);display:flex;flex-flow:column nowrap;align-items:center}.modeActionsArea__ctas.hidden[_ngcontent-%COMP%]{opacity:0;user-select:none;pointer-events:none}.modeActionsArea__ctas--noMargin[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * -.5)}.vsText[_ngcontent-%COMP%]{line-height:.9;margin:auto;margin-top:calc(var(--vh) * .9);margin-bottom:calc(var(--vh) * .9);font-weight:600;color:#f6f6f6}.progressArea[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 4);padding-left:calc(var(--vw) * .9);padding-right:calc(var(--vw) * .9);display:flex;flex-flow:row wrap;align-items:flex-end;color:#f6f6f6;position:relative}.progressArea__leftRank[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * .15);font-weight:700}.progressArea__rightRank[_ngcontent-%COMP%]{padding-right:calc(var(--vw) * .15);color:#c9a656;margin-left:auto}.progressArea__bar[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .4);width:100%}.progress-title[_ngcontent-%COMP%]{height:calc(var(--vh) * .92)}.tempLockedConsumablePlaceholder[_ngcontent-%COMP%]{margin-left:calc(var(--vw) * -.5);position:relative;border:calc(var(--vh) * .25) dashed rgba(224,197,143,.3);background-color:#58411326;border-radius:calc(var(--vh) * .4);display:flex}.tempLockedConsumablePlaceholder__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 4);color:#e0c58f4d;line-height:1;margin:auto}.tempQuestsPlaceholder[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * .75);padding-right:calc(var(--vw) * .75);display:flex;justify-content:space-between;margin-top:auto;position:relative}.tempQuestsPlaceholder__quest[_ngcontent-%COMP%]{width:calc(var(--vw) * 4.79);height:calc(var(--vw) * 4.79);border-radius:50%;border:calc(var(--vh) * .25) dashed rgba(224,197,143,.3);background-color:#58411326;display:flex}.tempQuestsPlaceholder__quest__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 3);color:#e0c58f4d;line-height:1;margin:auto}.subtype__description[_ngcontent-%COMP%]{cursor:pointer;border-width:2px;border-style:solid;border-image-source:linear-gradient(to bottom,#fffdf0 0%,#fbebc1 14%,#e6c675 26%,#f6df6e 41%,#b27e18 59%,#deab61 73%,#a67b4b 85%,#664320 100%);border-image-slice:1;text-align:center;margin:calc(var(--vh) * 1) auto 0;padding:calc(var(--vh) * 1) 0;width:90%;color:#fff;background-color:#182531;font-weight:700;position:relative}.subtype__description__readModeLink[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;cursor:pointer}.loadout[_ngcontent-%COMP%]{height:calc(var(--vh) * 14);width:calc(var(--vw) * 5.4)}.fluxProgress[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * .75);padding-right:calc(var(--vw) * .75);height:calc(var(--vh) * 14);display:flex;margin-top:auto;position:relative;cursor:pointer}.fluxProgress[_ngcontent-%COMP%]   app-flux-progress-box[_ngcontent-%COMP%]{padding-left:calc(var(--vh) * 4);padding-right:calc(var(--vh) * 4)}.directChallenge[_ngcontent-%COMP%]{display:flex;flex-direction:column;margin-top:32px;position:relative}.directChallenge__heading[_ngcontent-%COMP%]{display:flex}.directChallenge__heading__icon[_ngcontent-%COMP%]{margin-left:8px;cursor:pointer;display:flex;text-align:center}.directChallenge__form[_ngcontent-%COMP%]{display:flex;flex-flow:column nowrap;align-self:center;width:100%}.directChallenge__form__field[_ngcontent-%COMP%]{display:flex;align-items:center;margin:8px 0}.directChallenge__form__field__input[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);margin-bottom:0;background:#182531;color:#f6f6f6;border:calc(var(--vh) * .15) solid #0f1b27;border-radius:calc(var(--vh) * .4);margin-top:0;width:100%;padding-right:20px;font-size:16px}.directChallenge__form__field__input[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.directChallenge__form__field__input[_ngcontent-%COMP%]:disabled{border-color:#979797;color:#979797}.directChallenge__form__field__input--invalid[_ngcontent-%COMP%]{border-color:#ff8b01}.directChallenge__form__field__input--valid[_ngcontent-%COMP%]{border-color:#8be1e0}.directChallenge__form__field__icon[_ngcontent-%COMP%]{position:absolute;right:12px;cursor:pointer}.directChallenge__form__inputHint[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .6);text-shadow:0 1px 1px rgba(0,0,0,.3)}.sealedModeCard[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2.5)}.tutorialCard__bulletPoints[_ngcontent-%COMP%]{margin:10px;z-index:1}.bullet[_ngcontent-%COMP%]{padding:4px;box-shadow:inset 0 0 0 1.5px #c6a052;border-radius:2px;display:flex;transform:rotate(-45deg);margin-right:10px}.bullet[_ngcontent-%COMP%]:before{content:"";width:8px;height:8px;background:#C6A052;border-radius:2px}.tutorialCard__bulletPoint[_ngcontent-%COMP%]{display:flex;align-items:center;margin:10px 0}.tutorial__freeStuff[_ngcontent-%COMP%]{position:relative}.tutorial__freeStuff__bgImage[_ngcontent-%COMP%]{width:100%;display:block;margin-top:35px}.tutorial__freeStuff__cardImage[_ngcontent-%COMP%]{position:absolute;top:-3vh;left:0px;height:6vw}.tutorial__freeStuff__text[_ngcontent-%COMP%]{position:absolute;top:40%;left:20%}.tutorial__freeStuff__tooltip[_ngcontent-%COMP%]{display:inline;text-align:center}']
+                styles: [`
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    margin: 0
+                }
+                
+                body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif;
+                    font-weight: 400
+                }
+                
+                .cardHeader__shield__rankInitials[_ngcontent-%COMP%], .cardHeader__shield__rankInitials.cardHeader__shield__rankInitials--maxRank[_ngcontent-%COMP%], .cardHeader__heading[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    font-family: Unchained, serif;
+                    font-weight: 700
+                }
+                
+                .subtype__description[_ngcontent-%COMP%],
+                .directChallenge__form__inputHint[_ngcontent-%COMP%],
+                .progressArea__rightRank[_ngcontent-%COMP%],
+                .progressArea__leftRank[_ngcontent-%COMP%],
+                .vsText[_ngcontent-%COMP%],
+                .cardHeader__stats[_ngcontent-%COMP%],
+                .cardHeader__subheading[_ngcontent-%COMP%],
+                .directChallenge__form__field__input[_ngcontent-%COMP%],
+                .cardHeader__timer[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif
+                }
+                
+                .cardHeader__shield__rankInitials.cardHeader__shield__rankInitials--maxRank[_ngcontent-%COMP%],
+                .cardHeader__heading[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 3.7);
+                    line-height: 1.3
+                }
+                
+                .cardHeader__shield__rankInitials[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 4.2);
+                    line-height: 1.3
+                }
+                
+                .cardHeader__timer[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 1.9)
+                }
+                
+                .directChallenge__form__inputHint[_ngcontent-%COMP%],
+                .progressArea__rightRank[_ngcontent-%COMP%],
+                .progressArea__leftRank[_ngcontent-%COMP%],
+                .vsText[_ngcontent-%COMP%],
+                .cardHeader__stats[_ngcontent-%COMP%],
+                .cardHeader__subheading[_ngcontent-%COMP%],
+                .directChallenge__form__field__input[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 1.48)
+                }
+                
+                .directChallenge__form__field__input[_ngcontent-%COMP%] {
+                    line-height: 1.4
+                }
+                
+                .subtype__description[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 1.11)
+                }
+                
+                [_nghost-%COMP%] {
+                    border-radius: calc(var(--vw) * .45);
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    height: 100%;
+                    position: relative;
+                    padding: calc(var(--vh) * 2.22) calc(var(--vw) * 1.09);
+                    background: var(--gu-blue-dark);
+                }
+                
+                [_nghost-%COMP%]:after {
+                    content: "";
+                    border-radius: calc(var(--vw) * .45);
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    pointer-events: none;
+                    user-select: none;
+                    z-index: 1
+                }
+                
+                .darkBackground[_nghost-%COMP%] .backgroundImagery[_ngcontent-%COMP%] {
+                    opacity: .08;
+                }
+                
+                .backgroundImagery[_ngcontent-%COMP%] {
+                    user-select: none;
+                    pointer-events: none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    opacity: .7;
+                }
+                
+                .cardHeader[_ngcontent-%COMP%] {
+                    display: flex;
+                    position: relative
+                }
+                
+                .cardHeader[_ngcontent-%COMP%] .columnLeft[_ngcontent-%COMP%] {
+                    min-height: calc(var(--vh) * 11.55);
+                    flex: 1
+                }
+                
+                .cardHeader__heading[_ngcontent-%COMP%] {
+                    text-transform: uppercase;
+                    line-height: .95;
+                    background: linear-gradient(to bottom, #fff2d8 0%, #ebc98b 50%, #c6a052 100%);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    margin-bottom: calc(var(--vh) * 1)
+                }
+                
+                .cardHeader__subheading[_ngcontent-%COMP%] {
+                    padding-left: calc(var(--vw) * .05);
+                    color: #f6f6f6
+                }
+                
+                .cardHeader__subheading--sealed[_ngcontent-%COMP%] {
+                    color: #7192b0
+                }
+                
+                .cardHeader__subheading--link[_ngcontent-%COMP%] {
+                    text-transform: capitalize;
+                    text-decoration: underline;
+                    cursor: pointer
+                }
+                
+                .cardHeader__timer[_ngcontent-%COMP%] {
+                    color: #7192b0
+                }
+                
+                .cardHeader__winsAndLosses[_ngcontent-%COMP%] {
+                    margin-top: calc(var(--vh) * 2);
+                    display: flex
+                }
+                
+                .cardHeader__winsAndLosses__losses[_ngcontent-%COMP%] {
+                    margin-top: calc(var(--vh) * .4);
+                    margin-left: calc(var(--vh) * 1.6);
+                    padding-left: calc(var(--vh) * 1.6);
+                    position: relative
+                }
+                
+                .cardHeader__winsAndLosses__losses[_ngcontent-%COMP%]:before {
+                    height: calc(var(--vh) * 1.4);
+                    top: 0;
+                    left: 0;
+                    width: calc(var(--vh) * .15);
+                    content: "";
+                    position: absolute;
+                    background: #7192b0
+                }
+                
+                .cardHeader__winsAndLosses__losses[_ngcontent-%COMP%] .lossSummary {
+                    margin-top: calc(var(--vh) * .7)
+                }
+                
+                .cardHeader__stats[_ngcontent-%COMP%] {
+                    color: #fff9
+                }
+                
+                .cardHeader__shield[_ngcontent-%COMP%] {
+                    width: calc(var(--vw) * 5);
+                    margin-right: calc(var(--vw) * .2);
+                    position: relative;
+                    align-self: flex-start
+                }
+                
+                .cardHeader__shield__image[_ngcontent-%COMP%] {
+                    width: 100%;
+                    display: block;
+                    filter: drop-shadow(0 calc(var(--vh) * .1) calc(var(--vh) * 3.24) rgba(252, 247, 212, .3))
+                }
+                
+                .cardHeader__shield__rankInitials[_ngcontent-%COMP%] {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -60%);
+                    text-transform: uppercase;
+                    color: #f6f6f6
+                }
+                
+                .cardHeader__shield__rankInitials.cardHeader__shield__rankInitials--maxRank[_ngcontent-%COMP%] {
+                    transform: translate(-50%, -68%)
+                }
+                
+                .modeActionsArea[_ngcontent-%COMP%] {
+                    padding-top: calc(var(--vh) * 3);
+                    padding-right: calc(var(--vw) * .9);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start
+                }
+                
+                .cardHeader__subtypeRibbon[_ngcontent-%COMP%] {
+                    position: relative;
+                    z-index: 1;
+                    margin-bottom: calc(var(--vh) * .5)
+                }
+                
+                .cardHeader__subtypeRibbon__image[_ngcontent-%COMP%] {
+                    position: absolute;
+                    width: calc(var(--vw) * 6.5)
+                }
+                
+                .cardHeader__subtypeRibbon__label[_ngcontent-%COMP%] {
+                    position: absolute;
+                    right: calc(var(--vw) * -.4);
+                    top: 3px;
+                    font-size: calc(var(--vw) * .6);
+                    color: #fff;
+                    font-weight: 700
+                }
+                
+                .cardHeader__subtypeRibbon__live[_ngcontent-%COMP%] {
+                    width: calc(var(--vw) * .2);
+                    height: calc(var(--vw) * .2);
+                    background-color: #fff;
+                    border-radius: 50%;
+                    top: calc(var(--vw) * .5);
+                    left: calc(var(--vw) * .3);
+                    position: relative
+                }
+                
+                .cardHeader__subtypeRibbon__live[_ngcontent-%COMP%]:after {
+                    content: "";
+                    display: block;
+                    width: calc(var(--vw) * .2);
+                    height: calc(var(--vw) * .2);
+                    background-color: #fff;
+                    animation: ping .8s ease-in-out infinite both;
+                    position: absolute;
+                    border-radius: 50%
+                }
+                
+                @keyframes ping {
+                    0% {
+                        transform: scale(1);
+                        opacity: 1
+                    }
+                    80% {
+                        transform: scale(2.6);
+                        opacity: .3
+                    }
+                    to {
+                        transform: scale(3.2);
+                        opacity: 0
+                    }
+                }
+                
+                .gameCardDecks[_ngcontent-%COMP%] {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: space-between;
+                    width: calc(var(--vw) * 6.5);
+                    margin-top: calc(var(--vh) * -1)
+                }
+                
+                .gameCardDecks__deck[_ngcontent-%COMP%] .emptyDeckContainer {
+                    margin-top: calc(var(--vh) * 1)
+                }
+                
+                .gameCardDecks__deck[_ngcontent-%COMP%] .emptyDeckContainer .emptyDeckContainer__inner:before {
+                    margin-bottom: calc(var(--vh) * .5);
+                    font-size: calc(var(--vh) * 2);
+                    font-family: gu-cons;
+                    font-feature-settings: "liga" 1, normal;
+                    speak: none;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-variant: normal;
+                    text-transform: none;
+                    vertical-align: middle;
+                    letter-spacing: 0;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    content: "add_item";
+                    line-height: 1;
+                    display: block;
+                    color: inherit
+                }
+                
+                .modeActionsArea__ctas[_ngcontent-%COMP%] {
+                    margin-top: calc(var(--vh) * 1.5);
+                    display: flex;
+                    flex-flow: column nowrap;
+                    align-items: center
+                }
+                
+                .modeActionsArea__ctas.hidden[_ngcontent-%COMP%] {
+                    opacity: 0;
+                    user-select: none;
+                    pointer-events: none
+                }
+                
+                .modeActionsArea__ctas--noMargin[_ngcontent-%COMP%] {
+                    margin-top: calc(var(--vh) * -.5)
+                }
+                
+                .vsText[_ngcontent-%COMP%] {
+                    line-height: .9;
+                    margin: auto;
+                    margin-top: calc(var(--vh) * .9);
+                    margin-bottom: calc(var(--vh) * .9);
+                    font-weight: 600;
+                    color: #f6f6f6
+                }
+                
+                .progressArea[_ngcontent-%COMP%] {
+                    padding-top: calc(var(--vh) * 4);
+                    padding-left: calc(var(--vw) * .9);
+                    padding-right: calc(var(--vw) * .9);
+                    display: flex;
+                    flex-flow: row wrap;
+                    align-items: flex-end;
+                    color: #f6f6f6;
+                    position: relative
+                }
+                
+                .progressArea__leftRank[_ngcontent-%COMP%] {
+                    padding-left: calc(var(--vw) * .15);
+                    font-weight: 700
+                }
+                
+                .progressArea__rightRank[_ngcontent-%COMP%] {
+                    padding-right: calc(var(--vw) * .15);
+                    color: #FBC02D;
+                    margin-left: auto;
+                    font-weight: bold;
+                }
+                
+                .progressArea__bar[_ngcontent-%COMP%] {
+                    margin-top: calc(var(--vh) * .4);
+                    width: 100%
+                }
+                
+                .progress-title[_ngcontent-%COMP%] {
+                    height: calc(var(--vh) * .92)
+                }
+                
+                .tempLockedConsumablePlaceholder[_ngcontent-%COMP%] {
+                    margin-left: calc(var(--vw) * -.5);
+                    position: relative;
+                    border: calc(var(--vh) * .25) dashed rgba(224, 197, 143, .3);
+                    background-color: #58411326;
+                    border-radius: calc(var(--vh) * .4);
+                    display: flex
+                }
+                
+                .tempLockedConsumablePlaceholder__icon[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 4);
+                    color: #e0c58f4d;
+                    line-height: 1;
+                    margin: auto
+                }
+                
+                .tempQuestsPlaceholder[_ngcontent-%COMP%] {
+                    padding-left: calc(var(--vw) * .75);
+                    padding-right: calc(var(--vw) * .75);
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: auto;
+                    position: relative
+                }
+                
+                .tempQuestsPlaceholder__quest[_ngcontent-%COMP%] {
+                    width: calc(var(--vw) * 4.79);
+                    height: calc(var(--vw) * 4.79);
+                    border-radius: 50%;
+                    border: calc(var(--vh) * .25) dashed rgba(224, 197, 143, .3);
+                    background-color: #58411326;
+                    display: flex
+                }
+                
+                .tempQuestsPlaceholder__quest__icon[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 3);
+                    color: #e0c58f4d;
+                    line-height: 1;
+                    margin: auto
+                }
+                
+                .subtype__description[_ngcontent-%COMP%] {
+                    cursor: pointer;
+                    border-width: 2px;
+                    border-style: solid;
+                    border-image-source: linear-gradient(to bottom, #fffdf0 0%, #fbebc1 14%, #e6c675 26%, #f6df6e 41%, #b27e18 59%, #deab61 73%, #a67b4b 85%, #664320 100%);
+                    border-image-slice: 1;
+                    text-align: center;
+                    margin: calc(var(--vh) * 1) auto 0;
+                    padding: calc(var(--vh) * 1) 0;
+                    width: 90%;
+                    color: #fff;
+                    background-color: #182531;
+                    font-weight: 700;
+                    position: relative
+                }
+                
+                .subtype__description__readModeLink[_ngcontent-%COMP%] {
+                    background: linear-gradient(to bottom, #fff2d8 0%, #ebc98b 50%, #c6a052 100%);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    cursor: pointer
+                }
+                
+                .loadout[_ngcontent-%COMP%] {
+                    height: calc(var(--vh) * 14);
+                    width: calc(var(--vw) * 5.4)
+                }
+                
+                .fluxProgress[_ngcontent-%COMP%] {
+                    padding-left: calc(var(--vw) * .75);
+                    padding-right: calc(var(--vw) * .75);
+                    height: calc(var(--vh) * 14);
+                    display: flex;
+                    margin-top: auto;
+                    position: relative;
+                    cursor: pointer
+                }
+                
+                .fluxProgress[_ngcontent-%COMP%] app-flux-progress-box[_ngcontent-%COMP%] {
+                    padding-left: calc(var(--vh) * 4);
+                    padding-right: calc(var(--vh) * 4)
+                }
+                
+                .directChallenge[_ngcontent-%COMP%] {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 32px;
+                    position: relative
+                }
+                
+                .directChallenge__heading[_ngcontent-%COMP%] {
+                    display: flex
+                }
+                
+                .directChallenge__heading__icon[_ngcontent-%COMP%] {
+                    margin-left: 8px;
+                    cursor: pointer;
+                    display: flex;
+                    text-align: center
+                }
+                
+                .directChallenge__form[_ngcontent-%COMP%] {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    align-self: center;
+                    width: 100%
+                }
+                
+                .directChallenge__form__field[_ngcontent-%COMP%] {
+                    display: flex;
+                    align-items: center;
+                    margin: 8px 0
+                }
+                
+                .directChallenge__form__field__input[_ngcontent-%COMP%] {
+                    margin-top: calc(var(--vh) * 1.48);
+                    padding-left: calc(var(--vw) * .83);
+                    padding-right: calc(var(--vw) * .83);
+                    padding-top: calc(var(--vh) * 1.29);
+                    padding-bottom: calc(var(--vh) * 1.29);
+                    margin-bottom: 0;
+                    background: #182531;
+                    color: #f6f6f6;
+                    border: calc(var(--vh) * .15) solid #0f1b27;
+                    border-radius: calc(var(--vh) * .4);
+                    margin-top: 0;
+                    width: 100%;
+                    padding-right: 20px;
+                    font-size: 16px
+                }
+                
+                .directChallenge__form__field__input[_ngcontent-%COMP%]::-webkit-input-placeholder {
+                    color: #fff
+                }
+                
+                .directChallenge__form__field__input[_ngcontent-%COMP%]:disabled {
+                    border-color: #979797;
+                    color: #979797
+                }
+                
+                .directChallenge__form__field__input--invalid[_ngcontent-%COMP%] {
+                    border-color: #ff8b01
+                }
+                
+                .directChallenge__form__field__input--valid[_ngcontent-%COMP%] {
+                    border-color: #8be1e0
+                }
+                
+                .directChallenge__form__field__icon[_ngcontent-%COMP%] {
+                    position: absolute;
+                    right: 12px;
+                    cursor: pointer
+                }
+                
+                .directChallenge__form__inputHint[_ngcontent-%COMP%] {
+                    margin-top: calc(var(--vh) * .6);
+                    text-shadow: 0 1px 1px rgba(0, 0, 0, .3)
+                }
+                
+                .sealedModeCard[_ngcontent-%COMP%] {
+                    margin-top: calc(var(--vh) * 2.5)
+                }
+                
+                .tutorialCard__bulletPoints[_ngcontent-%COMP%] {
+                    margin: 10px;
+                    z-index: 1
+                }
+                
+                .bullet[_ngcontent-%COMP%] {
+                    padding: 4px;
+                    box-shadow: inset 0 0 0 1.5px #c6a052;
+                    border-radius: 2px;
+                    display: flex;
+                    transform: rotate(-45deg);
+                    margin-right: 10px
+                }
+                
+                .tutorialCard__bulletPoint[_ngcontent-%COMP%] {
+                    display: flex;
+                    align-items: center;
+                    margin: 10px 0
+                }
+                
+                .tutorial__freeStuff[_ngcontent-%COMP%] {
+                    position: relative
+                }
+                
+                .tutorial__freeStuff__bgImage[_ngcontent-%COMP%] {
+                    width: 100%;
+                    display: block;
+                    margin-top: 35px
+                }
+                
+                .tutorial__freeStuff__cardImage[_ngcontent-%COMP%] {
+                    position: absolute;
+                    top: -3vh;
+                    left: 0px;
+                    height: 6vw
+                }
+                
+                .tutorial__freeStuff__text[_ngcontent-%COMP%] {
+                    position: absolute;
+                    top: 40%;
+                    left: 20%
+                }
+                
+                .tutorial__freeStuff__tooltip[_ngcontent-%COMP%] {
+                    display: inline;
+                    text-align: center
+                }
+                `]
             }), o
         })();
         const wd = ["otherModesContainer"];
@@ -9506,7 +11569,51 @@
                     1 & t && (e.YNc(0, xd, 2, 4, "app-game-mode-card", 0), e.TgZ(1, "div", 1, 2), e.YNc(3, yd, 2, 1, "ng-container", 3), e.qZA()), 2 & t && (e.Q6J("ngIf", n.gameModes[0]), e.xp6(1), e.Q6J("ngClass", e.VKq(3, kd, n.gameModes[0].lock)), e.xp6(2), e.Q6J("ngIf", n.otherCompModes))
                 },
                 directives: [l.O5, l.mk, En, l.sg],
-                styles: ['@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex}.primaryMode[_ngcontent-%COMP%]{width:calc(var(--vw) * 26.56);z-index:10}.otherModes[_ngcontent-%COMP%]{flex:1;margin-left:calc(var(--vw) * 1.7);position:relative}.otherModes__disable[_ngcontent-%COMP%]{pointer-events:none;opacity:.6}.otherModes__mode[_ngcontent-%COMP%]{position:absolute;top:0;left:0;width:calc(var(--vw) * 26.56)}.otherModes__mode[_ngcontent-%COMP%]:not([data-stack-order-index="0"]){cursor:pointer}.otherModes__mode[_ngcontent-%COMP%]:not([data-stack-order-index="0"])     .modeActionsArea{user-select:none;pointer-events:none}.otherModes__mode[_ngcontent-%COMP%]:not([data-stack-order-index="0"]):hover     .backgroundImagery{opacity:.6}.otherModes__mode[_ngcontent-%COMP%]:not([data-stack-order-index="0"]):hover.darkBackground     .backgroundImagery{opacity:.25}']
+                styles: [`
+                [_nghost-%COMP%] {
+                    display: flex
+                }
+                
+                .primaryMode[_ngcontent-%COMP%] {
+                    width: calc(var(--vw) * 26.56);
+                    z-index: 10
+                }
+                
+                .otherModes[_ngcontent-%COMP%] {
+                    flex: 1;
+                    margin-left: calc(var(--vw) * 1.7);
+                    position: relative
+                }
+                
+                .otherModes__disable[_ngcontent-%COMP%] {
+                    pointer-events: none;
+                    opacity: .6
+                }
+                
+                .otherModes__mode[_ngcontent-%COMP%] {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: calc(var(--vw) * 26.56)
+                }
+                
+                .otherModes__mode[_ngcontent-%COMP%]:not([data-stack-order-index="0"]) {
+                    cursor: pointer
+                }
+                
+                .otherModes__mode[_ngcontent-%COMP%]:not([data-stack-order-index="0"]) .modeActionsArea {
+                    user-select: none;
+                    pointer-events: none
+                }
+                
+                .otherModes__mode[_ngcontent-%COMP%]:not([data-stack-order-index="0"]):hover .backgroundImagery {
+                    opacity: .6;
+                }
+                
+                .otherModes__mode[_ngcontent-%COMP%]:not([data-stack-order-index="0"]):hover.darkBackground .backgroundImagery {
+                    opacity: .25;
+                }
+                `]
             }), o
         })();
         const Pd = ["refreshSection"], Sd = function (o) {

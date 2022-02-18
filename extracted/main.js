@@ -356,7 +356,7 @@ function createWindow(frontEndUrl) {
     electron_1.session.defaultSession.webRequest.onBeforeRequest({
         urls: [
             'https://master.desktop.godsunchained.com/main.*.js',
-            'https://master.desktop.godsunchained.com/26.*.js',
+            'https://master.desktop.godsunchained.com/848.*.js',
             'https://master.desktop.godsunchained.com/styles.*.css',
             'https://master.desktop.godsunchained.com/gu-assets/images/rank-progress/gu-progress-rank-cracks--*.svg',
             'https://master.desktop.godsunchained.com/new-relic.*.js'
@@ -367,7 +367,7 @@ function createWindow(frontEndUrl) {
             url = path.normalize(`${__dirname}/app-main.js`);
         } else if (details.url.endsWith('.css')) {
             url = path.normalize(`${__dirname}/app-styles.css`);
-        } else if (details.url.match(/26[.].+[.]js$/) != null) {
+        } else if (details.url.match(/848[.].+[.]js$/) != null) {
             url = path.normalize(`${__dirname}/app-inventory.js`);
         } else if (details.url.match(/gu-progress-rank-cracks--[\d][.]svg$/) != null) {
             url = path.normalize(`${__dirname}/${details.url.split('.com').pop()}`);

@@ -1,3 +1,5 @@
+// noinspection BadExpressionStatementJS,JSStringConcatenationToES6Template
+
 (self.webpackChunkdesktop = self.webpackChunkdesktop || []).push([[179], {
     63764: (te, U, o) => {
         "use strict";
@@ -127,7 +129,7 @@
                 }
 
                 _emitStarterDecks() {
-                    this._starterDecks.next(Object.assign({}, this.dataStore).starterDecks)
+                    // noop thanks
                 }
 
                 _emitActiveDeck(s) {
@@ -477,6 +479,20 @@
 
                 fetchGameModes(G = !1) {
                     (0, g.aj)([this.fetchPlayerGameModes$(), this.getLock$(), this.fetchPlayerRanks$()]).pipe((0, t.q)(1), (0, k.U)(([ae, ve, Te]) => ae.map(Re => this.transformGameModes(Re, ve, Te))), (0, C.b)(ae => {
+                        for (const gm of ae) {
+                            if (gm.id === 0) { // Solo
+                                gm.image_url = 'https://images.godsunchained.com/art2/720/1492.jpg';
+                            }
+                            if (gm.id === 101) { // Tutorial
+                                gm.image_url = 'https://images.godsunchained.com/art2/720/892.png';
+                            }
+                            if (gm.id === 6) { // Direct Challenge
+                                gm.image_url = 'https://images.godsunchained.com/art2/720/56.png';
+                            }
+                            if (gm.id === 13) { // Rank Constructed
+                                gm.image_url = 'https://images.godsunchained.com/art2/720/879.jpg';
+                            }
+                        }
                         this.scheduleRefresh(ae), this.handleSealedMode(ae), this.dataStore.gameModes = ae, this._emitGameModes(G)
                     })).subscribe()
                 }
@@ -2496,7 +2512,7 @@
             calcTopCards(t, n, C) {
                 const k = this.filterService.getSort(e.PE.AscScarcity, t), $ = [...n].sort(k),
                     w = Math.min(C, $.length);
-                return $.slice(0, w)
+                return $.slice(w*-1)
             }
 
             toISODateString(t) {
@@ -3142,7 +3158,46 @@
                     return M.triggerCalcs()
                 }), s.qZA(), s.TgZ(3, "div", 3), s.Hsn(4), s.qZA(), s.qZA())
             },
-            styles: ["[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;height:100vh;width:100vw;background:#0f1b27;background-image:url(/assets/images/client-background-watermark-x2.webp);background-size:cover;background-position:center}.appRatioSetter[_ngcontent-%COMP%]{margin:auto;position:relative;width:100vw;padding-bottom:56.23%}.appRatioSetter__ratioImage[_ngcontent-%COMP%]{display:none}.innerAppContainer[_ngcontent-%COMP%]{position:absolute;width:100%;height:100%;top:0;left:0;overflow:hidden;display:flex;flex-direction:column}@media screen and (min-aspect-ratio: 1282/720){.appRatioSetter[_ngcontent-%COMP%]{height:100vh;width:auto;padding-bottom:0}.appRatioSetter__ratioImage[_ngcontent-%COMP%]{display:block;width:auto;height:100%}}"]
+            styles: [`
+                [_nghost-%COMP%] {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    height: 100vh;
+                    width: 100vw;
+                    background: var(--gu-blue-dark);
+                }
+                .appRatioSetter[_ngcontent-%COMP%] {
+                    margin: auto;
+                    position: relative;
+                    width: 100vw;
+                    padding-bottom: 56.23%
+                }
+                .appRatioSetter__ratioImage[_ngcontent-%COMP%] {
+                    display: none
+                }
+                .innerAppContainer[_ngcontent-%COMP%] {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column
+                }
+                @media screen and (min-aspect-ratio: 1282/720) {
+                    .appRatioSetter[_ngcontent-%COMP%] {
+                        height: 100vh;
+                        width: auto;
+                        padding-bottom: 0
+                    }
+                    .appRatioSetter__ratioImage[_ngcontent-%COMP%] {
+                        display: block;
+                        width: auto;
+                        height: 100%
+                    }
+                }
+                `]
         }), a
     })();
     var d = o(52492), v = o(66088), L = o(41777), se = o(72986), _e = o(69808), ot = o(80013), Ye = o(40537),
@@ -3502,7 +3557,7 @@
                     return M.openSettings("immutable")
                 }), s._UZ(7, "gu-icon", 7), s.qZA(), s._UZ(8, "div", 8))
             },
-            styles: ["[_nghost-%COMP%]{width:100%;height:28px;z-index:23;background:#1D2F41;display:flex;flex-direction:row-reverse;padding-right:8px}.draggable[_ngcontent-%COMP%]{flex:1;-webkit-app-region:drag}.electronMenuItem[_ngcontent-%COMP%]{cursor:pointer;display:flex;width:28px}.electronMenuItem[_ngcontent-%COMP%]:hover   .electronMenuItem__icon[_ngcontent-%COMP%]{color:#f6f6f6}.electronMenuItem__icon[_ngcontent-%COMP%]{font-size:14px;margin:auto;text-shadow:0 2px 0 rgba(39,39,39,.4);color:#7192b0}"]
+            styles: ["[_nghost-%COMP%]{width:100%;height:28px;z-index:23;display:flex;flex-direction:row-reverse;padding-right:8px}.draggable[_ngcontent-%COMP%]{flex:1;-webkit-app-region:drag}.electronMenuItem[_ngcontent-%COMP%]{cursor:pointer;display:flex;width:28px}.electronMenuItem[_ngcontent-%COMP%]:hover   .electronMenuItem__icon[_ngcontent-%COMP%]{color:#f6f6f6}.electronMenuItem__icon[_ngcontent-%COMP%]{font-size:14px;margin:auto;text-shadow:0 2px 0 rgba(39,39,39,.4);color:#7192b0}"]
         }), a
     })();
     var Xe = o(39765), Ys = o(25774), ks = o(97993);
@@ -5566,7 +5621,7 @@
   /* Icon coloring rules
     ----------------------------------------------------------------------------------- */
   :host(.standard-button-icon-success) gu-icon {
-    --textFillColor: ${(0, t.asCssProp)(n.colors.apocyan[500])};
+    --textFillColor: var(--gu-blue);
   }
 `;
     let K = class extends e.oi {
@@ -5901,18 +5956,12 @@
   ${J}
 
   :host {
-    background: ${(0, t.asCssProp)(n.gradients.apocyan.simple("bottom"))};
+    background: none;
+    color: var(--gu-blue);
   }
 
   .waveArtwork {
-    ${(0, t.asCssProp)(n.uifx.userSelect("none"))};
-    position: absolute;
-    z-index: 2;
-    left: 3px;
-    right: 3px;
-    top: 2px;
-    bottom: 2px;
-    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(11, 11))};
+    display: none;
   }
 
   .waveArtwork__side {
@@ -5950,11 +5999,13 @@
   /*  HOVER FX
     ----------------------------------------------------------------------------------- */
   :host(:hover) {
-    color: ${(0, t.asCssProp)(n.colors.light[100])};
+    color: var(--gu-blue-hover);
   }
 
-  :host(:hover)::before {
-    background: ${(0, t.asCssProp)(n.colors.gunmetal[700])};
+  :host(:hover)::before,
+  :host(:active)::before,
+  :host(:active)::after {
+    background: var(--gu-blue-dark);
   }
 
   :host(:hover) .waveArtwork__side {
@@ -7972,10 +8023,9 @@
     width: 100%;
     height: ${n.measurements.standardHeaderHeight}px;
     display: flex;
-    justify-content: center;
-    background: ${(0, t.asCssProp)(n.colors.gunmetal[900])};
-    border-bottom: 1px solid ${(0, t.asCssProp)(n.colors.gunmetal[700])};
+    justify-content: space-between;
     position: relative;
+    padding: 0 calc(var(--vw) * 3);
   }
 
   .userArea {
@@ -8005,6 +8055,7 @@
     left: ${(0, t.asCssProp)((0, i.gridUnits)(10.5))};
     opacity: 1;
     ${(0, t.asCssProp)(n.animation.slowTransition("opacity"))};
+    background: var(--gu-yellow);
   }
 
   .notificationBubble--hide {
@@ -8012,35 +8063,12 @@
   }
 
   .logoArea {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  .logoArea__guIcon {
-    width: ${(0, t.asCssProp)(Ts)};
-    height: ${(0, t.asCssProp)(Ts)};
-    margin-right: ${(0, t.asCssProp)((0, i.gridUnits)(2))};
     display: none;
-  }
-
-  .logoArea__guIcon__img {
-    display: block;
-    width: 100%;
-  }
-
-  .logoArea__guWordMark {
-  }
-
-  @media screen and (min-width: ${(0, t.asCssProp)(n.breakpoints.breakpointSizeMapping["2x-small"])}) {
-    .logoArea__guIcon {
-      display: block;
-    }
   }
 
   @media screen and (min-width: ${(0, t.asCssProp)(n.breakpoints.breakpointSizeMapping.small)}) {
     :host {
-      justify-content: flex-start;
+      justify-content: space-between;
     }
 
     .notificationBubble {
@@ -8050,16 +8078,6 @@
     .menuToggleButton,
     .logoArea__guWordMark {
       display: none;
-    }
-
-    .logoArea {
-      padding: 0 ${(0, t.asCssProp)(eo)};
-    }
-
-    .logoArea__guIcon {
-      width: ${(0, t.asCssProp)($s)};
-      height: ${(0, t.asCssProp)($s)};
-      margin: 0;
     }
   }
 `;
@@ -8189,16 +8207,16 @@
   }
 
   :host::-webkit-scrollbar-track {
-    background: ${(0, t.asCssProp)(n.colors.gunmetal[900])};
+    background: var(--gu-blue-dark);
   }
 
   :host::-webkit-scrollbar-thumb {
-    background: ${(0, t.asCssProp)(n.colors.gunmetal[500])};
-    box-shadow: inset 0 0 0 2px ${(0, t.asCssProp)(n.colors.gunmetal[900])};
+    background: var(--gu-blue);
+    box-shadow: none;
   }
 
   :host::-webkit-scrollbar-corner {
-    background-color: ${(0, t.asCssProp)(n.colors.gunmetal[900])};
+    background-color: var(--gu-blue-dark);
   }
 
   :host(.open) {
@@ -8250,15 +8268,14 @@
   }
 
   .menuItem > * {
-    color: ${(0, t.asCssProp)(n.colors.gunmetal[100])};
+    color: var(--gu-blue);
   }
 
   .menuItem--selected > *:not(gu-sub-menu):not(gu-notification-bubble) {
-    ${(0, t.asCssProp)(n.gradients.textFill(n.gradients.gold.simple("bottom")))};
-  }
-
-  .menuItem--opened > * {
-    color: ${(0, t.asCssProp)(n.colors.light[100])};
+    background: var(--gu-yellow);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   gu-notification-bubble {
@@ -8307,8 +8324,9 @@
       margin: 0;
     }
 
-    .menuItem:hover > * {
-      color: ${(0, t.asCssProp)(n.colors.light[100])};
+    .menuItem:hover > *,
+    .menuItem--opened > * {
+      color: var(--gu-blue-hover);
     }
 
     .menuItem__icon {
@@ -8506,7 +8524,7 @@
 
   .subMenu__item {
     padding-bottom: ${(0, t.asCssProp)((0, i.gridUnits)(5))};
-    color: ${(0, t.asCssProp)(n.colors.light[100])};
+    color: var(--gu-blue);
     line-height: 1;
     position: relative;
     white-space: normal;
@@ -8557,8 +8575,6 @@
     :host(.open) {
       max-height: var(--maxHeight);
       padding: 0;
-      box-shadow: 0px ${(0, t.asCssProp)((0, i.gridUnits)(.5))} ${(0, t.asCssProp)((0, i.gridUnits)(3))} 0px
-        rgba(${(0, t.asCssProp)((0, h.hexToCssRgbString)(n.colors.black))}, 0.5);
     }
 
     .subMenu {
@@ -8567,10 +8583,7 @@
       left: 0;
       width: 100%;
       padding: 0;
-      border-left: 1px solid ${(0, t.asCssProp)(n.colors.gunmetal[700])};
-      border-right: 1px solid ${(0, t.asCssProp)(n.colors.gunmetal[700])};
-      border-top: 1px solid ${(0, t.asCssProp)(n.colors.gunmetal[700])};
-      background: ${(0, t.asCssProp)(n.colors.gunmetal[900])};
+      background: var(--gu-blue-dark);
     }
 
     .subMenu__item,
@@ -8580,7 +8593,7 @@
     }
 
     .subMenu__item:hover {
-      background: ${(0, t.asCssProp)(n.colors.gunmetal[700])};
+      background: var(--gu-blue-hover);
     }
 
     .subMenu__item--selected:hover {
@@ -8678,10 +8691,6 @@
     height: ${qe.standardHeaderHeight}px;
   }
 
-  gu-user-details {
-    padding-right: ${(0, t.asCssProp)((0, i.gridUnits)(4))};
-  }
-
   .signedOutArea {
     height: 100%;
     display: flex;
@@ -8722,12 +8731,7 @@
   }
 
   .userDetailsArea__imgContainer {
-    margin-top: ${(0, t.asCssProp)((0, i.gridUnits)(-.5))};
-    margin-right: ${(0, t.asCssProp)((0, i.gridUnits)(4))};
-    width: ${(0, t.asCssProp)((0, i.gridUnits)(13))};
-    height: ${(0, t.asCssProp)((0, i.gridUnits)(13))};
-    padding: ${(0, t.asCssProp)((0, i.gridUnits)(1))};
-    position: relative;
+    display: none;
   }
 
   .userDetailsArea__imgContainer::before {
@@ -8737,11 +8741,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: ${(0, t.asCssProp)(n.gradients.gold.complex("bottom"))};
-    box-shadow: 0 ${(0, t.asCssProp)((0, i.gridUnits)(1))} ${(0, t.asCssProp)((0, i.gridUnits)(2))}
-      rgba(${(0, t.asCssProp)((0, h.hexToCssRgbString)(n.colors.dark[900]))}, 0.6);
+    background: var(--gu-yellow);
     border-radius: 50%;
-    ${(0, t.asCssProp)(n.animation.slowTransition("transform"))};
     z-index: 2;
   }
 
@@ -8998,7 +8999,7 @@
 
   gu-user-details {
     border-bottom: 1px solid ${(0, t.asCssProp)(n.colors.gunmetal[700])};
-    padding: ${(0, t.asCssProp)((0, i.gridUnits)(3.5))} ${(0, t.asCssProp)(Bt)};
+    padding: 0;
     cursor: pointer;
   }
 
@@ -9133,6 +9134,7 @@
     background-image: linear-gradient(180deg, #0f1b27 0%, #1d2f41 51.56%, rgba(61, 90, 116, 0.75) 100%);
     opacity: 0;
     z-index: 0;
+    border-radius: 4px;
   }
 
   .side__part {
@@ -9229,7 +9231,7 @@
     <div class="side side--left">
       <gu-simple-text kind="small" fontWeight="bold" fillColor=${n.colors.gold[300]} class="side__part side__part--flux">
         <gu-icon iconLigature="flux_symbol" class="side__part__icon"></gu-icon>
-        ${O || "0"}
+        ${O || "0"} FLUX
       </gu-simple-text>
 
       <gu-simple-text
@@ -9239,27 +9241,9 @@
         class="side__part side__part--stars"
       >
         <gu-icon iconLigature="collectable_stars" class="side__part__icon"></gu-icon>
-        ${c || "0"}
+        ${c || "0"} STARS
       </gu-simple-text>
-      <div class="side__border"></div>
       <div class="side__hoverGradient"></div>
-    </div>
-    <div class="side side--right">
-      <div class="row row--top">
-        <div class="row__cardsCount">
-          <gu-icon iconLigature="cards_stack" class="row__cardsCount__icon"></gu-icon>
-          <gu-simple-text kind="small" class="row__cardsCount__value">
-            ${B.unique_card_count}
-          </gu-simple-text>
-        </div>
-
-        <gu-simple-text kind="small" fontWeight="bold" fillColor=${n.colors.gunmetal[100]} class="row__rank">
-          ${B.rank}
-        </gu-simple-text>
-      </div>
-      <div class="row row--bottom">
-        <gu-simple-text kind="small" class="row__userName"> ${B.username} </gu-simple-text>
-      </div>
     </div>
   `
         }, props: {properties: Ro, styles: uo}
@@ -10060,7 +10044,7 @@
 
       .radio-button__input:checked,
       :host([size='large']) .radio-button__input:checked {
-        border-color: ${(0, t.asCssProp)(n.colors.apocyan[300])};
+        border-color: var(--gu-blue);
         background-size: 18px 18px;
       }
 
@@ -10079,11 +10063,6 @@
 
       :host([layout='vertical']) {
         flex-direction: column;
-      }
-
-      .radio-button__input:focus,
-      .radio-button__input:focus-within {
-        box-shadow: 0 0 6px ${(0, t.asCssProp)(n.colors.apocyan[300])}, 0 0 2px ${(0, t.asCssProp)(n.colors.apocyan[300])} inset;
       }
     `
         }
@@ -10278,33 +10257,10 @@
     z-index: 1;
   }
 
-  :host([theme='gunmetal']) {
-    --gu-select-background-color: ${(0, t.asCssProp)(n.colors.gunmetal[900])};
-    --gu-select-border: 1px solid ${(0, t.asCssProp)(n.colors.gunmetal[500])};
-    --gu-select-menu-webkit-scrollbar-thumb-background-color: ${(0, t.asCssProp)(n.colors.gunmetal[500])};
-    --gu-select-option-hover-background-color: ${(0, t.asCssProp)(n.colors.gunmetal[700])};
-  }
-
-  :host([theme='white']) {
-    --gu-select-background-color: ${(0, t.asCssProp)(n.colors.light[100])};
-    --gu-select-border: 2px solid ${(0, t.asCssProp)(n.colors.dark[300])};
-    --gu-select-menu-webkit-scrollbar-thumb-background-color: ${(0, t.asCssProp)(n.colors.light[500])};
-    --gu-select-option-hover-background-color: ${(0, t.asCssProp)(n.colors.light[300])};
-  }
-
-  :host([theme='black']) {
-    --gu-select-background-color: ${(0, t.asCssProp)(n.colors.dark[900])};
-    --gu-select-border: 2px solid ${(0, t.asCssProp)(n.colors.dark[300])};
-    --gu-select-menu-webkit-scrollbar-thumb-background-color: ${(0, t.asCssProp)(n.colors.dark[500])};
-    --gu-select-option-hover-background-color: ${(0, t.asCssProp)(n.colors.dark[700])};
-  }
-
   .select__container {
     position: absolute;
     display: flex;
     flex-direction: column;
-    background-color: var(--gu-select-background-color);
-    border: var(--gu-select-border);
     border-radius: 2px;
     box-sizing: border-box;
     min-height: 36px;
@@ -10336,7 +10292,6 @@
     flex-direction: column;
     max-height: 200px;
     overflow-y: auto;
-    border-top: var(--gu-select-border);
     transition: max-height 0.2s ease;
   }
 
@@ -10346,7 +10301,6 @@
   }
 
   .select__menu::-webkit-scrollbar-thumb {
-    background-color: --gu-select-menu-webkit-scrollbar-thumb-background-color;
     border-radius: 6px;
     background-clip: padding-box;
     border: 4px solid rgba(0, 0, 0, 0);
@@ -10373,7 +10327,7 @@
   }
 
   :host(:focus-within) .select__container {
-    border: var(--gu-select-border);
+    
   }
 
   :host([disabled]) .select__heading {
@@ -11866,11 +11820,11 @@
 
       :host {
         display: block;
-        background: rgba(${(0, t.asCssProp)((0, h.hexToCssRgbString)(n.colors.light[100]))}, 0.15);
-        height: 30px;
-        padding: 7px 10px;
+        border: solid 1px var(--gu-blue-hover);
+        height: 20px;
+        padding: 4px;
         position: relative;
-        ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(16, 16))};
+        border-radius: 4px;
       }
 
       :host::before {
@@ -11880,18 +11834,14 @@
         left: 1.5px;
         height: calc(100% - 2px);
         width: calc(100% - 3px);
-        background: ${(0, t.asCssProp)(n.colors.gunmetal[900])};
-        box-shadow: inset 0 0 8px rgba(0, 0, 0, 1);
-        ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(16, 16))};
       }
 
       .progress-bar-border {
         position: absolute;
-        top: 7px;
-        left: 10px;
-        bottom: 7px;
+        top: 1px;
+        left: 1px;
+        bottom: 1px;
         right: 10px;
-        ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(10, 10))};
       }
 
       .progress-bar-border::before {
@@ -11899,8 +11849,7 @@
         display: block;
         height: 100%;
         width: var(--barWidth);
-        border-radius: ${(0, t.asCssProp)((0, i.gridUnits)(1))};
-        ${(0, t.asCssProp)(n.animation.slowTransition("width"))};
+        border-radius: 2px;
       }
 
       .progress-bar {
@@ -11909,7 +11858,6 @@
         left: 0;
         bottom: 1px;
         right: 0;
-        ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(9, 9, 2))};
       }
 
       .progress-bar::before {
@@ -11917,42 +11865,20 @@
         display: block;
         height: 100%;
         width: calc(var(--barWidth) - 1px);
-        border-radius: ${(0, t.asCssProp)((0, i.gridUnits)(1))};
-        ${(0, t.asCssProp)(n.animation.slowTransition("width"))};
+        border-radius: 2px;
       }
 
-      :host([coloring='apocyan']) .progress-bar-border::before {
-        background: #0293ba;
+      :host .progress-bar-border::before {
+        background: var(--gu-blue);
       }
 
-      :host([coloring='apocyan']) .progress-bar::before {
-        background: ${(0, t.asCssProp)(n.gradients.apocyan.simple("left"))};
-      }
-
-      :host([coloring='yellow']) .progress-bar-border::before {
-        background: ${(0, t.asCssProp)(n.colors.yellow[500])};
-      }
-
-      :host([coloring='yellow']) .progress-bar::before {
-        background: ${(0, t.asCssProp)(n.gradients.yellow.simple("left"))};
-      }
-
-      :host([coloring='gold']) .progress-bar-border::before {
-        background: ${(0, t.asCssProp)(n.colors.gold[500])};
-      }
-
-      :host([coloring='gold']) .progress-bar::before {
-        background: ${(0, t.asCssProp)(n.gradients.gold.simple("left"))};
+      :host .progress-bar::before {
+        background: var(--gu-blue);
       }
 
       :host([size='small']) {
         height: 12px;
         padding: 2px 3px;
-        ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(6, 6))};
-      }
-
-      :host([size='small'])::before {
-        ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(6, 6))};
       }
 
       :host([size='small']) .progress-bar-border {
@@ -11960,7 +11886,6 @@
         left: 3px;
         bottom: 2px;
         right: 3px;
-        ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(4, 4))};
       }
 
       :host([size='small']) .progress-bar {
@@ -11968,7 +11893,6 @@
         left: 0;
         bottom: 1px;
         right: 0;
-        ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(3, 3, 2))};
       }
 
       :host([size='small']) .progress-bar-border::before,
@@ -12953,9 +12877,8 @@
         margin: ${(0, t.asCssProp)((0, i.gridUnits)(3.5))};
         flex-direction: column;
         justify-content: center;
-        background: ${(0, t.asCssProp)(n.gradients.gunmetal.mirror("left"))};
-        border: ${(0, t.asCssProp)((0, i.gridUnits)(.25))} solid ${(0, t.asCssProp)(n.colors.gunmetal[500])};
-        border-radius: ${(0, t.asCssProp)((0, i.gridUnits)(1))};
+        background: var(--gu-blue-dark);
+        border-radius: 4px;
         align-items: center;
         min-width: ${(0, t.asCssProp)((0, i.gridUnits)(85))};
         width: ${(0, t.asCssProp)((0, i.gridUnits)(85))};
@@ -13007,9 +12930,13 @@
         text-transform: uppercase;
         margin: auto;
       }
+      
+      gu-primary-hex-button:hover .middleSection__cta__price {
+        color: var(-gu-blue-hover);
+      }
 
       .middleSection__cta__price {
-        color: ${(0, t.asCssProp)(n.colors.apocyan[300])};
+        color: var(--gu-blue);
         display: flex;
         align-items: center;
       }
@@ -13025,7 +12952,6 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        background: ${(0, t.asCssProp)(n.colors.gunmetal[500])};
         padding: ${(0, t.asCssProp)((0, i.gridUnits)(2))} 0;
       }
 
@@ -13084,18 +13010,12 @@
         <img class="image__img" src="${this.imageUrl}" />
       </picture>
 
-      <img
-        src="/assets/images/ui-embellishments/ui--divider-complex-2.svg"
-        class="divider"
-        alt="extra detailed diamond divider"
-      />
-
       <gu-vertical-space top="large" bottom="x-large" class="middleSection">
         <gu-paragraph-text
           kind="large"
           fontWeight="bold"
           align="center"
-          fillColor="colors.light.100"
+          fillColor="#FBC02D"
           class="middleSection__name"
           >${this.name}
         </gu-paragraph-text>
@@ -13149,14 +13069,11 @@
         static get styles() {
             return e.iv`
       :host {
-        border: ${(0, t.asCssProp)((0, i.gridUnits)(.25))} solid ${(0, t.asCssProp)(n.colors.gunmetal[500])};
-        background: linear-gradient(
-          90deg,
-          ${(0, t.asCssProp)(n.colors.gunmetal[300])} 0.91%,
-          ${(0, t.asCssProp)(n.colors.gunmetal[700])} 100%
-        );
         width: ${(0, t.asCssProp)((0, i.gridUnits)(56))};
-        filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+        border-bottom: 2px solid var(--gu-blue-hover);
+        border-right: solid 2px var(--gu-blue-hover);
+        background: var(--gu-blue-dark);
+        border-bottom-right-radius: 4px;
       }
 
       :host([durationType='monthly']) {
@@ -13188,10 +13105,6 @@
         width: calc(100% - ${(0, t.asCssProp)((0, i.gridUnits)(1))});
         left: calc(${(0, t.asCssProp)((0, i.gridUnits)(-1.5))} - 1px);
         top: ${(0, t.asCssProp)((0, i.gridUnits)(-1))};
-        border: ${(0, t.asCssProp)((0, i.gridUnits)(1))} solid;
-        border-image-source: ${(0, t.asCssProp)(n.gradients.gold.mirror("top"))};
-        border-image-slice: 1;
-        border-image-width: 0 0 0 ${(0, t.asCssProp)((0, i.gridUnits)(1))};
       }
     `
         }
@@ -13203,7 +13116,7 @@
         <gu-paragraph-text
           kind="large"
           fontWeight="bold"
-          fillColor=${"monthly" === this.durationType ? "colors.gunmetal.900" : "colors:light:100"}
+          fillColor="#90CAF9"
         >
           <slot></slot>
         </gu-paragraph-text>
@@ -14612,7 +14525,6 @@
     position: relative;
     white-space: nowrap;
     color: ${(0, f.asCssProp)(e.colors.light[100])};
-    ${(0, f.asCssProp)((0, f.drawHexShapePolygonMask)(12, 12))};
     ${(0, f.asCssProp)(e.animation.standardTransition("all"))};
 
     /* NORMAL SIZING BY DEFAULT */
@@ -14628,7 +14540,6 @@
     ${(0, f.inset)(2, 3)}
     z-index: 0;
     background: ${(0, f.asCssProp)(e.colors.gunmetal[900])};
-    ${(0, f.asCssProp)((0, f.drawHexShapePolygonMask)(11, 11))};
     ${(0, f.asCssProp)(e.animation.standardTransition("all"))};
   }
 
@@ -14641,15 +14552,10 @@
   :host([size='large']) {
     height: ${(0, f.asCssProp)("48px")};
     line-height: ${(0, f.asCssProp)("48px")};
-    ${(0, f.asCssProp)((0, f.drawHexShapePolygonMask)(18, 18))};
   }
 
   :host([size='large']) .button__content {
     padding: 0 ${(0, f.asCssProp)("26px")};
-  }
-
-  :host([size='large'])::before {
-    ${(0, f.asCssProp)((0, f.drawHexShapePolygonMask)(17, 17))};
   }
 
   :host([size='large']) .buttonContent__icon {
@@ -15862,7 +15768,7 @@
     });
     var p = o(32830), r = o(65281);
     const f = C => p.iv`${(0, p.$m)(C)}`,
-        e = (C, k, $ = 0) => `\n  clip-path: polygon(\n    ${C + $}px 0%,\n    calc(100% - ${k + $}px) 0%,\n    100% 50%,\n    calc(100% - ${k + $}px) 100%,\n    ${C + $}px 100%,\n    0% 50%\n  );\n  -webkit-clip-path: polygon(\n    ${C + $}px 0%,\n    calc(100% - ${k + $}px) 0%,\n    calc(100% - ${$}px) 50%,\n    calc(100% - ${k + $}px) 100%,\n    ${C + $}px 100%,\n    ${$}px 50%\n  );\n`,
+        e = (C, k, $ = 0) => ``,
         _ = C => `\n  clip-path: polygon(\n    0% 0%,\n    100% 0%,\n    100% calc(100% - ${C}),\n    50% 100%,\n    0% calc(100% - ${C}),\n    0% 0%\n  );\n  -webkit-clip-path: polygon(\n    0% 0%,\n    100% 0%,\n    100% calc(100% - ${C}),\n    50% 100%,\n    0% calc(100% - ${C}),\n    0% 0%\n  );\n`,
         g = (C = "border-box") => `\n  :host,\n  :host *,\n  :host *::before,\n  :host *::after {\n    box-sizing: ${C};\n  }\n`,
         h = (C, k, $ = "initial", w = .3, D = 0) => `\n  ${C} {\n    opacity: 0;\n    height: 0;\n    transition: opacity ${w}s ease, height 0s ${w}s, transform ${w}s ease;\n    ${D ? `transform: translateY(${D}px);` : ""}\n  }\n  ${k} {\n    opacity: 1;\n    height: ${$};\n    transition: opacity ${w}s ease, height 0s 0s, transform ${w}s ease;\n    ${D ? "transform: translateY(0);" : ""}\n  }\n`,
@@ -16141,11 +16047,11 @@
         god: () => w,
         fillColoringRules: () => D
     });
-    const p = {100: "#7192B0", 300: "#527493", 500: "#3D5A74", 700: "#1D2F41", 900: "#0F1B27"},
+    const p = {100: "#90CAF9", 300: "#527493", 500: "#3D5A74", 700: "#1D2F41", 900: "#0F1B27"},
         r = {100: "#F6F6F6", 300: "#D7D7D7", 500: "#B6B6B6", 700: "#979797", 900: "#7F7F7F"}, f = "#ffffff",
         e = "#000000", _ = {100: "#7F7F7F", 300: "#646464", 500: "#464646", 700: "#272727", 900: "#0A0A0A"},
-        g = {100: "#AFFAED", 300: "#8BE1E0", 500: "#54BBCD"}, h = {100: "#FCF7D4", 300: "#F7EA9B", 500: "#F2DC63"},
-        i = {100: "#FFF2D8", 300: "#EBC98B", 500: "#C6A052"}, t = {200: "#affaed", 300: "#8be1e0", 500: "#54bbcd"},
+        g = {100: "#AFFAED", 300: "#03A9F4", 500: "#54BBCD"}, h = {100: "#FCF7D4", 300: "#F7EA9B", 500: "#F2DC63"},
+        i = {100: "#FFF2D8", 300: "#FBC02D", 500: "#C6A052"}, t = {200: "#affaed", 300: "#8be1e0", 500: "#54bbcd"},
         n = {creature: "#ebd08a", spell: "#76b5ad", weapon: "#7a608c"}, C = "#FF8B01", k = {
             plain: "#8295A2",
             bronze: "#6A8B35",
@@ -16200,7 +16106,7 @@
         h = s => `\n  transition: ${s} ${_}\n  ${e};\n`;
     var i = o(47925), t = o(91418);
     const n = {
-            simple: (s = "bottom") => `\n  linear-gradient(\n    to ${s},\n    ${t.gold[100]} 0%,\n    ${t.gold[500]} 100%\n  );\n`,
+            simple: (s = "bottom") => `var(--gu-yellow)`,
             mirror: (s = "bottom") => `\n  linear-gradient(\n    to ${s},\n    ${t.gold[500]} 0%,\n    ${t.gold[100]} 50%,\n    ${t.gold[500]} 100%\n  );\n`,
             complex: (s = "top") => `\n  linear-gradient(\n    to ${s},\n    #FFFDF0 0%,\n    #FBEBC1 14%,\n    #E6C675 25%,\n    #F6DF6E 40%,\n    #B27E18 60%,\n    #DEAB61 73%,\n    #A67B4B 85%,\n    #664320 100%\n  );\n`,
             horizontal: (s = "right") => `\n  linear-gradient(\n    to ${s},\n    ${t.gold[500]} 3%,\n    ${t.gold[300]} 25%,\n    ${t.gold[100]} 50%,\n    ${t.gold[300]} 75%,\n    ${t.gold[500]} 97%\n  );\n`
