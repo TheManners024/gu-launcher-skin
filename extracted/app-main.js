@@ -21775,12 +21775,10 @@
         ${_o ? Y.dy`
               <gu-primary-hex-button
                 size="large"
-                @click=${() => {
-                this.dispatchEvent(new CustomEvent("onBuyPacks"))
-            }}
+                href=${`imtbl://${G.gv.routeContent({}).home.path}`}
                 class="ctasArea__cta ctasArea__cta--buyPacksCta"
               >
-                Buy Packs
+                Play to unlock
               </gu-primary-hex-button>
             ` : null}
         <!-- @NOTE: While a card sale is active, direct users toward buying packs, not playing the game
@@ -21816,10 +21814,10 @@
                 draggablePack: !0,
                 "draggablePack--visible": fe && !De,
                 "draggablePack--disabled": Cs,
-                "draggablePack--touchable": this.isIos
+                "draggablePack--touchable": !0
             })}
               ?domRef=${(0, Pe.Q)(x)}
-              @click=${() => !!this.isIos && ho()}
+              @click=${() => !0 && ho()}
             ></gu-card-pack-picture>
             ${lt ? null : Y.dy`<i class="draggablePackHitzone" ?domRef=${(0, Pe.Q)(l)}></i>`}
           ` : null}

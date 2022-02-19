@@ -2943,11 +2943,12 @@
                 }
 
                 ngOnChanges(t) {
-                    t.unownedCheckboxVisible && !t.unownedCheckboxVisible.firstChange && this.ownershipForm.setValue({ownership: "all"})
+                    let initialOwnership = localStorage.getItem('collectionOwnership') || 'all';
+                    t.unownedCheckboxVisible && !t.unownedCheckboxVisible.firstChange && this.ownershipForm.setValue({ownership: initialOwnership})
                 }
 
                 shortenHeaderText(t) {
-                    return t.charAt(0).toUpperCase() + t.slice(1, 2)
+                    return t.charAt(0).toUpperCase() + t.slice(1)
                 }
 
                 clickGroupingHeader(t) {
@@ -3003,7 +3004,107 @@
                 },
                 directives: [l.O5, l.sg, Fe.K, l.mk, I._Y, I.JL, I.sg, I.Fj, I._, I.JJ, I.u],
                 pipes: [l.Nd],
-                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.filterLabel[_ngcontent-%COMP%], .filterButton__text[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.filterButton__text[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.filterLabel[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.11)}[_nghost-%COMP%]{display:flex}.filterLabel[_ngcontent-%COMP%]{padding-right:calc(var(--vw) * .7);color:#7192b0;align-self:center}.filterLabel--leftSpacing[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 1)}.filterButtonAndTooltip[_ngcontent-%COMP%]{margin-right:calc(var(--vw) * .5)}.filterButtonAndTooltip[_ngcontent-%COMP%]:last-of-type{margin-right:0}.filterButton[_ngcontent-%COMP%]{width:calc(var(--vw) * 1.45);height:calc(var(--vw) * 1.45);margin-right:calc(var(--vw) * .2);border-radius:calc(var(--vh) * .4);display:flex;padding:0;cursor:pointer;border:calc(var(--vh) * .15) solid #182531;background:#0c1620;color:#7192b0;outline:none}.filterButton.selected[_ngcontent-%COMP%]{background:#3d5a74;border-color:#7192b0;color:#f6f6f6}.filterButton[_ngcontent-%COMP%]:hover{color:#f6f6f6;background:#3d5a74;border-color:#3d5a74}.filterButton__text[_ngcontent-%COMP%]{line-height:1;margin:auto}.filterButton__icon[_ngcontent-%COMP%]{font-size:calc(var(--vw) * .9);margin:auto;line-height:1;display:flex}.unownedCheckbox[_ngcontent-%COMP%]{display:flex;margin-left:auto;align-items:center}.form-check-label[_ngcontent-%COMP%]{color:#7192b0}"]
+                styles: [`
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    margin: 0
+                }
+                
+                body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif;
+                    font-weight: 400
+                }
+                
+                h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%] {
+                    font-family: Unchained, serif;
+                    font-weight: 700
+                }
+                
+                .filterLabel[_ngcontent-%COMP%], .filterButton__text[_ngcontent-%COMP%] {
+                    font-family: Open Sans, sans-serif
+                }
+                
+                .filterButton__text[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 1.48)
+                }
+                
+                .filterLabel[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vh) * 1.11)
+                }
+                
+                [_nghost-%COMP%] {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                }
+                
+                .filterLabel[_ngcontent-%COMP%] {
+                    padding-right: calc(var(--vw) * .7);
+                    color: #7192b0;
+                    align-self: center
+                }
+                
+                .filterLabel--leftSpacing[_ngcontent-%COMP%] {
+                    padding-left: calc(var(--vw) * 1)
+                }
+                
+                .filterButtonAndTooltip[_ngcontent-%COMP%] {
+                    margin-right: calc(var(--vw) * .5)
+                }
+                
+                .filterButtonAndTooltip[_ngcontent-%COMP%]:last-of-type {
+                    margin-right: 0
+                }
+                
+                .filterButton[_ngcontent-%COMP%] {
+                    min-width: calc(var(--vw) * 1.45);
+                    height: calc(var(--vw) * 1.45);
+                    margin-right: calc(var(--vw) * .2);
+                    border-radius: calc(var(--vh) * .4);
+                    display: flex;
+                    padding: 0;
+                    cursor: pointer;
+                    border: calc(var(--vh) * .15) solid #182531;
+                    background: #0c1620;
+                    color: #7192b0;
+                    outline: none
+                }
+                
+                .filterButton.selected[_ngcontent-%COMP%] {
+                    background: #3d5a74;
+                    border-color: #7192b0;
+                    color: #f6f6f6
+                }
+                
+                .filterButton[_ngcontent-%COMP%]:hover {
+                    color: #f6f6f6;
+                    background: #3d5a74;
+                    border-color: #3d5a74
+                }
+                
+                .filterButton__text[_ngcontent-%COMP%] {
+                    line-height: 1;
+                    margin: auto;
+                    padding: 0 4px
+                }
+                
+                .filterButton__icon[_ngcontent-%COMP%] {
+                    font-size: calc(var(--vw) * .9);
+                    margin: auto;
+                    line-height: 1;
+                    display: flex
+                }
+                
+                .unownedCheckbox[_ngcontent-%COMP%] {
+                    display: flex;
+                    margin-left: auto;
+                    margin-top: 4px;
+                    align-items: center
+                }
+                
+                .form-check-label[_ngcontent-%COMP%] {
+                    color: #7192b0
+                }
+                `]
             }), o
         })();
         var kt = g(80013);
@@ -8751,7 +8852,7 @@
                         return n.newDeck()
                     }), e.qZA(), e.YNc(8, Cc, 1, 4, "app-deck", 7), e.ALo(9, "async"), e.qZA()), 2 & t && (e.Q6J("ngIf", n.modalHosted), e.xp6(2), e.Q6J("godFilters", n.godFilters)("displayGroupingName", !1), e.xp6(3), e.Q6J("featureFlagIf", n.Flags.deckCodesEnabled), e.xp6(3), e.Q6J("ngForOf", e.lcZ(9, 6, n.filteredDecks$))("ngForTrackBy", n.trackDecksBy))
                 },
-                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.titleAndFiltering__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.titleAndFiltering__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-direction:column;height:calc(calc(var(--vh) * 100) - 28px - 80px)}.titleAndFiltering[_ngcontent-%COMP%]{display:flex;padding-top:calc(var(--vh) * 2);top:calc(var(--vh) * 1.5);justify-content:space-between;align-items:center;margin:0 80px;min-height:calc(calc(var(--vh) * 9) - calc(var(--vh) * 1.5));border-bottom:2px #1d2f41 solid;padding:20px 0}.titleAndFiltering__title[_ngcontent-%COMP%]{text-transform:uppercase;color:#f6f6f6}.decksListing[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(8,1fr);align-items:start;grid-auto-rows:min-content;grid-column-gap:calc(var(--vw) * 1.6);padding:0 calc(var(--vw) * 4.16);padding-top:calc(var(--vh) * 4);height:100%;overflow:hidden;overflow-y:auto}.decksListing[_ngcontent-%COMP%] > *[_ngcontent-%COMP%]:last-child{margin-bottom:calc(var(--vh) * 6)}.createButton[_ngcontent-%COMP%]{width:calc(var(--vw) * 8.6);height:calc(var(--vh) * 23.5);margin-top:calc(var(--vh) * .5);justify-self:center}"],
+                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.titleAndFiltering__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.titleAndFiltering__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-direction:column;height:100%;}[_nghost-%COMP%].modal-hosted{padding-top:28px}.titleAndFiltering[_ngcontent-%COMP%]{display:flex;padding-top:calc(var(--vh) * 2);top:calc(var(--vh) * 1.5);justify-content:space-between;align-items:center;margin:0 80px;min-height:calc(calc(var(--vh) * 9) - calc(var(--vh) * 1.5));border-bottom:2px #1d2f41 solid;padding:20px 0}.titleAndFiltering__title[_ngcontent-%COMP%]{text-transform:uppercase;color:#f6f6f6}.decksListing[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(8,1fr);align-items:start;grid-auto-rows:min-content;grid-column-gap:calc(var(--vw) * 1.6);padding:0 calc(var(--vw) * 4.16);padding-top:calc(var(--vh) * 4);height:100%;overflow:hidden;overflow-y:auto}.decksListing[_ngcontent-%COMP%] > *[_ngcontent-%COMP%]:last-child{margin-bottom:calc(var(--vh) * 6)}.createButton[_ngcontent-%COMP%]{width:calc(var(--vw) * 8.6);height:calc(var(--vh) * 23.5);margin-top:calc(var(--vh) * .5);justify-self:center}"],
                 data: {
                     animation: [(0, C.X$)("deck", [(0, C.eR)(":enter", [(0, C.oB)({
                         transform: "scale(1.0)",
