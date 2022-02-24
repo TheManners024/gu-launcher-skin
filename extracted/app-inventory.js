@@ -3414,11 +3414,11 @@
                 }
 
                 onEnter(t) {
-                    this.showCard()
+                    // noop thanks
                 }
 
                 onLeave(t) {
-                    this.hideCard()
+                    // noop thanks
                 }
 
                 ngOnInit() {
@@ -3430,9 +3430,9 @@
                 }
 
                 initPosition() {
-                    if (void 0 === this.cardIndex || void 0 === this.columnsCount) return;
-                    const t = this.cardIndex % this.columnsCount;
-                    0 === t ? this.transformOrigin = this.leftSideOrigin : t === this.columnsCount - 1 && (this.transformOrigin = this.rightSideOrigin)
+                    // if (void 0 === this.cardIndex || void 0 === this.columnsCount) return;
+                    // const t = this.cardIndex % this.columnsCount;
+                    // 0 === t ? this.transformOrigin = this.leftSideOrigin : t === this.columnsCount - 1 && (this.transformOrigin = this.rightSideOrigin)
                 }
 
                 showCard() {
@@ -9239,7 +9239,7 @@
                     this.logButtonInputted("Start"), this.playService.start({
                         id: this.mode.id,
                         name: this.mode.name
-                    }, this.userId, new X.Qc(this.userId, this.deck, this.getLoadoutId(), this.opponentsDeck), this.mode.type === S.tO.DIRECT_CHALLENGE ? this.challengeCode : "").pipe((0, x.q)(1)).subscribe(t => {
+                    }, this.userId, new j.Qc(this.userId, this.deck, this.getLoadoutId(), this.opponentsDeck), this.mode.type === S.tO.DIRECT_CHALLENGE ? this.challengeCode : "").pipe((0, x.q)(1)).subscribe(t => {
                         this.launchQueueTries = 0, this.queue = t, this.disableButton = !1, this.initTimer()
                     }, t => {
                         if (this.launchQueueTries < 3) {
