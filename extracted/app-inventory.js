@@ -3474,11 +3474,7 @@
                 type: o,
                 selectors: [["", "appSingleCardHoverFX", ""]],
                 hostBindings: function (t, n) {
-                    1 & t && e.NdJ("mouseenter", function (a) {
-                        return n.onEnter(a)
-                    })("mouseleave", function (a) {
-                        return n.onLeave(a)
-                    })
+                    // noop ty
                 },
                 inputs: {cardIndex: "cardIndex", columnsCount: "columnsCount"}
             }), o
