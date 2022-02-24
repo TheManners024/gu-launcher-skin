@@ -30,6 +30,8 @@ So search the string before the n.god part.
   - Make it a noop
 - initDecks()
   - Called to initialize the decks in the workshop. Modify this to sort the decks.
-- 
+- launchQueue()
+  - Used to start a queue to find a match. Need to use the counter to recursively call it
+a few times so we don't have to deal with the error from the first time failure.
 
 
