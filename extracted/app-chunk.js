@@ -2577,13 +2577,13 @@
                 ngContentSelectors: mi,
                 decls: 2,
                 vars: 0,
-                consts: [["iconLigature", "close_x", 1, "closeButton", 3, "click"]],
+                consts: [["iconLigature", "chevron_left", 1, "closeButton", 3, "click"]],
                 template: function (t, n) {
                     1 & t && (e.F$t(), e.TgZ(0, "gu-icon", 0), e.NdJ("click", function () {
                         return n.closeButtonClick()
                     }), e.qZA(), e.Hsn(1))
                 },
-                styles: ["[_nghost-%COMP%]{padding-top:calc(var(--vh) * 4.5);display:flex;flex-flow:column nowrap;align-items:center;width:calc(var(--vh) * 7.7);position:absolute;top:0;left:0;height:100%}.closeButton[_ngcontent-%COMP%]{width:calc(var(--vh) * 3);height:calc(var(--vh) * 3);font-size:calc(var(--vh) * 1.7);border-radius:50%;display:flex;line-height:1;border:2px solid #7192b0;color:#f6f6f6;cursor:pointer}.closeButton[_ngcontent-%COMP%]:hover{background:#7192b0}.closeButton[_ngcontent-%COMP%]     i{margin:auto;line-height:1}"]
+                styles: ["[_nghost-%COMP%]{padding-top:calc(var(--vh) * 4.5);display:flex;flex-flow:column nowrap;align-items:center;width:calc(var(--vh) * 7.7);position:absolute;top:0;left:0;height:100%}.closeButton[_ngcontent-%COMP%]{width:calc(var(--vh) * 3);height:calc(var(--vh) * 3);font-size:calc(var(--vh) * 1.7);border-radius:50%;display:flex;line-height:1;border:2px solid var(--gu-blue);color:var(--gu-blue);cursor:pointer}.closeButton[_ngcontent-%COMP%]:hover{border-color:var(--gu-blue-hover);color:var(--gu-blue-hover)}.closeButton[_ngcontent-%COMP%]     i{margin:auto;line-height:1}"]
             }), o
         })(), at = (() => {
             class o {
@@ -3156,11 +3156,11 @@
                 }
 
                 selectGrouping(t) {
-                    this.audioService.clickTinyV1.play(), this.activeGrouping = t, this.groupingChange.emit(this.activeGrouping)
+                    this.activeGrouping = t, this.groupingChange.emit(this.activeGrouping)
                 }
 
                 selectSearchBox() {
-                    this.audioService.clickTinyV1.play()
+                    // noop thanks
                 }
 
                 isSelected(t) {
@@ -3168,7 +3168,7 @@
                 }
 
                 watchSearch() {
-                    this.searchControl.valueChanges.pipe((0, u.R)(this.unsubscribe), (0, kt.b)(500), (0, ht.x)(), (0, b.b)(t => this.searchChanged(t))).subscribe()
+                    this.searchControl.valueChanges.pipe((0, u.R)(this.unsubscribe), (0, kt.b)(300), (0, ht.x)(), (0, b.b)(t => this.searchChanged(t))).subscribe()
                 }
 
                 searchChanged(t) {
@@ -4541,7 +4541,7 @@
                 }
                 
                 .sectionHeader[_ngcontent-%COMP%] {
-                    height: calc(var(--vh) * 8.5);
+                    height: calc(var(--vh) * 9.5);
                     position: relative
                 }
                 
@@ -4572,7 +4572,7 @@
                 }
                 
                 .sectionHeader__filterArea[_ngcontent-%COMP%] {
-                    bottom: calc(var(--vh) * 1);
+                    bottom: 0;
                     right: calc(var(--vw) * 5);
                     position: absolute;
                     left: 0
@@ -8691,7 +8691,7 @@
                     1 & t && (e._UZ(0, "app-modal-sidebar", 0), e.TgZ(1, "h1", 1), e._uU(2, "Choose a God"), e.qZA(), e.TgZ(3, "p", 2), e._uU(4, "Each deck must be aligned to a God. Choose which one you'd like to build around."), e.qZA(), e.YNc(5, uc, 2, 0, "gu-plain-square-button", 3), e.TgZ(6, "div", 4), e.YNc(7, _c, 8, 6, "div", 5), e.qZA(), e.YNc(8, hc, 7, 0, "div", 6)), 2 & t && (e.Q6J("closeButtonClickFn", n.close), e.xp6(5), e.Q6J("featureFlagIf", n.Flags.deckCodesEnabled), e.xp6(2), e.Q6J("ngForOf", n.gods), e.xp6(1), e.Q6J("ngIf", n.gameModeType === n.GuGameModeType.SEALED_DECK))
                 },
                 directives: [ke, rt.w, l.sg, l.O5],
-                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.pageTitle[_ngcontent-%COMP%], .god__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.god__description[_ngcontent-%COMP%], .god__playStyle[_ngcontent-%COMP%], .pageDescription[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.god__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 3.7);line-height:1.3}.pageTitle[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 5);line-height:1.3}.god__description[_ngcontent-%COMP%], .god__playStyle[_ngcontent-%COMP%], .pageDescription[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.god__playStyle[_ngcontent-%COMP%], .pageDescription[_ngcontent-%COMP%]{line-height:1.4}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{width:100%;height:calc(calc(var(--vh) * 100) - 28px - 80px);display:flex;flex-flow:column nowrap;text-align:center;padding:0 80px;padding-top:calc(var(--vh) * 5)}.pageTitle[_ngcontent-%COMP%]{margin-bottom:calc(var(--vh) * 1);background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.pageDescription[_ngcontent-%COMP%]{color:#f6f6f6}.godListing[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1);grid-column-gap:calc(var(--vw) * .6);display:grid;grid-template-columns:repeat(6,1fr)}.god[_ngcontent-%COMP%]{width:calc(var(--vw) * 14.84);height:calc(var(--vh) * 63);display:flex;background:linear-gradient(to bottom,#affaed 0%,#8be1e0 50%,#54bbcd 100%);border-radius:calc(var(--vh) * .4);color:#fff;cursor:pointer}.god[_ngcontent-%COMP%]:hover:not(.god--unavailable)   .god__image[_ngcontent-%COMP%]{opacity:1;z-index:1}.god--unavailable[_ngcontent-%COMP%]{color:#7192b0;background:#1d2f41;cursor:default}.god--unavailable[_ngcontent-%COMP%]   .god__inner[_ngcontent-%COMP%]{background:#0c1620}.god--unavailable[_ngcontent-%COMP%]   .god__image[_ngcontent-%COMP%]{opacity:.1}.god__inner[_ngcontent-%COMP%]{padding:calc(var(--vw) * 1.5);margin:calc(var(--vh) * .18);flex:1;border-radius:calc(var(--vh) * .4);background:#0f1b27;overflow:hidden;position:relative}.god__image[_ngcontent-%COMP%]{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.25;transition:opacity .15s ease-in-out}.god__title[_ngcontent-%COMP%]{position:relative}.god__description[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .5);padding-bottom:calc(var(--vh) * 2.96);color:#7192b0;position:relative}.god__playStyle[_ngcontent-%COMP%]{position:relative}.sealedPreloadSection[_ngcontent-%COMP%]{width:1px;height:1px;visibility:hidden;overflow:hidden}.importDeckCta[_ngcontent-%COMP%]{position:absolute;right:100px}"]
+                styles: ["h1[_ngcontent-%COMP%],h2[_ngcontent-%COMP%],h3[_ngcontent-%COMP%],h4[_ngcontent-%COMP%],h5[_ngcontent-%COMP%],h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%],label[_ngcontent-%COMP%],a[_ngcontent-%COMP%],div[_ngcontent-%COMP%],input[_ngcontent-%COMP%],button[_ngcontent-%COMP%],p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.pageTitle[_ngcontent-%COMP%],.god__title[_ngcontent-%COMP%],h1[_ngcontent-%COMP%],h2[_ngcontent-%COMP%],h3[_ngcontent-%COMP%],h4[_ngcontent-%COMP%],h5[_ngcontent-%COMP%],h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.god__description[_ngcontent-%COMP%],.god__playStyle[_ngcontent-%COMP%],.pageDescription[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.god__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 3.7);line-height:1.3}.pageTitle[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 5);line-height:1.3}.god__description[_ngcontent-%COMP%],.god__playStyle[_ngcontent-%COMP%],.pageDescription[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.god__playStyle[_ngcontent-%COMP%],.pageDescription[_ngcontent-%COMP%]{line-height:1.4}[_nghost-%COMP%]{width:100%;height:calc(calc(var(--vh) * 100) - 28px - 80px);display:flex;flex-flow:column nowrap;text-align:center;padding:0 80px;padding-top:calc(var(--vh) * 5)}.pageTitle[_ngcontent-%COMP%]{margin-bottom:calc(var(--vh) * 1);background:var(--gu-yellow);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.pageDescription[_ngcontent-%COMP%]{color:var(-gu-gray);}.godListing[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1);grid-column-gap:calc(var(--vw) * .6);display:grid;grid-template-columns:repeat(6,1fr)}.god[_ngcontent-%COMP%]{width:calc(var(--vw) * 14.84);height:calc(var(--vh) * 63);display:flex;border-radius:calc(var(--vh) * .4);color:var(--gu-gray);cursor:pointer}.god[_ngcontent-%COMP%]:hover:not(.god--unavailable) .god__image[_ngcontent-%COMP%]{opacity:1;z-index:1}.god--unavailable[_ngcontent-%COMP%]{color:#7192b0;background:#1d2f41;cursor:default}.god--unavailable[_ngcontent-%COMP%] .god__inner[_ngcontent-%COMP%]{background:var(--gu-blue-dark);}.god--unavailable[_ngcontent-%COMP%] .god__image[_ngcontent-%COMP%]{opacity:.1}.god__inner[_ngcontent-%COMP%]{padding:calc(var(--vw) * 1.5);margin:calc(var(--vh) * .18);flex:1;border-radius:calc(var(--vh) * .4);background:var(--gu-blue-dark);overflow:hidden;position:relative}.god__image[_ngcontent-%COMP%]{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.25;transition:opacity .15s ease-in-out}.god__title[_ngcontent-%COMP%]{position:relative}.god__description[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .5);padding-bottom:calc(var(--vh) * 2.96);position:relative}.god__playStyle[_ngcontent-%COMP%]{position:relative}.sealedPreloadSection[_ngcontent-%COMP%]{width:1px;height:1px;visibility:hidden;overflow:hidden}.importDeckCta[_ngcontent-%COMP%]{position:absolute;right:100px}"]
             }), o
         })();
 
