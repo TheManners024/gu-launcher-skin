@@ -361,6 +361,8 @@ function createWindow(frontEndUrl) {
             'https://master.desktop.godsunchained.com/848.*.js',
             'https://master.desktop.godsunchained.com/styles.*.css',
             'https://master.desktop.godsunchained.com/gu-assets/images/rank-progress/gu-progress-rank-cracks--*.svg',
+            'https://master.desktop.godsunchained.com/gu-assets/images/misc/gu-gmc-snipe.svg',
+            'https://master.desktop.godsunchained.com/assets/images/ui-embellishments/ui--divider-complex-2.svg',
             'https://master.desktop.godsunchained.com/new-relic.*.js'
         ]
     }, (details, callback) => {
@@ -370,11 +372,15 @@ function createWindow(frontEndUrl) {
         } else if (details.url.endsWith('.css')) {
             url = path.normalize(`${__dirname}/app-styles.css`);
         } else if (details.url.match(/848[.].+[.]js$/) != null) {
-            url = path.normalize(`${__dirname}/app-inventory.js`);
+            url = path.normalize(`${__dirname}/app-chunk.js`);
         } else if (details.url.match(/gu-progress-rank-cracks--[\d][.]svg$/) != null) {
             url = path.normalize(`${__dirname}/${details.url.split('.com').pop()}`);
         } else if (details.url.endsWith('new-relic.prod.js')) {
             return callback({cancel: true, redirectURL: undefined});
+        } else if (details.url.endsWith('gu-gmc-snipe.svg')) {
+            url = path.normalize(`${__dirname}/${details.url.split('.com').pop()}`);
+        } else if (details.url.endsWith('ui--divider-complex-2.svg')) {
+            url = path.normalize(`${__dirname}/${details.url.split('.com').pop()}`);
         }
 
         callback({redirectURL: `inject://${url}`});

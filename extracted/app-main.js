@@ -483,16 +483,16 @@
                     (0, e.aj)([this.fetchPlayerGameModes$(), this.getLock$(), this.fetchPlayerRanks$()]).pipe((0, g.q)(1), (0, n.U)(([re, fe, Me]) => re.map(Le => this.transformGameModes(Le, fe, Me))), (0, t.b)(re => {
                         for (const gm of re) {
                             if (gm.id === 0) { // Solo
-                                gm.image_url = 'https://images.godsunchained.com/art2/720/1492.jpg';
+                                gm.image_url = 'https://images.godsunchained.com/art2/1024/1492.jpg';
                             }
                             if (gm.id === 101) { // Tutorial
-                                gm.image_url = 'https://images.godsunchained.com/art2/720/892.png';
+                                gm.image_url = 'https://images.godsunchained.com/art2/1024/16.jpg';
                             }
                             if (gm.id === 6) { // Direct Challenge
-                                gm.image_url = 'https://images.godsunchained.com/art2/720/56.png';
+                                gm.image_url = 'https://images.godsunchained.com/art2/1280/42.jpg';
                             }
                             if (gm.id === 13) { // Rank Constructed
-                                gm.image_url = 'https://images.godsunchained.com/art2/720/879.jpg';
+                                gm.image_url = 'https://images.godsunchained.com/art2/1280/101305.jpg';
                             }
                         }
                         this.scheduleRefresh(re), this.handleSealedMode(re), this.dataStore.gameModes = re, this._emitGameModes(W)

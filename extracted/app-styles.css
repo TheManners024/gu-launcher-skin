@@ -10,6 +10,8 @@ body {
     --gu-bg-gray: #3c3c3c;
     --gu-orange: #FF9800;
     --gu-red: #F44336;
+    --gu-indigo: #3F51B5;
+    --gu-purple: #9C27B0;
 }
 
 label {
@@ -324,13 +326,7 @@ app-inventory-cards-quality > header.groupedCardsHeader:before {
     background: var(--gu-bg-gray);
 }
 
-.newsItem__caption:not(.fake-selector) {
-    top: 50%;
-    transform: translateY(-50%);
-    line-height: 1;
-}
-
-.newsItem__caption__subHeading:not(.fake-selector) {
+.newsItem__caption__subHeading {
     color: var(--gu-gray);
     font-size: 12px;
     font-weight: bold;
@@ -620,10 +616,6 @@ gu-paragraph-text.tooltipBubble--left:before {
 
 .bullet {
     background: var(--gu-yellow) !important;
-}
-
-.bullet::before {
-    border-color: var(--gu-yellow);
 }
 
 gu-icon.directChallenge__form__field__icon,
