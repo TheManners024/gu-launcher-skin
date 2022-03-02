@@ -5,8 +5,7 @@ running `npm run pack` to disable signing!
 2. Remember to turn off devtools!
 
 ### Locations of interest
-- Search for `null == t.user ? null : t.user.won_matches` and `null == t.user ? null : t.user.unique_card_count` are where
-you should replace the match win/loss ratio and unique card count labels.
+#### App Main
 - calcTopCards() 
   - Is a method that seems to calculate which card goes on top of the deck that shows in the launcher.
 - pushToActiveDeck(s)
@@ -17,6 +16,12 @@ right now.
 - removeCardsFromActiveDeck(s)
   - Called when multiple cards get removed from the currently edited deck. Typically
 this is what is called to remove a card.
+
+#### App Chunk
+- Search for `null == t.account ? null : t.account.username` and replace with `null == t.account ? null : t.account.username + ' - ' + t.user.user_id`
+  - Might have to remove `t` reference if the minification changes the variable.
+- Search for `null == t.user ? null : t.user.won_matches` and `null == t.user ? null : t.user.unique_card_count` are where
+you should replace the match win/loss ratio and unique card count labels.
 - setRankLevelLabels()
   - Called to set the rank level labels and stuff
 - initFormGroup()
@@ -29,6 +34,7 @@ areas. Need to change this to retain selection.
 So search the string before the n.god part.
 - composite card mouseenter
   - Make it a noop
+  - Also search for other "mouseenter" and "mouseleave" events because there are appSingleCardHoverFx
 - initDecks()
   - Called to initialize the decks in the workshop. Modify this to sort the decks.
 - launchQueue()

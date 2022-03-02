@@ -4,11 +4,11 @@
     63764: (se, R, o) => {
         "use strict";
         o.d(R, {S: () => y});
-        var l = o(5e3), i = o(69808);
+        var c = o(5e3), i = o(69808);
         let y = (() => {
             class e {
                 constructor() {
-                    this.canCloseFromInside = !1, this.closeModal$ = new l.vpe
+                    this.canCloseFromInside = !1, this.closeModal$ = new c.vpe
                 }
 
                 ngOnInit() {
@@ -21,7 +21,7 @@
 
             return e.\u0275fac = function (p) {
                 return new (p || e)
-            }, e.\u0275cmp = l.Xpm({
+            }, e.\u0275cmp = c.Xpm({
                 type: e,
                 selectors: [["app-info-modal"]],
                 inputs: {title: "title", text: "text", styles: "styles", canCloseFromInside: "canCloseFromInside"},
@@ -30,27 +30,28 @@
                 vars: 3,
                 consts: [[1, "modal-holder", 3, "ngStyle", "click"], [1, "container-fluid"], [1, "row"], [1, "col-12", "text-center", "gold-text", "bourbon", "title-container"], [1, "col-12", "text-center", "info-container", 3, "innerHTML"]],
                 template: function (p, g) {
-                    1 & p && (l.TgZ(0, "div", 0), l.NdJ("click", function () {
+                    1 & p && (c.TgZ(0, "div", 0), c.NdJ("click", function () {
                         return g.closeModal(!0)
-                    }), l.TgZ(1, "div", 1), l.TgZ(2, "div", 2), l.TgZ(3, "div", 3), l._uU(4), l.qZA(), l.qZA(), l.TgZ(5, "div", 2), l._UZ(6, "div", 4), l.qZA(), l.qZA(), l.qZA()), 2 & p && (l.Q6J("ngStyle", g.styles), l.xp6(4), l.hij(" ", g.title, " "), l.xp6(2), l.Q6J("innerHTML", g.text, l.oJD))
+                    }), c.TgZ(1, "div", 1)(2, "div", 2)(3, "div", 3), c._uU(4), c.qZA()(), c.TgZ(5, "div", 2), c._UZ(6, "div", 4), c.qZA()()()), 2 & p && (c.Q6J("ngStyle", g.styles), c.xp6(4), c.hij(" ", g.title, " "), c.xp6(2), c.Q6J("innerHTML", g.text, c.oJD))
                 },
                 directives: [i.PC],
                 styles: [".modal-holder[_ngcontent-%COMP%]{min-width:calc(var(--vw) * 15.62);border:1px solid white;z-index:21;overflow:auto;background-color:#060b11b3;border-radius:calc(var(--vh) * .4)}.title-container[_ngcontent-%COMP%]{padding:calc(var(--vh) * 1.85);border-bottom:1px solid white;font-size:x-large}.info-container[_ngcontent-%COMP%]{padding:calc(var(--vh) * 3.7)}"]
             }), e
         })()
-    }, 531: (se, R, o) => {
+    },
+    531: (se, R, o) => {
         "use strict";
-        o.d(R, {$$: () => l, ZW: () => g, u4: () => r, VY: () => t});
+        o.d(R, {$$: () => c, ZW: () => g, u4: () => r, VY: () => t});
 
-        class l {
-            constructor(v, k, x, I, A = []) {
-                this.id = v, this.name = k, this.god = x, this.items = A, this.deck_type = I
+        class c {
+            constructor(v, k, P, I, A = []) {
+                this.id = v, this.name = k, this.god = P, this.items = A, this.deck_type = I
             }
         }
 
         class g {
-            constructor(v, k, x = null) {
-                this.deck = v, this.type = k, this.cards = x
+            constructor(v, k, P = null) {
+                this.deck = v, this.type = k, this.cards = P
             }
         }
 
@@ -60,22 +61,24 @@
         })();
 
         class t {
-            constructor(v, k = null, x = !1) {
-                this.deckSelect = v, this.gameModeID = k, this.forAI = x
+            constructor(v, k = null, P = !1) {
+                this.deckSelect = v, this.gameModeID = k, this.forAI = P
             }
         }
-    }, 57674: (se, R, o) => {
+    },
+    57674: (se, R, o) => {
         "use strict";
         o.d(R, {PE: () => i});
         var i = (() => {
             return (g = i || (i = {}))[g.AscID = 0] = "AscID", g[g.DescID = 1] = "DescID", g[g.AscQuality = 2] = "AscQuality", g[g.DescQuality = 3] = "DescQuality", g[g.AscMana = 4] = "AscMana", g[g.DescMana = 5] = "DescMana", g[g.AscScarcity = 6] = "AscScarcity", g[g.AscHealth = 7] = "AscHealth", g[g.DescHealth = 8] = "DescHealth", g[g.AscAttack = 9] = "AscAttack", g[g.DescAttack = 10] = "DescAttack", g[g.AscTribe = 11] = "AscTribe", g[g.DescTribe = 12] = "DescTribe", g[g.AscRarity = 13] = "AscRarity", g[g.DescRarity = 14] = "DescRarity", g[g.AscType = 15] = "AscType", g[g.DescType = 16] = "DescType", g[g.AscGod = 17] = "AscGod", g[g.DescGod = 18] = "DescGod", g[g.AscSet = 19] = "AscSet", g[g.DescSet = 20] = "DescSet", i;
             var g
         })()
-    }, 33403: (se, R, o) => {
+    },
+    33403: (se, R, o) => {
         "use strict";
-        o.d(R, {tO: () => l, zy: () => i, B_: () => y, Gn: () => m});
-        var l = (() => {
-            return (r = l || (l = {}))[r.SOLO = 0] = "SOLO", r[r.CONSTRUCTED = 1] = "CONSTRUCTED", r[r.DIRECT_CHALLENGE = 5] = "DIRECT_CHALLENGE", r[r.SEALED_DECK = 8] = "SEALED_DECK", r[r.TUTORIAL = 6] = "TUTORIAL", l;
+        o.d(R, {tO: () => c, zy: () => i, B_: () => y, Gn: () => m});
+        var c = (() => {
+            return (r = c || (c = {}))[r.SOLO = 0] = "SOLO", r[r.CONSTRUCTED = 1] = "CONSTRUCTED", r[r.DIRECT_CHALLENGE = 5] = "DIRECT_CHALLENGE", r[r.SEALED_DECK = 8] = "SEALED_DECK", r[r.TUTORIAL = 6] = "TUTORIAL", c;
             var r
         })(), i = (() => {
             return (r = i || (i = {}))[r.WEEKEND_EVENT = 2] = "WEEKEND_EVENT", i;
@@ -87,16 +90,17 @@
             return (r = m || (m = {}))[r.CARDS = 0] = "CARDS", r[r.LEVEL = 1] = "LEVEL", r[r.UPDATE = 2] = "UPDATE", r[r.LOCKED = 3] = "LOCKED", r[r.ASSETS_UPDATE = 4] = "ASSETS_UPDATE", m;
             var r
         })()
-    }, 98009: (se, R, o) => {
+    },
+    98009: (se, R, o) => {
         "use strict";
-        o.d(R, {D: () => P});
-        var l = o(73307), i = o(591), y = o(36053), e = o(5254), m = o(21086), p = o(92198), g = o(72986), r = o(21406),
-            t = o(24850), n = o(40963), v = o(2994), k = o(27221), x = o(531), I = o(5e3), A = o(44416), f = o(55778);
+        o.d(R, {D: () => S});
+        var c = o(73307), i = o(591), y = o(36053), e = o(5254), m = o(21086), p = o(92198), g = o(72986), r = o(21406),
+            t = o(24850), n = o(40963), v = o(2994), k = o(27221), P = o(531), I = o(5e3), A = o(44416), f = o(55778);
         o(63411);
-        let P = (() => {
+        let S = (() => {
             class b {
                 constructor(s, C, w, B) {
-                    this.utils = s, this.gameApiService = C, this.authService = w, this.cardsService = B, this._userDecks = new i.X([]), this._starterDecks = new i.X([]), this._activeDeck = new i.X(null), this._activeDeckChange = new i.X(new x.ZW(null, x.u4.NoActiveDeck)), this._deckSelectMode = new i.X(new x.VY(!1)), this.deckSizeLimit = 30, this.dataStore = {
+                    this.utils = s, this.gameApiService = C, this.authService = w, this.cardsService = B, this._userDecks = new i.X([]), this._starterDecks = new i.X([]), this._activeDeck = new i.X(null), this._activeDeckChange = new i.X(new P.ZW(null, P.u4.NoActiveDeck)), this._deckSelectMode = new i.X(new P.VY(!1)), this.deckSizeLimit = 30, this.dataStore = {
                         userDecks: [],
                         starterDecks: [],
                         activeDeck: null,
@@ -171,12 +175,12 @@
                         proto: ce,
                         quality: 5,
                         protoCard: w.get(ce)
-                    })) : this.utils.convertIdsToCards(s.ids, C, w), new x.$$(s.id, s.name, s.god, s.deck_type, B)
+                    })) : this.utils.convertIdsToCards(s.ids, C, w), new P.$$(s.id, s.name, s.god, s.deck_type, B)
                 }
 
                 convertToDeckStarter(s, C, w) {
                     const B = this.utils.convertIdsToCards(s.assets, C, w),
-                        ee = new x.$$(s.id, s.name, s.god, "starter", B);
+                        ee = new P.$$(s.id, s.name, s.god, "starter", B);
                     return ee.locked = !0, ee
                 }
 
@@ -222,7 +226,7 @@
                     if ("starter" === this.dataStore.activeDeck.deck_type) {
                         const ee = this.dataStore.starterDecks.find(ce => ce.id === this.dataStore.activeDeck.id);
                         return s && !this.decksChanged(ee, this.dataStore.activeDeck) ? (this.selectActiveDeck(ee), (0, m.of)(ee.id)) : (C.name = `${C.name} Copy`, this.gameApiService.post(`/account/${w}/deck?session=${B}`, C).pipe((0, g.q)(1), (0, v.b)(ce => {
-                            const de = new x.$$(ce, C.name, C.god, "common", [...this.dataStore.activeDeck.items]);
+                            const de = new P.$$(ce, C.name, C.god, "common", [...this.dataStore.activeDeck.items]);
                             this.dataStore.userDecks.push(de), this._emitDecks(), this.selectActiveDeck(de)
                         })))
                     }
@@ -266,24 +270,24 @@
                 }
 
                 updateDeckSelectMode(s, C, w) {
-                    this.dataStore.selectMode = new x.VY(s, C, w), this._deckSelectMode.next(Object.assign({}, this.dataStore).selectMode)
+                    this.dataStore.selectMode = new P.VY(s, C, w), this._deckSelectMode.next(Object.assign({}, this.dataStore).selectMode)
                 }
 
                 selectActiveDeck(s) {
-                    this.dataStore.activeDeck = this.deepCopyDeck(s), this._emitActiveDeck(new x.ZW(Object.assign({}, this.dataStore).activeDeck, x.u4.Change))
+                    this.dataStore.activeDeck = this.deepCopyDeck(s), this._emitActiveDeck(new P.ZW(Object.assign({}, this.dataStore).activeDeck, P.u4.Change))
                 }
 
                 selectActiveDeckById(s) {
                     const C = this.dataStore.userDecks.find(w => w.id === s);
-                    !C || (this.dataStore.activeDeck = this.deepCopyDeck(C), this._emitActiveDeck(new x.ZW(Object.assign({}, this.dataStore).activeDeck, x.u4.Change)))
+                    !C || (this.dataStore.activeDeck = this.deepCopyDeck(C), this._emitActiveDeck(new P.ZW(Object.assign({}, this.dataStore).activeDeck, P.u4.Change)))
                 }
 
                 deepCopyDeck(s) {
-                    return new x.$$(s.id, s.name, s.god, s.deck_type, [...s.items])
+                    return new P.$$(s.id, s.name, s.god, s.deck_type, [...s.items])
                 }
 
                 removeDeck(s) {
-                    this.deleteDeck(s.id), s === this.dataStore.activeDeck && (this.dataStore.activeDeck = null, this._emitActiveDeck(new x.ZW(null, x.u4.NoActiveDeck))), this.dataStore.userDecks = this.dataStore.userDecks.filter(C => C !== s), this._emitDecks()
+                    this.deleteDeck(s.id), s === this.dataStore.activeDeck && (this.dataStore.activeDeck = null, this._emitActiveDeck(new P.ZW(null, P.u4.NoActiveDeck))), this.dataStore.userDecks = this.dataStore.userDecks.filter(C => C !== s), this._emitDecks()
                 }
 
                 selectDeck(s, C) {
@@ -298,17 +302,17 @@
                 }
 
                 pushToActiveDeck(s) {
-                    this.dataStore.activeDeck.items.length >= this.deckSizeLimit ? this._emitActiveDeck(new x.ZW(Object.assign({}, this.dataStore).activeDeck, x.u4.DeckLimit)) : this.canAddCardToDeck(this.dataStore.activeDeck, s).pipe((0, v.b)(C => {
-                        C ? (this.dataStore.activeDeck.items = this.dataStore.activeDeck.items.concat([s]), this._emitActiveDeck(new x.ZW(Object.assign({}, this.dataStore).activeDeck, x.u4.Add, [s]))) : this._activeDeckChange.next(new x.ZW(Object.assign({}, this.dataStore).activeDeck, x.u4.CardLimit, [s]))
+                    this.dataStore.activeDeck.items.length >= this.deckSizeLimit ? this._emitActiveDeck(new P.ZW(Object.assign({}, this.dataStore).activeDeck, P.u4.DeckLimit)) : this.canAddCardToDeck(this.dataStore.activeDeck, s).pipe((0, v.b)(C => {
+                        C ? (this.dataStore.activeDeck.items = this.dataStore.activeDeck.items.concat([s]), this._emitActiveDeck(new P.ZW(Object.assign({}, this.dataStore).activeDeck, P.u4.Add, [s]))) : this._activeDeckChange.next(new P.ZW(Object.assign({}, this.dataStore).activeDeck, P.u4.CardLimit, [s]))
                     })).subscribe()
                 }
 
                 removeCardFromActiveDeck(s) {
-                    this.dataStore.activeDeck.items = this.dataStore.activeDeck.items.filter(C => C !== s), this._emitActiveDeck(new x.ZW(Object.assign({}, this.dataStore).activeDeck, x.u4.Remove, [s]))
+                    this.dataStore.activeDeck.items = this.dataStore.activeDeck.items.filter(C => C !== s), this._emitActiveDeck(new P.ZW(Object.assign({}, this.dataStore).activeDeck, P.u4.Remove, [s]))
                 }
 
                 removeCardsFromActiveDeck(s) {
-                    this.dataStore.activeDeck.items = this.dataStore.activeDeck.items.filter(C => !s.includes(C)), this._emitActiveDeck(new x.ZW(Object.assign({}, this.dataStore).activeDeck, x.u4.Remove, [...s]))
+                    this.dataStore.activeDeck.items = this.dataStore.activeDeck.items.filter(C => !s.includes(C)), this._emitActiveDeck(new P.ZW(Object.assign({}, this.dataStore).activeDeck, P.u4.Remove, [...s]))
                 }
 
                 canAddCardToDeck(s, C) {
@@ -331,18 +335,19 @@
             }
 
             return b.\u0275fac = function (s) {
-                return new (s || b)(I.LFG(A.F), I.LFG(f.Ft), I.LFG(l.mI), I.LFG(f.dK))
+                return new (s || b)(I.LFG(A.F), I.LFG(f.Ft), I.LFG(c.mI), I.LFG(f.dK))
             }, b.\u0275prov = I.Yz7({token: b, factory: b.\u0275fac}), b
         })()
-    }, 23569: (se, R, o) => {
+    },
+    23569: (se, R, o) => {
         "use strict";
         o.d(R, {d: () => r});
-        var l = o(8929), i = o(591), y = o(92198), e = o(24850), m = o(73307), p = o(5e3);
+        var c = o(8929), i = o(591), y = o(92198), e = o(24850), m = o(73307), p = o(5e3);
         o(63411);
         let r = (() => {
             class t {
                 constructor(v, k) {
-                    this.storage = v, this.authService = k, this.unsubscribe = new l.xQ, this.dataStore = {selectedWallet: null}, this._selectedWallet$ = new i.X(null)
+                    this.storage = v, this.authService = k, this.unsubscribe = new c.xQ, this.dataStore = {selectedWallet: null}, this._selectedWallet$ = new i.X(null)
                 }
 
                 ngOnDestroy() {
@@ -383,12 +388,13 @@
                 return new (v || t)(p.LFG(m.qy), p.LFG(m.mI))
             }, t.\u0275prov = p.Yz7({token: t, factory: t.\u0275fac, providedIn: "root"}), t
         })()
-    }, 11130: (se, R, o) => {
+    },
+    11130: (se, R, o) => {
         "use strict";
         o.d(R, {xV: () => ae});
-        var l = o(8929), i = o(591), y = o(21086), e = o(36053), m = o(98723), p = o(41746), g = o(72986), r = o(92198),
-            t = o(2994), n = o(24850), v = o(7625), k = o(61709), x = o(87545), I = o(75778), A = o(40537),
-            f = o(73307), O = o(33403), P = o(14618), b = o(69931), $ = o(72224), s = o(5e3), C = o(79763),
+        var c = o(8929), i = o(591), y = o(21086), e = o(36053), m = o(98723), p = o(41746), g = o(72986), r = o(92198),
+            t = o(2994), n = o(24850), v = o(7625), k = o(61709), P = o(87545), I = o(75778), A = o(40537),
+            f = o(73307), O = o(33403), S = o(14618), b = o(69931), T = o(72224), s = o(5e3), C = o(79763),
             w = o(69340), B = o(55778), ee = o(51395), ce = o(64523), de = o(96727);
         o(63411);
 
@@ -400,8 +406,8 @@
 
         let ae = (() => {
             class Y {
-                constructor(V, le, Ce, $e, Be, W, he, Q) {
-                    this.gameService = V, this.gameDownloadService = le, this.storage = Ce, this.gameApi = $e, this.authService = Be, this.packService = W, this.sealedService = he, this.ngrxStore = Q, this.BUFFER_TIME = 5e3, this.unsubscribe = new l.xQ, this.dataStore = {gameModes: []}, this._gameModes$ = new i.X({
+                constructor(V, le, Ce, Te, Be, H, he, Q) {
+                    this.gameService = V, this.gameDownloadService = le, this.storage = Ce, this.gameApi = Te, this.authService = Be, this.packService = H, this.sealedService = he, this.ngrxStore = Q, this.BUFFER_TIME = 5e3, this.unsubscribe = new c.xQ, this.dataStore = {gameModes: []}, this._gameModes$ = new i.X({
                         gameModes: [],
                         refresh: !1
                     }), this.watchForUpdate(), this.watchForAssetUpdate(), this.watchForPacks()
@@ -416,8 +422,8 @@
                 }
 
                 updateGameModeDeck(V, le, Ce = !1) {
-                    this.getGameMode$(V).pipe((0, g.q)(1), (0, r.h)($e => void 0 !== $e), (0, t.b)($e => {
-                        this.saveGameModeDeck($e.id, Ce, le), Ce ? $e.aiSelectedDeckId = le : $e.lastSelectedDeckId = le, this._emitGameModes()
+                    this.getGameMode$(V).pipe((0, g.q)(1), (0, r.h)(Te => void 0 !== Te), (0, t.b)(Te => {
+                        this.saveGameModeDeck(Te.id, Ce, le), Ce ? Te.aiSelectedDeckId = le : Te.lastSelectedDeckId = le, this._emitGameModes()
                     })).subscribe()
                 }
 
@@ -449,8 +455,8 @@
                 }
 
                 saveGameModeDeck(V, le, Ce) {
-                    const $e = this.getGameModeDeckKey(V, le);
-                    this.storage.set([$e], Ce)
+                    const Te = this.getGameModeDeckKey(V, le);
+                    this.storage.set([Te], Ce)
                 }
 
                 getGameModeDeckKey(V, le) {
@@ -480,7 +486,7 @@
                 }
 
                 fetchGameModes(V = !1) {
-                    (0, e.aj)([this.fetchPlayerGameModes$(), this.getLock$(), this.fetchPlayerRanks$()]).pipe((0, g.q)(1), (0, n.U)(([le, Ce, $e]) => le.map(Be => this.transformGameModes(Be, Ce, $e))), (0, t.b)(le => {
+                    (0, e.aj)([this.fetchPlayerGameModes$(), this.getLock$(), this.fetchPlayerRanks$()]).pipe((0, g.q)(1), (0, n.U)(([le, Ce, Te]) => le.map(Be => this.transformGameModes(Be, Ce, Te))), (0, t.b)(le => {
                         for (const gm of le) {
                             if (gm.id === 0) { // Solo
                                 gm.image_url = 'https://images.godsunchained.com/art2/1024/1492.jpg';
@@ -505,8 +511,8 @@
                 }
 
                 scheduleSealedModeRefresh(V) {
-                    const le = Date.now(), Ce = new Date(V.end_time_server).getTime(), Be = Ce + 36e5 - le, W = Ce - le;
-                    W > 0 && W < $.v && (0, m.H)(W).pipe((0, v.R)(this.unsubscribe), (0, g.q)(1)).subscribe(he => this.sealedService.fetchSealed()), Be > 0 && Be < $.v && (0, m.H)(Be).pipe((0, v.R)(this.unsubscribe), (0, g.q)(1)).subscribe(he => this.sealedService.fetchSealed())
+                    const le = Date.now(), Ce = new Date(V.end_time_server).getTime(), Be = Ce + 36e5 - le, H = Ce - le;
+                    H > 0 && H < T.v && (0, m.H)(H).pipe((0, v.R)(this.unsubscribe), (0, g.q)(1)).subscribe(he => this.sealedService.fetchSealed()), Be > 0 && Be < T.v && (0, m.H)(Be).pipe((0, v.R)(this.unsubscribe), (0, g.q)(1)).subscribe(he => this.sealedService.fetchSealed())
                 }
 
                 mockSealedMode() {
@@ -553,20 +559,20 @@
                     let V = null;
                     return (0, e.aj)([this.gameService.currentGameContext$, this.packService.unopenedPacks$, (0, m.H)(0, 6e5)]).pipe((0, r.h)(([le, Ce]) => null != le), (0, k.VS)(([le, Ce]) => {
                         if (V = null, Ce) {
-                            const $e = Ce.filter(Be => "starter" === Be.pack_source);
-                            $e && $e.length > 0 && (V = {type: O.Gn.CARDS})
+                            const Te = Ce.filter(Be => "starter" === Be.pack_source);
+                            Te && Te.length > 0 && (V = {type: O.Gn.CARDS})
                         }
                         return (0, y.of)(le)
                     }), (0, k.VS)(le => (0, p.$R)((0, y.of)(le), this.gameService.getBranch$(le.id))), (0, k.VS)(([le, Ce]) => "" === Ce.name ? (V = {type: O.Gn.LOCKED}, (0, y.of)([!1, !1])) : (0, p.$R)(this.gameDownloadService.requiresUpdate(le, Ce.name), this.gameDownloadService.requiresAssetsUpdate(le, Ce.name))), (0, k.VS)(([le, Ce]) => (le ? V = {type: O.Gn.UPDATE} : Ce.length > 0 && (V = {type: O.Gn.ASSETS_UPDATE}), (0, y.of)(V))))
                 }
 
                 checkIfRequiresUpdate() {
-                    return this.gameService.currentGameContext$.pipe((0, x.w)(V => (0, p.$R)((0, y.of)(V), this.gameService.getBranch(V.id))), (0, x.w)(([V, le]) => this.gameDownloadService.requiresUpdate(V, le)))
+                    return this.gameService.currentGameContext$.pipe((0, P.w)(V => (0, p.$R)((0, y.of)(V), this.gameService.getBranch(V.id))), (0, P.w)(([V, le]) => this.gameDownloadService.requiresUpdate(V, le)))
                 }
 
                 watchForUpdate() {
                     this.ngrxStore.select((0, b.DM)()).pipe((0, v.R)(this.unsubscribe), (0, r.h)(V => !!V), (0, r.h)(V => "completed" === V.status), (0, I.x)(), (0, t.b)(V => {
-                        this.updateLocks(!0), this.ngrxStore.dispatch(new P.Tg({status: "idle", percentage: 0}))
+                        this.updateLocks(!0), this.ngrxStore.dispatch(new S.Tg({status: "idle", percentage: 0}))
                     })).subscribe()
                 }
 
@@ -589,9 +595,9 @@
                 }
 
                 transformGameModes(V, le, Ce) {
-                    const $e = Ce.find(W => W.game_mode === V.id) || null;
+                    const Te = Ce.find(H => H.game_mode === V.id) || null;
                     let Be = Object.assign(Object.assign({}, V), {
-                        rank: $e,
+                        rank: Te,
                         lock: le,
                         type: V.properties.type,
                         lastSelectedDeckId: this.getGameModeDeck(V.id, !1),
@@ -603,10 +609,10 @@
                 }
 
                 scheduleRefresh(V = []) {
-                    const le = Date.now(), Ce = V.filter(W => 1 === W.rotation && W.end_timestamp > le);
+                    const le = Date.now(), Ce = V.filter(H => 1 === H.rotation && H.end_timestamp > le);
                     if (0 === Ce.length) return;
-                    const Be = Ce.reduce((W, he) => W.end_timestamp < he.end_timestamp ? W : he).end_timestamp - le;
-                    Be > 0 && Be < $.v && (0, m.H)(Be).pipe((0, v.R)(this.unsubscribe), (0, g.q)(1), (0, t.b)(W => this.fetchGameModes(!0))).subscribe()
+                    const Be = Ce.reduce((H, he) => H.end_timestamp < he.end_timestamp ? H : he).end_timestamp - le;
+                    Be > 0 && Be < T.v && (0, m.H)(Be).pipe((0, v.R)(this.unsubscribe), (0, g.q)(1), (0, t.b)(H => this.fetchGameModes(!0))).subscribe()
                 }
 
                 storeUserGameModeOrderMap(V) {
@@ -620,8 +626,8 @@
                 }
 
                 incrementGameModeCount(V, le = 1) {
-                    const Ce = this.authService.getUserId(), $e = this.authService.getGameSessionTicket();
-                    return this.gameApi.post(`/user/${Ce}/mode?session=${$e}`, {game_mode: V, add: le})
+                    const Ce = this.authService.getUserId(), Te = this.authService.getGameSessionTicket();
+                    return this.gameApi.post(`/user/${Ce}/mode?session=${Te}`, {game_mode: V, add: le})
                 }
             }
 
@@ -629,36 +635,37 @@
                 return new (V || Y)(s.LFG(C.hM), s.LFG(w.b5), s.LFG(f.qy), s.LFG(B.Ft), s.LFG(f.mI), s.LFG(ee.F), s.LFG(ce.H), s.LFG(de.yh))
             }, Y.\u0275prov = s.Yz7({token: Y, factory: Y.\u0275fac, providedIn: "root"}), Y
         })()
-    }, 88632: (se, R, o) => {
+    },
+    88632: (se, R, o) => {
         "use strict";
         o.d(R, {MZ: () => n});
-        var l = o(591), i = o(2994), y = o(73307), e = o(5e3), m = o(55778), p = o(79763);
+        var c = o(591), i = o(2994), y = o(73307), e = o(5e3), m = o(55778), p = o(79763);
         o(63411);
         let n = (() => {
             class v {
-                constructor(x, I, A) {
-                    this.gameApi = x, this.authService = I, this.gameService = A, this.dataStore = {extendedAccountProperties: null}, this._extendedAccountProperties$ = new l.X(null)
+                constructor(P, I, A) {
+                    this.gameApi = P, this.authService = I, this.gameService = A, this.dataStore = {extendedAccountProperties: null}, this._extendedAccountProperties$ = new c.X(null)
                 }
 
                 get extendedAccountProperties$() {
                     return this._extendedAccountProperties$.asObservable()
                 }
 
-                getAccountProperties(x, I) {
-                    return (!x || !I) && (x = this.authService.getUserId(), I = this.authService.getGameSessionTicket()), this.gameApi.get(`/account/${x}/properties?session=${I}`)
+                getAccountProperties(P, I) {
+                    return (!P || !I) && (P = this.authService.getUserId(), I = this.authService.getGameSessionTicket()), this.gameApi.get(`/account/${P}/properties?session=${I}`)
                 }
 
-                _emit(x) {
-                    this.dataStore.extendedAccountProperties = x, this._extendedAccountProperties$.next(Object.assign({}, this.dataStore).extendedAccountProperties)
+                _emit(P) {
+                    this.dataStore.extendedAccountProperties = P, this._extendedAccountProperties$.next(Object.assign({}, this.dataStore).extendedAccountProperties)
                 }
 
-                getExtendedAccountPropertiesById(x, I) {
-                    return this.gameApi.get(`/account/${x}/properties?format=extended&session=${I}`).pipe((0, i.b)(A => this._emit(A)))
+                getExtendedAccountPropertiesById(P, I) {
+                    return this.gameApi.get(`/account/${P}/properties?format=extended&session=${I}`).pipe((0, i.b)(A => this._emit(A)))
                 }
 
                 getExtendedAccountProperties() {
-                    const x = this.authService.getUserId(), I = this.authService.getGameSessionTicket();
-                    return this.getExtendedAccountPropertiesById(x, I)
+                    const P = this.authService.getUserId(), I = this.authService.getGameSessionTicket();
+                    return this.getExtendedAccountPropertiesById(P, I)
                 }
 
                 fetchExtendedAccount() {
@@ -666,17 +673,18 @@
                 }
             }
 
-            return v.\u0275fac = function (x) {
-                return new (x || v)(e.LFG(m.Ft), e.LFG(y.mI), e.LFG(p.hM))
+            return v.\u0275fac = function (P) {
+                return new (P || v)(e.LFG(m.Ft), e.LFG(y.mI), e.LFG(p.hM))
             }, v.\u0275prov = e.Yz7({token: v, factory: v.\u0275fac, providedIn: "root"}), v
         })()
-    }, 8561: (se, R, o) => {
+    },
+    8561: (se, R, o) => {
         "use strict";
-        o.d(R, {GT: () => Rt, OC: () => We, Qc: () => we});
-        var l = o(59633), i = o(8929), y = o(591), e = o(21086), m = o(61737), p = o(98723), g = o(67876), r = o(7625),
-            t = o(24850), n = o(87224), v = o(92198), k = o(87168), x = o(27221), I = o(2994), A = o(72986),
-            f = o(61709), O = o(87545), P = o(77604), b = o(44290), $ = o(40537), s = o(73307), C = o(63764),
-            w = o(52492), B = o(33403), ee = o(5231), ce = o(80537), de = o(8611), fe = o(5e3), Z = o(40520);
+        o.d(R, {GT: () => Rt, OC: () => He, Qc: () => we});
+        var c = o(59633), i = o(8929), y = o(591), e = o(21086), m = o(61737), p = o(98723), g = o(67876), r = o(7625),
+            t = o(24850), n = o(87224), v = o(92198), k = o(87168), P = o(27221), I = o(2994), A = o(72986),
+            f = o(61709), O = o(87545), S = o(77604), b = o(44290), T = o(40537), s = o(73307), C = o(63764),
+            w = o(52492), B = o(33403), ee = o(5231), ce = o(80537), de = o(8611), fe = o(5e3), N = o(40520);
         o(63411);
         let ae = (() => {
             class Ee {
@@ -713,8 +721,8 @@
                 return new (q || Ee)(fe.LFG(s.mI))
             }, Ee.\u0275prov = fe.Yz7({token: Ee, factory: Ee.\u0275fac, providedIn: "root"}), Ee
         })();
-        var Y = o(79763), ye = o(83035), V = o(88632), le = o(66088), Ce = o(47313), $e = o(11130), Be = o(55778),
-            W = o(98009);
+        var Y = o(79763), ye = o(83035), V = o(88632), le = o(66088), Ce = o(47313), Te = o(11130), Be = o(55778),
+            H = o(98009);
 
         class we {
             constructor(It, q, re, xe) {
@@ -722,8 +730,8 @@
             }
         }
 
-        var We = (() => {
-            return (Ee = We || (We = {}))[Ee.OUT = 0] = "OUT", Ee[Ee.IN = 1] = "IN", Ee[Ee.PROGRESSION_GAME_MODE = 2] = "PROGRESSION_GAME_MODE", Ee[Ee.PROGRESSION_ACCOUNT = 3] = "PROGRESSION_ACCOUNT", We;
+        var He = (() => {
+            return (Ee = He || (He = {}))[Ee.OUT = 0] = "OUT", Ee[Ee.IN = 1] = "IN", Ee[Ee.PROGRESSION_GAME_MODE = 2] = "PROGRESSION_GAME_MODE", Ee[Ee.PROGRESSION_ACCOUNT = 3] = "PROGRESSION_ACCOUNT", He;
             var Ee
         })(), Ie = (() => {
             return (Ee = Ie || (Ie = {})).DECK = "deck", Ee.DECK_GLOBAL = "deck_global", Ee.COLLECTION = "collection", Ie;
@@ -731,8 +739,8 @@
         })();
         let Rt = (() => {
             class Ee {
-                constructor(q, re, xe, Ge, z, N, d, _, U, ie, ke, Ve, ct) {
-                    this.http = q, this.server = re, this.gameService = xe, this.queueService = Ge, this.authService = z, this.guUserService = N, this.modalService = d, this.progressionService = _, this.guGameService = U, this.configService = ie, this.audioService = ke, this.analyticsService = Ve, this.deckService = ct, this.numActiveQueues = 0, this.unsubscribe = new i.xQ, this.dataStore = {currentMatchId: null}, this._currentMatchId$ = new y.X(null), this.queueAcknowledge$ = new i.xQ, this.clientServerPongReceived$ = new i.xQ, this._playing$ = new y.X({status: We.OUT}), this.watchQueues(), window.bridge.onQuit(() => {
+                constructor(q, re, xe, Ge, W, z, d, _, U, ie, ke, Ve, ct) {
+                    this.http = q, this.server = re, this.gameService = xe, this.queueService = Ge, this.authService = W, this.guUserService = z, this.modalService = d, this.progressionService = _, this.guGameService = U, this.configService = ie, this.audioService = ke, this.analyticsService = Ve, this.deckService = ct, this.numActiveQueues = 0, this.unsubscribe = new i.xQ, this.dataStore = {currentMatchId: null}, this._currentMatchId$ = new y.X(null), this.queueAcknowledge$ = new i.xQ, this.clientServerPongReceived$ = new i.xQ, this._playing$ = new y.X({status: He.OUT}), this.watchQueues(), window.bridge.onQuit(() => {
                         this.queueService.getGameQueues(1).subscribe(it => {
                             this.trySendingCancelReq(it.mode.id, it.params.player.id)
                         })
@@ -769,23 +777,23 @@
 
                 buildOpponent(q) {
                     let re = {};
-                    const xe = q.opponent_attributes.find(N => N.type === Ie.COLLECTION),
-                        Ge = q.opponent_attributes.find(N => N.type === Ie.DECK),
-                        z = q.opponent_attributes.find(N => N.type === Ie.DECK_GLOBAL);
+                    const xe = q.opponent_attributes.find(z => z.type === Ie.COLLECTION),
+                        Ge = q.opponent_attributes.find(z => z.type === Ie.DECK),
+                        W = q.opponent_attributes.find(z => z.type === Ie.DECK_GLOBAL);
                     return xe && (re = Object.assign(Object.assign({}, re), {collection: {id: xe.value}})), Ge && (re = Object.assign(Object.assign({}, re), {
                         deck: {
                             id: Ge.value,
                             global: !1
                         }
-                    })), z && (re = Object.assign(Object.assign({}, re), {deck: Object.assign(Object.assign({}, re.deck), {global: 1 === z.value})})), re
+                    })), W && (re = Object.assign(Object.assign({}, re), {deck: Object.assign(Object.assign({}, re.deck), {global: 1 === W.value})})), re
                 }
 
                 handleQueueResponse() {
                     this.client.on(21, q => {
                         const re = this.tryParseJson(q), xe = this.buildOpponent(re);
-                        re.game_mode === B.B_.SERVER_SOLO && (xe.id = 0), this.queueService.getQueue(1, re.game_mode).pipe((0, n.P)(), (0, v.h)(Ge => "active" === Ge.status), (0, k.M)(this.gameService.getBranch$(1)), (0, x.K)(Ge => (console.error("playService->handleQueueResponse() error getting queue", Ge), (0, e.of)([null, null])))).subscribe(([Ge, z]) => {
+                        re.game_mode === B.B_.SERVER_SOLO && (xe.id = 0), this.queueService.getQueue(1, re.game_mode).pipe((0, n.P)(), (0, v.h)(Ge => "active" === Ge.status), (0, k.M)(this.gameService.getBranch$(1)), (0, P.K)(Ge => (console.error("playService->handleQueueResponse() error getting queue", Ge), (0, e.of)([null, null])))).subscribe(([Ge, W]) => {
                             Ge && (this.queueService.complete(Ge), re.success && (this.dataStore.currentMatchId = re.match_id, this._currentMatchId$.next(this.dataStore.currentMatchId), this.play({
-                                realm: z.id,
+                                realm: W.id,
                                 mode: Ge.mode.id,
                                 player: Ge.params.player,
                                 match_id: re.match_id,
@@ -882,33 +890,33 @@
                     }], re = [...re, {type: Ie.DECK_GLOBAL, value: q.opponent.deck.global ? 1 : 0}]), re
                 }
 
-                buildQueueMessage(q, re, xe, Ge, z, N) {
+                buildQueueMessage(q, re, xe, Ge, W, z) {
                     return {
                         id: re,
-                        realm: z,
+                        realm: W,
                         deck_id: xe,
                         token: "",
                         game_mode: q.id,
                         attributes: Ge,
-                        private_match_password: N
+                        private_match_password: z
                     }
                 }
 
                 start(q, re, xe, Ge) {
-                    const z = this.buildQueueMessage(q, re, xe.player.deck.id, this.buildAttributes(xe), this.branch.name, Ge);
-                    return this.numActiveQueues > 0 ? (0, m._)(ce.k.CODE_0) : this.client.socketConnected ? this.deckService.isDeckComplete(xe.player.deck).pipe((0, A.q)(1), (0, f.VS)(N => N ? this.clientServerPong(q, z, re, xe) : (this.deckService.fetchDecks(), (0, m._)(ce.k.CODE_11)))) : (this.connectClient(), (0, m._)(ce.k.CODE_1))
+                    const W = this.buildQueueMessage(q, re, xe.player.deck.id, this.buildAttributes(xe), this.branch.name, Ge);
+                    return this.numActiveQueues > 0 ? (0, m._)(ce.k.CODE_0) : this.client.socketConnected ? this.deckService.isDeckComplete(xe.player.deck).pipe((0, A.q)(1), (0, f.VS)(z => z ? this.clientServerPong(q, W, re, xe) : (this.deckService.fetchDecks(), (0, m._)(ce.k.CODE_11)))) : (this.connectClient(), (0, m._)(ce.k.CODE_1))
                 }
 
                 clientServerPong(q, re, xe, Ge) {
                     return this.clientServerPongReceived$.next(!1), this.trySendingSocketMsg(6, re) ? ((0, p.H)(3e3).subscribe(() => {
                         this.clientServerPongReceived$.next(!1)
-                    }), this.clientServerPongReceived$.pipe((0, A.q)(1), (0, f.VS)(N => N ? this.startQueueReq$(q, re, xe, Ge) : (console.log("playService->start() cannot queue, did not receive CLIENT_SERVER_PONG within 3000ms"), this.connectClient(), (0, m._)(ce.k.CODE_9))))) : (this.connectClient(), (0, m._)(ce.k.CODE_8))
+                    }), this.clientServerPongReceived$.pipe((0, A.q)(1), (0, f.VS)(z => z ? this.startQueueReq$(q, re, xe, Ge) : (console.log("playService->start() cannot queue, did not receive CLIENT_SERVER_PONG within 3000ms"), this.connectClient(), (0, m._)(ce.k.CODE_9))))) : (this.connectClient(), (0, m._)(ce.k.CODE_8))
                 }
 
                 startQueueReq$(q, re, xe, Ge) {
                     return this.queueAcknowledge$.next(!1), this.trySendingQueueReq(re) ? ((0, p.H)(3e3).subscribe(() => {
                         this.queueAcknowledge$.next(!1)
-                    }), this.queueAcknowledge$.pipe((0, A.q)(1), (0, f.VS)(N => N ? this.queueService.start(1, q, Ge) : (console.log("playService->startQueueReq$() cannot queue, did not receive ACK message from server within 3000ms"), this.connectClient(), (0, m._)(ce.k.CODE_3))))) : (console.log("playService->startQueueReq$() cannot queue, unable to send queue request message"), this.connectClient(), (0, m._)(ce.k.CODE_2))
+                    }), this.queueAcknowledge$.pipe((0, A.q)(1), (0, f.VS)(z => z ? this.queueService.start(1, q, Ge) : (console.log("playService->startQueueReq$() cannot queue, did not receive ACK message from server within 3000ms"), this.connectClient(), (0, m._)(ce.k.CODE_3))))) : (console.log("playService->startQueueReq$() cannot queue, unable to send queue request message"), this.connectClient(), (0, m._)(ce.k.CODE_2))
                 }
 
                 trySendingSocketMsg(q, re) {
@@ -945,9 +953,9 @@
                 }
 
                 play(q) {
-                    this.server.serverActive() || (this.server.closeServer(), this.server.createServer()), console.log(JSON.stringify(q)), this.server.setConfig(q), this.modalService.destroyModalsStack(), this.setPlaying(We.IN, q.mode);
+                    this.server.serverActive() || (this.server.closeServer(), this.server.createServer()), console.log(JSON.stringify(q)), this.server.setConfig(q), this.modalService.destroyModalsStack(), this.setPlaying(He.IN, q.mode);
                     const re = this.buildArgs(q);
-                    this.gameService.currentGameContext$.pipe((0, A.q)(1), (0, O.w)(xe => this.gameService.play(xe, re)), (0, O.w)(xe => (0, p.H)(2e3, 2e3).pipe((0, P.h)(xe), (0, b.o)(() => window.bridge.isRunning(xe.process.pid)))), (0, $.x)(() => {
+                    this.gameService.currentGameContext$.pipe((0, A.q)(1), (0, O.w)(xe => this.gameService.play(xe, re)), (0, O.w)(xe => (0, p.H)(2e3, 2e3).pipe((0, S.h)(xe), (0, b.o)(() => window.bridge.isRunning(xe.process.pid)))), (0, T.x)(() => {
                         window.bridge.focus(), this.audioService.returnToLauncher.play(), q.mode === B.B_.SOLO && this.logGameCompleted(q.mode, "Solo"), q.mode === B.B_.DIRECT_CHALLENGE && this.logGameCompleted(q.mode, "Direct Challenge", q.match_id), this.handleProgression(q.mode)
                     })).subscribe(g.Z, xe => {
                         console.error("playService->play() error starting a game", xe), Object.values(ce.k).includes(xe) ? this.showInfoModal("Unable to start game", xe) : this.showInfoModal("Unable to start game", ce.k.CODE_5)
@@ -958,7 +966,7 @@
                     "function" == typeof fbq && fbq("track", "ViewContent"), "function" == typeof gtag && gtag("event", "completed", {
                         event_category: "game",
                         event_label: "user"
-                    }), this.analyticsService.postEvent(new l.Game.Completed.Event({
+                    }), this.analyticsService.postEvent(new c.Game.Completed.Event({
                         game_id: 1,
                         latest_id: xe,
                         mode_id: q,
@@ -968,7 +976,7 @@
 
                 handleProgression(q) {
                     this.checkWhetherToShowAccountProgress().pipe((0, A.q)(1), (0, I.b)(re => {
-                        this.setPlaying(re && 0 !== q ? We.PROGRESSION_ACCOUNT : We.OUT, q)
+                        this.setPlaying(re && 0 !== q ? He.PROGRESSION_ACCOUNT : He.OUT, q)
                     })).subscribe()
                 }
 
@@ -1023,13 +1031,14 @@
             }
 
             return Ee.\u0275fac = function (q) {
-                return new (q || Ee)(fe.LFG(Z.eN), fe.LFG(ae), fe.LFG(Y.hM), fe.LFG(ye.g), fe.LFG(s.mI), fe.LFG(V.MZ), fe.LFG(le.Z), fe.LFG(Ce.$z), fe.LFG($e.xV), fe.LFG(Be.LE), fe.LFG(s.pk), fe.LFG(Be.yD), fe.LFG(W.D))
+                return new (q || Ee)(fe.LFG(N.eN), fe.LFG(ae), fe.LFG(Y.hM), fe.LFG(ye.g), fe.LFG(s.mI), fe.LFG(V.MZ), fe.LFG(le.Z), fe.LFG(Ce.$z), fe.LFG(Te.xV), fe.LFG(Be.LE), fe.LFG(s.pk), fe.LFG(Be.yD), fe.LFG(H.D))
             }, Ee.\u0275prov = fe.Yz7({token: Ee, factory: Ee.\u0275fac, providedIn: "root"}), Ee
         })()
-    }, 47313: (se, R, o) => {
+    },
+    47313: (se, R, o) => {
         "use strict";
-        o.d(R, {oW: () => I, $z: () => $});
-        var l = o(591), i = o(61737), y = o(72986), e = o(2994), m = o(27221), p = o(24850), g = o(73307), r = o(5e3),
+        o.d(R, {oW: () => I, $z: () => T});
+        var c = o(591), i = o(61737), y = o(72986), e = o(2994), m = o(27221), p = o(24850), g = o(73307), r = o(5e3),
             t = o(55778), n = o(11130);
 
         class I {
@@ -1038,20 +1047,20 @@
             }
         }
 
-        class P {
+        class S {
             constructor(C, w, B, ee, ce, de) {
                 this.game_mode = C, this.rating = w, this.rank_level = B, this.win_points = ee, this.loss_points = ce, this.safety_line = de
             }
         }
 
-        let $ = (() => {
+        let T = (() => {
             class s {
                 constructor(w, B, ee) {
                     this.gameApi = w, this.storage = B, this.guGameService = ee, this.dataStore = {
                         accountThresholds: [],
                         gameRanks: [],
                         userRankLevels: []
-                    }, this._accountThresholds$ = new l.X(Object.assign({}, this.dataStore).accountThresholds), this._gameRanks$ = new l.X(Object.assign({}, this.dataStore).gameRanks), this._userRankLevels$ = new l.X(Object.assign({}, this.dataStore).userRankLevels)
+                    }, this._accountThresholds$ = new c.X(Object.assign({}, this.dataStore).accountThresholds), this._gameRanks$ = new c.X(Object.assign({}, this.dataStore).gameRanks), this._userRankLevels$ = new c.X(Object.assign({}, this.dataStore).userRankLevels)
                 }
 
                 get accountThresholds$() {
@@ -1119,7 +1128,7 @@
                 }
 
                 getStoredRankedProgression(w, B) {
-                    const ee = this.storage.get([`last-ranked-progress-${w.toString()}`, B.toString()]) || new P(B, 0, 1, 0, 0, 40);
+                    const ee = this.storage.get([`last-ranked-progress-${w.toString()}`, B.toString()]) || new S(B, 0, 1, 0, 0, 40);
                     return this.dataStore.userRankLevels.push(ee), this._userRankLevels$.next([...this.dataStore.userRankLevels]), ee
                 }
 
@@ -1146,18 +1155,19 @@
                 return new (w || s)(r.LFG(t.Ft), r.LFG(g.qy), r.LFG(n.xV))
             }, s.\u0275prov = r.Yz7({token: s, factory: s.\u0275fac}), s
         })()
-    }, 64523: (se, R, o) => {
+    },
+    64523: (se, R, o) => {
         "use strict";
         o.d(R, {r: () => A, H: () => f});
-        var l = o(72224), i = o(73307), y = o(591), e = o(8929), m = o(98723), p = o(72986), g = o(2994), r = o(7625),
-            t = o(24850), n = o(33403), v = o(5e3), k = o(55778), x = o(83035), I = o(44416), A = (() => {
+        var c = o(72224), i = o(73307), y = o(591), e = o(8929), m = o(98723), p = o(72986), g = o(2994), r = o(7625),
+            t = o(24850), n = o(33403), v = o(5e3), k = o(55778), P = o(83035), I = o(44416), A = (() => {
                 return (O = A || (A = {}))[O.AVAILABLE = 0] = "AVAILABLE", O[O.WAITING_TO_START = 1] = "WAITING_TO_START", O[O.STARTED = 2] = "STARTED", O[O.REWARDS_AVAILABLE = 3] = "REWARDS_AVAILABLE", O[O.ENDED = 4] = "ENDED", A;
                 var O
             })();
         let f = (() => {
             class O {
-                constructor(b, $, s, C) {
-                    this.gameApi = b, this.authService = $, this.queueService = s, this.utilService = C, this.dataStore = {
+                constructor(b, T, s, C) {
+                    this.gameApi = b, this.authService = T, this.queueService = s, this.utilService = C, this.dataStore = {
                         sealedMode: null,
                         sealedModeStatus: A.AVAILABLE
                     }, this._sealedMode$ = new y.X(null), this._sealedModeStatus$ = new y.X(this.dataStore.sealedModeStatus), this.unsubscribe = new e.xQ
@@ -1176,8 +1186,8 @@
                 }
 
                 fetchSealed() {
-                    const b = this.authService.getUserId(), $ = this.authService.getGameSessionTicket();
-                    this.gameApi.get(`/user/${b}/mode/${n.B_.SEALED_DECK}/deck?session=${$}`).pipe((0, p.q)(1)).subscribe(s => {
+                    const b = this.authService.getUserId(), T = this.authService.getGameSessionTicket();
+                    this.gameApi.get(`/user/${b}/mode/${n.B_.SEALED_DECK}/deck?session=${T}`).pipe((0, p.q)(1)).subscribe(s => {
                         this.updateSealedMode(s)
                     }, s => {
                         this.updateSealedMode(void 0)
@@ -1185,8 +1195,8 @@
                 }
 
                 enterSealed$(b) {
-                    const $ = this.authService.getUserId(), s = this.authService.getGameSessionTicket();
-                    return this.gameApi.post(`/user/${$}/mode/${n.B_.SEALED_DECK}/deck?session=${s}`, {god: b}).pipe((0, p.q)(1), (0, g.b)(C => {
+                    const T = this.authService.getUserId(), s = this.authService.getGameSessionTicket();
+                    return this.gameApi.post(`/user/${T}/mode/${n.B_.SEALED_DECK}/deck?session=${s}`, {god: b}).pipe((0, p.q)(1), (0, g.b)(C => {
                         this.updateSealedMode(C)
                     }))
                 }
@@ -1196,10 +1206,10 @@
                 }
 
                 transformSealedModeGameModeData(b) {
-                    const $ = this.utilService.adjustToServerTime(b.end_time_remaining);
+                    const T = this.utilService.adjustToServerTime(b.end_time_remaining);
                     return Object.assign(Object.assign({}, b), {
-                        end_time_server: $,
-                        end_timestamp_server: Date.parse($),
+                        end_time_server: T,
+                        end_timestamp_server: Date.parse(T),
                         properties: Object.assign(Object.assign({}, b.properties), {
                             entry_cutoff_server: this.utilService.adjustToServerTime(b.properties.entry_cutoff_remaining),
                             start_time_server: this.utilService.adjustToServerTime(b.properties.start_time_remaining)
@@ -1214,27 +1224,27 @@
                     } else this.updateSealedModeStatus(A.ENDED); else this.updateSealedModeStatus(A.AVAILABLE)
                 }
 
-                scheduleRefresh(b, $) {
+                scheduleRefresh(b, T) {
                     const s = Date.now(), w = new Date(b).getTime() + 1e3 - s;
-                    w > 0 && w < l.v && (0, m.H)(w).pipe((0, r.R)(this.unsubscribe), (0, p.q)(1)).subscribe(B => {
-                        this.fetchSealed(), $ && $()
+                    w > 0 && w < c.v && (0, m.H)(w).pipe((0, r.R)(this.unsubscribe), (0, p.q)(1)).subscribe(B => {
+                        this.fetchSealed(), T && T()
                     })
                 }
 
                 onSealedEnded() {
-                    this.queueService.activeQueues$.pipe((0, p.q)(1), (0, t.U)(b => b.find($ => $.mode.id === n.B_.SEALED_DECK))).subscribe(b => {
+                    this.queueService.activeQueues$.pipe((0, p.q)(1), (0, t.U)(b => b.find(T => T.mode.id === n.B_.SEALED_DECK))).subscribe(b => {
                         b && this.queueService.cancel(b)
                     })
                 }
 
                 areRewardsAvailable(b) {
-                    const $ = Date.now(), s = new Date(b.game_mode_data.end_time_server).getTime();
-                    return b.losses >= b.max_losses || b.wins >= b.max_wins || $ > s
+                    const T = Date.now(), s = new Date(b.game_mode_data.end_time_server).getTime();
+                    return b.losses >= b.max_losses || b.wins >= b.max_wins || T > s
                 }
 
                 areWaitingToStart(b) {
-                    const $ = Date.now(), s = new Date(b.game_mode_data.properties.start_time_server).getTime();
-                    return s && $ < s
+                    const T = Date.now(), s = new Date(b.game_mode_data.properties.start_time_server).getTime();
+                    return s && T < s
                 }
 
                 updateSealedModeStatus(b) {
@@ -1242,26 +1252,28 @@
                 }
 
                 claimRewards$(b) {
-                    const $ = this.authService.getUserId(), s = this.authService.getGameSessionTicket();
-                    return this.gameApi.put(`/user/${$}/mode/${n.B_.SEALED_DECK}/deck/${b}?session=${s}`, {action: "claim"})
+                    const T = this.authService.getUserId(), s = this.authService.getGameSessionTicket();
+                    return this.gameApi.put(`/user/${T}/mode/${n.B_.SEALED_DECK}/deck/${b}?session=${s}`, {action: "claim"})
                 }
             }
 
             return O.\u0275fac = function (b) {
-                return new (b || O)(v.LFG(k.Ft), v.LFG(i.mI), v.LFG(x.g), v.LFG(I.F))
+                return new (b || O)(v.LFG(k.Ft), v.LFG(i.mI), v.LFG(P.g), v.LFG(I.F))
             }, O.\u0275prov = v.Yz7({token: O, factory: O.\u0275fac, providedIn: "root"}), O
         })()
-    }, 80537: (se, R, o) => {
+    },
+    80537: (se, R, o) => {
         "use strict";
-        o.d(R, {k: () => l});
-        var l = (() => {
-            return (i = l || (l = {})).CODE_0 = "You are already queueing for another game mode. (Error Code 0)", i.CODE_1 = "Unable to connect to server. Please try again later. If this problem persists, go to Settings and clear the cache. (Error Code 1)", i.CODE_2 = "Unable to connect to server. Please try again later. If this problem persists, go to Settings and clear the cache. (Error Code 2)", i.CODE_3 = "Unable to connect to server. Please try again later. If this problem persists, go to Settings and clear the cache. (Error Code 3)", i.CODE_4 = "Queueing is currently disabled for maintenance. Please try again later. (Error Code 4)", i.CODE_5 = "There was an error while starting the game. (Error Code 5)", i.CODE_6 = "There was an error while starting the game. Unable to verify game files. (Error Code 6)", i.CODE_7 = "There was an error while starting the game. Unable to verify game files. (Error Code 7)", i.CODE_8 = "Unable to connect to server. Please try again later. If this problem persists, go to Settings and clear the cache. (Error Code 8)", i.CODE_9 = "Unable to connect to server. Please try again later. If this problem persists, go to Settings and clear the cache. (Error Code 9)", i.CODE_10 = "Unable to join queue. Suspicious account activity has been detected. (Error Code 10)", i.CODE_11 = "The deck you are queueing with is not complete. (Error Code 11)", i.CODE_12 = "There was an issue authorising the game build download. (Error Code 12)", i.CODE_13 = "There was an issue downloading the game. (Error Code 13)", i.CODE_14 = "There was an issue extracting the game. (Error Code 14)", l;
+        o.d(R, {k: () => c});
+        var c = (() => {
+            return (i = c || (c = {})).CODE_0 = "You are already queueing for another game mode. (Error Code 0)", i.CODE_1 = "Unable to connect to server. Please try again later. If this problem persists, go to Settings and clear the cache. (Error Code 1)", i.CODE_2 = "Unable to connect to server. Please try again later. If this problem persists, go to Settings and clear the cache. (Error Code 2)", i.CODE_3 = "Unable to connect to server. Please try again later. If this problem persists, go to Settings and clear the cache. (Error Code 3)", i.CODE_4 = "Queueing is currently disabled for maintenance. Please try again later. (Error Code 4)", i.CODE_5 = "There was an error while starting the game. (Error Code 5)", i.CODE_6 = "There was an error while starting the game. Unable to verify game files. (Error Code 6)", i.CODE_7 = "There was an error while starting the game. Unable to verify game files. (Error Code 7)", i.CODE_8 = "Unable to connect to server. Please try again later. If this problem persists, go to Settings and clear the cache. (Error Code 8)", i.CODE_9 = "Unable to connect to server. Please try again later. If this problem persists, go to Settings and clear the cache. (Error Code 9)", i.CODE_10 = "Unable to join queue. Suspicious account activity has been detected. (Error Code 10)", i.CODE_11 = "The deck you are queueing with is not complete. (Error Code 11)", i.CODE_12 = "There was an issue authorising the game build download. (Error Code 12)", i.CODE_13 = "There was an issue downloading the game. (Error Code 13)", i.CODE_14 = "There was an issue extracting the game. (Error Code 14)", c;
             var i
         })()
-    }, 8611: (se, R, o) => {
+    },
+    8611: (se, R, o) => {
         "use strict";
         o.d(R, {n: () => y});
-        var l = o(5e3), i = o(66088);
+        var c = o(5e3), i = o(66088);
         let y = (() => {
             class e {
                 constructor(p) {
@@ -1281,8 +1293,8 @@
             }
 
             return e.\u0275fac = function (p) {
-                return new (p || e)(l.Y36(i.Z))
-            }, e.\u0275cmp = l.Xpm({
+                return new (p || e)(c.Y36(i.Z))
+            }, e.\u0275cmp = c.Xpm({
                 type: e,
                 selectors: [["app-bot-alert-modal"]],
                 inputs: {title: "title", message: "message", onOk: "onOk", okButtonText: "okButtonText"},
@@ -1290,19 +1302,20 @@
                 vars: 0,
                 consts: [[1, "gradientOverlay"], [1, "title"], [1, "description"], ["size", "large", "text", "accept", 1, "acceptButton", 3, "click"], [1, "rejectText", 3, "click"]],
                 template: function (p, g) {
-                    1 & p && (l._UZ(0, "div", 0), l.TgZ(1, "div", 1), l._uU(2, " account issue "), l.qZA(), l.TgZ(3, "div", 2), l._uU(4, " We\u2019ve detected some unusual activity on your account, and suspect you might be a bot. "), l._UZ(5, "br"), l._UZ(6, "br"), l._UZ(7, "br"), l._uU(8, " You won\u2019t be able to queue for games or fuse cards until we can be sure you\u2019re a human.\n"), l.qZA(), l.TgZ(9, "gu-primary-hex-button", 3), l.NdJ("click", function () {
+                    1 & p && (c._UZ(0, "div", 0), c.TgZ(1, "div", 1), c._uU(2, " account issue "), c.qZA(), c.TgZ(3, "div", 2), c._uU(4, " We\u2019ve detected some unusual activity on your account, and suspect you might be a bot. "), c._UZ(5, "br")(6, "br")(7, "br"), c._uU(8, " You won\u2019t be able to queue for games or fuse cards until we can be sure you\u2019re a human.\n"), c.qZA(), c.TgZ(9, "gu-primary-hex-button", 3), c.NdJ("click", function () {
                         return g.hideModal()
-                    }), l.qZA(), l.TgZ(10, "a", 4), l.NdJ("click", function () {
+                    }), c.qZA(), c.TgZ(10, "a", 4), c.NdJ("click", function () {
                         return g.reject()
-                    }), l._uU(11, " i am not a bot "), l.qZA())
+                    }), c._uU(11, " i am not a bot "), c.qZA())
                 },
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.rejectText[_ngcontent-%COMP%], .description[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.rejectText[_ngcontent-%COMP%], .description[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.description[_ngcontent-%COMP%]{line-height:1.4}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-direction:column;align-items:center;width:calc(var(--vh) * 50);height:calc(var(--vh) * 45);padding-bottom:calc(var(--vw) * 2.5);background-image:url(/gu-assets/images/backgrounds/trader-overlay-bg.webp);background-size:cover;background-position:center}[_nghost-%COMP%] > *[_ngcontent-%COMP%]{position:relative}.gradientOverlay[_ngcontent-%COMP%]{position:absolute;width:calc(var(--vh) * 50);height:calc(var(--vh) * 45);border:1px solid #182531;background:radial-gradient(ellipse at center,rgba(12,22,32,0) -80%,#0c1620 70%)}.title[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;padding-bottom:calc(var(--vh) * 2);padding-top:calc(var(--vh) * 6);text-transform:uppercase}.description[_ngcontent-%COMP%]{margin-top:calc(calc(var(--vw) * 2) * .7);padding-left:calc(var(--vh) * 6);padding-right:calc(var(--vh) * 6);text-align:center}.acceptButton[_ngcontent-%COMP%]{margin-top:calc(var(--vw) * 2)}.rejectText[_ngcontent-%COMP%]{margin-top:calc(var(--vw) * 2);text-transform:uppercase;color:#8be1e0;cursor:pointer}.rejectText[_ngcontent-%COMP%]:hover{text-decoration:underline}"]
             }), e
         })()
-    }, 5231: (se, R, o) => {
+    },
+    5231: (se, R, o) => {
         "use strict";
         o.d(R, {s: () => y});
-        var l = o(5e3), i = o(66088);
+        var c = o(5e3), i = o(66088);
         let y = (() => {
             class e {
                 constructor(p) {
@@ -1318,8 +1331,8 @@
             }
 
             return e.\u0275fac = function (p) {
-                return new (p || e)(l.Y36(i.Z))
-            }, e.\u0275cmp = l.Xpm({
+                return new (p || e)(c.Y36(i.Z))
+            }, e.\u0275cmp = c.Xpm({
                 type: e,
                 selectors: [["app-hijack-modal"]],
                 inputs: {title: "title", message: "message", onOk: "onOk", okButtonText: "okButtonText"},
@@ -1327,17 +1340,18 @@
                 vars: 3,
                 consts: [[1, "title-section"], [1, "message-section"], ["size", "large", 1, "cta-button", 3, "text", "click"]],
                 template: function (p, g) {
-                    1 & p && (l.TgZ(0, "div", 0), l._uU(1), l.qZA(), l.TgZ(2, "div", 1), l._uU(3), l.qZA(), l.TgZ(4, "gu-primary-hex-button", 2), l.NdJ("click", function () {
+                    1 & p && (c.TgZ(0, "div", 0), c._uU(1), c.qZA(), c.TgZ(2, "div", 1), c._uU(3), c.qZA(), c.TgZ(4, "gu-primary-hex-button", 2), c.NdJ("click", function () {
                         return g.onOkCLick()
-                    }), l.qZA()), 2 & p && (l.xp6(1), l.Oqu(g.title), l.xp6(2), l.Oqu(g.message), l.xp6(1), l.Q6J("text", g.okButtonText))
+                    }), c.qZA()), 2 & p && (c.xp6(1), c.Oqu(g.title), c.xp6(2), c.Oqu(g.message), c.xp6(1), c.Q6J("text", g.okButtonText))
                 },
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.title-section[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.message-section[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.title-section[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.message-section[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22)}.message-section[_ngcontent-%COMP%]{line-height:1.4}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{border:calc(var(--vh) * .15) solid #527493;background-color:#0c1620;position:relative;display:block;color:#f6f6f6;padding:calc(var(--vw) * 2);width:calc(var(--vw) * 30);display:flex;flex-flow:column nowrap;align-items:center;padding-bottom:calc(var(--vw) * 2.5)}.title-section[_ngcontent-%COMP%]{padding-bottom:calc(var(--vh) * 2);border-bottom:calc(var(--vh) * .15) solid #fff;text-transform:uppercase}.message-section[_ngcontent-%COMP%]{margin-top:calc(calc(var(--vw) * 2) * .7);text-align:center}.cta-button[_ngcontent-%COMP%]{margin-top:calc(var(--vw) * 2)}"]
             }), e
         })()
-    }, 14618: (se, R, o) => {
+    },
+    14618: (se, R, o) => {
         "use strict";
         o.d(R, {
-            gK: () => l,
+            gK: () => c,
             ky: () => i,
             Kg: () => y,
             dY: () => e,
@@ -1349,128 +1363,130 @@
             $9: () => n,
             X4: () => v,
             Lg: () => k,
-            P6: () => x,
+            P6: () => P,
             wT: () => I
         });
-        var l = (() => {
-            return (A = l || (l = {})).GAME_BUILD_DOWNLOAD_CHECK = "[GameResources] Game Build Download Check", A.GAME_BUILD_DOWNLOAD_REQUEST = "[GameResources] Game Build Download Request", A.GAME_BUILD_DOWNLOAD_PROGRESS = "[GameResources] Game Build Download Progress", A.GAME_BUILD_DOWNLOAD_EXTRACT = "[GameResources] Game Build Download Extract", A.GAME_BUILD_DOWNLOAD_SUCCESS = "[GameResources] Game Build Download Success", A.GAME_BUILD_DOWNLOAD_ERROR = "[GameResources] Game Build Download Error", A.GAME_BUILD_DOWNLOAD_UPDATE_STATUS = "[GameResources] Game Build Download Update Status", A.GAME_ASSETS_DOWNLOAD_CHECK = "[GameResources] Game Assets Download Check", A.GAME_ASSETS_DOWNLOAD_REQUEST = "[GameResources] Game Assets Download Request", A.GAME_ASSETS_DOWNLOAD_PROGRESS = "[GameResources] Game Assets Download Progress", A.GAME_ASSETS_DOWNLOAD_SUCCESS = "[GameResources]  Game Assets Download Success", A.GAME_ASSETS_DOWNLOAD_ERROR = "[GameResources]  Game Assets Download Error", A.GAME_ASSETS_DOWNLOAD_UPDATE_STATUS = "[GameResources] Game Assets Download Update Status", l;
+        var c = (() => {
+            return (A = c || (c = {})).GAME_BUILD_DOWNLOAD_CHECK = "[GameResources] Game Build Download Check", A.GAME_BUILD_DOWNLOAD_REQUEST = "[GameResources] Game Build Download Request", A.GAME_BUILD_DOWNLOAD_PROGRESS = "[GameResources] Game Build Download Progress", A.GAME_BUILD_DOWNLOAD_EXTRACT = "[GameResources] Game Build Download Extract", A.GAME_BUILD_DOWNLOAD_SUCCESS = "[GameResources] Game Build Download Success", A.GAME_BUILD_DOWNLOAD_ERROR = "[GameResources] Game Build Download Error", A.GAME_BUILD_DOWNLOAD_UPDATE_STATUS = "[GameResources] Game Build Download Update Status", A.GAME_ASSETS_DOWNLOAD_CHECK = "[GameResources] Game Assets Download Check", A.GAME_ASSETS_DOWNLOAD_REQUEST = "[GameResources] Game Assets Download Request", A.GAME_ASSETS_DOWNLOAD_PROGRESS = "[GameResources] Game Assets Download Progress", A.GAME_ASSETS_DOWNLOAD_SUCCESS = "[GameResources]  Game Assets Download Success", A.GAME_ASSETS_DOWNLOAD_ERROR = "[GameResources]  Game Assets Download Error", A.GAME_ASSETS_DOWNLOAD_UPDATE_STATUS = "[GameResources] Game Assets Download Update Status", c;
             var A
         })();
 
         class i {
             constructor(f) {
-                this.payload = f, this.type = l.GAME_BUILD_DOWNLOAD_CHECK
+                this.payload = f, this.type = c.GAME_BUILD_DOWNLOAD_CHECK
             }
         }
 
         class y {
             constructor() {
-                this.type = l.GAME_BUILD_DOWNLOAD_REQUEST
+                this.type = c.GAME_BUILD_DOWNLOAD_REQUEST
             }
         }
 
         class e {
             constructor(f) {
-                this.payload = f, this.type = l.GAME_BUILD_DOWNLOAD_PROGRESS
+                this.payload = f, this.type = c.GAME_BUILD_DOWNLOAD_PROGRESS
             }
         }
 
         class m {
             constructor(f) {
-                this.payload = f, this.type = l.GAME_BUILD_DOWNLOAD_EXTRACT
+                this.payload = f, this.type = c.GAME_BUILD_DOWNLOAD_EXTRACT
             }
         }
 
         class p {
             constructor() {
-                this.type = l.GAME_BUILD_DOWNLOAD_SUCCESS
+                this.type = c.GAME_BUILD_DOWNLOAD_SUCCESS
             }
         }
 
         class g {
             constructor(f) {
-                this.payload = f, this.type = l.GAME_BUILD_DOWNLOAD_UPDATE_STATUS
+                this.payload = f, this.type = c.GAME_BUILD_DOWNLOAD_UPDATE_STATUS
             }
         }
 
         class r {
             constructor(f) {
-                this.payload = f, this.type = l.GAME_BUILD_DOWNLOAD_ERROR
+                this.payload = f, this.type = c.GAME_BUILD_DOWNLOAD_ERROR
             }
         }
 
         class t {
             constructor(f) {
-                this.payload = f, this.type = l.GAME_ASSETS_DOWNLOAD_CHECK
+                this.payload = f, this.type = c.GAME_ASSETS_DOWNLOAD_CHECK
             }
         }
 
         class n {
             constructor() {
-                this.type = l.GAME_ASSETS_DOWNLOAD_REQUEST
+                this.type = c.GAME_ASSETS_DOWNLOAD_REQUEST
             }
         }
 
         class v {
             constructor(f) {
-                this.payload = f, this.type = l.GAME_ASSETS_DOWNLOAD_PROGRESS
+                this.payload = f, this.type = c.GAME_ASSETS_DOWNLOAD_PROGRESS
             }
         }
 
         class k {
             constructor(f) {
-                this.payload = f, this.type = l.GAME_ASSETS_DOWNLOAD_UPDATE_STATUS
+                this.payload = f, this.type = c.GAME_ASSETS_DOWNLOAD_UPDATE_STATUS
             }
         }
 
-        class x {
+        class P {
             constructor() {
-                this.type = l.GAME_ASSETS_DOWNLOAD_SUCCESS
+                this.type = c.GAME_ASSETS_DOWNLOAD_SUCCESS
             }
         }
 
         class I {
             constructor(f) {
-                this.payload = f, this.type = l.GAME_ASSETS_DOWNLOAD_ERROR
+                this.payload = f, this.type = c.GAME_ASSETS_DOWNLOAD_ERROR
             }
         }
-    }, 69931: (se, R, o) => {
+    },
+    69931: (se, R, o) => {
         "use strict";
         o.d(R, {VD: () => i, DM: () => y, gP: () => e});
-        var l = o(96727);
-        const i = (0, l.ZF)("gameResources"), y = () => (0, l.P1)(i, m => m.gameBuild),
-            e = () => (0, l.P1)(i, m => m.gameAssets)
-    }, 63411: (se, R, o) => {
+        var c = o(96727);
+        const i = (0, c.ZF)("gameResources"), y = () => (0, c.P1)(i, m => m.gameBuild),
+            e = () => (0, c.P1)(i, m => m.gameAssets)
+    },
+    63411: (se, R, o) => {
         "use strict";
         o.d(R, {e: () => f});
-        var l = o(73175), i = o(591), y = o(61737), e = o(21086), m = o(2994), p = o(61709), g = o(27221), r = o(24850),
-            t = o(72986), n = o(40520), v = o(73307), k = o(5e3), x = o(11735);
-        const I = new l.N0;
+        var c = o(73175), i = o(591), y = o(61737), e = o(21086), m = o(2994), p = o(61709), g = o(27221), r = o(24850),
+            t = o(72986), n = o(40520), v = o(73307), k = o(5e3), P = o(11735);
+        const I = new c.N0;
         let f = (() => {
             class O {
-                constructor(b, $, s, C) {
-                    this.authHostService = b, this.storage = $, this.featureFlagsService = s, this.router = C, this.isRemembering = !0, this.dataStore = {account: null}, this._account$ = new i.X(null)
+                constructor(b, T, s, C) {
+                    this.authHostService = b, this.storage = T, this.featureFlagsService = s, this.router = C, this.isRemembering = !0, this.dataStore = {account: null}, this._account$ = new i.X(null)
                 }
 
-                login(b, $, s) {
-                    return this.authHostService.post("/auth2?type=login&code=" + this.generate(), b).pipe((0, m.b)(C => this.sendAnalytics(!0, b.email, +C.id)), (0, p.VS)(C => this.saveAccount(C, $, s)), (0, m.b)(C => this.fetchAccount()), (0, g.K)(C => (this.sendAnalytics(!1, b.email), (0, y._)(C))))
+                login(b, T, s) {
+                    return this.authHostService.post("/auth2?type=login&code=" + this.generate(), b).pipe((0, m.b)(C => this.sendAnalytics(!0, b.email, +C.id)), (0, p.VS)(C => this.saveAccount(C, T, s)), (0, m.b)(C => this.fetchAccount()), (0, g.K)(C => (this.sendAnalytics(!1, b.email), (0, y._)(C))))
                 }
 
-                saveAccount(b, $, s) {
-                    return this.auth = b, "function" == typeof window.bridge.updateAuthPair && window.bridge.updateAuthPair(b), this.isRemembering = $, $ && (this.storage.set(["user_id"], b.id), this.storage.set(["refresh"], b.refresh), this.storage.set(["access"], b.access)), this.authHostService.post(`/account/${b.id}/session`, {game_id: s}).pipe((0, m.b)(C => {
+                saveAccount(b, T, s) {
+                    return this.auth = b, "function" == typeof window.bridge.updateAuthPair && window.bridge.updateAuthPair(b), this.isRemembering = T, T && (this.storage.set(["user_id"], b.id), this.storage.set(["refresh"], b.refresh), this.storage.set(["access"], b.access)), this.authHostService.post(`/account/${b.id}/session`, {game_id: s}).pipe((0, m.b)(C => {
                         "function" == typeof window.bridge.updateSession && window.bridge.updateSession(C), this.storage.set(["game_session"], C)
                     }), (0, r.U)(() => !0), (0, g.K)(C => (0, e.of)(!1)))
                 }
 
                 getLinkedAddresses(b) {
-                    return this.authHostService.get(`v2/account/${b}`).pipe((0, r.U)($ => $.addresses.map(s => s.address)))
+                    return this.authHostService.get(`v2/account/${b}`).pipe((0, r.U)(T => T.addresses.map(s => s.address)))
                 }
 
                 fetchSession() {
                     return (0, e.of)(this.getGameSessionTicket())
                 }
 
-                sendAnalytics(b, $, s) {
+                sendAnalytics(b, T, s) {
                 }
 
                 get account$() {
@@ -1496,7 +1512,7 @@
 
                 fetchAccount() {
                     const b = this.getUserId();
-                    !b || this.authHostService.get(`/v2/account/${b}`).pipe((0, t.q)(1), (0, m.b)($ => this._emitAccount($))).subscribe()
+                    !b || this.authHostService.get(`/v2/account/${b}`).pipe((0, t.q)(1), (0, m.b)(T => this._emitAccount(T))).subscribe()
                 }
 
                 fetchAccountDetails() {
@@ -1505,12 +1521,12 @@
                 }
 
                 updateCurrentUser(b) {
-                    const $ = this.getUserId();
-                    return this.updateUser($, b)
+                    const T = this.getUserId();
+                    return this.updateUser(T, b)
                 }
 
-                updateUser(b, $) {
-                    return this.authHostService.put("/account/" + b, $).pipe((0, t.q)(1), (0, m.b)(s => this._emitAccount(s)))
+                updateUser(b, T) {
+                    return this.authHostService.put("/account/" + b, T).pipe((0, t.q)(1), (0, m.b)(s => this._emitAccount(s)))
                 }
 
                 getAuthHeader() {
@@ -1558,13 +1574,13 @@
 
                 refreshToken() {
                     const b = this.getRefreshToken();
-                    return this.authHostService.post("/auth2?type=refresh&code=" + this.generate(), {refresh: b}).pipe((0, m.b)($ => {
+                    return this.authHostService.post("/auth2?type=refresh&code=" + this.generate(), {refresh: b}).pipe((0, m.b)(T => {
                     }))
                 }
 
                 linkReferralCode(b) {
-                    const $ = this.getUserId();
-                    return this.authHostService.post(`/account/${$}/referrer`, {referral: b})
+                    const T = this.getUserId();
+                    return this.authHostService.post(`/account/${T}/referrer`, {referral: b})
                 }
 
                 tokenIsExpired() {
@@ -1573,67 +1589,68 @@
                 }
 
                 generate() {
-                    function b(Z, X) {
-                        return (Z.length - Z.replace(new RegExp(X, "g"), "").length) / X.length
+                    function b(N, X) {
+                        return (N.length - N.replace(new RegExp(X, "g"), "").length) / X.length
                     }
 
-                    function $(Z, X, ae) {
-                        return X > Z.length - 1 ? Z : Z.substr(0, X) + ae + Z.substr(X + 1)
+                    function T(N, X, ae) {
+                        return X > N.length - 1 ? N : N.substr(0, X) + ae + N.substr(X + 1)
                     }
 
-                    const s = function (Z) {
-                        const ae = Math.pow(16, Math.min(Z, 8) - 1), Y = Math.pow(16, Math.min(Z, 8)) - 1;
+                    const s = function (N) {
+                        const ae = Math.pow(16, Math.min(N, 8) - 1), Y = Math.pow(16, Math.min(N, 8)) - 1;
                         let V = (Math.floor(Math.random() * (Y - ae + 1)) + ae).toString(16);
-                        for (; V.length < Z;) V += s(Z - 8);
+                        for (; V.length < N;) V += s(N - 8);
                         return V
                     }, C = Math.ceil(25 * Math.random()), w = 32 - C - 4;
                     let B = ("" + s(C) + 2 + s(2) + 2 + s(w)).toLowerCase(), de = b(B, "a") - b(B, "b") + 1, fe = 0;
-                    for (; de > 0 && ("a" !== B[fe] && "b" !== B[fe] && "2" !== B[fe] && (B = $(B, fe, "b"), de--), fe++, !(fe > B.length));) ;
-                    for (; de < 0 && ("a" !== B[fe] && "b" !== B[fe] && "2" !== B[fe] && (B = $(B, fe, "a"), de++), fe++, !(fe > B.length));) ;
+                    for (; de > 0 && ("a" !== B[fe] && "b" !== B[fe] && "2" !== B[fe] && (B = T(B, fe, "b"), de--), fe++, !(fe > B.length));) ;
+                    for (; de < 0 && ("a" !== B[fe] && "b" !== B[fe] && "2" !== B[fe] && (B = T(B, fe, "a"), de++), fe++, !(fe > B.length));) ;
                     return B
                 }
             }
 
             return O.\u0275fac = function (b) {
-                return new (b || O)(k.LFG(v.LI), k.LFG(v.qy), k.LFG(v.B3), k.LFG(x.F0))
+                return new (b || O)(k.LFG(v.LI), k.LFG(v.qy), k.LFG(v.B3), k.LFG(P.F0))
             }, O.\u0275prov = k.Yz7({token: O, factory: O.\u0275fac}), O
         })()
-    }, 69340: (se, R, o) => {
+    },
+    69340: (se, R, o) => {
         "use strict";
         o.d(R, {b5: () => O});
-        var l = o(21086), i = o(41746), y = o(8929), e = o(56498), m = o(24850), p = o(87168), g = o(61709),
-            r = o(87545), t = o(14618), n = o(69931), v = o(5e3), k = o(79763), x = o(44416), I = o(96727);
+        var c = o(21086), i = o(41746), y = o(8929), e = o(56498), m = o(24850), p = o(87168), g = o(61709),
+            r = o(87545), t = o(14618), n = o(69931), v = o(5e3), k = o(79763), P = o(44416), I = o(96727);
         let O = (() => {
-            class P {
-                constructor($, s, C, w) {
-                    this.gameService = $, this.zone = s, this.utils = C, this.ngrxStore = w, this.downloads = new Map
+            class S {
+                constructor(T, s, C, w) {
+                    this.gameService = T, this.zone = s, this.utils = C, this.ngrxStore = w, this.downloads = new Map
                 }
 
                 getCurrentDownload() {
                     return this.currentDownload
                 }
 
-                getVersionFile($, s) {
+                getVersionFile(T, s) {
                     return window.bridge.httpGet(`https://s3-ap-southeast-2.amazonaws.com/gods-builds/manifests/${s}-manifest.json`).pipe(this.utils.enterZone(this.zone))
                 }
 
-                getLatest($, s) {
-                    return this.getVersionFile($, s).pipe((0, m.U)(C => C.build_version))
+                getLatest(T, s) {
+                    return this.getVersionFile(T, s).pipe((0, m.U)(C => C.build_version))
                 }
 
-                getLocal($) {
-                    return (0, l.of)(this.gameService.getProperty($.id, "version"))
+                getLocal(T) {
+                    return (0, c.of)(this.gameService.getProperty(T.id, "version"))
                 }
 
-                getVersions($, s) {
+                getVersions(T, s) {
                     let C;
-                    return C = (0, i.$R)("local" === s ? this.getLocal($) : this.getLatest($, s), this.getLocal($)), C
+                    return C = (0, i.$R)("local" === s ? this.getLocal(T) : this.getLatest(T, s), this.getLocal(T)), C
                 }
 
-                requiresUpdate($, s) {
-                    return this.getVersions($, s).pipe((0, p.M)(this.ngrxStore.select(n.VD)), (0, g.VS)(([[C, w], B]) => {
+                requiresUpdate(T, s) {
+                    return this.getVersions(T, s).pipe((0, p.M)(this.ngrxStore.select(n.VD)), (0, g.VS)(([[C, w], B]) => {
                         let ee = !0;
-                        return w && w === C && (ee = "downloaded" === this.gameService.getProperty($.id, "status")), ee && "downloading" !== B.gameBuild.status && "extracting" !== B.gameBuild.status && this.ngrxStore.dispatch(new t.ky({isUpdateRequired: ee})), (0, l.of)(ee)
+                        return w && w === C && (ee = "downloaded" === this.gameService.getProperty(T.id, "status")), ee && "downloading" !== B.gameBuild.status && "extracting" !== B.gameBuild.status && this.ngrxStore.dispatch(new t.ky({isUpdateRequired: ee})), (0, c.of)(ee)
                     }))
                 }
 
@@ -1641,43 +1658,43 @@
                     return "win32" === window.bridge.platform() ? "win" : "mac"
                 }
 
-                getLatestAssetsVersions($, s) {
+                getLatestAssetsVersions(T, s) {
                     const C = {platform: this.getUserPlatform(), branch: s};
                     return window.bridge.httpPost("https://oyhca2oyje.execute-api.us-east-1.amazonaws.com/test/1/game/assets", C).pipe(this.utils.enterZone(this.zone))
                 }
 
-                getLocalAssetsVersions($) {
-                    return this.gameService.getProperty($.id, "assets") ? (0, l.of)(JSON.parse(this.gameService.getProperty($.id, "assets"))) : (0, l.of)(null)
+                getLocalAssetsVersions(T) {
+                    return this.gameService.getProperty(T.id, "assets") ? (0, c.of)(JSON.parse(this.gameService.getProperty(T.id, "assets"))) : (0, c.of)(null)
                 }
 
-                requiresAssetsUpdate($, s) {
-                    return (0, i.$R)(this.getLocalAssetsVersions($), this.getLatestAssetsVersions($, s)).pipe((0, p.M)(this.ngrxStore.select(n.VD)), (0, r.w)(([[C, w], B]) => {
+                requiresAssetsUpdate(T, s) {
+                    return (0, i.$R)(this.getLocalAssetsVersions(T), this.getLatestAssetsVersions(T, s)).pipe((0, p.M)(this.ngrxStore.select(n.VD)), (0, r.w)(([[C, w], B]) => {
                         let ee;
-                        return ee = C ? this.deltaAssetsVersions(C, w) : w, ee.length > 0 && "downloading" !== B.gameAssets.status && this.ngrxStore.dispatch(new t.Vm({isUpdateRequired: ee.length > 0})), (0, l.of)(ee)
+                        return ee = C ? this.deltaAssetsVersions(C, w) : w, ee.length > 0 && "downloading" !== B.gameAssets.status && this.ngrxStore.dispatch(new t.Vm({isUpdateRequired: ee.length > 0})), (0, c.of)(ee)
                     }))
                 }
 
-                deltaAssetsVersions($, s) {
+                deltaAssetsVersions(T, s) {
                     let C = [];
-                    return C = $ ? s ? s.filter(w => !$.some(B => w.etag === B.etag)) : [] : s, C
+                    return C = T ? s ? s.filter(w => !T.some(B => w.etag === B.etag)) : [] : s, C
                 }
 
-                getDownloadInfo($, s, C) {
-                    return this.gameService.isObfuscatedBranch($.id) ? {
-                        url: `${$.base_url_auth}/builds/game/${s}/${this.getFileName($, s)}`,
+                getDownloadInfo(T, s, C) {
+                    return this.gameService.isObfuscatedBranch(T.id) ? {
+                        url: `${T.base_url_auth}/builds/game/${s}/${this.getFileName(T, s)}`,
                         authToken: C
-                    } : {url: `${$.base_url}/builds/${s}/${this.getFileName($, s)}`, authToken: void 0}
+                    } : {url: `${T.base_url}/builds/${s}/${this.getFileName(T, s)}`, authToken: void 0}
                 }
 
-                getFileName($, s) {
-                    return "win32" === window.bridge.platform() ? "gods_" + s + $.extensions.windows : "gods_" + s + $.extensions.osx
+                getFileName(T, s) {
+                    return "win32" === window.bridge.platform() ? "gods_" + s + T.extensions.windows : "gods_" + s + T.extensions.osx
                 }
 
-                downloadAndExtract($, s, C) {
-                    const w = this.gameService.getInstallPath($), B = this.getDownloadInfo($, s, C),
-                        ee = window.bridge.download(B.url, w, this.getFileName($, s), C).pipe((0, m.U)(ce => (this.currentDownload.extracting = !0, this.gameService.setProperty($.id, "version", s), this.gameService.setProperty($.id, "status", "downloaded"), {
-                            game: $,
-                            fileName: this.getFileName($, s),
+                downloadAndExtract(T, s, C) {
+                    const w = this.gameService.getInstallPath(T), B = this.getDownloadInfo(T, s, C),
+                        ee = window.bridge.download(B.url, w, this.getFileName(T, s), C).pipe((0, m.U)(ce => (this.currentDownload.extracting = !0, this.gameService.setProperty(T.id, "version", s), this.gameService.setProperty(T.id, "status", "downloaded"), {
+                            game: T,
+                            fileName: this.getFileName(T, s),
                             installPath: w
                         })));
                     return this.currentDownload = {
@@ -1688,51 +1705,52 @@
                     }, this.currentDownload
                 }
 
-                displayDownloadCompleteNotification($) {
+                displayDownloadCompleteNotification(T) {
                     new window.Notification("Download Complete", {
-                        body: $.title + " has finished downloading.",
+                        body: T.title + " has finished downloading.",
                         silent: !0
                     }).onclick = () => {
                     }
                 }
 
-                deleteFile($, s) {
-                    const C = window.bridge.join(s, $);
+                deleteFile(T, s) {
+                    const C = window.bridge.join(s, T);
                     window.bridge.exists(C) && window.bridge.deleteFile(C)
                 }
 
-                extractGame($, s, C) {
+                extractGame(T, s, C) {
                     return new e.y(w => {
-                        const B = window.bridge.join(C, s), ee = window.bridge.join(C, $.title);
+                        const B = window.bridge.join(C, s), ee = window.bridge.join(C, T.title);
                         window.bridge.exists(B) || (console.error("GameDownloadService->extractGame() unable to find file to extract"), w.error("File not found! Cannot extract.")), window.bridge.extract(B, ee, ce => {
                             "win32" !== window.bridge.platform() ? window.bridge.chmod(ee + "/StandaloneOSXUniversal/gods.app/Contents/MacOS/gods", fe => {
                                 fe ? (console.error(fe), w.error(fe)) : w.next(!0)
                             }) : w.next(!0)
                         })
                     }).pipe((0, g.VS)(w => {
-                        if (w) return this.gameService.setProperty($.id, "status", "extracted"), this.gameService.refreshGameContext(), null != this.currentDownload && (this.currentDownload.extracting = !1), (0, l.of)(w)
+                        if (w) return this.gameService.setProperty(T.id, "status", "extracted"), this.gameService.refreshGameContext(), null != this.currentDownload && (this.currentDownload.extracting = !1), (0, c.of)(w)
                     }))
                 }
 
-                uninstallGame($, s) {
-                    window.bridge.deleteFile(window.bridge.join(s, $.title))
+                uninstallGame(T, s) {
+                    window.bridge.deleteFile(window.bridge.join(s, T.title))
                 }
             }
 
-            return P.\u0275fac = function ($) {
-                return new ($ || P)(v.LFG(k.hM), v.LFG(v.R0b), v.LFG(x.F), v.LFG(I.yh))
-            }, P.\u0275prov = v.Yz7({token: P, factory: P.\u0275fac, providedIn: "root"}), P
+            return S.\u0275fac = function (T) {
+                return new (T || S)(v.LFG(k.hM), v.LFG(v.R0b), v.LFG(P.F), v.LFG(I.yh))
+            }, S.\u0275prov = v.Yz7({token: S, factory: S.\u0275fac, providedIn: "root"}), S
         })()
-    }, 79763: (se, R, o) => {
+    },
+    79763: (se, R, o) => {
         "use strict";
-        o.d(R, {hM: () => P});
-        var l = o(591), i = o(61737), y = o(21086), e = o(24850), m = o(92198), p = o(72986), g = o(73307),
-            r = o(63764), t = o(80537), n = o(52492), v = o(5e3), k = o(66088), x = o(55778);
+        o.d(R, {hM: () => S});
+        var c = o(591), i = o(61737), y = o(21086), e = o(24850), m = o(92198), p = o(72986), g = o(73307),
+            r = o(63764), t = o(80537), n = o(52492), v = o(5e3), k = o(66088), P = o(55778);
         o(63411);
-        let P = (() => {
+        let S = (() => {
             class b {
                 constructor(s, C, w, B, ee, ce) {
-                    this.authHostService = s, this.auth = C, this.storage = w, this.modalService = B, this.akuma = ee, this.gameApi = ce, this._currentGameContext$ = new l.X(null), this._branches$ = new l.X([]), this.dataStore = {
+                    this.authHostService = s, this.auth = C, this.storage = w, this.modalService = B, this.akuma = ee, this.gameApi = ce, this._currentGameContext$ = new c.X(null), this._branches$ = new c.X([]), this.dataStore = {
                         currentGameContext: null,
                         branches: []
                     }
@@ -1909,13 +1927,14 @@
             }
 
             return b.\u0275fac = function (s) {
-                return new (s || b)(v.LFG(g.LI), v.LFG(g.mI), v.LFG(g.qy), v.LFG(k.Z), v.LFG(x.jt), v.LFG(x.Ft))
+                return new (s || b)(v.LFG(g.LI), v.LFG(g.mI), v.LFG(g.qy), v.LFG(k.Z), v.LFG(P.jt), v.LFG(P.Ft))
             }, b.\u0275prov = v.Yz7({token: b, factory: b.\u0275fac, providedIn: "root"}), b
         })()
-    }, 24058: (se, R, o) => {
+    },
+    24058: (se, R, o) => {
         "use strict";
         o.d(R, {m: () => y});
-        var l = o(73307), i = o(5e3);
+        var c = o(73307), i = o(5e3);
         let y = (() => {
             class e {
                 constructor(p) {
@@ -1945,23 +1964,25 @@
             }
 
             return e.\u0275fac = function (p) {
-                return new (p || e)(i.LFG(l.qy))
+                return new (p || e)(i.LFG(c.qy))
             }, e.\u0275prov = i.Yz7({token: e, factory: e.\u0275fac, providedIn: "root"}), e
         })()
-    }, 52492: (se, R, o) => {
+    },
+    52492: (se, R, o) => {
         "use strict";
-        o.d(R, {e1: () => l, Cg: () => i});
-        var l = (() => {
-            return (e = l || (l = {}))[e.Center = 0] = "Center", e[e.Custom = 1] = "Custom", l;
+        o.d(R, {e1: () => c, Cg: () => i});
+        var c = (() => {
+            return (e = c || (c = {}))[e.Center = 0] = "Center", e[e.Custom = 1] = "Custom", c;
             var e
         })(), i = (() => {
             return (e = i || (i = {}))[e.Fullscreen = 0] = "Fullscreen", e[e.Workarea = 1] = "Workarea", e[e.StretchableFullscreen = 2] = "StretchableFullscreen", e[e.StretchableWorkarea = 3] = "StretchableWorkarea", i;
             var e
         })()
-    }, 66088: (se, R, o) => {
+    },
+    66088: (se, R, o) => {
         "use strict";
-        o.d(R, {Z: () => x});
-        var l = o(8929), i = o(2994), y = o(48031), e = o(5e3), m = o(22313), p = o(69808);
+        o.d(R, {Z: () => P});
+        var c = o(8929), i = o(2994), y = o(48031), e = o(5e3), m = o(22313), p = o(69808);
         const g = ["modalHolder"];
 
         function r(I, A) {
@@ -1969,8 +1990,8 @@
 
         let t = (() => {
             class I {
-                constructor(f, O, P) {
-                    this.resolver = f, this.sanitizer = O, this.el = P, this.blurredBackground = !1, this.canCloseFromInside = !1, this.canCloseFromOutside = !0, this.closeModal$ = new e.vpe
+                constructor(f, O, S) {
+                    this.resolver = f, this.sanitizer = O, this.el = S, this.blurredBackground = !1, this.canCloseFromInside = !1, this.canCloseFromOutside = !0, this.closeModal$ = new e.vpe
                 }
 
                 get myStyle() {
@@ -2004,8 +2025,8 @@
                 selectors: [["app-modal"]],
                 viewQuery: function (f, O) {
                     if (1 & f && e.Gf(g, 7, e.s_b), 2 & f) {
-                        let P;
-                        e.iGM(P = e.CRH()) && (O.modalHolder = P.first)
+                        let S;
+                        e.iGM(S = e.CRH()) && (O.modalHolder = S.first)
                     }
                 },
                 hostVars: 2,
@@ -2036,10 +2057,10 @@
             }), I
         })();
         var n = o(52492), v = o(44416), k = o(6674);
-        let x = (() => {
+        let P = (() => {
             class I {
-                constructor(f, O, P, b, $) {
-                    this.resolver = f, this.appRef = O, this.utilsService = b, this.resizeService = $, this._modalDestroy$ = new l.xQ, this.modalsStack = [], this.modalFactory = this.resolver.resolveComponentFactory(t), this.renderer = P.createRenderer(null, null), this.resizeService.viewPortUnits$.pipe((0, i.b)(({vh: s}) => this.vh = s)).subscribe()
+                constructor(f, O, S, b, T) {
+                    this.resolver = f, this.appRef = O, this.utilsService = b, this.resizeService = T, this._modalDestroy$ = new c.xQ, this.modalsStack = [], this.modalFactory = this.resolver.resolveComponentFactory(t), this.renderer = S.createRenderer(null, null), this.resizeService.viewPortUnits$.pipe((0, i.b)(({vh: s}) => this.vh = s)).subscribe()
                 }
 
                 setModalVCRs(f, O) {
@@ -2051,9 +2072,9 @@
                 }
 
                 createModal(f, O = {}, {
-                    canCloseFromInside: P = !1,
+                    canCloseFromInside: S = !1,
                     canCloseFromOutside: b = !0,
-                    blurredBackground: $ = !1,
+                    blurredBackground: T = !1,
                     position: s = n.e1.Center,
                     customPosition: C = null,
                     size: w = n.Cg.StretchableFullscreen
@@ -2064,7 +2085,7 @@
                         nativeElement: ee.element.nativeElement,
                         parentElement: ee.element.nativeElement.parentElement
                     }));
-                    const de = this.createModalComponent(f, O, ee, ce, $, P, b);
+                    const de = this.createModalComponent(f, O, ee, ce, T, S, b);
                     this.modalsStack.push({
                         component: de,
                         vcr: ee,
@@ -2083,10 +2104,10 @@
                     }
                 }
 
-                getModalHolderStyles(f, O, P) {
+                getModalHolderStyles(f, O, S) {
                     if (f === n.e1.Custom) {
-                        (null === P || 2 !== P.split(":").length) && console.error("Provide valid customPosition (SELECTOR:POSITION ex. '#elementId:left')");
-                        const b = P.split(":");
+                        (null === S || 2 !== S.split(":").length) && console.error("Provide valid customPosition (SELECTOR:POSITION ex. '#elementId:left')");
+                        const b = S.split(":");
                         return Object.assign(Object.assign({}, this.getRelativePos(b[0], b[1])), {zIndex: O === n.Cg.Workarea ? y.Rl.measurements.headerBarZLevel - 1 : y.Rl.measurements.modalLayerZLevel})
                     }
                     return Object.assign(Object.assign({}, this.getBoundaries(f, O)), {zIndex: O === n.Cg.Workarea ? y.Rl.measurements.headerBarZLevel - 1 : y.Rl.measurements.modalLayerZLevel})
@@ -2104,17 +2125,17 @@
                     }), this.updateBlur(), this.renderer.removeClass(this.modalsStack[0].parentElement, "addModalBlurBackground"), this.modalsStack = [])
                 }
 
-                createModalComponent(f, O, P, b, $, s, C) {
-                    const w = P.createComponent(this.modalFactory, this.modalsStack.length - 1, P.injector, [[]]);
+                createModalComponent(f, O, S, b, T, s, C) {
+                    const w = S.createComponent(this.modalFactory, this.modalsStack.length - 1, S.injector, [[]]);
                     return Object.assign(w.instance, {
                         styles: b,
-                        blurredBackground: $,
+                        blurredBackground: T,
                         canCloseFromInside: s,
                         canCloseFromOutside: C,
                         component: f,
                         inputs: O
                     }), w.instance.closeModal$.subscribe(() => {
-                        P.remove(), this.destroyTopModal()
+                        S.remove(), this.destroyTopModal()
                     }), w
                 }
 
@@ -2170,8 +2191,8 @@
                 }
 
                 setBlurredBackground(f, O) {
-                    let P;
-                    f instanceof Comment ? P = f.previousSibling : (P = f, this.renderer.setStyle(f, "backgroundColor", O ? "rgba(29,47,65, 0.6)" : "unset")), this.renderer.setStyle(P, "backdrop-filter", O ? `blur(${1.5 * this.vh}px)` : "none")
+                    let S;
+                    f instanceof Comment ? S = f.previousSibling : (S = f, this.renderer.setStyle(f, "backgroundColor", O ? "rgba(29,47,65, 0.6)" : "unset")), this.renderer.setStyle(S, "backdrop-filter", O ? `blur(${1.5 * this.vh}px)` : "none")
                 }
             }
 
@@ -2179,14 +2200,15 @@
                 return new (f || I)(e.LFG(e._Vd), e.LFG(e.z2F), e.LFG(e.FYo), e.LFG(v.F), e.LFG(k._))
             }, I.\u0275prov = e.Yz7({token: I, factory: I.\u0275fac}), I
         })()
-    }, 77391: (se, R, o) => {
+    },
+    77391: (se, R, o) => {
         "use strict";
         o.d(R, {f: () => y});
-        var l = o(591), i = o(5e3);
+        var c = o(591), i = o(5e3);
         let y = (() => {
             class e {
                 constructor() {
-                    this._currentRoute$ = new l.X("")
+                    this._currentRoute$ = new c.X("")
                 }
 
                 get currentRoute$() {
@@ -2202,10 +2224,11 @@
                 return new (p || e)
             }, e.\u0275prov = i.Yz7({token: e, factory: e.\u0275fac, providedIn: "root"}), e
         })()
-    }, 236: (se, R, o) => {
+    },
+    236: (se, R, o) => {
         "use strict";
         o.d(R, {u: () => i});
-        var l = o(5e3);
+        var c = o(5e3);
         let i = (() => {
             class y {
                 transform(m) {
@@ -2216,12 +2239,13 @@
 
             return y.\u0275fac = function (m) {
                 return new (m || y)
-            }, y.\u0275pipe = l.Yjl({name: "duration", type: y, pure: !0}), y
+            }, y.\u0275pipe = c.Yjl({name: "duration", type: y, pure: !0}), y
         })()
-    }, 83035: (se, R, o) => {
+    },
+    83035: (se, R, o) => {
         "use strict";
         o.d(R, {g: () => r});
-        var l = o(59633), y = o(591), e = o(1059), m = o(92198), p = o(5e3), g = o(55778);
+        var c = o(59633), y = o(591), e = o(1059), m = o(92198), p = o(5e3), g = o(55778);
         let r = (() => {
             class t {
                 constructor(v, k) {
@@ -2248,8 +2272,8 @@
                     this.dataStore.activeQueues = this.dataStore.activeQueues.filter(k => k !== v), this._emitQueues()
                 }
 
-                start(v, k, x) {
-                    const I = {game_id: v, mode: k, startTimestamp: (new Date).getTime(), status: "active", params: x};
+                start(v, k, P) {
+                    const I = {game_id: v, mode: k, startTimestamp: (new Date).getTime(), status: "active", params: P};
                     return this.enqueue(I), this._queueStatus$.next(I), this.logQueueStarted(I), this.getQueueSubset(f => f === I).pipe((0, e.O)(I))
                 }
 
@@ -2266,7 +2290,7 @@
                 }
 
                 getQueue(v, k) {
-                    return this.getQueueSubset(x => x && x.game_id === v && x.mode.id === k)
+                    return this.getQueueSubset(P => P && P.game_id === v && P.mode.id === k)
                 }
 
                 getGameQueues(v) {
@@ -2285,7 +2309,7 @@
                         mode_name: v.mode.name,
                         button_state: "queue_cancelled"
                     };
-                    this.analyticsService.postEvent(new l.Queue.Cancelled.Event(k)), this.akumaService.postEvent("Flow", "_queue_failed", k), this.akumaService.postEvent("Control", "arenaHomeGameStartBtn_pressed", k)
+                    this.analyticsService.postEvent(new c.Queue.Cancelled.Event(k)), this.akumaService.postEvent("Flow", "_queue_failed", k), this.akumaService.postEvent("Control", "arenaHomeGameStartBtn_pressed", k)
                 }
 
                 logQueueCompleted(v) {
@@ -2296,7 +2320,7 @@
                         mode_name: v.mode.name,
                         button_state: "queue_completed"
                     };
-                    this.analyticsService.postEvent(new l.Queue.Completed.Event(k)), this.akumaService.postEvent("Flow", "_queue_succeeded", k)
+                    this.analyticsService.postEvent(new c.Queue.Completed.Event(k)), this.akumaService.postEvent("Flow", "_queue_succeeded", k)
                 }
 
                 logQueueStarted(v) {
@@ -2307,7 +2331,7 @@
                         mode_name: v.mode.name,
                         button_state: "queue_started"
                     };
-                    this.analyticsService.postEvent(new l.Queue.Started.Event(k)), this.akumaService.postEvent("Flow", "_queue_started", k), this.akumaService.postEvent("Control", "arenaHomeGameStartBtn_pressed", k)
+                    this.analyticsService.postEvent(new c.Queue.Started.Event(k)), this.akumaService.postEvent("Flow", "_queue_started", k), this.akumaService.postEvent("Control", "arenaHomeGameStartBtn_pressed", k)
                 }
             }
 
@@ -2315,15 +2339,16 @@
                 return new (v || t)(p.LFG(g.yD), p.LFG(g.jt))
             }, t.\u0275prov = p.Yz7({token: t, factory: t.\u0275fac, providedIn: "root"}), t
         })()
-    }, 6674: (se, R, o) => {
+    },
+    6674: (se, R, o) => {
         "use strict";
         o.d(R, {_: () => v});
-        var l = o(8929), i = o(591), y = o(23753), e = o(80013), m = o(92198), p = o(2994), g = o(7625), r = o(73307),
+        var c = o(8929), i = o(591), y = o(23753), e = o(80013), m = o(92198), p = o(2994), g = o(7625), r = o(73307),
             t = o(5e3), n = o(44416);
         let v = (() => {
             class k {
                 constructor(I, A, f) {
-                    this.utils = I, this.zone = A, this.storage = f, this.unsubscribe = new l.xQ, this._windowSize$ = new i.X({
+                    this.utils = I, this.zone = A, this.storage = f, this.unsubscribe = new c.xQ, this._windowSize$ = new i.X({
                         width: 0,
                         height: 0
                     }), this._viewPortUnits$ = new i.X({
@@ -2395,14 +2420,15 @@
                 return new (I || k)(t.LFG(n.F), t.LFG(t.R0b), t.LFG(r.qy))
             }, k.\u0275prov = t.Yz7({token: k, factory: k.\u0275fac}), k
         })()
-    }, 5969: (se, R, o) => {
+    },
+    5969: (se, R, o) => {
         "use strict";
         o.d(R, {g: () => y});
-        var l = o(591), i = o(5e3);
+        var c = o(591), i = o(5e3);
         let y = (() => {
             class e {
                 constructor() {
-                    this._openSettings$ = new l.X(null)
+                    this._openSettings$ = new c.X(null)
                 }
 
                 get openSettings$() {
@@ -2422,10 +2448,11 @@
                 return new (p || e)
             }, e.\u0275prov = i.Yz7({token: e, factory: e.\u0275fac}), e
         })()
-    }, 44416: (se, R, o) => {
+    },
+    44416: (se, R, o) => {
         "use strict";
         o.d(R, {F: () => p});
-        var l = o(52886), i = o(56498), y = o(57674), e = o(5e3), m = o(55778);
+        var c = o(52886), i = o(56498), y = o(57674), e = o(5e3), m = o(55778);
         let p = (() => {
             class g {
                 constructor(t) {
@@ -2443,24 +2470,24 @@
                 }
 
                 arrayToMap(t, n, v) {
-                    return t ? t.reduce((k, x) => (k[n(x)] = v(x), k), {}) : {}
+                    return t ? t.reduce((k, P) => (k[n(P)] = v(P), k), {}) : {}
                 }
 
                 groupBy(t, n) {
                     const v = new Map;
                     return t.forEach(k => {
-                        const x = n(k), I = v.get(x);
-                        I ? I.push(k) : v.set(x, [k])
+                        const P = n(k), I = v.get(P);
+                        I ? I.push(k) : v.set(P, [k])
                     }), v
                 }
 
                 convertIdsToCards(t, n, v) {
                     const k = [];
-                    for (const x in n) if (n[x]) {
-                        const I = v.get(parseInt(x));
-                        n[x].forEach(A => {
+                    for (const P in n) if (n[P]) {
+                        const I = v.get(parseInt(P));
+                        n[P].forEach(A => {
                             if (-1 !== t.indexOf(A.id)) {
-                                const f = new l.Zb(A.id, parseInt(x), A.q, I, A.status);
+                                const f = new c.Zb(A.id, parseInt(P), A.q, I, A.status);
                                 k.push(f)
                             }
                         })
@@ -2469,7 +2496,7 @@
                 }
 
                 diff(t, n) {
-                    return [...t.filter(x => !n.includes(x)), ...n.filter(x => !t.includes(x))]
+                    return [...t.filter(P => !n.includes(P)), ...n.filter(P => !t.includes(P))]
                 }
 
                 enterZone(t) {
@@ -2503,9 +2530,9 @@
                 }
 
                 calcTopCards(t, n, v) {
-                    const k = this.filterService.getSort(y.PE.AscScarcity, t), x = [...n].sort(k),
-                        I = Math.min(v, x.length);
-                    return x.slice(I*-1)
+                    const k = this.filterService.getSort(y.PE.AscScarcity, t), P = [...n].sort(k),
+                        I = Math.min(v, P.length);
+                    return P.slice(I*-1)
                 }
 
                 toISODateString(t) {
@@ -2517,9 +2544,9 @@
                 }
 
                 calculateContentHeight(t, n) {
-                    let v = t.style.height, k = t.offsetHeight, x = t.scrollHeight, I = t.style.overflow;
-                    if (!(k >= x)) return x;
-                    if (t.style.height = k + n + "px", t.style.overflow = "hidden", x < t.scrollHeight) {
+                    let v = t.style.height, k = t.offsetHeight, P = t.scrollHeight, I = t.style.overflow;
+                    if (!(k >= P)) return P;
+                    if (t.style.height = k + n + "px", t.style.overflow = "hidden", P < t.scrollHeight) {
                         for (; t.offsetHeight >= t.scrollHeight;) t.style.height = (k -= n) + "px";
                         for (; t.offsetHeight < t.scrollHeight;) t.style.height = k++ + "px";
                         return t.style.height = v, t.style.overflow = I, k
@@ -2543,10 +2570,11 @@
                 return new (t || g)(e.LFG(m.iZ))
             }, g.\u0275prov = e.Yz7({token: g, factory: g.\u0275fac, providedIn: "root"}), g
         })()
-    }, 49757: (se, R, o) => {
+    },
+    49757: (se, R, o) => {
         "use strict";
         o.d(R, {m: () => s});
-        var l = o(45210), i = o(69808), y = o(93075), e = o(73307), m = o(51649), p = o(5e3);
+        var c = o(45210), i = o(69808), y = o(93075), e = o(73307), m = o(51649), p = o(5e3);
         let g = (() => {
             class C {
             }
@@ -2567,7 +2595,7 @@
                 return new (B || C)
             }, C.\u0275mod = p.oAB({type: C}), C.\u0275inj = p.cJS({providers: [t.z], imports: [[i.ez, r.xd]]}), C
         })();
-        var v = o(66773), k = o(69878), x = o(23569), I = o(79763), A = o(66088), f = o(236), O = o(18464);
+        var v = o(66773), k = o(69878), P = o(23569), I = o(79763), A = o(66088), f = o(236), O = o(18464);
         let b = (() => {
             class C {
                 transform(B, ee) {
@@ -2580,22 +2608,23 @@
                 return new (B || C)
             }, C.\u0275pipe = p.Yjl({name: "WeiToEth", type: C, pure: !0}), C
         })();
-        var $ = o(5969);
+        var T = o(5969);
         let s = (() => {
             class C {
                 static forRoot() {
-                    return {ngModule: C, providers: [A.Z, I.hM, f.u, b, r.$c, x.d, $.g, {provide: e.Ho, useValue: k.N}]}
+                    return {ngModule: C, providers: [A.Z, I.hM, f.u, b, r.$c, P.d, T.g, {provide: e.Ho, useValue: k.N}]}
                 }
             }
 
             return C.\u0275fac = function (B) {
                 return new (B || C)
-            }, C.\u0275mod = p.oAB({type: C}), C.\u0275inj = p.cJS({imports: [[i.ez, l.aw, y.u5, y.UX, v.W2, n, r.xd, g], l.aw, y.UX, v.W2, r.xd, g]}), C
+            }, C.\u0275mod = p.oAB({type: C}), C.\u0275inj = p.cJS({imports: [[i.ez, c.aw, y.u5, y.UX, v.W2, n, r.xd, g], c.aw, y.UX, v.W2, r.xd, g]}), C
         })()
-    }, 69878: (se, R, o) => {
+    },
+    69878: (se, R, o) => {
         "use strict";
         o.d(R, {N: () => A});
-        var l = o(55778), i = o(43991), y = o(63411), e = o(73307), m = o(40886), p = o(26959), g = o(45425),
+        var c = o(55778), i = o(43991), y = o(63411), e = o(73307), m = o(40886), p = o(26959), g = o(45425),
             r = o(5254), t = o(68896), n = o(18499), v = o(24850), k = o(5e3);
         const A = {
             production: !0,
@@ -2611,8 +2640,8 @@
             envClasses: {
                 authService: y.e, ethService: (() => {
                     class f {
-                        constructor(P) {
-                            this.environment = P, this.initHTTPProvider()
+                        constructor(S) {
+                            this.environment = S, this.initHTTPProvider()
                         }
 
                         initHTTPProvider() {
@@ -2623,21 +2652,21 @@
                             return this._httpProvider
                         }
 
-                        getTransactionReceipt$(P) {
-                            return (0, r.D)(this._httpProvider.getTransactionReceipt(P))
+                        getTransactionReceipt$(S) {
+                            return (0, r.D)(this._httpProvider.getTransactionReceipt(S))
                         }
 
-                        getBalance(P) {
-                            return (0, r.D)(this._httpProvider.getBalance(P))
+                        getBalance(S) {
+                            return (0, r.D)(this._httpProvider.getBalance(S))
                         }
 
-                        getTransaction$(P) {
-                            return (0, r.D)(this.provider.getTransaction(P))
+                        getTransaction$(S) {
+                            return (0, r.D)(this.provider.getTransaction(S))
                         }
 
-                        getWETHBalance(P) {
-                            let b, $;
-                            return b = new g.ethers.providers.InfuraProvider(this.environment.production ? m.t : m.Y), $ = this.environment.production ? "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2" : "0xc778417e063141139fce010982780140aa0cd5ab", (0, r.D)(n.WETH9.at(b, $).balanceOf(P)).pipe((0, v.U)(s => s.toString()))
+                        getWETHBalance(S) {
+                            let b, T;
+                            return b = new g.ethers.providers.InfuraProvider(this.environment.production ? m.t : m.Y), T = this.environment.production ? "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2" : "0xc778417e063141139fce010982780140aa0cd5ab", (0, r.D)(n.WETH9.at(b, T).balanceOf(S)).pipe((0, v.U)(s => s.toString()))
                         }
 
                         getGasPrice() {
@@ -2645,31 +2674,31 @@
                         }
                     }
 
-                    return f.\u0275fac = function (P) {
-                        return new (P || f)(k.LFG(e.Ho))
+                    return f.\u0275fac = function (S) {
+                        return new (S || f)(k.LFG(e.Ho))
                     }, f.\u0275prov = k.Yz7({token: f, factory: f.\u0275fac}), f
-                })(), cardsService: l.dK, storageService: (() => {
+                })(), cardsService: c.dK, storageService: (() => {
                     class f {
                         constructor() {
                         }
 
-                        set(P, b) {
-                            return null != b && window.bridge.set(P, b)
+                        set(S, b) {
+                            return null != b && window.bridge.set(S, b)
                         }
 
-                        get(P) {
-                            return window.bridge.get(P)
+                        get(S) {
+                            return window.bridge.get(S)
                         }
 
-                        delete(P) {
-                            return window.bridge.delete(P)
+                        delete(S) {
+                            return window.bridge.delete(S)
                         }
                     }
 
-                    return f.\u0275fac = function (P) {
-                        return new (P || f)
+                    return f.\u0275fac = function (S) {
+                        return new (S || f)
                     }, f.\u0275prov = k.Yz7({token: f, factory: f.\u0275fac, providedIn: "root"}), f
-                })(), authHostService: l.f1, assetsService: i.z, audioService: l.QF, featureFlagsService: l.ai
+                })(), authHostService: c.f1, assetsService: i.z, audioService: c.QF, featureFlagsService: c.ai
             },
             clientType: "desktop",
             guWebsite: "https://godsunchained.com",
@@ -2693,9 +2722,10 @@
             immutableXMarketplaceUrlGUCollection: "https://market.immutable.com/assets?collection=0xacb3c6a43d15b907e8433077b6d38ae40936fe2c",
             GUCollectioimmutableXMarketplaceUrlGUInventory: "https://market.immutable.com/inventory/0xacb3c6a43d15b907e8433077b6d38ae40936fe2c"
         }
-    }, 84740: (se, R, o) => {
+    },
+    84740: (se, R, o) => {
         "use strict";
-        var l = o(22313), i = o(8929), y = o(591), e = o(21086), m = o(5254);
+        var c = o(22313), i = o(8929), y = o(591), e = o(21086), m = o(5254);
 
         class r {
             constructor(L, a, M, F) {
@@ -2736,7 +2766,7 @@
         }
 
         k.consoleLog = console.log, k.consoleError = console.error, k.consoleWarn = console.warn;
-        var x = o(35736);
+        var P = o(35736);
 
         class A {
             constructor(L = 1) {
@@ -2767,7 +2797,11 @@
             return "object" == typeof navigator && "string" == typeof navigator.userAgent && navigator.userAgent.indexOf(h) >= 0
         }
 
-        !window.bridge && (!O("Electron") || O("Cypress")) && (window.bridge = new class {
+        !window.bridge && (!function S() {
+            return O("Electron")
+        }() || function b() {
+            return O("Cypress")
+        }()) && (window.bridge = new class I {
             constructor() {
                 this.logger = new k, this.variant = "browser", this.progress = new i.xQ, this.appsModalExisting$ = new y.X(!1), this.displayMetricsChange$ = new i.xQ, this.isInGame$ = new y.X(!1), this.protocolRedirect$ = new y.X(null), this.watchForDisplayChanges(), this.watchInGameStatus(), this.checkAdditionalArgs(), this.watchForAppsModal(), this.watchProtocolRedirect()
             }
@@ -2826,13 +2860,13 @@
             downloadAssetsWithSempahore(L, a, M, F, me) {
                 console.log("Preload->downloadAssetsWithSempahore()", L);
                 const Le = new A(me);
-                return L.map((Ke, St) => {
+                return L.map((Ke, Pt) => {
                     const gt = {
                         authToken: F, onStart: be => {
                         }, onProgress: be => {
-                            M[St].next(be)
+                            M[Pt].next(be)
                         }, onEnd: be => {
-                            M[St].complete()
+                            M[Pt].complete()
                         }
                     };
                     console.log(Ke.url, a + Ke.location, Ke.file_name);
@@ -2934,7 +2968,7 @@
             }
 
             checkAdditionalArgs() {
-                const L = x.argv.map(a => a.split("=")).reduce((a, [M, F]) => (a[M] = F, a), {});
+                const L = P.argv.map(a => a.split("=")).reduce((a, [M, F]) => (a[M] = F, a), {});
                 L["--auth-id"] && L["--auth-access"] && (this.authId = +L["--auth-id"], this.authAccess = L["--auth-access"]), L["--session-ticket"] && (this.sessionTicket = L["--session-ticket"]), L["--vw"] && L["--vh"] && (this.vw = L["--vw"], this.vh = L["--vh"])
             }
 
@@ -2979,9 +3013,9 @@
                 return (0, e.of)()
             }
         });
-        var $ = o(43050), s = o(5e3);
-        const C = JSON.parse('{"buildNumber":"983","branch":"master"}');
-        var w = o.t(C, 2), ee = (o(12751), o(53161)), ce = o(16517), de = o(32182), fe = o(96727), Z = o(99565),
+        var T = o(43050), s = o(5e3);
+        const C = JSON.parse('{"buildNumber":"987","branch":"master"}');
+        var w = o.t(C, 2), ee = (o(12751), o(53161)), ce = o(16517), de = o(32182), fe = o(96727), N = o(99565),
             X = o(60870), ae = o(40520), Y = o(93075), ye = o(76360), V = o(73307), le = o(38076);
         let Ce = (() => {
             class h {
@@ -3000,16 +3034,16 @@
                 return new (a || h)(s.LFG(V.mI))
             }, h.\u0275prov = s.Yz7({token: h, factory: h.\u0275fac, providedIn: "root"}), h
         })();
-        var $e = o(87182), Be = o(85115), W = o(11735);
+        var Te = o(87182), Be = o(85115), H = o(11735);
         o(57334);
-        var pe = o(45210), Pe = o(69808);
+        var pe = o(45210), Se = o(69808);
         let Ae = (() => {
             class h {
             }
 
             return h.\u0275fac = function (a) {
                 return new (a || h)
-            }, h.\u0275mod = s.oAB({type: h}), h.\u0275inj = s.cJS({imports: [[Pe.ez, pe.aw, Y.u5, Y.UX]]}), h
+            }, h.\u0275mod = s.oAB({type: h}), h.\u0275inj = s.cJS({imports: [[Se.ez, pe.aw, Y.u5, Y.UX]]}), h
         })();
         new s.OlP("recaptcha-service"), new s.OlP("websocket-constructor");
         let Oe = (() => {
@@ -3019,7 +3053,7 @@
                         url: a.url,
                         params: ht(a.root, M => M.params),
                         queryParams: ht(a.root, M => M.queryParams),
-                        data: He(a.root)
+                        data: Ze(a.root)
                     }
                 }
             }
@@ -3035,16 +3069,16 @@
             return Object.assign(Object.assign({}, a), ht(M, L))
         }
 
-        function He(h) {
+        function Ze(h) {
             if (!h) return {};
             const L = h.data, a = h.children.find(M => "primary" === M.outlet) || h.firstChild;
-            return Object.assign(Object.assign({}, L), He(a))
+            return Object.assign(Object.assign({}, L), Ze(a))
         }
 
         const yt = {stateKey: "router", navigationActionTiming: de.R0.PostActivation, serialzer: Oe};
         (0, fe.ZF)(yt.stateKey);
         var Fe = o(55778), rt = o(66773), Ie = o(69878), Ee = (o(70893), o(59633)), It = o(61715), q = o(7625),
-            re = o(61709), xe = o(27221), Ge = o(92198), z = o(24850), N = o(2994), _ = (o(48031), o(70655)),
+            re = o(61709), xe = o(27221), Ge = o(92198), W = o(24850), z = o(2994), _ = (o(48031), o(70655)),
             U = o(79763);
         let ie = (() => {
             class h {
@@ -3083,7 +3117,7 @@
                 }
 
                 watchProtocol() {
-                    window.bridge.protocolRedirect$.pipe(this.utils.enterZone(this.zone), (0, q.R)(this.unsubscribe), (0, Ge.h)(a => !!a), (0, N.b)(({url: a}) => {
+                    window.bridge.protocolRedirect$.pipe(this.utils.enterZone(this.zone), (0, q.R)(this.unsubscribe), (0, Ge.h)(a => !!a), (0, z.b)(({url: a}) => {
                         this.handlePayload(a), this.handleRouteChange(a)
                     })).subscribe()
                 }
@@ -3107,7 +3141,7 @@
             }
 
             return h.\u0275fac = function (a) {
-                return new (a || h)(s.LFG(Ve.F), s.LFG(s.R0b), s.LFG(W.F0))
+                return new (a || h)(s.LFG(Ve.F), s.LFG(s.R0b), s.LFG(H.F0))
             }, h.\u0275prov = s.Yz7({token: h, factory: h.\u0275fac, providedIn: "root"}), h
         })();
         var mt = o(6674);
@@ -3151,23 +3185,23 @@
                 vars: 0,
                 consts: [[1, "appRatioSetter"], ["ratioSetter", ""], ["src", "/assets/images/16-x-9-ratio.png", "alt", "ratio image", 1, "appRatioSetter__ratioImage", 3, "load"], [1, "innerAppContainer"]],
                 template: function (a, M) {
-                    1 & a && (s.F$t(), s.TgZ(0, "div", 0, 1), s.TgZ(2, "img", 2), s.NdJ("load", function () {
+                    1 & a && (s.F$t(), s.TgZ(0, "div", 0, 1)(2, "img", 2), s.NdJ("load", function () {
                         return M.triggerCalcs()
-                    }), s.qZA(), s.TgZ(3, "div", 3), s.Hsn(4), s.qZA(), s.qZA())
+                    }), s.qZA(), s.TgZ(3, "div", 3), s.Hsn(4), s.qZA()())
                 },
                 styles: ["[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;height:100vh;width:100vw;background:var(--gu-blue-dark);}.appRatioSetter[_ngcontent-%COMP%]{margin:auto;position:relative;width:100vw;padding-bottom:56.23%}.appRatioSetter__ratioImage[_ngcontent-%COMP%]{display:none}.innerAppContainer[_ngcontent-%COMP%]{position:absolute;width:100%;height:100%;top:0;left:0;overflow:hidden;display:flex;flex-direction:column}@media screen and (min-aspect-ratio:1282/720) {.appRatioSetter[_ngcontent-%COMP%]{height:100vh;width:auto;padding-bottom:0}.appRatioSetter__ratioImage[_ngcontent-%COMP%]{display:block;width:auto;height:100%}}"]
             }), h
         })();
-        var ss = o(52492), Bt = o(41777), _t = o(72986), ft = o(80013), Qe = o(40537), Wt = o(66088), Xt = o(83035);
+        var ss = o(52492), Bt = o(41777), _t = o(72986), ft = o(80013), Qe = o(40537), Ht = o(66088), Xt = o(83035);
 
         function wt(h, L) {
             if (1 & h) {
                 const a = s.EpF();
-                s.TgZ(0, "form", 7), s.TgZ(1, "label", 8), s._uU(2, "Username"), s.qZA(), s.TgZ(3, "div", 9), s.TgZ(4, "input", 10), s.NdJ("click", function () {
+                s.TgZ(0, "form", 7)(1, "label", 8), s._uU(2, "Username"), s.qZA(), s.TgZ(3, "div", 9)(4, "input", 10), s.NdJ("click", function () {
                     return s.CHM(a), s.oxw().audioService.clickTinyV1.play()
                 }), s.qZA(), s.TgZ(5, "gu-primary-hex-button", 11), s.NdJ("click", function () {
                     return s.CHM(a), s.oxw().updateUser()
-                }), s.qZA(), s.qZA(), s.TgZ(6, "div", 12), s._uU(7, " Your username will be publicly visible. "), s.qZA(), s.qZA()
+                }), s.qZA()(), s.TgZ(6, "div", 12), s._uU(7, " Your username will be publicly visible. "), s.qZA()()
             }
             if (2 & h) {
                 const a = s.oxw();
@@ -3181,8 +3215,8 @@
             os = window.bridge && window.bridge.launcherTarget ? window.bridge.launcherTarget() : "PROD";
         let so = (() => {
             class h {
-                constructor(a, M, F, me, Le, Ne, Ke, St) {
-                    this.authService = a, this.fb = M, this.audioService = F, this.modalService = me, this.resizeService = Le, this.utils = Ne, this.storage = Ke, this.queueService = St, this.loading = !1, this.updating = !1, this.version = to, this.launcherTarget = os, this.cerberusBuildNumber = jt, this.cerberusBranch = eo, this.clientSizes = mt._.clientSizes, this.volume = 0, this.volumeControl = new Y.NI(.9), this.unsubscribe = new i.xQ
+                constructor(a, M, F, me, Le, ze, Ke, Pt) {
+                    this.authService = a, this.fb = M, this.audioService = F, this.modalService = me, this.resizeService = Le, this.utils = ze, this.storage = Ke, this.queueService = Pt, this.loading = !1, this.updating = !1, this.version = to, this.launcherTarget = os, this.cerberusBuildNumber = jt, this.cerberusBranch = eo, this.clientSizes = mt._.clientSizes, this.volume = 0, this.volumeControl = new Y.NI(.9), this.unsubscribe = new i.xQ
                 }
 
                 ngOnInit() {
@@ -3217,7 +3251,7 @@
                 }
 
                 initUserNameForm() {
-                    this.buildFormGroup(), this.loading = !0, this.authService.account$.pipe((0, q.R)(this.unsubscribe), (0, N.b)(a => this.formGroup.get("username").setValue(a.username)), (0, xe.K)(a => (this.logout(), a)), (0, Qe.x)(() => this.loading = !1)).subscribe()
+                    this.buildFormGroup(), this.loading = !0, this.authService.account$.pipe((0, q.R)(this.unsubscribe), (0, z.b)(a => this.formGroup.get("username").setValue(a.username)), (0, xe.K)(a => (this.logout(), a)), (0, Qe.x)(() => this.loading = !1)).subscribe()
                 }
 
                 buildFormGroup() {
@@ -3229,7 +3263,7 @@
             }
 
             return h.\u0275fac = function (a) {
-                return new (a || h)(s.Y36(V.mI), s.Y36(Y.qu), s.Y36(V.pk), s.Y36(Wt.Z), s.Y36(mt._), s.Y36(Ve.F), s.Y36(V.qy), s.Y36(Xt.g))
+                return new (a || h)(s.Y36(V.mI), s.Y36(Y.qu), s.Y36(V.pk), s.Y36(Ht.Z), s.Y36(mt._), s.Y36(Ve.F), s.Y36(V.qy), s.Y36(Xt.g))
             }, h.\u0275cmp = s.Xpm({
                 type: h,
                 selectors: [["app-apollo-settings"]],
@@ -3238,12 +3272,12 @@
                 vars: 9,
                 consts: [["class", "settingsForm", 3, "formGroup", 4, "ngIf"], [1, "audioControl"], [1, "audioControl__heading"], ["id", "volume", "type", "range", "min", "0", "max", "1", "step", "0.1", 1, "audioControl__rangeInput", 3, "formControl"], ["for", "#volume", 1, "audioControl__volumeLabel"], [1, "version-label"], ["size", "regular", "text", "Clear Cache", 1, "settingsForm__bottomCta", "settingsForm__bottomCta--cacheClear", 3, "click"], [1, "settingsForm", 3, "formGroup"], ["for", "usernameInput", 1, "settingsForm__label"], [1, "settingsForm__inputsRow"], ["name", "username", "type", "text", "formControlName", "username", "id", "usernameInput", "aria-describedby", "usernameHelp", 1, "settingsForm__textInput", 3, "click"], ["size", "regular", 1, "settingsForm__cta", 3, "text", "click"], ["id", "usernameHelp", 1, "settingsForm__hintText"]],
                 template: function (a, M) {
-                    1 & a && (s.YNc(0, wt, 8, 2, "form", 0), s.TgZ(1, "div", 1), s.TgZ(2, "label", 2), s._uU(3, "Audio Volume"), s.qZA(), s._UZ(4, "input", 3), s.TgZ(5, "label", 4), s._uU(6), s.qZA(), s.qZA(), s.TgZ(7, "h5", 5), s._uU(8), s.ALo(9, "lowercase"), s.qZA(), s.TgZ(10, "h5", 5), s._uU(11), s.qZA(), s.TgZ(12, "gu-primary-hex-button", 6), s.NdJ("click", function () {
+                    1 & a && (s.YNc(0, wt, 8, 2, "form", 0), s.TgZ(1, "div", 1)(2, "label", 2), s._uU(3, "Audio Volume"), s.qZA(), s._UZ(4, "input", 3), s.TgZ(5, "label", 4), s._uU(6), s.qZA()(), s.TgZ(7, "h5", 5), s._uU(8), s.ALo(9, "lowercase"), s.qZA(), s.TgZ(10, "h5", 5), s._uU(11), s.qZA(), s.TgZ(12, "gu-primary-hex-button", 6), s.NdJ("click", function () {
                         return M.clearCache()
                     }), s.qZA()), 2 & a && (s.Q6J("ngIf", !M.anonymous), s.xp6(4), s.Q6J("formControl", M.volumeControl), s.xp6(2), s.Oqu(M.volumeControl.value), s.xp6(2), s.AsE("Launcher Version: ", M.version, "-", s.lcZ(9, 7, M.launcherTarget), ""), s.xp6(3), s.AsE("Cerberus Version: ", M.cerberusBranch, ".", M.cerberusBuildNumber, ""))
                 },
-                directives: [Pe.O5, Y.eT, Y.Fj, Y.JJ, Y.oH, Y._Y, Y.JL, Y.sg, Y.u],
-                pipes: [Pe.i8],
+                directives: [Se.O5, Y._Y, Y.JL, Y.sg, Y.Fj, Y.JJ, Y.u, Y.eT, Y.oH],
+                pipes: [Se.i8],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.version-label[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.settingsForm__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%], .settingsForm__hintText[_ngcontent-%COMP%], .settingsForm__textInput[_ngcontent-%COMP%], .audioControl__heading[_ngcontent-%COMP%], .settingsForm__label[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.version-label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.audioControl__heading[_ngcontent-%COMP%], .settingsForm__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9)}.settingsForm__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%], .settingsForm__hintText[_ngcontent-%COMP%], .settingsForm__textInput[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.settingsForm__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%], .settingsForm__hintText[_ngcontent-%COMP%], .settingsForm__textInput[_ngcontent-%COMP%]{line-height:1.4}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;margin:auto}.settingsForm[_ngcontent-%COMP%]{display:flex;flex-flow:column nowrap;align-self:center;width:70%}.settingsForm__inputsRow[_ngcontent-%COMP%]{display:flex;align-items:center;width:100%}.settingsForm__textInput[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);margin-bottom:0;background:#182531;color:#f6f6f6;border:calc(var(--vh) * .15) solid #0f1b27;border-radius:calc(var(--vh) * .4);flex-grow:1;margin:0 calc(var(--vw) * 1) 0 0}.settingsForm__textInput[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.settingsForm__cta[_ngcontent-%COMP%]{min-width:calc(var(--vw) * 8);flex-grow:0}.settingsForm__hintText[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 2)}.version-label[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 4);text-align:center;user-select:all}.settingsForm__select[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .65);font-size:calc(var(--vh) * 1.9)}.settingsForm__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);margin-bottom:0;background:#182531;color:#f6f6f6;border:calc(var(--vh) * .15) solid #0f1b27;border-radius:calc(var(--vh) * .4)}.settingsForm__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.settingsForm__bottomCta[_ngcontent-%COMP%]{width:70%;margin:0 auto}.settingsForm__bottomCta--cacheClear[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 4);margin-bottom:calc(var(--vh) * 2)}.audioControl[_ngcontent-%COMP%]{width:70%;margin:calc(var(--vh) * 3) auto}.audioControl__volumeLabel[_ngcontent-%COMP%]{display:inline-block;position:relative;width:60px;line-height:20px;text-align:center;border-radius:3px;color:#e0c58f;padding:5px 10px;margin-left:8px}.audioControl__rangeInput[_ngcontent-%COMP%]{-webkit-appearance:none;width:calc(100% - 73px);height:10px;border-radius:5px;background:#1d2f41;outline:none;padding:0;margin:0}.audioControl__rangeInput[_ngcontent-%COMP%]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:20px;height:20px;border-radius:50%;background:#e0c58f;cursor:pointer}.audioControl__rangeInput[_ngcontent-%COMP%]:active::-webkit-slider-thumb{background:#e0c58f}.audioControl__rangeInput[_ngcontent-%COMP%]::-moz-range-thumb{width:20px;height:20px;border:0;border-radius:50%;background:#e0c58f;cursor:pointer}"]
             }), h
         })();
@@ -3285,11 +3319,11 @@
                 const a = s.EpF();
                 s.TgZ(0, "form", 1), s.YNc(1, cs, 5, 2, "ng-container", 2), s.TgZ(2, "label", 3), s._uU(3, "Installation Path"), s.qZA(), s.TgZ(4, "div", 4), s._UZ(5, "input", 5), s.TgZ(6, "gu-icon", 6), s.NdJ("click", function () {
                     return s.CHM(a), s.oxw().showDialog()
-                }), s.qZA(), s.qZA(), s.YNc(7, Es, 4, 1, "ng-container", 2), s.TgZ(8, "gu-primary-hex-button", 7), s.NdJ("click", function () {
+                }), s.qZA()(), s.YNc(7, Es, 4, 1, "ng-container", 2), s.TgZ(8, "gu-primary-hex-button", 7), s.NdJ("click", function () {
                     return s.CHM(a), s.oxw().clearVersion()
                 }), s.qZA(), s.TgZ(9, "gu-primary-hex-button", 8), s.NdJ("click", function () {
                     return s.CHM(a), s.oxw().clearAssets()
-                }), s.qZA(), s.qZA()
+                }), s.qZA()()
             }
             if (2 & h) {
                 const a = s.oxw();
@@ -3352,7 +3386,7 @@
                 template: function (a, M) {
                     1 & a && s.YNc(0, et, 10, 3, "form", 0), 2 & a && s.Q6J("ngIf", M.loaded)
                 },
-                directives: [Pe.O5, Y._Y, Y.JL, Y.F, Y.EJ, Y.JJ, Y.On, Pe.sg, Y.YN, Y.Kr],
+                directives: [Se.O5, Y._Y, Y.JL, Y.F, Y.EJ, Y.JJ, Y.On, Se.sg, Y.YN, Y.Kr],
                 styles: ["@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.settingsForm__textInput[_ngcontent-%COMP%], .settingsForm__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%], .settingsForm__label[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.settingsForm__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9)}.settingsForm__textInput[_ngcontent-%COMP%], .settingsForm__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.settingsForm__textInput[_ngcontent-%COMP%], .settingsForm__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]{line-height:1.4}[_nghost-%COMP%]{display:block;margin:auto}.settingsForm[_ngcontent-%COMP%]{display:flex;flex-flow:column nowrap;width:60%;margin:auto}.settingsForm__path[_ngcontent-%COMP%]{display:flex}.settingsForm__label[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 3)}.path-select-btn[_ngcontent-%COMP%]{height:calc(var(--vh) * 5);line-height:calc(var(--vh) * 5);width:calc(var(--vh) * 5);margin-top:calc(var(--vh) * .65);background-color:#072337;border-radius:0 calc(var(--vh) * .4) calc(var(--vh) * .4) 0;cursor:pointer;border:calc(var(--vh) * .15) solid #c6a052;border-left:none;text-align:center;display:flex}.path-select-btn[_ngcontent-%COMP%]     i{margin:auto}.settingsForm__select[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .65)}.settingsForm__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);margin-bottom:0;background:#182531;color:#f6f6f6;border:calc(var(--vh) * .15) solid #0f1b27;border-radius:calc(var(--vh) * .4)}.settingsForm__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.settingsForm__textInput[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);margin-bottom:0;background:#182531;color:#f6f6f6;border:calc(var(--vh) * .15) solid #0f1b27;border-radius:calc(var(--vh) * .4);margin-top:calc(var(--vh) * .65)}.settingsForm__textInput[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.settingsForm__textInput[_ngcontent-%COMP%]{flex:1;border:calc(var(--vh) * .15) solid #c6a052;border-radius:calc(var(--vh) * .4) 0 0 calc(var(--vh) * .4)}.settingsForm__cta[_ngcontent-%COMP%]{align-self:center;margin:0 auto;margin-top:calc(var(--vh) * 4)}"]
             }), h
         })(), Ms = (() => {
@@ -3370,7 +3404,7 @@
                 vars: 0,
                 consts: [["top", "2x-large", 1, "manageWalletsLink"], ["kind", "large", "fontWeight", "bold", "fillColor", "colors.light.100"], ["both", "large"], ["kind", "small", "fillColor", "colors.light.100"], ["href", "https://godsunchained.com/manage-wallets", "target", "_blank", "backgroundFillColor", "colors.gunmetal.500", "borderColor", "colors.gunmetal.300", "borderColorHover", "colors.gunmetal.100", "fillColor", "colors.light.300", "icon", "leave_website", "leftIconPosition", "true"]],
                 template: function (a, M) {
-                    1 & a && (s.TgZ(0, "gu-vertical-space", 0), s.TgZ(1, "gu-vertical-space"), s.TgZ(2, "gu-paragraph-text", 1), s._uU(3, " Wallet Management & Linking to Immutable X "), s.qZA(), s.qZA(), s.TgZ(4, "gu-vertical-space", 2), s.TgZ(5, "gu-paragraph-text", 3), s._uU(6, " Add, remove, or view wallets, and link your wallets to the Immutable X marketplace. "), s.qZA(), s.qZA(), s.TgZ(7, "gu-plain-square-button", 4), s._uU(8, " Go to Website "), s.qZA(), s.qZA())
+                    1 & a && (s.TgZ(0, "gu-vertical-space", 0)(1, "gu-vertical-space")(2, "gu-paragraph-text", 1), s._uU(3, " Wallet Management & Linking to Immutable X "), s.qZA()(), s.TgZ(4, "gu-vertical-space", 2)(5, "gu-paragraph-text", 3), s._uU(6, " Add, remove, or view wallets, and link your wallets to the Immutable X marketplace. "), s.qZA()(), s.TgZ(7, "gu-plain-square-button", 4), s._uU(8, " Go to Website "), s.qZA()())
                 },
                 styles: ["@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.settings__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%], .settings__label[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.settings__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9)}.settings__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.settings__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]{line-height:1.4}[_nghost-%COMP%]{display:block;margin:0 auto}.settings[_ngcontent-%COMP%]{display:flex;flex-flow:column nowrap;width:100%;margin:auto}.settings__label[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 3)}.settings__select[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .65)}.settings__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);margin-bottom:0;background:#182531;color:#f6f6f6;border:calc(var(--vh) * .15) solid #0f1b27;border-radius:calc(var(--vh) * .4)}.settings__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.settings__cta[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .65);color:#affaed}.manageWalletsLink[_ngcontent-%COMP%]{display:flex;flex-direction:column;align-items:flex-start}"]
             }), h
@@ -3434,13 +3468,13 @@
                 vars: 9,
                 consts: [[1, "side-pane"], [1, "side-pane-item", 3, "click"], ["class", "side-pane-item", 3, "active", "click", 4, "ngFor", "ngForOf"], [1, "settingsContent"], ["class", "settingsContent__tab", 3, "anonymous", 4, "ngIf"], ["class", "settingsContent__tab", 3, "game", 4, "ngIf"], ["class", "settingsContent__tab", 4, "ngIf"], [1, "settingsContent__tab", 3, "anonymous"], [1, "settingsContent__tab", 3, "game"], [1, "settingsContent__tab"]],
                 template: function (a, M) {
-                    1 & a && (s.TgZ(0, "aside", 0), s.TgZ(1, "div", 1), s.NdJ("click", function () {
+                    1 & a && (s.TgZ(0, "aside", 0)(1, "div", 1), s.NdJ("click", function () {
                         return M.selectTab("immutable")
                     }), s._uU(2, " Immutable "), s.qZA(), s.YNc(3, _s, 2, 3, "div", 2), s.TgZ(4, "div", 1), s.NdJ("click", function () {
                         return M.selectTab("wallet")
-                    }), s._uU(5, " WALLET "), s.qZA(), s.qZA(), s.TgZ(6, "div", 3), s.YNc(7, fs, 1, 1, "app-apollo-settings", 4), s.YNc(8, no, 1, 1, "app-game-settings", 5), s.YNc(9, Os, 1, 0, "app-wallet-settings", 6), s.qZA()), 2 & a && (s.xp6(1), s.ekj("active", "immutable" === M.activeTab), s.xp6(2), s.Q6J("ngForOf", M.games), s.xp6(1), s.ekj("active", "wallet" === M.activeTab), s.xp6(2), s.Q6J("@fade", M.activeTab), s.xp6(1), s.Q6J("ngIf", "immutable" === M.activeTab), s.xp6(1), s.Q6J("ngIf", "wallet" !== M.activeTab && "immutable" !== M.activeTab), s.xp6(1), s.Q6J("ngIf", "wallet" === M.activeTab))
+                    }), s._uU(5, " WALLET "), s.qZA()(), s.TgZ(6, "div", 3), s.YNc(7, fs, 1, 1, "app-apollo-settings", 4), s.YNc(8, no, 1, 1, "app-game-settings", 5), s.YNc(9, Os, 1, 0, "app-wallet-settings", 6), s.qZA()), 2 & a && (s.xp6(1), s.ekj("active", "immutable" === M.activeTab), s.xp6(2), s.Q6J("ngForOf", M.games), s.xp6(1), s.ekj("active", "wallet" === M.activeTab), s.xp6(2), s.Q6J("@fade", M.activeTab), s.xp6(1), s.Q6J("ngIf", "immutable" === M.activeTab), s.xp6(1), s.Q6J("ngIf", "wallet" !== M.activeTab && "immutable" !== M.activeTab), s.xp6(1), s.Q6J("ngIf", "wallet" === M.activeTab))
                 },
-                directives: [Pe.sg, Pe.O5, so, oo, Ms],
+                directives: [Se.sg, Se.O5, so, oo, Ms],
                 styles: ["@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.side-pane-item[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.side-pane-item[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22);line-height:1.4}[_nghost-%COMP%]{width:calc(var(--vw) * 60);height:calc(var(--vh) * 80);border-radius:calc(var(--vh) * .4);background-color:#0c1620;border:calc(var(--vh) * .15) solid #e0c58f;display:flex}.side-pane[_ngcontent-%COMP%]{width:30%;border-right:calc(var(--vh) * .15) solid #e0c58f;display:flex;flex-flow:column nowrap}.side-pane-item[_ngcontent-%COMP%]{padding:calc(var(--vh) * 1.8);color:#f6f6f6;text-align:center;transition:all .15s ease;cursor:pointer}.side-pane-item[_ngcontent-%COMP%]:hover{background-color:#1d2f41}.side-pane-item.active[_ngcontent-%COMP%]{background-color:#182531}.settingsContent[_ngcontent-%COMP%]{padding:calc(var(--vh) * 1.8);flex:1;display:flex}.settingsContent__tab[_ngcontent-%COMP%]{width:calc(var(--vw) * 30)}"],
                 data: {animation: [(0, Bt.X$)("fade", [(0, Bt.eR)("* => *", [(0, Bt.jt)(500, (0, Bt.F4)([(0, Bt.oB)({opacity: 0}), (0, Bt.oB)({opacity: 1})]))])])]}
             }), h
@@ -3489,7 +3523,7 @@
             }
 
             return h.\u0275fac = function (a) {
-                return new (a || h)(s.Y36(Wt.Z), s.Y36(V.pk), s.Y36(ro.g), s.Y36(Fe.jt))
+                return new (a || h)(s.Y36(Ht.Z), s.Y36(V.pk), s.Y36(ro.g), s.Y36(Fe.jt))
             }, h.\u0275cmp = s.Xpm({
                 type: h,
                 selectors: [["cerberus-draggable-titlebar"]],
@@ -3510,14 +3544,14 @@
                 styles: ["[_nghost-%COMP%]{width:100%;height:28px;z-index:23;background:#1D2F41;display:flex;flex-direction:row-reverse;padding-right:8px}.draggable[_ngcontent-%COMP%]{flex:1;-webkit-app-region:drag}.electronMenuItem[_ngcontent-%COMP%]{cursor:pointer;display:flex;width:28px}.electronMenuItem[_ngcontent-%COMP%]:hover   .electronMenuItem__icon[_ngcontent-%COMP%]{color:#f6f6f6}.electronMenuItem__icon[_ngcontent-%COMP%]{font-size:14px;margin:auto;text-shadow:0 2px 0 rgba(39,39,39,.4);color:#7192b0}"]
             }), h
         })();
-        var ds = o(39765), bs = o(25774), Ts = o(97993);
+        var ds = o(39765), bs = o(25774), $s = o(97993);
 
-        function Tt(h, L) {
+        function $t(h, L) {
             1 & h && (s.TgZ(0, "cerberus-announce-banner-control", 2), s._UZ(1, "cerberus-controllable-banner"), s.qZA())
         }
 
-        function $s(h, L) {
-            if (1 & h && (s.ynx(0), s.YNc(1, Tt, 2, 0, "cerberus-announce-banner-control", 1), s.BQk()), 2 & h) {
+        function Ts(h, L) {
+            if (1 & h && (s.ynx(0), s.YNc(1, $t, 2, 0, "cerberus-announce-banner-control", 1), s.BQk()), 2 & h) {
                 const a = s.oxw();
                 s.xp6(1), s.Q6J("featureFlagIf", a.Flags.showControllableBanner)
             }
@@ -3525,8 +3559,8 @@
 
         let io = (() => {
             class h {
-                constructor(a, M, F, me, Le, Ne, Ke, St, gt) {
-                    this.vcr = a, this.analyticsService = M, this.authService = F, this.activityService = me, this.router = Le, this.navigationService = Ne, this.route = Ke, this.protocolService = St, this.akumaService = gt, this.Flags = Fe.vU, this.destroyed$ = new i.xQ, this.watchForNavigation(), this.protocolService.watchProtocol()
+                constructor(a, M, F, me, Le, ze, Ke, Pt, gt) {
+                    this.vcr = a, this.analyticsService = M, this.authService = F, this.activityService = me, this.router = Le, this.navigationService = ze, this.route = Ke, this.protocolService = Pt, this.akumaService = gt, this.Flags = Fe.vU, this.destroyed$ = new i.xQ, this.watchForNavigation(), this.protocolService.watchProtocol()
                 }
 
                 ngOnInit() {
@@ -3557,16 +3591,16 @@
                 }
 
                 watchForNavigation() {
-                    this.router.events.pipe((0, Ge.h)(a => a instanceof W.m2), (0, z.U)(() => this.route), (0, z.U)(a => {
+                    this.router.events.pipe((0, Ge.h)(a => a instanceof H.m2), (0, W.U)(() => this.route), (0, W.U)(a => {
                         for (; a.firstChild;) a = a.firstChild;
                         return a
-                    }), (0, re.zg)(a => a.data), (0, z.U)(a => a.hasOwnProperty("state") ? a.state : ""), (0, N.b)(a => this.navigationService.updateCurrentRoute(a))).subscribe(() => {
+                    }), (0, re.zg)(a => a.data), (0, W.U)(a => a.hasOwnProperty("state") ? a.state : ""), (0, z.b)(a => this.navigationService.updateCurrentRoute(a))).subscribe(() => {
                     })
                 }
             }
 
             return h.\u0275fac = function (a) {
-                return new (a || h)(s.Y36(s.s_b), s.Y36(Fe.yD), s.Y36(V.mI), s.Y36(ie), s.Y36(W.F0), s.Y36(ke.f), s.Y36(W.gz), s.Y36(ct), s.Y36(Fe.jt))
+                return new (a || h)(s.Y36(s.s_b), s.Y36(Fe.yD), s.Y36(V.mI), s.Y36(ie), s.Y36(H.F0), s.Y36(ke.f), s.Y36(H.gz), s.Y36(ct), s.Y36(Fe.jt))
             }, h.\u0275cmp = s.Xpm({
                 type: h,
                 selectors: [["cerberus-root"]],
@@ -3574,9 +3608,9 @@
                 vars: 1,
                 consts: [[4, "ngIf"], ["class", "announceBannerControl announceBannerControl--inline", 4, "featureFlagIf"], [1, "announceBannerControl", "announceBannerControl--inline"]],
                 template: function (a, M) {
-                    1 & a && (s.TgZ(0, "app-auto-letterbox"), s._UZ(1, "cerberus-draggable-titlebar"), s.YNc(2, $s, 2, 1, "ng-container", 0), s._UZ(3, "router-outlet"), s.qZA()), 2 & a && (s.xp6(2), s.Q6J("ngIf", !M.isLoggedIn))
+                    1 & a && (s.TgZ(0, "app-auto-letterbox"), s._UZ(1, "cerberus-draggable-titlebar"), s.YNc(2, Ts, 2, 1, "ng-container", 0), s._UZ(3, "router-outlet"), s.qZA()), 2 & a && (s.xp6(2), s.Q6J("ngIf", !M.isLoggedIn))
                 },
-                directives: [ls, vs, Pe.O5, W.lC, ds.w, bs.O, Ts.i],
+                directives: [ls, vs, Se.O5, ds.w, bs.O, $s.i, H.lC],
                 styles: ["[_nghost-%COMP%]{display:block}"]
             }), h
         })(), As = (() => {
@@ -3598,7 +3632,7 @@
                 template: function (a, M) {
                     1 & a && s._UZ(0, "router-outlet")
                 },
-                directives: [W.lC],
+                directives: [H.lC],
                 styles: ["[_nghost-%COMP%]{display:block;flex:1}.screen-overlay[_ngcontent-%COMP%]{width:100%;height:100%;position:absolute;top:0;left:0;z-index:-1}.app-bar[_ngcontent-%COMP%]{right:calc(var(--vw) * 3.33);position:absolute;bottom:0;right:calc(var(--vw) * 10)}"]
             }), h
         })();
@@ -3619,7 +3653,7 @@
             }
         }
 
-        let Ht = (() => {
+        let Zt = (() => {
             class h {
                 constructor(a, M, F, me) {
                     this.router = a, this.modalService = M, this.http = F, this.authService = me, this.unsubscribe = new i.xQ
@@ -3638,13 +3672,13 @@
                 }
 
                 watchSearch() {
-                    this.usernameControl.valueChanges.pipe((0, q.R)(this.unsubscribe), (0, ft.b)(500), (0, Cs.x)(), (0, N.b)(a => {
+                    this.usernameControl.valueChanges.pipe((0, q.R)(this.unsubscribe), (0, ft.b)(500), (0, Cs.x)(), (0, z.b)(a => {
                         this.username = a, this.usernameError = void 0
                     })).subscribe()
                 }
 
                 submit() {
-                    this.submitUsernameApi$(this.username).pipe((0, _t.q)(1), (0, N.b)(a => {
+                    this.submitUsernameApi$(this.username).pipe((0, _t.q)(1), (0, z.b)(a => {
                         this.modalService.destroyTopModal(), this.router.navigate(["/"])
                     }), (0, xe.K)(a => (403 === a.status && (this.usernameError = "Username not allowed."), 400 === a.status && (this.usernameError = "Username is invalid."), 500 === a.status && (this.usernameError = "Username is taken."), (0, e.of)(a)))).subscribe()
                 }
@@ -3656,14 +3690,14 @@
 
                 isUsernameValid$(a) {
                     const M = ["immutable", "apollo", "mythic"];
-                    return (0, Gt.H)(1e3).pipe((0, N.b)(F => {
+                    return (0, Gt.H)(1e3).pipe((0, z.b)(F => {
                         this.usernameError = M.some(me => me === a) ? "Username is taken" : void 0
                     }))
                 }
             }
 
             return h.\u0275fac = function (a) {
-                return new (a || h)(s.Y36(W.F0), s.Y36(Wt.Z), s.Y36(ae.eN), s.Y36(V.mI))
+                return new (a || h)(s.Y36(H.F0), s.Y36(Ht.Z), s.Y36(ae.eN), s.Y36(V.mI))
             }, h.\u0275cmp = s.Xpm({
                 type: h,
                 selectors: [["app-username-onboarding"]],
@@ -3673,9 +3707,9 @@
                 template: function (a, M) {
                     1 & a && (s.TgZ(0, "header", 0), s._uU(1, " Unique Username Onboarding "), s.qZA(), s.TgZ(2, "section", 1), s._uU(3, " Onboarding section for inputting username. Please enter a unique username "), s._UZ(4, "input", 2), s.TgZ(5, "div", 3), s.YNc(6, Yt, 2, 0, "div", 4), s.YNc(7, us, 2, 0, "div", 4), s.qZA(), s.TgZ(8, "gu-primary-hex-button", 5), s.NdJ("click", function () {
                         return M.submit()
-                    }), s.qZA(), s.TgZ(9, "div", 3), s.YNc(10, qt, 2, 1, "div", 4), s.qZA(), s.qZA()), 2 & a && (s.xp6(4), s.Q6J("formControl", M.usernameControl), s.xp6(2), s.Q6J("ngIf", M.usernameControl.hasError("required") && M.usernameControl.touched), s.xp6(1), s.Q6J("ngIf", M.usernameControl.hasError("minlength") && M.usernameControl.touched), s.xp6(1), s.Q6J("disabled", !M.usernameControl.valid || M.usernameError), s.xp6(2), s.Q6J("ngIf", M.usernameError))
+                    }), s.qZA(), s.TgZ(9, "div", 3), s.YNc(10, qt, 2, 1, "div", 4), s.qZA()()), 2 & a && (s.xp6(4), s.Q6J("formControl", M.usernameControl), s.xp6(2), s.Q6J("ngIf", M.usernameControl.hasError("required") && M.usernameControl.touched), s.xp6(1), s.Q6J("ngIf", M.usernameControl.hasError("minlength") && M.usernameControl.touched), s.xp6(1), s.Q6J("disabled", !M.usernameControl.valid || M.usernameError), s.xp6(2), s.Q6J("ngIf", M.usernameError))
                 },
-                directives: [Y.Fj, Y.nD, Y.JJ, Y.oH, Pe.O5],
+                directives: [Y.Fj, Y.nD, Y.JJ, Y.oH, Se.O5],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.form__inputHint__text[_ngcontent-%COMP%], .form__textInput[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.form__inputHint__text[_ngcontent-%COMP%], .form__textInput[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.form__textInput[_ngcontent-%COMP%]{line-height:1.4}[_nghost-%COMP%]{min-width:calc(var(--vw) * 15.62);border:1px solid white;z-index:21;overflow:auto;background-color:#060b11b3;border-radius:calc(var(--vh) * .4);display:flex;flex-direction:column}.title[_ngcontent-%COMP%]{padding:calc(var(--vh) * 1.85);border-bottom:1px solid white;font-size:x-large;text-align:center}.onboarding[_ngcontent-%COMP%]{padding:calc(var(--vh) * 1.85);text-align:center}.form__textInput[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);text-align:center;margin:0 auto;margin-top:calc(var(--vh) * 5);width:calc(var(--vw) * 25);background:#182531;color:#fff;border:1px solid #0f1b27;border-radius:calc(var(--vh) * .4)}.form__textInput[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.form__inputHint[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1);min-height:15px}.form__inputHint__text[_ngcontent-%COMP%]{text-shadow:0 1px 1px rgba(0,0,0,.3)}.form__submitButton[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 4.44);width:calc(var(--vw) * 25);margin-left:auto;margin-right:auto}"]
             }), h
         })(), ys = (() => {
@@ -3773,7 +3807,7 @@
             1 & h && (s.TgZ(0, "div", 16), s._uU(1, " Enter valid email address "), s.qZA())
         }
 
-        function $t(h, L) {
+        function Tt(h, L) {
             1 & h && (s.TgZ(0, "div", 16), s._uU(1, " This email is already in use. "), s.qZA())
         }
 
@@ -3804,21 +3838,21 @@
                     return s.CHM(a), s.oxw().register()
                 }), s.TgZ(1, "input", 5), s.NdJ("click", function () {
                     return s.CHM(a), s.oxw().playClickTinyV1()
-                }), s.qZA(), s.YNc(2, Ds, 2, 0, "div", 6), s.YNc(3, ao, 2, 0, "div", 6), s.YNc(4, $t, 2, 0, "div", 6), s.TgZ(5, "input", 7), s.NdJ("click", function () {
+                }), s.qZA(), s.YNc(2, Ds, 2, 0, "div", 6), s.YNc(3, ao, 2, 0, "div", 6), s.YNc(4, Tt, 2, 0, "div", 6), s.TgZ(5, "input", 7), s.NdJ("click", function () {
                     return s.CHM(a), s.oxw().playClickTinyV1()
                 }), s.qZA(), s.YNc(6, lo, 2, 0, "div", 6), s.YNc(7, Ls, 2, 0, "div", 6), s.TgZ(8, "input", 8), s.NdJ("click", function () {
                     return s.CHM(a), s.oxw().playClickTinyV1()
                 }), s.qZA(), s.YNc(9, Us, 2, 0, "div", 6), s.YNc(10, Rs, 2, 0, "div", 6), s.TgZ(11, "input", 9), s.NdJ("click", function () {
                     return s.CHM(a), s.oxw().playClickTinyV1()
-                }), s.qZA(), s.YNc(12, Bs, 2, 0, "div", 6), s.TgZ(13, "gu-vertical-space", 10), s.TgZ(14, "gu-checkbox-input", 11), s.NdJ("onCheck", function (F) {
+                }), s.qZA(), s.YNc(12, Bs, 2, 0, "div", 6), s.TgZ(13, "gu-vertical-space", 10)(14, "gu-checkbox-input", 11), s.NdJ("onCheck", function (F) {
                     return s.CHM(a), s.oxw().onAcceptTermsCheck(F)
-                }), s.qZA(), s.qZA(), s.TgZ(15, "gu-checkbox-input", 12), s.NdJ("onCheck", function (F) {
+                }), s.qZA()(), s.TgZ(15, "gu-checkbox-input", 12), s.NdJ("onCheck", function (F) {
                     return s.CHM(a), s.oxw().onSubscribeCheck(F)
                 }), s.qZA(), s.TgZ(16, "gu-primary-hex-button", 13), s.NdJ("click", function () {
                     return s.CHM(a), s.oxw().register()
                 }), s.qZA(), s.TgZ(17, "label", 14), s._uU(18, "Already have an account? "), s.TgZ(19, "a", 15), s.NdJ("click", function () {
                     return s.CHM(a), s.oxw().playClickTinyV1()
-                }), s._uU(20, " Login Now. "), s.qZA(), s.qZA(), s.qZA()
+                }), s._uU(20, " Login Now. "), s.qZA()()()
             }
             if (2 & h) {
                 const a = s.oxw();
@@ -3829,11 +3863,11 @@
         function Fs(h, L) {
             if (1 & h) {
                 const a = s.EpF();
-                s.TgZ(0, "div", 17), s.TgZ(1, "div", 18), s.TgZ(2, "div"), s._uU(3, " We've sent an email to "), s.TgZ(4, "span"), s._uU(5), s.qZA(), s._uU(6, " - please follow the link in that email to confirm your account in a browser and then come back to login. "), s.qZA(), s._UZ(7, "gu-primary-hex-button", 19), s.TgZ(8, "div"), s._uU(9, " Still waiting? Try sending again or starting from scratch. "), s.qZA(), s.TgZ(10, "gu-primary-hex-button", 20), s.NdJ("click", function () {
+                s.TgZ(0, "div", 17)(1, "div", 18)(2, "div"), s._uU(3, " We've sent an email to "), s.TgZ(4, "span"), s._uU(5), s.qZA(), s._uU(6, " - please follow the link in that email to confirm your account in a browser and then come back to login. "), s.qZA(), s._UZ(7, "gu-primary-hex-button", 19), s.TgZ(8, "div"), s._uU(9, " Still waiting? Try sending again or starting from scratch. "), s.qZA(), s.TgZ(10, "gu-primary-hex-button", 20), s.NdJ("click", function () {
                     return s.CHM(a), s.oxw().register(!0)
                 }), s.qZA(), s.TgZ(11, "gu-primary-hex-button", 21), s.NdJ("click", function () {
                     return s.CHM(a), s.oxw().resetRegister()
-                }), s.qZA(), s.qZA(), s.qZA()
+                }), s.qZA()()()
             }
             if (2 & h) {
                 const a = s.oxw();
@@ -3854,7 +3888,7 @@
                     return s.CHM(a), s.oxw().playClickTinyV1()
                 }), s.qZA(), s.YNc(2, co, 2, 0, "div", 6), s.TgZ(3, "gu-primary-hex-button", 7), s.NdJ("click", function () {
                     return s.CHM(a), s.oxw().reset()
-                }), s.qZA(), s.TgZ(4, "a", 8), s._uU(5, " Back to login "), s.qZA(), s.qZA()
+                }), s.qZA(), s.TgZ(4, "a", 8), s._uU(5, " Back to login "), s.qZA()()
             }
             if (2 & h) {
                 const a = s.oxw();
@@ -3865,9 +3899,9 @@
         function uo(h, L) {
             if (1 & h) {
                 const a = s.EpF();
-                s.TgZ(0, "div", 10), s.TgZ(1, "div", 11), s._uU(2), s.qZA(), s.TgZ(3, "a", 12), s.NdJ("click", function () {
+                s.TgZ(0, "div", 10)(1, "div", 11), s._uU(2), s.qZA(), s.TgZ(3, "a", 12), s.NdJ("click", function () {
                     return s.CHM(a), s.oxw().tryAgain()
-                }), s._uU(4, " Try Again "), s.qZA(), s.TgZ(5, "a", 8), s._uU(6, " Back to login "), s.qZA(), s.qZA()
+                }), s._uU(4, " Try Again "), s.qZA(), s.TgZ(5, "a", 8), s._uU(6, " Back to login "), s.qZA()()
             }
             if (2 & h) {
                 const a = s.oxw();
@@ -3878,8 +3912,8 @@
         const Uo = [{path: "", redirectTo: "game/gu", pathMatch: "full"}, {
             path: "login", component: (() => {
                 class h {
-                    constructor(a, M, F, me, Le, Ne, Ke, St, gt, Kt, ve, be) {
-                        this.analyticsService = a, this.authService = M, this.fb = F, this.utils = me, this.router = Le, this.modalService = Ne, this.vcr = Ke, this.storageService = St, this.audioService = gt, this.http = Kt, this.akumaService = ve, this.environment = be, this.loading = !1, this.loginVideoSrc = "/assets/videos/login-video-pallas.webm"
+                    constructor(a, M, F, me, Le, ze, Ke, Pt, gt, Kt, ve, be) {
+                        this.analyticsService = a, this.authService = M, this.fb = F, this.utils = me, this.router = Le, this.modalService = ze, this.vcr = Ke, this.storageService = Pt, this.audioService = gt, this.http = Kt, this.akumaService = ve, this.environment = be, this.loading = !1, this.loginVideoSrc = "/assets/videos/login-video-pallas.webm"
                     }
 
                     ngOnInit() {
@@ -3891,7 +3925,7 @@
                         if (this.loading) return;
                         const a = {email: this.formGroup.value.email, password: this.formGroup.value.password},
                             M = this.formGroup.value.rememberMe;
-                        this.loginError = "", this.loading = !0, this.authService.login(a, M, 1).pipe((0, _t.q)(1), (0, N.b)(F => {
+                        this.loginError = "", this.loading = !0, this.authService.login(a, M, 1).pipe((0, _t.q)(1), (0, z.b)(F => {
                             this.logSessionAuthenticated(F), this.storageService.set(["email"], a.email), this.router.navigate(["/"])
                         }), (0, xe.K)(F => this.handleLoginError(F)), (0, Qe.x)(() => this.loading = !1)).subscribe()
                     }
@@ -3926,7 +3960,7 @@
                     }
 
                     handleNoUniqueUsername() {
-                        this.modalService.createModal(Ht, {}, {
+                        this.modalService.createModal(Zt, {}, {
                             blurredBackground: !0,
                             canCloseFromInside: !1,
                             canCloseFromOutside: !1,
@@ -3941,7 +3975,7 @@
                 }
 
                 return h.\u0275fac = function (a) {
-                    return new (a || h)(s.Y36(Fe.yD), s.Y36(V.mI), s.Y36(Y.qu), s.Y36(Ve.F), s.Y36(W.F0), s.Y36(Wt.Z), s.Y36(s.s_b), s.Y36(V.qy), s.Y36(V.pk), s.Y36(ae.eN), s.Y36(Fe.jt), s.Y36(V.Ho))
+                    return new (a || h)(s.Y36(Fe.yD), s.Y36(V.mI), s.Y36(Y.qu), s.Y36(Ve.F), s.Y36(H.F0), s.Y36(Ht.Z), s.Y36(s.s_b), s.Y36(V.qy), s.Y36(V.pk), s.Y36(ae.eN), s.Y36(Fe.jt), s.Y36(V.Ho))
                 }, h.\u0275cmp = s.Xpm({
                     type: h,
                     selectors: [["cerberus-login"]],
@@ -3949,25 +3983,25 @@
                     vars: 11,
                     consts: [[1, "columns", "is-gapless", "container"], [1, "column"], [1, "videoWrapper"], ["preload", "", "autoplay", "", "muted", "", "playsinline", "", "loop", "", 1, "loginVideo", 3, "src"], ["videoPlayer", ""], [1, "column", "is-narrow"], [1, "formContainer"], [1, "formWrapper"], [1, "loginForm", 3, "formGroup", "submit"], [1, "logo_wrapper"], ["src", "/assets/images/internal-logos/logo--gods-unchained-flat.svg", 1, "logo"], ["for", "email"], ["plain", "true"], ["formControlName", "email", "name", "email", "id", "email", "data-test-id", "email-input", "name", "email", "type", "email", "placeholder", "e.g. neferu@deadmail.com", 3, "valid", "click"], ["data-test-id", "email-errors", 3, "control"], ["key", "required", "fillColor", "colors.alert", "size", "x-small", "data-test-id", "email-error-required"], ["key", "email", "fillColor", "colors.alert", "size", "x-small", "data-test-id", "email-error-email"], ["for", "password"], ["formControlName", "password", "name", "password", "data-test-id", "password-input", "id", "password", "name", "password", "placeholder", "SomethingSneaky", "required", "", 3, "valid", "click"], ["data-test-id", "password-errors", 3, "control"], ["key", "required", "fillColor", "colors.alert", "size", "x-small", "data-test-id", "password-error-required"], ["class", "loginError", "fillColor", "colors.alert", "size", "x-small", 4, "ngIf"], ["data-test-id", "login-button", "id", "button__SignIn", "theme", "dark", 1, "formButton", "loginForm__submitButton", 3, "loading", "disabled", "click"], ["size", "small", "fontWeight", "bold", "routerLink", "/reset", "fillColor", "colors.light.500", 1, "loginForm__forgottenLink"], [1, "createAccount"], ["size", "medium", "fontWeight", "regular", "fillColor", "colors.light.500", 1, "createAccount__title"], ["type", "secondary", "icon", "leave_website", "iconPosition", "right", "theme", "gunmetal", "text", "CREATE ACCOUNT", 1, "formButton", 3, "href"], ["fillColor", "colors.alert", "size", "x-small", 1, "loginError"]],
                     template: function (a, M) {
-                        1 & a && (s.TgZ(0, "div", 0), s.TgZ(1, "div", 1), s.TgZ(2, "div", 2), s.TgZ(3, "video", 3, 4), s._uU(5, " Your browser does not support HTML5 video. "), s.qZA(), s.qZA(), s.qZA(), s.TgZ(6, "div", 5), s.TgZ(7, "div", 6), s.TgZ(8, "div", 7), s.TgZ(9, "gu-form", 8), s.NdJ("submit", function () {
+                        1 & a && (s.TgZ(0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "video", 3, 4), s._uU(5, " Your browser does not support HTML5 video. "), s.qZA()()(), s.TgZ(6, "div", 5)(7, "div", 6)(8, "div", 7)(9, "gu-form", 8), s.NdJ("submit", function () {
                             return M.login()
-                        }), s.TgZ(10, "div", 9), s._UZ(11, "img", 10), s.qZA(), s.TgZ(12, "gu-label", 11), s.TgZ(13, "gu-body-text", 12), s._uU(14, "Email"), s.qZA(), s.qZA(), s.TgZ(15, "gu-input", 13), s.NdJ("click", function () {
+                        }), s.TgZ(10, "div", 9), s._UZ(11, "img", 10), s.qZA(), s.TgZ(12, "gu-label", 11)(13, "gu-body-text", 12), s._uU(14, "Email"), s.qZA()(), s.TgZ(15, "gu-input", 13), s.NdJ("click", function () {
                             return M.playClickTinyV1()
-                        }), s.qZA(), s.TgZ(16, "gu-validation-errors", 14), s.TgZ(17, "gu-body-text", 15), s._uU(18, "Email is required."), s.qZA(), s.TgZ(19, "gu-body-text", 16), s._uU(20), s.qZA(), s.qZA(), s.TgZ(21, "gu-label", 17), s.TgZ(22, "gu-body-text", 12), s._uU(23, "Password"), s.qZA(), s.qZA(), s.TgZ(24, "gu-password-input", 18), s.NdJ("click", function () {
+                        }), s.qZA(), s.TgZ(16, "gu-validation-errors", 14)(17, "gu-body-text", 15), s._uU(18, "Email is required."), s.qZA(), s.TgZ(19, "gu-body-text", 16), s._uU(20), s.qZA()(), s.TgZ(21, "gu-label", 17)(22, "gu-body-text", 12), s._uU(23, "Password"), s.qZA()(), s.TgZ(24, "gu-password-input", 18), s.NdJ("click", function () {
                             return M.playClickTinyV1()
-                        }), s.qZA(), s.TgZ(25, "gu-validation-errors", 19), s.TgZ(26, "gu-body-text", 20), s._uU(27, "Password is required."), s.qZA(), s.qZA(), s.YNc(28, Et, 2, 1, "gu-body-text", 21), s.TgZ(29, "gu-standard-button", 22), s.NdJ("click", function () {
+                        }), s.qZA(), s.TgZ(25, "gu-validation-errors", 19)(26, "gu-body-text", 20), s._uU(27, "Password is required."), s.qZA()(), s.YNc(28, Et, 2, 1, "gu-body-text", 21), s.TgZ(29, "gu-standard-button", 22), s.NdJ("click", function () {
                             return M.login()
-                        }), s._uU(30, "Log in "), s.qZA(), s.TgZ(31, "gu-body-text", 23), s._uU(32, " Forgotten password? "), s.qZA(), s.qZA(), s.qZA(), s.TgZ(33, "div", 24), s.TgZ(34, "gu-simple-text", 25), s._uU(35, " Don't have an account? "), s.qZA(), s.TgZ(36, "gu-standard-button", 26), s._uU(37, "Create Account "), s.qZA(), s.qZA(), s.qZA(), s.qZA(), s.qZA()), 2 & a && (s.xp6(3), s.Q6J("src", M.loginVideoSrc, s.LSH), s.xp6(6), s.Q6J("formGroup", M.formGroup), s.xp6(6), s.Q6J("valid", M.formGroup.controls.email.valid), s.xp6(1), s.Q6J("control", M.formGroup.controls.email), s.xp6(4), s.hij("", M.formGroup.controls.email.value, " is not a valid email address"), s.xp6(4), s.Q6J("valid", M.formGroup.controls.password.valid), s.xp6(1), s.Q6J("control", M.formGroup.controls.password), s.xp6(3), s.Q6J("ngIf", M.loginError), s.xp6(1), s.Q6J("loading", M.loading)("disabled", !M.formGroup.valid), s.xp6(7), s.Q6J("href", M.environment.guRegisterURL))
+                        }), s._uU(30, "Log in "), s.qZA(), s.TgZ(31, "gu-body-text", 23), s._uU(32, " Forgotten password? "), s.qZA()()(), s.TgZ(33, "div", 24)(34, "gu-simple-text", 25), s._uU(35, " Don't have an account? "), s.qZA(), s.TgZ(36, "gu-standard-button", 26), s._uU(37, "Create Account "), s.qZA()()()()()), 2 & a && (s.xp6(3), s.Q6J("src", M.loginVideoSrc, s.LSH), s.xp6(6), s.Q6J("formGroup", M.formGroup), s.xp6(6), s.Q6J("valid", M.formGroup.controls.email.valid), s.xp6(1), s.Q6J("control", M.formGroup.controls.email), s.xp6(4), s.hij("", M.formGroup.controls.email.value, " is not a valid email address"), s.xp6(4), s.Q6J("valid", M.formGroup.controls.password.valid), s.xp6(1), s.Q6J("control", M.formGroup.controls.password), s.xp6(3), s.Q6J("ngIf", M.loginError), s.xp6(1), s.Q6J("loading", M.loading)("disabled", !M.formGroup.valid), s.xp6(7), s.Q6J("href", M.environment.guRegisterURL))
                     },
-                    directives: [Y.JL, Y.sg, ys, Y.JJ, Y.u, es, Y.Q7, Pe.O5, W.rH],
+                    directives: [Y.JL, Y.sg, ys, Y.JJ, Y.u, es, Y.Q7, Se.O5, H.rH],
                     styles: ['h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.loginForm__forgottenLink[_ngcontent-%COMP%], .loginForm__inputHint[_ngcontent-%COMP%], .creatAccountArea__text[_ngcontent-%COMP%], .loginForm__textInput[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.loginForm__forgottenLink[_ngcontent-%COMP%], .loginForm__inputHint[_ngcontent-%COMP%], .creatAccountArea__text[_ngcontent-%COMP%], .loginForm__textInput[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.creatAccountArea__text[_ngcontent-%COMP%], .loginForm__textInput[_ngcontent-%COMP%]{line-height:1.4}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;align-items:center;background:#182531;height:100%;position:relative}.logo_wrapper[_ngcontent-%COMP%]{width:100%;text-align:center}.large_logo[_ngcontent-%COMP%]{width:70%}.loginVideo[_ngcontent-%COMP%]{position:absolute;height:100%;width:100%;top:0;left:0;object-fit:cover;object-position:0 0;opacity:1}.loginForm[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 17.7);width:calc(var(--vw) * 17.7);position:relative;display:flex;flex-flow:column nowrap}.loginForm__textInput[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);margin-bottom:0;background:#182531;color:#f6f6f6;border:calc(var(--vh) * .15) solid #0f1b27;border-radius:calc(var(--vh) * .4)}.loginForm__textInput[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.loginForm__inputHint[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .6);text-shadow:0 1px 1px rgba(0,0,0,.3)}.loginForm__forgottenLink[_ngcontent-%COMP%]{text-align:right;color:#f6f6f6;text-shadow:0 1px 1px rgba(0,0,0,.3);margin-top:4px;margin-bottom:8px}.loginForm__submitButton[_ngcontent-%COMP%]{margin-left:auto;margin-right:auto;padding:0 50px;min-width:216px}.creatAccountArea[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 10.9);width:calc(var(--vw) * 17.7);position:relative;display:flex;flex-flow:column nowrap;align-items:center}.creatAccountArea__text[_ngcontent-%COMP%]{text-align:center;font-weight:600;color:#f6f6f6}.notify_users[_ngcontent-%COMP%]{margin-top:20px;color:#f6f6f6;z-index:1;width:600px;text-align:center;background-color:#0f1b27;padding:20px;border-radius:5px;line-height:1.5}']
                 }), h
             })()
         }, {
             path: "register", component: (() => {
                 class h {
-                    constructor(a, M, F, me, Le, Ne) {
-                        this.analyticsService = a, this.auth = M, this.fb = F, this.utils = me, this.storageService = Le, this.audioService = Ne, this.termsError = !1, this.emailError = !1, this.finished = !1, this.loading = !1, this.videoSrc = "/assets/videos/login-video.webm", this.unsubscribe = new i.xQ
+                    constructor(a, M, F, me, Le, ze) {
+                        this.analyticsService = a, this.auth = M, this.fb = F, this.utils = me, this.storageService = Le, this.audioService = ze, this.termsError = !1, this.emailError = !1, this.finished = !1, this.loading = !1, this.videoSrc = "/assets/videos/login-video.webm", this.unsubscribe = new i.xQ
                     }
 
                     ngOnInit() {
@@ -4011,7 +4045,7 @@
                         for (const me in F) F.hasOwnProperty(me) && this.storageService.set([me], `${F[me]}`);
                         if (this.formGroup.invalid) this.utils.markFormGroupTouched(this.formGroup); else if (!this.loading) {
                             if (this.termsError = !1, this.emailError = !1, !this.agreeToTerms.value) return void (this.termsError = !0);
-                            this.loading = !0, this.auth.register(M).pipe((0, _t.q)(1), (0, N.b)(me => {
+                            this.loading = !0, this.auth.register(M).pipe((0, _t.q)(1), (0, z.b)(me => {
                                 this.finished = !0, a || this.logAccountCreated(Object.assign({id: me}, F))
                             }), (0, xe.K)(me => (console.error("Register->register()->authService.register() registration unsuccessfull.", me), this.emailError = !0, (0, e.of)([]))), (0, Qe.x)(() => this.loading = !1)).subscribe()
                         }
@@ -4088,7 +4122,7 @@
                     template: function (a, M) {
                         1 & a && (s.TgZ(0, "video", 0, 1), s._uU(2, " Your browser does not support HTML5 video.\n"), s.qZA(), s.YNc(3, Gs, 21, 12, "form", 2), s.YNc(4, Fs, 12, 1, "div", 3)), 2 & a && (s.Q6J("src", M.videoSrc, s.LSH), s.xp6(3), s.Q6J("ngIf", !M.finished), s.xp6(1), s.Q6J("ngIf", M.finished))
                     },
-                    directives: [Pe.O5, Y._Y, Y.JL, Y.sg, Y.Fj, Y.JJ, Y.u, W.yS, W.rH],
+                    directives: [Se.O5, Y._Y, Y.JL, Y.sg, Y.Fj, Y.JJ, Y.u, H.yS, H.rH],
                     styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.form-check-label[_ngcontent-%COMP%], .nav_login[_ngcontent-%COMP%], .form__backToLogin[_ngcontent-%COMP%], .form__tryAgain[_ngcontent-%COMP%], .form__inputHint[_ngcontent-%COMP%], .form__textInput[_ngcontent-%COMP%], .register-finished[_ngcontent-%COMP%], .success-info[_ngcontent-%COMP%]   .info-label[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.register-finished[_ngcontent-%COMP%], .success-info[_ngcontent-%COMP%]   .info-label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9)}.form-check-label[_ngcontent-%COMP%], .nav_login[_ngcontent-%COMP%], .form__backToLogin[_ngcontent-%COMP%], .form__tryAgain[_ngcontent-%COMP%], .form__inputHint[_ngcontent-%COMP%], .form__textInput[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.form__textInput[_ngcontent-%COMP%]{line-height:1.4}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;align-items:center;background:#182531;height:100%}.video[_ngcontent-%COMP%]{position:absolute;height:100%;width:100%;top:0;left:0;object-fit:cover;object-position:0 0;opacity:.65}.form[_ngcontent-%COMP%], .success-info[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 31);width:calc(var(--vw) * 17.7);position:relative;display:flex;flex-flow:column nowrap}.success-info[_ngcontent-%COMP%]{width:calc(var(--vw) * 27.7)}.success-info[_ngcontent-%COMP%]   .info-label[_ngcontent-%COMP%]{text-align:center;margin-top:calc(var(--vh) * 1.48)}.form__textInput[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);background:#182531;color:#fff;border:1px solid #0f1b27;border-radius:calc(var(--vh) * .4)}.form__textInput[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.form__inputHint[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .6);text-shadow:0 1px 1px rgba(0,0,0,.3)}.form__backToLogin[_ngcontent-%COMP%], .form__tryAgain[_ngcontent-%COMP%]{text-align:center;color:#f6f6f6;text-shadow:0 1px 1px rgba(0,0,0,.3);margin-top:calc(var(--vh) * 2);cursor:pointer}.form__submitButton[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 4.44);margin-bottom:calc(var(--vh) * 4.44);margin-left:auto;margin-right:auto;min-width:160px}.form__subscribe-checkbox[_ngcontent-%COMP%], .form__submitButton[_ngcontent-%COMP%], .nav_login[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 3)}"]
                 }), h
             })()
@@ -4139,7 +4173,7 @@
                     template: function (a, M) {
                         1 & a && (s.TgZ(0, "video", 0, 1), s._uU(2, " Your browser does not support HTML5 video.\n"), s.qZA(), s.YNc(3, xs, 6, 3, "form", 2), s.YNc(4, uo, 7, 1, "div", 3)), 2 & a && (s.Q6J("src", M.videoSrc, s.LSH), s.xp6(3), s.Q6J("ngIf", !M.finished), s.xp6(1), s.Q6J("ngIf", M.finished))
                     },
-                    directives: [Pe.O5, Y._Y, Y.JL, Y.sg, Y.Fj, Y.JJ, Y.u, W.yS],
+                    directives: [Se.O5, Y._Y, Y.JL, Y.sg, Y.Fj, Y.JJ, Y.u, H.yS],
                     styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.form__backToLogin[_ngcontent-%COMP%], .form__tryAgain[_ngcontent-%COMP%], .form__inputHint[_ngcontent-%COMP%], .form__textInput[_ngcontent-%COMP%], .success-info[_ngcontent-%COMP%]   .info-label[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.success-info[_ngcontent-%COMP%]   .info-label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9)}.form__backToLogin[_ngcontent-%COMP%], .form__tryAgain[_ngcontent-%COMP%], .form__inputHint[_ngcontent-%COMP%], .form__textInput[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.form__textInput[_ngcontent-%COMP%]{line-height:1.4}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;align-items:center;background:#182531;height:100%}.video[_ngcontent-%COMP%]{position:absolute;height:100%;width:100%;top:0;left:0;object-fit:cover;object-position:0 0;opacity:.65}.form[_ngcontent-%COMP%], .success-info[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 37.96);width:calc(var(--vw) * 17.7);position:relative;display:flex;flex-flow:column nowrap}.success-info[_ngcontent-%COMP%]{width:calc(var(--vw) * 27.7)}.success-info[_ngcontent-%COMP%]   .info-label[_ngcontent-%COMP%]{text-align:center;margin-top:calc(var(--vh) * 1.48)}.form__textInput[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);background:#182531;color:#fff;border:1px solid #0f1b27;border-radius:calc(var(--vh) * .4)}.form__textInput[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.form__inputHint[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .6);text-shadow:0 1px 1px rgba(0,0,0,.3)}.form__backToLogin[_ngcontent-%COMP%], .form__tryAgain[_ngcontent-%COMP%]{text-align:center;color:#f6f6f6;text-shadow:0 1px 1px rgba(0,0,0,.3);margin-top:calc(var(--vh) * 2);cursor:pointer}.form__submitButton[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 4.44);margin-left:auto;margin-right:auto}"]
                 }), h
             })()
@@ -4171,15 +4205,15 @@
             return h.\u0275fac = function (a) {
                 return new (a || h)
             }, h.\u0275mod = s.oAB({type: h}), h.\u0275inj = s.cJS({
-                imports: [[W.Bz.forRoot(Uo, {
+                imports: [[H.Bz.forRoot(Uo, {
                     useHash: !0,
                     enableTracing: !1
-                })], W.Bz]
+                })], H.Bz]
             }), h
         })();
         var go = o(98009), Bo = o(47313), pt = o(41746), Go = o(30567), ho = o(36053), Ft = o(87545), mo = o(43164),
-            Fo = o(52216), Zo = o(87168), _o = o(33403), Ss = o(28510);
-        let No = (() => {
+            Fo = o(52216), No = o(87168), _o = o(33403), Ps = o(28510);
+        let zo = (() => {
             class h {
                 constructor(a, M, F) {
                     this.cerberusModalService = a, this.activeModal = M, this.akumaService = F
@@ -4199,7 +4233,7 @@
             }
 
             return h.\u0275fac = function (a) {
-                return new (a || h)(s.Y36(Ss.Qz), s.Y36(Ss.mX), s.Y36(Fe.jt))
+                return new (a || h)(s.Y36(Ps.Qz), s.Y36(Ps.mX), s.Y36(Fe.jt))
             }, h.\u0275cmp = s.Xpm({
                 type: h,
                 selectors: [["cerberus-skip-tutorial-modal"]],
@@ -4207,20 +4241,20 @@
                 vars: 0,
                 consts: [[1, "modal__header"], [1, "modal__content"], ["top", "3x-large", "bottom", "medium"], ["align", "center", "size", "x-small", "fillGradient", "gradients.gold.simple"], ["top", "medium", "bottom", "medium"], ["fillColor", "colors.light.800", "kind", "x-small"], [1, "modal__btnsGroup"], [1, "modal__btn", 3, "click"]],
                 template: function (a, M) {
-                    1 & a && (s._UZ(0, "div", 0), s.TgZ(1, "div", 1), s.TgZ(2, "gu-vertical-space", 2), s.TgZ(3, "gu-heading-text", 3), s._uU(4, " Are you Sure you want to skip the tutorial?"), s.qZA(), s.qZA(), s.TgZ(5, "gu-vertical-space", 4), s.TgZ(6, "gu-paragraph-text", 5), s._uU(7, " You won\u2019t receive your 3 Core Packs. "), s._UZ(8, "br"), s._uU(9, " To unlock this reward at a later time, come back by selecting \u201cTutorial\u201d from the Arena screen. "), s.qZA(), s.qZA(), s.TgZ(10, "div", 6), s.TgZ(11, "gu-primary-hex-button", 7), s.NdJ("click", function () {
+                    1 & a && (s._UZ(0, "div", 0), s.TgZ(1, "div", 1)(2, "gu-vertical-space", 2)(3, "gu-heading-text", 3), s._uU(4, " Are you Sure you want to skip the tutorial?"), s.qZA()(), s.TgZ(5, "gu-vertical-space", 4)(6, "gu-paragraph-text", 5), s._uU(7, " You won\u2019t receive your 3 Core Packs. "), s._UZ(8, "br"), s._uU(9, " To unlock this reward at a later time, come back by selecting \u201cTutorial\u201d from the Arena screen. "), s.qZA()(), s.TgZ(10, "div", 6)(11, "gu-primary-hex-button", 7), s.NdJ("click", function () {
                         return M.goBack()
                     }), s._uU(12, " Go Back "), s.qZA(), s.TgZ(13, "gu-primary-hex-button", 7), s.NdJ("click", function () {
                         return M.skipTutorial()
-                    }), s._uU(14, " Yes "), s.qZA(), s.qZA(), s.qZA())
+                    }), s._uU(14, " Yes "), s.qZA()()())
                 },
                 styles: ["[_nghost-%COMP%]{display:flex;flex-direction:column;max-width:640px;text-align:center}.modal__header[_ngcontent-%COMP%]{background:linear-gradient(90deg,#c6a052 2.93%,#ebc98b 25.01%,#fff2d8 50.44%,#ebc98b 74.21%,#c6a052 96.95%);box-shadow:0 2px 5px #0000004d;height:3px;width:100%}.modal__content[_ngcontent-%COMP%]{background:linear-gradient(90deg,#0f1b27 1.39%,#0f1b27 12.6%,#1d2f41 50.06%,#0f1b27 87.64%,#0f1b27 98.63%);box-sizing:border-box;border:2px solid #3D5A74;display:flex;flex-direction:column;padding:0 calc(var(--vw) * 1.5);align-items:center}.modal__btnsGroup[_ngcontent-%COMP%]{display:flex;justify-content:space-evenly;padding:20px 0;width:50%}.modal__btn[_ngcontent-%COMP%]{padding:15px;margin:10px}.modal__closeButton[_ngcontent-%COMP%]{position:absolute;top:20px;right:20px;z-index:1;font-size:calc(var(--vh) * 2);color:#8be1e0;cursor:pointer}.modal__closeButton[_ngcontent-%COMP%]:hover{color:#fff}"]
             }), h
         })();
         var fo = o(11130), vo = o(8561), bo = o(17268);
-        let zs = (() => {
+        let Ws = (() => {
             class h {
-                constructor(a, M, F, me, Le, Ne, Ke, St) {
-                    this.cerberusModalService = a, this.queueService = M, this.gameService = F, this.guGameService = me, this.playService = Le, this.authService = Ne, this.audioService = Ke, this.akumaService = St
+                constructor(a, M, F, me, Le, ze, Ke, Pt) {
+                    this.cerberusModalService = a, this.queueService = M, this.gameService = F, this.guGameService = me, this.playService = Le, this.authService = ze, this.audioService = Ke, this.akumaService = Pt
                 }
 
                 ngOnInit() {
@@ -4232,7 +4266,7 @@
                     const a = this.authService.getUserId();
                     this.queueService.activeQueues$.pipe((0, _t.q)(1)).subscribe(M => {
                         M.forEach(F => this.queueService.cancel(F))
-                    }), this.gameService.getBranch$(1).pipe((0, _t.q)(1), (0, Zo.M)(this.guGameService.getGameMode$(_o.B_.TUTORIAL)), (0, N.b)(([M, F]) => {
+                    }), this.gameService.getBranch$(1).pipe((0, _t.q)(1), (0, No.M)(this.guGameService.getGameMode$(_o.B_.TUTORIAL)), (0, z.b)(([M, F]) => {
                         this.playService.play({
                             realm: M.id,
                             mode: _o.B_.TUTORIAL,
@@ -4254,14 +4288,14 @@
 
                 skipTutorial() {
                     this.akumaService.postControlEvent("tutorial", "Welcome", "", "skip", "Btn", "pressed");
-                    this.cerberusModalService.open(No, {centered: !0}).result.then(F => {
+                    this.cerberusModalService.open(zo, {centered: !0}).result.then(F => {
                     }, F => {
                     })
                 }
             }
 
             return h.\u0275fac = function (a) {
-                return new (a || h)(s.Y36(Ss.Qz), s.Y36(Xt.g), s.Y36(U.hM), s.Y36(fo.xV), s.Y36(vo.GT), s.Y36(V.mI), s.Y36(V.pk), s.Y36(Fe.jt))
+                return new (a || h)(s.Y36(Ps.Qz), s.Y36(Xt.g), s.Y36(U.hM), s.Y36(fo.xV), s.Y36(vo.GT), s.Y36(V.mI), s.Y36(V.pk), s.Y36(Fe.jt))
             }, h.\u0275cmp = s.Xpm({
                 type: h,
                 selectors: [["cerberus-tutorial-start-modal"]],
@@ -4269,11 +4303,11 @@
                 vars: 1,
                 consts: [[1, "leftPanel"], ["src", "/gu-assets/images/tutorial/citadel-herald-bg.webp", 1, "leftPanel__image"], [1, "leftPanel__imageShadow"], ["src", "/gu-assets/images/GULogo-white.svg", "alt", "", 1, "leftPanel__logoImage"], [1, "rightPanel"], ["fillGradient", "gradients.gold.simple", "fillGradientTarget", "bottom", "size", "x-small", 1, "rightPanel__title"], ["fillColor", "colors.light.300", 1, "rightPanel__subtitle"], [1, "rightPanel__gameplay"], ["src", "/gu-assets/images/tutorial/gameplay-basics.webp", 1, "rightPanel__gameplay__image"], [1, "rightPanel__gameplay__title"], ["fillColor", "colors.light.300"], [1, "rightPanel__howto"], [1, "rightPanel__howto__mana"], ["src", "/gu-assets/images/tutorial/how-mana-works.webp", 1, "rightPanel__howto__image"], [1, "rightPanel__howto__title"], [1, "rightPanel__howto__win"], ["src", "/gu-assets/images/tutorial/how-to-win.webp", 1, "rightPanel__howto__image"], [1, "rightPanel__freeStuff"], ["src", "/gu-assets/images/tutorial/free-stuff-banner-start.png", 1, "rightPanel__freeStuff__bgImage"], ["src", "/gu-assets/images/tutorial/free-core-pack.png", 1, "rightPanel__freeStuff__cardImage"], ["fillColor", "colors.light.300", 1, "rightPanel__freeStuff__text"], [1, "rightPanel__freeStuff__tooltip", 3, "title"], ["iconLigature", "little_help"], ["size", "medium", "text", "BEGIN", 1, "rightPanel__beginTutorialBtn", 3, "click"], ["fillColor", "colors.apocyan.100", 1, "rightPanel__closeTutorialBtn", 3, "click"]],
                 template: function (a, M) {
-                    1 & a && (s.TgZ(0, "div", 0), s.TgZ(1, "picture"), s._UZ(2, "img", 1), s.qZA(), s._UZ(3, "div", 2), s.TgZ(4, "picture"), s._UZ(5, "img", 3), s.qZA(), s.qZA(), s.TgZ(6, "div", 4), s.TgZ(7, "gu-heading-text", 5), s._uU(8, " Welcome to the Tutorial "), s.qZA(), s.TgZ(9, "gu-simple-text", 6), s._uU(10, " A swift lesson to help you learn the basics. All great heroes need to start somewhere! "), s.qZA(), s.TgZ(11, "div", 7), s.TgZ(12, "picture"), s._UZ(13, "img", 8), s.qZA(), s.TgZ(14, "div", 9), s.TgZ(15, "gu-simple-text", 10), s.TgZ(16, "strong"), s._uU(17, "GAMEPLAY BASICS"), s.qZA(), s.qZA(), s.qZA(), s.qZA(), s.TgZ(18, "div", 11), s.TgZ(19, "div", 12), s.TgZ(20, "picture"), s._UZ(21, "img", 13), s.qZA(), s.TgZ(22, "div", 14), s.TgZ(23, "gu-simple-text", 10), s.TgZ(24, "strong"), s._uU(25, "HOW MANA WORKS"), s.qZA(), s.qZA(), s.qZA(), s.qZA(), s.TgZ(26, "div", 15), s.TgZ(27, "picture"), s._UZ(28, "img", 16), s.qZA(), s.TgZ(29, "div", 14), s.TgZ(30, "gu-simple-text", 10), s.TgZ(31, "strong"), s._uU(32, "HOW TO WIN"), s.qZA(), s.qZA(), s.qZA(), s.qZA(), s.qZA(), s.TgZ(33, "div", 17), s.TgZ(34, "picture"), s._UZ(35, "img", 18), s.qZA(), s.TgZ(36, "picture"), s._UZ(37, "img", 19), s.qZA(), s.TgZ(38, "gu-simple-text", 20), s._uU(39, " Receive "), s.TgZ(40, "strong"), s._uU(41, "3 Core Packs "), s.qZA(), s.TgZ(42, "app-tooltip", 21), s._UZ(43, "gu-icon", 22), s.qZA(), s._uU(44, " upon completion of the tutorial. "), s.qZA(), s.qZA(), s.TgZ(45, "gu-primary-hex-button", 23), s.NdJ("click", function () {
+                    1 & a && (s.TgZ(0, "div", 0)(1, "picture"), s._UZ(2, "img", 1), s.qZA(), s._UZ(3, "div", 2), s.TgZ(4, "picture"), s._UZ(5, "img", 3), s.qZA()(), s.TgZ(6, "div", 4)(7, "gu-heading-text", 5), s._uU(8, " Welcome to the Tutorial "), s.qZA(), s.TgZ(9, "gu-simple-text", 6), s._uU(10, " A swift lesson to help you learn the basics. All great heroes need to start somewhere! "), s.qZA(), s.TgZ(11, "div", 7)(12, "picture"), s._UZ(13, "img", 8), s.qZA(), s.TgZ(14, "div", 9)(15, "gu-simple-text", 10)(16, "strong"), s._uU(17, "GAMEPLAY BASICS"), s.qZA()()()(), s.TgZ(18, "div", 11)(19, "div", 12)(20, "picture"), s._UZ(21, "img", 13), s.qZA(), s.TgZ(22, "div", 14)(23, "gu-simple-text", 10)(24, "strong"), s._uU(25, "HOW MANA WORKS"), s.qZA()()()(), s.TgZ(26, "div", 15)(27, "picture"), s._UZ(28, "img", 16), s.qZA(), s.TgZ(29, "div", 14)(30, "gu-simple-text", 10)(31, "strong"), s._uU(32, "HOW TO WIN"), s.qZA()()()()(), s.TgZ(33, "div", 17)(34, "picture"), s._UZ(35, "img", 18), s.qZA(), s.TgZ(36, "picture"), s._UZ(37, "img", 19), s.qZA(), s.TgZ(38, "gu-simple-text", 20), s._uU(39, " Receive "), s.TgZ(40, "strong"), s._uU(41, "3 Core Packs "), s.qZA(), s.TgZ(42, "app-tooltip", 21), s._UZ(43, "gu-icon", 22), s.qZA(), s._uU(44, " upon completion of the tutorial. "), s.qZA()(), s.TgZ(45, "gu-primary-hex-button", 23), s.NdJ("click", function () {
                         return M.beginTutorial()
                     }), s.qZA(), s.TgZ(46, "gu-simple-text", 24), s.NdJ("click", function () {
                         return M.skipTutorial()
-                    }), s._uU(47, " MAYBE LATER "), s.qZA(), s.qZA()), 2 & a && (s.xp6(42), s.Q6J("title", "Core Packs hold <br/> non-blockchain cards that can <br/> be used to expand your decks."))
+                    }), s._uU(47, " MAYBE LATER "), s.qZA()()), 2 & a && (s.xp6(42), s.Q6J("title", "Core Packs hold <br/> non-blockchain cards that can <br/> be used to expand your decks."))
                 },
                 directives: [bo.K],
                 styles: ["[_nghost-%COMP%]{display:flex;background-color:#0f1b27;border:2px solid #3D5A74;box-sizing:border-box;box-shadow:5px 5px 15px #0006;width:1050px}.rightPanel[_ngcontent-%COMP%]{display:flex;flex-direction:column;align-items:center;width:100%}.rightPanel__title[_ngcontent-%COMP%]{margin-top:20px}.rightPanel__subtitle[_ngcontent-%COMP%]{margin:20px;text-align:center}.rightPanel__gameplay[_ngcontent-%COMP%]{margin:0 30px;width:450px}.rightPanel__gameplay__image[_ngcontent-%COMP%]{width:450px;display:block}.rightPanel__gameplay__title[_ngcontent-%COMP%]{background:linear-gradient(to left,#0F1B27 0%,#1D2F41 100%);text-align:center;padding:10px}.rightPanel__howto[_ngcontent-%COMP%]{display:flex;margin-top:10px}.rightPanel__howto__mana[_ngcontent-%COMP%]{margin-right:3px}.rightPanel__howto__win[_ngcontent-%COMP%]{margin-left:3px}.rightPanel__howto__image[_ngcontent-%COMP%]{width:222px;display:block}.rightPanel__howto__title[_ngcontent-%COMP%]{background:linear-gradient(to left,#0F1B27 0%,#1D2F41 100%);text-align:center;padding:10px}.rightPanel__freeStuff[_ngcontent-%COMP%]{position:relative}.rightPanel__freeStuff__bgImage[_ngcontent-%COMP%]{width:510px;display:block;margin-top:35px}.rightPanel__freeStuff__cardImage[_ngcontent-%COMP%]{position:absolute;top:0px;left:15px;height:90px}.rightPanel__freeStuff__text[_ngcontent-%COMP%]{position:absolute;top:45px;left:85px;font-size:15px}.rightPanel__freeStuff__tooltip[_ngcontent-%COMP%]{display:inline;text-align:center}.rightPanel__beginTutorialBtn[_ngcontent-%COMP%]{margin-top:20px;padding:0 40px}.rightPanel__closeTutorialBtn[_ngcontent-%COMP%]{margin-top:20px;font-size:15px;cursor:pointer}.leftPanel[_ngcontent-%COMP%]{position:relative;width:100%}.leftPanel__image[_ngcontent-%COMP%]{max-width:100%;max-height:100%;display:block}.leftPanel__imageShadow[_ngcontent-%COMP%]{width:100%;height:100%;position:absolute;top:0px;background:linear-gradient(180deg,rgba(15,27,39,0) 57.61%,rgba(15,27,39,.7) 73.26%,rgba(15,27,39,.9) 100%)}.leftPanel__logoImage[_ngcontent-%COMP%]{width:330px;position:absolute;bottom:60px;left:0;right:0;margin-left:auto;margin-right:auto}"]
@@ -4282,13 +4316,13 @@
         var Ye = o(14618), Co = o(88632);
         let xo = (() => {
             class h {
-                constructor(a, M, F, me, Le, Ne, Ke, St, gt, Kt) {
-                    this.actions$ = a, this.ngrxStore = M, this.gameApi = F, this.authService = me, this.guUserService = Le, this.gameService = Ne, this.gameDownloadService = Ke, this.zone = St, this.utils = gt, this.cerberusModalService = Kt, this.GameAssetsDownloadRequest$ = (0, ce.GW)(() => this.actions$.pipe((0, ce.l4)(Ye.gK.GAME_ASSETS_DOWNLOAD_REQUEST), (0, Ft.w)(ve => this.gameService.currentGameContext$.pipe((0, Ge.h)(be => null != be), (0, re.VS)(be => (0, pt.$R)((0, e.of)(be), this.gameService.getBranch(be.id))), (0, re.VS)(([be, At]) => (0, pt.$R)((0, e.of)(be), this.gameDownloadService.getLatestAssetsVersions(be, At), this.gameDownloadService.getLocalAssetsVersions(be), this.getBasicAuthToken())), (0, _t.q)(1))), (0, Ft.w)(([ve, be, At, Dt]) => {
-                        const Nt = this.gameService.isObfuscatedBranch(ve.id) ? Dt : void 0,
-                            zt = this.gameDownloadService.deltaAssetsVersions(At, be),
-                            hs = zt.reduce((as, ze) => as + ze.size, 0), is = this.gameService.getAssetsPath(),
-                            ts = Array.from({length: zt.length}, () => new y.X(null)),
-                            ws = window.bridge.downloadAssetsWithSempahore(zt, is, ts, Nt, 5).map(as => as.pipe(this.utils.enterZone(this.zone)));
+                constructor(a, M, F, me, Le, ze, Ke, Pt, gt, Kt) {
+                    this.actions$ = a, this.ngrxStore = M, this.gameApi = F, this.authService = me, this.guUserService = Le, this.gameService = ze, this.gameDownloadService = Ke, this.zone = Pt, this.utils = gt, this.cerberusModalService = Kt, this.GameAssetsDownloadRequest$ = (0, ce.GW)(() => this.actions$.pipe((0, ce.l4)(Ye.gK.GAME_ASSETS_DOWNLOAD_REQUEST), (0, Ft.w)(ve => this.gameService.currentGameContext$.pipe((0, Ge.h)(be => null != be), (0, re.VS)(be => (0, pt.$R)((0, e.of)(be), this.gameService.getBranch(be.id))), (0, re.VS)(([be, At]) => (0, pt.$R)((0, e.of)(be), this.gameDownloadService.getLatestAssetsVersions(be, At), this.gameDownloadService.getLocalAssetsVersions(be), this.getBasicAuthToken())), (0, _t.q)(1))), (0, Ft.w)(([ve, be, At, Dt]) => {
+                        const zt = this.gameService.isObfuscatedBranch(ve.id) ? Dt : void 0,
+                            Wt = this.gameDownloadService.deltaAssetsVersions(At, be),
+                            hs = Wt.reduce((as, We) => as + We.size, 0), is = this.gameService.getAssetsPath(),
+                            ts = Array.from({length: Wt.length}, () => new y.X(null)),
+                            ws = window.bridge.downloadAssetsWithSempahore(Wt, is, ts, zt, 5).map(as => as.pipe(this.utils.enterZone(this.zone)));
                         return (0, e.of)({
                             downloadAssets: ws,
                             assetsProgresses: ts,
@@ -4296,12 +4330,12 @@
                             game: ve,
                             remoteAssets: be
                         })
-                    }), (0, Ft.w)(ve => (0, pt.$R)((0, Go.D)(ve.downloadAssets).pipe((0, z.U)(be => ({
+                    }), (0, Ft.w)(ve => (0, pt.$R)((0, Go.D)(ve.downloadAssets).pipe((0, W.U)(be => ({
                         downloads: be,
                         game: ve.game,
                         remoteAssets: ve.remoteAssets
-                    }))), (0, ho.aj)(ve.assetsProgresses).pipe((0, mo.p)(1e3), (0, N.b)(be => {
-                        const At = be.reduce((Nt, zt) => zt ? Nt + zt.bytesCompleted : Nt + 0, 0),
+                    }))), (0, ho.aj)(ve.assetsProgresses).pipe((0, mo.p)(1e3), (0, z.b)(be => {
+                        const At = be.reduce((zt, Wt) => Wt ? zt + Wt.bytesCompleted : zt + 0, 0),
                             Dt = Math.round(100 * At / ve.totalBytes);
                         this.ngrxStore.dispatch(new Ye.X4({percentage: Dt, status: "downloading"}))
                     })))), (0, Ft.w)(([ve, be]) => (this.gameService.deleteProperty(ve.game.id, "assets"), this.gameService.setProperty(ve.game.id, "assets", JSON.stringify(ve.remoteAssets)), this.gameService.refreshGameContext(), this.gameDownloadService.displayDownloadCompleteNotification(ve.game), [new Ye.P6])), (0, xe.K)((ve, be) => (console.error(ve), this.ngrxStore.dispatch(new Ye.wT({error: ve})), be)))), this.GameAssetsDownloadSuccess$ = (0, ce.GW)(() => this.actions$.pipe((0, ce.l4)(Ye.gK.GAME_ASSETS_DOWNLOAD_SUCCESS), (0, Ft.w)(ve => {
@@ -4310,27 +4344,27 @@
                     }), (0, Ft.w)(ve => (ve[0].completed || this.showTutorialModal(), [new Ye.Lg({
                         status: "idle",
                         percentage: 100
-                    })])), (0, xe.K)((ve, be) => (console.error(ve), be)))), this.GameBuildDownloadExtractRequest$ = (0, ce.GW)(() => this.actions$.pipe((0, ce.l4)(Ye.gK.GAME_BUILD_DOWNLOAD_EXTRACT), (0, z.U)(ve => ve.payload), (0, Ft.w)(ve => this.gameService.getBranch(ve.game.id).pipe((0, z.U)(be => ({
+                    })])), (0, xe.K)((ve, be) => (console.error(ve), be)))), this.GameBuildDownloadExtractRequest$ = (0, ce.GW)(() => this.actions$.pipe((0, ce.l4)(Ye.gK.GAME_BUILD_DOWNLOAD_EXTRACT), (0, W.U)(ve => ve.payload), (0, Ft.w)(ve => this.gameService.getBranch(ve.game.id).pipe((0, W.U)(be => ({
                         branch: be,
                         action: ve
                     })))), (0, Ft.w)(({
                                           branch: ve,
                                           action: be
-                                      }) => this.gameDownloadService.extractGame(be.game, be.fileName, be.installPath).pipe((0, z.U)(At => ({
+                                      }) => this.gameDownloadService.extractGame(be.game, be.fileName, be.installPath).pipe((0, W.U)(At => ({
                         result: At,
                         branch: ve,
                         action: be
                     })))), (0, Ft.w)(({action: be}) => (this.gameService.setProperty(be.game.id, "status", "extracted"), this.gameService.refreshGameContext(), be.localVersion && this.gameDownloadService.deleteFile(this.gameDownloadService.getFileName(be.game, be.localVersion), this.gameService.getInstallPath(be.game)), this.gameDownloadService.displayDownloadCompleteNotification(be.game), [new Ye.Ry])), (0, xe.K)((ve, be) => (console.error(ve), this.ngrxStore.dispatch(new Ye.c7({error: ve})), be)))), this.GameBuildDownloadRequest$ = (0, ce.GW)(() => this.actions$.pipe((0, ce.l4)(Ye.gK.GAME_BUILD_DOWNLOAD_REQUEST), (0, Ft.w)(ve => this.gameService.currentGameContext$.pipe((0, Ge.h)(be => null != be), (0, re.VS)(be => (0, pt.$R)((0, e.of)(be), this.gameService.getBranch(be.id))), (0, re.VS)(([be, At]) => (0, pt.$R)((0, e.of)(be), this.gameDownloadService.getVersions(be, At), this.getBasicAuthToken())), (0, _t.q)(1))), (0, Ft.w)(([ve, [be, At], Dt]) => {
-                        const Nt = this.gameService.getInstallPath(ve),
-                            zt = this.gameDownloadService.getDownloadInfo(ve, be, Dt),
+                        const zt = this.gameService.getInstallPath(ve),
+                            Wt = this.gameDownloadService.getDownloadInfo(ve, be, Dt),
                             hs = this.gameService.isObfuscatedBranch(ve.id) ? Dt : void 0;
-                        return (0, ho.aj)([window.bridge.download(zt.url, Nt, this.getFileName(ve, be), hs).pipe(this.utils.enterZone(this.zone), (0, z.U)(is => ({
+                        return (0, ho.aj)([window.bridge.download(Wt.url, zt, this.getFileName(ve, be), hs).pipe(this.utils.enterZone(this.zone), (0, W.U)(is => ({
                             game: ve,
                             fileName: this.getFileName(ve, be),
-                            installPath: Nt,
+                            installPath: zt,
                             remoteVersion: be,
                             localVersion: At
-                        }))), window.bridge.progress.pipe(this.utils.enterZone(this.zone), (0, mo.p)(1e3), (0, Fo.V)(12e4), (0, z.U)(is => (this.ngrxStore.dispatch(new Ye.dY({
+                        }))), window.bridge.progress.pipe(this.utils.enterZone(this.zone), (0, mo.p)(1e3), (0, Fo.V)(12e4), (0, W.U)(is => (this.ngrxStore.dispatch(new Ye.dY({
                             percentage: this.getPercentage(is),
                             status: "downloading"
                         })), is)))])
@@ -4344,7 +4378,7 @@
 
                 getBasicAuthToken() {
                     const a = this.authService.getUserId(), M = this.authService.getGameSessionTicket();
-                    return this.gameApi.get(`/user/${a}/build?session=${M}`).pipe((0, z.U)(F => F.basic_auth))
+                    return this.gameApi.get(`/user/${a}/build?session=${M}`).pipe((0, W.U)(F => F.basic_auth))
                 }
 
                 getPercentage(a) {
@@ -4356,22 +4390,22 @@
                 }
 
                 showTutorialModal() {
-                    this.cerberusModalService.open(zs).result.then(F => {
+                    this.cerberusModalService.open(Ws).result.then(F => {
                     }, F => {
                     })
                 }
             }
 
             return h.\u0275fac = function (a) {
-                return new (a || h)(s.LFG(ce.eX), s.LFG(fe.yh), s.LFG(Fe.Ft), s.LFG(V.mI), s.LFG(Co.MZ), s.LFG(U.hM), s.LFG(ms.b5), s.LFG(s.R0b), s.LFG(Ve.F), s.LFG(Ss.Qz))
+                return new (a || h)(s.LFG(ce.eX), s.LFG(fe.yh), s.LFG(Fe.Ft), s.LFG(V.mI), s.LFG(Co.MZ), s.LFG(U.hM), s.LFG(ms.b5), s.LFG(s.R0b), s.LFG(Ve.F), s.LFG(Ps.Qz))
             }, h.\u0275prov = s.Yz7({token: h, factory: h.\u0275fac}), h
         })();
-        const Hs = {
+        const Zs = {
             gameBuild: {isUpdateRequired: !1, percentage: 0, status: "idle"},
             gameAssets: {isUpdateRequired: !1, percentage: 0, status: "idle"}
         };
 
-        function So(h, L) {
+        function Po(h, L) {
             switch (L.type) {
                 case Ye.gK.GAME_BUILD_DOWNLOAD_CHECK:
                     return Object.assign(Object.assign({}, h), {gameBuild: Object.assign(Object.assign({}, h.gameBuild), {isUpdateRequired: L.payload.isUpdateRequired})});
@@ -4444,7 +4478,7 @@
             }
         }
 
-        let Po = (() => {
+        let So = (() => {
             class h {
                 constructor() {
                 }
@@ -4462,7 +4496,7 @@
             var h
         })();
         const gs = {
-            app: function (h, L) {
+            app: function Ss(h, L) {
                 switch (L.type) {
                     case Vt.INIT_WALLET:
                     case Vt.INIT_METAMASK:
@@ -4470,7 +4504,7 @@
                     default:
                         return h
                 }
-            }, router: de.mg, account: function (h = js, L) {
+            }, router: de.mg, account: function ko(h = js, L) {
                 switch (L.type) {
                     case ps.X8.FETCH_USER_ACCOUNT_SUCCESS:
                         return Object.assign(Object.assign({}, h), {user: L.payload.accountData});
@@ -4483,7 +4517,7 @@
                 }
             }
         }, ks = [], rs = "reCaptchaOnloadCallback";
-        let zo = (() => {
+        let Wo = (() => {
             class h {
                 constructor(a) {
                     this.http = a, this.$loaded = new y.X(!1), this.registerOnloadCallback(), this.load()
@@ -4541,7 +4575,7 @@
             return h.\u0275fac = function (a) {
                 return new (a || h)(s.LFG(ae.eN))
             }, h.\u0275prov = s.Yz7({token: h, factory: h.\u0275fac, providedIn: "root"}), h
-        })(), H = (() => {
+        })(), Z = (() => {
             class h {
                 constructor() {
                     this.dataStore = {headerOptions: []}, this._headerOptions$ = new y.X([])
@@ -4624,17 +4658,16 @@
         }, {provide: V.eQ, useClass: Ie.N.envClasses.assetsService}, {
             provide: V.pk,
             useClass: Ie.N.envClasses.audioService
-        }, u.m, X.x0, Ve.F, Fe.Ho, Fe.n2, Fe.dK, go.D, H, mt._, ct, zo, Fe.fY, Bo.$z];
-        (null === (at = Ie.N.sentry) || void 0 === at ? void 0 : at.dsn) && (dt = [...dt, {
-            provide: s.qLn,
-            useValue: $e.v({showDialog: !1})
-        }, {provide: Be.aN, deps: [W.F0]}, {
-            provide: s.ip1,
-            useFactory: (h, L) => () => L.init(),
-            deps: [Be.aN, Ce],
-            multi: !0
-        }]);
-        let Se = (() => {
+        }, u.m, X.x0, Ve.F, Fe.Ho, Fe.n2, Fe.dK, go.D, Z, mt._, ct, Wo, Fe.fY, Bo.$z];
+        (null === (at = Ie.N.sentry) || void 0 === at ? void 0 : at.dsn) && (dt = [...dt, ...function he() {
+            return [{provide: s.qLn, useValue: Te.v({showDialog: !1})}, {provide: Be.aN, deps: [H.F0]}, {
+                provide: s.ip1,
+                useFactory: (h, L) => () => L.init(),
+                deps: [Be.aN, Ce],
+                multi: !0
+            }]
+        }()]);
+        let Pe = (() => {
             class h {
             }
 
@@ -4642,13 +4675,13 @@
                 return new (a || h)
             }, h.\u0275mod = s.oAB({type: h, bootstrap: [io]}), h.\u0275inj = s.cJS({
                 providers: dt,
-                imports: [[Y.u5, ae.JF, Ro, Y.UX, ye.PW, l.b2, tt.m.forRoot(), fe.Aw.forRoot(gs, {metaReducers: ks}), de.Qi.forRoot(yt), Ie.N.production ? [] : Z.FT.instrument(), ce.sQ.forRoot([Po]), fe.Aw.forFeature("gameResources", So, {initialState: Hs}), ce.sQ.forFeature([xo]), rt.ic, Ae, ee.j]]
+                imports: [[Y.u5, ae.JF, Ro, Y.UX, ye.PW, c.b2, tt.m.forRoot(), fe.Aw.forRoot(gs, {metaReducers: ks}), de.Qi.forRoot(yt), Ie.N.production ? [] : N.FT.instrument(), ce.sQ.forRoot([So]), fe.Aw.forFeature("gameResources", Po, {initialState: Zs}), ce.sQ.forFeature([xo]), rt.ic, Ae, ee.j]]
             }), h
         })();
-        var Ze;
-        if (Ie.N.production && ((0, s.G48)(), null === (Ze = Ie.N.sentry) || void 0 === Ze ? void 0 : Ze.dsn)) {
+        var Ne;
+        if (Ie.N.production && ((0, s.G48)(), null === (Ne = Ie.N.sentry) || void 0 === Ne ? void 0 : Ne.dsn)) {
             const {buildNumber: h} = w;
-            $.S({
+            T.S({
                 release: `gu-cerberus@0.13.3+${h}`,
                 environment: Ie.N.production ? "production" : "staging",
                 dsn: Ie.N.sentry.dsn,
@@ -4656,11 +4689,13 @@
                 tracesSampleRate: Ie.N.sentry.tracesSampleRate || 0
             })
         }
-        l.q6().bootstrapModule(Se).catch(h => console.error(h))
-    }, 12751: (se, R, o) => {
+        c.q6().bootstrapModule(Pe).catch(h => console.error(h))
+    },
+    12751: (se, R, o) => {
         "use strict";
         o(10609), window.process = {env: {DEBUG: void 0}}, window.global = window, global.Buffer = o(93172).Buffer, global.process = o(35736)
-    }, 73307: (se, R, o) => {
+    },
+    73307: (se, R, o) => {
         "use strict";
         o.d(R, {
             Ho: () => i,
@@ -4673,17 +4708,18 @@
             Hd: () => v,
             B3: () => k
         });
-        var l = o(5e3);
-        const i = new l.OlP("environment-settings"), y = new l.OlP("i-auth-service"), e = new l.OlP("i-eth-service"),
-            p = (new l.OlP("i-cards-service"), new l.OlP("i-storage-service")),
-            r = (new l.OlP("i-modal-service"), new l.OlP("i-auth-host-service")), t = new l.OlP("i-assets-service"),
-            n = new l.OlP("i-audio-service"), v = new l.OlP("i-launchdarkly-client"),
-            k = new l.OlP("i-feature-flag-service");
-        new l.OlP("i-deck-code-service"), new l.OlP("apollo-token"), new l.OlP("game-status")
-    }, 51649: (se, R, o) => {
+        var c = o(5e3);
+        const i = new c.OlP("environment-settings"), y = new c.OlP("i-auth-service"), e = new c.OlP("i-eth-service"),
+            p = (new c.OlP("i-cards-service"), new c.OlP("i-storage-service")),
+            r = (new c.OlP("i-modal-service"), new c.OlP("i-auth-host-service")), t = new c.OlP("i-assets-service"),
+            n = new c.OlP("i-audio-service"), v = new c.OlP("i-launchdarkly-client"),
+            k = new c.OlP("i-feature-flag-service");
+        new c.OlP("i-deck-code-service"), new c.OlP("apollo-token"), new c.OlP("game-status")
+    },
+    51649: (se, R, o) => {
         "use strict";
         o.d(R, {R: () => r, E: () => t});
-        var l = o(39017), i = o(61737), y = o(36053), e = o(72986), m = o(24850), p = o(5e3), g = o(69439);
+        var c = o(39017), i = o(61737), y = o(36053), e = o(72986), m = o(24850), p = o(5e3), g = o(69439);
         const r = new p.OlP("deck-code-service");
         let t = (() => {
             class n {
@@ -4692,62 +4728,62 @@
                 }
 
                 decodeDeckCode(k) {
-                    let x, I, A;
+                    let P, I, A;
                     try {
-                        ({domain: x, formatCode: I, libraryIds: A} = (0, l.Jx)(k))
+                        ({domain: P, formatCode: I, libraryIds: A} = (0, c.Jx)(k))
                     } catch (f) {
                         return (0, i._)(f)
                     }
                     return (0, y.aj)([this.cardsService.protoCards$, this.cardsService.inventory$]).pipe((0, e.q)(1), (0, m.U)(([f, O]) => {
-                        const {ownedCards: P, unownedProtos: b} = this.buildFromInventory(f, O, x, A, I);
-                        return {ownedCards: P, unownedProtos: b, domain: x, formatCode: I}
+                        const {ownedCards: S, unownedProtos: b} = this.buildFromInventory(f, O, P, A, I);
+                        return {ownedCards: S, unownedProtos: b, domain: P, formatCode: I}
                     }))
                 }
 
-                validateProtos(k, x, I) {
-                    if (x.length > 30) throw new Error("Too many cards in the deck.");
-                    if (I.length !== x.length) throw new Error("One or more cards in your deck are not valid.");
-                    x.forEach(A => {
-                        const f = k.get(A), O = x.filter(P => P === A).length;
+                validateProtos(k, P, I) {
+                    if (P.length > 30) throw new Error("Too many cards in the deck.");
+                    if (I.length !== P.length) throw new Error("One or more cards in your deck are not valid.");
+                    P.forEach(A => {
+                        const f = k.get(A), O = P.filter(S => S === A).length;
                         if (O > 2 || ("legendary" === f.rarity || "mythic" === f.rarity) && O > 1) throw new Error("There are too many copies of one or more cards in your deck.")
                     })
                 }
 
-                buildFromInventory(k, x, I, A, f) {
+                buildFromInventory(k, P, I, A, f) {
                     const O = this.getProtos(A, k, I);
                     this.validateProtos(k, O, A);
-                    const {ownedCards: P, unownedProtos: b} = this.convertToOwnedUnowned(O, x, k);
-                    return {ownedCards: P, unownedProtos: b, domain: I, formatCode: f}
+                    const {ownedCards: S, unownedProtos: b} = this.convertToOwnedUnowned(O, P, k);
+                    return {ownedCards: S, unownedProtos: b, domain: I, formatCode: f}
                 }
 
-                convertToOwnedUnowned(k, x, I) {
+                convertToOwnedUnowned(k, P, I) {
                     const A = [], f = [];
                     return k.forEach(O => {
-                        const P = x[O];
-                        if (!P || !P.length) return void f.push(O);
-                        const $ = [...P].sort((s, C) => s.q - C.q).filter(s => !A.map(C => C.id).includes(s.id));
-                        if ($ && $.length) {
-                            const s = {proto: O, quality: $[0].q, id: $[0].id, protoCard: I.get(O)};
+                        const S = P[O];
+                        if (!S || !S.length) return void f.push(O);
+                        const T = [...S].sort((s, C) => s.q - C.q).filter(s => !A.map(C => C.id).includes(s.id));
+                        if (T && T.length) {
+                            const s = {proto: O, quality: T[0].q, id: T[0].id, protoCard: I.get(O)};
                             A.push(s)
                         } else f.push(O)
                     }), {ownedCards: A, unownedProtos: this.sortProtos(f, I)}
                 }
 
-                sortProtos(k, x) {
-                    return [...k.map(P => x.get(P))].sort((P, b) => P.name < b.name ? -1 : 1).sort((P, b) => P.mana - b.mana).map(P => P.proto)
+                sortProtos(k, P) {
+                    return [...k.map(S => P.get(S))].sort((S, b) => S.name < b.name ? -1 : 1).sort((S, b) => S.mana - b.mana).map(S => S.proto)
                 }
 
-                getProtos(k, x, I) {
+                getProtos(k, P, I) {
                     const A = [];
-                    return x.forEach((f, O) => {
+                    return P.forEach((f, O) => {
                         if ("neutral" !== f.god && f.god !== I) return;
-                        const P = k.filter(b => b === f.lib_id).length;
-                        for (let b = 0; b < P; b++) A.push(O)
+                        const S = k.filter(b => b === f.lib_id).length;
+                        for (let b = 0; b < S; b++) A.push(O)
                     }), A
                 }
 
-                encodeDeck(k, x) {
-                    return (0, l.cv)(k, x)
+                encodeDeck(k, P) {
+                    return (0, c.cv)(k, P)
                 }
             }
 
@@ -4755,10 +4791,11 @@
                 return new (k || n)(p.LFG(g.d))
             }, n.\u0275prov = p.Yz7({token: n, factory: n.\u0275fac, providedIn: "root"}), n
         })()
-    }, 48031: (se, R, o) => {
+    },
+    48031: (se, R, o) => {
         "use strict";
-        o.d(R, {Rl: () => l.Rl});
-        var l = o(39029), i = o(70655), e = (o(61517), o(32830)), m = o(86041), p = o(56418), g = o(65171),
+        o.d(R, {Rl: () => c.Rl});
+        var c = o(39029), i = o(70655), e = (o(61517), o(32830)), m = o(86041), p = o(56418), g = o(65171),
             r = o(80102), t = o(26532), n = o(65281);
         let v = class extends e.oi {
             constructor() {
@@ -4805,7 +4842,7 @@
         };
         (0, i.gn)([(0, p.C)({type: Boolean})], v.prototype, "closable", void 0), v = (0, i.gn)([(0, m.M)("gu-announce-banner-template")], v);
         var k = o(47925);
-        let x = class extends e.oi {
+        let P = class extends e.oi {
             constructor() {
                 super(...arguments), this.responsiveSize = []
             }
@@ -4829,26 +4866,26 @@
     `
             }
 
-            pickMarginValue(c, E) {
-                return c ? n.measurements.spacingAmountMapping[c] : E ? n.measurements.spacingAmountMapping[E] : 0
+            pickMarginValue(l, E) {
+                return l ? n.measurements.spacingAmountMapping[l] : E ? n.measurements.spacingAmountMapping[E] : 0
             }
 
             generateVariablesAndMediaQueries() {
-                const c = this.pickMarginValue(this.both, this.top), E = this.pickMarginValue(this.both, this.bottom);
+                const l = this.pickMarginValue(this.both, this.top), E = this.pickMarginValue(this.both, this.bottom);
                 return e.dy`
       <style>
 
         /* DEFINE BASE SIZING */
-        ${(0, t.asCssProp)(`\n          :host {\n            --marginTop: ${c};\n            --marginBottom: ${E};\n          }\n        `)}
+        ${(0, t.asCssProp)(`\n          :host {\n            --marginTop: ${l};\n            --marginBottom: ${E};\n          }\n        `)}
 
         /* DEFINE RESPONSIVE SIZING */
         ${this.responsiveSize.map(({breakpoint: j, topSize: oe, bottomSize: Me, bothSize: Re}) => {
-                    const Je = this.pickMarginValue(Re, oe), Pt = this.pickMarginValue(Re, Me);
+                    const Je = this.pickMarginValue(Re, oe), St = this.pickMarginValue(Re, Me);
                     return e.iv`
             @media screen and (min-width: ${(0, t.asCssProp)(k.breakpointSizeMapping[j])}) {
               :host {
                 ${(0, t.asCssProp)(Je ? `--marginTop: ${Je};` : "")}
-                ${(0, t.asCssProp)(Pt ? `--marginBottom: ${Pt};` : "")}
+                ${(0, t.asCssProp)(St ? `--marginBottom: ${St};` : "")}
               }
             }
           `
@@ -4864,7 +4901,7 @@
     `
             }
         };
-        x = (0, i.gn)([(0, m.M)("gu-vertical-space")], x), o(11015);
+        P = (0, i.gn)([(0, m.M)("gu-vertical-space")], P), o(11015);
         let A = class extends e.oi {
             static get styles() {
                 return e.iv`
@@ -4969,8 +5006,8 @@
             }
         };
         O = (0, i.gn)([(0, m.M)("gu-maintenance-banner")], O);
-        var P = o(38872), b = o(98539);
-        let $ = class extends e.oi {
+        var S = o(38872), b = o(98539);
+        let T = class extends e.oi {
             constructor() {
                 super(...arguments), this.overlay = !1, this.reveal = !1, this.imageLoader = new Image, this.isLoading = !1
             }
@@ -5038,8 +5075,8 @@
     `
             }
 
-            updated(c) {
-                super.updated(c), c.has("image") && this.image && (this.imageLoader.src = `/assets/images/backdrops/${this.image}`, !this.isLoading && (this.isLoading = !0, (0, r.waitForImageToLoad)(this.imageLoader).then(() => {
+            updated(l) {
+                super.updated(l), l.has("image") && this.image && (this.imageLoader.src = `/assets/images/backdrops/${this.image}`, !this.isLoading && (this.isLoading = !0, (0, r.waitForImageToLoad)(this.imageLoader).then(() => {
                     requestAnimationFrame(() => {
                         this.classList.add("loading"), this.style.backgroundImage = this.imageElement.style.backgroundImage, this.imageElement.style.backgroundImage = `url(/assets/images/backdrops/${this.image})`, this.isLoading = !1, requestAnimationFrame(() => {
                             this.dispatchEvent(new CustomEvent("image-changed", {
@@ -5066,11 +5103,11 @@
                 return e.dy` ${this.renderBackdrop()} ${this.renderOverlay()} `
             }
         };
-        (0, i.gn)([(0, p.C)()], $.prototype, "image", void 0), (0, i.gn)([(0, p.C)()], $.prototype, "overlay", void 0), (0, i.gn)([(0, p.C)()], $.prototype, "reveal", void 0), (0, i.gn)([(0, P.I)(".backdrop__image")], $.prototype, "imageElement", void 0), $ = (0, i.gn)([(0, m.M)("gu-backdrop")], $);
+        (0, i.gn)([(0, p.C)()], T.prototype, "image", void 0), (0, i.gn)([(0, p.C)()], T.prototype, "overlay", void 0), (0, i.gn)([(0, p.C)()], T.prototype, "reveal", void 0), (0, i.gn)([(0, S.I)(".backdrop__image")], T.prototype, "imageElement", void 0), T = (0, i.gn)([(0, m.M)("gu-backdrop")], T);
         var s = o(92436);
         const C = new s.do(G => {
-            G.forEach(c => {
-                c.target.handleResize()
+            G.forEach(l => {
+                l.target.handleResize()
             })
         });
         let w = class extends e.oi {
@@ -5118,7 +5155,7 @@
                 C.unobserve(this)
             }
 
-            handleResize(c) {
+            handleResize(l) {
                 const Me = .01 * this.offsetHeight;
                 this.style.setProperty("--cw", .01 * this.offsetWidth + "px"), this.style.setProperty("--ch", `${Me}px`)
             }
@@ -5138,9 +5175,9 @@
             }
         };
         w = (0, i.gn)([(0, m.M)("gu-background-vimeo-embed")], w);
-        var B = o(14879), de = (o(89534), o(51256), o(72650)), fe = o(93270), Z = o(40010);
+        var B = o(14879), de = (o(89534), o(51256), o(72650)), fe = o(93270), N = o(40010);
         const V = e.iv`
-  ${Z.W2}
+  ${N.W2}
 
   /* host element establishes 1px outline */
   :host {
@@ -5148,11 +5185,13 @@
     min-width: 180px;
     height: ${(0, t.asCssProp)("48px")};
     line-height: ${(0, t.asCssProp)("48px")};
+    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(17, 17))};
   }
 
   /* golden border */
   :host::before {
     ${(0, t.inset)(1)}
+    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(17, 17))};
     z-index: 1;
   }
 
@@ -5161,6 +5200,7 @@
     position: absolute;
     content: ' ';
     ${(0, t.inset)(5, 6)}
+    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(14, 14))};
     z-index: 2;
   }
 
@@ -5169,6 +5209,7 @@
     position: absolute;
     ${(0, t.inset)(7, 8)}
     background: ${(0, t.asCssProp)(n.colors.dark[900])};
+    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(13, 13))};
     z-index: 3;
   }
 
@@ -5325,7 +5366,7 @@
         }
 
         (0, i.gn)([(0, p.C)({reflect: !0})], le.prototype, "type", void 0), customElements.define("gu-gilded-hex-button", (0, de.b)((0, fe.Z)(le))), o(43977);
-        let $e = class extends e.oi {
+        let Te = class extends e.oi {
             constructor() {
                 super(...arguments), this.gap = 16, this.layout = "centered", this.visible = !0, this.layouts = {
                     centered: "center",
@@ -5350,8 +5391,8 @@
                 return this.classList.toggle("visible", this.visible), this.style.setProperty("--gap", `${this.gap}px`), this.style.setProperty("--layout", this.layouts[this.layout]), e.dy`<slot></slot>`
             }
         };
-        (0, i.gn)([(0, p.C)()], $e.prototype, "gap", void 0), (0, i.gn)([(0, p.C)()], $e.prototype, "layout", void 0), (0, i.gn)([(0, p.C)()], $e.prototype, "visible", void 0), $e = (0, i.gn)([(0, m.M)("gu-button-group")], $e), o(1949);
-        var W = o(26711);
+        (0, i.gn)([(0, p.C)()], Te.prototype, "gap", void 0), (0, i.gn)([(0, p.C)()], Te.prototype, "layout", void 0), (0, i.gn)([(0, p.C)()], Te.prototype, "visible", void 0), Te = (0, i.gn)([(0, m.M)("gu-button-group")], Te), o(1949);
+        var H = o(26711);
         const he = e.iv`
   :host {
     display: inline-flex;
@@ -5686,21 +5727,21 @@
         (0, i.gn)([(0, p.C)({
             reflect: !0,
             type: Boolean,
-            converter: W.b
+            converter: H.b
         })], Q.prototype, "loading", void 0), (0, i.gn)([(0, p.C)({
             reflect: !0,
             type: Boolean,
-            converter: W.b
+            converter: H.b
         })], Q.prototype, "disabled", void 0), (0, i.gn)([(0, p.C)({
             reflect: !0,
             type: Boolean,
-            converter: W.b
+            converter: H.b
         })], Q.prototype, "expand", void 0), (0, i.gn)([(0, p.C)()], Q.prototype, "iconPosition", void 0), (0, i.gn)([(0, p.C)({
             reflect: !0,
             type: Boolean,
-            converter: W.b
+            converter: H.b
         })], Q.prototype, "iconOnly", void 0), (0, i.gn)([(0, p.C)()], Q.prototype, "icon", void 0), (0, i.gn)([(0, p.C)({reflect: !0})], Q.prototype, "type", void 0), (0, i.gn)([(0, p.C)({reflect: !0})], Q.prototype, "theme", void 0), (0, i.gn)([(0, p.C)()], Q.prototype, "href", void 0), (0, i.gn)([(0, p.C)()], Q.prototype, "target", void 0), Q = (0, i.gn)([(0, m.M)("gu-standard-button")], Q);
-        var te = o(84876), ue = o(25297), pe = o(72985), Pe = o(58672);
+        var te = o(12052), ue = o(25297), pe = o(72985), Se = o(58672);
         const Ae = {text: {type: String}, href: {type: String}, target: {type: String}},
             je = Object.assign(Object.assign({}, Ae), {
                 loading: {type: String},
@@ -5841,7 +5882,7 @@
   }
 
   ${(0, t.asCssProp)(Ct.fillColoringRules)}
-`, T = 18, ne = e.iv`
+`, $ = 18, ne = e.iv`
   ${(0, t.asCssProp)((0, t.setBoxSizing)())}
 
   :host {
@@ -5873,6 +5914,7 @@
     bottom: 2px;
     z-index: 0;
     background: ${(0, t.asCssProp)(n.colors.gunmetal[900])};
+    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(11, 11))};
     ${(0, t.asCssProp)(n.animation.standardTransition("all"))};
   }
 
@@ -5881,6 +5923,7 @@
   :host([size='large']) {
     height: ${(0, t.asCssProp)("48px")};
     line-height: ${(0, t.asCssProp)("48px")};
+    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)($, $))};
   }
 
   :host([size='large']) .buttonContent {
@@ -5888,6 +5931,7 @@
   }
 
   :host([size='large'])::before {
+    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(17, 17))};
   }
 
   :host([size='large']) .buttonContent__icon {
@@ -5959,39 +6003,20 @@
     z-index: 0;
     background: ${(0, t.asCssProp)(n.gradients.apocyan.simple())};
     opacity: 0.2;
+    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(11, 11))};
   }
 `, Oe = e.iv`
   ${ne}
 
   :host {
-    background: none;
     color: var(--gu-blue);
+    border: solid 1px var(--gu-blue);
+    background: var(--gu-blue-dark);
+    border-radius: 25px;
   }
 
   .waveArtwork {
     display: none;
-  }
-
-  .waveArtwork__side {
-    position: absolute;
-    left: 50%;
-  }
-
-  .waveArtwork__side img {
-    display: block;
-    height: 100%;
-  }
-
-  .waveArtwork__side--top {
-    height: calc(${(0, t.asCssProp)("32px")} * 1.4);
-    bottom: 36%;
-    transform: translateX(-42%);
-  }
-
-  .waveArtwork__side--bottom {
-    height: calc(${(0, t.asCssProp)("32px")} * 2);
-    top: 32%;
-    transform: translateX(-58%);
   }
 
   /* "LARGE" SIZE BUTTON STYLES
@@ -6090,6 +6115,7 @@
     left: 0;
     right: 0;
     background: ${(0, t.asCssProp)(n.colors.dark[500])};
+    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)($, $))};
   }
 
   .outerGolden {
@@ -6098,6 +6124,7 @@
     left: 1px;
     right: 1px;
     background: ${(0, t.asCssProp)(n.gradients.gold.simple("bottom"))};
+    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(17, 17))};
   }
 
   .innerGunmetal {
@@ -6106,6 +6133,7 @@
     left: 6px;
     right: 6px;
     background: ${(0, t.asCssProp)(n.colors.gunmetal[700])};
+    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(14, 14))};
   }
 
   .innerButtonFill {
@@ -6114,6 +6142,7 @@
     left: 8px;
     right: 8px;
     background: ${(0, t.asCssProp)(n.colors.dark[900])};
+    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(13, 13))};
   }
 
   /* Button content styles
@@ -6224,6 +6253,7 @@
     left: 0;
     right: 0;
     background: ${(0, t.asCssProp)(nt)};
+    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)($, $))};
   }
 
   .outer {
@@ -6231,6 +6261,7 @@
     bottom: 1px;
     left: 1px;
     right: 1px;
+    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(17, 17))};
   }
   .outerSilver {
     background-color: ${(0, t.asCssProp)(xt)};
@@ -6245,6 +6276,7 @@
     left: 6px;
     right: 6px;
     background: ${(0, t.asCssProp)(n.colors.dark[900])};
+    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(14, 14))};
   }
 
   .innerButtonFill {
@@ -6253,6 +6285,7 @@
     left: 8px;
     right: 8px;
     background: ${(0, t.asCssProp)(Xe)};
+    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(13, 13))};
   }
 
   /* Button content styles
@@ -6324,12 +6357,12 @@
   }
 `;
 
-        function rt(G, c) {
-            return c && "true" !== G ? e.dy` <gu-icon iconLigature=${c} class="buttonContent__icon"></gu-icon> ` : null
+        function rt(G, l) {
+            return l && "true" !== G ? e.dy` <gu-icon iconLigature=${l} class="buttonContent__icon"></gu-icon> ` : null
         }
 
-        function Ie(G, c, E = "grey") {
-            return "true" === c ? e.dy`<gu-rectangular-spinner color=${E}></gu-rectangular-spinner>` : G || e.dy` <slot></slot> `
+        function Ie(G, l, E = "grey") {
+            return "true" === l ? e.dy`<gu-rectangular-spinner color=${E}></gu-rectangular-spinner>` : G || e.dy` <slot></slot> `
         }
 
         const It = e.dy`
@@ -6346,35 +6379,35 @@
       <img src="/assets/images/hex-button/hex-button--bottom-wave-art.png" />
     </picture>
   </div>
-`, N = Object.assign(Object.assign({}, je), {invertColoring: {type: Boolean}});
-        customElements.define("gu-special-hex-button", (0, Pe.x)({
-            renderer: function ({
-                                    text: G,
-                                    loading: c,
-                                    loadingColor: E,
-                                    icon: j,
-                                    leftIconPosition: oe,
-                                    invertColoring: Me
-                                }) {
+`, z = Object.assign(Object.assign({}, je), {invertColoring: {type: Boolean}});
+        customElements.define("gu-special-hex-button", (0, Se.x)({
+            renderer: function W({
+                                     text: G,
+                                     loading: l,
+                                     loadingColor: E,
+                                     icon: j,
+                                     leftIconPosition: oe,
+                                     invertColoring: Me
+                                 }) {
                 return (0, te.d4)(() => {
                     Me ? this.classList.add("invertColoring") : this.classList.remove("invertColoring")
-                }, [Me]), e.dy` ${(({icon: G, leftIconPosition: c, text: E, loading: j, loadingColor: oe}) => e.dy`
+                }, [Me]), e.dy` ${(({icon: G, leftIconPosition: l, text: E, loading: j, loadingColor: oe}) => e.dy`
   <i class="hexLayer outerKeyline"></i>
   <i class="hexLayer outerGolden"></i>
   <i class="hexLayer innerGunmetal"></i>
   <i class="hexLayer innerButtonFill"></i>
 
-  <div class=${(0, b.$)({buttonContent: !0, "buttonContent--leftIcon": c})}>
+  <div class=${(0, b.$)({buttonContent: !0, "buttonContent--leftIcon": l})}>
     <gu-heading-text class="buttonContent__text" size="2x-small">
       ${Ie(E, j, oe)}
     </gu-heading-text>
     ${rt(j, G)}
   </div>
-`)({text: G, icon: j, loading: c, loadingColor: E, leftIconPosition: oe})} `
-            }, baseClass: (0, pe.lH)((0, pe.Am)((0, pe.s)((0, pe.Xg)(ue.J)))), props: {properties: N, styles: yt}
-        })), customElements.define("gu-special-hex-flat-button", (0, Pe.x)({
-            renderer: function ({color: G, text: c, loading: E, loadingColor: j}) {
-                return e.dy` ${(({color: G, text: c, loading: E, loadingColor: j}) => {
+`)({text: G, icon: j, loading: l, loadingColor: E, leftIconPosition: oe})} `
+            }, baseClass: (0, pe.lH)((0, pe.Am)((0, pe.s)((0, pe.Xg)(ue.J)))), props: {properties: z, styles: yt}
+        })), customElements.define("gu-special-hex-flat-button", (0, Se.x)({
+            renderer: function d({color: G, text: l, loading: E, loadingColor: j}) {
+                return e.dy` ${(({color: G, text: l, loading: E, loadingColor: j}) => {
                     const oe = G ? G[0].toUpperCase() + G.slice(1) : "Silver";
                     return e.dy`
     <i class="hexLayer outerKeyline"></i>
@@ -6384,53 +6417,53 @@
 
     <div class=${(0, b.$)({buttonContent: !0})}>
       <gu-heading-text class="buttonContent__text buttonContent__text${oe}" size="2x-small">
-        ${Ie(c, E, j)}
+        ${Ie(l, E, j)}
       </gu-heading-text>
     </div>
   `
-                })({color: G, text: c, loading: E, loadingColor: j})} `
+                })({color: G, text: l, loading: E, loadingColor: j})} `
             }, props: {properties: ot, styles: ut}, baseClass: (0, pe.Am)((0, pe.s)((0, pe.Xg)(ue.J)))
-        })), customElements.define("gu-primary-hex-button", (0, Pe.x)({
-            renderer: function ({text: G, loading: c, loadingColor: E, size: j, icon: oe, leftIconPosition: Me}) {
+        })), customElements.define("gu-primary-hex-button", (0, Se.x)({
+            renderer: function _({text: G, loading: l, loadingColor: E, size: j, icon: oe, leftIconPosition: Me}) {
                 return e.dy`
-    ${It} ${(({icon: G, leftIconPosition: c, size: E, text: j, loading: oe, loadingColor: Me}) => e.dy`
-  <div class=${(0, b.$)({buttonContent: !0, "buttonContent--leftIcon": c})}>
+    ${It} ${(({icon: G, leftIconPosition: l, size: E, text: j, loading: oe, loadingColor: Me}) => e.dy`
+  <div class=${(0, b.$)({buttonContent: !0, "buttonContent--leftIcon": l})}>
     <gu-heading-text class="buttonContent__text" size=${"large" === E ? "2x-small" : "3x-small"}>
       ${Ie(j, oe, Me)}
     </gu-heading-text>
     ${rt(oe, G)}
   </div>
-`)({text: G, icon: oe, size: j, loading: c, loadingColor: E, leftIconPosition: Me})}
+`)({text: G, icon: oe, size: j, loading: l, loadingColor: E, leftIconPosition: Me})}
   `
             }, props: {properties: je, styles: Oe}, baseClass: (0, pe.lH)((0, pe.Am)((0, pe.s)((0, pe.Xg)(ue.J))))
-        })), customElements.define("gu-secondary-hex-button", (0, Pe.x)({
-            renderer: function ({text: G, loading: c, loadingColor: E, icon: j, leftIconPosition: oe}) {
-                return e.dy` ${(({icon: G, leftIconPosition: c, text: E, loading: j, loadingColor: oe}) => e.dy`
-  <div class=${(0, b.$)({buttonContent: !0, "buttonContent--leftIcon": c})}>
+        })), customElements.define("gu-secondary-hex-button", (0, Se.x)({
+            renderer: function U({text: G, loading: l, loadingColor: E, icon: j, leftIconPosition: oe}) {
+                return e.dy` ${(({icon: G, leftIconPosition: l, text: E, loading: j, loadingColor: oe}) => e.dy`
+  <div class=${(0, b.$)({buttonContent: !0, "buttonContent--leftIcon": l})}>
     <gu-simple-text class="buttonContent__text" kind="small">
       ${Ie(E, j, oe)}
     </gu-simple-text>
     ${rt(j, G)}
   </div>
-`)({text: G, icon: j, loading: c, loadingColor: E, leftIconPosition: oe})} `
+`)({text: G, icon: j, loading: l, loadingColor: E, leftIconPosition: oe})} `
             }, props: {properties: je, styles: ht}, baseClass: (0, pe.Am)((0, pe.s)((0, pe.Xg)(ue.J)))
-        })), customElements.define("gu-subtle-hex-button", (0, Pe.x)({
-            renderer: function ({text: G, loading: c, loadingColor: E, size: j, icon: oe, leftIconPosition: Me}) {
+        })), customElements.define("gu-subtle-hex-button", (0, Se.x)({
+            renderer: function ie({text: G, loading: l, loadingColor: E, size: j, icon: oe, leftIconPosition: Me}) {
                 return e.dy` ${(({
                                      icon: G,
-                                     leftIconPosition: c,
+                                     leftIconPosition: l,
                                      text: E,
                                      loading: j,
                                      loadingColor: oe,
                                      size: Me
                                  }) => e.dy`
-  <div class=${(0, b.$)({buttonContent: !0, "buttonContent--leftIcon": c})}>
+  <div class=${(0, b.$)({buttonContent: !0, "buttonContent--leftIcon": l})}>
     <gu-heading-text class="buttonContent__text" size=${"large" === Me ? "2x-small" : "3x-small"}>
       ${Ie(E, j, oe)}
     </gu-heading-text>
     ${rt(j, G)}
   </div>
-`)({text: G, icon: oe, size: j, loading: c, loadingColor: E, leftIconPosition: Me})} `
+`)({text: G, icon: oe, size: j, loading: l, loadingColor: E, leftIconPosition: Me})} `
             }, props: {properties: je, styles: Fe}, baseClass: (0, pe.Am)((0, pe.s)((0, pe.Xg)(ue.J)))
         }));
         var ke = o(5284), Ve = o(52102);
@@ -6467,8 +6500,8 @@
 `;
         let Jt = class extends ((0, pe.Xg)(Ve._)) {
             static get styles() {
-                const c = [];
-                return super.styles && c.push(super.styles), c.push(it), c
+                const l = [];
+                return super.styles && l.push(super.styles), l.push(it), l
             }
 
             static get properties() {
@@ -6491,45 +6524,45 @@
             verticalLayout: {type: Boolean},
             square: {type: Boolean}
         });
-        customElements.define("gu-plain-square-button", (0, Pe.x)({
-            renderer: function ({
-                                    text: G,
-                                    loading: c,
-                                    loadingColor: E,
-                                    icon: j,
-                                    iconColor: oe,
-                                    leftIconPosition: Me,
-                                    fillColor: Re,
-                                    fillColorHover: Je,
-                                    fillGradient: Pt,
-                                    fillGradientTarget: Qt,
-                                    backgroundFillColor: Ot,
-                                    backgroundFillColorHover: Lt,
-                                    backgroundFillGradient: bt,
-                                    backgroundFillGradientTarget: Te,
-                                    borderColor: De,
-                                    borderColorHover: Ut,
-                                    verticalLayout: Ue,
-                                    square: st
-                                }) {
+        customElements.define("gu-plain-square-button", (0, Se.x)({
+            renderer: function ss({
+                                      text: G,
+                                      loading: l,
+                                      loadingColor: E,
+                                      icon: j,
+                                      iconColor: oe,
+                                      leftIconPosition: Me,
+                                      fillColor: Re,
+                                      fillColorHover: Je,
+                                      fillGradient: St,
+                                      fillGradientTarget: Qt,
+                                      backgroundFillColor: Ot,
+                                      backgroundFillColorHover: Lt,
+                                      backgroundFillGradient: bt,
+                                      backgroundFillGradientTarget: $e,
+                                      borderColor: De,
+                                      borderColorHover: Ut,
+                                      verticalLayout: Ue,
+                                      square: st
+                                  }) {
                 return (0, te.d4)(() => {
                     (0, g.updateColoringVariables)({
                         component: this,
                         iconColor: oe,
                         fillColor: Re,
                         fillColorHover: Je,
-                        fillGradient: Pt,
+                        fillGradient: St,
                         fillGradientTarget: Qt,
                         backgroundFillColor: Ot,
                         backgroundFillColorHover: Lt,
                         backgroundFillGradient: bt,
-                        backgroundFillGradientTarget: Te,
+                        backgroundFillGradientTarget: $e,
                         borderColor: De,
                         borderColorHover: Ut
                     })
-                }, [oe, Re, Je, Pt, Qt, Ot, Lt, bt, Te, De, Ut]), e.dy`${(({
+                }, [oe, Re, Je, St, Qt, Ot, Lt, bt, $e, De, Ut]), e.dy`${(({
                                                                                icon: G,
-                                                                               leftIconPosition: c,
+                                                                               leftIconPosition: l,
                                                                                text: E,
                                                                                loading: j,
                                                                                loadingColor: oe,
@@ -6539,7 +6572,7 @@
   <div
     class=${(0, b.$)({
                     buttonContent: !0,
-                    "buttonContent--leftIcon": c,
+                    "buttonContent--leftIcon": l,
                     "buttonContent--vertical": Me,
                     "buttonContent--square": Re
                 })}
@@ -6549,7 +6582,7 @@
     </gu-paragraph-text>
     ${rt(j, G)}
   </div>
-`)({icon: j, leftIconPosition: Me, loading: c, loadingColor: E, text: G, verticalLayout: Ue, square: st})}`
+`)({icon: j, leftIconPosition: Me, loading: l, loadingColor: E, text: G, verticalLayout: Ue, square: st})}`
             }, props: {properties: ls, styles: lt}, baseClass: (0, pe.Am)((0, pe.s)((0, pe.Xg)(ue.J)))
         }));
         var Bt = (() => {
@@ -6618,10 +6651,10 @@
 
             generateBackgroundImageMediaQueries() {
                 return this.backgroundImageResponsive.map(({
-                                                               breakpoint: c,
+                                                               breakpoint: l,
                                                                pos: E,
                                                                size: j
-                                                           }) => `\n        @media screen and (min-width: ${(0, t.asCssProp)(k.breakpointSizeMapping[c])}) {\n          .character {\n            background-image: ${["x-small", "small"].includes(c) ? "linear-gradient(to bottom, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 1) 80%), " : ""}\n            url('${this.background}') !important;\n            background-position: ${(0, t.asCssProp)(E)} !important;\n            background-size: ${(0, t.asCssProp)(j)} !important;\n          }\n        }\n    `).join("\n")
+                                                           }) => `\n        @media screen and (min-width: ${(0, t.asCssProp)(k.breakpointSizeMapping[l])}) {\n          .character {\n            background-image: ${["x-small", "small"].includes(l) ? "linear-gradient(to bottom, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 1) 80%), " : ""}\n            url('${this.background}') !important;\n            background-position: ${(0, t.asCssProp)(E)} !important;\n            background-size: ${(0, t.asCssProp)(j)} !important;\n          }\n        }\n    `).join("\n")
             }
 
             generateMediaQueries() {
@@ -6670,7 +6703,7 @@
         };
         _t = (0, i.gn)([(0, m.M)("gu-card-character")], _t);
         var ft = o(7302), Qe = o(49219);
-        const Wt = G => `https://images.godsunchained.com/cardpack-images--${G}`, Xt = G => "undefined" === G || !G;
+        const Ht = G => `https://images.godsunchained.com/cardpack-images--${G}`, Xt = G => "undefined" === G || !G;
         let ge = class extends e.oi {
             constructor() {
                 super(...arguments), this.type = "marketing", this.responsiveSrcsetSizes = `${Qe.imageQualities.normal}px`
@@ -6713,30 +6746,30 @@
     `
             }
 
-            update(c) {
-                c.has("god") && (this.sanitizedGod = "all" === this.god || "core" === this.god ? "neutral" : this.god), super.update(c)
+            update(l) {
+                l.has("god") && (this.sanitizedGod = "all" === this.god || "core" === this.god ? "neutral" : this.god), super.update(l)
             }
 
-            updated(c) {
-                super.updated(c), this.image && (this.image.complete ? (this.classList.remove("loading", "error"), this.notifyState("loaded")) : (this.classList.remove("error"), this.classList.add("loading"), this.notifyState("loading"), (0, r.waitForImageToLoad)(this.image).then(() => {
+            updated(l) {
+                super.updated(l), this.image && (this.image.complete ? (this.classList.remove("loading", "error"), this.notifyState("loaded")) : (this.classList.remove("error"), this.classList.add("loading"), this.notifyState("loading"), (0, r.waitForImageToLoad)(this.image).then(() => {
                     this.classList.remove("loading", "error"), this.notifyState("loaded")
                 }).catch(() => {
                     this.classList.remove("loading"), this.classList.add("error"), this.notifyState("error")
                 })))
             }
 
-            notifyState(c) {
-                this.dispatchEvent(new CustomEvent(c, {detail: this, bubbles: !1, composed: !1}))
+            notifyState(l) {
+                this.dispatchEvent(new CustomEvent(l, {detail: this, bubbles: !1, composed: !1}))
             }
 
             render() {
-                const {type: c, set: E, rarity: j, sanitizedGod: oe, responsiveSrcsetSizes: Me} = this;
-                return Xt(c) || Xt(E) || Xt(oe) || Xt(j) ? e.dy`` : e.dy`
-      <picture class="picture picture--${c}">
+                const {type: l, set: E, rarity: j, sanitizedGod: oe, responsiveSrcsetSizes: Me} = this;
+                return Xt(l) || Xt(E) || Xt(oe) || Xt(j) ? e.dy`` : e.dy`
+      <picture class="picture picture--${l}">
         <source
           srcset=${Object.keys(Qe.imageQualities).map(Re => {
                     const Je = Qe.imageQualities[Re];
-                    return `${Wt(c)}/${Je}/${E}--${oe}--${j}.webp ${Je}w`
+                    return `${Ht(l)}/${Je}/${E}--${oe}--${j}.webp ${Je}w`
                 }).join(", ")}
           type="image/webp"
           sizes="${Me}"
@@ -6744,45 +6777,45 @@
         <source
           srcset=${Object.keys(Qe.imageQualities).map(Re => {
                     const Je = Qe.imageQualities[Re];
-                    return `${Wt(c)}/${Je}/${E}--${oe}--${j}.png ${Je}w`
+                    return `${Ht(l)}/${Je}/${E}--${oe}--${j}.png ${Je}w`
                 }).join(",")}
           type="image/png"
           sizes="${Me}"
         />
         <img
           class="image"
-          src="${Wt(c)}/${Qe.imageQualities.small}/${E}--${oe}--${j}.png"
+          src="${Ht(l)}/${Qe.imageQualities.small}/${E}--${oe}--${j}.png"
           alt="Card Pack Image"
         />
       </picture>
     `
             }
         };
-        (0, i.gn)([(0, p.C)({type: String})], ge.prototype, "set", void 0), (0, i.gn)([(0, p.C)({type: String})], ge.prototype, "rarity", void 0), (0, i.gn)([(0, p.C)({type: String})], ge.prototype, "god", void 0), (0, i.gn)([(0, p.C)({type: String})], ge.prototype, "type", void 0), (0, i.gn)([(0, p.C)({type: String})], ge.prototype, "responsiveSrcsetSizes", void 0), (0, i.gn)([(0, ft.S)()], ge.prototype, "sanitizedGod", void 0), (0, i.gn)([(0, P.I)(".image")], ge.prototype, "image", void 0), ge = (0, i.gn)([(0, m.M)("gu-card-pack-picture")], ge);
-        const wt = (G, c) => `https://card.godsunchained.com/?id=${G}&q=${c}`;
+        (0, i.gn)([(0, p.C)({type: String})], ge.prototype, "set", void 0), (0, i.gn)([(0, p.C)({type: String})], ge.prototype, "rarity", void 0), (0, i.gn)([(0, p.C)({type: String})], ge.prototype, "god", void 0), (0, i.gn)([(0, p.C)({type: String})], ge.prototype, "type", void 0), (0, i.gn)([(0, p.C)({type: String})], ge.prototype, "responsiveSrcsetSizes", void 0), (0, i.gn)([(0, ft.S)()], ge.prototype, "sanitizedGod", void 0), (0, i.gn)([(0, S.I)(".image")], ge.prototype, "image", void 0), ge = (0, i.gn)([(0, m.M)("gu-card-pack-picture")], ge);
+        const wt = (G, l) => `https://card.godsunchained.com/?id=${G}&q=${l}`;
         let jt = class extends e.oi {
             constructor() {
                 super(...arguments), this.quality = 1, this.protoId = 1, this.responsiveSrcsetSizes = `${Qe.imageQualities.normal}px`, this.showLoadingState = !1
             }
 
-            updated(c) {
-                super.updated(c), (c.has("protoId") || c.has("quality")) && (this.classList.add("loading"), (0, r.waitForImageToLoad)(this.image).then(() => this.classList.remove("loading")))
+            updated(l) {
+                super.updated(l), (l.has("protoId") || l.has("quality")) && (this.classList.add("loading"), (0, r.waitForImageToLoad)(this.image).then(() => this.classList.remove("loading")))
             }
 
             render() {
                 return e.dy`
       <picture class="picture">
         <source
-          srcset=${Object.keys(Qe.imageQualities).map(c => {
-                    const E = Qe.imageQualities[c];
+          srcset=${Object.keys(Qe.imageQualities).map(l => {
+                    const E = Qe.imageQualities[l];
                     return `${wt(this.protoId, this.quality)}&w=${E} ${E}w`
                 }).join(", ")}
           type="image/webp"
           sizes="${this.responsiveSrcsetSizes}"
         />
         <source
-          srcset=${Object.keys(Qe.imageQualities).map(c => {
-                    const E = Qe.imageQualities[c];
+          srcset=${Object.keys(Qe.imageQualities).map(l => {
+                    const E = Qe.imageQualities[l];
                     return `${wt(this.protoId, this.quality)}&w=${E}&png=true ${E}w`
                 }).join(", ")}
           type="image/png"
@@ -6837,11 +6870,11 @@
       color: ${(0, t.asCssProp)(n.colors.light[100])};
       opacity: 0;
     }
-  `, (0, i.gn)([(0, p.C)()], jt.prototype, "quality", void 0), (0, i.gn)([(0, p.C)()], jt.prototype, "protoId", void 0), (0, i.gn)([(0, ft.S)()], jt.prototype, "responsiveSrcsetSizes", void 0), (0, i.gn)([(0, ft.S)()], jt.prototype, "showLoadingState", void 0), (0, i.gn)([(0, P.I)("img.image")], jt.prototype, "image", void 0), jt = (0, i.gn)([(0, m.M)("gu-card-picture")], jt);
+  `, (0, i.gn)([(0, p.C)()], jt.prototype, "quality", void 0), (0, i.gn)([(0, p.C)()], jt.prototype, "protoId", void 0), (0, i.gn)([(0, ft.S)()], jt.prototype, "responsiveSrcsetSizes", void 0), (0, i.gn)([(0, ft.S)()], jt.prototype, "showLoadingState", void 0), (0, i.gn)([(0, S.I)("img.image")], jt.prototype, "image", void 0), jt = (0, i.gn)([(0, m.M)("gu-card-picture")], jt);
         var eo = o(71459), to = o.n(eo), os = o(49749), so = o(63082), ms = o.n(so);
         const cs_ALL = "slidesListing__slide", cs_CURRENT = "slidesListing__slide--currentSlide", Es = new s.do(G => {
-            G.forEach(c => {
-                c.target.handleResize()
+            G.forEach(l => {
+                l.target.handleResize()
             })
         });
         let et = class extends e.oi {
@@ -6920,9 +6953,9 @@
                     passive: !1,
                     capture: !0,
                     startDirectionLoopCount: 1
-                }), this.gestureControl.on("pan.prestart", c => {
-                    c.sourceEvent instanceof MouseEvent && c.sourceEvent.preventDefault()
-                }), this.gestureControl.on("pan.start", c => this.onPanStart(c)), this.gestureControl.on("pan.all", c => this.onPan(c)), this.gestureControl.on("pan.end", c => this.onPanEnd(c)), this.storeSlideDoms(), this.handleResize(), this.updatePaneClasses()
+                }), this.gestureControl.on("pan.prestart", l => {
+                    l.sourceEvent instanceof MouseEvent && l.sourceEvent.preventDefault()
+                }), this.gestureControl.on("pan.start", l => this.onPanStart(l)), this.gestureControl.on("pan.all", l => this.onPan(l)), this.gestureControl.on("pan.end", l => this.onPanEnd(l)), this.storeSlideDoms(), this.handleResize(), this.updatePaneClasses()
             }
 
             disconnectedCallback() {
@@ -6930,8 +6963,8 @@
             }
 
             get onLastSlide() {
-                const {state: {currentSlideIndexes: c}} = this;
-                return this.state.centeredSlides ? c[c.length - 1] >= this.state.totalSlidesCount : c[c.length - 1] >= this.state.totalSlidesCount - 1
+                const {state: {currentSlideIndexes: l}} = this;
+                return this.state.centeredSlides ? l[l.length - 1] >= this.state.totalSlidesCount : l[l.length - 1] >= this.state.totalSlidesCount - 1
             }
 
             get onFirstSlide() {
@@ -6949,52 +6982,52 @@
             layoutSlides() {
                 this.slidesListingDom.style.width = `${this.dimensions.totalWidth + 2 * this.dimensions.slideCenteringSideMargin}px`, os.p8.set(this.slideDoms, {
                     width: this.dimensions.slideWidth,
-                    marginLeft: c => this.state.centeredSlides && 0 === c ? this.dimensions.slideCenteringSideMargin : 0,
-                    marginRight: c => c === this.state.totalSlidesCount - 1 ? this.dimensions.slideCenteringSideMargin : this.state.spaceBetween
+                    marginLeft: l => this.state.centeredSlides && 0 === l ? this.dimensions.slideCenteringSideMargin : 0,
+                    marginRight: l => l === this.state.totalSlidesCount - 1 ? this.dimensions.slideCenteringSideMargin : this.state.spaceBetween
                 })
             }
 
-            onPanStart(c) {
+            onPanStart(l) {
                 this.slidesListingDom.style.cursor = "grabbing", this.direction = null, this.state.startTranslateX = 0 === this.state.currentSlideIndexes[0] ? 0 : this.state.translateX, this.state.translateX = 0, this.state.rightLocked = !1, this.state.leftLocked = !1, this.setXTrans("left", 0)
             }
 
-            onPan(c) {
-                this.setXTrans(c.deltaX < 0 ? "left" : "right", c.deltaX)
+            onPan(l) {
+                this.setXTrans(l.deltaX < 0 ? "left" : "right", l.deltaX)
             }
 
-            setXTrans(c, E) {
-                this.direction = c;
+            setXTrans(l, E) {
+                this.direction = l;
                 let j = 1;
                 const oe = E * j, Me = this.state.startTranslateX + oe;
-                "right" === c && Me >= 0 ? this.state.rightLocked || (this.state.lockTranslateX = oe, this.state.rightLocked = !0) : this.state.rightLocked = !1, "left" === c && this.dimensions.totalWidth - this.dimensions.width + Me + 2 * this.dimensions.slideCenteringSideMargin <= 0 ? this.state.leftLocked || (this.state.lockTranslateX = oe, this.state.leftLocked = !0) : this.state.leftLocked = !1, j = this.state.leftLocked || this.state.rightLocked ? .1 : 1;
+                "right" === l && Me >= 0 ? this.state.rightLocked || (this.state.lockTranslateX = oe, this.state.rightLocked = !0) : this.state.rightLocked = !1, "left" === l && this.dimensions.totalWidth - this.dimensions.width + Me + 2 * this.dimensions.slideCenteringSideMargin <= 0 ? this.state.leftLocked || (this.state.lockTranslateX = oe, this.state.leftLocked = !0) : this.state.leftLocked = !1, j = this.state.leftLocked || this.state.rightLocked ? .1 : 1;
                 let Je = this.state.startTranslateX + oe;
                 (this.state.rightLocked || this.state.leftLocked) && (Je = this.state.startTranslateX + this.state.lockTranslateX + (E - this.state.lockTranslateX) * j), this.state.translateX = Je, this.drawFrame()
             }
 
-            onPanEnd(c) {
+            onPanEnd(l) {
                 console.log("!!!!!!!! PAN END"), this.slidesListingDom.style.cursor = null;
                 const E = Math.abs(this.state.translateX - this.state.startTranslateX),
                     j = this.state.slidesPerView > 1 ? .8 : .5;
                 let oe = Math.abs(E) / (this.dimensions.slideWidth * j);
-                return !this.state.centeredSlides && !this.onLastSlide && Math.abs(this.state.translateX - this.dimensions.width) >= this.dimensions.totalWidth ? this.nextSlides(null, [this.state.totalSlidesCount - 2, this.state.totalSlidesCount - 1, this.state.totalSlidesCount]) : (!this.state.centeredSlides && this.onLastSlide && this.state.hasRemainderSlide && (oe = oe >= .5 ? 1 : oe), Math.floor(oe) >= 1 ? this.state.translateX < this.state.startTranslateX ? this.nextSlides(Math.floor(oe)) : this.prevSlides(Math.floor(oe)) : c.isSwipe ? "right" === c.swipeDirection ? this.prevSlides(1) : "left" === c.swipeDirection ? this.nextSlides(1) : null : this.reset())
+                return !this.state.centeredSlides && !this.onLastSlide && Math.abs(this.state.translateX - this.dimensions.width) >= this.dimensions.totalWidth ? this.nextSlides(null, [this.state.totalSlidesCount - 2, this.state.totalSlidesCount - 1, this.state.totalSlidesCount]) : (!this.state.centeredSlides && this.onLastSlide && this.state.hasRemainderSlide && (oe = oe >= .5 ? 1 : oe), Math.floor(oe) >= 1 ? this.state.translateX < this.state.startTranslateX ? this.nextSlides(Math.floor(oe)) : this.prevSlides(Math.floor(oe)) : l.isSwipe ? "right" === l.swipeDirection ? this.prevSlides(1) : "left" === l.swipeDirection ? this.nextSlides(1) : null : this.reset())
             }
 
             drawFrame() {
                 this.resetAnimation && this.resetAnimation.kill(), os.p8.set(this.slidesListingDom, {x: this.state.translateX})
             }
 
-            onSlotChange(c) {
+            onSlotChange(l) {
                 this.storeSlideDoms(), this.updatePaneClasses(), this.setCarouselHeight()
             }
 
             storeSlideDoms() {
-                const c = this.shadowRoot.getElementById("slidesSlot");
-                this.slideDoms = c.assignedElements(), this.state.totalSlidesCount = this.slideDoms.length
+                const l = this.shadowRoot.getElementById("slidesSlot");
+                this.slideDoms = l.assignedElements(), this.state.totalSlidesCount = this.slideDoms.length
             }
 
             updatePaneClasses() {
-                this.slideDoms.forEach((c, E) => {
-                    c.classList.remove(cs_ALL, cs_CURRENT), c.classList.add(cs_ALL), -1 !== this.state.currentSlideIndexes.indexOf(E) && c.classList.add(cs_CURRENT)
+                this.slideDoms.forEach((l, E) => {
+                    l.classList.remove(cs_ALL, cs_CURRENT), l.classList.add(cs_ALL), -1 !== this.state.currentSlideIndexes.indexOf(E) && l.classList.add(cs_CURRENT)
                 })
             }
 
@@ -7003,15 +7036,15 @@
             }
 
             getTransToFirstSlide() {
-                const c = this.state.currentSlideIndexes[0];
-                return -1 * (c * this.dimensions.slideWidth + this.state.spaceBetween * c)
+                const l = this.state.currentSlideIndexes[0];
+                return -1 * (l * this.dimensions.slideWidth + this.state.spaceBetween * l)
             }
 
-            reset({duration: c = .25, specialResetForEndOfSlides: E = !1} = {}) {
+            reset({duration: l = .25, specialResetForEndOfSlides: E = !1} = {}) {
                 E && (this.state.specialRemainderSlideActive = E);
                 let j = this.state.specialRemainderSlideActive ? this.getTransToLastSlide() : this.getTransToFirstSlide();
                 this.state.centeredSlides && this.onLastSlide && (j = this.getTransToLastSlide()), j !== this.state.translateX && (this.state.translateX = j, this.resetAnimation = os.p8.to(this.slidesListingDom, {
-                    duration: c,
+                    duration: l,
                     x: this.state.translateX,
                     ease: "power2.inOut"
                 })), this.setCarouselHeight()
@@ -7019,8 +7052,8 @@
 
             setCarouselHeight() {
                 if (this.state.centeredSlides) return !1;
-                const c = this.getMaxCurrentSlideHeight();
-                this.slidesListingDom.style.height = `${c}px`
+                const l = this.getMaxCurrentSlideHeight();
+                this.slidesListingDom.style.height = `${l}px`
             }
 
             getMaxCurrentSlideHeight() {
@@ -7030,11 +7063,11 @@
                 }, 0)
             }
 
-            emitSlideChange(c) {
+            emitSlideChange(l) {
                 let E = this.state.currentSlideIndexes;
                 this.state.centeredSlides && (E = E.map(this.onFirstSlide ? (j, oe) => 0 === oe ? null : j - 1 : this.onLastSlide ? (j, oe) => oe === E.length - 1 ? null : j : (j, oe) => j - 1)), this.dispatchEvent(new CustomEvent("onSlideChange", {
                     detail: {
-                        direction: c,
+                        direction: l,
                         currentActiveSlides: E,
                         atEnd: this.onLastSlide,
                         atStart: this.onFirstSlide
@@ -7042,14 +7075,14 @@
                 }))
             }
 
-            incrementCurrentIndexes(c, E) {
-                this.state.currentSlideIndexes = c || this.state.currentSlideIndexes.map(j => null === j ? 0 : j + E)
+            incrementCurrentIndexes(l, E) {
+                this.state.currentSlideIndexes = l || this.state.currentSlideIndexes.map(j => null === j ? 0 : j + E)
             }
 
-            assignResponsiveVariables(c) {
+            assignResponsiveVariables(l) {
                 const E = this.responsiveBreakpoints.filter(j => {
                     const oe = parseInt(k.breakpointSizeMapping[j.minWidth], 10);
-                    return c >= oe
+                    return l >= oe
                 }).sort((j, oe) => {
                     const Me = parseInt(k.breakpointSizeMapping[j.minWidth], 10);
                     return parseInt(k.breakpointSizeMapping[oe.minWidth], 10) - Me
@@ -7057,14 +7090,14 @@
                 if (E) {
                     const {slidesPerView: j, spaceBetween: oe, minWidth: Me} = E,
                         Re = parseInt(k.breakpointSizeMapping[Me], 10);
-                    c >= Re && ("number" == typeof j && (this.state.slidesPerView = j), "number" == typeof oe && (this.state.spaceBetween = oe))
+                    l >= Re && ("number" == typeof j && (this.state.slidesPerView = j), "number" == typeof oe && (this.state.spaceBetween = oe))
                 } else this.state.slidesPerView = this.slidesPerView, this.state.spaceBetween = this.spaceBetween;
                 1 === this.state.slidesPerView ? (this.state.spaceBetween = 0, this.state.centeredSlides = !1) : this.state.centeredSlides = this.centeredSlides, this.state.currentSlideIndexes.length !== Math.ceil(this.state.slidesPerView) && (this.state.currentSlideIndexes = Array(Math.ceil(this.state.slidesPerView)).fill(0).map((j, oe) => oe))
             }
 
-            nextSlides(c = 1, E) {
+            nextSlides(l = 1, E) {
                 if (this.onLastSlide) return E && this.incrementCurrentIndexes(E), this.reset({specialResetForEndOfSlides: !0});
-                this.incrementCurrentIndexes(E, c), this.state.translateX = this.state.startTranslateX + (this.dimensions.slideWidth + this.state.spaceBetween) * c * -1, os.p8.to(this.slidesListingDom, {
+                this.incrementCurrentIndexes(E, l), this.state.translateX = this.state.startTranslateX + (this.dimensions.slideWidth + this.state.spaceBetween) * l * -1, os.p8.to(this.slidesListingDom, {
                     duration: .25,
                     x: this.state.translateX,
                     ease: "power2.inOut",
@@ -7074,9 +7107,9 @@
                 })
             }
 
-            prevSlides(c = 1, E) {
+            prevSlides(l = 1, E) {
                 if (this.onFirstSlide || this.state.specialRemainderSlideActive) return this.state.specialRemainderSlideActive = !1, this.reset();
-                this.incrementCurrentIndexes(E, -1 * c), this.state.translateX = this.state.startTranslateX + (this.dimensions.slideWidth + this.state.spaceBetween) * c, os.p8.to(this.slidesListingDom, {
+                this.incrementCurrentIndexes(E, -1 * l), this.state.translateX = this.state.startTranslateX + (this.dimensions.slideWidth + this.state.spaceBetween) * l, os.p8.to(this.slidesListingDom, {
                     duration: .25,
                     x: this.state.translateX,
                     ease: "power2.inOut",
@@ -7086,24 +7119,24 @@
                 })
             }
 
-            gotoSlide(c) {
-                if (c < 0 || c > this.state.totalSlidesCount - 1 || this.state.centeredSlides) return console.error("Error! Application requested a bad slide index:", c), !1;
-                this.state.currentSlideIndexes = this.state.currentSlideIndexes.map(() => c).map((E, j) => E + j), this.reset(), this.emitSlideChange()
+            gotoSlide(l) {
+                if (l < 0 || l > this.state.totalSlidesCount - 1 || this.state.centeredSlides) return console.error("Error! Application requested a bad slide index:", l), !1;
+                this.state.currentSlideIndexes = this.state.currentSlideIndexes.map(() => l).map((E, j) => E + j), this.reset(), this.emitSlideChange()
             }
 
             handleResize() {
-                const {width: c, height: E, left: j, top: oe} = this.getBoundingClientRect();
-                this.assignResponsiveVariables(c);
-                const Me = Math.floor(c - this.state.spaceBetween * (this.state.slidesPerView - 1)),
+                const {width: l, height: E, left: j, top: oe} = this.getBoundingClientRect();
+                this.assignResponsiveVariables(l);
+                const Me = Math.floor(l - this.state.spaceBetween * (this.state.slidesPerView - 1)),
                     Re = Math.floor(Me / this.state.slidesPerView),
                     Je = Math.floor(this.state.totalSlidesCount * Re + this.state.spaceBetween * (this.state.totalSlidesCount - 1)),
-                    Pt = this.state.centeredSlides ? Math.floor(.5 * (c - Re)) : 0;
+                    St = this.state.centeredSlides ? Math.floor(.5 * (l - Re)) : 0;
                 this.dimensions = {
-                    width: c,
+                    width: l,
                     height: E,
                     slideWidth: Re,
                     totalWidth: Je,
-                    slideCenteringSideMargin: Pt,
+                    slideCenteringSideMargin: St,
                     left: j,
                     top: oe
                 }, this.debouncedResize(this.dimensions)
@@ -7224,9 +7257,9 @@
             }
 
             render() {
-                const {onCheck: c, checked: E, labelText: j, kind: oe} = this, Me = (0, Ms.v4)();
+                const {onCheck: l, checked: E, labelText: j, kind: oe} = this, Me = (0, Ms.v4)();
                 return e.dy`
-      <input id=${Me} type="checkbox" class="input" @change=${c} .checked=${E} />
+      <input id=${Me} type="checkbox" class="input" @change=${l} .checked=${E} />
       <gu-icon class="checkmark" iconLigature=${this.checked ? "checkbox_tick" : ""}></gu-icon>
       ${void 0 !== j ? e.dy`
             <label for=${Me} class="label">
@@ -7238,23 +7271,23 @@
         };
         Os = (0, i.gn)([(0, m.M)("gu-checkbox-input")], Os), o(62701);
         const ro = ["days", "hours", "minutes", "seconds"];
-        let Tt = class extends e.oi {
+        let $t = class extends e.oi {
             constructor() {
                 super(...arguments), this.darkBackground = !1, this.targetTime = 1755790779, this.showFields = ro, this.size = "large", this.simpleTextDisplay = !1, this.simpleTextKind = "small", this.padZeroes = !1, this.getDelta = () => new Date(1e3 * this.targetTime).getTime() - (new Date).getTime(), this.getTimeRemaining = () => {
-                    const c = this.getDelta();
-                    let E = Math.floor(c / 864e5), j = Math.floor(c % 864e5 / 36e5), oe = Math.floor(c % 36e5 / 6e4),
-                        Me = Math.floor(c % 6e4 / 1e3);
+                    const l = this.getDelta();
+                    let E = Math.floor(l / 864e5), j = Math.floor(l % 864e5 / 36e5), oe = Math.floor(l % 36e5 / 6e4),
+                        Me = Math.floor(l % 6e4 / 1e3);
                     return E = E < 0 ? 0 : E, j = j < 0 ? 0 : j, oe = oe < 0 ? 0 : oe, Me = Me < 0 ? 0 : Me, {
                         seconds: this.addPadding(`${Me}`),
                         minutes: this.addPadding(`${oe}`),
                         hours: this.addPadding(`${j}`),
                         days: this.addPadding(`${E}`)
                     }
-                }, this.addPadding = c => c.length < 2 && this.padZeroes ? `0${c}` : c, this.getHeadingTextSize = c => "small" === c ? "small" : "large", this.getDividerHeadingTextSize = c => "small" === c ? "large" : "x-large", this.getSimpleTextKind = c => "small" === c ? "micro" : "small"
+                }, this.addPadding = l => l.length < 2 && this.padZeroes ? `0${l}` : l, this.getHeadingTextSize = l => "small" === l ? "small" : "large", this.getDividerHeadingTextSize = l => "small" === l ? "large" : "x-large", this.getSimpleTextKind = l => "small" === l ? "micro" : "small"
             }
 
-            update(c) {
-                c.has("targetTime") && this.initializeCounter(), c.has("simpleTextDisplay") && (this.simpleTextDisplay ? this.classList.add("simpleTextMode") : this.classList.remove("simpleTextMode")), super.update(c)
+            update(l) {
+                l.has("targetTime") && this.initializeCounter(), l.has("simpleTextDisplay") && (this.simpleTextDisplay ? this.classList.add("simpleTextMode") : this.classList.remove("simpleTextMode")), super.update(l)
             }
 
             disconnectedCallback() {
@@ -7267,8 +7300,8 @@
                 }, 1e3)
             }
 
-            maybePluralise(c, E) {
-                return 1 === c ? E.replace(/s$/, "") : E
+            maybePluralise(l, E) {
+                return 1 === l ? E.replace(/s$/, "") : E
             }
 
             render() {
@@ -7276,26 +7309,26 @@
                     component: this,
                     fillColor: this.fillColor
                 }), this.simpleTextDisplay ? e.dy`
-          ${this.showFields.map((c, E) => e.dy` <gu-simple-text
+          ${this.showFields.map((l, E) => e.dy` <gu-simple-text
               fillColor=${this.fillColor}
               .kind=${this.simpleTextKind}
               align="center"
             >
-              ${this.timeLeft[c]}
+              ${this.timeLeft[l]}
               ${E < this.showFields.length - 1 ? e.dy`<span class="simpleTextDivider"> : </span>` : null}
             </gu-simple-text>`)}
         ` : e.dy`
-          ${this.showFields.map((c, E) => e.dy`
+          ${this.showFields.map((l, E) => e.dy`
               <div
                 class=${(0, b.$)({digit: !0, [`digit--${this.size}`]: !0, darkBackground: this.darkBackground})}
               >
-                <gu-heading-text size=${this.getHeadingTextSize(this.size)}> ${this.timeLeft[c]} </gu-heading-text>
+                <gu-heading-text size=${this.getHeadingTextSize(this.size)}> ${this.timeLeft[l]} </gu-heading-text>
                 <gu-simple-text
                   fillColor=${this.fillColor}
                   kind=${this.getSimpleTextKind(this.size)}
                   align="center"
                   class="label"
-                  .text=${this.maybePluralise(parseInt(this.timeLeft[c], 10), c)}
+                  .text=${this.maybePluralise(parseInt(this.timeLeft[l], 10), l)}
                 ></gu-simple-text>
               </div>
               ${E < this.showFields.length - 1 ? e.dy`<gu-heading-text
@@ -7307,7 +7340,7 @@
         `)
             }
         };
-        Tt.styles = e.iv`
+        $t.styles = e.iv`
     ${(0, t.asCssProp)((0, t.setBoxSizing)())}
 
     :host {
@@ -7371,8 +7404,8 @@
       line-height: ${(0, t.asCssProp)((0, r.gridUnits)(15))};
       margin-bottom: ${(0, t.asCssProp)((0, r.gridUnits)(2.5))};
     }
-  `, (0, i.gn)([(0, p.C)()], Tt.prototype, "darkBackground", void 0), (0, i.gn)([(0, p.C)()], Tt.prototype, "targetTime", void 0), (0, i.gn)([(0, p.C)()], Tt.prototype, "showFields", void 0), (0, i.gn)([(0, p.C)()], Tt.prototype, "fillColor", void 0), (0, i.gn)([(0, p.C)()], Tt.prototype, "size", void 0), (0, i.gn)([(0, p.C)()], Tt.prototype, "simpleTextDisplay", void 0), (0, i.gn)([(0, p.C)()], Tt.prototype, "simpleTextKind", void 0), (0, i.gn)([(0, p.C)()], Tt.prototype, "padZeroes", void 0), (0, i.gn)([(0, ft.S)()], Tt.prototype, "timeLeft", void 0), Tt = (0, i.gn)([(0, m.M)("gu-countdown-timer")], Tt);
-        const $s = (0, t.asCssProp)(`${n.measurements.standardBorderSize} solid ${n.colors.gold[500]}`);
+  `, (0, i.gn)([(0, p.C)()], $t.prototype, "darkBackground", void 0), (0, i.gn)([(0, p.C)()], $t.prototype, "targetTime", void 0), (0, i.gn)([(0, p.C)()], $t.prototype, "showFields", void 0), (0, i.gn)([(0, p.C)()], $t.prototype, "fillColor", void 0), (0, i.gn)([(0, p.C)()], $t.prototype, "size", void 0), (0, i.gn)([(0, p.C)()], $t.prototype, "simpleTextDisplay", void 0), (0, i.gn)([(0, p.C)()], $t.prototype, "simpleTextKind", void 0), (0, i.gn)([(0, p.C)()], $t.prototype, "padZeroes", void 0), (0, i.gn)([(0, ft.S)()], $t.prototype, "timeLeft", void 0), $t = (0, i.gn)([(0, m.M)("gu-countdown-timer")], $t);
+        const Ts = (0, t.asCssProp)(`${n.measurements.standardBorderSize} solid ${n.colors.gold[500]}`);
         let As = class extends e.oi {
             constructor() {
                 super(...arguments), this.expanded = !1, this.selectedId = "", this.items = [], this.placeholderText = ""
@@ -7390,7 +7423,7 @@
   .dropdownToggle {
     display: block;
     cursor: pointer;
-    border-bottom: ${$s};
+    border-bottom: ${Ts};
     ${(0, t.asCssProp)(n.gradients.textFill(n.gradients.gold.simple("bottom")))};
   }
 
@@ -7410,7 +7443,7 @@
   .dropdownMenu--expanded {
     height: auto;
     background-color: ${(0, t.asCssProp)(n.colors.gunmetal[900])};
-    border-right: ${$s};
+    border-right: ${Ts};
     padding: ${(0, t.asCssProp)(`${ke.dz.gridUnits(2)}`)} 0;
     z-index: 1;
   }
@@ -7442,16 +7475,16 @@
                 }
             }
 
-            toggleMenu(c) {
-                c.stopPropagation(), this.expanded = !this.expanded
+            toggleMenu(l) {
+                l.stopPropagation(), this.expanded = !this.expanded
             }
 
             get selectedItem() {
-                return this.items ? this.items.find(c => c.id === this.selectedId) : null
+                return this.items ? this.items.find(l => l.id === this.selectedId) : null
             }
 
-            selectDropDownItem(c) {
-                this.selectedId = c, this.expanded = !1, this.dispatchEvent(new CustomEvent("onSelect", {detail: {item: this.selectedItem}}))
+            selectDropDownItem(l) {
+                this.selectedId = l, this.expanded = !1, this.dispatchEvent(new CustomEvent("onSelect", {detail: {item: this.selectedItem}}))
             }
 
             render() {
@@ -7469,13 +7502,13 @@
       <div
         class=${(0, b.$)({dropdownMenu: !0, "dropdownMenu--expanded": this.expanded})}
       >
-        ${this.items.map(c => e.dy`
+        ${this.items.map(l => e.dy`
             <gu-simple-text
-              class=${(0, b.$)({dropdownMenu__item: !0, "dropdownMenu__item--selected": c.id === this.selectedId})}
-              @click=${() => this.selectDropDownItem(c.id)}
+              class=${(0, b.$)({dropdownMenu__item: !0, "dropdownMenu__item--selected": l.id === this.selectedId})}
+              @click=${() => this.selectDropDownItem(l.id)}
               kind="tag"
             >
-              ${c.name}
+              ${l.name}
             </gu-simple-text>
           `)}
       </div>
@@ -7500,12 +7533,12 @@
             }
 
             updateTime() {
-                const c = new Date, E = Math.floor((this.target.getTime() - c.getTime()) / 1e3), j = [];
+                const l = new Date, E = Math.floor((this.target.getTime() - l.getTime()) / 1e3), j = [];
                 E > 604800 && j.push(this.withUnit(Math.floor(E / 604800), "w")), E > 86400 && j.push(this.withUnit(Math.floor(E % 604800 / 86400), "d")), E > 3600 && j.push(this.withUnit(Math.floor(E % 86400 / 3600), "h")), E > 60 && j.push(this.withUnit(Math.floor(E % 3600 / 60), "min")), j.push(this.withUnit(E % 60, "s")), this.time = j.join(" "), this.requestUpdate("time")
             }
 
-            withUnit(c, E) {
-                return `${Math.max(c, 0)}${E}`
+            withUnit(l, E) {
+                return `${Math.max(l, 0)}${E}`
             }
 
             stop() {
@@ -7621,7 +7654,7 @@
             }
 
             renderHeader() {
-                var c, E, j, oe;
+                var l, E, j, oe;
                 return e.dy`
       <gu-vertical-space bottom="small" data-test-id="game-mode-options-header">
         <gu-heading-text
@@ -7630,7 +7663,7 @@
           data-test-id="game-mode-title"
           fillGradient="gradients.gold.simple"
         >
-          ${null !== (E = null === (c = this.gameMode) || void 0 === c ? void 0 : c.name) && void 0 !== E ? E : ""} ${this.renderTitleExtras()}
+          ${null !== (E = null === (l = this.gameMode) || void 0 === l ? void 0 : l.name) && void 0 !== E ? E : ""} ${this.renderTitleExtras()}
         </gu-heading-text>
         ${this.renderCountdownTimer()}
         <gu-paragraph-text
@@ -7646,8 +7679,8 @@
             }
 
             renderCountdownTimer() {
-                var c, E;
-                return null !== (E = null === (c = this.gameMode) || void 0 === c ? void 0 : c.expiry) && void 0 !== E && E ? Math.floor((this.gameMode.expiry.getTime() - (new Date).getTime()) / 1e3) > 7776e3 ? e.dy`` : e.dy`
+                var l, E;
+                return null !== (E = null === (l = this.gameMode) || void 0 === l ? void 0 : l.expiry) && void 0 !== E && E ? Math.floor((this.gameMode.expiry.getTime() - (new Date).getTime()) / 1e3) > 7776e3 ? e.dy`` : e.dy`
       <gu-paragraph-text
         class="game-mode-options__timer"
         kind="micro"
@@ -7660,13 +7693,13 @@
             }
 
             renderTitleExtras() {
-                var c, E;
-                return null !== (E = null === (c = this.gameMode) || void 0 === c ? void 0 : c.ranked) && void 0 !== E && E ? e.dy`<gu-icon class="game-mode-options__extra" iconLigature="flux_symbol"></gu-icon>` : e.dy``
+                var l, E;
+                return null !== (E = null === (l = this.gameMode) || void 0 === l ? void 0 : l.ranked) && void 0 !== E && E ? e.dy`<gu-icon class="game-mode-options__extra" iconLigature="flux_symbol"></gu-icon>` : e.dy``
             }
 
             render() {
-                var c;
-                return this.gameMode && (this.type = this.gameMode.key), this.style.setProperty("--image", `url(${null !== (c = this.images[this.type]) && void 0 !== c ? c : ""})`), e.dy`
+                var l;
+                return this.gameMode && (this.type = this.gameMode.key), this.style.setProperty("--image", `url(${null !== (l = this.images[this.type]) && void 0 !== l ? l : ""})`), e.dy`
       <div
         class=${(0, b.$)({
                     "game-mode-options": !0,
@@ -7794,41 +7827,41 @@
     `
             }
 
-            onClick(c) {
-                this.active = c, this.dispatchEvent(new CustomEvent("gameModeSelection", {
-                    detail: c,
+            onClick(l) {
+                this.active = l, this.dispatchEvent(new CustomEvent("gameModeSelection", {
+                    detail: l,
                     bubbles: !0,
                     composed: !0
                 }))
             }
 
-            renderTile(c) {
+            renderTile(l) {
                 var E;
                 return e.dy`
       <li
-        class=${(0, b.$)({"game-mode-tile": !0, "game-mode-tile--active": this.active && this.active.key === c.key})}
-        style="background-image: url(${null !== (E = this.images[c.key]) && void 0 !== E ? E : this.images.solo});"
+        class=${(0, b.$)({"game-mode-tile": !0, "game-mode-tile--active": this.active && this.active.key === l.key})}
+        style="background-image: url(${null !== (E = this.images[l.key]) && void 0 !== E ? E : this.images.solo});"
       >
         <a
           class="game-mode-tile__link"
           data-test-id="game-mode-tile-link"
           href="javascript:void(0)"
-          @click=${() => this.onClick(c)}
+          @click=${() => this.onClick(l)}
         >
           <gu-heading-text class="game-mode-tile__title" size="2x-small" fillColor="${n.colors.light[100]}">
-            ${c.name}
+            ${l.name}
           </gu-heading-text>
           <gu-paragraph-text class="game-mode-tile__description" kind="micro" fillColor="${n.colors.light[100]}">
-            ${c.description}
+            ${l.description}
           </gu-paragraph-text>
-          ${this.renderExtras(c)}
+          ${this.renderExtras(l)}
         </a>
       </li>
     `
             }
 
-            renderExtras(c) {
-                return c.ranked ? e.dy`
+            renderExtras(l) {
+                return l.ranked ? e.dy`
         <div class="game-mode-tile__extra">
           <gu-icon iconLigature="flux_symbol" fillColor="black"></gu-icon>
         </div>
@@ -7838,7 +7871,7 @@
             render() {
                 return e.dy`
       <ul class="game-modes">
-        ${this.gameModes.map(c => this.renderTile(c))}
+        ${this.gameModes.map(l => this.renderTile(l))}
       </ul>
     `
             }
@@ -7859,7 +7892,7 @@
 
             start() {
                 this.timer || (this.timer = setInterval(() => {
-                    const c = new Date, E = Math.floor((c.getTime() - this.started.getTime()) / 1e3),
+                    const l = new Date, E = Math.floor((l.getTime() - this.started.getTime()) / 1e3),
                         j = ("00" + Math.floor(E / 60)).substr(-2, 2), oe = ("00" + E % 60).substr(-2, 2);
                     this.time = `${j}:${oe}`, this.requestUpdate("time")
                 }, 1e3))
@@ -7874,7 +7907,7 @@
             }
         };
         (0, i.gn)([(0, p.C)({type: Date})], qt.prototype, "started", void 0), qt = (0, i.gn)([(0, m.M)("gu-queue-timer")], qt);
-        let Ht = class extends e.oi {
+        let Zt = class extends e.oi {
             constructor() {
                 super(...arguments), this.type = "queue"
             }
@@ -8009,7 +8042,7 @@
     `
             }
         };
-        Ht = (0, i.gn)([(0, m.M)("gu-game-queue-panel")], Ht);
+        Zt = (0, i.gn)([(0, m.M)("gu-game-queue-panel")], Zt);
         let ys = class extends e.oi {
             render() {
                 return e.dy`<slot></slot>`
@@ -8090,13 +8123,13 @@
     }
   }
 `;
-        var $t = o(4390), lo = o(97223);
+        var Tt = o(4390), lo = o(97223);
         const Ls = "TOGGLE_NAV", Us = "CLOSE_NAV", Rs = "TOGGLE_SUB_MENU", Bs = "UPDATE_CURRENT_ROUTE",
-            Gs = "CLOSE_ALL_SUB_MENUS", Fs = "TOGGLE_USER_MENU", Zs = "CLOSE_USER_MENU", xs = () => ({type: Us}),
-            Ns = G => ({type: Bs, payload: G}),
+            Gs = "CLOSE_ALL_SUB_MENUS", Fs = "TOGGLE_USER_MENU", Ns = "CLOSE_USER_MENU", xs = () => ({type: Us}),
+            zs = G => ({type: Bs, payload: G}),
             go = {currentRoute: "", navMenuOpen: !1, navSubMenusOpen: {}, userMenuOpen: !1},
-            pt = (0, lo.MT)((G = go, {type: c, payload: E}) => {
-                switch (c) {
+            pt = (0, lo.MT)((G = go, {type: l, payload: E}) => {
+                switch (l) {
                     case Ls:
                         return Object.assign(Object.assign({}, G), {navMenuOpen: !G.navMenuOpen, userMenuOpen: !1});
                     case Us:
@@ -8109,7 +8142,7 @@
                         return Object.assign(Object.assign({}, G), {currentRoute: E});
                     case Fs:
                         return Object.assign(Object.assign({}, G), {userMenuOpen: !G.userMenuOpen, navMenuOpen: !1});
-                    case Zs:
+                    case Ns:
                         return Object.assign(Object.assign({}, G), {userMenuOpen: !1});
                     default:
                         return G
@@ -8120,12 +8153,12 @@
                 router: {type: Object},
                 ngZone: {type: Object}
             };
-        customElements.define("gu-header-bar", (0, Pe.x)({
-            renderer: function ({navigationItems: G, router: c, ngZone: E}) {
+        customElements.define("gu-header-bar", (0, Se.x)({
+            renderer: function Go({navigationItems: G, router: l, ngZone: E}) {
                 if (!G) return null;
-                const j = (0, l.v9)({store: pt, selector: Ot => Ot.navMenuOpen}),
-                    oe = (0, l.I0)(pt), [Me, Re] = (0, te.eJ)(!1), Je = () => {
-                        oe(xs()), (0, $t.pR)(c, E, G.home.path), this.dispatchEvent(new CustomEvent("onLogoClick"))
+                const j = (0, c.v9)({store: pt, selector: Ot => Ot.navMenuOpen}),
+                    oe = (0, c.I0)(pt), [Me, Re] = (0, te.eJ)(!1), Je = () => {
+                        oe(xs()), (0, Tt.pR)(l, E, G.home.path), this.dispatchEvent(new CustomEvent("onLogoClick"))
                     };
                 return (0, te.d4)(() => {
                     Re((() => {
@@ -8134,7 +8167,7 @@
                         e:for (const Lt of Object.keys(G)) {
                             const bt = G[Lt];
                             if (bt.children) {
-                                for (const Te of Object.keys(bt.children)) if (bt.children[Te].showNotificationBubble) {
+                                for (const $e of Object.keys(bt.children)) if (bt.children[$e].showNotificationBubble) {
                                     Ot = !0;
                                     break e
                                 }
@@ -8179,7 +8212,7 @@
       </gu-heading-text>
     </div>
 
-    <gu-menu .router=${c} .ngZone=${E} .navigationItems=${G}></gu-menu>
+    <gu-menu .router=${l} .ngZone=${E} .navigationItems=${G}></gu-menu>
 
     <div class="userArea">
       <slot name="userArea"></slot>
@@ -8419,40 +8452,40 @@
     }
   }
 `;
-        customElements.define("gu-menu", (0, Pe.x)({
-            renderer: function ({navigationItems: G, router: c, ngZone: E}) {
-                const j = (0, l.v9)({store: pt, selector: Te => Te.navMenuOpen}),
-                    oe = (0, l.v9)({store: pt, selector: Te => Te.currentRoute}),
-                    Me = (0, l.v9)({store: pt, selector: Te => Te.navSubMenusOpen}), Re = (0, l.I0)(pt);
+        customElements.define("gu-menu", (0, Se.x)({
+            renderer: function No({navigationItems: G, router: l, ngZone: E}) {
+                const j = (0, c.v9)({store: pt, selector: $e => $e.navMenuOpen}),
+                    oe = (0, c.v9)({store: pt, selector: $e => $e.currentRoute}),
+                    Me = (0, c.v9)({store: pt, selector: $e => $e.navSubMenusOpen}), Re = (0, c.I0)(pt);
                 (0, te.d4)(() => {
-                    Re(Ns(c.url));
-                    const Te = c.events.pipe((0, Ft.h)(De => De instanceof mo.m2)).subscribe(De => {
-                        Re(Ns(De.url))
+                    Re(zs(l.url));
+                    const $e = l.events.pipe((0, Ft.h)(De => De instanceof mo.m2)).subscribe(De => {
+                        Re(zs(De.url))
                     });
                     return () => {
-                        Te.unsubscribe()
+                        $e.unsubscribe()
                     }
                 }, []), (0, te.d4)(() => {
                     j ? this.classList.add("open") : this.classList.remove("open")
                 }, [j]);
-                const Je = Te => {
+                const Je = $e => {
                     this.dispatchEvent(new CustomEvent("onMenuDropDownOpen", {
-                        detail: {navItem: Te},
+                        detail: {navItem: $e},
                         bubbles: !0,
                         composed: !0
-                    })), Re((G => ({type: Rs, payload: G}))(Te.path))
-                }, Qt = Te => Te.children ? Je(Te) : (Te => {
-                    Te(), Re(xs())
-                })(Te.url ? () => {
-                    this.dispatchEvent((0, $t.Cs)(Te)), (0, $t.rb)(Te)
-                } : () => (0, $t.pR)(c, E, Te.path)), Ot = Te => {
+                    })), Re((G => ({type: Rs, payload: G}))($e.path))
+                }, Qt = $e => $e.children ? Je($e) : ($e => {
+                    $e(), Re(xs())
+                })($e.url ? () => {
+                    this.dispatchEvent((0, Tt.Cs)($e)), (0, Tt.rb)($e)
+                } : () => (0, Tt.pR)(l, E, $e.path)), Ot = $e => {
                     let De = !1;
-                    const {children: Ut} = Te;
-                    return ("/" === oe && "home" === Te.shortName || -1 !== oe.indexOf(Te.path) && "home" !== Te.shortName || !!Ut && (0, $t.M0)(Ut, oe)) && (De = !0), De
-                }, Lt = Te => !!Me[Te.path];
+                    const {children: Ut} = $e;
+                    return ("/" === oe && "home" === $e.shortName || -1 !== oe.indexOf($e.path) && "home" !== $e.shortName || !!Ut && (0, Tt.M0)(Ut, oe)) && (De = !0), De
+                }, Lt = $e => !!Me[$e.path];
                 return e.dy`
-    ${Object.keys(G).map(Te => {
-                    const De = G[Te], Ut = !De.children && !!De.url;
+    ${Object.keys(G).map($e => {
+                    const De = G[$e], Ut = !De.children && !!De.url;
                     return e.dy`
         <div
           class=${(0, b.$)({
@@ -8492,14 +8525,14 @@
                   iconLigature="caret_down"
                 ></gu-icon>
                 <gu-sub-menu
-                  .router=${c}
+                  .router=${l}
                   .ngZone=${E}
                   .subMenuItems=${De.children}
                   .topLevelPath=${De.path}
                 ></gu-sub-menu>
               ` : null}
-          ${De.showNotificationBubble || (Te => !!Te.children && Object.keys(Te.children).reduce((De, Ut) => {
-                        const Ue = Te.children[Ut];
+          ${De.showNotificationBubble || ($e => !!$e.children && Object.keys($e.children).reduce((De, Ut) => {
+                        const Ue = $e.children[Ut];
                         return !(!Ue || !Ue.showNotificationBubble) || De
                     }, !1))(De) ? e.dy` <gu-notification-bubble></gu-notification-bubble> ` : null}
         </div>
@@ -8512,7 +8545,7 @@
                 styles: Fo
             }
         }));
-        const Ss = e.iv`
+        const Ps = e.iv`
   ${(0, t.asCssProp)((0, t.setBoxSizing)())}
 
   :host {
@@ -8536,7 +8569,7 @@
 
   .subMenu__item {
     padding-bottom: ${(0, t.asCssProp)((0, r.gridUnits)(5))};
-    color: ${(0, t.asCssProp)(n.colors.light[100])};
+    color: var(--gu-blue);
     line-height: 1;
     position: relative;
     white-space: normal;
@@ -8610,7 +8643,7 @@
     }
 
     .subMenu__item:hover {
-      background: ${(0, t.asCssProp)(n.colors.gunmetal[700])};
+      color: var(--gu-blue-hover);
     }
 
     .subMenu__item--selected:hover {
@@ -8635,11 +8668,13 @@
     }
   }
 `;
-        customElements.define("gu-sub-menu", (0, Pe.x)({
-            renderer: function ({topLevelPath: G, subMenuItems: c, router: E, ngZone: j}) {
-                const oe = (0, l.v9)({store: pt, selector: Ue => Ue.navSubMenusOpen}),
-                    Me = (0, l.v9)({store: pt, selector: Ue => Ue.currentRoute}), Re = (0, l.I0)(pt), Je = Ue => {
-                        Ue.url ? (this.dispatchEvent((0, $t.Cs)(Ue)), (0, $t.rb)(Ue)) : (Re(xs()), (0, $t.pR)(E, j, Ue.path))
+        customElements.define("gu-sub-menu", (0, Se.x)({
+            renderer: function zo({topLevelPath: G, subMenuItems: l, router: E, ngZone: j}) {
+                const oe = (0, c.v9)({store: pt, selector: Ue => Ue.navSubMenusOpen}),
+                    Me = (0, c.v9)({store: pt, selector: Ue => Ue.currentRoute}), Re = (0, c.I0)(pt), Je = Ue => {
+                        Ue.url ? (this.dispatchEvent((0, Tt.Cs)(Ue)), (0, Tt.rb)(Ue)) : function st() {
+                            Re(xs()), (0, Tt.pR)(E, j, Ue.path)
+                        }()
                     }, Qt = Ue => Me.includes(Ue.path), Ot = ms()(() => {
                         this.style.setProperty("--maxHeight", `${bt.offsetHeight}px`)
                     }, 500), Lt = new s.do(Ue => {
@@ -8656,8 +8691,8 @@
                     document.addEventListener("click", Ut)
                 })) : (this.classList.remove("open"), De()), () => De()), [oe]), e.dy`
     <ul class="subMenu">
-      ${Object.keys(c).map(Ue => {
-                    const st = c[Ue], Yo = {subMenu__item: !0, "subMenu__item--selected": Qt(st)};
+      ${Object.keys(l).map(Ue => {
+                    const st = l[Ue], Yo = {subMenu__item: !0, "subMenu__item--selected": Qt(st)};
                     return e.dy`
           <li
             class=${(0, b.$)(Yo)}
@@ -8697,7 +8732,7 @@
                     router: {type: Object},
                     ngZone: {type: Object},
                     topLevelPath: {type: String}
-                }, styles: Ss
+                }, styles: Ps
             }
         }));
         const vo = e.iv`
@@ -8876,19 +8911,19 @@
     }
   }
 `;
-        customElements.define("gu-header-user-area", (0, Pe.x)({
-            renderer: function ({
-                                    menuItems: G,
-                                    router: c,
-                                    ngZone: E,
-                                    userProperties: j,
-                                    downloadLauncherUrl: oe,
-                                    userStarsTotal: Me,
-                                    userFluxTotal: Re
-                                }) {
+        customElements.define("gu-header-user-area", (0, Se.x)({
+            renderer: function bo({
+                                      menuItems: G,
+                                      router: l,
+                                      ngZone: E,
+                                      userProperties: j,
+                                      downloadLauncherUrl: oe,
+                                      userStarsTotal: Me,
+                                      userFluxTotal: Re
+                                  }) {
                 if (!G) return null;
-                const Je = (0, l.v9)({store: pt, selector: De => De.userMenuOpen}),
-                    Pt = (0, l.I0)(pt), [Qt, Ot] = (0, te.eJ)(!1), Te = () => {
+                const Je = (0, c.v9)({store: pt, selector: De => De.userMenuOpen}),
+                    St = (0, c.I0)(pt), [Qt, Ot] = (0, te.eJ)(!1), $e = () => {
                         this.dispatchEvent(new CustomEvent("onUserDetailsClick"))
                     };
                 return e.dy`
@@ -8900,9 +8935,9 @@
               .userProperties=${j}
               .userStarsTotal=${Me}
               .userFluxTotal=${Re}
-              @click=${Te}
+              @click=${$e}
             ></gu-user-details>
-            <div class="userDetailsArea__imgContainer" @click=${() => Pt({type: Fs})}>
+            <div class="userDetailsArea__imgContainer" @click=${() => St({type: Fs})}>
               ${Qt ? e.dy`<gu-notification-bubble highPriority="true"></gu-notification-bubble>` : null}
               <img class="userDetailsArea__imgContainer__img" src=${j.image_url} alt="user avatar image" />
               <i class="userDetailsArea__imgContainer__bannerSide userDetailsArea__imgContainer__bannerSide--left"></i>
@@ -8919,10 +8954,10 @@
             .userProperties=${j}
             .userStarsTotal=${Me}
             .userFluxTotal=${Re}
-            .router=${c}
+            .router=${l}
             .ngZone=${E}
             .menuItems=${G}
-            @onUserDetailsClick=${Te}
+            @onUserDetailsClick=${$e}
           ></gu-user-menu>
         ` : e.dy`
           <div class="signedOutArea">
@@ -9035,20 +9070,20 @@
   }
 `, Co = new CustomEvent("onLogout", {bubbles: !0, composed: !0}),
             yo = new CustomEvent("onConnectWallet", {bubbles: !0, composed: !0});
-        customElements.define("gu-user-menu", (0, Pe.x)({
-            renderer: function ({
-                                    userProperties: G,
-                                    router: c,
-                                    ngZone: E,
-                                    menuItems: j,
-                                    userStarsTotal: oe,
-                                    userFluxTotal: Me
-                                }) {
-                const Re = (0, l.v9)({store: pt, selector: Ue => Ue.userMenuOpen}), Je = (0, l.I0)(pt),
-                    Pt = () => this.dispatchEvent(yo), Qt = () => this.dispatchEvent(Co), Lt = () => {
+        customElements.define("gu-user-menu", (0, Se.x)({
+            renderer: function xo({
+                                      userProperties: G,
+                                      router: l,
+                                      ngZone: E,
+                                      menuItems: j,
+                                      userStarsTotal: oe,
+                                      userFluxTotal: Me
+                                  }) {
+                const Re = (0, c.v9)({store: pt, selector: Ue => Ue.userMenuOpen}), Je = (0, c.I0)(pt),
+                    St = () => this.dispatchEvent(yo), Qt = () => this.dispatchEvent(Co), Lt = () => {
                         document.removeEventListener("click", bt)
                     }, bt = Ue => {
-                        Je({type: Zs})
+                        Je({type: Ns})
                     };
                 return (0, te.d4)(() => (Re ? (this.classList.add("open"), setTimeout(() => {
                     document.addEventListener("click", bt)
@@ -9066,7 +9101,7 @@
                     const st = j[Ue];
                     return st.visible ? e.dy`
             <div class="menuItem" @click=${() => (Ue => {
-                        "Log Out" === Ue.shortName ? Qt() : "Connect Wallet" === Ue.shortName ? Pt() : Ue.url ? (0, $t.rb)(Ue) : Ue.path && (0, $t.pR)(c, E, Ue.path)
+                        "Log Out" === Ue.shortName ? Qt() : "Connect Wallet" === Ue.shortName ? St() : Ue.url ? (0, Tt.rb)(Ue) : Ue.path && (0, Tt.pR)(l, E, Ue.path)
                     })(st)}>
               <gu-simple-text class="menuItem__shortName" kind="small"> ${st.shortName} </gu-simple-text>
 
@@ -9080,7 +9115,7 @@
                             kind="tag"
                             class="menuItem__subMenu__item"
                             @click=${_n => ((Ue, st) => {
-                            Ue.stopPropagation(), st.url ? (0, $t.rb)(st) : st.path && (0, $t.pR)(c, E, st.path)
+                            Ue.stopPropagation(), st.url ? (0, Tt.rb)(st) : st.path && (0, Tt.pR)(l, E, st.path)
                         })(_n, Ko)}
                             fillColor=${n.colors.gunmetal[100]}
                           >
@@ -9106,7 +9141,7 @@
                 }, styles: Ye
             }
         }));
-        const Hs = e.iv`
+        const Zs = e.iv`
   :host {
     display: flex;
   }
@@ -9238,19 +9273,19 @@
   :host(.verticalLayout) .row__userName {
     margin-top: ${(0, t.asCssProp)((0, r.gridUnits)(.5))};
   }
-`, Po = {
+`, So = {
             userProperties: {type: Object},
             userStarsTotal: {type: String},
             userFluxTotal: {type: String},
             verticalLayout: {type: Boolean}
         };
-        customElements.define("gu-user-details", (0, Pe.x)({
-            renderer: function ({
-                                    userProperties: G,
-                                    userStarsTotal: c = "0",
-                                    userFluxTotal: E = "0",
-                                    verticalLayout: j
-                                }) {
+        customElements.define("gu-user-details", (0, Se.x)({
+            renderer: function Po({
+                                      userProperties: G,
+                                      userStarsTotal: l = "0",
+                                      userFluxTotal: E = "0",
+                                      verticalLayout: j
+                                  }) {
                 return (0, te.d4)(() => {
                     j ? this.classList.add("verticalLayout") : this.classList.remove("verticalLayout")
                 }, [j]), e.dy`
@@ -9267,12 +9302,12 @@
         class="side__part side__part--stars"
       >
         <gu-icon iconLigature="collectable_stars" class="side__part__icon"></gu-icon>
-        ${c || "0"} STARS
+        ${l || "0"} STARS
       </gu-simple-text>
       <div class="side__hoverGradient"></div>
     </div>
   `
-            }, props: {properties: Po, styles: Hs}
+            }, props: {properties: So, styles: Zs}
         }));
         const ps = [824, 825, 826, 827, 828, 829];
         let ns = class extends e.oi {
@@ -9402,7 +9437,7 @@
             Qs = {"xx-small": "18px", "x-small": "20px", small: "22px", medium: "24px", large: "28px"},
             wo = {light: 100, regular: 300, "semi-bold": 500, bold: 700, "extra-bold": 900};
         var Ys;
-        let Zt = Ys = class extends e.oi {
+        let Nt = Ys = class extends e.oi {
             constructor() {
                 super(...arguments), this.fontWeight = "regular", this.fontStyle = "regular", this.align = "center", this.plain = !1, this.responsiveSizes = []
             }
@@ -9451,12 +9486,12 @@
 `
             }
 
-            static hasColoringPropertyChanged(c) {
-                return c.has("fillColor") || c.has("fillGradient") || c.has("fillGradientTarget")
+            static hasColoringPropertyChanged(l) {
+                return l.has("fillColor") || l.has("fillGradient") || l.has("fillGradientTarget")
             }
 
-            updated(c) {
-                if (Ys.hasColoringPropertyChanged(c)) {
+            updated(l) {
+                if (Ys.hasColoringPropertyChanged(l)) {
                     const {fillColor: E, fillGradient: j, fillGradientTarget: oe} = this;
                     (0, g.updateColoringVariables)({
                         component: this,
@@ -9468,12 +9503,12 @@
             }
 
             generateMediaQueries() {
-                const {breakpointSizeMapping: c} = n.breakpoints, {asCssProp: E} = ke.ZB;
+                const {breakpointSizeMapping: l} = n.breakpoints, {asCssProp: E} = ke.ZB;
                 return this.responsiveSizes.length ? e.dy`
           <style>
             /* DEFINE RESPONSIVE SIZING */
             ${this.responsiveSizes.map(({breakpoint: j, size: oe = "small"}) => e.iv`
-                @media screen and (min-width: ${E(c[j])}) {
+                @media screen and (min-width: ${E(l[j])}) {
                   :host(.overWrite[size='${E(this.size)}']),
                   :host(.overWrite[size='${E(this.size)}']) ::slotted(*) {
                     font-size: ${E(Ks[oe])} !important;
@@ -9499,16 +9534,16 @@
         (0, i.gn)([(0, p.C)({
             type: String,
             reflect: !0
-        })], Zt.prototype, "size", void 0), (0, i.gn)([(0, p.C)({
+        })], Nt.prototype, "size", void 0), (0, i.gn)([(0, p.C)({
             type: String,
             reflect: !0
-        })], Zt.prototype, "fontWeight", void 0), (0, i.gn)([(0, p.C)({
+        })], Nt.prototype, "fontWeight", void 0), (0, i.gn)([(0, p.C)({
             type: String,
             reflect: !0
-        })], Zt.prototype, "fontStyle", void 0), (0, i.gn)([(0, p.C)({type: String})], Zt.prototype, "align", void 0), (0, i.gn)([(0, p.C)({type: String})], Zt.prototype, "fillColor", void 0), (0, i.gn)([(0, p.C)({type: String})], Zt.prototype, "fillGradient", void 0), (0, i.gn)([(0, p.C)({type: String})], Zt.prototype, "fillGradientTarget", void 0), (0, i.gn)([(0, p.C)({
+        })], Nt.prototype, "fontStyle", void 0), (0, i.gn)([(0, p.C)({type: String})], Nt.prototype, "align", void 0), (0, i.gn)([(0, p.C)({type: String})], Nt.prototype, "fillColor", void 0), (0, i.gn)([(0, p.C)({type: String})], Nt.prototype, "fillGradient", void 0), (0, i.gn)([(0, p.C)({type: String})], Nt.prototype, "fillGradientTarget", void 0), (0, i.gn)([(0, p.C)({
             type: Boolean,
             reflect: !0
-        })], Zt.prototype, "plain", void 0), (0, i.gn)([(0, p.C)({type: Array})], Zt.prototype, "responsiveSizes", void 0), Zt = Ys = (0, i.gn)([(0, m.M)("gu-body-text")], Zt);
+        })], Nt.prototype, "plain", void 0), (0, i.gn)([(0, p.C)({type: Array})], Nt.prototype, "responsiveSizes", void 0), Nt = Ys = (0, i.gn)([(0, m.M)("gu-body-text")], Nt);
 
         class Mt extends e.oi {
             constructor() {
@@ -9523,12 +9558,12 @@
     `
             }
 
-            firstUpdated(c) {
+            firstUpdated(l) {
                 this.initialValue = this.value, this.dispatchEvent(new CustomEvent("registerFormControl", {
                     detail: {control: this},
                     bubbles: !0,
                     composed: !0
-                })), super.firstUpdated(c)
+                })), super.firstUpdated(l)
             }
 
             connectedCallback() {
@@ -9543,14 +9578,14 @@
                 this.dirty = !0
             }
 
-            update(c) {
-                this.status = this.disabled ? "disabled" : this.dirty ? this.valid ? "valid" : "invalid" : "initial", super.update(c)
+            update(l) {
+                this.status = this.disabled ? "disabled" : this.dirty ? this.valid ? "valid" : "invalid" : "initial", super.update(l)
             }
 
-            handleKey(c) {
+            handleKey(l) {
                 if (this.disabled) return;
-                const E = this.keyHandlers[c.code];
-                E && E(c)
+                const E = this.keyHandlers[l.code];
+                E && E(l)
             }
 
             reset() {
@@ -9636,27 +9671,27 @@
     `
             }
 
-            getInputHandler(c) {
+            getInputHandler(l) {
                 return E => {
-                    E.stopPropagation(), this.updateValue(c, E.target.checked), this.dispatchEvent(new CustomEvent("input", {detail: {value: this.value}}))
+                    E.stopPropagation(), this.updateValue(l, E.target.checked), this.dispatchEvent(new CustomEvent("input", {detail: {value: this.value}}))
                 }
             }
 
-            onChange(c) {
-                c.stopPropagation(), this.dispatchEvent(new CustomEvent("change", {detail: {value: this.value}}))
+            onChange(l) {
+                l.stopPropagation(), this.dispatchEvent(new CustomEvent("change", {detail: {value: this.value}}))
             }
 
-            updateValue(c, E) {
+            updateValue(l, E) {
                 this.value = E
             }
 
             activate() {
-                const c = this.renderRoot.querySelector("input");
-                c && c.click()
+                const l = this.renderRoot.querySelector("input");
+                l && l.click()
             }
 
-            unfocus(c) {
-                c.x > 0 && c.y > 0 && c.target.blur()
+            unfocus(l) {
+                l.x > 0 && l.y > 0 && l.target.blur()
             }
 
             render() {
@@ -9676,7 +9711,7 @@
             }
         };
         (0, i.gn)([(0, p.C)()], gs.prototype, "size", void 0), gs = (0, i.gn)([(0, m.M)("gu-checkbox")], gs);
-        let Ps = class extends gs {
+        let Ss = class extends gs {
             constructor() {
                 super(...arguments), this.options = [], this.value = []
             }
@@ -9698,36 +9733,36 @@
     `
             }
 
-            updateValue(c, E) {
-                E ? this.value.splice(this.value.push(c)) : this.value.splice(this.value.indexOf(c), 1)
+            updateValue(l, E) {
+                E ? this.value.splice(this.value.push(l)) : this.value.splice(this.value.indexOf(l), 1)
             }
 
             activate() {
-                const c = this.renderRoot.querySelector("input");
-                c && c.focus()
+                const l = this.renderRoot.querySelector("input");
+                l && l.focus()
             }
 
             render() {
                 return e.dy`
-      ${this.options.map(c => e.dy`
+      ${this.options.map(l => e.dy`
           <label class="checkbox__label">
             <input
               type="checkbox"
               class="checkbox__input"
-              @input=${this.getInputHandler(c.value)}
+              @input=${this.getInputHandler(l.value)}
               @change=${this.onChange}
               @click=${this.unfocus}
-              .checked=${!!this.value.find(E => E == c.value)}
+              .checked=${!!this.value.find(E => E == l.value)}
               .disabled=${this.disabled}
               data-test-id="checkbox-native-element"
             />
-            <gu-body-text size="medium" plain="true">${c.label}</gu-body-text>
+            <gu-body-text size="medium" plain="true">${l.label}</gu-body-text>
           </label>
         `)}
     `
             }
         };
-        (0, i.gn)([(0, p.C)()], Ps.prototype, "options", void 0), Ps = (0, i.gn)([(0, m.M)("gu-checkbox-group")], Ps);
+        (0, i.gn)([(0, p.C)()], Ss.prototype, "options", void 0), Ss = (0, i.gn)([(0, m.M)("gu-checkbox-group")], Ss);
         var ks = o(30252);
         let Js = class extends e.oi {
             constructor() {
@@ -9750,22 +9785,22 @@
                 super.disconnectedCallback(), this.removeEventListener("registerFormControl", this.registerControl), this.removeEventListener("implicitSubmit", this.handleSubmissionRequest)
             }
 
-            registerControl(c) {
-                c.stopPropagation(), this.controls.push(c.detail.control)
+            registerControl(l) {
+                l.stopPropagation(), this.controls.push(l.detail.control)
             }
 
-            handleSubmissionRequest(c) {
-                c.stopPropagation();
+            handleSubmissionRequest(l) {
+                l.stopPropagation();
                 const E = this.findInvalidControl();
                 E ? E.activate() : this.submit()
             }
 
             findInvalidControl() {
-                return this.controls.find(c => !c.valid)
+                return this.controls.find(l => !l.valid)
             }
 
             submit() {
-                this.dispatchEvent(new CustomEvent("submit", {detail: {values: this.controls.reduce((c, E) => (c[E.name] = E.value, c), {})}}))
+                this.dispatchEvent(new CustomEvent("submit", {detail: {values: this.controls.reduce((l, E) => (l[E.name] = E.value, l), {})}}))
             }
 
             render() {
@@ -9797,7 +9832,7 @@
                 super.disconnectedCallback(), this.removeEventListener("click", this.onClick)
             }
 
-            associate(c) {
+            associate(l) {
                 Promise.resolve().then(() => {
                     const E = this.findTarget();
                     !E || E === this.target || (this.target && this.target.removeAttribute("aria-labelledby"), E.setAttribute("aria-labelledby", this.id), this.target = E)
@@ -9805,12 +9840,12 @@
             }
 
             findTarget() {
-                return this.for ? this.getRootNode().getElementById(this.for) : this.slotted ? this.slotted.find(c => c instanceof Mt) : void 0
+                return this.for ? this.getRootNode().getElementById(this.for) : this.slotted ? this.slotted.find(l => l instanceof Mt) : void 0
             }
 
-            onClick(c) {
+            onClick(l) {
                 const E = this.target;
-                E && c.target !== E && E.activate()
+                E && l.target !== E && E.activate()
             }
 
             render() {
@@ -9818,7 +9853,7 @@
             }
         };
         (0, i.gn)([(0, p.C)()], rs.prototype, "for", void 0), (0, i.gn)([(0, p.C)({reflect: !0})], rs.prototype, "id", void 0), (0, i.gn)([(0, ks.v)("", !0)], rs.prototype, "slotted", void 0), rs = (0, i.gn)([(0, m.M)("gu-label")], rs);
-        const zo = {
+        const Wo = {
             email: "email",
             phone: "tel",
             name: "text",
@@ -9826,8 +9861,8 @@
             text: "text",
             url: "url",
             number: "number"
-        }, S = {invalid: "alert_triangle", valid: "checkbox_tick", initial: ""};
-        let H = class extends Mt {
+        }, x = {invalid: "alert_triangle", valid: "checkbox_tick", initial: ""};
+        let Z = class extends Mt {
             constructor() {
                 super(...arguments), this.size = "normal", this.type = "text", this.placeholder = "", this.keyHandlers = {
                     Escape: () => this.reset(),
@@ -9933,8 +9968,8 @@
                 this.dispatchEvent(new CustomEvent("change", {detail: {value: this.value}}))
             }
 
-            onInput(c) {
-                this.value = c.target.value, c.stopPropagation(), this.dispatchEvent(new CustomEvent("input", {detail: {value: this.value}}))
+            onInput(l) {
+                this.value = l.target.value, l.stopPropagation(), this.dispatchEvent(new CustomEvent("input", {detail: {value: this.value}}))
             }
 
             activate() {
@@ -9942,21 +9977,21 @@
             }
 
             getInputType() {
-                return zo[this.type]
+                return Wo[this.type]
             }
 
             renderIcon() {
                 return e.dy`
-      <gu-icon class="input__icon input__icon--status-${this.status}" iconLigature=${S[this.status]}></gu-icon>
+      <gu-icon class="input__icon input__icon--status-${this.status}" iconLigature=${x[this.status]}></gu-icon>
     `
             }
 
             render() {
-                var c;
+                var l;
                 return e.dy`
       <input
         type=${this.getInputType()}
-        .value=${null !== (c = this.value) && void 0 !== c ? c : ""}
+        .value=${null !== (l = this.value) && void 0 !== l ? l : ""}
         class="input__input input__input--status-${this.status}"
         @input="${this.onInput}"
         @change=${this.onChange}
@@ -9968,11 +10003,11 @@
     `
             }
         };
-        (0, i.gn)([(0, p.C)()], H.prototype, "size", void 0), (0, i.gn)([(0, p.C)()], H.prototype, "type", void 0), (0, i.gn)([(0, p.C)()], H.prototype, "placeholder", void 0), (0, i.gn)([(0, P.I)(".input__input")], H.prototype, "input", void 0), H = (0, i.gn)([(0, m.M)("gu-input")], H);
+        (0, i.gn)([(0, p.C)()], Z.prototype, "size", void 0), (0, i.gn)([(0, p.C)()], Z.prototype, "type", void 0), (0, i.gn)([(0, p.C)()], Z.prototype, "placeholder", void 0), (0, i.gn)([(0, S.I)(".input__input")], Z.prototype, "input", void 0), Z = (0, i.gn)([(0, m.M)("gu-input")], Z);
         var u = o(61462);
         const D = {hidden: "password", visible: "text"},
             K = {visible: "action_showPassword", hidden: "action_hidePassword"};
-        let _e = class extends H {
+        let _e = class extends Z {
             constructor() {
                 super(...arguments), this.mode = "hidden"
             }
@@ -10006,8 +10041,8 @@
     `
             }
 
-            toggleMode(c) {
-                c.stopPropagation(), c.preventDefault(), !this.disabled && (this.mode = "hidden" === this.mode ? "visible" : "hidden", c.detail > 0 && this.input.focus())
+            toggleMode(l) {
+                l.stopPropagation(), l.preventDefault(), !this.disabled && (this.mode = "hidden" === this.mode ? "visible" : "hidden", l.detail > 0 && this.input.focus())
             }
 
             getInputType() {
@@ -10020,7 +10055,7 @@
         class="input__toggle"
         href="javascript:void(0)"
         @click=${this.toggleMode}
-        @keyup=${c => c.stopPropagation()}
+        @keyup=${l => l.stopPropagation()}
         data-test-id="password-input-visibility-toggle"
       >
         <gu-icon
@@ -10103,40 +10138,40 @@
     `
             }
 
-            getInputHandler(c) {
+            getInputHandler(l) {
                 return E => {
-                    E.stopPropagation(), this.value = c, this.dispatchEvent(new CustomEvent("input", {detail: {value: this.value}}))
+                    E.stopPropagation(), this.value = l, this.dispatchEvent(new CustomEvent("input", {detail: {value: this.value}}))
                 }
             }
 
-            onChange(c) {
-                c.stopPropagation(), this.dispatchEvent(new CustomEvent("change", {detail: {value: this.value}}))
+            onChange(l) {
+                l.stopPropagation(), this.dispatchEvent(new CustomEvent("change", {detail: {value: this.value}}))
             }
 
             activate() {
-                let c = this.renderRoot.querySelector("input:checked");
-                c || (c = this.renderRoot.querySelector("input")), c.focus()
+                let l = this.renderRoot.querySelector("input:checked");
+                l || (l = this.renderRoot.querySelector("input")), l.focus()
             }
 
-            unfocus(c) {
-                c.x > 0 && c.y > 0 && c.target.blur()
+            unfocus(l) {
+                l.x > 0 && l.y > 0 && l.target.blur()
             }
 
             render() {
                 return e.dy`
-      ${this.options.map(c => e.dy`
+      ${this.options.map(l => e.dy`
           <label class="radio-button__label">
             <input
               type="radio"
               class="radio-button__input"
-              @input=${this.getInputHandler(c.value)}
+              @input=${this.getInputHandler(l.value)}
               @change=${this.onChange}
               @click=${this.unfocus}
-              .checked=${this.value == c.value}
+              .checked=${this.value == l.value}
               .disabled=${this.disabled}
               data-test-id="radio-button-native-element"
             />
-            <gu-body-text size="medium" plain="true">${c.label}</gu-body-text>
+            <gu-body-text size="medium" plain="true">${l.label}</gu-body-text>
           </label>
         `)}
     `
@@ -10145,13 +10180,13 @@
         (0, i.gn)([(0, p.C)()], tt.prototype, "options", void 0), (0, i.gn)([(0, p.C)()], tt.prototype, "size", void 0), tt = (0, i.gn)([(0, m.M)("gu-radio-button-group")], tt);
         let at = class extends Mt {
             constructor() {
-                super(...arguments), this.value = 50, this.min = 0, this.max = 100, this.updateHelper = c => {
-                    requestAnimationFrame(() => requestAnimationFrame(c))
+                super(...arguments), this.value = 50, this.min = 0, this.max = 100, this.updateHelper = l => {
+                    requestAnimationFrame(() => requestAnimationFrame(l))
                 }
             }
 
             static get styles() {
-                const c = e.iv`linear-gradient(90deg, #AFFAED 0%, #8BE1E0 50.34%, #54BBCD 100%)`, E = e.iv`
+                const l = e.iv`linear-gradient(90deg, #AFFAED 0%, #8BE1E0 50.34%, #54BBCD 100%)`, E = e.iv`
       border: 1px solid ${(0, t.asCssProp)(n.colors.gunmetal[900])};
       height: 26px;
       width: 8px;
@@ -10166,7 +10201,7 @@
       box-shadow: 0 0 6px rgba(0, 0, 0, 0.35);
       border-radius: 4px;
     `, oe = e.iv`
-      background: ${c}, ${(0, t.asCssProp)(n.colors.gunmetal[700])};
+      background: ${l}, ${(0, t.asCssProp)(n.colors.gunmetal[700])};
       background-size: var(--value, 0) 100%;
       background-repeat: no-repeat;
       transition: var(--transition, 'background-size') 0.5s ease;
@@ -10221,7 +10256,7 @@
       }
 
       .range__input::-ms-fill-lower {
-        background: ${c};
+        background: ${l};
         border: 2px solid ${(0, t.asCssProp)(n.colors.gunmetal[700])};
       }
 
@@ -10243,22 +10278,22 @@
                 this.style.setProperty("--value", Math.min(100, Math.max(0, (this.value - this.min) / (this.max - this.min) * 100)) + "%")
             }
 
-            onInput(c) {
-                c.stopPropagation();
-                const E = c.target;
+            onInput(l) {
+                l.stopPropagation();
+                const E = l.target;
                 void 0 !== E.value && (this.value = parseFloat(E.value), this.updateSelectedRangeHighlight(), this.dispatchEvent(new CustomEvent("input", {detail: {value: this.value}})))
             }
 
-            onChange(c) {
-                c.stopPropagation(), this.dispatchEvent(new CustomEvent("change", {detail: {value: this.value}}))
+            onChange(l) {
+                l.stopPropagation(), this.dispatchEvent(new CustomEvent("change", {detail: {value: this.value}}))
             }
 
-            update(c) {
-                super.update(c), c.has("value") && this.updateHelper(this.updateSelectedRangeHighlight.bind(this))
+            update(l) {
+                super.update(l), l.has("value") && this.updateHelper(this.updateSelectedRangeHighlight.bind(this))
             }
 
-            firstUpdated(c) {
-                super.firstUpdated(c), this.style.setProperty("--value", "0%"), this.updateHelper = E => E(), this.style.setProperty("--transition", "background-size"), setTimeout(() => {
+            firstUpdated(l) {
+                super.firstUpdated(l), this.style.setProperty("--value", "0%"), this.updateHelper = E => E(), this.style.setProperty("--transition", "background-size"), setTimeout(() => {
                     this.style.setProperty("--transition", "none")
                 }, 500)
             }
@@ -10283,7 +10318,7 @@
     `
             }
         };
-        (0, i.gn)([(0, p.C)()], at.prototype, "value", void 0), (0, i.gn)([(0, p.C)()], at.prototype, "min", void 0), (0, i.gn)([(0, p.C)()], at.prototype, "max", void 0), (0, i.gn)([(0, P.I)(".range__input")], at.prototype, "input", void 0), at = (0, i.gn)([(0, m.M)("gu-range-input")], at);
+        (0, i.gn)([(0, p.C)()], at.prototype, "value", void 0), (0, i.gn)([(0, p.C)()], at.prototype, "min", void 0), (0, i.gn)([(0, p.C)()], at.prototype, "max", void 0), (0, i.gn)([(0, S.I)(".range__input")], at.prototype, "input", void 0), at = (0, i.gn)([(0, m.M)("gu-range-input")], at);
         const vt = e.iv`
   :host {
     display: flex;
@@ -10403,24 +10438,24 @@
                 return vt
             }
 
-            update(c) {
+            update(l) {
                 var E;
-                if (c.has("disabled") && this.disabled && (this.open = !1), c.has("options")) {
+                if (l.has("disabled") && this.disabled && (this.open = !1), l.has("options")) {
                     const j = this.findSelectedOption();
                     this.value = null !== (E = null == j ? void 0 : j.value) && void 0 !== E ? E : void 0
                 }
-                (c.has("value") || c.has("options")) && this.notify(), super.update(c)
+                (l.has("value") || l.has("options")) && this.notify(), super.update(l)
             }
 
-            toggleOpen(c) {
-                this.open = !this.disabled && (void 0 !== c ? c : !this.open)
+            toggleOpen(l) {
+                this.open = !this.disabled && (void 0 !== l ? l : !this.open)
             }
 
             getToggleIcon() {
                 return this.open ? "chevron_up" : "chevron_down"
             }
 
-            renderSelectOptions(c) {
+            renderSelectOptions(l) {
                 return e.dy`
       ${this.options.map(E => e.dy`<a
             href="javascript:void(0)"
@@ -10428,7 +10463,7 @@
             class=${(0, b.$)({select__option: !0, "select__option--selected": this.value === E.value})}
             ><gu-body-text
               size="medium"
-              fillColor=${c}
+              fillColor=${l}
               fontWeight=${this.value === E.value ? "bold" : "normal"}
               plain="true"
               >${E.label}</gu-body-text
@@ -10437,8 +10472,8 @@
     `
             }
 
-            selectOption(c) {
-                this.value = c ? c.value : void 0, this.open = !1
+            selectOption(l) {
+                this.value = l ? l.value : void 0, this.open = !1
             }
 
             notify() {
@@ -10457,8 +10492,8 @@
                 this.link.focus()
             }
 
-            handleKeyPress(c) {
-                if (!this.disabled) switch (c.code) {
+            handleKeyPress(l) {
+                if (!this.disabled) switch (l.code) {
                     case"Enter":
                     case"Space":
                         this.toggleOpen();
@@ -10469,27 +10504,27 @@
             }
 
             findSelectedOption() {
-                return this.options.find(c => c.value === this.value)
+                return this.options.find(l => l.value === this.value)
             }
 
             getTextColor() {
-                let c;
+                let l;
                 switch (this.theme) {
                     case"gunmetal":
                     default:
-                        c = "colors.light.300";
+                        l = "colors.light.300";
                         break;
                     case"white":
-                        c = "colors.dark.300";
+                        l = "colors.dark.300";
                         break;
                     case"black":
-                        c = "colors.light.500"
+                        l = "colors.light.500"
                 }
-                return c
+                return l
             }
 
             render() {
-                const c = this.findSelectedOption(), E = this.getTextColor();
+                const l = this.findSelectedOption(), E = this.getTextColor();
                 return e.dy`
       <div class="select__container">
         <a
@@ -10507,7 +10542,7 @@
             plain="true"
             fontWeight="bold"
           >
-            ${this.value && c ? c.label : this.placeholder}
+            ${this.value && l ? l.label : this.placeholder}
           </gu-body-text>
           <gu-icon class="select__icon" iconLigature="${this.getToggleIcon()}" fillColor="${E}"></gu-icon>
         </a>
@@ -10523,8 +10558,8 @@
         (0, i.gn)([(0, p.C)()], dt.prototype, "theme", void 0), (0, i.gn)([(0, p.C)()], dt.prototype, "placeholder", void 0), (0, i.gn)([(0, p.C)({type: Array})], dt.prototype, "options", void 0), (0, i.gn)([(0, p.C)({
             type: Boolean,
             reflect: !0
-        })], dt.prototype, "stretch", void 0), (0, i.gn)([(0, ft.S)()], dt.prototype, "open", void 0), (0, i.gn)([(0, P.I)(".select__heading")], dt.prototype, "link", void 0), dt = (0, i.gn)([(0, m.M)("gu-select")], dt);
-        let Se = class extends Mt {
+        })], dt.prototype, "stretch", void 0), (0, i.gn)([(0, ft.S)()], dt.prototype, "open", void 0), (0, i.gn)([(0, S.I)(".select__heading")], dt.prototype, "link", void 0), dt = (0, i.gn)([(0, m.M)("gu-select")], dt);
+        let Pe = class extends Mt {
             constructor() {
                 super(...arguments), this.size = "normal", this.placeholder = ""
             }
@@ -10590,8 +10625,8 @@
                 this.dispatchEvent(new CustomEvent("change", {detail: {value: this.value}}))
             }
 
-            onInput(c) {
-                this.value = c.target.value, c.stopPropagation(), this.dispatchEvent(new CustomEvent("input", {detail: {value: this.value}}))
+            onInput(l) {
+                this.value = l.target.value, l.stopPropagation(), this.dispatchEvent(new CustomEvent("input", {detail: {value: this.value}}))
             }
 
             activate() {
@@ -10599,7 +10634,7 @@
             }
 
             render() {
-                var c;
+                var l;
                 return e.dy`
       <textarea
         class="textarea__input textarea__input--status-${this.status}"
@@ -10608,13 +10643,13 @@
         placeholder=${this.placeholder}
         .disabled=${this.disabled}
         data-test-id="textarea-native-element"
-        .value=${null !== (c = this.value) && void 0 !== c ? c : ""}
+        .value=${null !== (l = this.value) && void 0 !== l ? l : ""}
       ></textarea>
     `
             }
         };
-        (0, i.gn)([(0, p.C)()], Se.prototype, "size", void 0), (0, i.gn)([(0, p.C)()], Se.prototype, "placeholder", void 0), (0, i.gn)([(0, P.I)(".textarea__input")], Se.prototype, "input", void 0), Se = (0, i.gn)([(0, m.M)("gu-textarea")], Se);
-        let Ze = class extends e.oi {
+        (0, i.gn)([(0, p.C)()], Pe.prototype, "size", void 0), (0, i.gn)([(0, p.C)()], Pe.prototype, "placeholder", void 0), (0, i.gn)([(0, S.I)(".textarea__input")], Pe.prototype, "input", void 0), Pe = (0, i.gn)([(0, m.M)("gu-textarea")], Pe);
+        let Ne = class extends e.oi {
             constructor() {
                 super(...arguments), this.errors = [], this.enabled = !1
             }
@@ -10645,13 +10680,13 @@
     `
             }
 
-            updated(c) {
-                super.updated(c), c.has("errors") && this.updateErrors()
+            updated(l) {
+                super.updated(l), l.has("errors") && this.updateErrors()
             }
 
             updateErrors() {
                 Promise.resolve().then(() => {
-                    !this.slotted || this.slotted.forEach(c => c.classList.toggle("validation-errors--active", !(!this.enabled || !this.errors.find(E => E === c.getAttribute("key")))))
+                    !this.slotted || this.slotted.forEach(l => l.classList.toggle("validation-errors--active", !(!this.enabled || !this.errors.find(E => E === l.getAttribute("key")))))
                 })
             }
 
@@ -10659,7 +10694,7 @@
                 return e.dy`<slot @slotchange=${this.updateErrors()}></slot>`
             }
         };
-        (0, i.gn)([(0, p.C)()], Ze.prototype, "errors", void 0), (0, i.gn)([(0, p.C)()], Ze.prototype, "enabled", void 0), (0, i.gn)([(0, ks.v)("", !0, "[key]")], Ze.prototype, "slotted", void 0), Ze = (0, i.gn)([(0, m.M)("gu-validation-errors")], Ze);
+        (0, i.gn)([(0, p.C)()], Ne.prototype, "errors", void 0), (0, i.gn)([(0, p.C)()], Ne.prototype, "enabled", void 0), (0, i.gn)([(0, ks.v)("", !0, "[key]")], Ne.prototype, "slotted", void 0), Ne = (0, i.gn)([(0, m.M)("gu-validation-errors")], Ne);
         const h = (0, r.gridUnits)(.5), L = e.iv`
   :host {
     width: 100%;
@@ -10756,14 +10791,14 @@
           data-test-id="loadout-display-board"
         ></gu-loadout-part>
         <div class="innerContainer__trinkets">
-          ${this.trinkets.map(c => e.dy`
+          ${this.trinkets.map(l => e.dy`
               <gu-loadout-part
                 class=${(0, b.$)({
                     innerContainer__trinkets__trinket: !0,
-                    "innerContainer__trinkets__trinket--left": 1 === c.slot,
-                    "innerContainer__trinkets__trinket--right": 2 === c.slot
+                    "innerContainer__trinkets__trinket--left": 1 === l.slot,
+                    "innerContainer__trinkets__trinket--right": 2 === l.slot
                 })}
-                .trinket=${c}
+                .trinket=${l}
                 ?hideText=${!0}
                 ?noAspectRatio=${!0}
                 ?hideCount=${!0}
@@ -10829,11 +10864,11 @@
                         bubbles: !0,
                         detail: {address: this.address}
                     }))
-                }).bind(this), this.onDropdownSelect = (c => {
-                    c.stopPropagation(), this.dispatchEvent(new CustomEvent("onDropdownSelect", {
+                }).bind(this), this.onDropdownSelect = (l => {
+                    l.stopPropagation(), this.dispatchEvent(new CustomEvent("onDropdownSelect", {
                         composed: !0,
                         bubbles: !0,
-                        detail: {address: this.address, menuItem: c.detail}
+                        detail: {address: this.address, menuItem: l.detail}
                     }))
                 }).bind(this)
             }
@@ -11008,7 +11043,7 @@
             }
         };
         (0, i.gn)([(0, p.C)({type: String})], Le.prototype, "address", void 0), (0, i.gn)([(0, p.C)({type: Boolean})], Le.prototype, "imxLinked", void 0), (0, i.gn)([(0, p.C)({type: Boolean})], Le.prototype, "defaultWalletEnabled", void 0), (0, i.gn)([(0, p.C)({type: Boolean})], Le.prototype, "defaultWallet", void 0), (0, i.gn)([(0, p.C)({type: Array})], Le.prototype, "walletDropdownMenuOptions", void 0), Le = (0, i.gn)([(0, m.M)("gu-wallet-display")], Le);
-        let Ne = class extends e.oi {
+        let ze = class extends e.oi {
             constructor() {
                 super(...arguments), this.userWallets = [], this.imxLinkLoading = !1, this.connectedWallet = "", this.connectedWalletGuLinked = !1, this.guLinkLoading = !1, this.walletActionLoading = "", this.defaultWalletEnabled = !1, this.walletDropdownMenuOptions = [], this.showEmptyState = !0, this.showImxLink = !1, this.allImxLinked = !1
             }
@@ -11115,8 +11150,8 @@
     `
             }
 
-            update(c) {
-                this.showEmptyState = !(this.userWallets && this.userWallets.length || this.connectedWallet && this.connectedWallet.length), this.showImxLink = this.userWallets && this.userWallets.length > 0, this.allImxLinked = this.userWallets && this.userWallets.every(E => E.imx_linked), super.update(c)
+            update(l) {
+                this.showEmptyState = !(this.userWallets && this.userWallets.length || this.connectedWallet && this.connectedWallet.length), this.showImxLink = this.userWallets && this.userWallets.length > 0, this.allImxLinked = this.userWallets && this.userWallets.every(E => E.imx_linked), super.update(l)
             }
 
             onImxLinkClick() {
@@ -11223,13 +11258,13 @@
           </gu-paragraph-text>
           ${this.renderImxLink()}
         </gu-vertical-space>
-        ${this.userWallets.map(c => this.walletActionLoading === c.address ? e.dy`
+        ${this.userWallets.map(l => this.walletActionLoading === l.address ? e.dy`
               <div class="walletList__addWallet"><gu-rectangular-spinner color="apocyan"></gu-rectangular-spinner></div>
             ` : e.dy` <gu-wallet-display
-            address=${c.address}
+            address=${l.address}
             .walletDropdownMenuOptions=${this.walletDropdownMenuOptions}
-            ?imxLinked="${c.imx_linked}"
-            ?defaultWallet="${c.is_default}"
+            ?imxLinked="${l.imx_linked}"
+            ?defaultWallet="${l.is_default}"
             ?defaultWalletEnabled="${this.defaultWalletEnabled}"
             class="walletsList__wallet"
           ></gu-wallet-display>`)}
@@ -11244,7 +11279,7 @@
     `
             }
         };
-        (0, i.gn)([(0, p.C)()], Ne.prototype, "userWallets", void 0), (0, i.gn)([(0, p.C)()], Ne.prototype, "imxLinkLoading", void 0), (0, i.gn)([(0, p.C)()], Ne.prototype, "connectedWallet", void 0), (0, i.gn)([(0, p.C)()], Ne.prototype, "connectedWalletGuLinked", void 0), (0, i.gn)([(0, p.C)()], Ne.prototype, "guLinkLoading", void 0), (0, i.gn)([(0, p.C)()], Ne.prototype, "walletActionLoading", void 0), (0, i.gn)([(0, p.C)()], Ne.prototype, "defaultWalletEnabled", void 0), (0, i.gn)([(0, p.C)()], Ne.prototype, "walletDropdownMenuOptions", void 0), (0, i.gn)([(0, ft.S)()], Ne.prototype, "showEmptyState", void 0), (0, i.gn)([(0, ft.S)()], Ne.prototype, "showImxLink", void 0), (0, i.gn)([(0, ft.S)()], Ne.prototype, "allImxLinked", void 0), Ne = (0, i.gn)([(0, m.M)("gu-wallets-list")], Ne);
+        (0, i.gn)([(0, p.C)()], ze.prototype, "userWallets", void 0), (0, i.gn)([(0, p.C)()], ze.prototype, "imxLinkLoading", void 0), (0, i.gn)([(0, p.C)()], ze.prototype, "connectedWallet", void 0), (0, i.gn)([(0, p.C)()], ze.prototype, "connectedWalletGuLinked", void 0), (0, i.gn)([(0, p.C)()], ze.prototype, "guLinkLoading", void 0), (0, i.gn)([(0, p.C)()], ze.prototype, "walletActionLoading", void 0), (0, i.gn)([(0, p.C)()], ze.prototype, "defaultWalletEnabled", void 0), (0, i.gn)([(0, p.C)()], ze.prototype, "walletDropdownMenuOptions", void 0), (0, i.gn)([(0, ft.S)()], ze.prototype, "showEmptyState", void 0), (0, i.gn)([(0, ft.S)()], ze.prototype, "showImxLink", void 0), (0, i.gn)([(0, ft.S)()], ze.prototype, "allImxLinked", void 0), ze = (0, i.gn)([(0, m.M)("gu-wallets-list")], ze);
         let Ke = class extends e.oi {
             constructor() {
                 super(...arguments), this.connectedWallet = "", this.webWalletConnecting = !1
@@ -11385,7 +11420,7 @@
             }
         };
         (0, i.gn)([(0, p.C)()], Ke.prototype, "connectedWallet", void 0), (0, i.gn)([(0, p.C)()], Ke.prototype, "webWalletConnecting", void 0), Ke = (0, i.gn)([(0, m.M)("gu-wallets-header")], Ke);
-        let St = class extends e.oi {
+        let Pt = class extends e.oi {
             constructor() {
                 super(...arguments), this.goldBorder = null
             }
@@ -11429,7 +11464,7 @@
                 return e.dy`<div class="border ${"top" === this.goldBorder ? "borderGoldTop" : ""}"></div>`
             }
         };
-        St = (0, i.gn)([(0, m.M)("gu-modal-background")], St);
+        Pt = (0, i.gn)([(0, m.M)("gu-modal-background")], Pt);
         const gt = `\nlinear-gradient(\n  90deg,\n  rgba(${(0, t.asCssProp)((0, g.hexToCssRgbString)(n.colors.gunmetal[900]))}, 1) 0%,\n  rgba(${(0, t.asCssProp)((0, g.hexToCssRgbString)(n.colors.gunmetal[900]))}, 0.8) 25%,\n  rgba(0, 0, 0, 0) 50%,\n  rgba(${(0, t.asCssProp)((0, g.hexToCssRgbString)(n.colors.gunmetal[900]))}, 0.8) 75%,\n  rgba(${(0, t.asCssProp)((0, g.hexToCssRgbString)(n.colors.gunmetal[900]))}, 1) 100%\n)`;
         let Kt = class extends e.oi {
             static get properties() {
@@ -11713,52 +11748,52 @@
     `
             }
 
-            onClick(c) {
-                this.dispatchEvent(new CustomEvent("navigation", {detail: c, bubbles: !0, composed: !0}))
+            onClick(l) {
+                this.dispatchEvent(new CustomEvent("navigation", {detail: l, bubbles: !0, composed: !0}))
             }
 
-            renderIcon(c) {
-                return c.logo ? e.dy` <gu-logo class="navigation__item__icon" type="${c.logo}" size="28"></gu-logo> ` : c.icon ? e.dy` <gu-icon class="navigation__item__icon" iconLigature=${c.icon}></gu-icon> ` : e.dy``
+            renderIcon(l) {
+                return l.logo ? e.dy` <gu-logo class="navigation__item__icon" type="${l.logo}" size="28"></gu-logo> ` : l.icon ? e.dy` <gu-icon class="navigation__item__icon" iconLigature=${l.icon}></gu-icon> ` : e.dy``
             }
 
-            renderEntry(c) {
+            renderEntry(l) {
                 const E = "main" === this.type ? "micro" : "tag";
                 return e.dy`
       <li
         class=${(0, b.$)({
                     navigation__item: !0,
-                    "navigation__item--active": this.active && this.active.indexOf(c.key) > -1
+                    "navigation__item--active": this.active && this.active.indexOf(l.key) > -1
                 })}
       >
         <a
           class="navigation__item__link"
           href="javascript:void(0);"
-          @click=${() => this.onClick(c)}
+          @click=${() => this.onClick(l)}
           data-test-id="navigation.item.link"
         >
-          ${this.renderIcon(c)}
+          ${this.renderIcon(l)}
 
           <gu-simple-text class="navigation__item__name" kind="${E}" fontWeight="bold">
-            ${c.name}
+            ${l.name}
           </gu-simple-text>
         </a>
       </li>
     `
             }
 
-            renderGroups(c) {
+            renderGroups(l) {
                 return e.dy`
-      ${Object.keys(c).map(E => e.dy`
+      ${Object.keys(l).map(E => e.dy`
           <ul class="navigation__items navigation__items--${E}">
-            ${this.renderEntries(c[E])}
+            ${this.renderEntries(l[E])}
           </ul>
         `)}
     `
             }
 
-            renderEntries(c) {
+            renderEntries(l) {
                 return e.dy`
-      ${Object.keys(c).map(E => this.renderEntry(Object.assign(Object.assign({}, c[E]), {key: E})))}
+      ${Object.keys(l).map(E => this.renderEntry(Object.assign(Object.assign({}, l[E]), {key: E})))}
     `
             }
 
@@ -11849,12 +11884,12 @@
                 this.currentPage < this.numberOfPages && this.goToPage(this.currentPage + 1)
             }
 
-            goToPage(c) {
-                c !== this.currentPage && this.dispatchGoToPageEvent(c)
+            goToPage(l) {
+                l !== this.currentPage && this.dispatchGoToPageEvent(l)
             }
 
-            dispatchGoToPageEvent(c) {
-                const E = new CustomEvent("go-to-page", {detail: {pageNumber: c}});
+            dispatchGoToPageEvent(l) {
+                const E = new CustomEvent("go-to-page", {detail: {pageNumber: l}});
                 this.dispatchEvent(E)
             }
 
@@ -11862,7 +11897,7 @@
                 return e.dy`
       <gu-icon class="pagination__chevron" iconLigature="chevron_left" @click=${this.previousPage}></gu-icon>
 
-      ${new Array(this.numberOfPages).fill("").map((c, E) => e.dy`<span
+      ${new Array(this.numberOfPages).fill("").map((l, E) => e.dy`<span
               class="pagination__index ${E + 1 === this.currentPage ? "pagination__active-index" : ""}"
               @click=${() => this.goToPage(E + 1)}
               >${E + 1}</span
@@ -11873,7 +11908,7 @@
             }
         };
         Dt.styles = At, (0, i.gn)([(0, p.C)()], Dt.prototype, "currentPage", void 0), (0, i.gn)([(0, p.C)()], Dt.prototype, "numberOfPages", void 0), (0, i.gn)([(0, p.C)()], Dt.prototype, "theme", void 0), Dt = (0, i.gn)([(0, m.M)("gu-pagination")], Dt);
-        let Nt = class extends e.oi {
+        let zt = class extends e.oi {
             constructor() {
                 super(...arguments), this.progress = 0, this.coloring = "apocyan"
             }
@@ -11906,6 +11941,7 @@
         left: 1px;
         bottom: 1px;
         right: 10px;
+        ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(10, 10))};
       }
 
       .progress-bar-border::before {
@@ -11922,6 +11958,7 @@
         left: 0;
         bottom: 1px;
         right: 0;
+        ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(9, 9, 2))};
       }
 
       .progress-bar::before {
@@ -11950,6 +11987,7 @@
         left: 3px;
         bottom: 2px;
         right: 3px;
+        ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(4, 4))};
       }
 
       :host([size='small']) .progress-bar {
@@ -11957,6 +11995,7 @@
         left: 0;
         bottom: 1px;
         right: 0;
+        ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(3, 3, 2))};
       }
 
       :host([size='small']) .progress-bar-border::before,
@@ -11974,8 +12013,8 @@
     `
             }
         };
-        (0, i.gn)([(0, p.C)({type: Number})], Nt.prototype, "progress", void 0), (0, i.gn)([(0, p.C)({type: String})], Nt.prototype, "coloring", void 0), Nt = (0, i.gn)([(0, m.M)("gu-hex-progress-bar")], Nt);
-        let zt = class extends e.oi {
+        (0, i.gn)([(0, p.C)({type: Number})], zt.prototype, "progress", void 0), (0, i.gn)([(0, p.C)({type: String})], zt.prototype, "coloring", void 0), zt = (0, i.gn)([(0, m.M)("gu-hex-progress-bar")], zt);
+        let Wt = class extends e.oi {
             constructor() {
                 super(...arguments), this.progress = 0, this.withLogo = !1
             }
@@ -12033,7 +12072,7 @@
     `
             }
         };
-        zt = (0, i.gn)([(0, m.M)("gu-progress-bar")], zt);
+        Wt = (0, i.gn)([(0, m.M)("gu-progress-bar")], Wt);
 
         class hs extends e.oi {
             constructor() {
@@ -12054,12 +12093,12 @@
                 })
             }
 
-            wait(c) {
-                return new Promise(E => setTimeout(E, c))
+            wait(l) {
+                return new Promise(E => setTimeout(E, l))
             }
 
-            update(c) {
-                c.has("active") && this.active && this.execute(), super.update(c)
+            update(l) {
+                l.has("active") && this.active && this.execute(), super.update(l)
             }
 
             execute() {
@@ -12284,14 +12323,14 @@
 
             run() {
                 return (0, i.mG)(this, void 0, void 0, function* () {
-                    const c = this.progress >= 100 ? 100 : Math.min(this.progress, 98);
-                    this.style.setProperty("--barWidth", `${c}%`), yield this.wait(500)
+                    const l = this.progress >= 100 ? 100 : Math.min(this.progress, 98);
+                    this.style.setProperty("--barWidth", `${l}%`), yield this.wait(500)
                 })
             }
 
             render() {
-                const c = this.progress >= 100 ? 100 : Math.min(this.progress, 98);
-                return this.style.setProperty("--barWidth", `${c}%`), e.dy`
+                const l = this.progress >= 100 ? 100 : Math.min(this.progress, 98);
+                return this.style.setProperty("--barWidth", `${l}%`), e.dy`
       <div class="milestone-progress__rewards">
         <div class="milestone-progress__previous-rewards">
           <slot name="previous-reward-icon"></slot>
@@ -12444,7 +12483,7 @@
 
             render() {
                 return (0, g.setPropertyGradientFromVariable)(this.style, this.fillGradient, "--backgroundFillGradient", this.fillGradientTarget), (0, g.setPropertyColorFromVariable)(this.style, this.bridgeColor, "--backgroundFillColor"), this.style.setProperty("--squareSize", this.squareSize), this.style.setProperty("--bridgeSize", `calc(${this.squareSize} * ${this.squareBridgeRatio})`), e.dy`
-      ${new Array(this.totalSteps).fill(0).map((c, E) => {
+      ${new Array(this.totalSteps).fill(0).map((l, E) => {
                     const j = E < this.filledSteps;
                     return e.dy`
           <div class="box ${j ? "box--filled" : ""}">
@@ -12868,7 +12907,7 @@
             }
         };
         Xo = (0, i.gn)([(0, m.M)("gu-ribbon-banner")], Xo), o(65694);
-        let Wo = class extends e.oi {
+        let Ho = class extends e.oi {
             static get styles() {
                 return e.iv`
       ${(0, t.asCssProp)((0, t.setBoxSizing)())}
@@ -12894,24 +12933,24 @@
     `
             }
 
-            gotoSocialLink(c) {
-                window.open(c)
+            gotoSocialLink(l) {
+                window.open(l)
             }
 
             render() {
                 return e.dy`
-      ${this.accounts.map(c => e.dy`
+      ${this.accounts.map(l => e.dy`
           <gu-icon
             class="socialButton"
-            iconLigature="social_${c.name}"
+            iconLigature="social_${l.name}"
             fillGradient=${n.gradients.gold.simple("bottom")}
-            @click=${() => this.gotoSocialLink(c.link)}
+            @click=${() => this.gotoSocialLink(l.link)}
           ></gu-icon>
         `)}
     `
             }
         };
-        (0, i.gn)([(0, p.C)()], Wo.prototype, "accounts", void 0), (0, i.gn)([(0, p.C)()], Wo.prototype, "smallIcons", void 0), Wo = (0, i.gn)([(0, m.M)("gu-social-buttons-row")], Wo);
+        (0, i.gn)([(0, p.C)()], Ho.prototype, "accounts", void 0), (0, i.gn)([(0, p.C)()], Ho.prototype, "smallIcons", void 0), Ho = (0, i.gn)([(0, m.M)("gu-social-buttons-row")], Ho);
         const cn = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         let qo = class extends e.oi {
             constructor() {
@@ -12938,9 +12977,7 @@
         margin: ${(0, t.asCssProp)((0, r.gridUnits)(3.5))};
         flex-direction: column;
         justify-content: center;
-        background: ${(0, t.asCssProp)(n.gradients.gunmetal.mirror("left"))};
-        border: ${(0, t.asCssProp)((0, r.gridUnits)(.25))} solid ${(0, t.asCssProp)(n.colors.gunmetal[500])};
-        border-radius: ${(0, t.asCssProp)((0, r.gridUnits)(1))};
+        background: var(--gu-blue-dark);
         align-items: center;
         min-width: ${(0, t.asCssProp)((0, r.gridUnits)(85))};
         width: ${(0, t.asCssProp)((0, r.gridUnits)(85))};
@@ -12994,7 +13031,7 @@
       }
 
       .middleSection__cta__price {
-        color: ${(0, t.asCssProp)(n.colors.apocyan[300])};
+        color: var(--gu-blue);
         display: flex;
         align-items: center;
       }
@@ -13010,7 +13047,7 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        background: ${(0, t.asCssProp)(n.colors.gunmetal[500])};
+        background: var(--gu-blue-dark);
         padding: ${(0, t.asCssProp)((0, r.gridUnits)(2))} 0;
       }
 
@@ -13025,8 +13062,7 @@
 
       .specialBanner {
         position: absolute;
-        top: ${(0, t.asCssProp)((0, r.gridUnits)(-2))};
-        left: ${(0, t.asCssProp)((0, r.gridUnits)(-2))};
+        top: 0;
       }
     `
             }
@@ -13080,7 +13116,7 @@
           kind="large"
           fontWeight="bold"
           align="center"
-          fillColor="colors.light.100"
+          fillColor="#FBC02D"
           class="middleSection__name"
           >${this.name}
         </gu-paragraph-text>
@@ -13099,11 +13135,12 @@
 
       ${this.showCountdown ? e.dy`
               <gu-vertical-space class="bottomSection">
-                <gu-simple-text kind="tag" align="center" fillColor="colors.light.100" class="name">
+                <gu-simple-text kind="tag" align="center" fillColor="#FBC02D" class="name">
                   AVAILABLE FOR &nbsp;
                 </gu-simple-text>
                 <gu-countdown-timer
                   simpleTextDisplay=${!0}
+                  fillColor="#FBC02D"
                   simpleTextKind="tag"
                   .showFields=${["hours", "minutes", "seconds"]}
                   padZeroes=${!0}
@@ -13112,7 +13149,7 @@
               </gu-vertical-space>
             ` : e.dy`
               <gu-vertical-space class="bottomSection">
-                <gu-simple-text kind="tag" align="center" fillColor="colors.light.100" class="name">
+                <gu-simple-text kind="tag" align="center" fillColor="#FBC02D" class="name">
                   AVAILABLE UNTIL ${this.endDate.getDate()} ${cn[this.endDate.getUTCMonth()].slice(0, 3)}
                   ${this.endDate.getUTCFullYear()}
                 </gu-simple-text>
@@ -13134,19 +13171,7 @@
             static get styles() {
                 return e.iv`
       :host {
-        border: ${(0, t.asCssProp)((0, r.gridUnits)(.25))} solid ${(0, t.asCssProp)(n.colors.gunmetal[500])};
-        background: linear-gradient(
-          90deg,
-          ${(0, t.asCssProp)(n.colors.gunmetal[300])} 0.91%,
-          ${(0, t.asCssProp)(n.colors.gunmetal[700])} 100%
-        );
         width: ${(0, t.asCssProp)((0, r.gridUnits)(56))};
-        filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
-      }
-
-      :host([durationType='monthly']) {
-        background: ${(0, t.asCssProp)(n.gradients.gold.simple("right"))};
-        border-color: ${(0, t.asCssProp)(n.colors.gold[100])};
       }
 
       gu-vertical-space {
@@ -13156,27 +13181,6 @@
       gu-paragraph-text {
         padding-left: ${(0, t.asCssProp)((0, r.gridUnits)(3))};
         text-transform: uppercase;
-      }
-
-      .border {
-        height: 100%;
-        width: 100%;
-        margin-top: ${(0, t.asCssProp)((0, r.gridUnits)(-.25))};
-        position: absolute;
-      }
-
-      .border:before {
-        content: '';
-        display: block;
-        position: absolute;
-        height: calc(100% + ${(0, t.asCssProp)((0, r.gridUnits)(.5))});
-        width: calc(100% - ${(0, t.asCssProp)((0, r.gridUnits)(1))});
-        left: calc(${(0, t.asCssProp)((0, r.gridUnits)(-1.5))} - 1px);
-        top: ${(0, t.asCssProp)((0, r.gridUnits)(-1))};
-        border: ${(0, t.asCssProp)((0, r.gridUnits)(1))} solid;
-        border-image-source: ${(0, t.asCssProp)(n.gradients.gold.mirror("top"))};
-        border-image-slice: 1;
-        border-image-width: 0 0 0 ${(0, t.asCssProp)((0, r.gridUnits)(1))};
       }
     `
             }
@@ -13303,7 +13307,7 @@
             }
         };
         tn = (0, i.gn)([(0, m.M)("gu-stats-banner")], tn);
-        let Ho = class extends e.oi {
+        let Zo = class extends e.oi {
             constructor() {
                 super(...arguments), this.selectedOptionIndex = 0
             }
@@ -13350,16 +13354,16 @@
         (0, i.gn)([(0, p.C)({
             reflect: !0,
             type: Array
-        })], Ho.prototype, "options", void 0), (0, i.gn)([(0, p.C)({
+        })], Zo.prototype, "options", void 0), (0, i.gn)([(0, p.C)({
             reflect: !0,
             type: Number
-        })], Ho.prototype, "selectedOptionIndex", void 0), Ho = (0, i.gn)([(0, m.M)("gu-two-value-switch")], Ho);
+        })], Zo.prototype, "selectedOptionIndex", void 0), Zo = (0, i.gn)([(0, m.M)("gu-two-value-switch")], Zo);
         let Oo = class extends e.oi {
             constructor() {
-                super(...arguments), this.values = [], this.selectedIndex = 0, this.idPrefix = "", this.onClick = (c, E) => {
+                super(...arguments), this.values = [], this.selectedIndex = 0, this.idPrefix = "", this.onClick = (l, E) => {
                     this.selectedIndex = E, this.dispatchEvent(new CustomEvent("onItemClicked", {
                         composed: !0,
-                        detail: {index: E, value: c}
+                        detail: {index: E, value: l}
                     }))
                 }
             }
@@ -13378,11 +13382,11 @@
 
             render() {
                 return this.values ? e.dy`
-          ${this.values.map((c, E) => e.dy`<gu-square-selection-row-item
+          ${this.values.map((l, E) => e.dy`<gu-square-selection-row-item
               .selected=${E === this.selectedIndex}
-              .value="${c}"
-              @click=${() => this.onClick(c, E)}
-              id=${`${this.idPrefix}item-${c}`}
+              .value="${l}"
+              @click=${() => this.onClick(l, E)}
+              id=${`${this.idPrefix}item-${l}`}
             >
             </gu-square-selection-row-item>`)}
         ` : null
@@ -13439,7 +13443,7 @@
         (0, i.gn)([(0, p.C)({reflect: !0})], jo.prototype, "value", void 0), (0, i.gn)([(0, p.C)({
             reflect: !0,
             type: Boolean,
-            converter: W.b
+            converter: H.b
         })], jo.prototype, "selected", void 0), jo = (0, i.gn)([(0, m.M)("gu-square-selection-row-item")], jo);
         const dn = e.iv`
   ${(0, t.asCssProp)((0, t.setBoxSizing)())}
@@ -13484,7 +13488,7 @@
     color: var(--textColor);
   }
 `;
-        let To = class extends e.oi {
+        let $o = class extends e.oi {
             constructor() {
                 super(...arguments), this.type = "success", this.theme = "light"
             }
@@ -13493,9 +13497,9 @@
                 return e.dy` <slot></slot> `
             }
         };
-        To.styles = dn, (0, i.gn)([(0, p.C)()], To.prototype, "type", void 0), (0, i.gn)([(0, p.C)()], To.prototype, "theme", void 0), To = (0, i.gn)([(0, m.M)("gu-subtle-notification")], To);
+        $o.styles = dn, (0, i.gn)([(0, p.C)()], $o.prototype, "type", void 0), (0, i.gn)([(0, p.C)()], $o.prototype, "theme", void 0), $o = (0, i.gn)([(0, m.M)("gu-subtle-notification")], $o);
         var un = o(39017);
-        const sn = G => new RegExp(`^.{${G},}$`), $o = {
+        const sn = G => new RegExp(`^.{${G},}$`), To = {
             email: new RegExp(/(?:[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-zA-Z0-9-]*[a-zA-Z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/),
             phoneNumber: new RegExp(/\d+/),
             name: new RegExp(/^\D+$/),
@@ -13509,23 +13513,23 @@
                 super(...arguments), this.labelText = "", this.initialHelpText = "", this.placeholderText = "", this.successHelpText = "", this.errorHelpText = "", this.align = "left", this.currentStatus = {
                     status: "initial",
                     helpText: this.initialHelpText
-                }, this.inputValue = "", this.validateToPattern = [], this.obfuscateInputText = !1, this.updateValue = c => {
-                    this.inputValue = c, this.dispatchEvent(new CustomEvent("onValueChange", {
+                }, this.inputValue = "", this.validateToPattern = [], this.obfuscateInputText = !1, this.updateValue = l => {
+                    this.inputValue = l, this.dispatchEvent(new CustomEvent("onValueChange", {
                         detail: {
-                            newValue: c,
-                            valid: this.validateValue(c)
+                            newValue: l,
+                            valid: this.validateValue(l)
                         }
                     }))
-                }, this.onInputChange = c => {
-                    this.updateValue(c.target.value)
-                }, this.onInputType = c => {
-                    const E = c.target, {value: j} = E;
+                }, this.onInputChange = l => {
+                    this.updateValue(l.target.value)
+                }, this.onInputType = l => {
+                    const E = l.target, {value: j} = E;
                     this.updateValue(j), this.validateValue(j) && "error" === this.currentStatus.status && this.setCurrentStatus({
                         status: "initial",
                         helpText: this.initialHelpText
                     })
-                }, this.onInputBlur = c => {
-                    const E = c.target, {value: j} = E;
+                }, this.onInputBlur = l => {
+                    const E = l.target, {value: j} = E;
                     return this.validateValue(j) ? this.setCurrentStatus({
                         status: "success",
                         helpText: this.successHelpText
@@ -13556,12 +13560,12 @@
                 this.initialValue && (this.inputValue = this.initialValue, this.requestUpdate())
             }
 
-            updated(c) {
-                super.updated(c), "error" === this.currentStatus.status ? (this.classList.add("error"), this.classList.remove("success", "initial")) : "success" === this.currentStatus.status ? (this.classList.remove("error", "initial"), this.classList.add("success")) : (this.classList.remove("error", "success"), this.classList.add("initial"))
+            updated(l) {
+                super.updated(l), "error" === this.currentStatus.status ? (this.classList.add("error"), this.classList.remove("success", "initial")) : "success" === this.currentStatus.status ? (this.classList.remove("error", "initial"), this.classList.add("success")) : (this.classList.remove("error", "success"), this.classList.add("initial"))
             }
 
-            setCurrentStatus(c) {
-                const {status: E, helpText: j} = c;
+            setCurrentStatus(l) {
+                const {status: E, helpText: j} = l;
                 this.currentStatus = {status: E, helpText: j}, this.requestUpdate()
             }
 
@@ -13580,14 +13584,14 @@
                 }
             }
 
-            validateValue(c) {
+            validateValue(l) {
                 let E = !0;
                 return this.validateToPattern.map(j => {
                     if (!E) return !1;
-                    if (j instanceof RegExp) E = j.test(c); else if (-1 !== j.indexOf("not-")) {
+                    if (j instanceof RegExp) E = j.test(l); else if (-1 !== j.indexOf("not-")) {
                         const oe = j.split("not-").pop();
-                        E = !$o[oe].test(c)
-                    } else E = $o[j] && "function" == typeof $o[j] ? $o[j](c) : $o[j].test(c)
+                        E = !To[oe].test(l)
+                    } else E = To[j] && "function" == typeof To[j] ? To[j](l) : To[j].test(l)
                 }), E
             }
 
@@ -13821,10 +13825,10 @@
         rn = (0, i.gn)([(0, m.M)("gu-will-you-survive-banner")], rn);
         let Vo = class extends e.oi {
             constructor() {
-                super(...arguments), this.values = [], this.selectedIndex = 0, this.itemClicked = (c, E) => {
+                super(...arguments), this.values = [], this.selectedIndex = 0, this.itemClicked = (l, E) => {
                     this.selectedIndex = E, this.dispatchEvent(new CustomEvent("onItemClicked", {
                         composed: !0,
-                        detail: {index: E, value: c}
+                        detail: {index: E, value: l}
                     }))
                 }
             }
@@ -13846,11 +13850,11 @@
 
             render() {
                 return this.values ? e.dy`
-          ${this.values.map((c, E) => e.dy`<gu-tabs-collection-item
+          ${this.values.map((l, E) => e.dy`<gu-tabs-collection-item
               .selected=${E === this.selectedIndex}
               .firstItem=${0 === E}
-              .value="${c}"
-              @click=${() => this.itemClicked(c, E)}
+              .value="${l}"
+              @click=${() => this.itemClicked(l, E)}
             >
             </gu-tabs-collection-item>`)}
         ` : null
@@ -13930,11 +13934,11 @@
         })], Ao.prototype, "value", void 0), (0, i.gn)([(0, p.C)({
             reflect: !0,
             type: Boolean,
-            converter: W.b
+            converter: H.b
         })], Ao.prototype, "selected", void 0), (0, i.gn)([(0, p.C)({
             reflect: !0,
             type: Boolean,
-            converter: W.b
+            converter: H.b
         })], Ao.prototype, "firstItem", void 0), Ao = (0, i.gn)([(0, m.M)("gu-tabs-collection-item")], Ao);
         let Io = class extends e.oi {
             static get styles() {
@@ -14116,11 +14120,11 @@
             }
 
             connectedCallback() {
-                super.connectedCallback(), window.addEventListener("click", c => this.onClick(c)), window.addEventListener("scroll", () => this.onScroll())
+                super.connectedCallback(), window.addEventListener("click", l => this.onClick(l)), window.addEventListener("scroll", () => this.onScroll())
             }
 
             disconnectedCallback() {
-                window.removeEventListener("click", c => this.onClick(c)), window.removeEventListener("scroll", () => this.onScroll()), super.disconnectedCallback()
+                window.removeEventListener("click", l => this.onClick(l)), window.removeEventListener("scroll", () => this.onScroll()), super.disconnectedCallback()
             }
 
             static get styles() {
@@ -14154,8 +14158,8 @@
 `
             }
 
-            selectDropDownItem(c) {
-                this.current = c, this.open = !1, this.dispatchEvent(new CustomEvent("onSelect", {
+            selectDropDownItem(l) {
+                this.current = l, this.open = !1, this.dispatchEvent(new CustomEvent("onSelect", {
                     composed: !0,
                     bubbles: !0,
                     detail: Object.assign({}, this.current)
@@ -14168,8 +14172,8 @@
                 })
             }
 
-            onClick(c) {
-                !c.composedPath().includes(this) && this.open && (this.open = !1)
+            onClick(l) {
+                !l.composedPath().includes(this) && this.open && (this.open = !1)
             }
 
             onScroll() {
@@ -14182,19 +14186,19 @@
       <ul
         class=${(0, b.$)({"dropdown-menu--hidden": !this.open, "dropdown-menu-content": this.open})}
       >
-        ${this.items.map((c, E, j) => e.dy`
+        ${this.items.map((l, E, j) => e.dy`
               <gu-dropdown-menu-item
                 .align=${this.align}
-                .item=${c}
+                .item=${l}
                 .last=${j.length - 1 === E}
-                @click=${() => this.selectDropDownItem(c)}
+                @click=${() => this.selectDropDownItem(l)}
               ></gu-dropdown-menu-item>
             `)}
       </ul>
     `
             }
         };
-        (0, i.gn)([(0, p.C)({type: Array})], qs.prototype, "items", void 0), (0, i.gn)([(0, p.C)({type: String})], qs.prototype, "align", void 0), (0, i.gn)([(0, ft.S)()], qs.prototype, "open", void 0), (0, i.gn)([(0, ft.S)({hasChanged: (G, c) => (null == G ? void 0 : G.value) !== (null == c ? void 0 : c.value)})], qs.prototype, "current", void 0), qs = (0, i.gn)([(0, m.M)("gu-dropdown-menu")], qs);
+        (0, i.gn)([(0, p.C)({type: Array})], qs.prototype, "items", void 0), (0, i.gn)([(0, p.C)({type: String})], qs.prototype, "align", void 0), (0, i.gn)([(0, ft.S)()], qs.prototype, "open", void 0), (0, i.gn)([(0, ft.S)({hasChanged: (G, l) => (null == G ? void 0 : G.value) !== (null == l ? void 0 : l.value)})], qs.prototype, "current", void 0), qs = (0, i.gn)([(0, m.M)("gu-dropdown-menu")], qs);
         let Do = class extends e.oi {
             constructor() {
                 super(...arguments), this.item = {id: "", value: ""}, this.last = !1
@@ -14273,10 +14277,11 @@
             type: Boolean,
             reflect: !0
         })], Do.prototype, "last", void 0), Do = (0, i.gn)([(0, m.M)("gu-dropdown-menu-item")], Do)
-    }, 14879: (se, R, o) => {
+    },
+    14879: (se, R, o) => {
         "use strict";
         o.d(R, {o: () => g});
-        var l = o(70655), y = (o(1949), o(32830)), e = o(56418), m = o(98539), p = o(26711);
+        var c = o(70655), y = (o(1949), o(32830)), e = o(56418), m = o(98539), p = o(26711);
 
         class g extends y.oi {
             constructor() {
@@ -14308,22 +14313,23 @@
             }
         }
 
-        (0, l.gn)([(0, e.C)({
+        (0, c.gn)([(0, e.C)({
             reflect: !0,
             type: Boolean,
             converter: p.b
-        })], g.prototype, "loading", void 0), (0, l.gn)([(0, e.C)({
+        })], g.prototype, "loading", void 0), (0, c.gn)([(0, e.C)({
             reflect: !0,
             type: Boolean,
             converter: p.b
-        })], g.prototype, "disabled", void 0), (0, l.gn)([(0, e.C)({
+        })], g.prototype, "disabled", void 0), (0, c.gn)([(0, e.C)({
             reflect: !0,
             type: Boolean,
             converter: p.b
-        })], g.prototype, "expand", void 0), (0, l.gn)([(0, e.C)()], g.prototype, "icon", void 0), (0, l.gn)([(0, e.C)()], g.prototype, "iconPosition", void 0), (0, l.gn)([(0, e.C)({reflect: !0})], g.prototype, "type", void 0)
-    }, 43977: (se, R, o) => {
+        })], g.prototype, "expand", void 0), (0, c.gn)([(0, e.C)()], g.prototype, "icon", void 0), (0, c.gn)([(0, e.C)()], g.prototype, "iconPosition", void 0), (0, c.gn)([(0, e.C)({reflect: !0})], g.prototype, "type", void 0)
+    },
+    43977: (se, R, o) => {
         "use strict";
-        var l = o(70655), y = (o(61517), o(32830)), e = o(86041), m = o(80102), p = o(26532), g = o(65281);
+        var c = o(70655), y = (o(61517), o(32830)), e = o(86041), m = o(80102), p = o(26532), g = o(65281);
         let r = class extends y.oi {
             static get styles() {
                 return y.iv`
@@ -14367,10 +14373,11 @@
     `
             }
         };
-        r = (0, l.gn)([(0, e.M)("gu-circular-close-button")], r)
-    }, 89534: (se, R, o) => {
+        r = (0, c.gn)([(0, e.M)("gu-circular-close-button")], r)
+    },
+    89534: (se, R, o) => {
         "use strict";
-        var l = o(70655), i = o(32830), y = o(56418), e = o(72650), m = o(93270), p = o(14879), g = o(80102),
+        var c = o(70655), i = o(32830), y = o(56418), e = o(72650), m = o(93270), p = o(14879), g = o(80102),
             r = o(26532), t = o(65281), n = o(40010);
         const A = i.iv`
   ${n.W2}
@@ -14540,12 +14547,13 @@
             }
         }
 
-        (0, l.gn)([(0, y.C)({reflect: !0})], f.prototype, "type", void 0), (0, l.gn)([(0, y.C)()], f.prototype, "size", void 0), customElements.define("gu-hex-button", (0, e.b)((0, m.Z)(f)))
-    }, 40010: (se, R, o) => {
+        (0, c.gn)([(0, y.C)({reflect: !0})], f.prototype, "type", void 0), (0, c.gn)([(0, y.C)()], f.prototype, "size", void 0), customElements.define("gu-hex-button", (0, e.b)((0, m.Z)(f)))
+    },
+    40010: (se, R, o) => {
         "use strict";
         o.d(R, {W2: () => n});
-        var l = o(32830), i = o(80102), y = o(26532), e = o(65281);
-        const m = l.iv`
+        var c = o(32830), i = o(80102), y = o(26532), e = o(65281);
+        const m = c.iv`
   :host {
     cursor: pointer;
     display: inline-flex;
@@ -14635,13 +14643,14 @@
   :host([disabled='true']) {
     filter: grayscale(100%);
   }
-`, n = l.iv`
+`, n = c.iv`
   ${m}
 
   :host {
     position: relative;
     white-space: nowrap;
     color: ${(0, y.asCssProp)(e.colors.light[100])};
+    ${(0, y.asCssProp)((0, y.drawHexShapePolygonMask)(12, 12))};
     ${(0, y.asCssProp)(e.animation.standardTransition("all"))};
 
     /* NORMAL SIZING BY DEFAULT */
@@ -14657,6 +14666,7 @@
     ${(0, y.inset)(2, 3)}
     z-index: 0;
     background: ${(0, y.asCssProp)(e.colors.gunmetal[900])};
+    ${(0, y.asCssProp)((0, y.drawHexShapePolygonMask)(11, 11))};
     ${(0, y.asCssProp)(e.animation.standardTransition("all"))};
   }
 
@@ -14669,20 +14679,26 @@
   :host([size='large']) {
     height: ${(0, y.asCssProp)("48px")};
     line-height: ${(0, y.asCssProp)("48px")};
+    ${(0, y.asCssProp)((0, y.drawHexShapePolygonMask)(18, 18))};
   }
 
   :host([size='large']) .button__content {
     padding: 0 ${(0, y.asCssProp)("26px")};
   }
 
+  :host([size='large'])::before {
+    ${(0, y.asCssProp)((0, y.drawHexShapePolygonMask)(17, 17))};
+  }
+
   :host([size='large']) .buttonContent__icon {
     font-size: ${(0, y.asCssProp)((0, i.gridUnits)(5.5))};
   }
 `
-    }, 62701: (se, R, o) => {
+    },
+    62701: (se, R, o) => {
         "use strict";
         o.d(R, {w: () => k});
-        var l = o(70655), i = o(92436), y = o(87435), e = o(32830), m = o(86041), p = o(5284), g = o(26532),
+        var c = o(70655), i = o(92436), y = o(87435), e = o(32830), m = o(86041), p = o(5284), g = o(26532),
             r = o(65281);
         const t = new i.do(I => {
             I.forEach(A => {
@@ -14691,7 +14707,7 @@
         }), n = new CustomEvent("onVideoEnd"), k = I => new Promise(A => {
             setTimeout(() => A(), I)
         });
-        let x = class extends e.oi {
+        let P = class extends e.oi {
             constructor() {
                 super(...arguments), this.muted = !1, this.autoPlay = !1, this.loopVideo = !1, this.showControls = !1, this.pauseOnEndFrame = !1, this.startPausedOnFirstFrame = !1, this.volume = 1, this.dimensions = {
                     width: 0,
@@ -14765,7 +14781,7 @@
             }
 
             handleVideoIdUpdated() {
-                return (0, l.mG)(this, void 0, void 0, function* () {
+                return (0, c.mG)(this, void 0, void 0, function* () {
                     if (this.vimeoControl) {
                         const A = yield this.vimeoControl.getVideoId();
                         return console.log("@@@@@@@@@@@@", A, this.videoId), this.videoId === A ? this.reInitCurrentVideo() : this.loadNewVideoId()
@@ -14813,7 +14829,7 @@
             }
 
             gotoTimeAndPause(A) {
-                return (0, l.mG)(this, void 0, void 0, function* () {
+                return (0, c.mG)(this, void 0, void 0, function* () {
                     try {
                         return console.log("gotoTimeAndPause(time)", A, this.videoId), yield this.vimeoControl.setMuted(!0), console.log("gotoTimeAndPause > this.vimeoControl.setMuted(true) resolved", this.videoId, A), yield this.vimeoControl.play(), console.log("gotoTimeAndPause > this.vimeoControl.play() resolved", this.videoId, A), p.I5.isSafari() && (yield k(350), console.log("gotoTimeAndPause > artificialDelay() resolved", this.videoId, A)), yield this.vimeoControl.pause(), console.log("gotoTimeAndPause > this.vimeoControl.pause() resolved", this.videoId, A), yield this.vimeoControl.setCurrentTime(A), console.log("gotoTimeAndPause > this.vimeoControl.setCurrentTime(time) resolved", this.videoId, A), this.setVolume(), console.log("gotoTimeAndPause > ALL STEPS resolved")
                     } catch (f) {
@@ -14849,10 +14865,11 @@
     `
             }
         };
-        x = (0, l.gn)([(0, m.M)("gu-controllable-vimeo-embed")], x)
-    }, 99454: (se, R, o) => {
+        P = (0, c.gn)([(0, m.M)("gu-controllable-vimeo-embed")], P)
+    },
+    99454: (se, R, o) => {
         "use strict";
-        var l = o(70655), i = o(32830), y = o(86041), e = o(26532), m = o(61462);
+        var c = o(70655), i = o(32830), y = o(86041), e = o(26532), m = o(61462);
         let p = class extends i.oi {
             static get properties() {
                 return {}
@@ -14912,11 +14929,12 @@
     `
             }
         };
-        p = (0, l.gn)([(0, y.M)("gu-form-context")], p)
-    }, 4390: (se, R, o) => {
+        p = (0, c.gn)([(0, y.M)("gu-form-context")], p)
+    },
+    4390: (se, R, o) => {
         "use strict";
 
-        function l(p, g, r) {
+        function c(p, g, r) {
             g.runTask(() => p.navigate([r]))
         }
 
@@ -14928,12 +14946,13 @@
             return Object.keys(p).reduce((r, t) => -1 !== g.indexOf(p[t].path) || r, !1)
         }
 
-        o.d(R, {pR: () => l, rb: () => i, M0: () => e, Cs: () => m});
+        o.d(R, {pR: () => c, rb: () => i, M0: () => e, Cs: () => m});
         const m = p => new CustomEvent("onExternalNavItemClick", {detail: {navItem: p}, bubbles: !0, composed: !0})
-    }, 61517: (se, R, o) => {
+    },
+    61517: (se, R, o) => {
         "use strict";
-        var l = o(32830), i = o(5284), y = o(65171), e = o(26532), m = o(65281), p = o(91418);
-        customElements.define("gu-icon", class extends l.oi {
+        var c = o(32830), i = o(5284), y = o(65171), e = o(26532), m = o(65281), p = o(91418);
+        customElements.define("gu-icon", class g extends c.oi {
             constructor() {
                 super(...arguments), this.iconLigature = "", this.fillGradientTarget = "top"
             }
@@ -14948,7 +14967,7 @@
             }
 
             static get styles() {
-                return l.iv`
+                return c.iv`
       :host {
         display: inline-flex;
         font-weight: 400 !important;
@@ -14986,12 +15005,13 @@
                     fillColor: this.fillColor,
                     fillGradient: this.fillGradient,
                     fillGradientTarget: this.fillGradientTarget
-                }), l.dy`<i class="icon">${this.iconLigature}</i>`
+                }), c.dy`<i class="icon">${this.iconLigature}</i>`
             }
         })
-    }, 1949: (se, R, o) => {
+    },
+    1949: (se, R, o) => {
         "use strict";
-        var l = o(70655), i = o(32830), y = o(56418), e = o(86041), m = o(80102), p = o(26532), g = o(65281);
+        var c = o(70655), i = o(32830), y = o(56418), e = o(86041), m = o(80102), p = o(26532), g = o(65281);
         let r = class extends i.oi {
             constructor() {
                 super(...arguments), this.color = "grey"
@@ -15076,10 +15096,11 @@
     `
             }
         };
-        (0, l.gn)([(0, y.C)({type: String})], r.prototype, "color", void 0), r = (0, l.gn)([(0, e.M)("gu-rectangular-spinner")], r)
-    }, 90004: (se, R, o) => {
+        (0, c.gn)([(0, y.C)({type: String})], r.prototype, "color", void 0), r = (0, c.gn)([(0, e.M)("gu-rectangular-spinner")], r)
+    },
+    90004: (se, R, o) => {
         "use strict";
-        var l = o(70655), e = (o(51256), o(52102), o(32830)), m = o(56418), p = o(86041), g = o(65281), r = o(65171),
+        var c = o(70655), e = (o(51256), o(52102), o(32830)), m = o(56418), p = o(86041), g = o(65281), r = o(65171),
             t = o(80102), n = o(26532);
         const v = (0, n.asCssProp)((0, t.gridUnits)(11)), k = e.iv`
   ${(0, n.asCssProp)((0, n.setBoxSizing)())}
@@ -15222,15 +15243,15 @@
   }
 `;
         o(29939), o(28917);
-        let P = class extends e.oi {
+        let S = class extends e.oi {
             static get styles() {
                 return k
             }
 
             renderText() {
-                var $, s, C, w;
+                var T, s, C, w;
                 if (this.hideText) return e.dy``;
-                const B = (null === (s = null === ($ = this.board) || void 0 === $ ? void 0 : $.class_properties) || void 0 === s ? void 0 : s.quality) || (null === (w = null === (C = this.board) || void 0 === C ? void 0 : C.class_properties) || void 0 === w ? void 0 : w.effort),
+                const B = (null === (s = null === (T = this.board) || void 0 === T ? void 0 : T.class_properties) || void 0 === s ? void 0 : s.quality) || (null === (w = null === (C = this.board) || void 0 === C ? void 0 : C.class_properties) || void 0 === w ? void 0 : w.effort),
                     ee = this.trinket ? this.trinket.name : this.board ? this.board.name : "";
                 return e.dy`
       <i class="gradientSkrim"></i>
@@ -15246,9 +15267,9 @@
             }
 
             renderCount() {
-                var $, s;
+                var T, s;
                 let C;
-                return !this.hideCount && void 0 !== this.count && (C = (null === ($ = this.trinket) || void 0 === $ ? void 0 : $.owned) || (null === (s = this.board) || void 0 === s ? void 0 : s.owned) ? this.count : 0), this.hideCount || void 0 === C ? e.dy`` : e.dy`
+                return !this.hideCount && void 0 !== this.count && (C = (null === (T = this.trinket) || void 0 === T ? void 0 : T.owned) || (null === (s = this.board) || void 0 === s ? void 0 : s.owned) ? this.count : 0), this.hideCount || void 0 === C ? e.dy`` : e.dy`
         <gu-simple-text class="countDisplay" align="center" kind="micro" data-test-id="loadout-part-count">
           x<strong>${Math.min(C, 99)}</strong>${C > 99 ? "+" : null}
         </gu-simple-text>
@@ -15256,13 +15277,13 @@
             }
 
             render() {
-                var $, s, b;
-                return this.noAspectRatio ? this.classList.add("noAspectRatio") : this.classList.remove("noAspectRatio"), (null === ($ = this.trinket) || void 0 === $ ? void 0 : $.owned) || (null === (s = this.board) || void 0 === s ? void 0 : s.owned) ? this.classList.remove("notOwned") : this.classList.add("notOwned"), this.equipped ? this.classList.add("equipped") : this.classList.remove("equipped"), this.hideText ? this.classList.add("hideText") : this.classList.remove("hideText"), this.hideCount ? this.classList.add("hideCount") : this.classList.remove("hideCount"), this.hideBorder ? this.classList.add("hideBorder") : this.classList.remove("hideBorder"), e.dy`
+                var T, s, b;
+                return this.noAspectRatio ? this.classList.add("noAspectRatio") : this.classList.remove("noAspectRatio"), (null === (T = this.trinket) || void 0 === T ? void 0 : T.owned) || (null === (s = this.board) || void 0 === s ? void 0 : s.owned) ? this.classList.remove("notOwned") : this.classList.add("notOwned"), this.equipped ? this.classList.add("equipped") : this.classList.remove("equipped"), this.hideText ? this.classList.add("hideText") : this.classList.remove("hideText"), this.hideCount ? this.classList.add("hideCount") : this.classList.remove("hideCount"), this.hideBorder ? this.classList.add("hideBorder") : this.classList.remove("hideBorder"), e.dy`
       <div class="innerContainer">
-        ${this.trinket ? ((b, $) => "Good Kitty Statue" === b.name ? ((b, $) => {
+        ${this.trinket ? ((b, T) => "Good Kitty Statue" === b.name ? ((b, T) => {
                     var s;
                     let C = "#6B6B70", w = "#B1AEB9", B = "#E1E1E1";
-                    return (null === (s = null == b ? void 0 : b.properties) || void 0 === s ? void 0 : s.fur_color) && (C = b.properties.fur_color, w = b.properties.belly_color, B = b.properties.eyes_color), $ ? e.dy`
+                    return (null === (s = null == b ? void 0 : b.properties) || void 0 === s ? void 0 : s.fur_color) && (C = b.properties.fur_color, w = b.properties.belly_color, B = b.properties.eyes_color), T ? e.dy`
       <gu-regular-crypto-kitty-head
         class="itemImage itemImage--trinket itemImage--cryptoKittyHead"
         .furColor=${C}
@@ -15279,7 +15300,7 @@
       data-test-id="loadout-part-trinket"
     ></gu-regular-crypto-kitty>
   `
-                })(b, $) : e.dy`<img
+                })(b, T) : e.dy`<img
     class="itemImage itemImage--trinket"
     src="https://images.godsunchained.com/collectables/trinkets/${b.proto}--preview.webp"
     alt=""
@@ -15298,13 +15319,14 @@
     `
             }
         };
-        (0, l.gn)([(0, m.C)({
+        (0, c.gn)([(0, m.C)({
             type: Number,
             reflect: !0
-        })], P.prototype, "count", void 0), (0, l.gn)([(0, m.C)({type: Object})], P.prototype, "board", void 0), (0, l.gn)([(0, m.C)({type: Object})], P.prototype, "trinket", void 0), (0, l.gn)([(0, m.C)({type: Boolean})], P.prototype, "equipped", void 0), (0, l.gn)([(0, m.C)({type: Boolean})], P.prototype, "noAspectRatio", void 0), (0, l.gn)([(0, m.C)({type: Boolean})], P.prototype, "hideText", void 0), (0, l.gn)([(0, m.C)({type: Boolean})], P.prototype, "hideCount", void 0), (0, l.gn)([(0, m.C)({type: Boolean})], P.prototype, "hideBorder", void 0), P = (0, l.gn)([(0, p.M)("gu-loadout-part")], P)
-    }, 29939: (se, R, o) => {
+        })], S.prototype, "count", void 0), (0, c.gn)([(0, m.C)({type: Object})], S.prototype, "board", void 0), (0, c.gn)([(0, m.C)({type: Object})], S.prototype, "trinket", void 0), (0, c.gn)([(0, m.C)({type: Boolean})], S.prototype, "equipped", void 0), (0, c.gn)([(0, m.C)({type: Boolean})], S.prototype, "noAspectRatio", void 0), (0, c.gn)([(0, m.C)({type: Boolean})], S.prototype, "hideText", void 0), (0, c.gn)([(0, m.C)({type: Boolean})], S.prototype, "hideCount", void 0), (0, c.gn)([(0, m.C)({type: Boolean})], S.prototype, "hideBorder", void 0), S = (0, c.gn)([(0, p.M)("gu-loadout-part")], S)
+    },
+    29939: (se, R, o) => {
         "use strict";
-        var l = o(70655), i = o(32830), y = o(56418), e = o(86041), m = o(26532), p = o(65281);
+        var c = o(70655), i = o(32830), y = o(56418), e = o(86041), m = o(26532), p = o(65281);
         let g = class extends i.oi {
             static get styles() {
                 return i.iv`
@@ -15377,10 +15399,11 @@
     `
             }
         };
-        (0, l.gn)([(0, y.C)({type: String})], g.prototype, "furColor", void 0), (0, l.gn)([(0, y.C)({type: String})], g.prototype, "bellyColor", void 0), (0, l.gn)([(0, y.C)({type: String})], g.prototype, "eyeColor", void 0), g = (0, l.gn)([(0, e.M)("gu-regular-crypto-kitty-head")], g)
-    }, 28917: (se, R, o) => {
+        (0, c.gn)([(0, y.C)({type: String})], g.prototype, "furColor", void 0), (0, c.gn)([(0, y.C)({type: String})], g.prototype, "bellyColor", void 0), (0, c.gn)([(0, y.C)({type: String})], g.prototype, "eyeColor", void 0), g = (0, c.gn)([(0, e.M)("gu-regular-crypto-kitty-head")], g)
+    },
+    28917: (se, R, o) => {
         "use strict";
-        var l = o(70655), i = o(32830), y = o(56418), e = o(86041), m = o(26532), p = o(65281);
+        var c = o(70655), i = o(32830), y = o(56418), e = o(86041), m = o(26532), p = o(65281);
         let g = class extends i.oi {
             static get styles() {
                 return i.iv`
@@ -15457,11 +15480,12 @@
     `
             }
         };
-        (0, l.gn)([(0, y.C)({type: String})], g.prototype, "furColor", void 0), (0, l.gn)([(0, y.C)({type: String})], g.prototype, "bellyColor", void 0), (0, l.gn)([(0, y.C)({type: String})], g.prototype, "eyeColor", void 0), g = (0, l.gn)([(0, e.M)("gu-regular-crypto-kitty")], g)
-    }, 65694: (se, R, o) => {
+        (0, c.gn)([(0, y.C)({type: String})], g.prototype, "furColor", void 0), (0, c.gn)([(0, y.C)({type: String})], g.prototype, "bellyColor", void 0), (0, c.gn)([(0, y.C)({type: String})], g.prototype, "eyeColor", void 0), g = (0, c.gn)([(0, e.M)("gu-regular-crypto-kitty")], g)
+    },
+    65694: (se, R, o) => {
         "use strict";
-        var l = o(70655), g = (o(90004), o(51256), o(11015), o(61517), o(43977), o(32830)), r = o(56418), t = o(7302),
-            n = o(86041), v = o(98539), k = o(65281), x = o(65171), I = o(80102), A = o(26532);
+        var c = o(70655), g = (o(90004), o(51256), o(11015), o(61517), o(43977), o(32830)), r = o(56418), t = o(7302),
+            n = o(86041), v = o(98539), k = o(65281), P = o(65171), I = o(80102), A = o(26532);
         const f = g.iv`
   :host {
     display: block;
@@ -15483,8 +15507,8 @@
     border-radius: 50%;
     background: linear-gradient(
       to top,
-      rgba(${(0, A.asCssProp)((0, x.hexToCssRgbString)(k.colors.dark[900]))}, 1) 0%,
-      rgba(${(0, A.asCssProp)((0, x.hexToCssRgbString)(k.colors.dark[900]))}, 0) 70%
+      rgba(${(0, A.asCssProp)((0, P.hexToCssRgbString)(k.colors.dark[900]))}, 1) 0%,
+      rgba(${(0, A.asCssProp)((0, P.hexToCssRgbString)(k.colors.dark[900]))}, 0) 70%
     );
   }
 
@@ -15499,7 +15523,7 @@
     border: ${(0, A.asCssProp)((0, I.gridUnits)(.5))} solid ${(0, A.asCssProp)(k.colors.gunmetal[500])};
     background: ${(0, A.asCssProp)(k.colors.gunmetal[900])};
     overflow: hidden;
-    box-shadow: 0px 0px ${(0, A.asCssProp)((0, I.gridUnits)(2))} rgba(${(0, A.asCssProp)((0, x.hexToCssRgbString)(k.colors.dark[900]))}, 0.65);
+    box-shadow: 0px 0px ${(0, A.asCssProp)((0, I.gridUnits)(2))} rgba(${(0, A.asCssProp)((0, P.hexToCssRgbString)(k.colors.dark[900]))}, 0.65);
   }
 
   .trinketName {
@@ -15674,12 +15698,13 @@
     `
             }
         };
-        (0, l.gn)([(0, r.C)({type: Object})], O.prototype, "trinket", void 0), (0, l.gn)([(0, r.C)({type: Boolean})], O.prototype, "highlight", void 0), (0, l.gn)([(0, t.S)()], O.prototype, "hideNameText", void 0), O = (0, l.gn)([(0, n.M)("gu-selected-trinket")], O)
-    }, 69039: (se, R, o) => {
+        (0, c.gn)([(0, r.C)({type: Object})], O.prototype, "trinket", void 0), (0, c.gn)([(0, r.C)({type: Boolean})], O.prototype, "highlight", void 0), (0, c.gn)([(0, t.S)()], O.prototype, "hideNameText", void 0), O = (0, c.gn)([(0, n.M)("gu-selected-trinket")], O)
+    },
+    69039: (se, R, o) => {
         "use strict";
         o.d(R, {Q: () => y});
-        var l = o(30109);
-        const y = (0, l.XM)(class extends l.Xe {
+        var c = o(30109);
+        const y = (0, c.XM)(class i extends c.Xe {
             constructor(m) {
                 super(m)
             }
@@ -15691,34 +15716,34 @@
             render(m) {
             }
         })
-    }, 25297: (se, R, o) => {
+    },
+    25297: (se, R, o) => {
         "use strict";
-        o.d(R, {J: () => m});
-        var l = o(84876), i = o(69800), y = o(32830);
-        const e = Promise.resolve().then.bind(Promise.resolve());
-        window.fakeComponentToFoolBuildOptimizer = (0, i.z)(() => {
-        });
+        o.d(R, {J: () => e});
+        var c = o(12052), i = o(32830);
+        const y = Promise.resolve().then.bind(Promise.resolve());
 
-        class m extends y.oi {
+        class e extends i.oi {
             constructor() {
-                super(), this.haunted = new l.ZM(() => this.requestUpdate(), this)
+                super(), this.haunted = new c.ZM(() => this.requestUpdate(), this)
             }
 
-            update(g) {
+            update(p) {
                 this.haunted.run(() => {
-                    super.update(g)
+                    super.update(p)
                 })
             }
 
-            updated(g) {
-                super.updated(g), this.haunted.runLayoutEffects(), e(() => this.haunted.runEffects())
+            updated(p) {
+                super.updated(p), this.haunted.runLayoutEffects(), y(() => this.haunted.runEffects())
             }
 
             disconnectedCallback() {
                 this.haunted.teardown(), super.disconnectedCallback()
             }
         }
-    }, 65171: (se, R, o) => {
+    },
+    65171: (se, R, o) => {
         "use strict";
         o.r(R), o.d(R, {
             componentToHex: () => i,
@@ -15732,51 +15757,51 @@
             setPropertyColor: () => n,
             setBorderColorHoverFromVariable: () => v,
             setBorderColorHover: () => k,
-            setBackgroundFillHoverFromVariable: () => x,
+            setBackgroundFillHoverFromVariable: () => P,
             setBackgroundFillHover: () => I,
             updateColoringVariables: () => A
         });
-        var l = o(65281);
+        var c = o(65281);
         const i = f => {
             const O = f.toString(16);
             return 1 === O.length ? "0" + O : O
         }, y = f => {
             const O = f.split(".");
-            let P = l;
-            for (let b = 0; b < O.length; b++) P = P[O[b]];
-            return P
-        }, e = (f, O, P) => `#${i(f)}${i(O)}${i(P)}`, m = f => {
+            let S = c;
+            for (let b = 0; b < O.length; b++) S = S[O[b]];
+            return S
+        }, e = (f, O, S) => `#${i(f)}${i(O)}${i(S)}`, m = f => {
             const O = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(f);
             return O ? {r: parseInt(O[1], 16), g: parseInt(O[2], 16), b: parseInt(O[3], 16)} : void 0
         }, p = f => {
             const O = m(f);
             return O ? `${O.r}, ${O.g}, ${O.b}` : f
-        }, g = (f, O, P, b) => {
+        }, g = (f, O, S, b) => {
             const s = y(O)(b).replace(/;/gm, "");
-            f.setProperty(P, s)
-        }, r = (f, O, P) => {
-            f.setProperty(P, O.replace(/;/gm, ""))
-        }, t = (f, O, P) => {
+            f.setProperty(S, s)
+        }, r = (f, O, S) => {
+            f.setProperty(S, O.replace(/;/gm, ""))
+        }, t = (f, O, S) => {
             const b = y(O);
-            f.setProperty(P, b)
-        }, n = (f, O, P) => {
-            f.setProperty(P, O)
+            f.setProperty(S, b)
+        }, n = (f, O, S) => {
+            f.setProperty(S, O)
         }, v = (f, O) => {
-            const P = y(O);
-            f.setProperty("--borderColorHover", P)
+            const S = y(O);
+            f.setProperty("--borderColorHover", S)
         }, k = (f, O) => {
             f.setProperty("--borderColorHover", O)
-        }, x = (f, O) => {
-            const P = y(O);
-            f.setProperty("--backgroundFillColorHover", P)
+        }, P = (f, O) => {
+            const S = y(O);
+            f.setProperty("--backgroundFillColorHover", S)
         }, I = (f, O) => {
             f.setProperty("--backgroundFillColorHover", O)
         }, A = ({
                     component: f,
                     fillColor: O,
-                    fillColorHover: P,
+                    fillColorHover: S,
                     fillGradient: b,
-                    fillGradientTarget: $,
+                    fillGradientTarget: T,
                     borderColor: s,
                     borderColorHover: C,
                     backgroundFillColor: w,
@@ -15785,15 +15810,16 @@
                     backgroundFillGradientTarget: ce,
                     iconColor: de
                 }) => {
-            O && (f.setAttribute("fillColor", O), /colors\./.test(O) ? t(f.style, O, "--textFillColor") : n(f.style, O, "--textFillColor")), P && (f.setAttribute("fillColorHover", P), /colors\./.test(P) ? t(f.style, P, "--textFillColorHover") : n(f.style, P, "--textFillColorHover")), s && (f.setAttribute("borderColor", s), /colors\./.test(s) ? t(f.style, s, "--borderColor") : n(f.style, s, "--borderColor")), C && (f.setAttribute("borderColorHover", C), /colors\./.test(C) ? t(f.style, C, "--borderColorHover") : n(f.style, C, "--borderColorHover")), C && (f.setAttribute("borderColorHover", C), /colors\./.test(C) ? v(f.style, C) : k(f.style, C)), w && (f.setAttribute("backgroundFillColor", w), /colors\./.test(w) ? t(f.style, w, "--backgroundFillColor") : n(f.style, w, "--backgroundFillColor")), B && (f.setAttribute("backgroundFillColorHover", B), /colors\./.test(B) ? t(f.style, B, "--backgroundFillColorHover") : n(f.style, B, "--backgroundFillColorHover")), de && (f.setAttribute("iconColor", de), /colors\./.test(de) ? t(f.style, de, "--iconColor") : n(f.style, de, "--iconColor")), B && (f.setAttribute("backgroundFillColorHover", B), /colors\./.test(B) ? x(f.style, B) : I(f.style, B)), ee && (f.setAttribute("backgroundFillGradient", ee), /gradients\./.test(ee) ? g(f.style, ee, "--backgroundFillGradient", ce) : r(f.style, ee, "--backgroundFillGradient")), b && (f.setAttribute("fillGradient", b), /gradients\./.test(b) ? g(f.style, b, "--textFillGradient", $) : r(f.style, b, "--textFillGradient"))
+            O && (f.setAttribute("fillColor", O), /colors\./.test(O) ? t(f.style, O, "--textFillColor") : n(f.style, O, "--textFillColor")), S && (f.setAttribute("fillColorHover", S), /colors\./.test(S) ? t(f.style, S, "--textFillColorHover") : n(f.style, S, "--textFillColorHover")), s && (f.setAttribute("borderColor", s), /colors\./.test(s) ? t(f.style, s, "--borderColor") : n(f.style, s, "--borderColor")), C && (f.setAttribute("borderColorHover", C), /colors\./.test(C) ? t(f.style, C, "--borderColorHover") : n(f.style, C, "--borderColorHover")), C && (f.setAttribute("borderColorHover", C), /colors\./.test(C) ? v(f.style, C) : k(f.style, C)), w && (f.setAttribute("backgroundFillColor", w), /colors\./.test(w) ? t(f.style, w, "--backgroundFillColor") : n(f.style, w, "--backgroundFillColor")), B && (f.setAttribute("backgroundFillColorHover", B), /colors\./.test(B) ? t(f.style, B, "--backgroundFillColorHover") : n(f.style, B, "--backgroundFillColorHover")), de && (f.setAttribute("iconColor", de), /colors\./.test(de) ? t(f.style, de, "--iconColor") : n(f.style, de, "--iconColor")), B && (f.setAttribute("backgroundFillColorHover", B), /colors\./.test(B) ? P(f.style, B) : I(f.style, B)), ee && (f.setAttribute("backgroundFillGradient", ee), /gradients\./.test(ee) ? g(f.style, ee, "--backgroundFillGradient", ce) : r(f.style, ee, "--backgroundFillGradient")), b && (f.setAttribute("fillGradient", b), /gradients\./.test(b) ? g(f.style, b, "--textFillGradient", T) : r(f.style, b, "--textFillGradient"))
         }
-    }, 5284: (se, R, o) => {
+    },
+    5284: (se, R, o) => {
         "use strict";
-        o.d(R, {gt: () => y, I5: () => l, dz: () => p, ZB: () => r, uA: () => i});
-        var l = {};
-        o.r(l), o.d(l, {isIos: () => e, isSafari: () => m});
+        o.d(R, {gt: () => y, I5: () => c, dz: () => p, ZB: () => r, uA: () => i});
+        var c = {};
+        o.r(c), o.d(c, {isIos: () => e, isSafari: () => m});
         var i = {};
-        o.r(i), o.d(i, {enhancedTextRenderingStyles: () => k, stringContainsEmoji: () => v, uppercaseWord: () => x});
+        o.r(i), o.d(i, {enhancedTextRenderingStyles: () => k, stringContainsEmoji: () => v, uppercaseWord: () => P});
         var y = o(65171);
 
         function e() {
@@ -15804,16 +15830,17 @@
         var p = o(80102), r = (o(26711), o(26532)), t = o(89747), n = o.n(t);
         const v = I => n()().test(I),
             k = "\n  /* Get fonts to look slightly nicer where possible */\n  -webkit-font-smoothing: subpixel-antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  text-rendering: optimizeLegibility\n",
-            x = I => I.charAt(0).toUpperCase() + I.slice(1)
-    }, 80102: (se, R, o) => {
+            P = I => I.charAt(0).toUpperCase() + I.slice(1)
+    },
+    80102: (se, R, o) => {
         "use strict";
         o.r(R), o.d(R, {
-            gridUnits: () => l,
+            gridUnits: () => c,
             checkOutOfBounds: () => i,
             getOuterHeight: () => y,
             waitForImageToLoad: () => e
         });
-        const l = m => 4 * m + "px", i = ({
+        const c = m => 4 * m + "px", i = ({
                                               x: m,
                                               y: p,
                                               left: g,
@@ -15836,11 +15863,13 @@
                 };
                 m.complete ? p() : (m.addEventListener("load", n), m.addEventListener("error", t))
             })
-    }, 26711: (se, R, o) => {
+    },
+    26711: (se, R, o) => {
         "use strict";
-        o.d(R, {b: () => l});
-        const l = {fromAttribute: i => i && "false" !== i, toAttribute: i => i ? "true" : "false"}
-    }, 26532: (se, R, o) => {
+        o.d(R, {b: () => c});
+        const c = {fromAttribute: i => i && "false" !== i, toAttribute: i => i ? "true" : "false"}
+    },
+    26532: (se, R, o) => {
         "use strict";
         o.r(R), o.d(R, {
             asCssProp: () => y,
@@ -15852,38 +15881,40 @@
             styleScrollbars: () => t,
             inset: () => n
         });
-        var l = o(32830), i = o(65281);
-        const y = v => l.iv`${(0, l.$m)(v)}`,
-            e = (v, k, x = 0) => ``,
-            m = v => `\n  clip-path: polygon(\n    0% 0%,\n    100% 0%,\n    100% calc(100% - ${v}),\n    50% 100%,\n    0% calc(100% - ${v}),\n    0% 0%\n  );\n  -webkit-clip-path: polygon(\n    0% 0%,\n    100% 0%,\n    100% calc(100% - ${v}),\n    50% 100%,\n    0% calc(100% - ${v}),\n    0% 0%\n  );\n`,
+        var c = o(32830), i = o(65281);
+        const y = v => c.iv`${(0, c.$m)(v)}`,
+            e = (v, k, P = 0) => '',
+            m = v => '',
             p = (v = "border-box") => `\n  :host,\n  :host *,\n  :host *::before,\n  :host *::after {\n    box-sizing: ${v};\n  }\n`,
-            g = (v, k, x = "initial", I = .3, A = 0) => `\n  ${v} {\n    opacity: 0;\n    height: 0;\n    transition: opacity ${I}s ease, height 0s ${I}s, transform ${I}s ease;\n    ${A ? `transform: translateY(${A}px);` : ""}\n  }\n  ${k} {\n    opacity: 1;\n    height: ${x};\n    transition: opacity ${I}s ease, height 0s 0s, transform ${I}s ease;\n    ${A ? "transform: translateY(0);" : ""}\n  }\n`,
-            r = (v, k = .3, x = 10, I = 12) => `\n  ${v} {\n    animation: listReveal ${k}s ease-out backwards;\n    animation-delay: ${.1 * x}s;\n  }\n\n  ${[...Array(x).keys()].map(A => `\n      ${v}:nth-of-type(${A}) {\n        animation-delay: ${.1 * A}s;\n      }\n    `).join("\n")}\n\n  @keyframes listReveal {\n    from {\n      transform: translateY(${I}px);\n      opacity: 0;\n    }\n    to {\n      transform: translateY(0);\n      opacity: 1;\n    }\n  }\n`,
+            g = (v, k, P = "initial", I = .3, A = 0) => `\n  ${v} {\n    opacity: 0;\n    height: 0;\n    transition: opacity ${I}s ease, height 0s ${I}s, transform ${I}s ease;\n    ${A ? `transform: translateY(${A}px);` : ""}\n  }\n  ${k} {\n    opacity: 1;\n    height: ${P};\n    transition: opacity ${I}s ease, height 0s 0s, transform ${I}s ease;\n    ${A ? "transform: translateY(0);" : ""}\n  }\n`,
+            r = (v, k = .3, P = 10, I = 12) => `\n  ${v} {\n    animation: listReveal ${k}s ease-out backwards;\n    animation-delay: ${.1 * P}s;\n  }\n\n  ${[...Array(P).keys()].map(A => `\n      ${v}:nth-of-type(${A}) {\n        animation-delay: ${.1 * A}s;\n      }\n    `).join("\n")}\n\n  @keyframes listReveal {\n    from {\n      transform: translateY(${I}px);\n      opacity: 0;\n    }\n    to {\n      transform: translateY(0);\n      opacity: 1;\n    }\n  }\n`,
             t = (v = "") => `\n  ${v}::-webkit-scrollbar {\n    width: 4px;\n  }\n\n  ${v}::-webkit-scrollbar-thumb {\n    width: 4px;\n    background: ${i.colors.gunmetal[500]};\n    border-radius: 2px;\n  }\n`,
-            n = (v, k = v, x = v, I = k) => l.iv`
+            n = (v, k = v, P = v, I = k) => c.iv`
   top: ${v}px;
   right: ${k}px;
-  bottom: ${x}px;
+  bottom: ${P}px;
   left: ${I}px;
 `
-    }, 39029: (se, R, o) => {
+    },
+    39029: (se, R, o) => {
         "use strict";
         o.d(R, {x1: () => i.x, I0: () => m, v9: () => e, Rl: () => g}), o(25297);
-        var i = o(58672), y = o(84876);
+        var i = o(58672), y = o(12052);
         const e = ({store: n, selector: v}) => {
-            const [k, x] = (0, y.eJ)(v(n.getState()));
+            const [k, P] = (0, y.eJ)(v(n.getState()));
             return (0, y.d4)(() => n.subscribe(() => {
                 const I = v(n.getState());
-                x(I)
+                P(I)
             }), [v]), k
         }, m = n => v => n.dispatch(v);
         o(5284);
         var g = o(65281);
         o(72985), o(69039)
-    }, 72650: (se, R, o) => {
+    },
+    72650: (se, R, o) => {
         "use strict";
         o.d(R, {b: () => g});
-        var l = o(70655), i = o(46461), e = o(56418);
+        var c = o(70655), i = o(46461), e = o(56418);
         const m = {
             default: {
                 ogg: "/assets/audio/buttons/hover--primary.ogg",
@@ -15945,12 +15976,13 @@
                 }
             }
 
-            return (0, l.gn)([(0, e.C)({type: String})], t.prototype, "audibleHover", void 0), (0, l.gn)([(0, e.C)({type: String})], t.prototype, "audibleClick", void 0), t
+            return (0, c.gn)([(0, e.C)({type: String})], t.prototype, "audibleHover", void 0), (0, c.gn)([(0, e.C)({type: String})], t.prototype, "audibleClick", void 0), t
         }
-    }, 72985: (se, R, o) => {
+    },
+    72985: (se, R, o) => {
         "use strict";
-        o.d(R, {Am: () => m, lH: () => g, Xg: () => i, s: () => l});
-        const l = t => class extends t {
+        o.d(R, {Am: () => m, lH: () => g, Xg: () => i, s: () => c});
+        const c = t => class extends t {
             update(n) {
                 this.setAttribute("disabled", `${this.disabled}`), this.setAttribute("loading", `${this.loading}`), this.setAttribute("horizontalStretch", `${this.horizontalStretch}`), super.update(n)
             }
@@ -16060,10 +16092,11 @@
             }
         };
         o(72650)
-    }, 93270: (se, R, o) => {
+    },
+    93270: (se, R, o) => {
         "use strict";
         o.d(R, {Z: () => y});
-        var l = o(70655), i = o(56418);
+        var c = o(70655), i = o(56418);
         const y = e => {
             class m extends e {
                 constructor() {
@@ -16088,12 +16121,13 @@
                 }
             }
 
-            return (0, l.gn)([(0, i.C)({type: String})], m.prototype, "href", void 0), (0, l.gn)([(0, i.C)({type: String})], m.prototype, "target", void 0), m
+            return (0, c.gn)([(0, i.C)({type: String})], m.prototype, "href", void 0), (0, c.gn)([(0, i.C)({type: String})], m.prototype, "target", void 0), m
         }
-    }, 47925: (se, R, o) => {
+    },
+    47925: (se, R, o) => {
         "use strict";
-        o.r(R), o.d(R, {breakpointSizeMapping: () => l});
-        const l = {
+        o.r(R), o.d(R, {breakpointSizeMapping: () => c});
+        const c = {
             "2x-small": "360px",
             "x-small": "512px",
             small: "768px",
@@ -16102,10 +16136,11 @@
             "x-large": "1400px",
             "2x-large": "1600px"
         }
-    }, 91418: (se, R, o) => {
+    },
+    91418: (se, R, o) => {
         "use strict";
         o.r(R), o.d(R, {
-            gunmetal: () => l,
+            gunmetal: () => c,
             light: () => i,
             white: () => y,
             black: () => e,
@@ -16117,11 +16152,11 @@
             card: () => n,
             alert: () => v,
             quality: () => k,
-            rarity: () => x,
+            rarity: () => P,
             god: () => I,
             fillColoringRules: () => A
         });
-        const l = {100: "#90CAF9", 300: "#527493", 500: "#3D5A74", 700: "#1D2F41", 900: "#0F1B27"},
+        const c = {100: "#90CAF9", 300: "#527493", 500: "#3D5A74", 700: "#1D2F41", 900: "#0F1B27"},
             i = {100: "#F6F6F6", 300: "#D7D7D7", 500: "#B6B6B6", 700: "#979797", 900: "#7F7F7F"}, y = "#ffffff",
             e = "#000000", m = {100: "#7F7F7F", 300: "#646464", 500: "#464646", 700: "#272727", 900: "#0A0A0A"},
             p = {100: "#AFFAED", 300: "#03A9F4", 500: "#54BBCD"}, g = {100: "#FCF7D4", 300: "#F7EA9B", 500: "#F2DC63"},
@@ -16135,7 +16170,7 @@
                 gold: "#E5D93C",
                 diamond: "#94E6FB",
                 mythic: "#ffffff"
-            }, x = {common: "#6D6C6D", rare: "#3C8ED2", epic: "#6D1FC4", legendary: "#D8A638", mythic: "#D02C3A"}, I = {
+            }, P = {common: "#6D6C6D", rare: "#3C8ED2", epic: "#6D1FC4", legendary: "#D8A638", mythic: "#D02C3A"}, I = {
                 deception: {primary: "#FA77FC", secondary: "#CA3FD8", tertiary: "#8F189B"},
                 war: {primary: "#FF8B01", secondary: "#D73333", tertiary: "#99011A"},
                 death: {primary: "#9C4EF9", secondary: "#35145B", tertiary: "#35145B"},
@@ -16144,19 +16179,20 @@
                 light: {primary: "#FBE29F", secondary: "#FFD76E", tertiary: "#FAB248"}
             },
             A = "\n  /* Styles to use when there is a gradientFill set ... */\n  :host([fillGradient]),\n  :host([fillGradient]) ::slotted(*) {\n    background: var(--textFillGradient);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n  }\n\n  /* Styles to use when there is a simple fill color set ... */\n  :host([fillColor]),\n  :host([fillColor]) ::slotted(*) {\n    color: var(--textFillColor);\n\n    /* Use the text coloring for border color, and allow it to be over-written */\n    border-color: var(--textFillColor);\n  }\n\n  /* Styles to use when there is a simple fill color hover set ... */\n  :host([fillColorHover]:hover),\n  :host([fillColorHover]:hover) ::slotted(*) {\n    color: var(--textFillColorHover);\n\n    /* Use the text coloring for border color, and allow it to be over-written */\n    border-color: var(--textFillColorHover);\n  }\n\n  /* Styles to use when there is a simple border color set ... */\n  :host([borderColor]),\n  :host([borderColor]) ::slotted(*) {\n    border-color: var(--borderColor);\n  }\n\n  /* Styles to use when there is a simple border color hover set ... */\n  :host([borderColorHover]:hover),\n  :host([borderColorHover]:hover) ::slotted(*) {\n    border-color: var(--borderColorHover);\n  }\n\n  /* Styles to use when there is a simple background color fill set ... */\n  :host([backgroundFillColor]),\n  :host([backgroundFillColor]) ::slotted(*) {\n    background-color: var(--backgroundFillColor);\n  }\n\n  /* Styles to use when there is a simple background color fill hover set ... */\n  :host([backgroundFillColorHover]:hover),\n  :host([backgroundFillColorHover]:hover) ::slotted(*) {\n    background-color: var(--backgroundFillColorHover);\n  }\n"
-    }, 65281: (se, R, o) => {
+    },
+    65281: (se, R, o) => {
         "use strict";
         o.r(R), o.d(R, {
-            animation: () => l,
+            animation: () => c,
             breakpoints: () => r,
             colors: () => t,
             gradients: () => i,
-            measurements: () => P,
+            measurements: () => S,
             typography: () => b,
-            uifx: () => $
+            uifx: () => T
         });
-        var l = {};
-        o.r(l), o.d(l, {
+        var c = {};
+        o.r(c), o.d(c, {
             slowTransition: () => g,
             slowTransitionDuration: () => m,
             standardTransition: () => p,
@@ -16165,7 +16201,7 @@
         });
         var i = {};
         o.r(i), o.d(i, {
-            apocyan: () => x,
+            apocyan: () => P,
             dark: () => I,
             god: () => f,
             gold: () => n,
@@ -16187,7 +16223,7 @@
                 mirror: (s = "bottom") => `\n  linear-gradient(\n    to ${s},\n    ${t.gunmetal[900]} 0%,\n    ${t.gunmetal[700]} 50%,\n    ${t.gunmetal[900]} 100%\n  );\n`
             },
             k = {simple: (s = "top") => `\n  linear-gradient(\n    to ${s},\n    ${t.yellow[100]} 0%,\n    ${t.yellow[300]} 50%,\n    ${t.yellow[500]} 100%\n  );\n`},
-            x = {
+            P = {
                 simple: (s = "top") => `linear-gradient(\n    to ${s},\n    ${t.apocyan[100]} 0%,\n    ${t.apocyan[500]} 100%\n  );`,
                 mirror: (s = "top") => `linear-gradient(\n    to ${s},\n    ${t.apocyan[500]} 0%,\n    ${t.apocyan[100]} 50%,\n    ${t.apocyan[500]} 100%\n  );`
             },
@@ -16202,8 +16238,9 @@
                 light: (s = "top") => `\n    linear-gradient(\n      to ${s},\n      ${t.god.light.primary} 0%,\n      ${t.god.light.secondary} 50%,\n      ${t.god.light.tertiary} 100%\n    )`
             },
             O = s => `background: ${s};\n  background-clip: text;\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;`;
-        var P = o(49219), b = o(66974), $ = o(61462)
-    }, 49219: (se, R, o) => {
+        var S = o(49219), b = o(66974), T = o(61462)
+    },
+    49219: (se, R, o) => {
         "use strict";
         o.r(R), o.d(R, {
             spacingAmountMapping: () => i,
@@ -16217,10 +16254,10 @@
             headerBarZLevel: () => n,
             electronMenuBarZLevel: () => v,
             modalLayerZLevel: () => k,
-            electronTitleBarHeight: () => x,
+            electronTitleBarHeight: () => P,
             imageQualities: () => I
         });
-        var l = o(80102);
+        var c = o(80102);
         const i = {
                 "2x-small": "2px",
                 "x-small": "4px",
@@ -16236,12 +16273,13 @@
                 "7x-large": "128px",
                 "8x-large": "192px",
                 "9x-large": "320px"
-            }, y = "150ms", e = "ease-in-out", m = "1px", p = (0, l.gridUnits)(7), g = 80, r = "80px", t = 50, n = 22,
-            v = 23, k = 22, x = (0, l.gridUnits)(7), I = {small: 128, normal: 256, high: 512, xHigh: 720, best: 1024}
-    }, 66974: (se, R, o) => {
+            }, y = "150ms", e = "ease-in-out", m = "1px", p = (0, c.gridUnits)(7), g = 80, r = "80px", t = 50, n = 22,
+            v = 23, k = 22, P = (0, c.gridUnits)(7), I = {small: 128, normal: 256, high: 512, xHigh: 720, best: 1024}
+    },
+    66974: (se, R, o) => {
         "use strict";
         o.r(R), o.d(R, {
-            iconTextStyles: () => l,
+            iconTextStyles: () => c,
             headingFont: () => i,
             simpleFont: () => y,
             textAlignRules: () => e,
@@ -16249,7 +16287,7 @@
             simpleTextSizeMapping: () => p,
             baseSimpleTextStyles: () => g
         });
-        const l = "\n  font-family: 'gu-cons';\n  font-feature-settings: 'liga' 1;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  vertical-align: middle;\n  letter-spacing: 0;\n  line-height: 1;\n\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n",
+        const c = "\n  font-family: 'gu-cons';\n  font-feature-settings: 'liga' 1;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  vertical-align: middle;\n  letter-spacing: 0;\n  line-height: 1;\n\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n",
             i = "\n  font-family: 'Unchained', serif;\n", y = "\n  font-family: 'Open Sans', sans-serif;\n",
             e = "\n  :host([align='center']),\n  :host([align='center']) ::slotted(*) {\n    text-align: center;\n  }\n\n  :host([align='left']),\n  :host([align='left']) ::slotted(*) {\n    text-align: left;\n  }\n\n  :host([align='right']),\n  :host([align='right']) ::slotted(*) {\n    text-align: right;\n  }\n",
             m = {
@@ -16262,16 +16300,18 @@
                 "2x-large": "72px"
             }, p = {large: "20px", small: "16px", help: "14px", tag: "12px", micro: "10px"},
             g = `\n  ${y}\n  line-height: 1.1;\n`
-    }, 61462: (se, R, o) => {
+    },
+    61462: (se, R, o) => {
         "use strict";
-        o.r(R), o.d(R, {userSelect: () => l});
-        const l = i => `\n    -webkit-user-select: ${i};\n    user-select: ${i};\n    pointer-events: ${i};\n  `
-    }, 58672: (se, R, o) => {
+        o.r(R), o.d(R, {userSelect: () => c});
+        const c = i => `\n    -webkit-user-select: ${i};\n    user-select: ${i};\n    pointer-events: ${i};\n  `
+    },
+    58672: (se, R, o) => {
         "use strict";
         o.d(R, {x: () => i});
-        var l = o(25297);
+        var c = o(25297);
 
-        function i({renderer: y, baseClass: e = l.J, props: m = {}}) {
+        function i({renderer: y, baseClass: e = c.J, props: m = {}}) {
             const p = class extends e {
                 render() {
                     return y.call(this, this)
@@ -16279,9 +16319,10 @@
             };
             return Object.entries(m).forEach(([g, r]) => p[g] = r), p
         }
-    }, 51256: (se, R, o) => {
+    },
+    51256: (se, R, o) => {
         "use strict";
-        var l = o(70655), i = o(32830), y = o(56418), e = o(86041), m = o(5284), p = o(65171), g = o(26532),
+        var c = o(70655), i = o(32830), y = o(56418), e = o(86041), m = o(5284), p = o(65171), g = o(26532),
             r = o(65281), t = o(47925), n = o(91418);
         let v = class extends i.oi {
             constructor() {
@@ -16353,8 +16394,8 @@
                 return this.responsiveSize.length ? i.dy`
           <style>
             /* DEFINE RESPONSIVE SIZING */
-            ${this.responsiveSize.map(({breakpoint: x, size: I}) => i.iv`
-                @media screen and (min-width: ${(0, g.asCssProp)(t.breakpointSizeMapping[x])}) {
+            ${this.responsiveSize.map(({breakpoint: P, size: I}) => i.iv`
+                @media screen and (min-width: ${(0, g.asCssProp)(t.breakpointSizeMapping[P])}) {
                   :host(.overWrite[size='${(0, g.asCssProp)(this.size)}']),
                   :host(.overWrite[size='${(0, g.asCssProp)(this.size)}']) ::slotted(*) {
                     font-size: ${(0, g.asCssProp)(r.typography.headingSizeMapping[I])} !important;
@@ -16366,10 +16407,10 @@
             }
 
             render() {
-                const {fillColor: x, fillGradient: I, fillGradientTarget: A} = this;
+                const {fillColor: P, fillGradient: I, fillGradientTarget: A} = this;
                 return (0, p.updateColoringVariables)({
                     component: this,
-                    fillColor: x,
+                    fillColor: P,
                     fillGradient: I,
                     fillGradientTarget: A
                 }), this.setAttribute("size", this.size), this.responsiveSize.length ? this.classList.add("overWrite") : this.classList.remove("overWrite"), i.dy`
@@ -16378,10 +16419,11 @@
     `
             }
         };
-        (0, l.gn)([(0, y.C)({type: String})], v.prototype, "size", void 0), (0, l.gn)([(0, y.C)({type: String})], v.prototype, "align", void 0), (0, l.gn)([(0, y.C)({type: String})], v.prototype, "fillColor", void 0), (0, l.gn)([(0, y.C)({type: String})], v.prototype, "fillGradient", void 0), (0, l.gn)([(0, y.C)({type: String})], v.prototype, "fillGradientTarget", void 0), (0, l.gn)([(0, y.C)({type: Array})], v.prototype, "responsiveSize", void 0), v = (0, l.gn)([(0, e.M)("gu-heading-text")], v)
-    }, 11015: (se, R, o) => {
+        (0, c.gn)([(0, y.C)({type: String})], v.prototype, "size", void 0), (0, c.gn)([(0, y.C)({type: String})], v.prototype, "align", void 0), (0, c.gn)([(0, y.C)({type: String})], v.prototype, "fillColor", void 0), (0, c.gn)([(0, y.C)({type: String})], v.prototype, "fillGradient", void 0), (0, c.gn)([(0, y.C)({type: String})], v.prototype, "fillGradientTarget", void 0), (0, c.gn)([(0, y.C)({type: Array})], v.prototype, "responsiveSize", void 0), v = (0, c.gn)([(0, e.M)("gu-heading-text")], v)
+    },
+    11015: (se, R, o) => {
         "use strict";
-        var l = o(70655), i = o(32830), y = o(86041), e = o(52102);
+        var c = o(70655), i = o(32830), y = o(86041), e = o(52102);
         let m = class extends e._ {
             static get styles() {
                 return i.iv`
@@ -16414,14 +16456,15 @@
     `
             }
         };
-        m = (0, l.gn)([(0, y.M)("gu-paragraph-text")], m)
-    }, 52102: (se, R, o) => {
+        m = (0, c.gn)([(0, y.M)("gu-paragraph-text")], m)
+    },
+    52102: (se, R, o) => {
         "use strict";
-        o.d(R, {_: () => x});
-        var l = o(70655), i = o(32830), y = o(56418), e = o(86041), m = o(5284), p = o(65281), g = o(26532),
+        o.d(R, {_: () => P});
+        var c = o(70655), i = o(32830), y = o(56418), e = o(86041), m = o(5284), p = o(65281), g = o(26532),
             r = o(91418), t = o(66974), n = o(61462);
         const v = `\n  font-size: ${(0, g.asCssProp)(p.typography.simpleTextSizeMapping.tag)};\n  font-weight: 700;\n  text-transform: uppercase;\n`;
-        let x = class extends i.oi {
+        let P = class extends i.oi {
             constructor() {
                 super(...arguments), this.align = "center", this.fontStyle = "regular", this.responsiveKind = []
             }
@@ -16485,8 +16528,8 @@
                 return this.responsiveKind.length ? i.dy`
           <style>
             /* DEFINE RESPONSIVE SIZING */
-            ${this.responsiveKind.map(({breakpoint: P, kind: b = "small"}) => i.iv`
-                @media screen and (min-width: ${f(A[P])}) {
+            ${this.responsiveKind.map(({breakpoint: S, kind: b = "small"}) => i.iv`
+                @media screen and (min-width: ${f(A[S])}) {
                   :host(.overWrite[kind='${f(this.kind)}']),
                   :host(.overWrite[kind='${f(this.kind)}']) ::slotted(*) {
                     font-size: ${f(O[b])} !important;
@@ -16504,16 +16547,16 @@
                 const {updateColoringVariables: A} = m.gt, {
                     fillColor: f,
                     fillGradient: O,
-                    fillGradientTarget: P,
+                    fillGradientTarget: S,
                     borderColor: b,
-                    fillColorHover: $
+                    fillColorHover: T
                 } = this;
                 return A({
                     component: this,
                     fillColor: f,
-                    fillColorHover: $,
+                    fillColorHover: T,
                     fillGradient: O,
-                    fillGradientTarget: P,
+                    fillGradientTarget: S,
                     borderColor: b
                 }), this.setAttribute("kind", this.kind), this.responsiveKind.length ? this.classList.add("overWrite") : this.classList.remove("overWrite"), i.dy`
       ${this.generateMediaQueries()} ${this.text ? this.text : ""}
@@ -16521,37 +16564,39 @@
     `
             }
         };
-        (0, l.gn)([(0, y.C)()], x.prototype, "kind", void 0), (0, l.gn)([(0, y.C)()], x.prototype, "align", void 0), (0, l.gn)([(0, y.C)()], x.prototype, "fontStyle", void 0), (0, l.gn)([(0, y.C)()], x.prototype, "fontWeight", void 0), (0, l.gn)([(0, y.C)()], x.prototype, "text", void 0), (0, l.gn)([(0, y.C)()], x.prototype, "fillColor", void 0), (0, l.gn)([(0, y.C)()], x.prototype, "fillColorHover", void 0), (0, l.gn)([(0, y.C)()], x.prototype, "borderColor", void 0), (0, l.gn)([(0, y.C)()], x.prototype, "fillGradient", void 0), (0, l.gn)([(0, y.C)()], x.prototype, "fillGradientTarget", void 0), (0, l.gn)([(0, y.C)()], x.prototype, "responsiveKind", void 0), x = (0, l.gn)([(0, e.M)("gu-simple-text")], x)
-    }, 56302: (se, R, o) => {
+        (0, c.gn)([(0, y.C)()], P.prototype, "kind", void 0), (0, c.gn)([(0, y.C)()], P.prototype, "align", void 0), (0, c.gn)([(0, y.C)()], P.prototype, "fontStyle", void 0), (0, c.gn)([(0, y.C)()], P.prototype, "fontWeight", void 0), (0, c.gn)([(0, y.C)()], P.prototype, "text", void 0), (0, c.gn)([(0, y.C)()], P.prototype, "fillColor", void 0), (0, c.gn)([(0, y.C)()], P.prototype, "fillColorHover", void 0), (0, c.gn)([(0, y.C)()], P.prototype, "borderColor", void 0), (0, c.gn)([(0, y.C)()], P.prototype, "fillGradient", void 0), (0, c.gn)([(0, y.C)()], P.prototype, "fillGradientTarget", void 0), (0, c.gn)([(0, y.C)()], P.prototype, "responsiveKind", void 0), P = (0, c.gn)([(0, e.M)("gu-simple-text")], P)
+    },
+    56302: (se, R, o) => {
         "use strict";
-        o.d(R, {X8: () => l, IU: () => m, Qo: () => r});
-        var l = (() => {
-            return (t = l || (l = {})).FETCH_USER_WALLET = "[Account] Fetch User Wallet", t.FETCH_USER_WALLET_SUCCESS = "[Account] Fetch User Wallet Success", t.FETCH_USER_WALLET_ERROR = "[Account] Fetch User Wallet Error", t.UPDATE_USER_ETH_BALANCE = "[Account] Update User Eth Balance", t.FETCH_USER_ACCOUNT = "[Account] Fetch User Account", t.FETCH_USER_ACCOUNT_SUCCESS = "[Account] Fetch User Account Success", t.FETCH_USER_ACCOUNT_ERROR = "[Account] Fetch User Account Error", l;
+        o.d(R, {X8: () => c, IU: () => m, Qo: () => r});
+        var c = (() => {
+            return (t = c || (c = {})).FETCH_USER_WALLET = "[Account] Fetch User Wallet", t.FETCH_USER_WALLET_SUCCESS = "[Account] Fetch User Wallet Success", t.FETCH_USER_WALLET_ERROR = "[Account] Fetch User Wallet Error", t.UPDATE_USER_ETH_BALANCE = "[Account] Update User Eth Balance", t.FETCH_USER_ACCOUNT = "[Account] Fetch User Account", t.FETCH_USER_ACCOUNT_SUCCESS = "[Account] Fetch User Account Success", t.FETCH_USER_ACCOUNT_ERROR = "[Account] Fetch User Account Error", c;
             var t
         })();
 
         class m {
             constructor() {
-                this.type = l.FETCH_USER_WALLET
+                this.type = c.FETCH_USER_WALLET
             }
         }
 
         class r {
             constructor(n) {
-                this.payload = n, this.type = l.UPDATE_USER_ETH_BALANCE
+                this.payload = n, this.type = c.UPDATE_USER_ETH_BALANCE
             }
         }
-    }, 43991: (se, R, o) => {
+    },
+    43991: (se, R, o) => {
         "use strict";
-        o.d(R, {z: () => x});
-        var l = o(40520), i = o(73307), y = o(52909), e = o(591), m = o(30567), p = o(72986), g = o(24850), r = (() => {
+        o.d(R, {z: () => P});
+        var c = o(40520), i = o(73307), y = o(52909), e = o(591), m = o(30567), p = o(72986), g = o(24850), r = (() => {
             return (I = r || (r = {})).CARD = "card", I.DECK = "deck", I.PACKAGE = "package", I.TOME = "tome", I.CARD_BACK = "cardback", I.BOARD = "board", I.TRINKET = "trinket", I.EMOTE = "emote", I.ICON = "icon", r;
             var I
         })(), v = o(5e3), k = o(55778);
-        let x = (() => {
+        let P = (() => {
             class I {
-                constructor(f, O, P, b) {
-                    this.authService = f, this.marketplaceApiService = O, this.authHostService = P, this.guApiService = b, this.dataStore = {
+                constructor(f, O, S, b) {
+                    this.authService = f, this.marketplaceApiService = O, this.authHostService = S, this.guApiService = b, this.dataStore = {
                         usersSoldCards: [],
                         userHasNewSoldCards: !1
                     }, this._usersSoldCards = new e.X([]), this._userHasNewSoldCards = new e.X(!1), console.log("@Cerberus/AssetsService constructor")
@@ -16579,28 +16624,28 @@
                 }
 
                 appendSearchParams(f, O) {
-                    let P = new l.LE;
-                    if (O.sortBy && (P = P.append("sort", O.sortBy)), O.orderBy && (P = P.append("order", O.orderBy)), O.groupBy) {
-                        switch (P = P.append("group", O.groupBy), O.assetType) {
+                    let S = new c.LE;
+                    if (O.sortBy && (S = S.append("sort", O.sortBy)), O.orderBy && (S = S.append("order", O.orderBy)), O.groupBy) {
+                        switch (S = S.append("group", O.groupBy), O.assetType) {
                             case r.CARD:
-                                P = P.append("group", "quality_name"), P = P.append("group", "quality");
+                                S = S.append("group", "quality_name"), S = S.append("group", "quality");
                                 break;
                             case r.BOARD:
-                                P = P.append("group", "level");
+                                S = S.append("group", "level");
                                 break;
                             case r.TRINKET:
-                                P = P.append("group", "heads");
+                                S = S.append("group", "heads");
                                 break;
                             default:
-                                P = P.append("group", "quality_name"), P = P.append("group", "quality")
+                                S = S.append("group", "quality_name"), S = S.append("group", "quality")
                         }
-                        P = P.append("group", "proto")
+                        S = S.append("group", "proto")
                     }
-                    return O.splitBy && (P = P.append("split", O.splitBy)), O.currentPage && (P = P.append("page", O.currentPage.toString())), O.perPage && (P = P.append("perPage", O.perPage.toString())), O.assetType && (P = P.append("asset_type", O.assetType)), f.owner && (P = P.append("owner", f.owner)), f.token_id && (P = P.append("token_id", f.token_id)), f.contract && (P = P.append("contract", f.contract)), f.properties && f.properties.length > 0 && (P = P.append("properties", this.stringifyMetaDataFilters(f.properties))), f.class_properties && f.class_properties.length > 0 && (P = P.append("class_properties", this.stringifyMetaDataFilters(f.class_properties))), P
+                    return O.splitBy && (S = S.append("split", O.splitBy)), O.currentPage && (S = S.append("page", O.currentPage.toString())), O.perPage && (S = S.append("perPage", O.perPage.toString())), O.assetType && (S = S.append("asset_type", O.assetType)), f.owner && (S = S.append("owner", f.owner)), f.token_id && (S = S.append("token_id", f.token_id)), f.contract && (S = S.append("contract", f.contract)), f.properties && f.properties.length > 0 && (S = S.append("properties", this.stringifyMetaDataFilters(f.properties))), f.class_properties && f.class_properties.length > 0 && (S = S.append("class_properties", this.stringifyMetaDataFilters(f.class_properties))), S
                 }
 
                 appendFilterParams(f) {
-                    let O = new l.LE;
+                    let O = new c.LE;
                     return f.owner && (O = O.append("owner", f.owner)), f.asset_type && (O = O.append("asset_type", f.asset_type)), f.token_id && (O = O.append("token_id", f.token_id)), f.contract && (O = O.append("contract", f.contract)), f.properties && f.properties.length > 0 && (console.log("properties", this.stringifyMetaDataFilters(f.properties)), O = O.append("properties", this.stringifyMetaDataFilters(f.properties))), f.class_properties && f.class_properties.length > 0 && (O = O.append("class_properties", this.stringifyMetaDataFilters(f.class_properties))), O
                 }
 
@@ -16610,8 +16655,8 @@
                 }
 
                 getSoldAssets({userId: f = this.authService.getUserId(), showNotifications: O = !0} = {}) {
-                    console.log("@Cerberus/AssetsService.getSoldAssets({ userId, showNotifications })", f, O), this.marketplaceApiService.get(`/user/${f}/sold`).pipe((0, p.q)(1)).subscribe(P => {
-                        O && this.checkForNewCards(P) && (this.dataStore.userHasNewSoldCards = !0, this._userHasNewSoldCards.next(this.dataStore.userHasNewSoldCards)), this.dataStore.usersSoldCards = P, this._usersSoldCards.next([...this.dataStore.usersSoldCards])
+                    console.log("@Cerberus/AssetsService.getSoldAssets({ userId, showNotifications })", f, O), this.marketplaceApiService.get(`/user/${f}/sold`).pipe((0, p.q)(1)).subscribe(S => {
+                        O && this.checkForNewCards(S) && (this.dataStore.userHasNewSoldCards = !0, this._userHasNewSoldCards.next(this.dataStore.userHasNewSoldCards)), this.dataStore.usersSoldCards = S, this._usersSoldCards.next([...this.dataStore.usersSoldCards])
                     })
                 }
 
@@ -16631,13 +16676,13 @@
                     this.dataStore.userHasNewSoldCards = !1, this._userHasNewSoldCards.next(this.dataStore.userHasNewSoldCards)
                 }
 
-                getSellingAssets$(f = 1, O = 31, P = this.authService.getUserId()) {
-                    return this.marketplaceApiService.get(`/user/${P}/selling?page=${f}&perPage=${O}`)
+                getSellingAssets$(f = 1, O = 31, S = this.authService.getUserId()) {
+                    return this.marketplaceApiService.get(`/user/${S}/selling?page=${f}&perPage=${O}`)
                 }
 
                 getUsernamesFromAddresses(f) {
                     const O = [];
-                    for (let P = 0; P < f.length; P++) O.push(this.getUsernameFromAddress(f[P].owner).pipe((0, g.U)(b => b)));
+                    for (let S = 0; S < f.length; S++) O.push(this.getUsernameFromAddress(f[S].owner).pipe((0, g.U)(b => b)));
                     return (0, m.D)(O)
                 }
 
@@ -16647,45 +16692,45 @@
 
                 mapPriceHistory(f) {
                     return f ? f.map(O => {
-                        const b = new Date(0).setUTCSeconds(O.block_timestamp), $ = y.O$.from(10).pow(18);
-                        return {price: y.O$.from(O.taker_asset_amount).div($).toNumber(), timestamp: b}
+                        const b = new Date(0).setUTCSeconds(O.block_timestamp), T = y.O$.from(10).pow(18);
+                        return {price: y.O$.from(O.taker_asset_amount).div(T).toNumber(), timestamp: b}
                     }) : []
                 }
 
-                getAssetGroupPriceHistory(f, O, P, b) {
-                    console.log(O, P);
-                    let $ = {};
+                getAssetGroupPriceHistory(f, O, S, b) {
+                    console.log(O, S);
+                    let T = {};
                     switch (b) {
                         case r.CARD:
-                            $ = JSON.stringify({proto: parseInt(O, 10), quality: parseInt(P, 10)});
+                            T = JSON.stringify({proto: parseInt(O, 10), quality: parseInt(S, 10)});
                             break;
                         case r.TRINKET:
-                            $ = void 0 !== P && "undefined" !== P ? JSON.stringify({heads: parseInt(P, 10)}) : JSON.stringify({});
+                            T = void 0 !== S && "undefined" !== S ? JSON.stringify({heads: parseInt(S, 10)}) : JSON.stringify({});
                             break;
                         case r.BOARD:
-                            $ = JSON.stringify({level: parseInt(P, 10)});
+                            T = JSON.stringify({level: parseInt(S, 10)});
                             break;
                         default:
-                            $ = JSON.stringify({})
+                            T = JSON.stringify({})
                     }
                     return this.marketplaceApiService.get(`/asset/${f}/price`, {
                         params: {
                             type: b,
-                            asset_group: $
+                            asset_group: T
                         }
                     }).pipe((0, g.U)(s => this.mapPriceHistory(s)))
                 }
 
                 getAssetPriceHistory(f, O) {
-                    return this.marketplaceApiService.get(`/asset/${f}/${O}/price`).pipe((0, g.U)(P => this.mapPriceHistory(P)))
+                    return this.marketplaceApiService.get(`/asset/${f}/${O}/price`).pipe((0, g.U)(S => this.mapPriceHistory(S)))
                 }
 
-                getOwnedAssets$(f = 1, O = 31, P = this.authService.getUserId()) {
-                    return this.marketplaceApiService.get(`/user/${P}/asset/ethereumgroup?page=${f}&perPage=${O}`)
+                getOwnedAssets$(f = 1, O = 31, S = this.authService.getUserId()) {
+                    return this.marketplaceApiService.get(`/user/${S}/asset/ethereumgroup?page=${f}&perPage=${O}`)
                 }
 
-                getOwnedAssets(f, O, P = this.authService.getUserId()) {
-                    return this.marketplaceApiService.get(`/user/${P}/asset/ethereumgroup`, {params: this.appendSearchParams(f, O)})
+                getOwnedAssets(f, O, S = this.authService.getUserId()) {
+                    return this.marketplaceApiService.get(`/user/${S}/asset/ethereumgroup`, {params: this.appendSearchParams(f, O)})
                 }
 
                 getOwnedAssetFilters(f, O = this.authService.getUserId()) {
@@ -16697,18 +16742,21 @@
                 return new (f || I)(v.LFG(i.mI), v.LFG(k._q), v.LFG(i.LI), v.LFG(k.Ho))
             }, I.\u0275prov = v.Yz7({token: I, factory: I.\u0275fac}), I
         })()
-    }, 40886: (se, R, o) => {
+    },
+    40886: (se, R, o) => {
         "use strict";
-        o.d(R, {Y: () => l, t: () => i});
-        const l = 3, i = 1
-    }, 72224: (se, R, o) => {
+        o.d(R, {Y: () => c, t: () => i});
+        const c = 3, i = 1
+    },
+    72224: (se, R, o) => {
         "use strict";
-        o.d(R, {v: () => l});
-        const l = 2147483647
-    }, 69181: (se, R, o) => {
+        o.d(R, {v: () => c});
+        const c = 2147483647
+    },
+    69181: (se, R, o) => {
         "use strict";
-        o.d(R, {$: () => l});
-        const l = [{name: "twitter", link: "https://twitter.com/GodsUnchained"}, {
+        o.d(R, {$: () => c});
+        const c = [{name: "twitter", link: "https://twitter.com/GodsUnchained"}, {
             name: "reddit",
             link: "https://www.reddit.com/r/GodsUnchained/"
         }, {name: "facebook", link: "https://www.facebook.com/godsunchained/"}, {
@@ -16718,11 +16766,12 @@
             name: "youtube",
             link: "https://www.youtube.com/channel/UCGQ1oWpKFfjsLYiTYALAlSA"
         }, {name: "twitch", link: "https://www.twitch.tv/godsunchained/videos"}]
-    }, 94057: (se, R, o) => {
+    },
+    94057: (se, R, o) => {
         "use strict";
-        o.d(R, {gv: () => y, zy: () => l, CF: () => i});
-        var l = {};
-        o.r(l), o.d(l, {Y: () => e});
+        o.d(R, {gv: () => y, zy: () => c, CF: () => i});
+        var c = {};
+        o.r(c), o.d(c, {Y: () => e});
         var i = {};
         o.r(i), o.d(i, {J: () => Ae, Y: () => je});
         var y = {};
@@ -16771,9 +16820,9 @@
             protoId: 827
         }];
         o(69181), o(94417), o(40520), o(591), o(8929), o(36053), o(21086), o(61737), o(24850), o(2994), o(72986), o(61709), o(27221);
-        var P = o(73175);
-        o(73307), o(5e3), o(55778), new P.N0, o(40886), o(52909), o(67806), o(26959), o(74323), o(47760), o(18499), o(45425), o(5254), o(68896), o(56498), o(92198), o(56302), o(96727), o(11735), o(43991);
-        var Pe = o(1025);
+        var S = o(73175);
+        o(73307), o(5e3), o(55778), new S.N0, o(40886), o(52909), o(67806), o(26959), o(74323), o(47760), o(18499), o(45425), o(5254), o(68896), o(56498), o(92198), o(56302), o(96727), o(11735), o(43991);
+        var Se = o(1025);
         const Ae = {
             home: {
                 shortName: "home",
@@ -16839,7 +16888,7 @@
                         pageTitle: "Learn: Stay Play Get Paid",
                         keywords: "",
                         description: "",
-                        featureFlag: Pe.v.spgpEnabled
+                        featureFlag: Se.v.spgpEnabled
                     },
                     referrals: {
                         shortName: "Referrals",
@@ -16848,7 +16897,7 @@
                         pageTitle: "Learn: Referrals",
                         keywords: "",
                         description: "",
-                        featureFlag: Pe.v.referralsEnabled
+                        featureFlag: Se.v.referralsEnabled
                     }
                 }
             },
@@ -16877,19 +16926,19 @@
                         shortName: "About",
                         path: "token/about",
                         pageTitle: "Learn about GODS token",
-                        featureFlag: Pe.v.tokenEnabled
+                        featureFlag: Se.v.tokenEnabled
                     },
                     airdrop: {
                         shortName: "Claim",
                         path: "token/claim",
                         pageTitle: "Claim GODS token",
-                        featureFlag: Pe.v.claimAirdropEnabled
+                        featureFlag: Se.v.claimAirdropEnabled
                     },
                     staking: {
                         shortName: "Staking",
                         path: "token/staking",
                         pageTitle: "Staking $GODS token",
-                        featureFlag: Pe.v.stakingEnabled
+                        featureFlag: Se.v.stakingEnabled
                     }
                 }
             }
@@ -16926,7 +16975,7 @@
                 pageTitle: "Collections: Your collections"
             },
             workshop: {shortName: "workshop", path: "game/gu/my-decks", icon: "nav_workshop"},
-            forge: {path: "game/gu/forge", icon: "nav_forge", shortName: "forge", featureFlag: Pe.v.forgeEnabled},
+            forge: {path: "game/gu/forge", icon: "nav_forge", shortName: "forge", featureFlag: Se.v.forgeEnabled},
             openPacks: {shortName: "open packs", path: "game/gu/temple", icon: "nav_temple"},
             learn: {
                 shortName: "learn",
@@ -16955,7 +17004,7 @@
             playToEarn: {
                 shortName: "Play to Earn",
                 path: "game/gu/play-to-earn",
-                featureFlag: Pe.v.playToEarnEnabled,
+                featureFlag: Se.v.playToEarnEnabled,
                 visible: !0
             },
             manageWallets: {
@@ -16966,51 +17015,54 @@
             },
             logOut: {shortName: "Log Out", visible: !0}
         })
-    }, 52886: (se, R, o) => {
+    },
+    52886: (se, R, o) => {
         "use strict";
-        o.d(R, {Zb: () => y, nE: () => k, nJ: () => l, Xl: () => i, PE: () => x});
-        var l = (() => {
-            return (P = l || (l = {}))[P.DIAMOND = 1] = "DIAMOND", P[P.GOLD = 2] = "GOLD", P[P.SHADOW = 3] = "SHADOW", P[P.METEORITE = 4] = "METEORITE", P[P.PLAIN = 5] = "PLAIN", l;
-            var P
+        o.d(R, {Zb: () => y, nE: () => k, nJ: () => c, Xl: () => i, PE: () => P});
+        var c = (() => {
+            return (S = c || (c = {}))[S.DIAMOND = 1] = "DIAMOND", S[S.GOLD = 2] = "GOLD", S[S.SHADOW = 3] = "SHADOW", S[S.METEORITE = 4] = "METEORITE", S[S.PLAIN = 5] = "PLAIN", c;
+            var S
         })();
         const i = {
-            [l.DIAMOND]: "diamond",
-            [l.GOLD]: "gold",
-            [l.SHADOW]: "shadow",
-            [l.METEORITE]: "meteorite",
-            [l.PLAIN]: "plain"
+            [c.DIAMOND]: "diamond",
+            [c.GOLD]: "gold",
+            [c.SHADOW]: "shadow",
+            [c.METEORITE]: "meteorite",
+            [c.PLAIN]: "plain"
         };
 
         class y {
-            constructor(b, $, s, C, w) {
-                this.id = b, this.proto = $, this.quality = s, this.protoCard = C, this.status = w
+            constructor(b, T, s, C, w) {
+                this.id = b, this.proto = T, this.quality = s, this.protoCard = C, this.status = w
             }
         }
 
         var k = (() => {
-            return (P = k || (k = {}))[P.All = -1] = "All", P[P.Owned = 0] = "Owned", P[P.Unowned = 1] = "Unowned", P[P.Processing = 2] = "Processing", k;
-            var P
-        })(), x = (() => {
-            return (P = x || (x = {}))[P.AscID = 0] = "AscID", P[P.DescID = 1] = "DescID", P[P.AscQuality = 2] = "AscQuality", P[P.DescQuality = 3] = "DescQuality", P[P.AscMana = 4] = "AscMana", P[P.DescMana = 5] = "DescMana", P[P.AscScarcity = 6] = "AscScarcity", P[P.AscHealth = 7] = "AscHealth", P[P.DescHealth = 8] = "DescHealth", P[P.AscAttack = 9] = "AscAttack", P[P.DescAttack = 10] = "DescAttack", P[P.AscTribe = 11] = "AscTribe", P[P.DescTribe = 12] = "DescTribe", P[P.AscRarity = 13] = "AscRarity", P[P.DescRarity = 14] = "DescRarity", P[P.AscType = 15] = "AscType", P[P.DescType = 16] = "DescType", P[P.AscGod = 17] = "AscGod", P[P.DescGod = 18] = "DescGod", P[P.AscSet = 19] = "AscSet", P[P.DescSet = 20] = "DescSet", x;
-            var P
+            return (S = k || (k = {}))[S.All = -1] = "All", S[S.Owned = 0] = "Owned", S[S.Unowned = 1] = "Unowned", S[S.Processing = 2] = "Processing", k;
+            var S
+        })(), P = (() => {
+            return (S = P || (P = {}))[S.AscID = 0] = "AscID", S[S.DescID = 1] = "DescID", S[S.AscQuality = 2] = "AscQuality", S[S.DescQuality = 3] = "DescQuality", S[S.AscMana = 4] = "AscMana", S[S.DescMana = 5] = "DescMana", S[S.AscScarcity = 6] = "AscScarcity", S[S.AscHealth = 7] = "AscHealth", S[S.DescHealth = 8] = "DescHealth", S[S.AscAttack = 9] = "AscAttack", S[S.DescAttack = 10] = "DescAttack", S[S.AscTribe = 11] = "AscTribe", S[S.DescTribe = 12] = "DescTribe", S[S.AscRarity = 13] = "AscRarity", S[S.DescRarity = 14] = "DescRarity", S[S.AscType = 15] = "AscType", S[S.DescType = 16] = "DescType", S[S.AscGod = 17] = "AscGod", S[S.DescGod = 18] = "DescGod", S[S.AscSet = 19] = "AscSet", S[S.DescSet = 20] = "DescSet", P;
+            var S
         })()
-    }, 28510: (se, R, o) => {
+    },
+    28510: (se, R, o) => {
         "use strict";
-        o.d(R, {mX: () => y.mX, Qz: () => l.Q, Zd: () => e});
-        var l = o(55943), i = o(5e3), y = o(46688);
+        o.d(R, {mX: () => y.mX, Qz: () => c.Q, Zd: () => e});
+        var c = o(55943), i = o(5e3), y = o(46688);
         let e = (() => {
             class m {
             }
 
             return m.\u0275fac = function (g) {
                 return new (g || m)
-            }, m.\u0275mod = i.oAB({type: m}), m.\u0275inj = i.cJS({providers: [l.Q]}), m
+            }, m.\u0275mod = i.oAB({type: m}), m.\u0275inj = i.cJS({providers: [c.Q]}), m
         })()
-    }, 46688: (se, R, o) => {
+    },
+    46688: (se, R, o) => {
         "use strict";
-        o.d(R, {m3: () => l, mX: () => i, x0: () => y});
+        o.d(R, {m3: () => c, mX: () => i, x0: () => y});
 
-        class l {
+        class c {
             constructor(m, p, g) {
                 this.nodes = m, this.viewRef = p, this.componentRef = g
             }
@@ -17065,39 +17117,40 @@
                 this.contentRef && this.contentRef.viewRef && this.contentRef.viewRef.destroy(), this.windowComponentRef = null, this.backdropComponentRef = null, this.contentRef = null
             }
         }
-    }, 55943: (se, R, o) => {
+    },
+    55943: (se, R, o) => {
         "use strict";
         o.d(R, {Q: () => Be});
-        var l = o(5e3), i = o(69808), y = o(8929), e = o(23753), m = o(7625), p = o(24850), g = o(92198), r = o(87168),
+        var c = o(5e3), i = o(69808), y = o(8929), e = o(23753), m = o(7625), p = o(24850), g = o(92198), r = o(87168),
             t = (() => {
-                return (W = t || (t = {}))[W.Tab = 9] = "Tab", W[W.Enter = 13] = "Enter", W[W.Escape = 27] = "Escape", W[W.Space = 32] = "Space", W[W.PageUp = 33] = "PageUp", W[W.PageDown = 34] = "PageDown", W[W.End = 35] = "End", W[W.Home = 36] = "Home", W[W.ArrowLeft = 37] = "ArrowLeft", W[W.ArrowUp = 38] = "ArrowUp", W[W.ArrowRight = 39] = "ArrowRight", W[W.ArrowDown = 40] = "ArrowDown", t;
-                var W
+                return (H = t || (t = {}))[H.Tab = 9] = "Tab", H[H.Enter = 13] = "Enter", H[H.Escape = 27] = "Escape", H[H.Space = 32] = "Space", H[H.PageUp = 33] = "PageUp", H[H.PageDown = 34] = "PageDown", H[H.End = 35] = "End", H[H.Home = 36] = "Home", H[H.ArrowLeft = 37] = "ArrowLeft", H[H.ArrowUp = 38] = "ArrowUp", H[H.ArrowRight = 39] = "ArrowRight", H[H.ArrowDown = 40] = "ArrowDown", t;
+                var H
             })();
         const n = ["a[href]", "button:not([disabled])", 'input:not([disabled]):not([type="hidden"])', "select:not([disabled])", "textarea:not([disabled])", "[contenteditable]", '[tabindex]:not([tabindex="-1"])'].join(", ");
 
-        function v(W) {
-            const he = Array.from(W.querySelectorAll(n)).filter(Q => -1 !== Q.tabIndex);
+        function v(H) {
+            const he = Array.from(H.querySelectorAll(n)).filter(Q => -1 !== Q.tabIndex);
             return [he[0], he[he.length - 1]]
         }
 
-        var x = o(46688);
+        var P = o(46688);
 
-        function $(W) {
-            return null != W
+        function T(H) {
+            return null != H
         }
 
-        "undefined" != typeof Element && !Element.prototype.closest && (Element.prototype.matches || (Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector), Element.prototype.closest = function (W) {
+        "undefined" != typeof Element && !Element.prototype.closest && (Element.prototype.matches || (Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector), Element.prototype.closest = function (H) {
             let he = this;
             if (!document.documentElement.contains(he)) return null;
             do {
-                if (he.matches(W)) return he;
+                if (he.matches(H)) return he;
                 he = he.parentElement || he.parentNode
             } while (null !== he && 1 === he.nodeType);
             return null
         });
         var ee = o(73307);
         let ce = (() => {
-            class W {
+            class H {
                 constructor(Q) {
                     this._environment = Q
                 }
@@ -17107,14 +17160,14 @@
                 }
             }
 
-            return W.\u0275fac = function (Q) {
-                return new (Q || W)(l.Y36(ee.Ho))
-            }, W.\u0275cmp = l.Xpm({
-                type: W,
+            return H.\u0275fac = function (Q) {
+                return new (Q || H)(c.Y36(ee.Ho))
+            }, H.\u0275cmp = c.Xpm({
+                type: H,
                 selectors: [["cerberus-modal-backdrop"]],
                 hostVars: 2,
                 hostBindings: function (Q, te) {
-                    2 & Q && l.Tol("cerberusModal__backdrop" + (te.backdropClass ? " " + te.backdropClass : ""))
+                    2 & Q && c.Tol("cerberusModal__backdrop" + (te.backdropClass ? " " + te.backdropClass : ""))
                 },
                 inputs: {backdropClass: "backdropClass"},
                 decls: 0,
@@ -17122,17 +17175,17 @@
                 template: function (Q, te) {
                 },
                 encapsulation: 2
-            }), W
+            }), H
         })();
-        var de = o(2994), fe = o(87545), Z = o(72986), X = (() => {
-            return (W = X || (X = {}))[W.BACKDROP_CLICK = 0] = "BACKDROP_CLICK", W[W.ESC = 1] = "ESC", X;
-            var W
+        var de = o(2994), fe = o(87545), N = o(72986), X = (() => {
+            return (H = X || (X = {}))[H.BACKDROP_CLICK = 0] = "BACKDROP_CLICK", H[H.ESC = 1] = "ESC", X;
+            var H
         })();
         const ae = ["dialog"], Y = ["*"];
         let ye = (() => {
-            class W {
+            class H {
                 constructor(Q, te, ue, pe) {
-                    this.environment = Q, this.document = te, this.elRef = ue, this.zone = pe, this.closed$ = new y.xQ, this.backdrop = !0, this.keyboard = !0, this.defaultStylings = !0, this.dismissEvent = new l.vpe
+                    this.environment = Q, this.document = te, this.elRef = ue, this.zone = pe, this.closed$ = new y.xQ, this.backdrop = !0, this.keyboard = !0, this.defaultStylings = !0, this.dismissEvent = new c.vpe
                 }
 
                 dismiss(Q) {
@@ -17150,7 +17203,7 @@
                             ue.defaultPrevented || this.zone.run(() => this.dismiss(X.ESC))
                         }));
                         let te = !1;
-                        (0, e.R)(this._dialogEl.nativeElement, "mousedown").pipe((0, m.R)(this.closed$), (0, de.b)(() => te = !1), (0, fe.w)(() => (0, e.R)(Q, "mouseup").pipe((0, m.R)(this.closed$), (0, Z.q)(1))), (0, g.h)(({target: ue}) => Q === ue)).subscribe(() => {
+                        (0, e.R)(this._dialogEl.nativeElement, "mousedown").pipe((0, m.R)(this.closed$), (0, de.b)(() => te = !1), (0, fe.w)(() => (0, e.R)(Q, "mouseup").pipe((0, m.R)(this.closed$), (0, N.q)(1))), (0, g.h)(({target: ue}) => Q === ue)).subscribe(() => {
                             te = !0
                         }), (0, e.R)(Q, "click").pipe((0, m.R)(this.closed$)).subscribe(({target: ue}) => {
                             !0 === this.backdrop && Q === ue && !te && this.zone.run(() => this.dismiss(X.BACKDROP_CLICK)), te = !1
@@ -17170,21 +17223,21 @@
                 }
             }
 
-            return W.\u0275fac = function (Q) {
-                return new (Q || W)(l.Y36(ee.Ho), l.Y36(i.K0), l.Y36(l.SBq), l.Y36(l.R0b))
-            }, W.\u0275cmp = l.Xpm({
-                type: W,
+            return H.\u0275fac = function (Q) {
+                return new (Q || H)(c.Y36(ee.Ho), c.Y36(i.K0), c.Y36(c.SBq), c.Y36(c.R0b))
+            }, H.\u0275cmp = c.Xpm({
+                type: H,
                 selectors: [["cerberus-modal-window"]],
                 viewQuery: function (Q, te) {
-                    if (1 & Q && l.Gf(ae, 7), 2 & Q) {
+                    if (1 & Q && c.Gf(ae, 7), 2 & Q) {
                         let ue;
-                        l.iGM(ue = l.CRH()) && (te._dialogEl = ue.first)
+                        c.iGM(ue = c.CRH()) && (te._dialogEl = ue.first)
                     }
                 },
                 hostAttrs: ["role", "dialog", "tabindex", "-1"],
                 hostVars: 4,
                 hostBindings: function (Q, te) {
-                    2 & Q && (l.uIk("aria-modal", !0)("aria-labelledby", te.ariaLabelledBy), l.Tol("cerberusModal" + (te.windowClass ? " " + te.windowClass : "")))
+                    2 & Q && (c.uIk("aria-modal", !0)("aria-labelledby", te.ariaLabelledBy), c.Tol("cerberusModal" + (te.windowClass ? " " + te.windowClass : "")))
                 },
                 inputs: {
                     ariaLabelledBy: "ariaLabelledBy",
@@ -17202,16 +17255,16 @@
                 vars: 4,
                 consts: [["role", "document"], ["dialog", ""]],
                 template: function (Q, te) {
-                    1 & Q && (l.F$t(), l.TgZ(0, "div", 0, 1), l.TgZ(2, "div"), l.Hsn(3), l.qZA(), l.qZA()), 2 & Q && (l.Tol("cerberusModal__dialog" + (te.size ? " cerberus-modal-" + te.size : "") + (te.defaultStylings ? " cerberusModal__dialog--defaultStylings" : "") + (te.centered ? " cerberusModal__dialog--centered" : "") + (te.scrollable ? " cerberusModal__dialog--scrollable" : "") + (te.modalEnviornment ? " cerberusModal__dialog--" + te.modalEnviornment : "")), l.xp6(2), l.Tol("cerberusModal__content" + (te.defaultStylings ? " cerberusModal__content--defaultStylings" : "")))
+                    1 & Q && (c.F$t(), c.TgZ(0, "div", 0, 1)(2, "div"), c.Hsn(3), c.qZA()()), 2 & Q && (c.Tol("cerberusModal__dialog" + (te.size ? " cerberus-modal-" + te.size : "") + (te.defaultStylings ? " cerberusModal__dialog--defaultStylings" : "") + (te.centered ? " cerberusModal__dialog--centered" : "") + (te.scrollable ? " cerberusModal__dialog--scrollable" : "") + (te.modalEnviornment ? " cerberusModal__dialog--" + te.modalEnviornment : "")), c.xp6(2), c.Tol("cerberusModal__content" + (te.defaultStylings ? " cerberusModal__content--defaultStylings" : "")))
                 },
                 styles: ['.cerberusModal__open{overflow:hidden;height:100vh;width:100vw;user-select:none;pointer-events:none}.cerberusModal__open .cerberusModal{overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;user-select:auto;pointer-events:auto}.cerberusModal{position:fixed;top:0;left:0;z-index:22;width:100%;height:100%;overflow:hidden;outline:0;display:flex;justify-content:center;align-items:flex-start}.cerberusModal__dialog{position:relative;width:auto;pointer-events:none;justify-content:center;display:flex}.cerberusModal__dialog--scrollable{display:flex;max-height:calc(100% - 16px)}.cerberusModal__dialog--scrollable .cerberusModal__content{max-height:calc(100vh - 16px);overflow:hidden}.cerberusModal__dialog--scrollable .cerberusModal__header .cerberusModal__footer{flex-shrink:0}.cerberusModal__dialog--scrollable .cerberusModal__body{overflow-y:auto}.cerberusModal__dialog--defaultStylings{margin:8px}.cerberusModal__dialog--centered{display:flex;align-items:center;min-height:calc(100% - 16px);align-self:center}.cerberusModal__dialog--centered:before{display:block;height:calc(100vh - 16px);height:min-content;content:""}.cerberusModal__dialog--centered.cerberusModal__dialog--scrollable{flex-direction:column;justify-content:center;height:100%}.cerberusModal__dialog--centered.cerberusModal__dialog--scrollable .cerberusModal__content{max-height:none}.cerberusModal__dialog--centered.cerberusModal__dialog--scrollable:before{content:none}.cerberusModal__content{position:relative;flex-direction:column;display:flex;width:100%;pointer-events:auto;background-clip:padding-box;outline:0}.cerberusModal__content--defaultStylings{border:2px solid white;border:1px solid rgba(0,0,0,.2);background-color:#fff}.cerberusModal__backdrop{position:fixed;top:0;left:0;z-index:22;width:100vw;height:100vh;background-color:#000;opacity:.5}.cerberusModal__header{display:flex;align-items:flex-start;justify-content:space-between;padding:16px;border-bottom:1px solid #dee2e6}.cerberusModal__header .close{padding:16px;margin:-16px -16px -16px auto}.cerberusModal__title{margin-bottom:0;line-height:1.5}.cerberusModal__body{position:relative;flex:1 1 auto;padding:16px}.cerberusModal__footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;padding:12px;border-top:1px solid #dee2e6}.cerberusModal__footer>*{margin:4px}.cerberusModal__scrollbarMeasure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}\n', "cerberus-modal-window .component-host-scrollable{display:flex;flex-direction:column;overflow:hidden}.cerberusModal__dialog--defaultStylings.cerberusModal__dialog--website{top:96px}.cerberusModal__dialog--defaultStylings.cerberusModal__dialog--desktop{top:calc(var(--vh) * 9)}\n"],
                 encapsulation: 2
-            }), W
+            }), H
         })();
         const V = () => {
         };
         let le = (() => {
-            class W {
+            class H {
                 constructor(Q) {
                     this._document = Q
                 }
@@ -17242,21 +17295,21 @@
                 }
             }
 
-            return W.\u0275fac = function (Q) {
-                return new (Q || W)(l.LFG(i.K0))
-            }, W.\u0275prov = l.Yz7({token: W, factory: W.\u0275fac, providedIn: "root"}), W
+            return H.\u0275fac = function (Q) {
+                return new (Q || H)(c.LFG(i.K0))
+            }, H.\u0275prov = c.Yz7({token: H, factory: H.\u0275fac, providedIn: "root"}), H
         })(), Ce = (() => {
-            class W {
-                constructor(Q, te, ue, pe, Pe, Ae) {
-                    this.applicationRef = Q, this.injector = te, this.document = ue, this.scrollBar = pe, this.rendererFactory = Pe, this.ngZone = Ae, this.activeWindowComponentHasChanged = new y.xQ, this.ariaHiddenValues = new Map, this.backdropAttributes = ["backdropClass"], this.modalRefs = [], this.windowAttributes = ["ariaLabelledBy", "backdrop", "centered", "keyboard", "scrollable", "size", "windowClass", "defaultStylings"], this.windowComponents = [], this.activeWindowComponentHasChanged.subscribe(() => {
+            class H {
+                constructor(Q, te, ue, pe, Se, Ae) {
+                    this.applicationRef = Q, this.injector = te, this.document = ue, this.scrollBar = pe, this.rendererFactory = Se, this.ngZone = Ae, this.activeWindowComponentHasChanged = new y.xQ, this.ariaHiddenValues = new Map, this.backdropAttributes = ["backdropClass"], this.modalRefs = [], this.windowAttributes = ["ariaLabelledBy", "backdrop", "centered", "keyboard", "scrollable", "size", "windowClass", "defaultStylings"], this.windowComponents = [], this.activeWindowComponentHasChanged.subscribe(() => {
                         if (this.windowComponents.length) {
                             const je = this.windowComponents[this.windowComponents.length - 1];
-                            ((W, he, Q, te = !1) => {
+                            ((H, he, Q, te = !1) => {
                                 this.ngZone.runOutsideAngular(() => {
                                     const ue = (0, e.R)(he, "focusin").pipe((0, m.R)(Q), (0, p.U)(pe => pe.target));
-                                    (0, e.R)(he, "keydown").pipe((0, m.R)(Q), (0, g.h)(pe => pe.which === t.Tab), (0, r.M)(ue)).subscribe(([pe, Pe]) => {
+                                    (0, e.R)(he, "keydown").pipe((0, m.R)(Q), (0, g.h)(pe => pe.which === t.Tab), (0, r.M)(ue)).subscribe(([pe, Se]) => {
                                         const [Ae, je] = v(he);
-                                        (Pe === Ae || Pe === he) && pe.shiftKey && (je.focus(), pe.preventDefault()), Pe === je && !pe.shiftKey && (Ae.focus(), pe.preventDefault())
+                                        (Se === Ae || Se === he) && pe.shiftKey && (je.focus(), pe.preventDefault()), Se === je && !pe.shiftKey && (Ae.focus(), pe.preventDefault())
                                     }), te && (0, e.R)(he, "click").pipe((0, m.R)(Q), (0, r.M)(ue), (0, p.U)(pe => pe[1])).subscribe(pe => pe.focus())
                                 })
                             })(0, je.location.nativeElement, this.activeWindowComponentHasChanged), this.revertAriaHidden(), this.setAriaHidden(je.location.nativeElement)
@@ -17265,20 +17318,20 @@
                 }
 
                 open(Q, te, ue, pe) {
-                    const Pe = pe.container instanceof HTMLElement ? pe.container : $(pe.container) ? this.document.querySelector(pe.container) : this.document.body,
+                    const Se = pe.container instanceof HTMLElement ? pe.container : T(pe.container) ? this.document.querySelector(pe.container) : this.document.body,
                         Ae = this.rendererFactory.createRenderer(null, null), je = this.scrollBar.compensate(),
                         ot = () => {
                             this.modalRefs.length || (Ae.removeClass(this.document.querySelector("html"), "cerberusModal__open"), this.revertAriaHidden())
                         };
-                    if (!Pe) throw new Error(`The specified modal container "${pe.container || "body"}" was not found in the DOM.`);
-                    const Ct = new x.mX, lt = this.getContentRef(Q, pe.injector || te, ue, Ct, pe);
-                    let we = !1 !== pe.backdrop ? this.attachBackdrop(Q, Pe) : null,
-                        We = this.attachWindowComponent(Q, Pe, lt), T = new x.x0(We, lt, we, pe.beforeDismiss);
-                    return this.registerModalRef(T), this.registerWindowComponent(We), T.result.then(je, je), T.result.then(ot, ot), Ct.close = J => {
-                        T.close(J)
+                    if (!Se) throw new Error(`The specified modal container "${pe.container || "body"}" was not found in the DOM.`);
+                    const Ct = new P.mX, lt = this.getContentRef(Q, pe.injector || te, ue, Ct, pe);
+                    let we = !1 !== pe.backdrop ? this.attachBackdrop(Q, Se) : null,
+                        He = this.attachWindowComponent(Q, Se, lt), $ = new P.x0(He, lt, we, pe.beforeDismiss);
+                    return this.registerModalRef($), this.registerWindowComponent(He), $.result.then(je, je), $.result.then(ot, ot), Ct.close = J => {
+                        $.close(J)
                     }, Ct.dismiss = J => {
-                        T.dismiss(J)
-                    }, this.applyWindowOptions(We.instance, pe), 1 === this.modalRefs.length && Ae.addClass(this.document.querySelector("html"), "cerberusModal__open"), we && we.instance && this.applyBackdropOptions(we.instance, pe), T
+                        $.dismiss(J)
+                    }, this.applyWindowOptions(He.instance, pe), 1 === this.modalRefs.length && Ae.addClass(this.document.querySelector("html"), "cerberusModal__open"), we && we.instance && this.applyBackdropOptions(we.instance, pe), $
                 }
 
                 dismissAll(Q) {
@@ -17295,49 +17348,49 @@
                 }
 
                 attachWindowComponent(Q, te, ue) {
-                    let Pe = Q.resolveComponentFactory(ye).create(this.injector, ue.nodes);
-                    return this.applicationRef.attachView(Pe.hostView), te.appendChild(Pe.location.nativeElement), Pe
+                    let Se = Q.resolveComponentFactory(ye).create(this.injector, ue.nodes);
+                    return this.applicationRef.attachView(Se.hostView), te.appendChild(Se.location.nativeElement), Se
                 }
 
                 applyWindowOptions(Q, te) {
                     this.windowAttributes.forEach(ue => {
-                        $(te[ue]) && (Q[ue] = te[ue])
+                        T(te[ue]) && (Q[ue] = te[ue])
                     })
                 }
 
                 applyBackdropOptions(Q, te) {
                     this.backdropAttributes.forEach(ue => {
-                        $(te[ue]) && (Q[ue] = te[ue])
+                        T(te[ue]) && (Q[ue] = te[ue])
                     })
                 }
 
-                getContentRef(Q, te, ue, pe, Pe) {
-                    return ue ? ue instanceof l.Rgc ? this.createFromTemplateRef(ue, pe) : function (W) {
-                        return "string" == typeof W
-                    }(ue) ? this.createFromString(ue) : this.createFromComponent(Q, te, ue, pe, Pe) : new x.m3([])
+                getContentRef(Q, te, ue, pe, Se) {
+                    return ue ? ue instanceof c.Rgc ? this.createFromTemplateRef(ue, pe) : function O(H) {
+                        return "string" == typeof H
+                    }(ue) ? this.createFromString(ue) : this.createFromComponent(Q, te, ue, pe, Se) : new P.m3([])
                 }
 
                 createFromTemplateRef(Q, te) {
                     const pe = Q.createEmbeddedView({
-                        $implicit: te, close(Pe) {
-                            te.close(Pe)
-                        }, dismiss(Pe) {
-                            te.dismiss(Pe)
+                        $implicit: te, close(Se) {
+                            te.close(Se)
+                        }, dismiss(Se) {
+                            te.dismiss(Se)
                         }
                     });
-                    return this.applicationRef.attachView(pe), new x.m3([pe.rootNodes], pe)
+                    return this.applicationRef.attachView(pe), new P.m3([pe.rootNodes], pe)
                 }
 
                 createFromString(Q) {
                     const te = this.document.createTextNode(`${Q}`);
-                    return new x.m3([[te]])
+                    return new P.m3([[te]])
                 }
 
-                createFromComponent(Q, te, ue, pe, Pe) {
+                createFromComponent(Q, te, ue, pe, Se) {
                     const Ae = Q.resolveComponentFactory(ue),
-                        je = l.zs3.create({providers: [{provide: x.mX, useValue: pe}], parent: te}), ot = Ae.create(je),
+                        je = c.zs3.create({providers: [{provide: P.mX, useValue: pe}], parent: te}), ot = Ae.create(je),
                         Ct = ot.location.nativeElement;
-                    return Pe.scrollable && Ct.classList.add("component-host-scrollable"), this.applicationRef.attachView(ot.hostView), new x.m3([[Ct]], ot.hostView, ot)
+                    return Se.scrollable && Ct.classList.add("component-host-scrollable"), this.applicationRef.attachView(ot.hostView), new P.m3([[Ct]], ot.hostView, ot)
                 }
 
                 setAriaHidden(Q) {
@@ -17369,21 +17422,21 @@
                 }
             }
 
-            return W.\u0275fac = function (Q) {
-                return new (Q || W)(l.LFG(l.z2F), l.LFG(l.zs3), l.LFG(i.K0), l.LFG(le), l.LFG(l.FYo), l.LFG(l.R0b))
-            }, W.\u0275prov = l.Yz7({token: W, factory: W.\u0275fac, providedIn: "root"}), W
-        })(), $e = (() => {
-            class W {
+            return H.\u0275fac = function (Q) {
+                return new (Q || H)(c.LFG(c.z2F), c.LFG(c.zs3), c.LFG(i.K0), c.LFG(le), c.LFG(c.FYo), c.LFG(c.R0b))
+            }, H.\u0275prov = c.Yz7({token: H, factory: H.\u0275fac, providedIn: "root"}), H
+        })(), Te = (() => {
+            class H {
                 constructor() {
                     this.backdrop = !0, this.keyboard = !0
                 }
             }
 
-            return W.\u0275fac = function (Q) {
-                return new (Q || W)
-            }, W.\u0275prov = l.Yz7({token: W, factory: W.\u0275fac, providedIn: "root"}), W
+            return H.\u0275fac = function (Q) {
+                return new (Q || H)
+            }, H.\u0275prov = c.Yz7({token: H, factory: H.\u0275fac, providedIn: "root"}), H
         })(), Be = (() => {
-            class W {
+            class H {
                 constructor(Q, te, ue, pe) {
                     this.moduleCFR = Q, this.injector = te, this.modalStack = ue, this.config = pe
                 }
@@ -17402,19 +17455,20 @@
                 }
             }
 
-            return W.\u0275fac = function (Q) {
-                return new (Q || W)(l.LFG(l._Vd), l.LFG(l.zs3), l.LFG(Ce), l.LFG($e))
-            }, W.\u0275prov = l.Yz7({token: W, factory: W.\u0275fac, providedIn: "root"}), W
+            return H.\u0275fac = function (Q) {
+                return new (Q || H)(c.LFG(c._Vd), c.LFG(c.zs3), c.LFG(Ce), c.LFG(Te))
+            }, H.\u0275prov = c.Yz7({token: H, factory: H.\u0275fac, providedIn: "root"}), H
         })()
-    }, 51395: (se, R, o) => {
+    },
+    51395: (se, R, o) => {
         "use strict";
         o.d(R, {W: () => ce, F: () => I});
-        var l = o(73307), i = o(591), y = o(21086), e = o(36053), m = o(72986), p = o(24850), g = o(2994), r = o(87545),
-            t = o(92198), n = o(61709), v = o(27221), k = o(5e3), x = o(55778);
+        var c = o(73307), i = o(591), y = o(21086), e = o(36053), m = o(72986), p = o(24850), g = o(2994), r = o(87545),
+            t = o(92198), n = o(61709), v = o(27221), k = o(5e3), P = o(55778);
         let I = (() => {
             class de {
-                constructor(Z, X, ae, Y, ye, V) {
-                    this.authService = Z, this.gameApi = X, this.guApi = ae, this.ethService = Y, this.cardsService = ye, this.filterService = V, this._unopenedPacks$ = new i.X([]), this._currentRaffleTicketTotal$ = new i.X(0), this.dataStore = {
+                constructor(N, X, ae, Y, ye, V) {
+                    this.authService = N, this.gameApi = X, this.guApi = ae, this.ethService = Y, this.cardsService = ye, this.filterService = V, this._unopenedPacks$ = new i.X([]), this._currentRaffleTicketTotal$ = new i.X(0), this.dataStore = {
                         unopenedPacks: [],
                         currentRaffleTicketTotal: 0
                     }
@@ -17433,92 +17487,92 @@
                 }
 
                 fetchUnopenedPacksById() {
-                    const Z = this.authService.getUserId();
-                    return Z ? this.gameApi.get(`/user/${Z}/allpacks`).pipe((0, m.q)(1), (0, p.U)(X => this.formatPacks(X, !0)), (0, p.U)(X => this.fixGodAlignments(X)), (0, g.b)(X => {
+                    const N = this.authService.getUserId();
+                    return N ? this.gameApi.get(`/user/${N}/allpacks`).pipe((0, m.q)(1), (0, p.U)(X => this.formatPacks(X, !0)), (0, p.U)(X => this.fixGodAlignments(X)), (0, g.b)(X => {
                         this.dataStore.unopenedPacks = X, this._unopenedPacks$.next([...this.dataStore.unopenedPacks])
                     })) : (0, y.of)([])
                 }
 
                 fetchUnopenedPacksByAddress() {
-                    return this.ethService.getAccount().pipe((0, r.w)(Z => this.guApi.get(`/user/${Z}/allpacks`)), (0, m.q)(1), (0, p.U)(Z => this.formatPacks(Z, !1)), (0, g.b)(Z => {
-                        this.dataStore.unopenedPacks = Z, this._unopenedPacks$.next([...this.dataStore.unopenedPacks])
+                    return this.ethService.getAccount().pipe((0, r.w)(N => this.guApi.get(`/user/${N}/allpacks`)), (0, m.q)(1), (0, p.U)(N => this.formatPacks(N, !1)), (0, g.b)(N => {
+                        this.dataStore.unopenedPacks = N, this._unopenedPacks$.next([...this.dataStore.unopenedPacks])
                     }))
                 }
 
-                fetchCurrentTotalRaffleTickets({userId: Z, wallet: X}) {
-                    return Z || X ? this.gameApi.get(`/user/${Z || X}/tickets`).pipe((0, m.q)(1)).subscribe(ae => {
+                fetchCurrentTotalRaffleTickets({userId: N, wallet: X}) {
+                    return N || X ? this.gameApi.get(`/user/${N || X}/tickets`).pipe((0, m.q)(1)).subscribe(ae => {
                         this.dataStore.currentRaffleTicketTotal = ae, this._currentRaffleTicketTotal$.next(ae)
                     }) : console.error("no wallet or userId supplied")
                 }
 
-                formatPacks(Z, X = !1) {
-                    return Z.map(ae => Object.assign(Object.assign({}, ae), {
+                formatPacks(N, X = !1) {
+                    return N.map(ae => Object.assign(Object.assign({}, ae), {
                         rarity: this.updateRarity(ae),
                         raffleTickets: this.updatePackRaffleTickets(ae),
                         requiresAuthentication: X
                     }))
                 }
 
-                updateScarcityAndRarity$(Z) {
-                    return (0, e.aj)([this.cardsService.protoCards$, this.cardsService.qualityCounts$]).pipe((0, t.h)(([X, ae]) => X && X.size > 0 && ae && ae.size > 0), (0, m.q)(1), (0, p.U)(([X, ae]) => Z.map(Y => Object.assign(Object.assign({}, Y), {cards: this.updateScarcityAndRarity(Y.cards, X, ae)}))))
+                updateScarcityAndRarity$(N) {
+                    return (0, e.aj)([this.cardsService.protoCards$, this.cardsService.qualityCounts$]).pipe((0, t.h)(([X, ae]) => X && X.size > 0 && ae && ae.size > 0), (0, m.q)(1), (0, p.U)(([X, ae]) => N.map(Y => Object.assign(Object.assign({}, Y), {cards: this.updateScarcityAndRarity(Y.cards, X, ae)}))))
                 }
 
-                fixGodAlignments(Z) {
-                    return Z.map(X => Object.assign(Object.assign({}, X), {god: "all" === X.god || "core" === X.god ? "neutral" : X.god}))
+                fixGodAlignments(N) {
+                    return N.map(X => Object.assign(Object.assign({}, X), {god: "all" === X.god || "core" === X.god ? "neutral" : X.god}))
                 }
 
-                updatePackRaffleTickets(Z) {
-                    if (Z && Z.extra) {
-                        const X = Z.extra.find(ae => "tickets" === ae.name);
+                updatePackRaffleTickets(N) {
+                    if (N && N.extra) {
+                        const X = N.extra.find(ae => "tickets" === ae.name);
                         return X ? X.value : void 0
                     }
                 }
 
-                updateRarity(Z) {
-                    return "shiny" === Z.rarity ? "shiny-legendary" : Z.rarity
+                updateRarity(N) {
+                    return "shiny" === N.rarity ? "shiny-legendary" : N.rarity
                 }
 
-                updateScarcityAndRarity(Z, X, ae) {
+                updateScarcityAndRarity(N, X, ae) {
                     const Y = ["epic", "legendary", "mythic"];
-                    return Z.map(ye => {
+                    return N.map(ye => {
                         const V = X.get(ye.proto);
                         return !V || (ye.rarity = V.rarity, "core" === V.set) || ("mythic" === ye.rarity ? ye.scarcity = 1 : (Y.includes(ye.rarity) || ye.quality < 5) && (ye.scarcity = this.filterService.calcScarcity(ye.proto, ye.quality, ae))), ye
                     })
                 }
 
-                openPackAuthenticated$(Z, X = !0) {
+                openPackAuthenticated$(N, X = !0) {
                     const ae = this.authService.getUserId();
-                    return this.authService.fetchSession().pipe((0, m.q)(1), (0, n.VS)(Y => this.gameApi.put(`/user/${ae}/allpacks?session=${Y}`, Z)), (0, g.b)(Y => {
-                        this.dataStore.unopenedPacks = this.dataStore.unopenedPacks.filter(V => V.pack_id !== Z.pack_id), this._unopenedPacks$.next([...this.dataStore.unopenedPacks]);
-                        const ye = this.packToInventoryCardsMap(Z);
+                    return this.authService.fetchSession().pipe((0, m.q)(1), (0, n.VS)(Y => this.gameApi.put(`/user/${ae}/allpacks?session=${Y}`, N)), (0, g.b)(Y => {
+                        this.dataStore.unopenedPacks = this.dataStore.unopenedPacks.filter(V => V.pack_id !== N.pack_id), this._unopenedPacks$.next([...this.dataStore.unopenedPacks]);
+                        const ye = this.packToInventoryCardsMap(N);
                         this.cardsService.addCardsToInventory(ye)
-                    }), (0, v.K)(Y => 401 === Y.status && X ? this.authService.refreshToken().pipe((0, n.VS)(ye => this.openPackAuthenticated$(Z, !1))) : (0, y.of)(Y)))
+                    }), (0, v.K)(Y => 401 === Y.status && X ? this.authService.refreshToken().pipe((0, n.VS)(ye => this.openPackAuthenticated$(N, !1))) : (0, y.of)(Y)))
                 }
 
-                dummyOpenPack(Z) {
-                    return this.dataStore.unopenedPacks = this.dataStore.unopenedPacks.filter(X => X.pack_id !== Z.pack_id), this._unopenedPacks$.next([...this.dataStore.unopenedPacks]), (0, y.of)(!0)
+                dummyOpenPack(N) {
+                    return this.dataStore.unopenedPacks = this.dataStore.unopenedPacks.filter(X => X.pack_id !== N.pack_id), this._unopenedPacks$.next([...this.dataStore.unopenedPacks]), (0, y.of)(!0)
                 }
 
-                openPackUnauthenticated$(Z) {
-                    return this.ethService.getAccount().pipe((0, m.q)(1), (0, r.w)(X => this.gameApi.put(`/user/${X}/allpacks`, Z)), (0, g.b)(X => {
-                        this.dataStore.unopenedPacks = this.dataStore.unopenedPacks.filter(ae => ae.pack_id !== Z.pack_id), this._unopenedPacks$.next([...this.dataStore.unopenedPacks])
+                openPackUnauthenticated$(N) {
+                    return this.ethService.getAccount().pipe((0, m.q)(1), (0, r.w)(X => this.gameApi.put(`/user/${X}/allpacks`, N)), (0, g.b)(X => {
+                        this.dataStore.unopenedPacks = this.dataStore.unopenedPacks.filter(ae => ae.pack_id !== N.pack_id), this._unopenedPacks$.next([...this.dataStore.unopenedPacks])
                     }))
                 }
 
-                openPack$(Z) {
-                    return Z.requiresAuthentication ? this.openPackAuthenticated$(Z) : this.openPackUnauthenticated$(Z)
+                openPack$(N) {
+                    return N.requiresAuthentication ? this.openPackAuthenticated$(N) : this.openPackUnauthenticated$(N)
                 }
 
-                packToInventoryCardsMap(Z) {
+                packToInventoryCardsMap(N) {
                     const X = {};
-                    return Z.cards.forEach(ae => {
+                    return N.cards.forEach(ae => {
                         const Y = {q: ae.quality, id: ae.id};
                         X[ae.proto] ? X[ae.proto].push(Y) : X[ae.proto] = [Y]
                     }), X
                 }
 
-                generateRandomDummyPacks(Z) {
-                    return Array.from({length: Z}, (X, ae) => ({
+                generateRandomDummyPacks(N) {
+                    return Array.from({length: N}, (X, ae) => ({
                         cards: this.generateRandomDummyCards(5),
                         god: this.chooseRandomGod(),
                         set: "core",
@@ -17529,8 +17583,8 @@
                     }))
                 }
 
-                generateRandomDummyCards(Z) {
-                    return Array.from({length: Z}, (X, ae) => ({
+                generateRandomDummyCards(N) {
+                    return Array.from({length: N}, (X, ae) => ({
                         proto: this.generateCardProto(),
                         id: ae + 1,
                         rarity: this.chooseRandomCardRarity(),
@@ -17540,39 +17594,39 @@
                 }
 
                 chooseRandomPackRarity() {
-                    const Z = ["rare", "legendary"];
-                    return Z[Math.ceil(Math.random() * Z.length - 1)]
+                    const N = ["rare", "legendary"];
+                    return N[Math.ceil(Math.random() * N.length - 1)]
                 }
 
                 chooseRandomCardRarity() {
-                    const Z = ["common", "rare", "epic", "legendary"];
-                    return Z[Math.ceil(Math.random() * Z.length - 1)]
+                    const N = ["common", "rare", "epic", "legendary"];
+                    return N[Math.ceil(Math.random() * N.length - 1)]
                 }
 
                 chooseRandomGod() {
-                    const Z = ["nature", "death", "nature", "war", "neutral", "deception", "light", "magic"];
-                    return Z[Math.ceil(Math.random() * Z.length - 1)]
+                    const N = ["nature", "death", "nature", "war", "neutral", "deception", "light", "magic"];
+                    return N[Math.ceil(Math.random() * N.length - 1)]
                 }
 
                 generateCardProto() {
-                    const Z = Math.ceil(384 * Math.random());
-                    return [382, 383, 384, 378, 379].includes(Z) ? this.generateCardProto() : Z
+                    const N = Math.ceil(384 * Math.random());
+                    return [382, 383, 384, 378, 379].includes(N) ? this.generateCardProto() : N
                 }
             }
 
-            return de.\u0275fac = function (Z) {
-                return new (Z || de)(k.LFG(l.mI), k.LFG(x.Ft), k.LFG(x.Ho), k.LFG(l.ux), k.LFG(x.dK), k.LFG(x.iZ))
+            return de.\u0275fac = function (N) {
+                return new (N || de)(k.LFG(c.mI), k.LFG(P.Ft), k.LFG(P.Ho), k.LFG(c.ux), k.LFG(P.dK), k.LFG(P.iZ))
             }, de.\u0275prov = k.Yz7({token: de, factory: de.\u0275fac, providedIn: "root"}), de
         })();
         var A = o(40886), f = (() => {
             return (de = f || (f = {}))[de.RARE_GENESIS = 0] = "RARE_GENESIS", de[de.RARE_TRIAL = 1] = "RARE_TRIAL", de[de.LEGENDARY_GENESIS = 2] = "LEGENDARY_GENESIS", de[de.LEGENDARY_TRIAL = 3] = "LEGENDARY_TRIAL", f;
             var de
-        })(), O = o(52909), P = o(18499), b = o(13989), $ = o(45425), s = o(5254), C = o(61737), w = o(77518);
+        })(), O = o(52909), S = o(18499), b = o(13989), T = o(45425), s = o(5254), C = o(61737), w = o(77518);
         const B = o(45861), ee = o(92916);
         let ce = (() => {
             class de {
-                constructor(Z, X) {
-                    if (this.environment = Z, this.ethService = X, this._chests$ = new i.X([]), console.log("ChestService->constructor()"), "desktop" !== this.environment.clientType) {
+                constructor(N, X) {
+                    if (this.environment = N, this.ethService = X, this._chests$ = new i.X([]), console.log("ChestService->constructor()"), "desktop" !== this.environment.clientType) {
                         try {
                             this.setupGenesis()
                         } catch (ae) {
@@ -17596,30 +17650,30 @@
                 }
 
                 setupTrial() {
-                    const Z = this.environment.production ? w.np.Production : w.np.Staging,
+                    const N = this.environment.production ? w.np.Production : w.np.Staging,
                         X = this.environment.production ? "https://eth-mainnet.alchemyapi.io/v2/ICJe8nw_i-gl_3E6V6I942RRJ3PMs5vB" : "https://eth-ropsten.alchemyapi.io/v2/ICJe8nw_i-gl_3E6V6I942RRJ3PMs5vB",
-                        ae = this.environment.production ? A.t : A.Y, Y = (0, P.getGodsUnchainedAddresses)(ae, Z),
-                        V = ((0, P.getGodsUnchainedAddresses)(ae, Z), (0, P.getGodsUnchainedAddresses)(ae, Z).seasonOne.capAddress);
+                        ae = this.environment.production ? A.t : A.Y, Y = (0, S.getGodsUnchainedAddresses)(ae, N),
+                        V = ((0, S.getGodsUnchainedAddresses)(ae, N), (0, S.getGodsUnchainedAddresses)(ae, N).seasonOne.capAddress);
                     if (window.ethereum) {
                         const Ce = new b.Qg(window.ethereum).getSigner();
-                        console.log("ChestService->setup() signer", Ce), this.RareTrial = P.Chest.at(Ce, Y.seasonOne.rareChestAddress), console.log("ChestService->setup() RareTrial", this.RareTrial), this.LegendaryTrial = P.Chest.at(Ce, Y.seasonOne.legendaryChestAddress), console.log("ChestService->setup() LegendaryTrial", this.LegendaryTrial), this.S1Cap = P.S1Cap.at(Ce, V), console.log("ChestService->setup() S1Cap", this.S1Cap)
+                        console.log("ChestService->setup() signer", Ce), this.RareTrial = S.Chest.at(Ce, Y.seasonOne.rareChestAddress), console.log("ChestService->setup() RareTrial", this.RareTrial), this.LegendaryTrial = S.Chest.at(Ce, Y.seasonOne.legendaryChestAddress), console.log("ChestService->setup() LegendaryTrial", this.LegendaryTrial), this.S1Cap = S.S1Cap.at(Ce, V), console.log("ChestService->setup() S1Cap", this.S1Cap)
                     }
                     const le = new b.r6(X, ae);
-                    this.RareTrialAlchemy = P.Chest.at(le, Y.seasonOne.rareChestAddress), this.LegendaryTrialAlchemy = P.Chest.at(le, Y.seasonOne.legendaryChestAddress), this.S1CapAlchemy = P.S1Cap.at(le, V)
+                    this.RareTrialAlchemy = S.Chest.at(le, Y.seasonOne.rareChestAddress), this.LegendaryTrialAlchemy = S.Chest.at(le, Y.seasonOne.legendaryChestAddress), this.S1CapAlchemy = S.S1Cap.at(le, V)
                 }
 
                 s1CapCap() {
-                    return (0, s.D)(this.S1Cap.cap()).pipe((0, v.K)(Z => (0, s.D)(this.S1CapAlchemy.cap())))
+                    return (0, s.D)(this.S1Cap.cap()).pipe((0, v.K)(N => (0, s.D)(this.S1CapAlchemy.cap())))
                 }
 
                 s1CapCurrent() {
-                    return (0, s.D)(this.S1Cap.current()).pipe((0, v.K)(Z => (0, s.D)(this.S1CapAlchemy.current())))
+                    return (0, s.D)(this.S1Cap.current()).pipe((0, v.K)(N => (0, s.D)(this.S1CapAlchemy.current())))
                 }
 
                 s1CapProgressPercentage() {
-                    return (0, e.aj)([this.s1CapCurrent(), this.s1CapCap()]).pipe((0, m.q)(1), (0, p.U)(([Z, X]) => {
+                    return (0, e.aj)([this.s1CapCurrent(), this.s1CapCap()]).pipe((0, m.q)(1), (0, p.U)(([N, X]) => {
                         try {
-                            const ae = Z.toNumber(), Y = X.toNumber();
+                            const ae = N.toNumber(), Y = X.toNumber();
                             return (Y - ae) / Y * 100
                         } catch (ae) {
                             return 100
@@ -17627,24 +17681,24 @@
                     }))
                 }
 
-                soldTrial(Z) {
-                    return (0, s.D)(this.getContractTrial(Z).sold()).pipe((0, v.K)(X => (0, s.D)(this.getContractTrialAlchemy(Z).sold())))
+                soldTrial(N) {
+                    return (0, s.D)(this.getContractTrial(N).sold()).pipe((0, v.K)(X => (0, s.D)(this.getContractTrialAlchemy(N).sold())))
                 }
 
-                capTrial(Z) {
-                    return (0, s.D)(this.getContractTrial(Z).productCap()).pipe((0, v.K)(X => (0, s.D)(this.getContractTrialAlchemy(Z).productCap())))
+                capTrial(N) {
+                    return (0, s.D)(this.getContractTrial(N).productCap()).pipe((0, v.K)(X => (0, s.D)(this.getContractTrialAlchemy(N).productCap())))
                 }
 
-                balanceOfTrial(Z, X) {
-                    const ae = this.getContractTrial(Z);
+                balanceOfTrial(N, X) {
+                    const ae = this.getContractTrial(N);
                     return (0, e.aj)([ae.balanceOf(X), (0, s.D)(ae.decimals())]).pipe((0, p.U)(([Y, ye]) => {
-                        const V = new $.ethers.utils.BigNumber(10).pow(ye);
+                        const V = new T.ethers.utils.BigNumber(10).pow(ye);
                         return Y.div(V)
                     }))
                 }
 
-                getContractTrial(Z) {
-                    switch (Z) {
+                getContractTrial(N) {
+                    switch (N) {
                         case f.RARE_TRIAL:
                             return this.RareTrial;
                         case f.LEGENDARY_TRIAL:
@@ -17652,8 +17706,8 @@
                     }
                 }
 
-                getContractTrialAlchemy(Z) {
-                    switch (Z) {
+                getContractTrialAlchemy(N) {
+                    switch (N) {
                         case f.RARE_TRIAL:
                             return this.RareTrialAlchemy;
                         case f.LEGENDARY_TRIAL:
@@ -17662,62 +17716,62 @@
                 }
 
                 fetchChests() {
-                    this.ethService.getAccount().pipe((0, m.q)(1), (0, n.VS)(Z => (0, e.aj)([this.balanceOf(f.RARE_GENESIS, Z), this.balanceOf(f.LEGENDARY_GENESIS, Z), this.balanceOfTrial(f.RARE_TRIAL, Z), this.balanceOfTrial(f.LEGENDARY_TRIAL, Z)]))).subscribe(([Z, X, ae, Y]) => {
-                        console.log("fetched Num Bundles rare leg", Z, X), this.dataStore.chests = this.chestData(Z.toNumber(), X.toNumber(), Math.floor(ae.toNumber()), Math.floor(Y.toNumber())), this._chests$.next([...this.dataStore.chests])
+                    this.ethService.getAccount().pipe((0, m.q)(1), (0, n.VS)(N => (0, e.aj)([this.balanceOf(f.RARE_GENESIS, N), this.balanceOf(f.LEGENDARY_GENESIS, N), this.balanceOfTrial(f.RARE_TRIAL, N), this.balanceOfTrial(f.LEGENDARY_TRIAL, N)]))).subscribe(([N, X, ae, Y]) => {
+                        console.log("fetched Num Bundles rare leg", N, X), this.dataStore.chests = this.chestData(N.toNumber(), X.toNumber(), Math.floor(ae.toNumber()), Math.floor(Y.toNumber())), this._chests$.next([...this.dataStore.chests])
                     })
                 }
 
-                percentageSold(Z) {
-                    return (0, e.aj)([this.soldTrial(Z), this.capTrial(Z)]).pipe((0, p.U)(([X, ae]) => this.progressPercentage(X, ae)))
+                percentageSold(N) {
+                    return (0, e.aj)([this.soldTrial(N), this.capTrial(N)]).pipe((0, p.U)(([X, ae]) => this.progressPercentage(X, ae)))
                 }
 
-                progressPercentage(Z, X) {
+                progressPercentage(N, X) {
                     try {
-                        const ae = Z.toNumber(), Y = X.toNumber();
+                        const ae = N.toNumber(), Y = X.toNumber();
                         return (Y - ae) / Y * 100
                     } catch (ae) {
                         return 100
                     }
                 }
 
-                balanceOf(Z, X) {
-                    return this.getContract(Z).pipe((0, n.VS)(ae => ae.balanceOf(X)), (0, p.U)(ae => ae), (0, g.b)(ae => {
-                        console.log("ChestService->balanceOf() BALANCE", Z, ae)
-                    }), (0, v.K)(ae => (console.log("error getting balanceOf ", Z, ae), (0, y.of)(O.O$.from(0)))))
+                balanceOf(N, X) {
+                    return this.getContract(N).pipe((0, n.VS)(ae => ae.balanceOf(X)), (0, p.U)(ae => ae), (0, g.b)(ae => {
+                        console.log("ChestService->balanceOf() BALANCE", N, ae)
+                    }), (0, v.K)(ae => (console.log("error getting balanceOf ", N, ae), (0, y.of)(O.O$.from(0)))))
                 }
 
-                open(Z, X) {
-                    return this.getContract(Z).pipe((0, n.VS)(ae => ae.open(X)), (0, g.b)(ae => {
-                        this.dataStore.chests.find(ye => ye.type === Z).amount -= X, this._chests$.next([...this.dataStore.chests])
+                open(N, X) {
+                    return this.getContract(N).pipe((0, n.VS)(ae => ae.open(X)), (0, g.b)(ae => {
+                        this.dataStore.chests.find(ye => ye.type === N).amount -= X, this._chests$.next([...this.dataStore.chests])
                     }))
                 }
 
-                cap(Z) {
-                    return this.getContract(Z).pipe((0, n.VS)(X => X.productCap()), (0, p.U)(X => X))
+                cap(N) {
+                    return this.getContract(N).pipe((0, n.VS)(X => X.productCap()), (0, p.U)(X => X))
                 }
 
-                sold(Z) {
-                    return this.getContract(Z).pipe((0, n.VS)(X => X.sold()), (0, p.U)(X => X), (0, v.K)(X => this.soldInfura(Z)))
+                sold(N) {
+                    return this.getContract(N).pipe((0, n.VS)(X => X.sold()), (0, p.U)(X => X), (0, v.K)(X => this.soldInfura(N)))
                 }
 
-                soldInfura(Z) {
-                    return this.getContractInfura(Z).pipe((0, n.VS)(X => X.sold()), (0, p.U)(X => X))
+                soldInfura(N) {
+                    return this.getContractInfura(N).pipe((0, n.VS)(X => X.sold()), (0, p.U)(X => X))
                 }
 
                 vaultBalance() {
-                    return (0, s.D)(this.Vault.deployed()).pipe((0, n.VS)(Z => Z.total()), (0, p.U)(Z => Z), (0, v.K)(Z => this.vaultBalanceInfura()))
+                    return (0, s.D)(this.Vault.deployed()).pipe((0, n.VS)(N => N.total()), (0, p.U)(N => N), (0, v.K)(N => this.vaultBalanceInfura()))
                 }
 
                 vaultBalanceInfura() {
-                    return (0, s.D)(this.VaultInfura.deployed()).pipe((0, n.VS)(Z => Z.total()), (0, p.U)(Z => Z))
+                    return (0, s.D)(this.VaultInfura.deployed()).pipe((0, n.VS)(N => N.total()), (0, p.U)(N => N))
                 }
 
                 vaultCap() {
                     return (0, y.of)(O.O$.from("33333000000000000000000"))
                 }
 
-                getContract(Z) {
-                    switch (Z) {
+                getContract(N) {
+                    switch (N) {
                         case f.RARE_GENESIS:
                             return (0, s.D)(this.RareGenesis.deployed());
                         case f.LEGENDARY_GENESIS:
@@ -17730,16 +17784,16 @@
                     return (0, C._)("invalid bundle pack type")
                 }
 
-                getContractInfura(Z) {
-                    return Z === f.LEGENDARY_GENESIS ? (0, s.D)(this.LegendaryGenesisInfura.deployed()) : (0, C._)("invalid bundle pack type")
+                getContractInfura(N) {
+                    return N === f.LEGENDARY_GENESIS ? (0, s.D)(this.LegendaryGenesisInfura.deployed()) : (0, C._)("invalid bundle pack type")
                 }
 
-                chestData(Z = 0, X = 0, ae = 0, Y = 0) {
+                chestData(N = 0, X = 0, ae = 0, Y = 0) {
                     return [{
                         type: f.RARE_GENESIS,
                         set: "genesis",
                         rarity: "rare",
-                        amount: Z
+                        amount: N
                     }, {type: f.LEGENDARY_GENESIS, set: "genesis", rarity: "legendary", amount: X}, {
                         type: f.RARE_TRIAL,
                         set: "trial",
@@ -17749,11 +17803,12 @@
                 }
             }
 
-            return de.\u0275fac = function (Z) {
-                return new (Z || de)(k.LFG(l.Ho), k.LFG(l.ux))
+            return de.\u0275fac = function (N) {
+                return new (N || de)(k.LFG(c.Ho), k.LFG(c.ux))
             }, de.\u0275prov = k.Yz7({token: de, factory: de.\u0275fac, providedIn: "root"}), de
         })()
-    }, 55778: (se, R, o) => {
+    },
+    55778: (se, R, o) => {
         "use strict";
         o.d(R, {
             jt: () => de,
@@ -17763,11 +17818,11 @@
             dK: () => lt.d,
             tX: () => we,
             ai: () => je.a,
-            iZ: () => T,
+            iZ: () => $,
             vU: () => je.v,
             TJ: () => Oe,
             pH: () => ht,
-            Ho: () => He,
+            Ho: () => Ze,
             Of: () => ye,
             Ft: () => ne.F,
             n2: () => he,
@@ -17829,9 +17884,9 @@
             imx_tx_id: 125,
             status: e.Og.COMPLETED
         }), Object.assign(Object.assign({}, p), {imx_tx_id: 0, status: e.Og.CARDS_DELETED});
-        var O = o(85111), P = o(69808), b = o(5e3), $ = o(73307), C = o(60870);
+        var O = o(85111), S = o(69808), b = o(5e3), T = o(73307), C = o(60870);
         let de = (() => {
-            class z {
+            class W {
                 constructor(d, _, U, ie) {
                     this.deviceDetectorService = d, this.environment = _, this.authService = U, this.storage = ie, this.brand = "godsunchained", this.appVersion = "0.13.3", this.initAnalyticsProperties(), this.initDeviceProperties(), this.initSessionProperties(), this.initUserProperties()
                 }
@@ -17914,14 +17969,14 @@
                 }
             }
 
-            return z.\u0275fac = function (d) {
-                return new (d || z)(b.LFG(C.x0), b.LFG($.Ho), b.LFG($.mI), b.LFG($.qy))
-            }, z.\u0275prov = b.Yz7({token: z, factory: z.\u0275fac}), z
+            return W.\u0275fac = function (d) {
+                return new (d || W)(b.LFG(C.x0), b.LFG(T.Ho), b.LFG(T.mI), b.LFG(T.qy))
+            }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
         })();
-        var fe = o(40520), Z = o(59633);
+        var fe = o(40520), N = o(59633);
         const X = "website";
         let Y = (() => {
-            class z {
+            class W {
                 constructor(d, _, U, ie) {
                     this.deviceDetectorService = d, this.httpClient = _, this.environment = U, this.storage = ie, this.headers = new fe.WM({"X-Chaff": this.environment.production ? "" : "test"});
                     const ke = this.getDeviceId();
@@ -17952,7 +18007,7 @@
                 }
 
                 postEvent(d, _) {
-                    const ie = new Z.Event({
+                    const ie = new N.Event({
                         brand: this.brand,
                         device_id: this.device_id,
                         event_id: this.event_id = this.event_id + 1,
@@ -17971,11 +18026,11 @@
                 }
             }
 
-            return z.\u0275fac = function (d) {
-                return new (d || z)(b.LFG(C.x0), b.LFG(fe.eN), b.LFG($.Ho), b.LFG($.qy))
-            }, z.\u0275prov = b.Yz7({token: z, factory: z.\u0275fac, providedIn: "root"}), z
+            return W.\u0275fac = function (d) {
+                return new (d || W)(b.LFG(C.x0), b.LFG(fe.eN), b.LFG(T.Ho), b.LFG(T.qy))
+            }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac, providedIn: "root"}), W
         })(), ye = (() => {
-            class z {
+            class W {
                 constructor() {
                 }
 
@@ -18331,11 +18386,11 @@
                 }
             }
 
-            return z.\u0275fac = function (d) {
-                return new (d || z)
-            }, z.\u0275prov = b.Yz7({token: z, factory: z.\u0275fac}), z
+            return W.\u0275fac = function (d) {
+                return new (d || W)
+            }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
         })(), V = (() => {
-            class z {
+            class W {
                 constructor(d) {
                     this.window = d
                 }
@@ -18345,13 +18400,13 @@
                 }
             }
 
-            return z.\u0275fac = function (d) {
-                return new (d || z)(b.LFG(Window))
-            }, z.\u0275prov = b.Yz7({token: z, factory: z.\u0275fac}), z
+            return W.\u0275fac = function (d) {
+                return new (d || W)(b.LFG(Window))
+            }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
         })();
         var le = o(61737), Ce = o(27221);
-        let $e = (() => {
-            class z {
+        let Te = (() => {
+            class W {
                 constructor() {
                 }
 
@@ -18360,13 +18415,13 @@
                 }
             }
 
-            return z.\u0275fac = function (d) {
-                return new (d || z)
-            }, z.\u0275prov = b.Yz7({token: z, factory: z.\u0275fac}), z
+            return W.\u0275fac = function (d) {
+                return new (d || W)
+            }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
         })();
-        var Be = o(46461), W = o(591);
+        var Be = o(46461), H = o(591);
         let he = (() => {
-            class z {
+            class W {
                 constructor() {
                     this._storage = window.localStorage
                 }
@@ -18384,13 +18439,13 @@
                 }
             }
 
-            return z.\u0275fac = function (d) {
-                return new (d || z)
-            }, z.\u0275prov = b.Yz7({token: z, factory: z.\u0275fac}), z
+            return W.\u0275fac = function (d) {
+                return new (d || W)
+            }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
         })(), Q = (() => {
-            class z {
+            class W {
                 constructor(d) {
-                    this.storage = d, this.arenaCancel = this.loadHowl("desktop/Launcher_Arena_Cancel.ogg"), this.arenaClickStart = this.loadHowl("desktop/Launcher_Arena_Click_Start.ogg"), this.arenaCycleMode = this.loadHowl("desktop/Launcher_Arena_CycleMode.ogg"), this.arenaHoverStart = this.loadHowl("desktop/Launcher_Arena_Hover_Start.ogg"), this.returnToLauncher = this.loadHowl("desktop/Launcher_Return.ogg"), this.loginToLauncher = this.loadHowl("desktop/Launcher_Login.ogg"), this.clickItemV1 = this.loadHowl("desktop/Launcher_Click_Item_V1.ogg"), this.clickItemV2 = this.loadHowl("desktop/Launcher_Click_Item_V2.ogg"), this.clickMediumV1 = this.loadHowl("desktop/Launcher_Click_Medium_V1.ogg"), this.clickMediumV2 = this.loadHowl("desktop/Launcher_Click_Medium_V2.ogg"), this.clickTinyV1 = this.loadHowl("desktop/Launcher_Click_Tiny_V1.ogg"), this.clickTinyV2 = this.loadHowl("desktop/Launcher_Click_Tiny_V2.ogg"), this.hoverHex = this.loadHowl("desktop/Launcher_Hover_Hexagon.ogg"), this.hoverItem = this.loadHowl("desktop/Launcher_Hover_Item.ogg"), this.transitionWorkshop = this.loadHowl("desktop/Launcher_Transition_Workshop.ogg"), this.workshopCustomize = this.loadHowl("desktop/Launcher_Workshop_Customize.ogg"), this.workshopDelete = this.loadHowl("desktop/Launcher_Workshop_Delete.ogg"), this.forgeAmbience = this.loadHowl("desktop/Launcher_Forge_Ambience.ogg", {loop: !0}), this.forgeHeatingUp = this.loadHowl("desktop/Launcher_Forge_HeatingUp.ogg"), this.forgeSelectCard = this.loadHowl("desktop/Launcher_Forge_SelectCard.ogg"), this.ForgeFuseAnvil1 = this.loadHowl("desktop/Launcher_Forge_Fuse_Anvil_1.ogg"), this.ForgeFuseAnvil2 = this.loadHowl("desktop/Launcher_Forge_Fuse_Anvil_2.ogg"), this.ForgeFuseAnvil3 = this.loadHowl("desktop/Launcher_Forge_Fuse_Anvil_3.ogg"), this.ForgeFuseAnvil4 = this.loadHowl("desktop/Launcher_Forge_Fuse_Anvil_4.ogg"), this.ForgeFuseAnvil5 = this.loadHowl("desktop/Launcher_Forge_Fuse_Anvil_5.ogg"), this.ForgeFuseShimmer = this.loadHowl("desktop/Launcher_Forge_Fuse_Shimmer.ogg"), this.ForgeFuseContinue = this.loadHowl("desktop/Launcher_Forge_Fuse_Continue.ogg"), this._currentVolume$ = new W.X(null), this.setInitialVolume()
+                    this.storage = d, this.arenaCancel = this.loadHowl("desktop/Launcher_Arena_Cancel.ogg"), this.arenaClickStart = this.loadHowl("desktop/Launcher_Arena_Click_Start.ogg"), this.arenaCycleMode = this.loadHowl("desktop/Launcher_Arena_CycleMode.ogg"), this.arenaHoverStart = this.loadHowl("desktop/Launcher_Arena_Hover_Start.ogg"), this.returnToLauncher = this.loadHowl("desktop/Launcher_Return.ogg"), this.loginToLauncher = this.loadHowl("desktop/Launcher_Login.ogg"), this.clickItemV1 = this.loadHowl("desktop/Launcher_Click_Item_V1.ogg"), this.clickItemV2 = this.loadHowl("desktop/Launcher_Click_Item_V2.ogg"), this.clickMediumV1 = this.loadHowl("desktop/Launcher_Click_Medium_V1.ogg"), this.clickMediumV2 = this.loadHowl("desktop/Launcher_Click_Medium_V2.ogg"), this.clickTinyV1 = this.loadHowl("desktop/Launcher_Click_Tiny_V1.ogg"), this.clickTinyV2 = this.loadHowl("desktop/Launcher_Click_Tiny_V2.ogg"), this.hoverHex = this.loadHowl("desktop/Launcher_Hover_Hexagon.ogg"), this.hoverItem = this.loadHowl("desktop/Launcher_Hover_Item.ogg"), this.transitionWorkshop = this.loadHowl("desktop/Launcher_Transition_Workshop.ogg"), this.workshopCustomize = this.loadHowl("desktop/Launcher_Workshop_Customize.ogg"), this.workshopDelete = this.loadHowl("desktop/Launcher_Workshop_Delete.ogg"), this.forgeAmbience = this.loadHowl("desktop/Launcher_Forge_Ambience.ogg", {loop: !0}), this.forgeHeatingUp = this.loadHowl("desktop/Launcher_Forge_HeatingUp.ogg"), this.forgeSelectCard = this.loadHowl("desktop/Launcher_Forge_SelectCard.ogg"), this.ForgeFuseAnvil1 = this.loadHowl("desktop/Launcher_Forge_Fuse_Anvil_1.ogg"), this.ForgeFuseAnvil2 = this.loadHowl("desktop/Launcher_Forge_Fuse_Anvil_2.ogg"), this.ForgeFuseAnvil3 = this.loadHowl("desktop/Launcher_Forge_Fuse_Anvil_3.ogg"), this.ForgeFuseAnvil4 = this.loadHowl("desktop/Launcher_Forge_Fuse_Anvil_4.ogg"), this.ForgeFuseAnvil5 = this.loadHowl("desktop/Launcher_Forge_Fuse_Anvil_5.ogg"), this.ForgeFuseShimmer = this.loadHowl("desktop/Launcher_Forge_Fuse_Shimmer.ogg"), this.ForgeFuseContinue = this.loadHowl("desktop/Launcher_Forge_Fuse_Continue.ogg"), this._currentVolume$ = new H.X(null), this.setInitialVolume()
                 }
 
                 get currentVolume$() {
@@ -18410,15 +18465,15 @@
                 }
             }
 
-            return z.\u0275fac = function (d) {
-                return new (d || z)(b.LFG(he))
-            }, z.\u0275prov = b.Yz7({token: z, factory: z.\u0275fac}), z
+            return W.\u0275fac = function (d) {
+                return new (d || W)(b.LFG(he))
+            }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
         })();
-        var te = o(8929), ue = o(87168), pe = o(24850), Pe = o(7625), Ae = o(87545), je = o(1025), ot = o(77535);
+        var te = o(8929), ue = o(87168), pe = o(24850), Se = o(7625), Ae = o(87545), je = o(1025), ot = o(77535);
         let Ct = (() => {
-            class z {
+            class W {
                 constructor(d, _, U) {
-                    this.http = d, this.destroyed$ = new te.xQ, this.apolloEndpoint$ = _.loadConfigurations().pipe((0, ue.M)(U.get(je.v.newEnvironmentAuthLegacyApi)), (0, pe.U)(([ie, ke]) => ke ? ie.legacyAuthHost : ie.authHost), (0, Pe.R)(this.destroyed$))
+                    this.http = d, this.destroyed$ = new te.xQ, this.apolloEndpoint$ = _.loadConfigurations().pipe((0, ue.M)(U.get(je.v.newEnvironmentAuthLegacyApi)), (0, pe.U)(([ie, ke]) => ke ? ie.legacyAuthHost : ie.authHost), (0, Se.R)(this.destroyed$))
                 }
 
                 get(d, _, U) {
@@ -18441,13 +18496,13 @@
                 }
             }
 
-            return z.\u0275fac = function (d) {
-                return new (d || z)(b.LFG(fe.eN), b.LFG(ot.L), b.LFG(je.a))
-            }, z.\u0275prov = b.Yz7({token: z, factory: z.\u0275fac}), z
+            return W.\u0275fac = function (d) {
+                return new (d || W)(b.LFG(fe.eN), b.LFG(ot.L), b.LFG(je.a))
+            }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
         })();
         var lt = o(69439);
         let we = (() => {
-            class z {
+            class W {
                 constructor() {
                 }
 
@@ -18457,828 +18512,900 @@
                 }
             }
 
-            return z.\u0275fac = function (d) {
-                return new (d || z)
-            }, z.\u0275prov = b.Yz7({token: z, factory: z.\u0275fac, providedIn: "root"}), z
+            return W.\u0275fac = function (d) {
+                return new (d || W)
+            }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac, providedIn: "root"}), W
         })();
-        var We = o(61709);
+        var He = o(61709);
 
-        class T {
-            constructor(N) {
-                this.cardsService = N, this.typeOrder = ["spell", "creature", "weapon"], this.godOrder = ["death", "deception", "light", "magic", "nature", "war", "neutral"], this.rarityOrder = ["legendary", "epic", "rare", "common", "mythic"]
+        class ${constructor(z){this.cardsService=z,this.typeOrder=["spell","creature","weapon"],this.godOrder=["death","deception","light","magic","nature","war","neutral"],this.rarityOrder=["legendary","epic","rare","common","mythic"]}
+        static
+
+        displayable(...z)
+        {
+            return z.map(d => {
+                const _ = "All" === d ? "" : d.toLowerCase();
+                return {display: d, value: _}
+            })
+        }
+        static
+        enumerated(...z)
+        {
+            return z.map((d, _) => ({display: d, value: _ - 1}))
+        }
+        static
+        standardProtoFilters(z, d, _)
+        {
+            return {mana: -1, rarity: "", tribe: "", god: "", name: "", sort: d, ownership: z, type: "", set: _}
+        }
+        static
+        standardCardFilters(z, d, _, U = "")
+        {
+            return {
+                mana: -1,
+                rarity: "",
+                tribe: "",
+                god: U,
+                name: "",
+                sort: d,
+                ownership: z,
+                type: "",
+                set: _,
+                quality: ""
+            }
+        }
+        calcScarcity(z, d, _)
+        {
+            let U = 1;
+            try {
+                const ie = _.get(z)[d];
+                U = void 0 === ie ? 1 : Number(ie)
+            } catch (ie) {
+            }
+            return U
+        }
+        getSort(z, d)
+        {
+            switch (z) {
+                case y.PE.AscID:
+                    return (_, U) => _.proto - U.proto;
+                case y.PE.DescID:
+                    return (_, U) => U.proto - _.proto;
+                case y.PE.AscQuality:
+                    return (_, U) => _.quality - U.quality;
+                case y.PE.DescQuality:
+                    return (_, U) => U.quality - _.quality;
+                case y.PE.AscMana:
+                    return (_, U) => Number(_.protoCard.mana) - Number(U.protoCard.mana);
+                case y.PE.DescMana:
+                    return (_, U) => Number(U.protoCard.mana) - Number(_.protoCard.mana);
+                case y.PE.AscHealth:
+                    return (_, U) => Number(_.protoCard.health) - Number(U.protoCard.health);
+                case y.PE.DescHealth:
+                    return (_, U) => Number(U.protoCard.health) - Number(_.protoCard.health);
+                case y.PE.AscAttack:
+                    return (_, U) => Number(_.protoCard.attack) - Number(U.protoCard.attack);
+                case y.PE.DescAttack:
+                    return (_, U) => Number(U.protoCard.attack) - Number(_.protoCard.attack);
+                case y.PE.AscTribe:
+                    return (_, U) => _.protoCard.tribe < U.protoCard.tribe ? -1 : 1;
+                case y.PE.DescTribe:
+                    return (_, U) => _.protoCard.tribe > U.protoCard.tribe ? -1 : 1;
+                case y.PE.AscRarity:
+                    return (_, U) => this.getRarityId(_.rarity) < this.getRarityId(U.rarity) ? -1 : 1;
+                case y.PE.DescRarity:
+                    return (_, U) => this.getRarityId(_.rarity) > this.getRarityId(U.rarity) ? -1 : 1;
+                case y.PE.AscScarcity:
+                    return (_, U) => {
+                        if (!d) throw new Error("qualityCounts required for scarcity search");
+                        const Ve = this.calcScarcity(_.proto, _.quality, d) - this.calcScarcity(U.proto, U.quality, d);
+                        return 0 === Ve ? U.quality - _.quality : Ve
+                    }
+            }
+            return (_, U) => 0
+        }
+        sortLegacy(z, d, _)
+        {
+            return z ? z.sort(this.getSort(d, _)) : []
+        }
+        sort(z, d, _)
+        {
+            return z ? z.sort(this.tiebreak(this.getSort(d, _))) : []
+        }
+        tiebreak(z)
+        {
+            return (d, _) => {
+                const U = z(d, _);
+                return 0 === U ? this.tiebreakProtoType(d.protoCard, _.protoCard) : U
+            }
+        }
+        getSortProtos(z, d)
+        {
+            switch (z) {
+                case y.PE.AscID:
+                    return (_, U) => _.proto - U.proto;
+                case y.PE.DescID:
+                    return (_, U) => U.proto - _.proto;
+                case y.PE.AscQuality:
+                    return (_, U) => _.quality - U.quality;
+                case y.PE.DescQuality:
+                    return (_, U) => U.quality - _.quality;
+                case y.PE.AscMana:
+                    return (_, U) => Number(_.mana) - Number(U.mana);
+                case y.PE.DescMana:
+                    return (_, U) => Number(U.mana) - Number(_.mana);
+                case y.PE.AscHealth:
+                    return (_, U) => Number(_.health) - Number(U.health);
+                case y.PE.DescHealth:
+                    return (_, U) => Number(U.health) - Number(_.health);
+                case y.PE.AscAttack:
+                    return (_, U) => Number(_.attack) - Number(U.attack);
+                case y.PE.DescAttack:
+                    return (_, U) => Number(U.attack) - Number(_.attack);
+                case y.PE.AscTribe:
+                    return (_, U) => _.tribe < U.tribe ? -1 : 1;
+                case y.PE.DescTribe:
+                    return (_, U) => _.tribe > U.tribe ? -1 : 1;
+                case y.PE.AscRarity:
+                    return (_, U) => this.getRarityId(_.rarity) < this.getRarityId(U.rarity) ? -1 : 1;
+                case y.PE.DescRarity:
+                    return (_, U) => this.getRarityId(_.rarity) > this.getRarityId(U.rarity) ? -1 : 1;
+                case y.PE.AscType:
+                    return (_, U) => _.type < U.type ? -1 : 1;
+                case y.PE.DescType:
+                    return (_, U) => _.type > U.type ? -1 : 1;
+                case y.PE.AscGod:
+                    return (_, U) => _.god < U.god ? -1 : 1;
+                case y.PE.DescGod:
+                    return (_, U) => _.god > U.god ? -1 : 1;
+                case y.PE.AscSet:
+                    return (_, U) => _.set < U.set ? -1 : 1;
+                case y.PE.DescSet:
+                    return (_, U) => _.set > U.set ? -1 : 1
+            }
+            return (_, U) => 0
+        }
+        sortProtos(z, d, _)
+        {
+            return z ? z.sort(this.tiebreakProto(this.getSortProtos(d, _))) : []
+        }
+        tiebreakProto(z)
+        {
+            return (d, _) => {
+                const U = z(d, _);
+                return 0 === U ? this.tiebreakProtoType(d, _) : U
+            }
+        }
+        tiebreakProtoType(z, d)
+        {
+            const _ = this.typeOrder.indexOf(z.type) - this.typeOrder.indexOf(d.type);
+            return 0 === _ ? this.tiebreakProtoGod(z, d) : _
+        }
+        tiebreakProtoGod(z, d)
+        {
+            const _ = this.godOrder.indexOf(z.god) - this.godOrder.indexOf(d.god);
+            return 0 === _ ? this.tiebreakProtoRarity(z, d) : _
+        }
+        tiebreakProtoRarity(z, d)
+        {
+            const _ = this.rarityOrder.indexOf(z.rarity) - this.rarityOrder.indexOf(d.rarity);
+            return 0 === _ ? this.tiebreakProtoHealth(z, d) : _
+        }
+        tiebreakProtoHealth(z, d)
+        {
+            const _ = Number(z.health) - Number(d.health);
+            return 0 === _ ? this.tiebreakProtoAttack(z, d) : _
+        }
+        tiebreakProtoAttack(z, d)
+        {
+            const _ = Number(z.attack) - Number(d.attack);
+            return 0 === _ ? this.tiebreakProtoName(z, d) : _
+        }
+        tiebreakProtoName(z, d)
+        {
+            return z.name < d.name ? -1 : 1
+        }
+        filter(z, d)
+        {
+            return z ? z.filter(_ => this.matches(d, _)) : []
+        }
+        matches(z, d)
+        {
+            if (null == z) return !0;
+            if (null == d || "" !== z.rarity && z.rarity !== d.rarity || "" !== z.set && z.set !== d.set || "" !== z.god && z.god !== d.god || "" !== z.tribe && ("none" === z.tribe && d.tribe || "none" !== z.tribe && z.tribe !== d.tribe)) return !1;
+            if (-1 != +z.mana) if (10 == +z.mana) {
+                if (d.mana < 10) return !1
+            } else if (+z.mana !== d.mana) return !1;
+            if (z.name.length > 0) {
+                const _ = z.name.toLowerCase().trim();
+                if (-1 === d.name.toLowerCase().indexOf(_)) return !1
+            }
+            return !0
+        }
+        isMythic(z)
+        {
+            return 378 === z || 379 === z || 383 === z
+        }
+        getRarityId(z)
+        {
+            switch (z) {
+                case"common":
+                default:
+                    return 0;
+                case"rare":
+                    return 1;
+                case"epic":
+                    return 2;
+                case"legendary":
+                    return 3;
+                case"mythic":
+                    return 4
+            }
+        }
+        cardsMatch(z, d, _)
+        {
+            return null == z || !(this.filterQualities(_.qualities, z.quality) || +z.ownership === y.nE.Owned && !_.owned || +z.ownership === y.nE.Unowned && _.owned || +z.ownership === y.nE.Processing && "escrow" !== _.status || !this.matches(z, d))
+        }
+        filterCards(z, d)
+        {
+            return null == z ? (0, i.of)(null) : this.cardsService.protoCards$.pipe((0, He.VS)(_ => {
+                const U = z.filter(ie => this.cardsMatch(d, _.get(ie.proto), ie));
+                return (0, i.of)(U)
+            }))
+        }
+        filterQualities(z, d)
+        {
+            const _ = this.getQualityByName(d);
+            return -1 !== _ && 0 === z[_]
+        }
+        getQualityByName(z)
+        {
+            switch (z.toLowerCase()) {
+                case"plain":
+                    return y.nJ.PLAIN;
+                case"meteorite":
+                    return y.nJ.METEORITE;
+                case"shadow":
+                    return y.nJ.SHADOW;
+                case"gold":
+                    return y.nJ.GOLD;
+                case"diamond":
+                    return y.nJ.DIAMOND;
+                default:
+                    return -1
+            }
+        }
+    }
+    $
+    .rarityOptions = $.displayable("All", "Common", "Rare", "Epic", "Legendary", "Mythic"),
+    $
+    .qualityOptions = $.displayable("All", "Plain", "Meteorite", "Shadow", "Gold", "Diamond"),
+    $
+    .godOptions = $.displayable("All", "Neutral", "Nature", "War", "Death", "Light", "Magic", "Deception"),
+    $
+    .manaOptions = $.enumerated("All", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10+"),
+    $
+    .tribeOptions = $.displayable("All", "None", "Viking", "Amazon", "Anubian", "Aether", "Nether", "Atlantean", "Olympian", "Dragon", "Guild", "Mystic", "Structure", "Wild"),
+    $
+    .ownershipOptions = $.enumerated("All", "Owned", "Not Owned", "Processing"),
+    $
+    .setOptions = $.displayable("All", "Genesis", "Core", "Etherbots", "Promo", "Mythic", "Trial", "Welcome", "Order"),
+    $
+    .defaultFilters = [{name: "Ownership", options: $.ownershipOptions}, {
+        name: "Quality",
+        options: $.qualityOptions
+    }, {name: "Rarity", options: $.rarityOptions}, {name: "Tribe", options: $.tribeOptions}, {
+        name: "Mana",
+        options: $.manaOptions
+    }, {name: "God", options: $.godOptions}, {name: "Set", options: $.setOptions}],
+    $
+    .\u0275fac = function (z) {
+        return new (z || $)(b.LFG(lt.d))
+    },
+    $
+    .\u0275prov = b.Yz7({token: $, factory: $.\u0275fac, providedIn: "root"});
+    var J = o(72986),
+    ne = o(43834);
+    let Oe = (() => {
+        class W {
+            constructor(d, _) {
+                this.gameApi = d, this.authService = _, this.unsubscribe = new te.xQ, this.dataStore = {fluxInfo: null}, this._fluxInfo$ = new H.X(null)
             }
 
-            static displayable(...N) {
-                return N.map(d => {
-                    const _ = "All" === d ? "" : d.toLowerCase();
-                    return {display: d, value: _}
-                })
+            ngOnDestroy() {
+                this.unsubscribe.next(), this.unsubscribe.complete()
             }
 
-            static enumerated(...N) {
-                return N.map((d, _) => ({display: d, value: _ - 1}))
+            get fluxInfo$() {
+                return this._fluxInfo$.asObservable()
             }
 
-            static standardProtoFilters(N, d, _) {
-                return {mana: -1, rarity: "", tribe: "", god: "", name: "", sort: d, ownership: N, type: "", set: _}
+            fetchFluxInfo() {
+                const d = this.authService.getUserId();
+                d ? this.gameApi.get(`/user/${d}/flux`).pipe((0, J.q)(1)).subscribe(_ => {
+                    this.emitFluxInfo(_)
+                }, _ => {
+                    this.emitFluxInfo()
+                }) : this.emitFluxInfo()
             }
 
-            static standardCardFilters(N, d, _, U = "") {
-                return {
-                    mana: -1,
-                    rarity: "",
-                    tribe: "",
-                    god: U,
-                    name: "",
-                    sort: d,
-                    ownership: N,
-                    type: "",
-                    set: _,
-                    quality: ""
-                }
-            }
-
-            calcScarcity(N, d, _) {
-                let U = 1;
-                try {
-                    const ie = _.get(N)[d];
-                    U = void 0 === ie ? 1 : Number(ie)
-                } catch (ie) {
-                }
-                return U
-            }
-
-            getSort(N, d) {
-                switch (N) {
-                    case y.PE.AscID:
-                        return (_, U) => _.proto - U.proto;
-                    case y.PE.DescID:
-                        return (_, U) => U.proto - _.proto;
-                    case y.PE.AscQuality:
-                        return (_, U) => _.quality - U.quality;
-                    case y.PE.DescQuality:
-                        return (_, U) => U.quality - _.quality;
-                    case y.PE.AscMana:
-                        return (_, U) => Number(_.protoCard.mana) - Number(U.protoCard.mana);
-                    case y.PE.DescMana:
-                        return (_, U) => Number(U.protoCard.mana) - Number(_.protoCard.mana);
-                    case y.PE.AscHealth:
-                        return (_, U) => Number(_.protoCard.health) - Number(U.protoCard.health);
-                    case y.PE.DescHealth:
-                        return (_, U) => Number(U.protoCard.health) - Number(_.protoCard.health);
-                    case y.PE.AscAttack:
-                        return (_, U) => Number(_.protoCard.attack) - Number(U.protoCard.attack);
-                    case y.PE.DescAttack:
-                        return (_, U) => Number(U.protoCard.attack) - Number(_.protoCard.attack);
-                    case y.PE.AscTribe:
-                        return (_, U) => _.protoCard.tribe < U.protoCard.tribe ? -1 : 1;
-                    case y.PE.DescTribe:
-                        return (_, U) => _.protoCard.tribe > U.protoCard.tribe ? -1 : 1;
-                    case y.PE.AscRarity:
-                        return (_, U) => this.getRarityId(_.rarity) < this.getRarityId(U.rarity) ? -1 : 1;
-                    case y.PE.DescRarity:
-                        return (_, U) => this.getRarityId(_.rarity) > this.getRarityId(U.rarity) ? -1 : 1;
-                    case y.PE.AscScarcity:
-                        return (_, U) => {
-                            if (!d) throw new Error("qualityCounts required for scarcity search");
-                            const Ve = this.calcScarcity(_.proto, _.quality, d) - this.calcScarcity(U.proto, U.quality, d);
-                            return 0 === Ve ? U.quality - _.quality : Ve
-                        }
-                }
-                return (_, U) => 0
-            }
-
-            sortLegacy(N, d, _) {
-                return N ? N.sort(this.getSort(d, _)) : []
-            }
-
-            sort(N, d, _) {
-                return N ? N.sort(this.tiebreak(this.getSort(d, _))) : []
-            }
-
-            tiebreak(N) {
-                return (d, _) => {
-                    const U = N(d, _);
-                    return 0 === U ? this.tiebreakProtoType(d.protoCard, _.protoCard) : U
-                }
-            }
-
-            getSortProtos(N, d) {
-                switch (N) {
-                    case y.PE.AscID:
-                        return (_, U) => _.proto - U.proto;
-                    case y.PE.DescID:
-                        return (_, U) => U.proto - _.proto;
-                    case y.PE.AscQuality:
-                        return (_, U) => _.quality - U.quality;
-                    case y.PE.DescQuality:
-                        return (_, U) => U.quality - _.quality;
-                    case y.PE.AscMana:
-                        return (_, U) => Number(_.mana) - Number(U.mana);
-                    case y.PE.DescMana:
-                        return (_, U) => Number(U.mana) - Number(_.mana);
-                    case y.PE.AscHealth:
-                        return (_, U) => Number(_.health) - Number(U.health);
-                    case y.PE.DescHealth:
-                        return (_, U) => Number(U.health) - Number(_.health);
-                    case y.PE.AscAttack:
-                        return (_, U) => Number(_.attack) - Number(U.attack);
-                    case y.PE.DescAttack:
-                        return (_, U) => Number(U.attack) - Number(_.attack);
-                    case y.PE.AscTribe:
-                        return (_, U) => _.tribe < U.tribe ? -1 : 1;
-                    case y.PE.DescTribe:
-                        return (_, U) => _.tribe > U.tribe ? -1 : 1;
-                    case y.PE.AscRarity:
-                        return (_, U) => this.getRarityId(_.rarity) < this.getRarityId(U.rarity) ? -1 : 1;
-                    case y.PE.DescRarity:
-                        return (_, U) => this.getRarityId(_.rarity) > this.getRarityId(U.rarity) ? -1 : 1;
-                    case y.PE.AscType:
-                        return (_, U) => _.type < U.type ? -1 : 1;
-                    case y.PE.DescType:
-                        return (_, U) => _.type > U.type ? -1 : 1;
-                    case y.PE.AscGod:
-                        return (_, U) => _.god < U.god ? -1 : 1;
-                    case y.PE.DescGod:
-                        return (_, U) => _.god > U.god ? -1 : 1;
-                    case y.PE.AscSet:
-                        return (_, U) => _.set < U.set ? -1 : 1;
-                    case y.PE.DescSet:
-                        return (_, U) => _.set > U.set ? -1 : 1
-                }
-                return (_, U) => 0
-            }
-
-            sortProtos(N, d, _) {
-                return N ? N.sort(this.tiebreakProto(this.getSortProtos(d, _))) : []
-            }
-
-            tiebreakProto(N) {
-                return (d, _) => {
-                    const U = N(d, _);
-                    return 0 === U ? this.tiebreakProtoType(d, _) : U
-                }
-            }
-
-            tiebreakProtoType(N, d) {
-                const _ = this.typeOrder.indexOf(N.type) - this.typeOrder.indexOf(d.type);
-                return 0 === _ ? this.tiebreakProtoGod(N, d) : _
-            }
-
-            tiebreakProtoGod(N, d) {
-                const _ = this.godOrder.indexOf(N.god) - this.godOrder.indexOf(d.god);
-                return 0 === _ ? this.tiebreakProtoRarity(N, d) : _
-            }
-
-            tiebreakProtoRarity(N, d) {
-                const _ = this.rarityOrder.indexOf(N.rarity) - this.rarityOrder.indexOf(d.rarity);
-                return 0 === _ ? this.tiebreakProtoHealth(N, d) : _
-            }
-
-            tiebreakProtoHealth(N, d) {
-                const _ = Number(N.health) - Number(d.health);
-                return 0 === _ ? this.tiebreakProtoAttack(N, d) : _
-            }
-
-            tiebreakProtoAttack(N, d) {
-                const _ = Number(N.attack) - Number(d.attack);
-                return 0 === _ ? this.tiebreakProtoName(N, d) : _
-            }
-
-            tiebreakProtoName(N, d) {
-                return N.name < d.name ? -1 : 1
-            }
-
-            filter(N, d) {
-                return N ? N.filter(_ => this.matches(d, _)) : []
-            }
-
-            matches(N, d) {
-                if (null == N) return !0;
-                if (null == d || "" !== N.rarity && N.rarity !== d.rarity || "" !== N.set && N.set !== d.set || "" !== N.god && N.god !== d.god || "" !== N.tribe && ("none" === N.tribe && d.tribe || "none" !== N.tribe && N.tribe !== d.tribe)) return !1;
-                if (-1 != +N.mana) if (10 == +N.mana) {
-                    if (d.mana < 10) return !1
-                } else if (+N.mana !== d.mana) return !1;
-                if (N.name.length > 0) {
-                    const _ = N.name.toLowerCase().trim();
-                    if (-1 === d.name.toLowerCase().indexOf(_)) return !1
-                }
-                return !0
-            }
-
-            isMythic(N) {
-                return 378 === N || 379 === N || 383 === N
-            }
-
-            getRarityId(N) {
-                switch (N) {
-                    case"common":
-                    default:
-                        return 0;
-                    case"rare":
-                        return 1;
-                    case"epic":
-                        return 2;
-                    case"legendary":
-                        return 3;
-                    case"mythic":
-                        return 4
-                }
-            }
-
-            cardsMatch(N, d, _) {
-                return null == N || !(this.filterQualities(_.qualities, N.quality) || +N.ownership === y.nE.Owned && !_.owned || +N.ownership === y.nE.Unowned && _.owned || +N.ownership === y.nE.Processing && "escrow" !== _.status || !this.matches(N, d))
-            }
-
-            filterCards(N, d) {
-                return null == N ? (0, i.of)(null) : this.cardsService.protoCards$.pipe((0, We.VS)(_ => {
-                    const U = N.filter(ie => this.cardsMatch(d, _.get(ie.proto), ie));
-                    return (0, i.of)(U)
-                }))
-            }
-
-            filterQualities(N, d) {
-                const _ = this.getQualityByName(d);
-                return -1 !== _ && 0 === N[_]
-            }
-
-            getQualityByName(N) {
-                switch (N.toLowerCase()) {
-                    case"plain":
-                        return y.nJ.PLAIN;
-                    case"meteorite":
-                        return y.nJ.METEORITE;
-                    case"shadow":
-                        return y.nJ.SHADOW;
-                    case"gold":
-                        return y.nJ.GOLD;
-                    case"diamond":
-                        return y.nJ.DIAMOND;
-                    default:
-                        return -1
-                }
+            emitFluxInfo(d = {flux_available: 0, flux_spent: 0, locked: !1}) {
+                this.dataStore.fluxInfo = d, this._fluxInfo$.next(Object.assign({}, this.dataStore.fluxInfo))
             }
         }
 
-        T.rarityOptions = T.displayable("All", "Common", "Rare", "Epic", "Legendary", "Mythic"), T.qualityOptions = T.displayable("All", "Plain", "Meteorite", "Shadow", "Gold", "Diamond"), T.godOptions = T.displayable("All", "Neutral", "Nature", "War", "Death", "Light", "Magic", "Deception"), T.manaOptions = T.enumerated("All", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10+"), T.tribeOptions = T.displayable("All", "None", "Viking", "Amazon", "Anubian", "Aether", "Nether", "Atlantean", "Olympian", "Dragon", "Guild", "Mystic", "Structure", "Wild"), T.ownershipOptions = T.enumerated("All", "Owned", "Not Owned", "Processing"), T.setOptions = T.displayable("All", "Genesis", "Core", "Etherbots", "Promo", "Mythic", "Trial", "Welcome", "Order"), T.defaultFilters = [{
-            name: "Ownership",
-            options: T.ownershipOptions
-        }, {name: "Quality", options: T.qualityOptions}, {name: "Rarity", options: T.rarityOptions}, {
-            name: "Tribe",
-            options: T.tribeOptions
-        }, {name: "Mana", options: T.manaOptions}, {name: "God", options: T.godOptions}, {
-            name: "Set",
-            options: T.setOptions
-        }], T.\u0275fac = function (N) {
-            return new (N || T)(b.LFG(lt.d))
-        }, T.\u0275prov = b.Yz7({token: T, factory: T.\u0275fac, providedIn: "root"});
-        var J = o(72986), ne = o(43834);
-        let Oe = (() => {
-            class z {
-                constructor(d, _) {
-                    this.gameApi = d, this.authService = _, this.unsubscribe = new te.xQ, this.dataStore = {fluxInfo: null}, this._fluxInfo$ = new W.X(null)
-                }
-
-                ngOnDestroy() {
-                    this.unsubscribe.next(), this.unsubscribe.complete()
-                }
-
-                get fluxInfo$() {
-                    return this._fluxInfo$.asObservable()
-                }
-
-                fetchFluxInfo() {
-                    const d = this.authService.getUserId();
-                    d ? this.gameApi.get(`/user/${d}/flux`).pipe((0, J.q)(1)).subscribe(_ => {
-                        this.emitFluxInfo(_)
-                    }, _ => {
-                        this.emitFluxInfo()
-                    }) : this.emitFluxInfo()
-                }
-
-                emitFluxInfo(d = {flux_available: 0, flux_spent: 0, locked: !1}) {
-                    this.dataStore.fluxInfo = d, this._fluxInfo$.next(Object.assign({}, this.dataStore.fluxInfo))
-                }
+        return W.\u0275fac = function (d) {
+            return new (d || W)(b.LFG(ne.F), b.LFG(T.mI))
+        }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
+    })(),
+    ht = (() => {
+        class W {
+            constructor(d, _) {
+                this.moduleConfigService = d, this.http = _, this.moduleConfig$ = this.moduleConfigService.loadConfigurations()
             }
 
-            return z.\u0275fac = function (d) {
-                return new (d || z)(b.LFG(ne.F), b.LFG($.mI))
-            }, z.\u0275prov = b.Yz7({token: z, factory: z.\u0275fac}), z
-        })(), ht = (() => {
-            class z {
-                constructor(d, _) {
-                    this.moduleConfigService = d, this.http = _, this.moduleConfig$ = this.moduleConfigService.loadConfigurations()
-                }
-
-                getFusingRequest(d) {
-                    return this.moduleConfig$.pipe((0, Ae.w)(({fusingHost: _}) => this.http.get(`${_}/forge`, {params: {request_id: d}})))
-                }
-
-                getFusingLatestsRequests(d) {
-                    return this.moduleConfig$.pipe((0, Ae.w)(({fusingHost: _}) => this.http.get(`${_}/forge/latest`, {params: {user_id: d}})))
-                }
-
-                fusingValidator(d) {
-                    return this.moduleConfig$.pipe((0, Ae.w)(({fusingHost: _}) => this.http.post(`${_}/forge/validation`, d)))
-                }
-
-                fusingInitiator(d) {
-                    return this.moduleConfig$.pipe((0, Ae.w)(({fusingHost: _}) => this.http.post(`${_}/forge`, d)))
-                }
-
-                fusingTokensPaid(d) {
-                    return this.moduleConfig$.pipe((0, Ae.w)(({fusingHost: _}) => this.http.post(`${_}/forge/paid`, d)))
-                }
+            getFusingRequest(d) {
+                return this.moduleConfig$.pipe((0, Ae.w)(({fusingHost: _}) => this.http.get(`${_}/forge`, {params: {request_id: d}})))
             }
 
-            return z.\u0275fac = function (d) {
-                return new (d || z)(b.LFG(ot.L), b.LFG(fe.eN))
-            }, z.\u0275prov = b.Yz7({token: z, factory: z.\u0275fac}), z
-        })(), He = (() => {
-            class z {
-                constructor(d, _) {
-                    this.http = d, this.moduleConfigService = _, this.moduleConfig$ = this.moduleConfigService.loadConfigurations()
-                }
-
-                get(d, _) {
-                    return this.moduleConfig$.pipe((0, Ae.w)(U => this.http.get(`${U.guHost}${d}`, _)))
-                }
-
-                put(d, _) {
-                    return this.moduleConfig$.pipe((0, Ae.w)(U => this.http.put(`${U.guHost}${d}`, _)))
-                }
-
-                post(d, _) {
-                    return this.moduleConfig$.pipe((0, Ae.w)(U => this.http.post(`${U.guHost}${d}`, _)))
-                }
-
-                delete(d) {
-                    return this.moduleConfig$.pipe((0, Ae.w)(_ => this.http.delete(`${_.guHost}${d}`)))
-                }
+            getFusingLatestsRequests(d) {
+                return this.moduleConfig$.pipe((0, Ae.w)(({fusingHost: _}) => this.http.get(`${_}/forge/latest`, {params: {user_id: d}})))
             }
 
-            return z.\u0275fac = function (d) {
-                return new (d || z)(b.LFG(fe.eN), b.LFG(ot.L))
-            }, z.\u0275prov = b.Yz7({token: z, factory: z.\u0275fac}), z
-        })();
-        var yt = o(90868);
-        let xt = (() => {
-            class z {
-                constructor(d, _, U) {
-                    this.httpClient = d, this.moduleConfigService = _, this.tokenRefreshService = U
-                }
-
-                get(d, _, U) {
-                    return this.moduleConfigService.loadConfigurations().pipe((0, Ae.w)(ie => this.tokenRefreshService.autoRefreshToken(this.httpClient.get(`${ie.guAuthHost}${d}`, {
-                        headers: U,
-                        params: _
-                    }))))
-                }
-
-                put(d, _, U, ie) {
-                    return this.moduleConfigService.loadConfigurations().pipe((0, Ae.w)(ke => this.tokenRefreshService.autoRefreshToken(this.httpClient.put(`${ke.guAuthHost}${d}`, _, {
-                        headers: ie,
-                        params: U
-                    }))))
-                }
-
-                post(d, _, U) {
-                    return this.moduleConfigService.loadConfigurations().pipe((0, Ae.w)(ie => this.tokenRefreshService.autoRefreshToken(this.httpClient.post(`${ie.guAuthHost}${d}`, _, {headers: U}))))
-                }
-
-                delete(d) {
-                    return this.moduleConfigService.loadConfigurations().pipe((0, Ae.w)(_ => this.tokenRefreshService.autoRefreshToken(this.httpClient.delete(`${_.guAuthHost}${d}`))))
-                }
+            fusingValidator(d) {
+                return this.moduleConfig$.pipe((0, Ae.w)(({fusingHost: _}) => this.http.post(`${_}/forge/validation`, d)))
             }
 
-            return z.\u0275fac = function (d) {
-                return new (d || z)(b.LFG(fe.eN), b.LFG(ot.L), b.LFG(yt.$))
-            }, z.\u0275prov = b.Yz7({token: z, factory: z.\u0275fac, providedIn: "root"}), z
-        })(), kt = (() => {
-            class z {
-                constructor(d, _, U) {
-                    this.http = d, this.dds = _, this.authService = U, this._downloadUrl$ = new W.X(null)
-                }
-
-                get downloadUrl$() {
-                    return this._downloadUrl$.asObservable()
-                }
-
-                fetchLauncherURL() {
-                    return this.fetchLauncherURLAsync().pipe((0, J.q)(1)).subscribe(d => {
-                        this.downloadUrl = d, this._downloadUrl$.next(d)
-                    })
-                }
-
-                fetchLauncherURLAsync() {
-                    const d = this.dds.getDeviceInfo(), _ = this.authService.getUserId();
-                    return "mac" !== d.os.toLowerCase() && "windows" !== d.os.toLowerCase() ? (0, le._)("linux") : this.http.get(`https://util.apollo.gg/launcher?os=${d.os}&user_id=${_}`)
-                }
+            fusingInitiator(d) {
+                return this.moduleConfig$.pipe((0, Ae.w)(({fusingHost: _}) => this.http.post(`${_}/forge`, d)))
             }
 
-            return z.\u0275fac = function (d) {
-                return new (d || z)(b.LFG(fe.eN), b.LFG(C.x0), b.LFG($.mI))
-            }, z.\u0275prov = b.Yz7({token: z, factory: z.\u0275fac}), z
-        })();
-        var nt = o(29840), Xe = o(78812);
-        let Rt = (() => {
-            class z {
-                constructor(d) {
-                    this.authHost = d
-                }
+            fusingTokensPaid(d) {
+                return this.moduleConfig$.pipe((0, Ae.w)(({fusingHost: _}) => this.http.post(`${_}/forge/paid`, d)))
+            }
+        }
 
-                getUserReferralsStatus(d) {
-                    return this.authHost.get(`/campaign/${d}/referral`)
-                }
-
-                getReferralCode(d) {
-                    return this.authHost.get(`/account/${d}/code/referral`)
-                }
-
-                createReferralCode(d) {
-                    return this.authHost.post(`/account/${d}/code/referral`, {}).pipe((0, Ae.w)(_ => this.getReferralCode(d)), (0, Ce.K)(_ => {
-                        if ("already created" === _.error.error) return this.getReferralCode(d)
-                    }))
-                }
-
-                updatePayoutAddress(d, _) {
-                    return this.authHost.put(`/account/${d}/code/referral`, {referral_payout_address: _})
-                }
+        return W.\u0275fac = function (d) {
+            return new (d || W)(b.LFG(ot.L), b.LFG(fe.eN))
+        }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
+    })(),
+    Ze = (() => {
+        class W {
+            constructor(d, _) {
+                this.http = d, this.moduleConfigService = _, this.moduleConfig$ = this.moduleConfigService.loadConfigurations()
             }
 
-            return z.\u0275fac = function (d) {
-                return new (d || z)(b.LFG(Ct))
-            }, z.\u0275prov = b.Yz7({token: z, factory: z.\u0275fac, providedIn: "root"}), z
-        })();
-        var Ee = o(19444);
-        let It = (() => {
-            class z {
-                constructor(d, _, U) {
-                    this.environment = d, this.authService = _, this.moduleConfigService = U, this.RETRY_SECONDS = 4e3, this.PING_PONG_INTERVAL_DURATION = 6e3, this.MAX_UNANSWERED_PING_COUNT = 2, this.unsubscribe = new te.xQ, this.connections = {}, this._connectionEstablished$ = new te.xQ, this.moduleConfigService.loadConfigurations().subscribe(ie => {
-                        this.socketEndpoints = {
-                            marketplaceCart: ke => `${ie.marketplaceSocketBaseURL}/${ke}/socket`,
-                            chatAndFriends: ke => `${ie.chatAndFriendsSocketBaseUrl}/${ke}/chat`,
-                            forge: ke => `${ie.marketplaceSocketBaseURL}/${ke}/socket`
-                        }
-                    })
-                }
+            get(d, _) {
+                return this.moduleConfig$.pipe((0, Ae.w)(U => this.http.get(`${U.guHost}${d}`, _)))
+            }
 
-                get connectionEstablished$() {
-                    return this._connectionEstablished$.asObservable()
-                }
+            put(d, _) {
+                return this.moduleConfig$.pipe((0, Ae.w)(U => this.http.put(`${U.guHost}${d}`, _)))
+            }
 
-                connect({socketName: d, url: _}) {
-                    return new Promise((U, ie) => {
-                        console.log("SOCKET CONNECTING: ", d), this.connections[d] = this.createConnection(_), this.connectListeners(d, U, ie)
-                    })
-                }
+            post(d, _) {
+                return this.moduleConfig$.pipe((0, Ae.w)(U => this.http.post(`${U.guHost}${d}`, _)))
+            }
 
-                getOpenedConnection(d) {
-                    if (this.connections[d] && this.connections[d].isAlive) return this.connections[d]
-                }
+            delete(d) {
+                return this.moduleConfig$.pipe((0, Ae.w)(_ => this.http.delete(`${_.guHost}${d}`)))
+            }
+        }
 
-                ngOnDestroy() {
-                    this.disconnectAllSockets(), this.unsubscribe.next(), this.unsubscribe.complete()
-                }
+        return W.\u0275fac = function (d) {
+            return new (d || W)(b.LFG(fe.eN), b.LFG(ot.L))
+        }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
+    })();
+    var yt = o(90868);
+    let xt = (() => {
+        class W {
+            constructor(d, _, U) {
+                this.httpClient = d, this.moduleConfigService = _, this.tokenRefreshService = U
+            }
 
-                onConnect(d, _) {
-                    console.log("SOCKET CONNECTED:", _), this.connections[_].isAlive = !0, this.checkToStartPingPongInterval(), this.killReconnectTimer(_)
-                }
+            get(d, _, U) {
+                return this.moduleConfigService.loadConfigurations().pipe((0, Ae.w)(ie => this.tokenRefreshService.autoRefreshToken(this.httpClient.get(`${ie.guAuthHost}${d}`, {
+                    headers: U,
+                    params: _
+                }))))
+            }
 
-                onClose(d, _) {
-                    console.log("SOCKET CLOSED:", _, d), this.connections[_].isAlive = !1, d.wasClean || this.reconnectSocket(_)
-                }
+            put(d, _, U, ie) {
+                return this.moduleConfigService.loadConfigurations().pipe((0, Ae.w)(ke => this.tokenRefreshService.autoRefreshToken(this.httpClient.put(`${ke.guAuthHost}${d}`, _, {
+                    headers: ie,
+                    params: U
+                }))))
+            }
 
-                onError(d, _) {
-                    console.log("SOCKET ERRORED:", _, d), this.connections[_].isAlive = !1, console.log("tokenIsExpired: ", this.authService.tokenIsExpired()), this.authService.tokenIsExpired() ? this.authService.refreshToken().pipe((0, J.q)(1)).subscribe(() => this.reconnectSocket(_)) : this.reconnectSocket(_)
-                }
+            post(d, _, U) {
+                return this.moduleConfigService.loadConfigurations().pipe((0, Ae.w)(ie => this.tokenRefreshService.autoRefreshToken(this.httpClient.post(`${ie.guAuthHost}${d}`, _, {headers: U}))))
+            }
 
-                onMessage(d, _) {
-                    const U = JSON.parse(d.data);
-                    console.log("socket onMessage!", _, U), "HEARTBEAT_PONG" === U.text ? this.onPongMessage(_, U) : this.connections[_].messages.next(U)
-                }
+            delete(d) {
+                return this.moduleConfigService.loadConfigurations().pipe((0, Ae.w)(_ => this.tokenRefreshService.autoRefreshToken(this.httpClient.delete(`${_.guAuthHost}${d}`))))
+            }
+        }
 
-                connectListeners(d, _, U) {
-                    const ie = this.connections[d];
-                    ie.eventHandlers.open = ke => {
-                        this.onConnect(ke, d), _ && _(ie.messages)
-                    }, ie.eventHandlers.error = ke => {
-                        this.onError(ke, d), U && U(ie.messages)
-                    }, ie.eventHandlers.close = ke => {
-                        this.onClose(ke, d)
-                    }, ie.eventHandlers.message = ke => {
-                        this.onMessage(ke, d)
-                    }, ie.socket.addEventListener("open", ie.eventHandlers.open), ie.socket.addEventListener("close", ie.eventHandlers.close), ie.socket.addEventListener("error", ie.eventHandlers.error), ie.socket.addEventListener("message", ie.eventHandlers.message)
-                }
+        return W.\u0275fac = function (d) {
+            return new (d || W)(b.LFG(fe.eN), b.LFG(ot.L), b.LFG(yt.$))
+        }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac, providedIn: "root"}), W
+    })(),
+    kt = (() => {
+        class W {
+            constructor(d, _, U) {
+                this.http = d, this.dds = _, this.authService = U, this._downloadUrl$ = new H.X(null)
+            }
 
-                disconnectListeners(d) {
-                    const _ = this.connections[d];
-                    _.socket.removeEventListener("open", _.eventHandlers.open), _.socket.removeEventListener("close", _.eventHandlers.close), _.socket.removeEventListener("error", _.eventHandlers.error), _.socket.removeEventListener("message", _.eventHandlers.message)
-                }
+            get downloadUrl$() {
+                return this._downloadUrl$.asObservable()
+            }
 
-                checkToStartPingPongInterval() {
-                    this.pingPongInterval || (this.pingPongInterval = window.setInterval(() => {
-                        console.log("PING PONG INTERVAL FIRING"), Object.keys(this.connections).forEach(d => this.checkPingList(d))
-                    }, this.PING_PONG_INTERVAL_DURATION))
-                }
+            fetchLauncherURL() {
+                return this.fetchLauncherURLAsync().pipe((0, J.q)(1)).subscribe(d => {
+                    this.downloadUrl = d, this._downloadUrl$.next(d)
+                })
+            }
 
-                killPingPongInterval() {
-                    clearInterval(this.pingPongInterval), this.pingPongInterval = null
-                }
+            fetchLauncherURLAsync() {
+                const d = this.dds.getDeviceInfo(), _ = this.authService.getUserId();
+                return "mac" !== d.os.toLowerCase() && "windows" !== d.os.toLowerCase() ? (0, le._)("linux") : this.http.get(`https://util.apollo.gg/launcher?os=${d.os}&user_id=${_}`)
+            }
+        }
 
-                killReconnectTimer(d) {
-                    clearTimeout(this.connections[d].reconnectTimer), this.connections[d].reconnectTimer = null
-                }
+        return W.\u0275fac = function (d) {
+            return new (d || W)(b.LFG(fe.eN), b.LFG(C.x0), b.LFG(T.mI))
+        }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
+    })();
+    var nt = o(29840),
+    Xe = o(78812);
+    let Rt = (() => {
+        class W {
+            constructor(d) {
+                this.authHost = d
+            }
 
-                killAllReconnectTimers() {
-                    Object.keys(this.connections).forEach(d => this.killReconnectTimer(d))
-                }
+            getUserReferralsStatus(d) {
+                return this.authHost.get(`/campaign/${d}/referral`)
+            }
 
-                checkToKillPingPongInterval() {
-                    0 === Object.keys(this.connections).length ? this.killPingPongInterval() : Object.keys(this.connections).find(_ => this.connections[_].isAlive) || this.killPingPongInterval()
-                }
+            getReferralCode(d) {
+                return this.authHost.get(`/account/${d}/code/referral`)
+            }
 
-                createConnection(d) {
-                    const _ = "desktop" === this.environment.clientType ? window.bridge.authAccess : this.authService.getAuthToken().access;
-                    return {
-                        url: d,
-                        messages: new te.xQ,
-                        socket: new WebSocket(`${d}?token=${_}`),
-                        pingList: [],
-                        isAlive: !1,
-                        reconnectTimer: null,
-                        disconnectPromise: null,
-                        eventHandlers: {
-                            open: () => {
-                            }, close: () => {
-                            }, error: () => {
-                            }, message: () => {
-                            }
+            createReferralCode(d) {
+                return this.authHost.post(`/account/${d}/code/referral`, {}).pipe((0, Ae.w)(_ => this.getReferralCode(d)), (0, Ce.K)(_ => {
+                    if ("already created" === _.error.error) return this.getReferralCode(d)
+                }))
+            }
+
+            updatePayoutAddress(d, _) {
+                return this.authHost.put(`/account/${d}/code/referral`, {referral_payout_address: _})
+            }
+        }
+
+        return W.\u0275fac = function (d) {
+            return new (d || W)(b.LFG(Ct))
+        }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac, providedIn: "root"}), W
+    })();
+    var Ee = o(19444);
+    let It = (() => {
+        class W {
+            constructor(d, _, U) {
+                this.environment = d, this.authService = _, this.moduleConfigService = U, this.RETRY_SECONDS = 4e3, this.PING_PONG_INTERVAL_DURATION = 6e3, this.MAX_UNANSWERED_PING_COUNT = 2, this.unsubscribe = new te.xQ, this.connections = {}, this._connectionEstablished$ = new te.xQ, this.moduleConfigService.loadConfigurations().subscribe(ie => {
+                    this.socketEndpoints = {
+                        marketplaceCart: ke => `${ie.marketplaceSocketBaseURL}/${ke}/socket`,
+                        chatAndFriends: ke => `${ie.chatAndFriendsSocketBaseUrl}/${ke}/chat`,
+                        forge: ke => `${ie.marketplaceSocketBaseURL}/${ke}/socket`
+                    }
+                })
+            }
+
+            get connectionEstablished$() {
+                return this._connectionEstablished$.asObservable()
+            }
+
+            connect({socketName: d, url: _}) {
+                return new Promise((U, ie) => {
+                    console.log("SOCKET CONNECTING: ", d), this.connections[d] = this.createConnection(_), this.connectListeners(d, U, ie)
+                })
+            }
+
+            getOpenedConnection(d) {
+                if (this.connections[d] && this.connections[d].isAlive) return this.connections[d]
+            }
+
+            ngOnDestroy() {
+                this.disconnectAllSockets(), this.unsubscribe.next(), this.unsubscribe.complete()
+            }
+
+            onConnect(d, _) {
+                console.log("SOCKET CONNECTED:", _), this.connections[_].isAlive = !0, this.checkToStartPingPongInterval(), this.killReconnectTimer(_)
+            }
+
+            onClose(d, _) {
+                console.log("SOCKET CLOSED:", _, d), this.connections[_].isAlive = !1, d.wasClean || this.reconnectSocket(_)
+            }
+
+            onError(d, _) {
+                console.log("SOCKET ERRORED:", _, d), this.connections[_].isAlive = !1, console.log("tokenIsExpired: ", this.authService.tokenIsExpired()), this.authService.tokenIsExpired() ? this.authService.refreshToken().pipe((0, J.q)(1)).subscribe(() => this.reconnectSocket(_)) : this.reconnectSocket(_)
+            }
+
+            onMessage(d, _) {
+                const U = JSON.parse(d.data);
+                console.log("socket onMessage!", _, U), "HEARTBEAT_PONG" === U.text ? this.onPongMessage(_, U) : this.connections[_].messages.next(U)
+            }
+
+            connectListeners(d, _, U) {
+                const ie = this.connections[d];
+                ie.eventHandlers.open = ke => {
+                    this.onConnect(ke, d), _ && _(ie.messages)
+                }, ie.eventHandlers.error = ke => {
+                    this.onError(ke, d), U && U(ie.messages)
+                }, ie.eventHandlers.close = ke => {
+                    this.onClose(ke, d)
+                }, ie.eventHandlers.message = ke => {
+                    this.onMessage(ke, d)
+                }, ie.socket.addEventListener("open", ie.eventHandlers.open), ie.socket.addEventListener("close", ie.eventHandlers.close), ie.socket.addEventListener("error", ie.eventHandlers.error), ie.socket.addEventListener("message", ie.eventHandlers.message)
+            }
+
+            disconnectListeners(d) {
+                const _ = this.connections[d];
+                _.socket.removeEventListener("open", _.eventHandlers.open), _.socket.removeEventListener("close", _.eventHandlers.close), _.socket.removeEventListener("error", _.eventHandlers.error), _.socket.removeEventListener("message", _.eventHandlers.message)
+            }
+
+            checkToStartPingPongInterval() {
+                this.pingPongInterval || (this.pingPongInterval = window.setInterval(() => {
+                    console.log("PING PONG INTERVAL FIRING"), Object.keys(this.connections).forEach(d => this.checkPingList(d))
+                }, this.PING_PONG_INTERVAL_DURATION))
+            }
+
+            killPingPongInterval() {
+                clearInterval(this.pingPongInterval), this.pingPongInterval = null
+            }
+
+            killReconnectTimer(d) {
+                clearTimeout(this.connections[d].reconnectTimer), this.connections[d].reconnectTimer = null
+            }
+
+            killAllReconnectTimers() {
+                Object.keys(this.connections).forEach(d => this.killReconnectTimer(d))
+            }
+
+            checkToKillPingPongInterval() {
+                0 === Object.keys(this.connections).length ? this.killPingPongInterval() : Object.keys(this.connections).find(_ => this.connections[_].isAlive) || this.killPingPongInterval()
+            }
+
+            createConnection(d) {
+                const _ = "desktop" === this.environment.clientType ? window.bridge.authAccess : this.authService.getAuthToken().access;
+                return {
+                    url: d,
+                    messages: new te.xQ,
+                    socket: new WebSocket(`${d}?token=${_}`),
+                    pingList: [],
+                    isAlive: !1,
+                    reconnectTimer: null,
+                    disconnectPromise: null,
+                    eventHandlers: {
+                        open: () => {
+                        }, close: () => {
+                        }, error: () => {
+                        }, message: () => {
                         }
                     }
                 }
+            }
 
-                reconnectSocket(d) {
-                    const _ = this.connections[d], U = () => {
-                        const ie = this.createConnection(_.url);
-                        this.connections[d].isAlive = ie.isAlive, this.connections[d].pingList = ie.pingList, this.connections[d].socket = ie.socket, this.connections[d].url = ie.url, this.connections[d].eventHandlers = ie.eventHandlers, this.connectListeners(d)
-                    };
-                    switch (this.killReconnectTimer(d), this.checkToKillPingPongInterval(), _.socket.readyState) {
-                        case WebSocket.CONNECTING:
-                        case WebSocket.CLOSING:
-                            console.log("SKIPPING RECONNECT TIMER:", d, "connection ready state:", _.socket.readyState);
-                            break;
-                        case WebSocket.OPEN:
-                            _.disconnectPromise = this.disconnect({
-                                socketName: d,
-                                cleanup: !1
-                            }), _.reconnectTimer = window.setTimeout(() => {
-                                _.disconnectPromise.then(() => {
-                                    console.log("SOCKET DISCONNECTED, NOW RECONNECTING SOCKET"), U()
-                                })
-                            }, this.RETRY_SECONDS);
-                            break;
-                        case WebSocket.CLOSED:
-                            _.reconnectTimer = window.setTimeout(() => {
-                                U()
-                            }, this.RETRY_SECONDS)
+            reconnectSocket(d) {
+                const _ = this.connections[d], U = () => {
+                    const ie = this.createConnection(_.url);
+                    this.connections[d].isAlive = ie.isAlive, this.connections[d].pingList = ie.pingList, this.connections[d].socket = ie.socket, this.connections[d].url = ie.url, this.connections[d].eventHandlers = ie.eventHandlers, this.connectListeners(d)
+                };
+                switch (this.killReconnectTimer(d), this.checkToKillPingPongInterval(), _.socket.readyState) {
+                    case WebSocket.CONNECTING:
+                    case WebSocket.CLOSING:
+                        console.log("SKIPPING RECONNECT TIMER:", d, "connection ready state:", _.socket.readyState);
+                        break;
+                    case WebSocket.OPEN:
+                        _.disconnectPromise = this.disconnect({
+                            socketName: d,
+                            cleanup: !1
+                        }), _.reconnectTimer = window.setTimeout(() => {
+                            _.disconnectPromise.then(() => {
+                                console.log("SOCKET DISCONNECTED, NOW RECONNECTING SOCKET"), U()
+                            })
+                        }, this.RETRY_SECONDS);
+                        break;
+                    case WebSocket.CLOSED:
+                        _.reconnectTimer = window.setTimeout(() => {
+                            U()
+                        }, this.RETRY_SECONDS)
+                }
+            }
+
+            sendMessage(d, _) {
+                this.connections[d] && this.connections[d].socket.send(JSON.stringify(_))
+            }
+
+            sendPing(d) {
+                console.log("SOCKET PING:", d);
+                const _ = {text: "HEARTBEAT_PING", user_id: this.authService.getUserId(), msg_id: (0, Ee.v4)()};
+                this.connections[d].pingList.push(_), this.sendMessage(d, _)
+            }
+
+            onPongMessage(d, _) {
+                console.log("SOCKET PONG:", d);
+                const U = this.connections[d], ie = U.pingList.findIndex(ke => ke.msg_id === _.msg_id);
+                -1 !== ie && U.pingList.splice(ie, 1)
+            }
+
+            checkPingList(d) {
+                this.connections[d].pingList.length >= this.MAX_UNANSWERED_PING_COUNT ? this.reconnectSocket(d) : this.sendPing(d)
+            }
+
+            disconnect({socketName: d, cleanup: _ = !0}) {
+                const U = this.connections[d], ie = () => {
+                    U && this.disconnectListeners(d), _ && delete this.connections[d]
+                };
+                return new Promise(ke => {
+                    if (!U) return this.checkToKillPingPongInterval(), ie(), ke();
+                    this.killReconnectTimer(d), U.isAlive ? (U.socket.addEventListener("close", () => {
+                        ie(), this.checkToKillPingPongInterval(), ke()
+                    }), U.socket.close()) : (console.log("SOCKET IS IN A TRANSITION STATE, BUT TRY AND CLOSE ANYWAY"), U.socket && U.socket.close(), ie(), ke())
+                })
+            }
+
+            disconnectAllSockets() {
+                return this.killAllReconnectTimers(), Promise.all(Object.keys(this.connections).map(d => this.disconnect({socketName: d})))
+            }
+        }
+
+        return W.\u0275fac = function (d) {
+            return new (d || W)(b.LFG(T.Ho), b.LFG(T.mI), b.LFG(ot.L))
+        }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac, providedIn: "root"}), W
+    })();
+    var q = o(2994);
+    let re = (() => {
+        class W {
+            constructor(d, _, U, ie) {
+                this.gameApiService = d, this.authService = _, this.cardsService = U, this.environment = ie, this.storeItems = [], this.dataStore = {userStarsTotal: 0}, this._userStarTotal$ = new H.X(0), console.log("@cerberus/StarService constructor")
+            }
+
+            get userStarTotal$() {
+                return this._userStarTotal$.asObservable()
+            }
+
+            fetchUserStarsRewards(d) {
+                return this.gameApiService.get(`/game/${d}/rewards/${this.authService.getUserId()}`)
+            }
+
+            fetchUserStarsTotal() {
+                const d = this.authService.getUserId();
+                !d || this.gameApiService.get(`/user/${d}/stars`).pipe((0, J.q)(1)).subscribe(_ => {
+                    this.dataStore.userStarsTotal = _, this._userStarTotal$.next(this.dataStore.userStarsTotal)
+                }, _ => {
+                    this.dataStore.userStarsTotal = 0, this._userStarTotal$.next(this.dataStore.userStarsTotal)
+                })
+            }
+
+            purchaseItem$(d, _, U = !0) {
+                return this.authService.fetchSession().pipe((0, J.q)(1), (0, He.VS)(ie => this.gameApiService.post(`/user/${this.authService.getUserId()}/shop?session=${ie}`, {asset_group: d})), (0, Ce.K)(ie => 401 === ie.status && U ? this.authService.refreshToken().pipe((0, He.VS)(ke => this.purchaseItem$(d, _, !1))) : (0, i.of)(ie)), (0, q.b)(ie => {
+                    (!ie || !ie.error) && this.handlePurchaseSuccess()
+                }))
+            }
+
+            handlePurchaseSuccess() {
+                this.fetchUserStarsTotal(), "desktop" === this.environment.clientType && this.cardsService.fetchInventory()
+            }
+
+            addEpochTimestamp(d) {
+                return Object.assign(Object.assign({}, d), {
+                    start_timestamp_epoch: new Date(d.start_timestamp).getTime(),
+                    end_timestamp_epoch: new Date(d.end_timestamp).getTime()
+                })
+            }
+
+            getScreenOrder(d) {
+                const U = this.storeItems.filter(ie => this.isCurrentItem(ie)).indexOf(d);
+                return Object.assign(Object.assign({}, d), {screen_order: U})
+            }
+
+            isCurrentItem(d) {
+                const _ = (new Date).getTime();
+                return d.end_timestamp_epoch > _ && d.start_timestamp_epoch < _
+            }
+
+            fetchStarStoreItems$() {
+                return this.gameApiService.get(`/user/${this.authService.getUserId()}/shop`).pipe((0, J.q)(1), (0, pe.U)(d => d.map(_ => this.addEpochTimestamp(_))), (0, q.b)(d => this.storeItems = d))
+            }
+        }
+
+        return W.\u0275fac = function (d) {
+            return new (d || W)(b.LFG(ne.F), b.LFG(T.mI), b.LFG(lt.d), b.LFG(T.Ho))
+        }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
+    })();
+    const xe = (W, z) => () => Promise.all([W.loadConfigurations().toPromise(), z.waitUntilReady()]);
+    let Ge = (() => {
+        class W {
+        }
+
+        return W.\u0275fac = function (d) {
+            return new (d || W)
+        }, W.\u0275mod = b.oAB({type: W}), W.\u0275inj = b.cJS({
+            providers: [ot.L, {
+                provide: T.Hd,
+                deps: [T.Ho],
+                useFactory: z => (0, O.j2)(z.launchDarklyKey, {anonymous: !0, key: "anonymous"})
+            }, {
+                provide: b.ip1,
+                useFactory: xe,
+                multi: !0,
+                deps: [ot.L, T.Hd]
+            }, de, Te, Ct, je.a, Oe, ht, ye, Ze, xt, kt, he, nt._, It, re, yt.$, V], imports: [[S.ez]]
+        }), W
+    })()
+}, 69439
+:
+(se, R, o) => {
+    "use strict";
+    o.d(R, {d: () => b});
+    var c = o(8929), i = o(591), y = o(36053), e = o(7625), m = o(92198), p = o(75613), g = o(24850), r = o(87545),
+        t = o(72986), n = o(2994), v = o(27221), k = o(73307), P = o(52886), I = o(1025), A = o(5e3), f = o(43834),
+        O = o(29840), S = o(90868);
+    let b = (() => {
+        class T {
+            constructor(C, w, B, ee, ce, de) {
+                this.environment = C, this.authService = w, this.gameApiService = B, this.marketplaceApiService = ee, this.tokenRefreshService = ce, this.featureFlagsService = de, this.unsubscribe = new c.xQ, this.dataStore = {
+                    protoCards: new Map,
+                    inventory: {},
+                    inventoryCards: [],
+                    qualityCounts: new Map,
+                    newInventoryCardCount: 0
+                }, this._protoCards = new i.X(new Map), this._inventory = new i.X({}), this._qualityCounts = new i.X(new Map), this._inventoryCards = new i.X([]), this._newInventoryCardCount = new i.X(0), this.watchForLogout()
+            }
+
+            watchForLogout() {
+                "desktop" === this.environment.clientType && this.authService.account$.pipe((0, e.R)(this.unsubscribe), (0, m.h)(C => null === C)).subscribe(C => {
+                    this.dataStore.inventory = {}, this._inventory.next(Object.assign({}, this.dataStore).inventory), this.dataStore.qualityCounts = new Map, this._qualityCounts.next(Object.assign({}, this.dataStore).qualityCounts), this.dataStore.inventoryCards = [], this._inventoryCards.next(Object.assign({}, this.dataStore).inventoryCards), this.dataStore.newInventoryCardCount = 0, this._newInventoryCardCount.next(Object.assign({}, this.dataStore).newInventoryCardCount)
+                })
+            }
+
+            get protoCards$() {
+                return this._protoCards.asObservable()
+            }
+
+            get inventory$() {
+                return this._inventory.asObservable()
+            }
+
+            get qualityCounts$() {
+                return this._qualityCounts.asObservable()
+            }
+
+            get inventoryCards$() {
+                return this._inventoryCards.asObservable()
+            }
+
+            get newInventoryCardCount$() {
+                return this._newInventoryCardCount.asObservable()
+            }
+
+            getProtoCard(C) {
+                return this.protoCards$.pipe((0, p.sE)(w => w.has(C)), (0, g.U)(w => w.get(C)))
+            }
+
+            fetchProtoCardsApi() {
+                const C = this.authService.getUserId();
+                return this.authService.fetchSession().pipe((0, r.w)(w => this.gameApiService.get(`/user/${C || 1}/proto?format=flat${w ? `&session=${w}` : ""}`)), (0, t.q)(1), (0, g.U)(w => this.dictionaryToMap(w)), (0, g.U)(w => (w.forEach((B, ee) => {
+                    B.proto = ee
+                }), w)))
+            }
+
+            getProtoCards$() {
+                return this.tokenRefreshService.autoRefreshToken(this.fetchProtoCardsApi())
+            }
+
+            fetchProtoCards() {
+                this.getProtoCards$().subscribe(C => {
+                    this.handleProtoCardsSuccess(C)
+                })
+            }
+
+            handleProtoCardsSuccess(C) {
+                this.dataStore.protoCards = C, this._protoCards.next(Object.assign({}, this.dataStore).protoCards)
+            }
+
+            fetchInventory() {
+                const C = this.authService.getUserId();
+                return this.fetchInventoryCardsMap(C).pipe((0, t.q)(1), (0, n.b)(w => {
+                    this.dataStore.inventory = w, this._inventory.next(Object.assign({}, this.dataStore).inventory)
+                })).subscribe()
+            }
+
+            addCardsToInventory(C) {
+                let w = 0;
+                Object.entries(C).forEach(([B, ee]) => {
+                    if (this.dataStore.inventory[B]) {
+                        const ce = ee.filter(de => !this.dataStore.inventory[B].some(fe => fe.id === de.id));
+                        this.dataStore.inventory[B] = [...this.dataStore.inventory[B], ...ce], w += ce.length
+                    } else this.dataStore.inventory[B] = ee, w += ee.length
+                }), this._inventory.next(Object.assign({}, this.dataStore.inventory)), this.dataStore.newInventoryCardCount = w, this._newInventoryCardCount.next(w)
+            }
+
+            fetchQualityCount() {
+                return this.gameApiService.get("/quality_count").pipe((0, t.q)(1), (0, n.b)(C => {
+                    this.dataStore.qualityCounts = this.dictionaryToMap(C), this._qualityCounts.next(Object.assign({}, this.dataStore).qualityCounts)
+                }), (0, v.K)(C => C)).subscribe()
+            }
+
+            loadInventoryCards() {
+                return (0, y.aj)([this.protoCards$, this.inventory$]).pipe((0, n.b)(([C, w]) => {
+                    this.dataStore.inventoryCards = this.convertToCards(C, w), this._inventoryCards.next(Object.assign({}, this.dataStore).inventoryCards)
+                }))
+            }
+
+            convertToCards(C, w) {
+                const B = [];
+                return C.forEach((ee, ce) => {
+                    if (w[ce]) for (const de of w[ce]) {
+                        const fe = new P.Zb(de.id, ce, de.q, ee, de.status);
+                        B.push(fe)
                     }
-                }
-
-                sendMessage(d, _) {
-                    this.connections[d] && this.connections[d].socket.send(JSON.stringify(_))
-                }
-
-                sendPing(d) {
-                    console.log("SOCKET PING:", d);
-                    const _ = {text: "HEARTBEAT_PING", user_id: this.authService.getUserId(), msg_id: (0, Ee.v4)()};
-                    this.connections[d].pingList.push(_), this.sendMessage(d, _)
-                }
-
-                onPongMessage(d, _) {
-                    console.log("SOCKET PONG:", d);
-                    const U = this.connections[d], ie = U.pingList.findIndex(ke => ke.msg_id === _.msg_id);
-                    -1 !== ie && U.pingList.splice(ie, 1)
-                }
-
-                checkPingList(d) {
-                    this.connections[d].pingList.length >= this.MAX_UNANSWERED_PING_COUNT ? this.reconnectSocket(d) : this.sendPing(d)
-                }
-
-                disconnect({socketName: d, cleanup: _ = !0}) {
-                    const U = this.connections[d], ie = () => {
-                        U && this.disconnectListeners(d), _ && delete this.connections[d]
-                    };
-                    return new Promise(ke => {
-                        if (!U) return this.checkToKillPingPongInterval(), ie(), ke();
-                        this.killReconnectTimer(d), U.isAlive ? (U.socket.addEventListener("close", () => {
-                            ie(), this.checkToKillPingPongInterval(), ke()
-                        }), U.socket.close()) : (console.log("SOCKET IS IN A TRANSITION STATE, BUT TRY AND CLOSE ANYWAY"), U.socket && U.socket.close(), ie(), ke())
-                    })
-                }
-
-                disconnectAllSockets() {
-                    return this.killAllReconnectTimers(), Promise.all(Object.keys(this.connections).map(d => this.disconnect({socketName: d})))
-                }
+                }), B
             }
 
-            return z.\u0275fac = function (d) {
-                return new (d || z)(b.LFG($.Ho), b.LFG($.mI), b.LFG(ot.L))
-            }, z.\u0275prov = b.Yz7({token: z, factory: z.\u0275fac, providedIn: "root"}), z
-        })();
-        var q = o(2994);
-        let re = (() => {
-            class z {
-                constructor(d, _, U, ie) {
-                    this.gameApiService = d, this.authService = _, this.cardsService = U, this.environment = ie, this.storeItems = [], this.dataStore = {userStarsTotal: 0}, this._userStarTotal$ = new W.X(0), console.log("@cerberus/StarService constructor")
-                }
-
-                get userStarTotal$() {
-                    return this._userStarTotal$.asObservable()
-                }
-
-                fetchUserStarsRewards(d) {
-                    return this.gameApiService.get(`/game/${d}/rewards/${this.authService.getUserId()}`)
-                }
-
-                fetchUserStarsTotal() {
-                    const d = this.authService.getUserId();
-                    !d || this.gameApiService.get(`/user/${d}/stars`).pipe((0, J.q)(1)).subscribe(_ => {
-                        this.dataStore.userStarsTotal = _, this._userStarTotal$.next(this.dataStore.userStarsTotal)
-                    }, _ => {
-                        this.dataStore.userStarsTotal = 0, this._userStarTotal$.next(this.dataStore.userStarsTotal)
-                    })
-                }
-
-                purchaseItem$(d, _, U = !0) {
-                    return this.authService.fetchSession().pipe((0, J.q)(1), (0, We.VS)(ie => this.gameApiService.post(`/user/${this.authService.getUserId()}/shop?session=${ie}`, {asset_group: d})), (0, Ce.K)(ie => 401 === ie.status && U ? this.authService.refreshToken().pipe((0, We.VS)(ke => this.purchaseItem$(d, _, !1))) : (0, i.of)(ie)), (0, q.b)(ie => {
-                        (!ie || !ie.error) && this.handlePurchaseSuccess()
-                    }))
-                }
-
-                handlePurchaseSuccess() {
-                    this.fetchUserStarsTotal(), "desktop" === this.environment.clientType && this.cardsService.fetchInventory()
-                }
-
-                addEpochTimestamp(d) {
-                    return Object.assign(Object.assign({}, d), {
-                        start_timestamp_epoch: new Date(d.start_timestamp).getTime(),
-                        end_timestamp_epoch: new Date(d.end_timestamp).getTime()
-                    })
-                }
-
-                getScreenOrder(d) {
-                    const U = this.storeItems.filter(ie => this.isCurrentItem(ie)).indexOf(d);
-                    return Object.assign(Object.assign({}, d), {screen_order: U})
-                }
-
-                isCurrentItem(d) {
-                    const _ = (new Date).getTime();
-                    return d.end_timestamp_epoch > _ && d.start_timestamp_epoch < _
-                }
-
-                fetchStarStoreItems$() {
-                    return this.gameApiService.get(`/user/${this.authService.getUserId()}/shop`).pipe((0, J.q)(1), (0, pe.U)(d => d.map(_ => this.addEpochTimestamp(_))), (0, q.b)(d => this.storeItems = d))
-                }
+            forgeUpdate(C, w, B) {
+                this.forgeRemoveIds(C, w), this._inventory.next(Object.assign({}, this.dataStore.inventory)), this.dataStore.newInventoryCardCount = 1, this._newInventoryCardCount.next(1)
             }
 
-            return z.\u0275fac = function (d) {
-                return new (d || z)(b.LFG(ne.F), b.LFG($.mI), b.LFG(lt.d), b.LFG($.Ho))
-            }, z.\u0275prov = b.Yz7({token: z, factory: z.\u0275fac}), z
-        })();
-        const xe = (z, N) => () => Promise.all([z.loadConfigurations().toPromise(), N.waitUntilReady()]);
-        let Ge = (() => {
-            class z {
+            forgeRemoveIds(C, w) {
+                this.dataStore.inventory[w] = this.dataStore.inventory[w].filter(B => !C.some(ee => B.id === ee))
             }
 
-            return z.\u0275fac = function (d) {
-                return new (d || z)
-            }, z.\u0275mod = b.oAB({type: z}), z.\u0275inj = b.cJS({
-                providers: [ot.L, {
-                    provide: $.Hd,
-                    deps: [$.Ho],
-                    useFactory: N => (0, O.j2)(N.launchDarklyKey, {anonymous: !0, key: "anonymous"})
-                }, {
-                    provide: b.ip1,
-                    useFactory: xe,
-                    multi: !0,
-                    deps: [ot.L, $.Hd]
-                }, de, $e, Ct, je.a, Oe, ht, ye, He, xt, kt, he, nt._, It, re, yt.$, V], imports: [[P.ez]]
-            }), z
-        })()
-    }, 69439: (se, R, o) => {
-        "use strict";
-        o.d(R, {d: () => b});
-        var l = o(8929), i = o(591), y = o(36053), e = o(7625), m = o(92198), p = o(75613), g = o(24850), r = o(87545),
-            t = o(72986), n = o(2994), v = o(27221), k = o(73307), x = o(52886), I = o(1025), A = o(5e3), f = o(43834),
-            O = o(29840), P = o(90868);
-        let b = (() => {
-            class ${constructor(C,w,B,ee,ce,de){this.environment=C,this.authService=w,this.gameApiService=B,this.marketplaceApiService=ee,this.tokenRefreshService=ce,this.featureFlagsService=de,this.unsubscribe=new l.xQ,this.dataStore={protoCards:new Map,inventory:{}
-        ,
-            inventoryCards:[], qualityCounts
-        :
-            new Map, newInventoryCardCount
-        :
-            0
-        }, this._protoCards = new i.X(new Map), this._inventory = new i.X({}), this._qualityCounts = new i.X(new Map), this._inventoryCards = new i.X([]), this._newInventoryCardCount = new i.X(0), this.watchForLogout()
-    }watchForLogout() {
-        "desktop" === this.environment.clientType && this.authService.account$.pipe((0, e.R)(this.unsubscribe), (0, m.h)(C => null === C)).subscribe(C => {
-            this.dataStore.inventory = {}, this._inventory.next(Object.assign({}, this.dataStore).inventory), this.dataStore.qualityCounts = new Map, this._qualityCounts.next(Object.assign({}, this.dataStore).qualityCounts), this.dataStore.inventoryCards = [], this._inventoryCards.next(Object.assign({}, this.dataStore).inventoryCards), this.dataStore.newInventoryCardCount = 0, this._newInventoryCardCount.next(Object.assign({}, this.dataStore).newInventoryCardCount)
-        })
-    }get protoCards$() {
-        return this._protoCards.asObservable()
-    }get inventory$() {
-        return this._inventory.asObservable()
-    }get qualityCounts$() {
-        return this._qualityCounts.asObservable()
-    }get inventoryCards$() {
-        return this._inventoryCards.asObservable()
-    }get newInventoryCardCount$() {
-        return this._newInventoryCardCount.asObservable()
-    }getProtoCard(C) {
-        return this.protoCards$.pipe((0, p.sE)(w => w.has(C)), (0, g.U)(w => w.get(C)))
-    }fetchProtoCardsApi() {
-        const C = this.authService.getUserId();
-        return this.authService.fetchSession().pipe((0, r.w)(w => this.gameApiService.get(`/user/${C || 1}/proto?format=flat${w ? `&session=${w}` : ""}`)), (0, t.q)(1), (0, g.U)(w => this.dictionaryToMap(w)), (0, g.U)(w => (w.forEach((B, ee) => {
-            B.proto = ee
-        }), w)))
-    }getProtoCards$() {
-        return this.tokenRefreshService.autoRefreshToken(this.fetchProtoCardsApi())
-    }fetchProtoCards() {
-        this.getProtoCards$().subscribe(C => {
-            this.handleProtoCardsSuccess(C)
-        })
-    }handleProtoCardsSuccess(C) {
-        this.dataStore.protoCards = C, this._protoCards.next(Object.assign({}, this.dataStore).protoCards)
-    }fetchInventory() {
-        const C = this.authService.getUserId();
-        return this.fetchInventoryCardsMap(C).pipe((0, t.q)(1), (0, n.b)(w => {
-            this.dataStore.inventory = w, this._inventory.next(Object.assign({}, this.dataStore).inventory)
-        })).subscribe()
-    }addCardsToInventory(C) {
-        let w = 0;
-        Object.entries(C).forEach(([B, ee]) => {
-            if (this.dataStore.inventory[B]) {
-                const ce = ee.filter(de => !this.dataStore.inventory[B].some(fe => fe.id === de.id));
-                this.dataStore.inventory[B] = [...this.dataStore.inventory[B], ...ce], w += ce.length
-            } else this.dataStore.inventory[B] = ee, w += ee.length
-        }), this._inventory.next(Object.assign({}, this.dataStore.inventory)), this.dataStore.newInventoryCardCount = w, this._newInventoryCardCount.next(w)
-    }fetchQualityCount() {
-        return this.gameApiService.get("/quality_count").pipe((0, t.q)(1), (0, n.b)(C => {
-            this.dataStore.qualityCounts = this.dictionaryToMap(C), this._qualityCounts.next(Object.assign({}, this.dataStore).qualityCounts)
-        }), (0, v.K)(C => C)).subscribe()
-    }loadInventoryCards() {
-        return (0, y.aj)([this.protoCards$, this.inventory$]).pipe((0, n.b)(([C, w]) => {
-            this.dataStore.inventoryCards = this.convertToCards(C, w), this._inventoryCards.next(Object.assign({}, this.dataStore).inventoryCards)
-        }))
-    }convertToCards(C, w) {
-        const B = [];
-        return C.forEach((ee, ce) => {
-            if (w[ce]) for (const de of w[ce]) {
-                const fe = new x.Zb(de.id, ce, de.q, ee, de.status);
-                B.push(fe)
+            setNewInventoryCardCount(C) {
+                this.dataStore.newInventoryCardCount = C, this._newInventoryCardCount.next(C)
             }
-        }), B
-    }forgeUpdate(C, w, B) {
-        this.forgeRemoveIds(C, w), this._inventory.next(Object.assign({}, this.dataStore.inventory)), this.dataStore.newInventoryCardCount = 1, this._newInventoryCardCount.next(1)
-    }forgeRemoveIds(C, w) {
-        this.dataStore.inventory[w] = this.dataStore.inventory[w].filter(B => !C.some(ee => B.id === ee))
-    }setNewInventoryCardCount(C) {
-        this.dataStore.newInventoryCardCount = C, this._newInventoryCardCount.next(C)
-    }dictionaryToMap(C) {
-        return Object.entries(C).map(([w, B]) => ({
-            key: w,
-            val: B
-        })).reduce((w, B) => w.set(Number(B.key), B.val), new Map)
-    }fetchInventoryCardsMapV2(C, w) {
-        const B = w ? `&owner=${w}` : "";
-        return this.marketplaceApiService.get(`/v2/asset?type=card${B}${B ? "" : `&user_id=${C}`}`)
-    }inventoryCardsMapV2ToV1(C) {
-        const w = {};
-        return Object.entries(C.protos).forEach(([B, ee]) => {
-            const ce = ee.assets.map(de => ({id: de.id, q: de.properties.quality, status: de.minting_status}));
-            w[B] = ce
-        }), w
-    }fetchInventoryCardsMap(C) {
-        return this.gameApiService.get(`/user/${C}/card?caller=${"desktop" === this.environment.clientType ? "client" : "website"}`)
-    }checkToRefreshInventory() {
-        this.featureFlagsService.get(I.v.refetchInventoryEnabled).pipe((0, t.q)(1)).subscribe(C => {
-            C && this.fetchInventory()
-        })
-    }
-}
-return $.\u0275fac = function (C) {
-    return new (C || $)(A.LFG(k.Ho), A.LFG(k.mI), A.LFG(f.F), A.LFG(O._), A.LFG(P.$), A.LFG(I.a))
-}, $.\u0275prov = A.Yz7({token: $, factory: $.\u0275fac, providedIn: "root"}), $
-})
-()
-},
-1025
+
+            dictionaryToMap(C) {
+                return Object.entries(C).map(([w, B]) => ({
+                    key: w,
+                    val: B
+                })).reduce((w, B) => w.set(Number(B.key), B.val), new Map)
+            }
+
+            fetchInventoryCardsMapV2(C, w) {
+                const B = w ? `&owner=${w}` : "";
+                return this.marketplaceApiService.get(`/v2/asset?type=card${B}${B ? "" : `&user_id=${C}`}`)
+            }
+
+            inventoryCardsMapV2ToV1(C) {
+                const w = {};
+                return Object.entries(C.protos).forEach(([B, ee]) => {
+                    const ce = ee.assets.map(de => ({id: de.id, q: de.properties.quality, status: de.minting_status}));
+                    w[B] = ce
+                }), w
+            }
+
+            fetchInventoryCardsMap(C) {
+                return this.gameApiService.get(`/user/${C}/card?caller=${"desktop" === this.environment.clientType ? "client" : "website"}`)
+            }
+
+            checkToRefreshInventory() {
+                this.featureFlagsService.get(I.v.refetchInventoryEnabled).pipe((0, t.q)(1)).subscribe(C => {
+                    C && this.fetchInventory()
+                })
+            }
+        }
+
+        return T.\u0275fac = function (C) {
+            return new (C || T)(A.LFG(k.Ho), A.LFG(k.mI), A.LFG(f.F), A.LFG(O._), A.LFG(S.$), A.LFG(I.a))
+        }, T.\u0275prov = A.Yz7({token: T, factory: T.\u0275fac, providedIn: "root"}), T
+    })()
+}, 1025
 :
 (se, R, o) => {
     "use strict";
     o.d(R, {v: () => g, a: () => t});
-    var l = o(36053), i = o(21086), y = o(591), e = o(87545), m = o(73307), p = o(5e3), g = (() => {
+    var c = o(36053), i = o(21086), y = o(591), e = o(87545), m = o(73307), p = o(5e3), g = (() => {
         return (n = g || (g = {})).buyPagePaused = "buy-page-paused", n.claimAirdropButtonEnabled = "temp-claim-airdrop-button-enabled", n.claimAirdropEnabled = "temp-claim-airdrop-enabled", n.claimFluxEnabled = "temp-claim-flux-enabled", n.coinbasePaused = "temp-coinbase-paused", n.controllableBannerData = "controllable-banner-data", n.deckCodesEnabled = "temp-deck-codes-enabled", n.defaultWalletEnabled = "temp-default-wallet-enabled", n.forgeEnabled = "temp-forge-enabled", n.fusingNextStepEnabled = "temp-fusing-next-step-enabled", n.godsTokenBlocked = "gods-token-blocked", n.outageBannerEnabled = "temp-outage-banner-enabled", n.rankedWeekendCancelledBannerEnabled = "temp-ranked-weekend-cancelled-banner-enabled", n.referralsEnabled = "temp-referrals-enabled", n.refetchInventoryEnabled = "refetch-inventory-enabled", n.showControllableBanner = "show-controllable-banner", n.spgpEnabled = "temp-spgp-enabled", n.spgpPaused = "temp-spgp-paused", n.stakingEnabled = "temp-staking-enabled", n.tokenEnabled = "temp-token-enabled", n.x2BuyPageEnabled = "temp-x-2-buy-page-enabled", n.newEnvironmentMarketplaceLegacyApi = "temp-new-env-marketplace-legacy-api-enabled", n.newEnvironmentGameLegacyApi = "temp-new-env-game-legacy-api-enabled", n.newEnvironmentAuthLegacyApi = "temp-new-env-auth-legacy-api-enabled", n.noWalletWarningRankedGame = "temp-no-wallet-warning-ranked-game", n.playToEarnEnabled = "temp-play-to-earn-enabled", n.buyPageRevampEnabled = "buy-page-revamp-enabled", n.weekendRankedEnabled = "temp-weekend-ranked-claim-enabled", n.imxIframeModalEnabled = "imx-iframe-modal-enabled", g;
         var n
     })();
@@ -19314,8 +19441,8 @@ return $.\u0275fac = function (C) {
     });
     let t = (() => {
         class n {
-            constructor(k, x) {
-                this.ldClient = k, this.environment = x, this.flags = {}, this.flagChange = {}, this.flags = Object.assign({}, r), this.ldClient.on("change", I => {
+            constructor(k, P) {
+                this.ldClient = k, this.environment = P, this.flags = {}, this.flagChange = {}, this.flags = Object.assign({}, r), this.ldClient.on("change", I => {
                     for (const A in I) this.set(A, I[A].current)
                 }), this.ldClient.waitUntilReady().then(() => {
                     const I = this.ldClient.allFlags();
@@ -19324,10 +19451,10 @@ return $.\u0275fac = function (C) {
             }
 
             getMany(k) {
-                const x = [];
+                const P = [];
                 return k.forEach(I => {
-                    x.push(this.get(I))
-                }), (0, l.aj)(x).pipe((0, e.w)(I => {
+                    P.push(this.get(I))
+                }), (0, c.aj)(P).pipe((0, e.w)(I => {
                     const A = {};
                     return k.forEach((f, O) => {
                         A[f] = I[O]
@@ -19350,8 +19477,8 @@ return $.\u0275fac = function (C) {
                 })
             }
 
-            set(k, x) {
-                this.flags[k] = x, this.flagChange[k] && this.flagChange[k].next(x)
+            set(k, P) {
+                this.flags[k] = P, this.flagChange[k] && this.flagChange[k].next(P)
             }
         }
 
@@ -19364,37 +19491,37 @@ return $.\u0275fac = function (C) {
 (se, R, o) => {
     "use strict";
     o.d(R, {F: () => n});
-    var l = o(8929), i = o(87168), y = o(24850), e = o(7625), m = o(87545), p = o(1025), g = o(5e3), r = o(40520),
+    var c = o(8929), i = o(87168), y = o(24850), e = o(7625), m = o(87545), p = o(1025), g = o(5e3), r = o(40520),
         t = o(77535);
     let n = (() => {
         class v {
-            constructor(x, I, A) {
-                this.http = x, this.moduleConfigService = I, this.featureFlagService = A, this.destroyed$ = new l.xQ, this.gameEndpoint$ = this.moduleConfigService.loadConfigurations().pipe((0, i.M)(this.featureFlagService.get(p.v.newEnvironmentGameLegacyApi)), (0, y.U)(([f, O]) => O ? f.legacyGameHost : f.gameHost), (0, e.R)(this.destroyed$))
+            constructor(P, I, A) {
+                this.http = P, this.moduleConfigService = I, this.featureFlagService = A, this.destroyed$ = new c.xQ, this.gameEndpoint$ = this.moduleConfigService.loadConfigurations().pipe((0, i.M)(this.featureFlagService.get(p.v.newEnvironmentGameLegacyApi)), (0, y.U)(([f, O]) => O ? f.legacyGameHost : f.gameHost), (0, e.R)(this.destroyed$))
             }
 
             ngOnDestroy() {
                 this.destroyed$.next(), this.destroyed$.complete()
             }
 
-            get(x, I) {
-                return this.gameEndpoint$.pipe((0, m.w)(A => this.http.get(A + x, I)))
+            get(P, I) {
+                return this.gameEndpoint$.pipe((0, m.w)(A => this.http.get(A + P, I)))
             }
 
-            put(x, I) {
-                return this.gameEndpoint$.pipe((0, m.w)(A => this.http.put(A + x, I)))
+            put(P, I) {
+                return this.gameEndpoint$.pipe((0, m.w)(A => this.http.put(A + P, I)))
             }
 
-            post(x, I) {
-                return this.gameEndpoint$.pipe((0, m.w)(A => this.http.post(A + x, I)))
+            post(P, I) {
+                return this.gameEndpoint$.pipe((0, m.w)(A => this.http.post(A + P, I)))
             }
 
-            delete(x) {
-                return this.gameEndpoint$.pipe((0, m.w)(I => this.http.delete(I + x)))
+            delete(P) {
+                return this.gameEndpoint$.pipe((0, m.w)(I => this.http.delete(I + P)))
             }
         }
 
-        return v.\u0275fac = function (x) {
-            return new (x || v)(g.LFG(r.eN), g.LFG(t.L), g.LFG(p.a))
+        return v.\u0275fac = function (P) {
+            return new (P || v)(g.LFG(r.eN), g.LFG(t.L), g.LFG(p.a))
         }, v.\u0275prov = g.Yz7({token: v, factory: v.\u0275fac, providedIn: "root"}), v
     })()
 }, 29840
@@ -19402,37 +19529,37 @@ return $.\u0275fac = function (C) {
 (se, R, o) => {
     "use strict";
     o.d(R, {_: () => n});
-    var l = o(8929), i = o(87168), y = o(24850), e = o(7625), m = o(87545), p = o(1025), g = o(5e3), r = o(40520),
+    var c = o(8929), i = o(87168), y = o(24850), e = o(7625), m = o(87545), p = o(1025), g = o(5e3), r = o(40520),
         t = o(77535);
     let n = (() => {
         class v {
-            constructor(x, I, A) {
-                this.http = x, this.moduleConfigService = I, this.featureFlagService = A, this.destroyed$ = new l.xQ, this.marketplaceEndpoint$ = this.moduleConfigService.loadConfigurations().pipe((0, i.M)(this.featureFlagService.get(p.v.newEnvironmentMarketplaceLegacyApi)), (0, y.U)(([f, O]) => O ? f.legacyMarketplaceHost : f.marketplaceHost), (0, e.R)(this.destroyed$))
+            constructor(P, I, A) {
+                this.http = P, this.moduleConfigService = I, this.featureFlagService = A, this.destroyed$ = new c.xQ, this.marketplaceEndpoint$ = this.moduleConfigService.loadConfigurations().pipe((0, i.M)(this.featureFlagService.get(p.v.newEnvironmentMarketplaceLegacyApi)), (0, y.U)(([f, O]) => O ? f.legacyMarketplaceHost : f.marketplaceHost), (0, e.R)(this.destroyed$))
             }
 
             ngOnDestroy() {
                 this.destroyed$.next(), this.destroyed$.complete()
             }
 
-            get(x, I) {
-                return this.marketplaceEndpoint$.pipe((0, m.w)(A => this.http.get(`${A}${x}`, I)))
+            get(P, I) {
+                return this.marketplaceEndpoint$.pipe((0, m.w)(A => this.http.get(`${A}${P}`, I)))
             }
 
-            put(x, I) {
-                return this.marketplaceEndpoint$.pipe((0, m.w)(A => this.http.put(`${A}${x}`, I)))
+            put(P, I) {
+                return this.marketplaceEndpoint$.pipe((0, m.w)(A => this.http.put(`${A}${P}`, I)))
             }
 
-            post(x, I) {
-                return this.marketplaceEndpoint$.pipe((0, m.w)(A => this.http.post(`${A}${x}`, I)))
+            post(P, I) {
+                return this.marketplaceEndpoint$.pipe((0, m.w)(A => this.http.post(`${A}${P}`, I)))
             }
 
-            delete(x) {
-                return this.marketplaceEndpoint$.pipe((0, m.w)(I => this.http.delete(`${I}${x}`)))
+            delete(P) {
+                return this.marketplaceEndpoint$.pipe((0, m.w)(I => this.http.delete(`${I}${P}`)))
             }
         }
 
-        return v.\u0275fac = function (x) {
-            return new (x || v)(g.LFG(r.eN), g.LFG(t.L), g.LFG(p.a))
+        return v.\u0275fac = function (P) {
+            return new (P || v)(g.LFG(r.eN), g.LFG(t.L), g.LFG(p.a))
         }, v.\u0275prov = g.Yz7({token: v, factory: v.\u0275fac}), v
     })()
 }, 77535
@@ -19440,7 +19567,7 @@ return $.\u0275fac = function (C) {
 (se, R, o) => {
     "use strict";
     o.d(R, {L: () => p});
-    var l = o(2994), i = o(5154), y = o(73307), e = o(5e3), m = o(40520);
+    var c = o(2994), i = o(5154), y = o(73307), e = o(5e3), m = o(40520);
     let p = (() => {
         class g {
             constructor(t, n, v) {
@@ -19453,7 +19580,7 @@ return $.\u0275fac = function (C) {
             }
 
             loadConfigurations() {
-                return this.configuration$ || (this.configuration$ = this.http.get(`${this.configURL}`, {headers: {"cache-control": ["no-cache", "no-store"]}}).pipe((0, l.b)(t => this.configData = t), (0, i.d)(1))), this.configuration$
+                return this.configuration$ || (this.configuration$ = this.http.get(`${this.configURL}`, {headers: {"cache-control": ["no-cache", "no-store"]}}).pipe((0, c.b)(t => this.configData = t), (0, i.d)(1))), this.configuration$
             }
 
             getConfig() {
@@ -19470,7 +19597,7 @@ return $.\u0275fac = function (C) {
 (se, R, o) => {
     "use strict";
     o.d(R, {f: () => m});
-    var l = o(8929), i = o(591), y = o(49219), e = o(5e3);
+    var c = o(8929), i = o(591), y = o(49219), e = o(5e3);
     let m = (() => {
         class p {
             constructor() {
@@ -19480,7 +19607,7 @@ return $.\u0275fac = function (C) {
                     userEthAccount: null,
                     activeHeaderAlertBar: null,
                     headerAreaHeight: y.standardHeaderHeight
-                }, this.unsubscribe = new l.xQ, this._navigationItems$ = new i.X(null), this._userMenuItems$ = new i.X(null), this._activeHeaderAlertBar$ = new i.X(null)
+                }, this.unsubscribe = new c.xQ, this._navigationItems$ = new i.X(null), this._userMenuItems$ = new i.X(null), this._activeHeaderAlertBar$ = new i.X(null)
             }
 
             get navigationItems$() {
@@ -19555,7 +19682,7 @@ return $.\u0275fac = function (C) {
 (se, R, o) => {
     "use strict";
     o.d(R, {$: () => g});
-    var l = o(73307), i = o(61737), y = o(27221), e = o(72986), m = o(61709), p = o(5e3);
+    var c = o(73307), i = o(61737), y = o(27221), e = o(72986), m = o(61709), p = o(5e3);
     let g = (() => {
         class r {
             constructor(n) {
@@ -19568,7 +19695,7 @@ return $.\u0275fac = function (C) {
         }
 
         return r.\u0275fac = function (n) {
-            return new (n || r)(p.LFG(l.mI))
+            return new (n || r)(p.LFG(c.mI))
         }, r.\u0275prov = p.Yz7({token: r, factory: r.\u0275fac}), r
     })()
 }, 77518
@@ -19598,7 +19725,7 @@ return $.\u0275fac = function (C) {
 (se, R, o) => {
     "use strict";
     o.d(R, {I: () => r});
-    var l = o(67876), i = o(5e3), y = o(28510), e = o(69808), m = o(87745);
+    var c = o(67876), i = o(5e3), y = o(28510), e = o(69808), m = o(87745);
 
     function p(t, n) {
         if (1 & t && (i.TgZ(0, "gu-vertical-space", 7), i._UZ(1, "gu-icon", 8), i.qZA()), 2 & t) {
@@ -19623,7 +19750,7 @@ return $.\u0275fac = function (C) {
     let r = (() => {
         class t {
             constructor(v) {
-                this.activeModal = v, this.onCtaClick = l.Z
+                this.activeModal = v, this.onCtaClick = c.Z
             }
 
             ctaClick() {
@@ -19648,7 +19775,7 @@ return $.\u0275fac = function (C) {
             vars: 7,
             consts: [["goldBorder", "top"], ["top", "4x-large", 4, "ngIf"], ["top", "large"], ["align", "center", "kind", "large", "fontWeight", "bold", "fillColor", "colors.light.100", 1, "heading"], ["align", "center", "kind", "large", "fillColor", "colors.light.100", 1, "text", 3, "innerHTML"], ["top", "2x-large", "bottom", "4x-large"], [4, "ngIf"], ["top", "4x-large"], [1, "alertIcon", 3, "fillColor", "iconLigature"], ["size", "large", 1, "cta", 3, "text", "click"]],
             template: function (v, k) {
-                1 & v && (i._UZ(0, "gu-modal-background", 0), i.YNc(1, p, 2, 2, "gu-vertical-space", 1), i.TgZ(2, "gu-vertical-space", 2), i.TgZ(3, "gu-paragraph-text", 3), i._uU(4), i.qZA(), i.qZA(), i.TgZ(5, "gu-vertical-space", 2), i._UZ(6, "gu-paragraph-text", 4), i.ALo(7, "safe"), i.qZA(), i.TgZ(8, "gu-vertical-space", 5), i.YNc(9, g, 2, 1, "ng-container", 6), i.qZA()), 2 & v && (i.xp6(1), i.Q6J("ngIf", k.iconLigature), i.xp6(3), i.hij(" ", k.title, " "), i.xp6(2), i.Q6J("innerHTML", i.xi3(7, 4, k.text, "html"), i.oJD), i.xp6(3), i.Q6J("ngIf", k.ctaText))
+                1 & v && (i._UZ(0, "gu-modal-background", 0), i.YNc(1, p, 2, 2, "gu-vertical-space", 1), i.TgZ(2, "gu-vertical-space", 2)(3, "gu-paragraph-text", 3), i._uU(4), i.qZA()(), i.TgZ(5, "gu-vertical-space", 2), i._UZ(6, "gu-paragraph-text", 4), i.ALo(7, "safe"), i.qZA(), i.TgZ(8, "gu-vertical-space", 5), i.YNc(9, g, 2, 1, "ng-container", 6), i.qZA()), 2 & v && (i.xp6(1), i.Q6J("ngIf", k.iconLigature), i.xp6(3), i.hij(" ", k.title, " "), i.xp6(2), i.Q6J("innerHTML", i.xi3(7, 4, k.text, "html"), i.oJD), i.xp6(3), i.Q6J("ngIf", k.ctaText))
             },
             directives: [e.O5],
             pipes: [m.y],
@@ -19660,25 +19787,25 @@ return $.\u0275fac = function (C) {
 (se, R, o) => {
     "use strict";
     o.d(R, {j: () => i});
-    var l = o(5e3);
+    var c = o(5e3);
     let i = (() => {
         class y {
         }
 
         return y.\u0275fac = function (m) {
             return new (m || y)
-        }, y.\u0275mod = l.oAB({type: y}), y.\u0275inj = l.cJS({}), y
+        }, y.\u0275mod = c.oAB({type: y}), y.\u0275inj = c.cJS({}), y
     })()
 }, 39765
 :
 (se, R, o) => {
     "use strict";
     o.d(R, {w: () => p});
-    var l = o(8929), i = o(7625), y = o(24850), e = o(73307), m = o(5e3);
+    var c = o(8929), i = o(7625), y = o(24850), e = o(73307), m = o(5e3);
     let p = (() => {
         class g {
             constructor(t, n, v) {
-                this.templateRef = t, this.viewContainer = n, this.featureFlagsService = v, this.unsubscribe = new l.xQ
+                this.templateRef = t, this.viewContainer = n, this.featureFlagsService = v, this.unsubscribe = new c.xQ
             }
 
             set featureFlagIf(t) {
@@ -19845,79 +19972,78 @@ return $.\u0275fac = function (C) {
         }
     };
     (0, i.gn)([(0, e.C)()], n.prototype, "type", void 0), (0, i.gn)([(0, m.I)(".modal-dialog__panel")], n.prototype, "panel", void 0), n = (0, i.gn)([(0, p.M)("gu-modal-dialog")], n), o(51256), o(11015);
-    var x = o(5e3), I = o(28510), A = o(69808), f = o(87745);
+    var P = o(5e3), I = o(28510), A = o(69808), f = o(87745);
 
-    function O($, s) {
-        if (1 & $) {
-            const C = x.EpF();
-            x.TgZ(0, "gu-hex-button", 8), x.NdJ("click", function () {
-                x.CHM(C);
-                const B = x.oxw();
+    function O(T, s) {
+        if (1 & T) {
+            const C = P.EpF();
+            P.TgZ(0, "gu-hex-button", 8), P.NdJ("click", function () {
+                P.CHM(C);
+                const B = P.oxw();
                 return B.buttonClick(B.secondaryButton)
-            }), x._uU(1), x.qZA()
+            }), P._uU(1), P.qZA()
         }
-        if (2 & $) {
-            const C = x.oxw();
-            x.xp6(1), x.hij(" ", C.secondaryButton.text, " ")
+        if (2 & T) {
+            const C = P.oxw();
+            P.xp6(1), P.hij(" ", C.secondaryButton.text, " ")
         }
     }
 
-    function P($, s) {
-        if (1 & $) {
-            const C = x.EpF();
-            x.TgZ(0, "gu-hex-button", 9), x.NdJ("click", function () {
-                x.CHM(C);
-                const B = x.oxw();
+    function S(T, s) {
+        if (1 & T) {
+            const C = P.EpF();
+            P.TgZ(0, "gu-hex-button", 9), P.NdJ("click", function () {
+                P.CHM(C);
+                const B = P.oxw();
                 return B.buttonClick(B.primaryButton)
-            }), x.ALo(1, "safe"), x.qZA()
+            }), P.ALo(1, "safe"), P.qZA()
         }
-        if (2 & $) {
-            const C = x.oxw();
-            x.Q6J("innerHTML", x.xi3(1, 1, C.primaryButton.text, "html"), x.oJD)
+        if (2 & T) {
+            const C = P.oxw();
+            P.Q6J("innerHTML", P.xi3(1, 1, C.primaryButton.text, "html"), P.oJD)
         }
     }
 
     let b = (() => {
-        class ${constructor(C){this.activeModal=C}
-        buttonClick
+        class T {
+            constructor(C) {
+                this.activeModal = C
+            }
 
-        (C)
-        {
-            C.onClick && "function" == typeof C.onClick && C.onClick(), C.closeOnClick && this.activeModal.close()
+            buttonClick(C) {
+                C.onClick && "function" == typeof C.onClick && C.onClick(), C.closeOnClick && this.activeModal.close()
+            }
         }
-    }
-    return $.\u0275fac = function (C) {
-        return new (C || $)(x.Y36(I.mX))
-    }, $.\u0275cmp = x.Xpm({
-        type: $,
-        selectors: [["cerberus-modal-dialog-control"]],
-        inputs: {
-            title: "title",
-            content: "content",
-            type: "type",
-            secondaryButton: "secondaryButton",
-            primaryButton: "primaryButton"
-        },
-        decls: 10,
-        vars: 8,
-        consts: [[3, "type"], [1, "modalDialogContent"], ["data-test-id", "modal-dialog-control-title", "kind", "large", "fontWeight", "bold", "fillColor", "colors.light.100", "align", "center"], ["top", "small", "bottom", "x-large"], ["data-test-id", "modal-dialog-control-content", "fillColor", "colors.light.100", "align", "center", 3, "innerHTML"], [1, "modalDialogContent__buttons"], ["type", "secondary", "size", "large", "data-test-id", "modal-dialog-control-secondary-button", 3, "click", 4, "ngIf"], ["type", "primary", "size", "large", "data-test-id", "modal-dialog-control-primary-button", 3, "innerHTML", "click", 4, "ngIf"], ["type", "secondary", "size", "large", "data-test-id", "modal-dialog-control-secondary-button", 3, "click"], ["type", "primary", "size", "large", "data-test-id", "modal-dialog-control-primary-button", 3, "innerHTML", "click"]],
-        template: function (C, w) {
-            1 & C && (x.TgZ(0, "gu-modal-dialog", 0), x.TgZ(1, "div", 1), x.TgZ(2, "gu-paragraph-text", 2), x._uU(3), x.qZA(), x.TgZ(4, "gu-vertical-space", 3), x._UZ(5, "gu-paragraph-text", 4), x.ALo(6, "safe"), x.qZA(), x.TgZ(7, "gu-vertical-space", 5), x.YNc(8, O, 2, 1, "gu-hex-button", 6), x.YNc(9, P, 2, 4, "gu-hex-button", 7), x.qZA(), x.qZA(), x.qZA()), 2 & C && (x.Q6J("type", w.type), x.xp6(3), x.Oqu(w.title), x.xp6(2), x.Q6J("innerHTML", x.xi3(6, 5, w.content, "html"), x.oJD), x.xp6(3), x.Q6J("ngIf", w.secondaryButton), x.xp6(1), x.Q6J("ngIf", w.primaryButton))
-        },
-        directives: [A.O5],
-        pipes: [f.y],
-        styles: [".modalDialogContent[_ngcontent-%COMP%]{position:relative;display:flex;flex-direction:column;padding:0 8px;align-items:center;max-width:100vw}.modalDialogContent[_ngcontent-%COMP%] > *[_ngcontent-%COMP%]{position:relative}.modalDialogContent__buttons[_ngcontent-%COMP%]{display:flex;width:100%;justify-content:center}.modalDialogContent__buttons[_ngcontent-%COMP%]   gu-hex-button[_ngcontent-%COMP%]{max-width:50%;flex:1 1 0px}.modalDialogContent__buttons[_ngcontent-%COMP%]   gu-hex-button[_ngcontent-%COMP%]:not(:last-child){margin-right:16px}"]
-    }), $
-}
-)
-()
-},
-87745
+
+        return T.\u0275fac = function (C) {
+            return new (C || T)(P.Y36(I.mX))
+        }, T.\u0275cmp = P.Xpm({
+            type: T,
+            selectors: [["cerberus-modal-dialog-control"]],
+            inputs: {
+                title: "title",
+                content: "content",
+                type: "type",
+                secondaryButton: "secondaryButton",
+                primaryButton: "primaryButton"
+            },
+            decls: 10,
+            vars: 8,
+            consts: [[3, "type"], [1, "modalDialogContent"], ["data-test-id", "modal-dialog-control-title", "kind", "large", "fontWeight", "bold", "fillColor", "colors.light.100", "align", "center"], ["top", "small", "bottom", "x-large"], ["data-test-id", "modal-dialog-control-content", "fillColor", "colors.light.100", "align", "center", 3, "innerHTML"], [1, "modalDialogContent__buttons"], ["type", "secondary", "size", "large", "data-test-id", "modal-dialog-control-secondary-button", 3, "click", 4, "ngIf"], ["type", "primary", "size", "large", "data-test-id", "modal-dialog-control-primary-button", 3, "innerHTML", "click", 4, "ngIf"], ["type", "secondary", "size", "large", "data-test-id", "modal-dialog-control-secondary-button", 3, "click"], ["type", "primary", "size", "large", "data-test-id", "modal-dialog-control-primary-button", 3, "innerHTML", "click"]],
+            template: function (C, w) {
+                1 & C && (P.TgZ(0, "gu-modal-dialog", 0)(1, "div", 1)(2, "gu-paragraph-text", 2), P._uU(3), P.qZA(), P.TgZ(4, "gu-vertical-space", 3), P._UZ(5, "gu-paragraph-text", 4), P.ALo(6, "safe"), P.qZA(), P.TgZ(7, "gu-vertical-space", 5), P.YNc(8, O, 2, 1, "gu-hex-button", 6), P.YNc(9, S, 2, 4, "gu-hex-button", 7), P.qZA()()()), 2 & C && (P.Q6J("type", w.type), P.xp6(3), P.Oqu(w.title), P.xp6(2), P.Q6J("innerHTML", P.xi3(6, 5, w.content, "html"), P.oJD), P.xp6(3), P.Q6J("ngIf", w.secondaryButton), P.xp6(1), P.Q6J("ngIf", w.primaryButton))
+            },
+            directives: [A.O5],
+            pipes: [f.y],
+            styles: [".modalDialogContent[_ngcontent-%COMP%]{position:relative;display:flex;flex-direction:column;padding:0 8px;align-items:center;max-width:100vw}.modalDialogContent[_ngcontent-%COMP%] > *[_ngcontent-%COMP%]{position:relative}.modalDialogContent__buttons[_ngcontent-%COMP%]{display:flex;width:100%;justify-content:center}.modalDialogContent__buttons[_ngcontent-%COMP%]   gu-hex-button[_ngcontent-%COMP%]{max-width:50%;flex:1 1 0px}.modalDialogContent__buttons[_ngcontent-%COMP%]   gu-hex-button[_ngcontent-%COMP%]:not(:last-child){margin-right:16px}"]
+        }), T
+    })()
+}, 87745
 :
 (se, R, o) => {
     "use strict";
     o.d(R, {y: () => y});
-    var l = o(5e3), i = o(22313);
+    var c = o(5e3), i = o(22313);
     let y = (() => {
         class e {
             constructor(p) {
@@ -19943,15 +20069,15 @@ return $.\u0275fac = function (C) {
         }
 
         return e.\u0275fac = function (p) {
-            return new (p || e)(l.Y36(i.H7, 16))
-        }, e.\u0275pipe = l.Yjl({name: "safe", type: e, pure: !0}), e
+            return new (p || e)(c.Y36(i.H7, 16))
+        }, e.\u0275pipe = c.Yjl({name: "safe", type: e, pure: !0}), e
     })()
 }, 17268
 :
 (se, R, o) => {
     "use strict";
     o.d(R, {K: () => m});
-    var l = o(5e3), i = o(69808);
+    var c = o(5e3), i = o(69808);
     const y = function (p, g, r, t, n) {
         return {
             "tooltipBubble--top": p,
@@ -19977,12 +20103,12 @@ return $.\u0275fac = function (C) {
 
         return p.\u0275fac = function (r) {
             return new (r || p)
-        }, p.\u0275cmp = l.Xpm({
+        }, p.\u0275cmp = c.Xpm({
             type: p,
             selectors: [["app-tooltip"]],
             hostVars: 2,
             hostBindings: function (r, t) {
-                2 & r && l.ekj("openTooltip", t.getClass)
+                2 & r && c.ekj("openTooltip", t.getClass)
             },
             inputs: {title: "title", position: "position", size: "size", autoClose: "autoClose"},
             ngContentSelectors: e,
@@ -19990,7 +20116,7 @@ return $.\u0275fac = function (C) {
             vars: 9,
             consts: [["fillColor", "colors.gunmetal.300", 1, "tooltipBubble", 3, "kind", "ngClass", "innerHTML"], ["tooltipBubble", ""]],
             template: function (r, t) {
-                1 & r && (l.F$t(), l.Hsn(0), l._UZ(1, "gu-paragraph-text", 0, 1)), 2 & r && (l.xp6(1), l.Q6J("kind", "large" === t.size ? "small" : "x-small")("ngClass", l.qbA(3, y, "top" === t.position, "left" === t.position, "right" === t.position, "bottom" === t.position, "large" === t.size))("innerHTML", t.title, l.oJD))
+                1 & r && (c.F$t(), c.Hsn(0), c._UZ(1, "gu-paragraph-text", 0, 1)), 2 & r && (c.xp6(1), c.Q6J("kind", "large" === t.size ? "small" : "x-small")("ngClass", c.qbA(3, y, "top" === t.position, "left" === t.position, "right" === t.position, "bottom" === t.position, "large" === t.size))("innerHTML", t.title, c.oJD))
             },
             directives: [i.mk],
             styles: ['.tooltipBubble[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes upAndDown2{0%{transform:translateY(-2%)}50%{transform:translateY(2%)}to{transform:translateY(-2%)}}@keyframes shine2{0%{filter:brightness(.96) hue-rotate(0deg)}50%{filter:brightness(1.12) hue-rotate(-10deg)}to{filter:brightness(.96) hue-rotate(0deg)}}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}[_nghost-%COMP%]{display:block;position:relative}[_nghost-%COMP%]:hover   .tooltipBubble[_ngcontent-%COMP%]{opacity:1}[_nghost-%COMP%]:hover   .tooltipBubble.tooltipBubble--top[_ngcontent-%COMP%]{transform:translate(-50%,calc(-100% + (calc(var(--vh) * 1.7) * .5)))}[_nghost-%COMP%]:hover   .tooltipBubble.tooltipBubble--bottom[_ngcontent-%COMP%]{transform:translate(-50%,calc(100% - (calc(var(--vh) * 1.7) * .5)))}[_nghost-%COMP%]:hover   .tooltipBubble.tooltipBubble--left[_ngcontent-%COMP%]{transform:translate(calc(-100% - (calc(var(--vw) * .5) * .5) * .5),-50%)}[_nghost-%COMP%]:hover   .tooltipBubble.tooltipBubble--right[_ngcontent-%COMP%]{transform:translate(calc(0% + (calc(var(--vw) * .5) * .5) * .5),-50%)}.openTooltip[_nghost-%COMP%]   .tooltipBubble[_ngcontent-%COMP%]{opacity:1}.openTooltip[_nghost-%COMP%]   .tooltipBubble.tooltipBubble--top[_ngcontent-%COMP%]{transform:translate(-50%,calc(-100% + (calc(var(--vh) * 1.7) * .5)))}.openTooltip[_nghost-%COMP%]   .tooltipBubble.tooltipBubble--bottom[_ngcontent-%COMP%]{transform:translate(-50%,calc(100% - (calc(var(--vh) * 1.7) * .5)))}.openTooltip[_nghost-%COMP%]   .tooltipBubble.tooltipBubble--left[_ngcontent-%COMP%]{transform:translate(calc(-100% - (calc(var(--vw) * .5) * .5) * .5),-50%)}.openTooltip[_nghost-%COMP%]   .tooltipBubble.tooltipBubble--right[_ngcontent-%COMP%]{transform:translate(calc(0% + (calc(var(--vw) * .5) * .5) * .5),-50%)}.tooltipBubble[_ngcontent-%COMP%]{z-index:1;text-transform:capitalize;padding:calc(var(--vh) * 1.3);padding-top:calc(var(--vh) * .8);padding-bottom:calc(var(--vh) * .8);font-weight:600;user-select:none;pointer-events:none;position:absolute;background:#0f1b27;border:calc(var(--vh) * .15) solid #3d5a74;color:#92abc2;white-space:nowrap;border-radius:calc(var(--vh) * .4);opacity:0;left:50%;text-align:center}.tooltipBubble[_ngcontent-%COMP%]:before{content:"";position:absolute;left:50%;border:calc(var(--vh) * .7) solid transparent;transform:translate(-50%)}.tooltipBubble--large[_ngcontent-%COMP%]{font-weight:400;font-size:16px;padding:16px;text-transform:none}.tooltipBubble--top[_ngcontent-%COMP%]{top:0;transform:translate(-50%,-100%);margin-top:calc(calc(var(--vh) * 1.7) * -1)}.tooltipBubble--top[_ngcontent-%COMP%]:before{border-top-color:#3d5a74;bottom:calc(calc(calc(var(--vh) * .7) * -2) - calc(var(--vh) * .15))}.tooltipBubble--bottom[_ngcontent-%COMP%]{bottom:0;transform:translate(-50%,100%);margin-top:calc(var(--vh) * 1.7)}.tooltipBubble--bottom[_ngcontent-%COMP%]:before{border-bottom-color:#3d5a74;top:calc(calc(calc(var(--vh) * .7) * -2) - calc(var(--vh) * .15))}.tooltipBubble--left[_ngcontent-%COMP%]{left:0;top:50%}.tooltipBubble--left[_ngcontent-%COMP%]:before{left:100%;transform:translateY(50%);border-left-color:#3d5a74;right:calc(calc(calc(var(--vh) * .7) * -2) - calc(var(--vh) * .15));bottom:50%}.tooltipBubble--right[_ngcontent-%COMP%]{margin-left:10px;top:50%}.tooltipBubble--right[_ngcontent-%COMP%]:before{right:100%;transform:translateY(50%);border-right-color:#3d5a74;left:calc(calc(calc(var(--vh) * .7) * -2) - calc(var(--vh) * .15));bottom:50%}']
@@ -20001,7 +20127,7 @@ return $.\u0275fac = function (C) {
 (se, R, o) => {
     "use strict";
     o.d(R, {O: () => p});
-    var l = o(73307), i = o(5e3), y = o(69808);
+    var c = o(73307), i = o(5e3), y = o(69808);
 
     function e(g, r) {
         if (1 & g) {
@@ -20041,7 +20167,7 @@ return $.\u0275fac = function (C) {
         }
 
         return g.\u0275fac = function (t) {
-            return new (t || g)(i.Y36(l.qy))
+            return new (t || g)(i.Y36(c.qy))
         }, g.\u0275cmp = i.Xpm({
             type: g,
             selectors: [["cerberus-announce-banner-control"]],
@@ -20062,11 +20188,11 @@ return $.\u0275fac = function (C) {
 (se, R, o) => {
     "use strict";
     o.d(R, {i: () => p});
-    var l = o(8929), i = o(7625), y = o(55778), e = o(73307), m = o(5e3);
+    var c = o(8929), i = o(7625), y = o(55778), e = o(73307), m = o(5e3);
     let p = (() => {
         class g {
             constructor(t) {
-                this.featureFlagsService = t, this.text = "", this.unsubscribe = new l.xQ
+                this.featureFlagsService = t, this.text = "", this.unsubscribe = new c.xQ
             }
 
             ngOnInit() {
@@ -20106,95 +20232,95 @@ return $.\u0275fac = function (C) {
         ic: () => p,
         am: () => bo,
         q6: () => X,
-        sZ: () => Pe,
-        el: () => Ps,
+        sZ: () => Se,
+        el: () => Ss,
         gn: () => po,
         kM: () => Ds,
         MZ: () => ks.M,
         W2: () => m
     });
-    var l = o(69808), i = o(93075), y = o(53161), e = o(5e3);
+    var c = o(69808), i = o(93075), y = o(53161), e = o(5e3);
     let m = (() => {
-        class S {
+        class x {
         }
 
-        return S.\u0275fac = function (u) {
-            return new (u || S)
-        }, S.\u0275mod = e.oAB({type: S}), S.\u0275inj = e.cJS({imports: [[l.ez, i.u5, y.j]]}), S
+        return x.\u0275fac = function (u) {
+            return new (u || x)
+        }, x.\u0275mod = e.oAB({type: x}), x.\u0275inj = e.cJS({imports: [[c.ez, i.u5, y.j]]}), x
     })(), p = (() => {
-        class S {
+        class x {
         }
 
-        return S.\u0275fac = function (u) {
-            return new (u || S)
-        }, S.\u0275mod = e.oAB({type: S}), S.\u0275inj = e.cJS({imports: [[l.ez]]}), S
+        return x.\u0275fac = function (u) {
+            return new (u || x)
+        }, x.\u0275mod = e.oAB({type: x}), x.\u0275inj = e.cJS({imports: [[c.ez]]}), x
     })();
     const g = ["2x-small", "x-small", "small", "medium", "large", "x-large", "2x-large", "3x-large", "4x-large", "5x-large", "6x-large", "7x-large", "8x-large", "9x-large"];
     var r = o(65281), t = o(69181);
-    const n = ["video"], v = ["carousel"], k = ["testParagraph"], x = function (S) {
-        return {height: S}
+    const n = ["video"], v = ["carousel"], k = ["testParagraph"], P = function (x) {
+        return {height: x}
     };
 
-    function I(S, H) {
-        if (1 & S && (e.TgZ(0, "div", 71), e._uU(1), e.qZA()), 2 & S) {
-            const u = H.$implicit, D = H.index;
-            e.Q6J("ngStyle", e.VKq(3, x, u.randomHeight + "px")), e.xp6(1), e.AsE(" ", u.title, " ---- index: ", D + 1, " ")
+    function I(x, Z) {
+        if (1 & x && (e.TgZ(0, "div", 71), e._uU(1), e.qZA()), 2 & x) {
+            const u = Z.$implicit, D = Z.index;
+            e.Q6J("ngStyle", e.VKq(3, P, u.randomHeight + "px")), e.xp6(1), e.AsE(" ", u.title, " ---- index: ", D + 1, " ")
         }
     }
 
-    function A(S, H) {
-        if (1 & S && (e.TgZ(0, "div", 71), e._uU(1), e.qZA()), 2 & S) {
-            const u = H.$implicit;
-            e.Q6J("ngStyle", e.VKq(2, x, u.randomHeight + "px")), e.xp6(1), e.hij(" ", u.title, " ")
+    function A(x, Z) {
+        if (1 & x && (e.TgZ(0, "div", 71), e._uU(1), e.qZA()), 2 & x) {
+            const u = Z.$implicit;
+            e.Q6J("ngStyle", e.VKq(2, P, u.randomHeight + "px")), e.xp6(1), e.hij(" ", u.title, " ")
         }
     }
 
-    function f(S, H) {
-        if (1 & S && (e.TgZ(0, "div", 71), e._uU(1), e.qZA()), 2 & S) {
-            const u = H.$implicit;
-            e.Q6J("ngStyle", e.VKq(2, x, u.randomHeight + "px")), e.xp6(1), e.hij(" ", u.title, " ")
+    function f(x, Z) {
+        if (1 & x && (e.TgZ(0, "div", 71), e._uU(1), e.qZA()), 2 & x) {
+            const u = Z.$implicit;
+            e.Q6J("ngStyle", e.VKq(2, P, u.randomHeight + "px")), e.xp6(1), e.hij(" ", u.title, " ")
         }
     }
 
-    function O(S, H) {
-        if (1 & S && (e.TgZ(0, "div", 71), e._uU(1), e.qZA()), 2 & S) {
-            const u = H.$implicit;
-            e.Q6J("ngStyle", e.VKq(2, x, u.randomHeight + "px")), e.xp6(1), e.hij(" ", u.title, " ")
+    function O(x, Z) {
+        if (1 & x && (e.TgZ(0, "div", 71), e._uU(1), e.qZA()), 2 & x) {
+            const u = Z.$implicit;
+            e.Q6J("ngStyle", e.VKq(2, P, u.randomHeight + "px")), e.xp6(1), e.hij(" ", u.title, " ")
         }
     }
 
-    function P(S, H) {
-        if (1 & S && (e.TgZ(0, "div", 71), e._uU(1), e.qZA()), 2 & S) {
-            const u = H.$implicit;
-            e.Q6J("ngStyle", e.VKq(2, x, u.randomHeight + "px")), e.xp6(1), e.hij(" ", u.title, " ")
+    function S(x, Z) {
+        if (1 & x && (e.TgZ(0, "div", 71), e._uU(1), e.qZA()), 2 & x) {
+            const u = Z.$implicit;
+            e.Q6J("ngStyle", e.VKq(2, P, u.randomHeight + "px")), e.xp6(1), e.hij(" ", u.title, " ")
         }
     }
 
     const b = function () {
         return {breakpoint: "small", bothSize: "3x-large"}
-    }, $ = function (S) {
-        return [S]
+    }, T = function (x) {
+        return [x]
     }, s = function () {
         return {minWidth: "x-small", slidesPerView: 1.5, spaceBetween: 10}
     }, C = function () {
         return {minWidth: "medium", slidesPerView: 3.5, spaceBetween: 20}
     }, w = function () {
         return {minWidth: "small", slidesPerView: 2.5, spaceBetween: 10}
-    }, B = function (S, H, u) {
-        return [S, H, u]
+    }, B = function (x, Z, u) {
+        return [x, Z, u]
     }, ee = function () {
         return {name: "moo cow", id: "moo"}
     }, ce = function () {
         return {name: "woof dog", id: "woof"}
-    }, de = function (S, H) {
-        return [S, H]
+    }, de = function (x, Z) {
+        return [x, Z]
     }, fe = function () {
         return {breakpoint: "small", size: "x-large"}
-    }, Z = function () {
+    }, N = function () {
         return {breakpoint: "medium", size: "2x-large"}
     };
     let X = (() => {
-        class S {
+        class x {
             constructor() {
                 this.socialMediaAccounts = t.$, this.onetwo = "holy smokes, batman", this.spacing = g[3], this.colors = Object.assign({}, r.colors), this.slides = [{
                     title: '"hello" world',
@@ -20245,10 +20371,10 @@ return $.\u0275fac = function (C) {
             }
         }
 
-        return S.\u0275fac = function (u) {
-            return new (u || S)
-        }, S.\u0275cmp = e.Xpm({
-            type: S,
+        return x.\u0275fac = function (u) {
+            return new (u || x)
+        }, x.\u0275cmp = e.Xpm({
+            type: x,
             selectors: [["cerberus-demo-sheet"]],
             viewQuery: function (u, D) {
                 if (1 & u && (e.Gf(n, 7), e.Gf(v, 7), e.Gf(k, 7)), 2 & u) {
@@ -20260,63 +20386,63 @@ return $.\u0275fac = function (C) {
             vars: 43,
             consts: [[2, "display", "flex", "flex-direction", "column", "align-items", "center", "padding", "30px 30px 100px", "height", "100%", "background", "#bbbbbb"], ["simpleTextKind", "large", 3, "simpleTextDisplay"], ["src", "/assets/videos/stars-opens.mp4", "muted", "", "playsinline", "", "preload", "auto", 1, "video"], ["video", ""], ["text", "moo cow"], ["testParagraph", ""], ["furColor", "red", "bodyColor", "gold", "gemColor", "yellowgreen"], ["icon", "marketplace_cart"], ["href", "https://google.com", "kind", "tag"], ["href", "https://google.com", "kind", "help"], ["href", "https://google.com", "kind", "small"], ["href", "https://google.com", "icon", "set_core", "backgroundFillColor", "colors.gunmetal.700", "borderColor", "colors.apocyan.300", "fillColor", "colors.white"], ["href", "https://google.com", "icon", "marketplace_cart", "backgroundFillColor", "colors.gunmetal.700", "borderColor", "colors.apocyan.300", "leftIconPosition", ""], ["href", "https://google.com", "icon", "set_core", "backgroundFillColor", "colors.gunmetal.700", "borderColor", "colors.apocyan.300", "verticalLayout", ""], ["text", "Special Button", "enableSounds", "", "icon", "set_core"], ["text", "Special alt Button", "enableSounds", "", "invertColoring", "", "leftIconPosition", "", "icon", "tribe_dragon"], ["top", "large", 3, "responsiveSize"], ["text", "This is a text link"], ["both", "x-large"], ["size", "large", "text", "large primary button"], ["text", "primary button", "enableSounds", "", "icon", "set_core"], ["text", "secondary button", "enableSounds", ""], ["text", "subtle button"], [2, "display", "block", "overflow", "auto", "padding", "30px 30px 100px", "height", "100%", "background", "#ccc"], ["progress", "50"], ["bottom", "5x-large", "top", "3x-large"], [2, "color", "black", 3, "click"], ["both", "large"], ["text", "GOTO pane 4", "size", "large", 3, "click"], ["spaceBetween", "20", "slidesPerView", "2.2", "data-carousel-kind", "multi slide carousel with an uneven number of slides per screen", 1, "carousel", 3, "onSlideChange"], ["carousel", ""], ["class", "carousel__slide", 3, "ngStyle", 4, "ngFor", "ngForOf"], ["spaceBetween", "0", "slidesPerView", "1", "data-carousel-kind", "multi slide carousel with responsive slidesPerView", 1, "carousel", 3, "responsiveBreakpoints", "onSlideChange"], ["bottom", "large"], ["spaceBetween", "10", "centeredSlides", "true", "slidesPerView", "3", "data-carousel-kind", "multi slide carousel with centered slides", 1, "carousel", 3, "onSlideChange"], ["spaceBetween", "30", "slidesPerView", "3", "data-carousel-kind", "simple multi slide carousel", 1, "carousel", 3, "onSlideChange"], ["spaceBetween", "0", "slidesPerView", "1", "data-carousel-kind", "single slide carousel", 1, "carousel", 3, "onSlideChange"], [1, "useJsVars"], ["bottom", "2x-large"], [3, "fillColor"], ["labelText", "moo cow", 3, "checked", "onCheck"], ["labelText", "large moo cow", "labelPlacement", "right", "size", "large", 3, "checked", "onCheck"], ["top", "small"], ["placeholderText", "select something", 3, "items", "onSelect"], ["top", "6x-large"], ["iconLigature", "social_telegram", 1, "customGradient"], ["top", "medium"], ["kind", "help", "fillColor", "colors.gunmetal.300"], ["both", "4x-large"], ["iconLigature", "social_telegram", "fillColor", "colors.gold.300", 2, "font-size", "100px"], ["iconLigature", "friends_helmet", "fillGradient", "gradients.god.magic", "fillGradientTarget", "top right", 2, "font-size", "100px"], ["fillColor", "colors.dark.700"], ["bottom", "3x-large"], [3, "disabled"], [3, "loading"], ["size", "large", "href", "https://google.com"], ["size", "large", "align", "left", "fillGradient", "gradients.god.nature", "fillGradientTarget", "bottom"], ["top", "x-large"], ["size", "large", "fillColor", "colors.light.100", 1, "bannerHeadings__largeHeading", 3, "responsiveBreakpoints"], ["bottom", "medium", 3, "top"], ["size", "small", "align", "center"], ["bottom", "6x-large", 3, "top"], ["size", "x-small", "align", "right"], ["align", "left", "kind", "tag"], ["align", "left", "kind", "tag", "text", "simple text can also be fed input text like so... (this text is 100% untouchable from the external global styles)"], ["align", "left", "kind", "help", "fillGradient", "gradients.apocyan.simple", 1, "customSimpleText"], ["top", "2x-large", "bottom", "medium"], ["kind", "large"], ["kind", "help", "align", "right"], [3, "accounts"], ["kind", "tag"], [1, "carousel__slide", 3, "ngStyle"]],
             template: function (u, D) {
-                1 & u && (e.TgZ(0, "div", 0), e._UZ(1, "gu-countdown-timer"), e._UZ(2, "gu-countdown-timer", 1), e._UZ(3, "video", 2, 3), e._UZ(5, "gu-paragraph-text", 4, 5), e._UZ(7, "gu-regular-crypto-kitty", 6), e.qZA(), e.TgZ(8, "div", 0), e.TgZ(9, "gu-plain-square-button", 7), e._uU(10, " plain square button "), e.qZA(), e.TgZ(11, "gu-simple-text-button", 8), e._uU(12, " simple text button "), e.qZA(), e.TgZ(13, "gu-simple-text-button", 9), e._uU(14, " simple text button "), e.qZA(), e.TgZ(15, "gu-simple-text-button", 10), e._uU(16, " simple text button "), e.qZA(), e.TgZ(17, "gu-plain-square-button", 11), e._uU(18, " plain square "), e.qZA(), e.TgZ(19, "gu-plain-square-button", 12), e._uU(20, " Cart "), e.qZA(), e.TgZ(21, "gu-plain-square-button", 13), e._uU(22, " plain square vertical "), e.qZA(), e._UZ(23, "gu-special-hex-button", 14), e._UZ(24, "gu-special-hex-button", 15), e.TgZ(25, "gu-vertical-space", 16), e.TgZ(26, "gu-paragraph-text"), e._uU(27, "Arcu bibendum at varius vel. Nec feugiat nisl pretium fusce id velit ut tortor. Vel eros donec ac odio. "), e._UZ(28, "gu-simple-text-button", 17), e.qZA(), e.qZA(), e.TgZ(29, "gu-vertical-space", 18), e._UZ(30, "gu-primary-hex-button", 19), e.qZA(), e._UZ(31, "gu-primary-hex-button", 20), e.TgZ(32, "gu-vertical-space", 18), e._UZ(33, "gu-secondary-hex-button", 21), e.qZA(), e._UZ(34, "gu-subtle-hex-button", 22), e.qZA(), e.TgZ(35, "div", 23), e._UZ(36, "gu-hex-progress-bar", 24), e.TgZ(37, "gu-vertical-space", 25), e.TgZ(38, "button", 26), e.NdJ("click", function () {
+                1 & u && (e.TgZ(0, "div", 0), e._UZ(1, "gu-countdown-timer")(2, "gu-countdown-timer", 1)(3, "video", 2, 3)(5, "gu-paragraph-text", 4, 5)(7, "gu-regular-crypto-kitty", 6), e.qZA(), e.TgZ(8, "div", 0)(9, "gu-plain-square-button", 7), e._uU(10, " plain square button "), e.qZA(), e.TgZ(11, "gu-simple-text-button", 8), e._uU(12, " simple text button "), e.qZA(), e.TgZ(13, "gu-simple-text-button", 9), e._uU(14, " simple text button "), e.qZA(), e.TgZ(15, "gu-simple-text-button", 10), e._uU(16, " simple text button "), e.qZA(), e.TgZ(17, "gu-plain-square-button", 11), e._uU(18, " plain square "), e.qZA(), e.TgZ(19, "gu-plain-square-button", 12), e._uU(20, " Cart "), e.qZA(), e.TgZ(21, "gu-plain-square-button", 13), e._uU(22, " plain square vertical "), e.qZA(), e._UZ(23, "gu-special-hex-button", 14)(24, "gu-special-hex-button", 15), e.TgZ(25, "gu-vertical-space", 16)(26, "gu-paragraph-text"), e._uU(27, "Arcu bibendum at varius vel. Nec feugiat nisl pretium fusce id velit ut tortor. Vel eros donec ac odio. "), e._UZ(28, "gu-simple-text-button", 17), e.qZA()(), e.TgZ(29, "gu-vertical-space", 18), e._UZ(30, "gu-primary-hex-button", 19), e.qZA(), e._UZ(31, "gu-primary-hex-button", 20), e.TgZ(32, "gu-vertical-space", 18), e._UZ(33, "gu-secondary-hex-button", 21), e.qZA(), e._UZ(34, "gu-subtle-hex-button", 22), e.qZA(), e.TgZ(35, "div", 23), e._UZ(36, "gu-hex-progress-bar", 24), e.TgZ(37, "gu-vertical-space", 25)(38, "button", 26), e.NdJ("click", function () {
                     return D.gotoPane(1)
-                }), e._uU(39, "goto pane 2"), e.qZA(), e.TgZ(40, "gu-vertical-space", 27), e.TgZ(41, "gu-primary-hex-button", 28), e.NdJ("click", function () {
+                }), e._uU(39, "goto pane 2"), e.qZA(), e.TgZ(40, "gu-vertical-space", 27)(41, "gu-primary-hex-button", 28), e.NdJ("click", function () {
                     return D.gotoPane(3)
-                }), e.qZA(), e.qZA(), e.TgZ(42, "gu-carousel", 29, 30), e.NdJ("onSlideChange", function (_e) {
+                }), e.qZA()(), e.TgZ(42, "gu-carousel", 29, 30), e.NdJ("onSlideChange", function (_e) {
                     return D.onCurrentPaneChange(_e)
-                }), e.YNc(44, I, 2, 5, "div", 31), e.qZA(), e.TgZ(45, "gu-vertical-space", 27), e.TgZ(46, "gu-carousel", 32), e.NdJ("onSlideChange", function (_e) {
+                }), e.YNc(44, I, 2, 5, "div", 31), e.qZA(), e.TgZ(45, "gu-vertical-space", 27)(46, "gu-carousel", 32), e.NdJ("onSlideChange", function (_e) {
                     return D.onCurrentPaneChange(_e)
-                }), e.YNc(47, A, 2, 4, "div", 31), e.qZA(), e.qZA(), e.TgZ(48, "gu-vertical-space", 33), e.TgZ(49, "gu-carousel", 34), e.NdJ("onSlideChange", function (_e) {
+                }), e.YNc(47, A, 2, 4, "div", 31), e.qZA()(), e.TgZ(48, "gu-vertical-space", 33)(49, "gu-carousel", 34), e.NdJ("onSlideChange", function (_e) {
                     return D.onCurrentPaneChange(_e)
-                }), e.YNc(50, f, 2, 4, "div", 31), e.qZA(), e.qZA(), e.TgZ(51, "gu-carousel", 35), e.NdJ("onSlideChange", function (_e) {
+                }), e.YNc(50, f, 2, 4, "div", 31), e.qZA()(), e.TgZ(51, "gu-carousel", 35), e.NdJ("onSlideChange", function (_e) {
                     return D.onCurrentPaneChange(_e)
-                }), e.YNc(52, O, 2, 4, "div", 31), e.qZA(), e.TgZ(53, "gu-vertical-space", 27), e.TgZ(54, "gu-carousel", 36), e.NdJ("onSlideChange", function (_e) {
+                }), e.YNc(52, O, 2, 4, "div", 31), e.qZA(), e.TgZ(53, "gu-vertical-space", 27)(54, "gu-carousel", 36), e.NdJ("onSlideChange", function (_e) {
                     return D.onCurrentPaneChange(_e)
-                }), e.YNc(55, P, 2, 4, "div", 31), e.qZA(), e.qZA(), e.qZA(), e.TgZ(56, "gu-vertical-space", 33), e.TgZ(57, "div", 37), e._uU(58, " this text is styled thru plain old angular sass, using a color var from our new variables system "), e.qZA(), e.qZA(), e.TgZ(59, "gu-vertical-space", 38), e.TgZ(60, "gu-paragraph-text", 39), e._uU(61), e.qZA(), e.qZA(), e.TgZ(62, "gu-vertical-space", 33), e.TgZ(63, "gu-checkbox-input", 40), e.NdJ("onCheck", function (_e) {
+                }), e.YNc(55, S, 2, 4, "div", 31), e.qZA()()(), e.TgZ(56, "gu-vertical-space", 33)(57, "div", 37), e._uU(58, " this text is styled thru plain old angular sass, using a color var from our new variables system "), e.qZA()(), e.TgZ(59, "gu-vertical-space", 38)(60, "gu-paragraph-text", 39), e._uU(61), e.qZA()(), e.TgZ(62, "gu-vertical-space", 33)(63, "gu-checkbox-input", 40), e.NdJ("onCheck", function (_e) {
                     return D.onMoo(_e)
                 }), e.qZA(), e.TgZ(64, "gu-checkbox-input", 41), e.NdJ("onCheck", function (_e) {
                     return D.onCheck(_e)
-                }),e.qZA(),e.qZA(),e.TgZ(65, "gu-vertical-space", 42),e.TgZ(66, "gu-dropdown", 43),e.NdJ("onSelect", function (_e) {
+                }), e.qZA()(), e.TgZ(65, "gu-vertical-space", 42)(66, "gu-dropdown", 43), e.NdJ("onSelect", function (_e) {
                     return D.onDropdownSelect(_e)
-                }),e.qZA(),e.qZA(),e.TgZ(67, "gu-vertical-space", 44),e._UZ(68, "gu-icon", 45),e.TgZ(69, "gu-vertical-space", 46),e.TgZ(70, "gu-simple-text", 47),e._uU(71),e.qZA(),e.qZA(),e.qZA(),e.TgZ(72, "gu-vertical-space", 48),e._UZ(73, "gu-icon", 49),e._UZ(74, "gu-icon", 50),e.TgZ(75, "gu-vertical-space", 46),e.TgZ(76, "gu-simple-text", 51),e._uU(77, " ^ this is an icon - with a gradient fill input, and this text has a color fill input "),e.qZA(),e.qZA(),e.qZA(),e.TgZ(78, "gu-vertical-space", 52),e.TgZ(79, "gu-primary-hex-button", 53),e._uU(80, "disabled button"),e.qZA(),e.TgZ(81, "gu-primary-hex-button", 54),e._uU(82, "loading button"),e.qZA(),e.TgZ(83, "gu-vertical-space", 46),e.TgZ(84, "gu-primary-hex-button", 55),e._uU(85, " moo cow "),e.qZA(),e.qZA(),e.qZA(),e.TgZ(86, "gu-heading-text", 56),e.TgZ(87, "h1"),e._uU(88, 'this is a "large" left aligned heading'),e.qZA(),e.qZA(),e.TgZ(89, "gu-vertical-space", 57),e.TgZ(90, "gu-heading-text", 58),e._uU(91, " This heading has responsively set font-size "),e.qZA(),e.qZA(),e.TgZ(92, "gu-vertical-space", 59),e.TgZ(93, "gu-heading-text", 60),e.TgZ(94, "h3"),e._uU(95),e.qZA(),e.qZA(),e.qZA(),e.TgZ(96, "gu-vertical-space", 61),e.TgZ(97, "gu-heading-text", 62),e.TgZ(98, "h6"),e._uU(99, 'this is an "x-small" right aligned heading'),e.qZA(),e.qZA(),e.qZA(),e.TgZ(100, "gu-vertical-space", 33),e.TgZ(101, "gu-simple-text", 63),e._uU(102, ' this is the simple-text "tag" kind ... '),e.qZA(),e.qZA(),e._UZ(103, "gu-simple-text", 64),e.TgZ(104, "gu-simple-text", 65),e._uU(105, ' this is the simple-text "help" kind ... (note how simple-text displays as an inline element, not block) '),e.qZA(),e.TgZ(106, "gu-vertical-space", 66),e.TgZ(107, "gu-paragraph-text", 67),e._uU(108, ' this is "paragraph-text", kind: "large". note how it has line height, passes it\'s sizing down to "simple-text", and is '),e.TgZ(109, "em"),e._uU(110, "block level"),e.qZA(),e._uU(111, " - just like "),e.TgZ(112, "strong"),e._uU(113, "regular paragraphs!"),e.qZA(),e._UZ(114, "br"),e._uU(115),e.qZA(),e.qZA(),e.TgZ(116, "gu-vertical-space", 59),e.TgZ(117, "gu-paragraph-text", 68),e._uU(118, ' this is the "help" kind of paragraph-text '),e._UZ(119, "br"),e._uU(120, " Bibendum est ultricies integer quis auctor elit sed. Iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et. Donec massa sapien faucibus et. Felis imperdiet proin fermentum leo vel orci porta non. Augue neque gravida in fermentum et sollicitudin ac orci. Ac tincidunt vitae semper quis. "),e.qZA(),e.qZA(),e._UZ(121, "gu-social-buttons-row", 69),e.TgZ(122, "gu-paragraph-text", 70),e._uU(123, ' this is the "tag" kind of paragraph-text '),e._UZ(124, "br"),e._uU(125, " Arcu bibendum at varius vel. Nec feugiat nisl pretium fusce id velit ut tortor. Vel eros donec ac odio. Ante metus dictum at tempor commodo ullamcorper a. Hendrerit gravida rutrum quisque non tellus orci ac auctor augue. Non curabitur gravida arcu ac. "),e.qZA(),e.qZA()), 2 & u && (e.xp6(2), e.Q6J("simpleTextDisplay", !0), e.xp6(23), e.Q6J("responsiveSize", e.VKq(24, $, e.DdM(23, b))), e.xp6(19), e.Q6J("ngForOf", D.slides), e.xp6(2), e.Q6J("responsiveBreakpoints", e.kEZ(29, B, e.DdM(26, s), e.DdM(27, C), e.DdM(28, w))), e.xp6(1), e.Q6J("ngForOf", D.slides), e.xp6(3), e.Q6J("ngForOf", D.slides), e.xp6(2), e.Q6J("ngForOf", D.slides), e.xp6(3), e.Q6J("ngForOf", D.slides), e.xp6(5), e.s9C("fillColor", D.colors.dark[500]), e.xp6(1), e.hij(" this text is styled using direct variable input from an angular scope variable: ", D.colors.dark[500], " (colors.dark[500]) "), e.xp6(2), e.Q6J("checked", !0), e.xp6(1), e.Q6J("checked", !1), e.xp6(2), e.Q6J("items", e.WLB(35, de, e.DdM(33, ee), e.DdM(34, ce))), e.xp6(5), e.hij(" ^ this is an icon - with a custom scss gradient as text-fill ", D.onetwo, " (this text is colored as gunmetal[300]) "), e.xp6(8), e.Q6J("disabled", !0), e.xp6(2), e.s9C("loading", !0), e.xp6(9), e.Q6J("responsiveBreakpoints", e.WLB(40, de, e.DdM(38, fe), e.DdM(39, Z))), e.xp6(2), e.s9C("top", D.spacing), e.xp6(3), e.hij('this is a "small" center aligned heading > spacing: ', D.spacing, ""), e.xp6(1), e.s9C("top", D.spacing), e.xp6(19), e.hij(" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut eu sem integer vitae justo. Amet porttitor ", D.moo, " eget dolor morbi non arcu risus quis varius. Est velit egestas dui id ornare arcu odio ut. Integer quis auctor elit sed vulputate mi sit. Dui ut ornare lectus sit amet est placerat. Cras sed felis eget velit aliquet sagittis. "), e.xp6(1), e.s9C("top", D.spacing), e.xp6(5), e.Q6J("accounts", D.socialMediaAccounts))
+                }), e.qZA()(), e.TgZ(67, "gu-vertical-space", 44), e._UZ(68, "gu-icon", 45), e.TgZ(69, "gu-vertical-space", 46)(70, "gu-simple-text", 47), e._uU(71), e.qZA()()(), e.TgZ(72, "gu-vertical-space", 48), e._UZ(73, "gu-icon", 49)(74, "gu-icon", 50), e.TgZ(75, "gu-vertical-space", 46)(76, "gu-simple-text", 51), e._uU(77, " ^ this is an icon - with a gradient fill input, and this text has a color fill input "), e.qZA()()(), e.TgZ(78, "gu-vertical-space", 52)(79, "gu-primary-hex-button", 53), e._uU(80, "disabled button"), e.qZA(), e.TgZ(81, "gu-primary-hex-button", 54), e._uU(82, "loading button"), e.qZA(), e.TgZ(83, "gu-vertical-space", 46)(84, "gu-primary-hex-button", 55), e._uU(85, " moo cow "), e.qZA()()(),e.TgZ(86, "gu-heading-text", 56)(87, "h1"),e._uU(88, 'this is a "large" left aligned heading'),e.qZA()(),e.TgZ(89, "gu-vertical-space", 57)(90, "gu-heading-text", 58),e._uU(91, " This heading has responsively set font-size "),e.qZA()(),e.TgZ(92, "gu-vertical-space", 59)(93, "gu-heading-text", 60)(94, "h3"),e._uU(95),e.qZA()()(),e.TgZ(96, "gu-vertical-space", 61)(97, "gu-heading-text", 62)(98, "h6"),e._uU(99, 'this is an "x-small" right aligned heading'),e.qZA()()(),e.TgZ(100, "gu-vertical-space", 33)(101, "gu-simple-text", 63),e._uU(102, ' this is the simple-text "tag" kind ... '),e.qZA()(),e._UZ(103, "gu-simple-text", 64),e.TgZ(104, "gu-simple-text", 65),e._uU(105, ' this is the simple-text "help" kind ... (note how simple-text displays as an inline element, not block) '),e.qZA(),e.TgZ(106, "gu-vertical-space", 66)(107, "gu-paragraph-text", 67),e._uU(108, ' this is "paragraph-text", kind: "large". note how it has line height, passes it\'s sizing down to "simple-text", and is '),e.TgZ(109, "em"),e._uU(110, "block level"),e.qZA(),e._uU(111, " - just like "),e.TgZ(112, "strong"),e._uU(113, "regular paragraphs!"),e.qZA(),e._UZ(114, "br"),e._uU(115),e.qZA()(),e.TgZ(116, "gu-vertical-space", 59)(117, "gu-paragraph-text", 68),e._uU(118, ' this is the "help" kind of paragraph-text '),e._UZ(119, "br"),e._uU(120, " Bibendum est ultricies integer quis auctor elit sed. Iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et. Donec massa sapien faucibus et. Felis imperdiet proin fermentum leo vel orci porta non. Augue neque gravida in fermentum et sollicitudin ac orci. Ac tincidunt vitae semper quis. "),e.qZA()(),e._UZ(121, "gu-social-buttons-row", 69),e.TgZ(122, "gu-paragraph-text", 70),e._uU(123, ' this is the "tag" kind of paragraph-text '),e._UZ(124, "br"),e._uU(125, " Arcu bibendum at varius vel. Nec feugiat nisl pretium fusce id velit ut tortor. Vel eros donec ac odio. Ante metus dictum at tempor commodo ullamcorper a. Hendrerit gravida rutrum quisque non tellus orci ac auctor augue. Non curabitur gravida arcu ac. "),e.qZA()()), 2 & u && (e.xp6(2), e.Q6J("simpleTextDisplay", !0), e.xp6(23), e.Q6J("responsiveSize", e.VKq(24, T, e.DdM(23, b))), e.xp6(19), e.Q6J("ngForOf", D.slides), e.xp6(2), e.Q6J("responsiveBreakpoints", e.kEZ(29, B, e.DdM(26, s), e.DdM(27, C), e.DdM(28, w))), e.xp6(1), e.Q6J("ngForOf", D.slides), e.xp6(3), e.Q6J("ngForOf", D.slides), e.xp6(2), e.Q6J("ngForOf", D.slides), e.xp6(3), e.Q6J("ngForOf", D.slides), e.xp6(5), e.s9C("fillColor", D.colors.dark[500]), e.xp6(1), e.hij(" this text is styled using direct variable input from an angular scope variable: ", D.colors.dark[500], " (colors.dark[500]) "), e.xp6(2), e.Q6J("checked", !0), e.xp6(1), e.Q6J("checked", !1), e.xp6(2), e.Q6J("items", e.WLB(35, de, e.DdM(33, ee), e.DdM(34, ce))), e.xp6(5), e.hij(" ^ this is an icon - with a custom scss gradient as text-fill ", D.onetwo, " (this text is colored as gunmetal[300]) "), e.xp6(8), e.Q6J("disabled", !0), e.xp6(2), e.s9C("loading", !0), e.xp6(9), e.Q6J("responsiveBreakpoints", e.WLB(40, de, e.DdM(38, fe), e.DdM(39, N))), e.xp6(2), e.s9C("top", D.spacing), e.xp6(3), e.hij('this is a "small" center aligned heading > spacing: ', D.spacing, ""), e.xp6(1), e.s9C("top", D.spacing), e.xp6(19), e.hij(" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut eu sem integer vitae justo. Amet porttitor ", D.moo, " eget dolor morbi non arcu risus quis varius. Est velit egestas dui id ornare arcu odio ut. Integer quis auctor elit sed vulputate mi sit. Dui ut ornare lectus sit amet est placerat. Cras sed felis eget velit aliquet sagittis. "), e.xp6(1), e.s9C("top", D.spacing), e.xp6(5), e.Q6J("accounts", D.socialMediaAccounts))
             },
-            directives: [l.sg, l.PC],
+            directives: [c.sg, c.PC],
             styles: ["[_nghost-%COMP%]{display:block}.useJsVars[_ngcontent-%COMP%]{color:#affaed}.customGradient[_ngcontent-%COMP%]{font-size:200px;background:linear-gradient(to bottom,#9DE764 0%,#5AC33F 50%,#4C772F 100%)}.customSimpleText[_ngcontent-%COMP%]{border:2px dotted gold;margin-left:8px;padding:16px}.carousel[_ngcontent-%COMP%]{box-shadow:inset 0 0 0 2px #0003}.carousel[_ngcontent-%COMP%]:before{content:attr(data-carousel-kind);position:absolute;z-index:1;bottom:0px;left:3px;color:#0000004d}.carousel__slide[_ngcontent-%COMP%]{background:yellowgreen;box-shadow:inset 0 0 0 3px gold}.carousel__slide[_ngcontent-%COMP%]:first-child{background:rebeccapurple}.carousel__slide[_ngcontent-%COMP%]:last-child{background:dodgerblue}.video[_ngcontent-%COMP%]{width:60%;margin:0 auto;opacity:0}"]
-        }), S
+        }), x
     })(), ae = {numbers: {randomNumber: 0}, text: {randomText: "moo"}};
     setInterval(() => {
         ae = Object.assign(Object.assign({}, ae), {numbers: {randomNumber: Math.random()}})
     }, 400);
     var ye = o(73307), V = o(94057);
-    const le = ["carousel"], Ce = function (S) {
-        return {"championButtons__button--active": S}
+    const le = ["carousel"], Ce = function (x) {
+        return {"championButtons__button--active": x}
     };
 
-    function $e(S, H) {
-        if (1 & S) {
+    function Te(x, Z) {
+        if (1 & x) {
             const u = e.EpF();
             e.TgZ(0, "div", 14), e.NdJ("click", function () {
                 const _e = e.CHM(u).index;
                 return e.oxw().gotoChampionSlide(_e)
-            }), e.TgZ(1, "picture"), e._UZ(2, "source", 15), e._UZ(3, "source", 16), e._UZ(4, "img", 17), e.qZA(), e.qZA()
+            }), e.TgZ(1, "picture"), e._UZ(2, "source", 15)(3, "source", 16)(4, "img", 17), e.qZA()()
         }
-        if (2 & S) {
-            const u = H.$implicit, D = H.index, K = e.oxw();
+        if (2 & x) {
+            const u = Z.$implicit, D = Z.index, K = e.oxw();
             e.Q6J("ngClass", e.VKq(13, Ce, K.activeChampionIndex === D)), e.xp6(1), e.Gre("championButtons__button__picture championButtons__button__picture--", u.name, ""), e.xp6(1), e.FAE("srcset", "\n          //images.godsunchained.com/art2/250/", u.protoId, ".webp 250w,\n          //images.godsunchained.com/art2/375/", u.protoId, ".webp 375w,\n          //images.godsunchained.com/art2/500/", u.protoId, ".webp 500w,\n          //images.godsunchained.com/art2/720/", u.protoId, ".webp 720w\n        ", e.LSH), e.xp6(1), e.FAE("srcset", "\n          //images.godsunchained.com/art2/250/", u.protoId, ".jpg 250w,\n          //images.godsunchained.com/art2/375/", u.protoId, ".jpg 375w,\n          //images.godsunchained.com/art2/500/", u.protoId, ".jpg 500w,\n          //images.godsunchained.com/art2/720/", u.protoId, ".jpg 720w\n        ", e.LSH), e.xp6(1), e.MGl("src", "//images.godsunchained.com/art2/500/", u.protoId, ".jpg", e.LSH)
         }
     }
 
-    function Be(S, H) {
-        if (1 & S && (e.TgZ(0, "div", 18), e.TgZ(1, "picture", 19), e._UZ(2, "source", 20), e._UZ(3, "source", 21), e._UZ(4, "img", 22), e.qZA(), e.TgZ(5, "gu-vertical-space", 23), e.TgZ(6, "gu-heading-text", 24), e._uU(7), e.qZA(), e.qZA(), e.TgZ(8, "gu-paragraph-text", 25), e._uU(9), e.qZA(), e.TgZ(10, "gu-vertical-space", 26), e.TgZ(11, "gu-simple-text-button", 27), e._uU(12, " Read more "), e.qZA(), e.qZA(), e.TgZ(13, "gu-paragraph-text", 28), e._uU(14), e.qZA(), e.qZA()), 2 & S) {
-            const u = H.$implicit;
+    function Be(x, Z) {
+        if (1 & x && (e.TgZ(0, "div", 18)(1, "picture", 19), e._UZ(2, "source", 20)(3, "source", 21)(4, "img", 22), e.qZA(), e.TgZ(5, "gu-vertical-space", 23)(6, "gu-heading-text", 24), e._uU(7), e.qZA()(), e.TgZ(8, "gu-paragraph-text", 25), e._uU(9), e.qZA(), e.TgZ(10, "gu-vertical-space", 26)(11, "gu-simple-text-button", 27), e._uU(12, " Read more "), e.qZA()(), e.TgZ(13, "gu-paragraph-text", 28), e._uU(14), e.qZA()()), 2 & x) {
+            const u = Z.$implicit;
             e.xp6(2), e.bRH("srcset", "\n            //images.godsunchained.com/art2/250/", u.protoId, ".webp 250w,\n            //images.godsunchained.com/art2/375/", u.protoId, ".webp 375w,\n            //images.godsunchained.com/art2/500/", u.protoId, ".webp 500w,\n            //images.godsunchained.com/art2/720/", u.protoId, ".webp 720w,\n            //images.godsunchained.com/art2/1024/", u.protoId, ".webp 1024w,\n            //images.godsunchained.com/art2/1280/", u.protoId, ".webp 1280w,\n            //images.godsunchained.com/art2/1440/", u.protoId, ".webp 1440w\n          ", e.LSH), e.xp6(1), e.bRH("srcset", "\n            //images.godsunchained.com/art2/250/", u.protoId, ".jpg 250w,\n            //images.godsunchained.com/art2/375/", u.protoId, ".jpg 375w,\n            //images.godsunchained.com/art2/500/", u.protoId, ".jpg 500w,\n            //images.godsunchained.com/art2/720/", u.protoId, ".jpg 720w,\n            //images.godsunchained.com/art2/1024/", u.protoId, ".jpg 1024w,\n            //images.godsunchained.com/art2/1280/", u.protoId, ".jpg 1280w,\n            //images.godsunchained.com/art2/1440/", u.protoId, ".jpg 1440w\n          ", e.LSH), e.xp6(1), e.MGl("src", "//images.godsunchained.com/art2/720/", u.protoId, ".jpg", e.LSH), e.xp6(3), e.hij(" ", u.title, " "), e.xp6(2), e.hij(" ", u.description, " "), e.xp6(2), e.s9C("href", u.link), e.xp6(3), e.hij(" ", u.byline, " ")
         }
     }
 
-    let W = (() => {
-        class S {
+    let H = (() => {
+        class x {
             constructor() {
                 this.activeChampionIndex = 0, this.champions = V.zy.Y, this.routes = V.CF.J
             }
@@ -20333,10 +20459,10 @@ return $.\u0275fac = function (C) {
             }
         }
 
-        return S.\u0275fac = function (u) {
-            return new (u || S)
-        }, S.\u0275cmp = e.Xpm({
-            type: S,
+        return x.\u0275fac = function (u) {
+            return new (u || x)
+        }, x.\u0275cmp = e.Xpm({
+            type: x,
             selectors: [["cerberus-season1-champion-section"]],
             viewQuery: function (u, D) {
                 if (1 & u && e.Gf(le, 7), 2 & u) {
@@ -20348,13 +20474,13 @@ return $.\u0275fac = function (C) {
             vars: 4,
             consts: [["size", "large", "fillGradient", "gradients.gold.simple", "align", "center", 1, "heading"], [1, "championButtons"], ["class", "championButtons__button", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], [1, "championCarouselWrapper"], [1, "championCarousel", 3, "onSlideChange"], ["carousel", ""], ["class", "championCarousel__championSlide", 4, "ngFor", "ngForOf"], [1, "sideBarImage", "sideBarImage--left"], ["srcset", "/assets/images/expansion-1/carousel-sidebar.webp", "type", "image/webp"], ["srcset", "/assets/images/expansion-1/carousel-sidebar.png", "type", "image/png"], ["src", "/assets/images/expansion-1/carousel-sidebar.png", "alt", "", 1, "sideBarImage__img"], [1, "sideBarImage", "sideBarImage--right"], ["both", "x-large", 1, "ctaButtonRow"], ["text", "Buy Packs", "size", "large", 3, "disabled", "href"], [1, "championButtons__button", 3, "ngClass", "click"], ["sizes", "20vw", "type", "image/webp", 3, "srcset"], ["sizes", "20vw", "type", "image/jpg", 3, "srcset"], ["alt", "", 1, "championButtons__button__picture__img", 3, "src"], [1, "championCarousel__championSlide"], [1, "championCarousel__championSlide__imgWrapper"], ["sizes", "75vw", "type", "image/webp", 3, "srcset"], ["sizes", "75vw", "type", "image/jpg", 3, "srcset"], ["alt", "", 1, "championCarousel__championSlide__imgWrapper__img", 3, "src"], ["both", "x-large"], ["size", "x-small", "fillColor", "colors.light.100", "align", "center"], ["fillColor", "colors.light.100", "align", "center", "kind", "large", 1, "championCarousel__championSlide__description"], ["top", "large", "bottom", "3x-large", 1, "readMoreLink"], ["kind", "tag", "target", "_blank", "fillColor", "colors.apocyan.300", "align", "center", 3, "href"], ["align", "center", "kind", "large"]],
             template: function (u, D) {
-                1 & u && (e.TgZ(0, "gu-heading-text", 0), e._uU(1, " Meet your champions\n"), e.qZA(), e.TgZ(2, "div", 1), e.YNc(3, $e, 5, 15, "div", 2), e.qZA(), e.TgZ(4, "div", 3), e.TgZ(5, "gu-carousel", 4, 5), e.NdJ("onSlideChange", function (_e) {
+                1 & u && (e.TgZ(0, "gu-heading-text", 0), e._uU(1, " Meet your champions\n"), e.qZA(), e.TgZ(2, "div", 1), e.YNc(3, Te, 5, 15, "div", 2), e.qZA(), e.TgZ(4, "div", 3)(5, "gu-carousel", 4, 5), e.NdJ("onSlideChange", function (_e) {
                     return D.onChampionCarouselUpdate(_e)
-                }), e.YNc(7, Be, 15, 19, "div", 6), e.qZA(), e.TgZ(8, "picture", 7), e._UZ(9, "source", 8), e._UZ(10, "source", 9), e._UZ(11, "img", 10), e.qZA(), e.TgZ(12, "picture", 11), e._UZ(13, "source", 8), e._UZ(14, "source", 9), e._UZ(15, "img", 10), e.qZA(), e.qZA(), e.TgZ(16, "gu-vertical-space", 12), e._UZ(17, "gu-primary-hex-button", 13), e.qZA()), 2 & u && (e.xp6(3), e.Q6J("ngForOf", D.champions), e.xp6(4), e.Q6J("ngForOf", D.champions), e.xp6(10), e.Q6J("disabled", !0)("href", D.routes.buyPacks.path))
+                }), e.YNc(7, Be, 15, 19, "div", 6), e.qZA(), e.TgZ(8, "picture", 7), e._UZ(9, "source", 8)(10, "source", 9)(11, "img", 10), e.qZA(), e.TgZ(12, "picture", 11), e._UZ(13, "source", 8)(14, "source", 9)(15, "img", 10), e.qZA()(), e.TgZ(16, "gu-vertical-space", 12), e._UZ(17, "gu-primary-hex-button", 13), e.qZA()), 2 & u && (e.xp6(3), e.Q6J("ngForOf", D.champions), e.xp6(4), e.Q6J("ngForOf", D.champions), e.xp6(10), e.Q6J("disabled", !0)("href", D.routes.buyPacks.path))
             },
-            directives: [l.sg, l.mk],
+            directives: [c.sg, c.mk],
             styles: ['@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes upAndDown2{0%{transform:translateY(-2%)}50%{transform:translateY(2%)}to{transform:translateY(-2%)}}@keyframes shine2{0%{filter:brightness(.96) hue-rotate(0deg)}50%{filter:brightness(1.12) hue-rotate(-10deg)}to{filter:brightness(.96) hue-rotate(0deg)}}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}[_nghost-%COMP%]{position:relative;padding:80px 0;display:flex;flex-direction:column;background:url(/assets/images/expansion-1/Lysander_LC_BG.jpg);background-size:cover;background-position:center}[_nghost-%COMP%]:before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(to bottom,#0A0A0A 0%,rgba(10,10,10,.8) 50%)}[_nghost-%COMP%]:after{content:"";position:absolute;left:0;right:0;bottom:0;height:12px;background:radial-gradient(47.52% 50% at 50% 50%,#C6A052 0%,rgba(198,160,82,0) 100%)}.heading[_ngcontent-%COMP%]{position:relative;padding:0 20px}.championButtons[_ngcontent-%COMP%]{margin:20px auto 48px;padding:0 28px;display:grid;grid-template-columns:repeat(3,1fr);grid-column-gap:28px;grid-row-gap:28px;max-width:"768px";width:100%}@media screen and (min-width: 512px){.championButtons[_ngcontent-%COMP%]{grid-template-columns:repeat(6,1fr)}}.championButtons__button[_ngcontent-%COMP%]{border-radius:50%;width:100%;padding-bottom:100%;transition:box-shadow .25s ease-in-out;position:relative;overflow:hidden;cursor:pointer}.championButtons__button__picture[_ngcontent-%COMP%]{position:absolute;top:0;left:0;width:100%;height:100%}.championButtons__button__picture__img[_ngcontent-%COMP%]{height:300%;width:300%;object-fit:cover;position:absolute;top:0;left:50%;transform:translate(-50%,-10%)}.championButtons__button__picture--lysander[_ngcontent-%COMP%]   .championButtons__button__picture__img[_ngcontent-%COMP%]{transform:translate(-50%,-9%)}.championButtons__button__picture--neferu[_ngcontent-%COMP%]   .championButtons__button__picture__img[_ngcontent-%COMP%]{transform:translate(-45%,-14%)}.championButtons__button__picture--valka[_ngcontent-%COMP%]   .championButtons__button__picture__img[_ngcontent-%COMP%]{transform:translate(-52%,-6.5%)}.championButtons__button__picture--pallas[_ngcontent-%COMP%]   .championButtons__button__picture__img[_ngcontent-%COMP%]{transform:translate(-54%,-7%)}.championButtons__button__picture--selena[_ngcontent-%COMP%]   .championButtons__button__picture__img[_ngcontent-%COMP%]{transform:translate(-50%,-8%)}.championButtons__button--active[_ngcontent-%COMP%]{box-shadow:0 0 20px #f7ea9b}.championCarouselWrapper[_ngcontent-%COMP%]{margin:0 auto;width:85%;max-width:1000px;position:relative}@media screen and (min-width: 768px){.championCarouselWrapper[_ngcontent-%COMP%]{width:65%}}.sideBarImage[_ngcontent-%COMP%]{display:none;position:absolute;top:-3%;left:-6.25%;width:12.5%;user-select:none;pointer-events:none}.sideBarImage--right[_ngcontent-%COMP%]{left:auto;right:-6.25%;transform:rotateY(180deg)}.sideBarImage__img[_ngcontent-%COMP%]{display:block;width:100%}.championCarousel[_ngcontent-%COMP%]{width:100%;margin:auto;overflow:hidden}.championCarousel__championSlide[_ngcontent-%COMP%]{display:flex;flex-direction:column;width:100%;position:relative}.championCarousel__championSlide__imgWrapper[_ngcontent-%COMP%]{width:100%;padding-bottom:50%;position:relative;overflow:hidden}@media screen and (min-width: 512px){.sideBarImage[_ngcontent-%COMP%]{display:block}.championCarousel[_ngcontent-%COMP%]{border-radius:4vw 4vw 0 0}.championCarousel__championSlide__imgWrapper[_ngcontent-%COMP%]{border-radius:0 0 4vw 4vw}}.championCarousel__championSlide__imgWrapper__img[_ngcontent-%COMP%]{position:absolute;top:0;left:0;height:100%;width:100%;object-fit:cover;object-position:center 20%}.championCarousel__championSlide__description[_ngcontent-%COMP%]{width:75%;margin:0 auto}.ctaButtonRow[_ngcontent-%COMP%]{display:flex;justify-content:center}.readMoreLink[_ngcontent-%COMP%]{text-align:center;display:flex;justify-content:center}.readMoreLink__text[_ngcontent-%COMP%]{padding-bottom:4px;border-bottom:2px solid #8BE1E0}.bottomContent[_ngcontent-%COMP%]{position:relative}']
-        }), S
+        }), x
     })();
     var he = o(72986);
     o(99454);
@@ -20362,7 +20488,7 @@ return $.\u0275fac = function (C) {
         return ["email"]
     };
     let pe = (() => {
-        class S {
+        class x {
             constructor(u) {
                 this.authHostService = u, this.emailValue = {value: "", valid: !1}, this.disableSubmitButton = !1
             }
@@ -20391,10 +20517,10 @@ return $.\u0275fac = function (C) {
             }
         }
 
-        return S.\u0275fac = function (u) {
-            return new (u || S)(e.Y36(ye.LI))
-        }, S.\u0275cmp = e.Xpm({
-            type: S,
+        return x.\u0275fac = function (u) {
+            return new (u || x)(e.Y36(ye.LI))
+        }, x.\u0275cmp = e.Xpm({
+            type: x,
             selectors: [["cerberus-newsletter-signup-form"]],
             viewQuery: function (u, D) {
                 if (1 & u && e.Gf(te, 5), 2 & u) {
@@ -20413,12 +20539,12 @@ return $.\u0275fac = function (C) {
                     return D.onValueChange(_e)
                 }), e.qZA(), e.TgZ(5, "gu-primary-hex-button", 4), e.NdJ("click", function () {
                     return D.submitEmail()
-                }), e._uU(6, " submit "), e.qZA(), e.qZA()), 2 & u && (e.xp6(3), e.Q6J("validateToPattern", e.DdM(3, ue)), e.xp6(2), e.Q6J("disabled", D.disableSubmitButton || !D.emailValue.valid)("horizontalStretch", !1))
+                }), e._uU(6, " submit "), e.qZA()()), 2 & u && (e.xp6(3), e.Q6J("validateToPattern", e.DdM(3, ue)), e.xp6(2), e.Q6J("disabled", D.disableSubmitButton || !D.emailValue.valid)("horizontalStretch", !1))
             },
             styles: ["[_nghost-%COMP%]{display:flex;flex-direction:column;box-sizing:border-box}", ".textInput[_ngcontent-%COMP%] {\n      margin: 16px 0 24px;\n    }\n\n    .textInput[_ngcontent-%COMP%]   .helpText[_ngcontent-%COMP%], .textInput[_ngcontent-%COMP%]   .inputArea__input[_ngcontent-%COMP%], .textInput[_ngcontent-%COMP%]   .inputArea__input[_ngcontent-%COMP%]::placeholder {\n      text-align: center;\n    }\n\n    gu-primary-hex-button[_ngcontent-%COMP%] {\n      min-width: 170px;\n    }"]
-        }), S
-    })(), Pe = (() => {
-        class S {
+        }), x
+    })(), Se = (() => {
+        class x {
             constructor(u, D) {
                 this.authService = u, this.authHostService = D
             }
@@ -20431,31 +20557,31 @@ return $.\u0275fac = function (C) {
             }
         }
 
-        return S.\u0275fac = function (u) {
-            return new (u || S)(e.Y36(ye.mI), e.Y36(ye.LI))
-        }, S.\u0275cmp = e.Xpm({
-            type: S,
+        return x.\u0275fac = function (u) {
+            return new (u || x)(e.Y36(ye.mI), e.Y36(ye.LI))
+        }, x.\u0275cmp = e.Xpm({
+            type: x,
             selectors: [["cerberus-lore-route"]],
             decls: 33,
             vars: 0,
             consts: [[1, "headerStrip"], ["top", "4x-large"], ["fillColor", "colors.light.100", "align", "center", "size", "x-large"], ["bottom", "4x-large", "top", "large", 1, "headerStrip__bodyCopy"], ["fillColor", "colors.light.100", "align", "center", "kind", "large"], [1, "bandedStrip"], ["both", "x-large"], ["fillGradient", "gradients.gold.simple", "align", "center", "size", "small"], ["top", "medium"], ["kind", "help", "align", "center"], ["both", "medium"], ["src", "/assets/images/weird-spacer-thing.svg", 1, "weirdSpacingImage"], ["kind", "tag", "align", "center"], ["top", "4x-large", "bottom", "2x-large", 1, "loreIntroText"], ["kind", "large"], ["top", "large"], ["href", "https://blog.godsunchained.com/2020/01/24/chapter-1-citadel-of-the-gods/", 1, "readMoreLink"], ["kind", "tag", "fillColor", "colors.apocyan.300", "align", "center", 1, "readMoreLink__text"], ["top", "6x-large"], ["size", "x-small", "align", "center", 1, "mysteryHeading"], ["top", "2x-large", 1, "ctaButtonRow"], ["text", "Visit blog", "href", "https://blog.godsunchained.com/"], ["both", "6x-large"], [1, "newsLetterSignUp"]],
             template: function (u, D) {
-                1 & u && (e.TgZ(0, "header", 0), e.TgZ(1, "gu-vertical-space", 1), e.TgZ(2, "gu-heading-text", 2), e._uU(3, " LORE "), e.qZA(), e.qZA(), e.TgZ(4, "gu-vertical-space", 3), e.TgZ(5, "gu-paragraph-text", 4), e._uU(6, " Come, mortal! Settle in and be regaled by tales that traverse the Nine Realms, recount the deeds of the champions of Eucos, and whisper of the gods themselves. "), e.qZA(), e.qZA(), e.qZA(), e.TgZ(7, "div", 5), e.TgZ(8, "gu-vertical-space", 6), e.TgZ(9, "gu-heading-text", 7), e._uU(10, " Citadel of the gods "), e.qZA(), e.TgZ(11, "gu-vertical-space", 8), e.TgZ(12, "gu-paragraph-text", 9), e._uU(13, " Welcome to the trial "), e.qZA(), e.qZA(), e.TgZ(14, "gu-vertical-space", 10), e._UZ(15, "img", 11), e.qZA(), e.TgZ(16, "gu-paragraph-text", 12), e._uU(17, " by kelly digges "), e.qZA(), e.qZA(), e.qZA(), e.TgZ(18, "gu-vertical-space", 13), e.TgZ(19, "gu-paragraph-text", 14), e._uU(20, " You've seen the statues of the gods in temples, of course. Incorruptible Thaeriel, Vengeful Auros, Gentle Aeona. To mortal worshipers, the statues are the gods: terrible and beautiful. But the reality is they are the pale shadow of a blazing truth. This is the story of one fateful meeting, and a divine contest that would alter the course of the Nine Relams for aeons to come. "), e.qZA(), e.TgZ(21, "gu-vertical-space", 15), e.TgZ(22, "a", 16), e.TgZ(23, "gu-simple-text", 17), e._uU(24, " Read more "), e.qZA(), e.qZA(), e.qZA(), e.qZA(), e._UZ(25, "cerberus-season1-champion-section"), e.TgZ(26, "gu-vertical-space", 18), e.TgZ(27, "gu-heading-text", 19), e._uU(28, " FOR MORE GODS UNCHAINED CONTENT & UPDATES "), e.qZA(), e.TgZ(29, "gu-vertical-space", 20), e._UZ(30, "gu-primary-hex-button", 21), e.qZA(), e.qZA(), e.TgZ(31, "gu-vertical-space", 22), e._UZ(32, "cerberus-newsletter-signup-form", 23), e.qZA())
+                1 & u && (e.TgZ(0, "header", 0)(1, "gu-vertical-space", 1)(2, "gu-heading-text", 2), e._uU(3, " LORE "), e.qZA()(), e.TgZ(4, "gu-vertical-space", 3)(5, "gu-paragraph-text", 4), e._uU(6, " Come, mortal! Settle in and be regaled by tales that traverse the Nine Realms, recount the deeds of the champions of Eucos, and whisper of the gods themselves. "), e.qZA()()(), e.TgZ(7, "div", 5)(8, "gu-vertical-space", 6)(9, "gu-heading-text", 7), e._uU(10, " Citadel of the gods "), e.qZA(), e.TgZ(11, "gu-vertical-space", 8)(12, "gu-paragraph-text", 9), e._uU(13, " Welcome to the trial "), e.qZA()(), e.TgZ(14, "gu-vertical-space", 10), e._UZ(15, "img", 11), e.qZA(), e.TgZ(16, "gu-paragraph-text", 12), e._uU(17, " by kelly digges "), e.qZA()()(), e.TgZ(18, "gu-vertical-space", 13)(19, "gu-paragraph-text", 14), e._uU(20, " You've seen the statues of the gods in temples, of course. Incorruptible Thaeriel, Vengeful Auros, Gentle Aeona. To mortal worshipers, the statues are the gods: terrible and beautiful. But the reality is they are the pale shadow of a blazing truth. This is the story of one fateful meeting, and a divine contest that would alter the course of the Nine Relams for aeons to come. "), e.qZA(), e.TgZ(21, "gu-vertical-space", 15)(22, "a", 16)(23, "gu-simple-text", 17), e._uU(24, " Read more "), e.qZA()()()(), e._UZ(25, "cerberus-season1-champion-section"), e.TgZ(26, "gu-vertical-space", 18)(27, "gu-heading-text", 19), e._uU(28, " FOR MORE GODS UNCHAINED CONTENT & UPDATES "), e.qZA(), e.TgZ(29, "gu-vertical-space", 20), e._UZ(30, "gu-primary-hex-button", 21), e.qZA()(), e.TgZ(31, "gu-vertical-space", 22), e._UZ(32, "cerberus-newsletter-signup-form", 23), e.qZA())
             },
-            directives: [W, pe],
+            directives: [H, pe],
             styles: ["@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes upAndDown2{0%{transform:translateY(-2%)}50%{transform:translateY(2%)}to{transform:translateY(-2%)}}@keyframes shine2{0%{filter:brightness(.96) hue-rotate(0deg)}50%{filter:brightness(1.12) hue-rotate(-10deg)}to{filter:brightness(.96) hue-rotate(0deg)}}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}[_nghost-%COMP%]{display:block}.headerStrip[_ngcontent-%COMP%]{background:url(/assets/images/colour-palace-background2.jpg);background-size:cover;background-position:center;display:flex;flex-direction:column}.headerStrip__bodyCopy[_ngcontent-%COMP%]{max-width:800px;width:80%;margin-left:auto;margin-right:auto}.bandedStrip[_ngcontent-%COMP%]{background:#0F1B27;display:flex;flex-direction:column}.weirdSpacingImage[_ngcontent-%COMP%]{display:block;width:148px;margin-left:auto;margin-right:auto}.loreIntroText[_ngcontent-%COMP%]{width:80%;max-width:800px;margin-left:auto;margin-right:auto}.readMoreLink[_ngcontent-%COMP%]{display:inline-flex;justify-content:flex-start}.readMoreLink__text[_ngcontent-%COMP%]{padding-bottom:4px;border-bottom:2px solid #8BE1E0}.ctaButtonRow[_ngcontent-%COMP%]{display:flex;justify-content:center}.mysteryHeading[_ngcontent-%COMP%]{max-width:500px;padding:0 20px;margin-left:auto;margin-right:auto}.signupForm[_ngcontent-%COMP%]{width:85%;max-width:450px;display:flex;flex-direction:column;margin-left:auto;margin-right:auto}.signupForm__emailInput[_ngcontent-%COMP%]{background:#0F1B27;color:#7192b0;border:1px solid #527493;text-align:center;padding:12px 20px;width:100%}.signupForm__emailInput[_ngcontent-%COMP%]::placeholder{font-size:14px;font-style:italic;color:#f6f6f6b3}.signupForm__emailInput[_ngcontent-%COMP%]:-ms-input-placeholder{font-size:14px;font-style:italic;color:#f6f6f6b3}.signupForm__emailInput[_ngcontent-%COMP%]:-moz-placeholder{font-size:14px;font-style:italic;color:#f6f6f6b3}.newsLetterSignUp[_ngcontent-%COMP%]{max-width:530px;width:85%;margin-left:auto;margin-right:auto}"]
-        }), S
+        }), x
     })();
-    var lt = o(39029), we = o(69039), We = o(5284), T = o(84876), J = o(32830), ne = o(98539), Oe = o(97223),
+    var lt = o(39029), we = o(69039), He = o(5284), $ = o(12052), J = o(32830), ne = o(98539), Oe = o(97223),
         ht = o(19444);
-    const He = "FLIP_A_CARD", yt = "TOGGLE_OPEN_PACK_VIDEO_VISIBILITY", xt = "TOGGLE_OPEN_PACK_CARDS",
+    const Ze = "FLIP_A_CARD", yt = "TOGGLE_OPEN_PACK_VIDEO_VISIBILITY", xt = "TOGGLE_OPEN_PACK_CARDS",
         kt = "SET_OPEN_PACK_VIDEO_ID", Xe = "RESET_TEMPLE", ut = "SET_CURRENT_UNOPENED_PACKS",
         Fe = "TOGGLE_PACK_VISIBILITY", rt = "TOGGLE_RAFFLE_TICKETS", Ie = "SET_CURRENT_OPEN_CHEST",
         Rt = "SET_OPEN_CHEST_VIDEO_ID", Ee = "TOGGLE_OPEN_CHEST_VIDEO_FINISHED", It = "PARTIAL_RESET_TEMPLE",
         q = "TOGGLE_OPEN_PACK_VIDEO_LOADING", re = "TOGGLE_OPEN_PACK_VIDEO_PLAYING",
-        xe = "TOGGLE_OPEN_CHEST_VIDEO_PLAYING", ke = S => ({type: ut, payload: S}), it = S => ({type: Rt, payload: S}),
-        Jt = S => ({type: Ee, payload: S}), ls = S => ({type: q, payload: S}), ss = S => ({type: xe, payload: S}),
-        Bt = S => ({type: re, payload: S}), _t = {
+        xe = "TOGGLE_OPEN_CHEST_VIDEO_PLAYING", ke = x => ({type: ut, payload: x}), it = x => ({type: Rt, payload: x}),
+        Jt = x => ({type: Ee, payload: x}), ls = x => ({type: q, payload: x}), ss = x => ({type: xe, payload: x}),
+        Bt = x => ({type: re, payload: x}), _t = {
             flippedCards: {},
             openPackVideoId: "",
             openChestVideoId: "",
@@ -20470,45 +20596,45 @@ return $.\u0275fac = function (C) {
             currentOpenPack: {},
             currentOpenChest: {},
             raffleTicketsDisplayVisible: !1
-        }, Qe = (0, Oe.MT)((S = _t, {type: H, payload: u}) => {
-            switch (H) {
+        }, Qe = (0, Oe.MT)((x = _t, {type: Z, payload: u}) => {
+            switch (Z) {
                 case kt:
-                    return Object.assign(Object.assign({}, S), {openPackVideoId: u});
+                    return Object.assign(Object.assign({}, x), {openPackVideoId: u});
                 case xt:
-                    return Object.assign(Object.assign({}, S), {firstPackCardsVisible: "boolean" == typeof u ? u : !S.firstPackCardsVisible});
+                    return Object.assign(Object.assign({}, x), {firstPackCardsVisible: "boolean" == typeof u ? u : !x.firstPackCardsVisible});
                 case yt:
-                    return Object.assign(Object.assign({}, S), {openPackVideoVisible: "boolean" == typeof u ? u : !S.openPackVideoVisible});
-                case He:
-                    return Object.assign(Object.assign({}, S), {flippedCards: Object.assign(Object.assign({}, S.flippedCards), {[u]: !S.flippedCards[u]})});
+                    return Object.assign(Object.assign({}, x), {openPackVideoVisible: "boolean" == typeof u ? u : !x.openPackVideoVisible});
+                case Ze:
+                    return Object.assign(Object.assign({}, x), {flippedCards: Object.assign(Object.assign({}, x.flippedCards), {[u]: !x.flippedCards[u]})});
                 case Fe:
-                    return Object.assign(Object.assign({}, S), {packImageVisible: "boolean" == typeof u ? u : !S.packImageVisible});
+                    return Object.assign(Object.assign({}, x), {packImageVisible: "boolean" == typeof u ? u : !x.packImageVisible});
                 case ut:
-                    return Object.assign(Object.assign({}, S), {
+                    return Object.assign(Object.assign({}, x), {
                         currentUnOpenedPacks: u,
                         currentOpenPack: Object.assign(Object.assign({}, u[0]), {id: (0, ht.v4)()})
                     });
                 case rt:
-                    return Object.assign(Object.assign({}, S), {raffleTicketsDisplayVisible: !S.raffleTicketsDisplayVisible});
+                    return Object.assign(Object.assign({}, x), {raffleTicketsDisplayVisible: !x.raffleTicketsDisplayVisible});
                 case Ie:
-                    return Object.assign(Object.assign({}, S), {currentOpenChest: u});
+                    return Object.assign(Object.assign({}, x), {currentOpenChest: u});
                 case Rt:
-                    return Object.assign(Object.assign({}, S), {openChestVideoId: u, openChestVideoComplete: !1});
+                    return Object.assign(Object.assign({}, x), {openChestVideoId: u, openChestVideoComplete: !1});
                 case Ee:
-                    return Object.assign(Object.assign({}, S), {openChestVideoComplete: "boolean" == typeof u ? u : !S.openChestVideoComplete});
+                    return Object.assign(Object.assign({}, x), {openChestVideoComplete: "boolean" == typeof u ? u : !x.openChestVideoComplete});
                 case xe:
-                    return Object.assign(Object.assign({}, S), {openChestVideoPlaying: "boolean" == typeof u ? u : !S.openChestVideoPlaying});
+                    return Object.assign(Object.assign({}, x), {openChestVideoPlaying: "boolean" == typeof u ? u : !x.openChestVideoPlaying});
                 case q:
-                    return Object.assign(Object.assign({}, S), {openPackVideoLoading: "boolean" == typeof u ? u : !S.openPackVideoLoading});
+                    return Object.assign(Object.assign({}, x), {openPackVideoLoading: "boolean" == typeof u ? u : !x.openPackVideoLoading});
                 case re:
-                    return Object.assign(Object.assign({}, S), {openPackVideoPlaying: "boolean" == typeof u ? u : !S.openPackVideoPlaying});
+                    return Object.assign(Object.assign({}, x), {openPackVideoPlaying: "boolean" == typeof u ? u : !x.openPackVideoPlaying});
                 case It:
                     return Object.assign(Object.assign({}, _t), {packImageVisible: !0});
                 case Xe:
                     return Object.assign({}, _t);
                 default:
-                    return S
+                    return x
             }
-        }, _t), Wt = {
+        }, _t), Ht = {
             "pack-open-videos-4k order--neutral--shiny-legendary": "548697244",
             "pack-open-videos-4k order--neutral--legendary": "548697153",
             "pack-open-videos-4k order--neutral--epic": "548697068",
@@ -20728,8 +20854,8 @@ return $.\u0275fac = function (C) {
   }
 `;
     customElements.define("gu-temple-chest-layer", (0, lt.x1)({
-        renderer: function ({unOpenedChests: S = [], volume: H}) {
-            const u = (0, T.sO)(null), D = (0, lt.I0)(Qe), {
+        renderer: function to({unOpenedChests: x = [], volume: Z}) {
+            const u = (0, $.sO)(null), D = (0, lt.I0)(Qe), {
                 currentOpenChest: K,
                 openChestVideoId: _e,
                 openChestVideoPlaying: tt,
@@ -20737,19 +20863,19 @@ return $.\u0275fac = function (C) {
                 openPackVideoVisible: vt
             } = (0, lt.v9)({
                 store: Qe,
-                selector: Se => ({
-                    openChestVideoPlaying: Se.openChestVideoPlaying,
-                    openPackVideoVisible: Se.openPackVideoVisible,
-                    currentOpenChest: Se.currentOpenChest,
-                    openChestVideoId: Se.openChestVideoId,
-                    openChestVideoComplete: Se.openChestVideoComplete
+                selector: Pe => ({
+                    openChestVideoPlaying: Pe.openChestVideoPlaying,
+                    openPackVideoVisible: Pe.openPackVideoVisible,
+                    currentOpenChest: Pe.currentOpenChest,
+                    openChestVideoId: Pe.openChestVideoId,
+                    openChestVideoComplete: Pe.openChestVideoComplete
                 })
             });
-            (0, T.d4)(() => {
-                if (this.isIos = We.I5.isIos(), !K.set) return;
-                let Se = Wt[`chest-videos-open ${K.set}--neutral--${K.rarity}`];
-                Se || (Se = Wt["chest-videos-open order--neutral--rare"]), D(it(Se))
-            }, [K]), (0, T.d4)(() => {
+            (0, $.d4)(() => {
+                if (this.isIos = He.I5.isIos(), !K.set) return;
+                let Pe = Ht[`chest-videos-open ${K.set}--neutral--${K.rarity}`];
+                Pe || (Pe = Ht["chest-videos-open order--neutral--rare"]), D(it(Pe))
+            }, [K]), (0, $.d4)(() => {
                 vt ? this.classList.remove("visible") : this.classList.add("visible")
             }, [vt]);
             return J.dy`
@@ -20768,47 +20894,47 @@ return $.\u0275fac = function (C) {
             }}
             ?domRef=${(0, we.Q)(u)}
             ?muted=${this.isIos}
-            .volume=${H}
+            .volume=${Z}
           ></gu-controllable-vimeo-embed>
         ` : null}
-    ${S.length ? J.dy`
+    ${x.length ? J.dy`
           <div
             class=${(0, ne.$)({unOpenedChestsListing: !0, "unOpenedChestsListing--visible": !vt})}
           >
-            ${S.reduce((Se, Ze) => {
+            ${x.reduce((Pe, Ne) => {
                 let h;
-                return Se.find((a, M) => {
-                    const F = Ze.set === a.set && Ze.rarity === a.rarity;
+                return Pe.find((a, M) => {
+                    const F = Ne.set === a.set && Ne.rarity === a.rarity;
                     return F && (h = M), F
-                }) ? Se[h].quantityCount += 1 : Se.push(Object.assign(Object.assign({}, Ze), {quantityCount: 1})), Se
-            }, []).map(Se => {
-                const Ze = `${Se.set}--neutral--${Se.rarity}`;
+                }) ? Pe[h].quantityCount += 1 : Pe.push(Object.assign(Object.assign({}, Ne), {quantityCount: 1})), Pe
+            }, []).map(Pe => {
+                const Ne = `${Pe.set}--neutral--${Pe.rarity}`;
                 return J.dy`
-                  <div class="unOpenedChestsListing__chest" @click=${() => (Se => {
-                    D(ss(!0)), Se.rarity === K.rarity && Se.set === K.set ? (D(Jt(!1)), u.current.playVideo(0)) : D((S => ({
+                  <div class="unOpenedChestsListing__chest" @click=${() => (Pe => {
+                    D(ss(!0)), Pe.rarity === K.rarity && Pe.set === K.set ? (D(Jt(!1)), u.current.playVideo(0)) : D((x => ({
                         type: Ie,
-                        payload: S
-                    }))(Se))
-                })(Se)}>
+                        payload: x
+                    }))(Pe))
+                })(Pe)}>
                     <picture class="unOpenedChestsListing__chest__picture">
                       <source
                         type="image/webp"
                         srcset="
-                          //images.godsunchained.com/transparent-chest-images--open/434/${Ze}.webp 434w,
-                          //images.godsunchained.com/transparent-chest-images--open/256/${Ze}.webp 256w,
-                          //images.godsunchained.com/transparent-chest-images--open/128/${Ze}.webp 128w
+                          //images.godsunchained.com/transparent-chest-images--open/434/${Ne}.webp 434w,
+                          //images.godsunchained.com/transparent-chest-images--open/256/${Ne}.webp 256w,
+                          //images.godsunchained.com/transparent-chest-images--open/128/${Ne}.webp 128w
                         "
                       />
                       <source
                         type="image/png"
                         srcset="
-                          //images.godsunchained.com/transparent-chest-images--open/434/${Ze}.png 434w,
-                          //images.godsunchained.com/transparent-chest-images--open/256/${Ze}.png 256w,
-                          //images.godsunchained.com/transparent-chest-images--open/128/${Ze}.png 128w
+                          //images.godsunchained.com/transparent-chest-images--open/434/${Ne}.png 434w,
+                          //images.godsunchained.com/transparent-chest-images--open/256/${Ne}.png 256w,
+                          //images.godsunchained.com/transparent-chest-images--open/128/${Ne}.png 128w
                         "
                       />
                       <img
-                        src="//images.godsunchained.com/transparent-chest-images--open/128/${Ze}.png"
+                        src="//images.godsunchained.com/transparent-chest-images--open/128/${Ne}.png"
                         alt="chest image"
                         class="unOpenedChestsListing__chest__picture__img"
                       />
@@ -20827,7 +20953,7 @@ return $.\u0275fac = function (C) {
                       fillColor=${r.colors.gold[500]}
                       fontWeight="bold"
                     >
-                      ${Se.quantityCount}x
+                      ${Pe.quantityCount}x
                     </gu-paragraph-text>
                   </div>
                 `
@@ -20878,7 +21004,7 @@ return $.\u0275fac = function (C) {
   }
 `;
     customElements.define("gu-temple-overlay-layer", (0, lt.x1)({
-        renderer: function () {
+        renderer: function ms() {
             return J.dy`
     <gu-icon iconLigature="alert_triangle" align="center" fillColor=${r.colors.god.war.secondary} class="icon"></gu-icon>
     <gu-vertical-space top="x-large">
@@ -21114,24 +21240,24 @@ return $.\u0275fac = function (C) {
     height: 100%;
     object-fit: contain;
   }
-`, fs = S => Es.PW[S];
+`, fs = x => Es.PW[x];
     customElements.define("gu-temple-pack-card-listing", (0, lt.x1)({
-        renderer: function ({}) {
-            const H = (0, lt.I0)(Qe), [u, D] = (0, T.eJ)([]), {
+        renderer: function no({}) {
+            const Z = (0, lt.I0)(Qe), [u, D] = (0, $.eJ)([]), {
                 currentOpenPack: K,
                 firstPackCardsVisible: _e,
                 raffleTicketsDisplayVisible: tt,
                 flippedCards: at
             } = (0, lt.v9)({
                 store: Qe,
-                selector: Se => ({
-                    flippedCards: Se.flippedCards,
-                    raffleTicketsDisplayVisible: Se.raffleTicketsDisplayVisible,
-                    firstPackCardsVisible: Se.firstPackCardsVisible,
-                    currentOpenPack: Se.currentOpenPack
+                selector: Pe => ({
+                    flippedCards: Pe.flippedCards,
+                    raffleTicketsDisplayVisible: Pe.raffleTicketsDisplayVisible,
+                    firstPackCardsVisible: Pe.firstPackCardsVisible,
+                    currentOpenPack: Pe.currentOpenPack
                 })
             });
-            (0, T.d4)(() => {
+            (0, $.d4)(() => {
                 _e ? this.classList.add("visible") : this.classList.remove("visible"), qe.p8.to(this.shadowRoot.children, {
                     duration: _e ? .3 : 0,
                     opacity: _e ? 1 : 0,
@@ -21140,28 +21266,28 @@ return $.\u0275fac = function (C) {
                         _e || vt()
                     }
                 })
-            }, [_e]), (0, T.d4)(() => {
-                !K.cards || D([...K.cards.map(Se => {
-                    const {quality: Ze, rarity: h} = Se, L = oo[`${fs(Ze - 1)}__${h}`];
+            }, [_e]), (0, $.d4)(() => {
+                !K.cards || D([...K.cards.map(Pe => {
+                    const {quality: Ne, rarity: h} = Pe, L = oo[`${fs(Ne - 1)}__${h}`];
                     return L ? new cs.Howl({src: [`${L}.ogg`, `${L}.mp3`]}) : {
                         play: () => {
-                        }, id: `${fs(Ze)}__${h}`
+                        }, id: `${fs(Ne)}__${h}`
                     }
                 })])
-            }, [K]), (0, T.d4)(() => () => vt(), []);
+            }, [K]), (0, $.d4)(() => () => vt(), []);
             const vt = () => {
                 qe.p8.set([this.shadowRoot.querySelectorAll(".cardWrapper"), this.shadowRoot.children], {clearProps: "all"})
-            }, dt = Se => {
-                H({type: He, payload: Se});
-                const Ze = this.shadowRoot.querySelectorAll(".perspectiveWrapper")[Se].querySelector(".cardWrapper"),
-                    h = Ze.querySelector(".cardWrapper__frontFace__bloom"), L = !!at[Se];
-                L || u[Se].play(), qe.p8.killTweensOf([h, Ze]), qe.p8.set([h], {clearProps: "all"});
+            }, dt = Pe => {
+                Z({type: Ze, payload: Pe});
+                const Ne = this.shadowRoot.querySelectorAll(".perspectiveWrapper")[Pe].querySelector(".cardWrapper"),
+                    h = Ne.querySelector(".cardWrapper__frontFace__bloom"), L = !!at[Pe];
+                L || u[Pe].play(), qe.p8.killTweensOf([h, Ne]), qe.p8.set([h], {clearProps: "all"});
                 const a = qe.p8.timeline({paused: !0}),
                     M = qe.p8.timeline({repeat: -1, repeatDelay: 1, delay: 1, yoyo: !0, paused: !0});
                 M.to(h, {duration: 1.2, filter: "brightness(1.5)"}).to(h, {
                     duration: 1.2,
                     filter: "brightness(1)"
-                }), a.to(Ze, {duration: .4, rotateY: L ? 0 : 180, ease: "power2.inOut"}).to(h, {
+                }), a.to(Ne, {duration: .4, rotateY: L ? 0 : 180, ease: "power2.inOut"}).to(h, {
                     duration: .7,
                     opacity: 1,
                     scale: 1.04,
@@ -21203,7 +21329,7 @@ return $.\u0275fac = function (C) {
                 <h3 class="raffleTicketsArea__dropdown__inner__value">${K.raffleTickets}</h3>
               </div>
             </div>
-            <picture class="raffleTicketsArea__ticketImage" @click=${() => H({type: rt})}>
+            <picture class="raffleTicketsArea__ticketImage" @click=${() => Z({type: rt})}>
               <source
                 srcset="
                   /assets/images/collectables-art/collectables-art--raffle-ticket@3x.webp 687w,
@@ -21228,14 +21354,14 @@ return $.\u0275fac = function (C) {
             </picture>
           </div>
         ` : null}
-    ${K.cards ? K.cards.map((Se, Ze) => J.dy`
+    ${K.cards ? K.cards.map((Pe, Ne) => J.dy`
             <div class="perspectiveWrapper">
-              <div class=${(0, ne.$)({cardWrapper: !0})} @click=${() => dt(Ze)}>
+              <div class=${(0, ne.$)({cardWrapper: !0})} @click=${() => dt(Ne)}>
                 <div class="cardWrapper__frontFace">
-                  <i class="cardWrapper__frontFace__bloom cardWrapper__frontFace__bloom--${Se.rarity}"></i>
+                  <i class="cardWrapper__frontFace__bloom cardWrapper__frontFace__bloom--${Pe.rarity}"></i>
                   <gu-card-picture
-                    protoId=${Se.proto}
-                    quality=${Se.quality}
+                    protoId=${Pe.proto}
+                    quality=${Pe.quality}
                     class="cardWrapper__frontFace__card"
                   ></gu-card-picture>
 
@@ -21273,7 +21399,7 @@ return $.\u0275fac = function (C) {
         }, props: {properties: {volume: {type: Number}}, styles: Ms}
     }));
     var Os = o(92436), Lo = o(71459), ro = o.n(Lo), vs = o(63082), ds = o.n(vs), bs = o(65171);
-    const Ts = J.iv`
+    const $s = J.iv`
   ${(0, ge.asCssProp)((0, ge.setBoxSizing)())}
 
   :host {
@@ -21613,15 +21739,15 @@ return $.\u0275fac = function (C) {
   }
 `;
     customElements.define("gu-temple-view-layer", (0, lt.x1)({
-        renderer: function ({
-                                unOpenedPacks: S = [],
-                                unOpenedChests: H = [],
-                                volume: u = .9,
-                                headerAreaHeight: D = r.measurements.standardHeaderHeight
-                            }) {
-            const K = (0, T.sO)(null), _e = (0, T.sO)(null), tt = (0, T.sO)(null), at = (0, T.sO)(null),
-                vt = (0, T.sO)(null), dt = (0, T.sO)(null), Se = (0, lt.I0)(Qe), {
-                    openPackVideoId: Ze,
+        renderer: function io({
+                                  unOpenedPacks: x = [],
+                                  unOpenedChests: Z = [],
+                                  volume: u = .9,
+                                  headerAreaHeight: D = r.measurements.standardHeaderHeight
+                              }) {
+            const K = (0, $.sO)(null), _e = (0, $.sO)(null), tt = (0, $.sO)(null), at = (0, $.sO)(null),
+                vt = (0, $.sO)(null), dt = (0, $.sO)(null), Pe = (0, lt.I0)(Qe), {
+                    openPackVideoId: Ne,
                     openPackVideoVisible: h,
                     firstPackCardsVisible: L,
                     flippedCards: a,
@@ -21631,48 +21757,48 @@ return $.\u0275fac = function (C) {
                     openPackVideoPlaying: Le
                 } = (0, lt.v9)({
                     store: Qe,
-                    selector: ze => ({
-                        openPackVideoId: ze.openPackVideoId,
-                        openPackVideoVisible: ze.openPackVideoVisible,
-                        firstPackCardsVisible: ze.firstPackCardsVisible,
-                        flippedCards: ze.flippedCards,
-                        packImageVisible: ze.packImageVisible,
-                        currentOpenPack: ze.currentOpenPack,
-                        openPackVideoLoading: ze.openPackVideoLoading,
-                        openPackVideoPlaying: ze.openPackVideoPlaying
+                    selector: We => ({
+                        openPackVideoId: We.openPackVideoId,
+                        openPackVideoVisible: We.openPackVideoVisible,
+                        firstPackCardsVisible: We.firstPackCardsVisible,
+                        flippedCards: We.flippedCards,
+                        packImageVisible: We.packImageVisible,
+                        currentOpenPack: We.currentOpenPack,
+                        openPackVideoLoading: We.openPackVideoLoading,
+                        openPackVideoPlaying: We.openPackVideoPlaying
                     })
                 });
-            (0, T.d4)(() => {
+            (0, $.d4)(() => {
                 this.style.setProperty("--headerAreaHeight", `${D}px`)
-            }, [D]), (0, T.d4)(() => {
+            }, [D]), (0, $.d4)(() => {
                 this.openPackVideoLoading = me
-            }, [me]), (0, T.d4)(() => (At.observe(vt.current), () => {
+            }, [me]), (0, $.d4)(() => (At.observe(vt.current), () => {
                 At.unobserve(vt.current), Ke(), hs()
             }), []);
-            const Ne = () => {
+            const ze = () => {
                 Ke(), this.gestureControl = new (ro())(_e.current, {
                     sensitivity: 0,
                     passive: !1,
                     capture: !0,
                     startDirectionLoopCount: 1
-                }), this.gestureControl.on("pan.prestart", St), this.gestureControl.on("pan.start", gt), this.gestureControl.on("pan.all", Kt), this.gestureControl.on("pan.end", ve)
+                }), this.gestureControl.on("pan.prestart", Pt), this.gestureControl.on("pan.start", gt), this.gestureControl.on("pan.all", Kt), this.gestureControl.on("pan.end", ve)
             }, Ke = () => {
-                this.gestureControl && (this.gestureControl.removeListener("pan.prestart", St), this.gestureControl.removeListener("pan.start", gt), this.gestureControl.removeListener("pan.all", Kt), this.gestureControl.removeListener("pan.end", ve), this.gestureControl.destroy(), this.gestureControl = null)
+                this.gestureControl && (this.gestureControl.removeListener("pan.prestart", Pt), this.gestureControl.removeListener("pan.start", gt), this.gestureControl.removeListener("pan.all", Kt), this.gestureControl.removeListener("pan.end", ve), this.gestureControl.destroy(), this.gestureControl = null)
             };
-            (0, T.d4)(() => {
+            (0, $.d4)(() => {
                 if (!F.set) return void Ke();
-                Ne();
-                let ze = Wt[`pack-open-videos-720p ${F.set}--${F.god}--${F.rarity}`];
-                ze || (ze = Wt["pack-open-videos-720p core--neutral--rare"]), Se((S => ({type: kt, payload: S}))(ze))
-            }, [F]), (0, T.d4)(() => {
-                !F.set && S.length && Se(ke(S))
-            }, [S]);
-            const St = ze => {
-                ze.sourceEvent.preventDefault()
-            }, gt = ze => {
+                ze();
+                let We = Ht[`pack-open-videos-720p ${F.set}--${F.god}--${F.rarity}`];
+                We || (We = Ht["pack-open-videos-720p core--neutral--rare"]), Pe((x => ({type: kt, payload: x}))(We))
+            }, [F]), (0, $.d4)(() => {
+                !F.set && x.length && Pe(ke(x))
+            }, [x]);
+            const Pt = We => {
+                We.sourceEvent.preventDefault()
+            }, gt = We => {
                 this.terminatedPan = !1, qe.p8.set(K.current, {x: 0, y: 0})
-            }, Kt = ({deltaX: ze, deltaY: Xs, sourceEvent: Eo}) => {
-                if (be(), We.dz.checkOutOfBounds({
+            }, Kt = ({deltaX: We, deltaY: Xs, sourceEvent: Eo}) => {
+                if (be(), He.dz.checkOutOfBounds({
                     x: Eo.pageX,
                     y: Eo.pageY,
                     width: this.dimensions.width,
@@ -21682,42 +21808,42 @@ return $.\u0275fac = function (C) {
                     tolerance: 20
                 })) return this.terminatedPan = !0, ve({});
                 this.terminatedPan || qe.p8.set(K.current, {
-                    x: this.openPackVideoLoading ? .2 * ze : ze,
+                    x: this.openPackVideoLoading ? .2 * We : We,
                     y: this.openPackVideoLoading ? .2 * Xs : Xs
                 })
-            }, ve = ze => {
+            }, ve = We => {
                 qe.p8.to(K.current, this.draggablePackIsIntersecting && !this.openPackVideoLoading ? {
                     rotation: -1,
                     x: 37.2 * this.dimensions.cw + "px",
                     y: -25 * this.dimensions.ch + "px",
-                    onComplete: () => zt(),
+                    onComplete: () => Wt(),
                     duration: .3
                 } : {duration: .3, x: 0, y: 0})
             }, be = ds()(() => {
-                this.draggablePackIsIntersecting = function (S, H) {
+                this.draggablePackIsIntersecting = function $t(x, Z) {
                     let u = !1;
-                    return S && H && (u = !(S.right < H.left || S.left > H.right || S.bottom < H.top || S.top > H.bottom)), u
+                    return x && Z && (u = !(x.right < Z.left || x.left > Z.right || x.bottom < Z.top || x.top > Z.bottom)), u
                 }(K.current.getBoundingClientRect(), this.dragTargetRectangle)
-            }, 50), At = new Os.do(ze => {
-                ze.forEach(Xs => Dt())
+            }, 50), At = new Os.do(We => {
+                We.forEach(Xs => Dt())
             }), Dt = ds()(() => {
-                const ze = vt.current.getBoundingClientRect();
+                const We = vt.current.getBoundingClientRect();
                 this.dimensions = {
                     ch: .01 * vt.current.offsetHeight,
                     cw: .01 * vt.current.offsetWidth,
-                    width: ze.width,
-                    height: ze.height,
-                    top: ze.top,
-                    left: ze.left
+                    width: We.width,
+                    height: We.height,
+                    top: We.top,
+                    left: We.left
                 }, this.style.setProperty("--cw", `${this.dimensions.cw}px`), this.style.setProperty("--ch", `${this.dimensions.ch}px`), this.dragTargetRectangle = dt.current.getBoundingClientRect()
-            }, 500), zt = () => {
-                Se({
+            }, 500), Wt = () => {
+                Pe({
                     type: yt,
                     payload: !0
-                }), this.dispatchEvent(new CustomEvent("onPackOpened", {detail: {pack: F}})), tt.current.playVideo(), Se(Bt(!0))
+                }), this.dispatchEvent(new CustomEvent("onPackOpened", {detail: {pack: F}})), tt.current.playVideo(), Pe(Bt(!0))
             }, hs = () => {
-                console.log("RESET TEMPLE CODE"), Se({type: Xe}), qe.p8.set(K.current, {clearProps: "all"})
-            }, ts = M && !h && me, ws = !F.set || Object.keys(a).length === F.cards.length, as = ws && !S.length && M;
+                console.log("RESET TEMPLE CODE"), Pe({type: Xe}), qe.p8.set(K.current, {clearProps: "all"})
+            }, ts = M && !h && me, ws = !F.set || Object.keys(a).length === F.cards.length, as = ws && !x.length && M;
             return J.dy`
     <div class="videoAspectRatio" ?domRef=${(0, we.Q)(vt)}>
       <img class="videoAspectRatio__img" alt="ratio image" src="/assets/images/ratio-images/16-x-9-ratio.png" />
@@ -21728,7 +21854,7 @@ return $.\u0275fac = function (C) {
         autoPlay
         pauseOnEndFrame
         muted
-        @onVideoEnd=${() => Se({type: Fe, payload: !0})}
+        @onVideoEnd=${() => Pe({type: Fe, payload: !0})}
         ?domRef=${(0, we.Q)(at)}
         .volume=${u}
       ></gu-controllable-vimeo-embed>
@@ -21737,19 +21863,19 @@ return $.\u0275fac = function (C) {
         class=${(0, ne.$)({packOpenVideo: !0, "packOpenVideo--hidden": !h})}
         pauseOnEndFrame
         startPausedOnFirstFrame
-        videoId=${Ze}
+        videoId=${Ne}
         @onVideoLoading=${() => {
-                Se(ls(!0))
+                Pe(ls(!0))
             }}
         @onVideoReady=${() => {
-                Se(ls(!1))
+                Pe(ls(!1))
             }}
         @onVideoEnd=${() => {
-                Se(Bt(!1))
+                Pe(Bt(!1))
             }}
-        @onVideoProgress=${ze => {
-                const {percent: Xs} = ze.detail;
-                Xs >= .425 && !L && Se({type: xt, payload: !0})
+        @onVideoProgress=${We => {
+                const {percent: Xs} = We.detail;
+                Xs >= .425 && !L && Pe({type: xt, payload: !0})
             }}
         ?domRef=${(0, we.Q)(tt)}
         .volume=${u}
@@ -21791,19 +21917,19 @@ return $.\u0275fac = function (C) {
                 Play to unlock
               </gu-primary-hex-button>
             ` : null} -->
-        ${ws && S.length && !Le ? J.dy`
+        ${ws && x.length && !Le ? J.dy`
               <gu-primary-hex-button size="large" @click=${() => {
-                qe.p8.set(K.current, {clearProps: "all"}), Se({type: It}), Se(ke(S))
+                qe.p8.set(K.current, {clearProps: "all"}), Pe({type: It}), Pe(ke(x))
             }} class="ctasArea__cta">
                 Next Pack
               </gu-primary-hex-button>
               <gu-vertical-space top="large">
-                <gu-heading-text size="2x-small" align="center"> ${S.length} packs left </gu-heading-text>
+                <gu-heading-text size="2x-small" align="center"> ${x.length} packs left </gu-heading-text>
               </gu-vertical-space>
             ` : null}
       </div>
 
-      ${M ? J.dy` <gu-temple-chest-layer .unOpenedChests=${H} .volume=${u}></gu-temple-chest-layer> ` : null}
+      ${M ? J.dy` <gu-temple-chest-layer .unOpenedChests=${Z} .volume=${u}></gu-temple-chest-layer> ` : null}
       ${F.set ? J.dy`
             <gu-card-pack-picture
               type="temple"
@@ -21817,7 +21943,7 @@ return $.\u0275fac = function (C) {
                 "draggablePack--touchable": this.isIos
             })}
               ?domRef=${(0, we.Q)(K)}
-              @click=${() => !!this.isIos && zt()}
+              @click=${() => !!this.isIos && Wt()}
             ></gu-card-pack-picture>
             ${L ? null : J.dy`<i class="draggablePackHitzone" ?domRef=${(0, we.Q)(_e)}></i>`}
           ` : null}
@@ -21830,12 +21956,12 @@ return $.\u0275fac = function (C) {
                 unOpenedChests: {type: Array},
                 volume: {type: Number},
                 headerAreaHeight: {type: Number}
-            }, styles: Ts
+            }, styles: $s
         }
     }));
-    var As = o(4390), Cs = o(8929), Gt = o(7625), Yt = o(61709), us = o(24850), qt = o(11735), Ht = o(28510);
+    var As = o(4390), Cs = o(8929), Gt = o(7625), Yt = o(61709), us = o(24850), qt = o(11735), Zt = o(28510);
     let ys = (() => {
-        class S {
+        class x {
             constructor(u, D, K) {
                 this.environment = u, this.router = D, this.modalService = K
             }
@@ -21852,31 +21978,31 @@ return $.\u0275fac = function (C) {
             }
         }
 
-        return S.\u0275fac = function (u) {
-            return new (u || S)(e.Y36(ye.Ho), e.Y36(qt.F0), e.Y36(Ht.Qz))
-        }, S.\u0275cmp = e.Xpm({
-            type: S,
+        return x.\u0275fac = function (u) {
+            return new (u || x)(e.Y36(ye.Ho), e.Y36(qt.F0), e.Y36(Zt.Qz))
+        }, x.\u0275cmp = e.Xpm({
+            type: x,
             selectors: [["cerberus-temple-chest-opened-modal"]],
             inputs: {transactionUrl: "transactionUrl"},
             decls: 16,
             vars: 1,
             consts: [["bottom", "2x-large"], ["size", "small", "fillGradient", "gradients.gold.simple"], ["fillColor", "colors.light.100", "align", "center"], ["both", "2x-large"], ["kind", "tag", "target", "_blank", "fillColor", "colors.apocyan.300", 3, "href"], ["top", "2x-large"], ["size", "large", 3, "click"], ["iconLigature", "close_x", "fillColor", "colors.apocyan.300", 1, "xButton", 3, "click"]],
             template: function (u, D) {
-                1 & u && (e.TgZ(0, "gu-vertical-space", 0), e.TgZ(1, "gu-heading-text", 1), e._uU(2, " Chest opened! "), e.qZA(), e.qZA(), e.TgZ(3, "gu-paragraph-text", 2), e._uU(4, " Opening a chest grants you 5 packs of the corresponding quality. Once you open a chest, the packs have to be created on the blockchain, and sent to you. "), e.TgZ(5, "strong"), e._uU(6, "This can take a few minutes to complete."), e.qZA(), e.qZA(), e.TgZ(7, "gu-vertical-space", 3), e.TgZ(8, "gu-simple-text-button", 4), e._uU(9, " you can check the status of your transaction here "), e.qZA(), e.qZA(), e.TgZ(10, "gu-paragraph-text", 2), e._uU(11, " When the transaction is complete, your new packs will show up in the temple.\n"), e.qZA(), e.TgZ(12, "gu-vertical-space", 5), e.TgZ(13, "gu-primary-hex-button", 6), e.NdJ("click", function () {
+                1 & u && (e.TgZ(0, "gu-vertical-space", 0)(1, "gu-heading-text", 1), e._uU(2, " Chest opened! "), e.qZA()(), e.TgZ(3, "gu-paragraph-text", 2), e._uU(4, " Opening a chest grants you 5 packs of the corresponding quality. Once you open a chest, the packs have to be created on the blockchain, and sent to you. "), e.TgZ(5, "strong"), e._uU(6, "This can take a few minutes to complete."), e.qZA()(), e.TgZ(7, "gu-vertical-space", 3)(8, "gu-simple-text-button", 4), e._uU(9, " you can check the status of your transaction here "), e.qZA()(), e.TgZ(10, "gu-paragraph-text", 2), e._uU(11, " When the transaction is complete, your new packs will show up in the temple.\n"), e.qZA(), e.TgZ(12, "gu-vertical-space", 5)(13, "gu-primary-hex-button", 6), e.NdJ("click", function () {
                     return D.onBuyPacks()
-                }), e._uU(14, " BUY "), e.qZA(), e.qZA(), e.TgZ(15, "gu-icon", 7), e.NdJ("click", function () {
+                }), e._uU(14, " BUY "), e.qZA()(), e.TgZ(15, "gu-icon", 7), e.NdJ("click", function () {
                     return D.closeModal()
                 }), e.qZA()), 2 & u && (e.xp6(8), e.s9C("href", D.transactionUrl))
             },
             styles: ["[_nghost-%COMP%]{display:flex;flex-direction:column;align-items:center;justify-content:center;background:#0F1B27;width:100%;min-width:60vh;max-width:75vw;min-height:40vh;padding:40px;text-align:center;position:relative;box-shadow:inset 0 0 0 2px #3d5a7480}.xButton[_ngcontent-%COMP%]{position:absolute;top:12px;right:12px;font-size:28px;cursor:pointer}.xButton[_ngcontent-%COMP%]:hover{color:#f6f6f6}"]
-        }), S
+        }), x
     })();
     var es = o(51395), Et = o(55778);
     const Is = ["viewLayer"];
     let Ds = (() => {
-        class S {
-            constructor(u, D, K, _e, tt, at, vt, dt, Se) {
-                this.environment = u, this.packService = D, this.chestService = K, this.router = _e, this.ngZone = tt, this.ethService = at, this.modalService = vt, this.audioService = dt, this.navigationStateService = Se, this.unopenedChests = [], this.unopenedPacks = [], this.unsubscribe = new Cs.xQ, this.volumeSetting = 1, this.currentWalletAddress = ""
+        class x {
+            constructor(u, D, K, _e, tt, at, vt, dt, Pe) {
+                this.environment = u, this.packService = D, this.chestService = K, this.router = _e, this.ngZone = tt, this.ethService = at, this.modalService = vt, this.audioService = dt, this.navigationStateService = Pe, this.unopenedChests = [], this.unopenedPacks = [], this.unsubscribe = new Cs.xQ, this.volumeSetting = 1, this.currentWalletAddress = ""
             }
 
             ngOnInit() {
@@ -21942,10 +22068,10 @@ return $.\u0275fac = function (C) {
             }
         }
 
-        return S.\u0275fac = function (u) {
-            return new (u || S)(e.Y36(ye.Ho), e.Y36(es.F), e.Y36(es.W), e.Y36(qt.F0), e.Y36(e.R0b), e.Y36(ye.ux), e.Y36(Ht.Qz), e.Y36(ye.pk), e.Y36(Et.fY))
-        }, S.\u0275cmp = e.Xpm({
-            type: S,
+        return x.\u0275fac = function (u) {
+            return new (u || x)(e.Y36(ye.Ho), e.Y36(es.F), e.Y36(es.W), e.Y36(qt.F0), e.Y36(e.R0b), e.Y36(ye.ux), e.Y36(Zt.Qz), e.Y36(ye.pk), e.Y36(Et.fY))
+        }, x.\u0275cmp = e.Xpm({
+            type: x,
             selectors: [["cerberus-temple"]],
             viewQuery: function (u, D) {
                 if (1 & u && e.Gf(Is, 7), 2 & u) {
@@ -21966,46 +22092,46 @@ return $.\u0275fac = function (C) {
                 }), e.qZA(), e.TgZ(2, "gu-temple-overlay-layer"), e._uU(3, " Your screen is too puny for such a mighty prize. Please expand your browser window or use a larger device such as a laptop or PC.\n"), e.qZA()), 2 & u && e.Q6J("headerAreaHeight", D.navigationStateService.dataStore.headerAreaHeight)("unOpenedPacks", D.unopenedPacks)("unOpenedChests", D.unopenedChests)("volume", D.volumeSetting)
             },
             styles: ["[_nghost-%COMP%]{display:flex;flex-direction:column}"]
-        }), S
+        }), x
     })();
-    var ao = o(61715), $t = o(98723);
+    var ao = o(61715), Tt = o(98723);
 
-    function lo(S, H) {
-        if (1 & S && (e.TgZ(0, "gu-paragraph-text", 10), e._uU(1, " Buy "), e.TgZ(2, "strong"), e._uU(3), e.qZA(), e._uU(4, " for "), e.TgZ(5, "span", 11), e._uU(6), e.qZA(), e._UZ(7, "gu-icon", 12), e._uU(8, "? "), e.qZA()), 2 & S) {
+    function lo(x, Z) {
+        if (1 & x && (e.TgZ(0, "gu-paragraph-text", 10), e._uU(1, " Buy "), e.TgZ(2, "strong"), e._uU(3), e.qZA(), e._uU(4, " for "), e.TgZ(5, "span", 11), e._uU(6), e.qZA(), e._UZ(7, "gu-icon", 12), e._uU(8, "? "), e.qZA()), 2 & x) {
             const u = e.oxw();
             e.xp6(3), e.Oqu(u.storeItem.item_name), e.xp6(3), e.hij("", u.storeItem.value, " ")
         }
     }
 
-    function Ls(S, H) {
-        if (1 & S && e._UZ(0, "gu-paragraph-text", 13), 2 & S) {
+    function Ls(x, Z) {
+        if (1 & x && e._UZ(0, "gu-paragraph-text", 13), 2 & x) {
             const u = e.oxw();
             e.Q6J("innerHTML", u.descriptionText, e.oJD)
         }
     }
 
-    function Us(S, H) {
-        if (1 & S) {
+    function Us(x, Z) {
+        if (1 & x) {
             const u = e.EpF();
-            e.TgZ(0, "gu-paragraph-text", 10), e._uU(1, " Great choice! "), e.TgZ(2, "strong"), e._uU(3), e.qZA(), e._uU(4, " has been added to your "), e.TgZ(5, "span"), e.TgZ(6, "gu-simple-text-button", 14), e.NdJ("click", function () {
+            e.TgZ(0, "gu-paragraph-text", 10), e._uU(1, " Great choice! "), e.TgZ(2, "strong"), e._uU(3), e.qZA(), e._uU(4, " has been added to your "), e.TgZ(5, "span")(6, "gu-simple-text-button", 14), e.NdJ("click", function () {
                 return e.CHM(u), e.oxw().goToCollections()
-            }), e._uU(7, " Collections "), e.qZA(), e.qZA(), e._uU(8, ". "), e.qZA()
+            }), e._uU(7, " Collections "), e.qZA()(), e._uU(8, ". "), e.qZA()
         }
-        if (2 & S) {
+        if (2 & x) {
             const u = e.oxw();
             e.xp6(3), e.Oqu(u.storeItem.item_name)
         }
     }
 
-    function Rs(S, H) {
-        if (1 & S && (e.TgZ(0, "gu-vertical-space", 15), e.TgZ(1, "picture", 16), e._UZ(2, "source", 17), e._UZ(3, "img", 18), e.qZA(), e.qZA()), 2 & S) {
+    function Rs(x, Z) {
+        if (1 & x && (e.TgZ(0, "gu-vertical-space", 15)(1, "picture", 16), e._UZ(2, "source", 17)(3, "img", 18), e.qZA()()), 2 & x) {
             const u = e.oxw();
             e.xp6(2), e.Q6J("srcset", u.storeItem.image_url, e.LSH), e.xp6(1), e.Q6J("src", u.storeItem.image_url, e.LSH)
         }
     }
 
-    function Bs(S, H) {
-        if (1 & S) {
+    function Bs(x, Z) {
+        if (1 & x) {
             const u = e.EpF();
             e.ynx(0), e.TgZ(1, "gu-primary-hex-button", 19), e.NdJ("click", function () {
                 return e.CHM(u), e.oxw().exit()
@@ -22013,8 +22139,8 @@ return $.\u0275fac = function (C) {
         }
     }
 
-    function Gs(S, H) {
-        if (1 & S) {
+    function Gs(x, Z) {
+        if (1 & x) {
             const u = e.EpF();
             e.TgZ(0, "gu-secondary-hex-button", 20), e.NdJ("click", function () {
                 return e.CHM(u), e.oxw().back()
@@ -22022,14 +22148,14 @@ return $.\u0275fac = function (C) {
                 return e.CHM(u), e.oxw().buyNow()
             }), e.qZA()
         }
-        if (2 & S) {
+        if (2 & x) {
             const u = e.oxw();
             e.xp6(1), e.Q6J("disabled", u.awaitingPurchaseRes)
         }
     }
 
     let Fs = (() => {
-        class S {
+        class x {
             constructor(u, D, K, _e, tt) {
                 this.activeModal = u, this.router = D, this.environment = K, this.akuma = _e, this.starsService = tt, this.stage = "confirm", this.awaitingPurchaseRes = !1, this.buyNowEvent$ = new e.vpe
             }
@@ -22082,27 +22208,27 @@ return $.\u0275fac = function (C) {
             }
         }
 
-        return S.\u0275fac = function (u) {
-            return new (u || S)(e.Y36(Ht.mX), e.Y36(qt.F0), e.Y36(ye.Ho), e.Y36(Et.jt), e.Y36(Et.cM))
-        }, S.\u0275cmp = e.Xpm({
-            type: S,
+        return x.\u0275fac = function (u) {
+            return new (u || x)(e.Y36(Zt.mX), e.Y36(qt.F0), e.Y36(ye.Ho), e.Y36(Et.jt), e.Y36(Et.cM))
+        }, x.\u0275cmp = e.Xpm({
+            type: x,
             selectors: [["cerberus-star-store-buy-modal"]],
             inputs: {stage: "stage", storeItem: "storeItem", awaitingPurchaseRes: "awaitingPurchaseRes"},
             outputs: {buyNowEvent$: "buyNowEvent$"},
             decls: 13,
             vars: 7,
-            consts: [["goldBorder", "top"], ["top", "2x-large", 1, "headerSection"], ["size", "small", "fillGradient", "gradients.gold.simple", "align", "center"], ["top", "small", "bottom", "large", 1, "descriptionSection"], ["kind", "small", "align", "center", "fillColor", "colors.light.100", 4, "ngIf"], ["kind", "small", "align", "center", "fillColor", "colors.light.100", 3, "innerHTML", 4, "ngIf"], ["class", "imageSection", 4, "ngIf"], ["top", "large", "bottom", "2x-large", 1, "ctaSection"], [4, "ngIf", "ngIfElse"], ["confirmSection", ""], ["kind", "small", "align", "center", "fillColor", "colors.light.100"], [1, "descriptionSection__price"], ["iconLigature", "collectable_stars", "fillGradientTarget", "top", "fillGradient", "gradients.apocyan.simple", 1, "descriptionSection__icon"], ["kind", "small", "align", "center", "fillColor", "colors.light.100", 3, "innerHTML"], ["fillColor", "colors.gunmetal.300", 3, "click"], [1, "imageSection"], [1, "imageSection__picture"], ["type", "image/jpg", 3, "srcset"], [1, "imageSection__picture__img", 3, "src"], ["size", "large", "text", "OKAY", 1, "ctaSection__primary", 3, "click"], ["size", "large", "text", "BACK", 1, "ctaSection__secondary", 3, "click"], ["size", "large", "text", "BUY NOW", 1, "ctaSection__primary", 3, "disabled", "click"]],
+            consts: [["goldBorder", "top"], ["top", "2x-large", 1, "headerSection"], ["size", "small", "fillGradient", "gradients.gold.simple", "align", "center"], ["top", "small", "bottom", "large", 1, "descriptionSection"], ["kind", "small", "align", "center", "fillColor", "colors.light.100", 4, "ngIf"], ["kind", "small", "align", "center", "fillColor", "colors.light.100", 3, "innerHTML", 4, "ngIf"], ["class", "imageSection", 4, "ngIf"], ["top", "large", "bottom", "2x-large", 1, "ctaSection"], [4, "ngIf", "ngIfElse"], ["confirmSection", ""], ["kind", "small", "align", "center", "fillColor", "colors.light.100"], [1, "descriptionSection__price"], ["iconLigature", "collectable_stars", "fillGradientTarget", "top", "fillGradient", "#03A9F4", 1, "descriptionSection__icon"], ["kind", "small", "align", "center", "fillColor", "colors.light.100", 3, "innerHTML"], ["fillColor", "colors.gunmetal.300", 3, "click"], [1, "imageSection"], [1, "imageSection__picture"], ["type", "image/jpg", 3, "srcset"], [1, "imageSection__picture__img", 3, "src"], ["size", "large", "text", "OKAY", 1, "ctaSection__primary", 3, "click"], ["size", "large", "text", "BACK", 1, "ctaSection__secondary", 3, "click"], ["size", "large", "text", "BUY NOW", 1, "ctaSection__primary", 3, "disabled", "click"]],
             template: function (u, D) {
-                if (1 & u && (e._UZ(0, "gu-modal-background", 0), e.TgZ(1, "gu-vertical-space", 1), e.TgZ(2, "gu-heading-text", 2), e._uU(3), e.qZA(), e.qZA(), e.TgZ(4, "gu-vertical-space", 3), e.YNc(5, lo, 9, 2, "gu-paragraph-text", 4), e.YNc(6, Ls, 1, 1, "gu-paragraph-text", 5), e.YNc(7, Us, 9, 1, "gu-paragraph-text", 4), e.qZA(), e.YNc(8, Rs, 4, 2, "gu-vertical-space", 6), e.TgZ(9, "gu-vertical-space", 7), e.YNc(10, Bs, 2, 0, "ng-container", 8), e.YNc(11, Gs, 2, 1, "ng-template", null, 9, e.W1O), e.qZA()), 2 & u) {
+                if (1 & u && (e._UZ(0, "gu-modal-background", 0), e.TgZ(1, "gu-vertical-space", 1)(2, "gu-heading-text", 2), e._uU(3), e.qZA()(), e.TgZ(4, "gu-vertical-space", 3), e.YNc(5, lo, 9, 2, "gu-paragraph-text", 4), e.YNc(6, Ls, 1, 1, "gu-paragraph-text", 5), e.YNc(7, Us, 9, 1, "gu-paragraph-text", 4), e.qZA(), e.YNc(8, Rs, 4, 2, "gu-vertical-space", 6), e.TgZ(9, "gu-vertical-space", 7), e.YNc(10, Bs, 2, 0, "ng-container", 8), e.YNc(11, Gs, 2, 1, "ng-template", null, 9, e.W1O), e.qZA()), 2 & u) {
                     const K = e.MAs(12);
                     e.xp6(3), e.hij(" ", D.headingText, " "), e.xp6(2), e.Q6J("ngIf", "confirm" === D.stage), e.xp6(1), e.Q6J("ngIf", "failure" === D.stage), e.xp6(1), e.Q6J("ngIf", "success" === D.stage), e.xp6(1), e.Q6J("ngIf", "confirm" === D.stage), e.xp6(2), e.Q6J("ngIf", "confirm" !== D.stage)("ngIfElse", K)
                 }
             },
-            directives: [l.O5],
-            styles: ["[_nghost-%COMP%]{position:relative;display:flex;flex-direction:column;padding:0 60px;align-items:center;max-width:100vw;width:520px}[_nghost-%COMP%] > *[_ngcontent-%COMP%]{position:relative}.descriptionSection__price[_ngcontent-%COMP%]{background-image:linear-gradient(to top,#AFFAED 0%,#54BBCD 100%);color:transparent;-webkit-background-clip:text;background-clip:text}.descriptionSection__icon[_ngcontent-%COMP%]{display:inline-flex}.imageSection[_ngcontent-%COMP%]{display:flex;justify-content:center}.imageSection__picture__img[_ngcontent-%COMP%]{width:280px;max-width:70vw}.ctaSection[_ngcontent-%COMP%]{display:flex;justify-content:center;width:100%}.ctaSection[_ngcontent-%COMP%]   gu-primary-hex-button[_ngcontent-%COMP%]:nth-child(2){margin-left:20px}"]
-        }), S
-    })(), Zs = (() => {
-        class S {
+            directives: [c.O5],
+            styles: ["[_nghost-%COMP%]{position:relative;display:flex;flex-direction:column;padding:0 60px;align-items:center;max-width:100vw;width:520px}[_nghost-%COMP%] > *[_ngcontent-%COMP%]{position:relative}.descriptionSection__price[_ngcontent-%COMP%]{color:var(--gu-blue)}.descriptionSection__icon[_ngcontent-%COMP%]{display:inline-flex}.imageSection[_ngcontent-%COMP%]{display:flex;justify-content:center}.imageSection__picture__img[_ngcontent-%COMP%]{width:280px;max-width:70vw}.ctaSection[_ngcontent-%COMP%]{display:flex;justify-content:center;width:100%}.ctaSection[_ngcontent-%COMP%]   gu-primary-hex-button[_ngcontent-%COMP%]:nth-child(2){margin-left:20px}"]
+        }), x
+    })(), Ns = (() => {
+        class x {
             constructor(u, D) {
                 this.activeModal = u, this.akuma = D
             }
@@ -22116,10 +22242,10 @@ return $.\u0275fac = function (C) {
             }
         }
 
-        return S.\u0275fac = function (u) {
-            return new (u || S)(e.Y36(Ht.mX), e.Y36(Et.jt))
-        }, S.\u0275cmp = e.Xpm({
-            type: S,
+        return x.\u0275fac = function (u) {
+            return new (u || x)(e.Y36(Zt.mX), e.Y36(Et.jt))
+        }, x.\u0275cmp = e.Xpm({
+            type: x,
             selectors: [["cerberus-star-store-more-info-modal"]],
             inputs: {imageUrl: "imageUrl", name: "name", description: "description"},
             decls: 12,
@@ -22128,14 +22254,14 @@ return $.\u0275fac = function (C) {
             template: function (u, D) {
                 1 & u && (e._UZ(0, "gu-modal-background"), e.TgZ(1, "gu-icon", 0), e.NdJ("click", function () {
                     return D.exit()
-                }), e.qZA(), e.TgZ(2, "gu-vertical-space", 1), e.TgZ(3, "picture", 2), e._UZ(4, "source", 3), e._UZ(5, "img", 4), e.qZA(), e.qZA(), e.TgZ(6, "gu-vertical-space", 5), e.TgZ(7, "gu-heading-text", 6), e._uU(8), e.qZA(), e.qZA(), e.TgZ(9, "gu-vertical-space", 7), e.TgZ(10, "gu-paragraph-text", 8), e._uU(11), e.qZA(), e.qZA()), 2 & u && (e.xp6(4), e.Q6J("srcset", D.imageUrl, e.LSH), e.xp6(1), e.Q6J("src", D.imageUrl, e.LSH), e.xp6(3), e.hij(" ", D.name, " "), e.xp6(3), e.hij(" ", D.description, " "))
+                }), e.qZA(), e.TgZ(2, "gu-vertical-space", 1)(3, "picture", 2), e._UZ(4, "source", 3)(5, "img", 4), e.qZA()(), e.TgZ(6, "gu-vertical-space", 5)(7, "gu-heading-text", 6), e._uU(8), e.qZA()(), e.TgZ(9, "gu-vertical-space", 7)(10, "gu-paragraph-text", 8), e._uU(11), e.qZA()()), 2 & u && (e.xp6(4), e.Q6J("srcset", D.imageUrl, e.LSH), e.xp6(1), e.Q6J("src", D.imageUrl, e.LSH), e.xp6(3), e.hij(" ", D.name, " "), e.xp6(3), e.hij(" ", D.description, " "))
             },
             styles: ["[_nghost-%COMP%]{position:relative;display:flex;flex-direction:column;padding:0 60px;align-items:center;max-width:100vw;width:520px}[_nghost-%COMP%] > *[_ngcontent-%COMP%]{position:relative}.imageSection[_ngcontent-%COMP%]{display:flex;justify-content:center}.imageSection__picture__img[_ngcontent-%COMP%]{max-width:100%}.closeIcon[_ngcontent-%COMP%]{position:absolute!important;top:0;right:0;margin:14px 16px;font-size:20px;cursor:pointer}"]
-        }), S
+        }), x
     })();
 
-    function co(S, H) {
-        if (1 & S) {
+    function co(x, Z) {
+        if (1 & x) {
             const u = e.EpF();
             e.TgZ(0, "gu-star-store-sale-item", 14), e.NdJ("onBuyItem", function () {
                 e.CHM(u);
@@ -22147,32 +22273,32 @@ return $.\u0275fac = function (C) {
                 return e.oxw(2).showMoreInfo(K)
             }), e.qZA()
         }
-        if (2 & S) {
+        if (2 & x) {
             const u = e.oxw().$implicit;
             e.Q6J("price", u.value)("imageUrl", u.image_url)("name", u.item_name)("durationType", u.label)("endTimestamp", u.end_timestamp)("title", u.title)
         }
     }
 
-    function xs(S, H) {
-        if (1 & S && (e.ynx(0), e.YNc(1, co, 1, 6, "gu-star-store-sale-item", 13), e.BQk()), 2 & S) {
-            const u = H.$implicit, D = e.oxw(2);
+    function xs(x, Z) {
+        if (1 & x && (e.ynx(0), e.YNc(1, co, 1, 6, "gu-star-store-sale-item", 13), e.BQk()), 2 & x) {
+            const u = Z.$implicit, D = e.oxw(2);
             e.xp6(1), e.Q6J("ngIf", D.isCurrentItem(u))
         }
     }
 
-    function uo(S, H) {
-        if (1 & S && (e.ynx(0), e.TgZ(1, "div", 7), e.TgZ(2, "gu-vertical-space", 8), e.TgZ(3, "gu-heading-text", 9), e._uU(4, " Welcome to the Star Store "), e.qZA(), e.TgZ(5, "gu-paragraph-text", 10), e._uU(6, " Exchange your Stars for some awesome items. "), e._UZ(7, "br"), e._uU(8, " Availability and prices are subject to change. "), e.qZA(), e.qZA(), e.TgZ(9, "gu-vertical-space", 11), e.YNc(10, xs, 2, 1, "ng-container", 12), e.qZA(), e.qZA(), e.BQk()), 2 & S) {
+    function uo(x, Z) {
+        if (1 & x && (e.ynx(0), e.TgZ(1, "div", 7)(2, "gu-vertical-space", 8)(3, "gu-heading-text", 9), e._uU(4, " Welcome to the Star Store "), e.qZA(), e.TgZ(5, "gu-paragraph-text", 10), e._uU(6, " Exchange your Stars for some awesome items. "), e._UZ(7, "br"), e._uU(8, " Availability and prices are subject to change. "), e.qZA()(), e.TgZ(9, "gu-vertical-space", 11), e.YNc(10, xs, 2, 1, "ng-container", 12), e.qZA()(), e.BQk()), 2 & x) {
             const u = e.oxw();
             e.xp6(10), e.Q6J("ngForOf", u.storeItems)
         }
     }
 
-    function Ns(S, H) {
-        1 & S && (e.TgZ(0, "div", 15), e.TgZ(1, "gu-heading-text", 9), e._uU(2, " the Star Store is Restocking "), e.qZA(), e.TgZ(3, "gu-paragraph-text", 10), e._uU(4, " We are currently out of stock! Please check back at a later time. "), e.qZA(), e.qZA())
+    function zs(x, Z) {
+        1 & x && (e.TgZ(0, "div", 15)(1, "gu-heading-text", 9), e._uU(2, " the Star Store is Restocking "), e.qZA(), e.TgZ(3, "gu-paragraph-text", 10), e._uU(4, " We are currently out of stock! Please check back at a later time. "), e.qZA()())
     }
 
     let po = (() => {
-        class S {
+        class x {
             constructor(u, D, K) {
                 this.modalService = u, this.starsService = D, this.akuma = K, this.storeItems = [], this.currentEpochTime = this.timeNowEpoch(), this.currentItemsToDisplay = !0, this.unsubscribe = new Cs.xQ
             }
@@ -22214,7 +22340,7 @@ return $.\u0275fac = function (C) {
                     K = u.reduce((tt, at) => tt.end_timestamp_epoch < at.end_timestamp_epoch ? tt : at);
                 if (!K) return;
                 const _e = K.end_timestamp_epoch + 1e3 - D;
-                _e < 0 || (0, $t.H)(_e).pipe((0, Gt.R)(this.unsubscribe), (0, he.q)(1)).subscribe(tt => {
+                _e < 0 || (0, Tt.H)(_e).pipe((0, Gt.R)(this.unsubscribe), (0, he.q)(1)).subscribe(tt => {
                     this.initStoreItems()
                 })
             }
@@ -22240,7 +22366,7 @@ return $.\u0275fac = function (C) {
 
             showMoreInfo(u) {
                 this.akuma.postEvent("Control", "starstoreHomeTipBtn_pressed", this.starsService.getScreenOrder(u)), this.modalService.hasOpenModals() && this.modalService.dismissAll();
-                const K = this.modalService.open(Zs, {defaultStylings: !1, centered: !0}).componentInstance;
+                const K = this.modalService.open(Ns, {defaultStylings: !1, centered: !0}).componentInstance;
                 K.name = u.item_name, K.description = u.item_description, K.imageUrl = u.image_url
             }
 
@@ -22249,46 +22375,46 @@ return $.\u0275fac = function (C) {
             }
         }
 
-        return S.\u0275fac = function (u) {
-            return new (u || S)(e.Y36(Ht.Qz), e.Y36(Et.cM), e.Y36(Et.jt))
-        }, S.\u0275cmp = e.Xpm({
-            type: S,
+        return x.\u0275fac = function (u) {
+            return new (u || x)(e.Y36(Zt.Qz), e.Y36(Et.cM), e.Y36(Et.jt))
+        }, x.\u0275cmp = e.Xpm({
+            type: x,
             selectors: [["cerberus-star-store-route"]],
             decls: 8,
             vars: 2,
-            consts: [[1, "background"], [1, "background__picture"], ["srcset", "\n        /assets/images/misc-art/misc-art--star-store@1x.webp 2284w,\n        /assets/images/misc-art/misc-art--star-store@1x.webp 1714w,\n        /assets/images/misc-art/misc-art--star-store@1x.webp 1142w,\n        /assets/images/misc-art/misc-art--star-store@1x.webp  572w\n      ", "type", "image/webp"], ["srcset", "\n        /assets/images/misc-art/misc-art--star-store@1x.jpg 2284w,\n        /assets/images/misc-art/misc-art--star-store@1x.jpg 1714w,\n        /assets/images/misc-art/misc-art--star-store@1x.jpg 1142w,\n        /assets/images/misc-art/misc-art--star-store@1x.jpg  572w\n      ", "type", "image/jpg"], ["src", "/assets/images/misc-art/misc-art--star-store@1x.jpg", "alt", "", 1, "background__picture__img"], [4, "ngIf", "ngIfElse"], ["emptyStateSection", ""], [1, "storeSection"], ["top", "x-large", 1, "storeSection__header"], ["size", "x-large", "fillGradient", "gradients.gold.simple", "align", "center"], ["kind", "large", "align", "center", "fillColor", "colors.light.100"], ["top", "x-large", 1, "storeSection__specials"], [4, "ngFor", "ngForOf"], ["class", "storeSection__specials__item", 3, "price", "imageUrl", "name", "durationType", "endTimestamp", "title", "onBuyItem", "onMoreInfo", 4, "ngIf"], [1, "storeSection__specials__item", 3, "price", "imageUrl", "name", "durationType", "endTimestamp", "title", "onBuyItem", "onMoreInfo"], [1, "emptyStateSection"]],
+            consts: [[1, "background"], [1, "background__picture"], ["srcset", "\n        /assets/images/misc-art/misc-art--star-store@1x.webp 2284w,\n        /assets/images/misc-art/misc-art--star-store@1x.webp 1714w,\n        /assets/images/misc-art/misc-art--star-store@1x.webp 1142w,\n        /assets/images/misc-art/misc-art--star-store@1x.webp  572w\n      ", "type", "image/webp"], ["srcset", "\n        /assets/images/misc-art/misc-art--star-store@1x.jpg 2284w,\n        /assets/images/misc-art/misc-art--star-store@1x.jpg 1714w,\n        /assets/images/misc-art/misc-art--star-store@1x.jpg 1142w,\n        /assets/images/misc-art/misc-art--star-store@1x.jpg  572w\n      ", "type", "image/jpg"], ["src", "/assets/images/misc-art/misc-art--star-store@1x.jpg", "alt", "", 1, "background__picture__img"], [4, "ngIf", "ngIfElse"], ["emptyStateSection", ""], [1, "storeSection"], ["top", "x-large", 1, "storeSection__header"], ["size", "large", "fillGradient", "gradients.gold.simple", "align", "center"], ["kind", "small", "align", "center", "fillColor", "colors.light.100"], ["top", "x-large", 1, "storeSection__specials"], [4, "ngFor", "ngForOf"], ["class", "storeSection__specials__item", 3, "price", "imageUrl", "name", "durationType", "endTimestamp", "title", "onBuyItem", "onMoreInfo", 4, "ngIf"], [1, "storeSection__specials__item", 3, "price", "imageUrl", "name", "durationType", "endTimestamp", "title", "onBuyItem", "onMoreInfo"], [1, "emptyStateSection"]],
             template: function (u, D) {
-                if (1 & u && (e.TgZ(0, "div", 0), e.TgZ(1, "picture", 1), e._UZ(2, "source", 2), e._UZ(3, "source", 3), e._UZ(4, "img", 4), e.qZA(), e.qZA(), e.YNc(5, uo, 11, 1, "ng-container", 5), e.YNc(6, Ns, 5, 0, "ng-template", null, 6, e.W1O)), 2 & u) {
+                if (1 & u && (e.TgZ(0, "div", 0)(1, "picture", 1), e._UZ(2, "source", 2)(3, "source", 3)(4, "img", 4), e.qZA()(), e.YNc(5, uo, 11, 1, "ng-container", 5), e.YNc(6, zs, 5, 0, "ng-template", null, 6, e.W1O)), 2 & u) {
                     const K = e.MAs(7);
                     e.xp6(5), e.Q6J("ngIf", D.currentItemsToDisplay)("ngIfElse", K)
                 }
             },
-            directives: [l.O5, l.sg],
-            styles: ["[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;align-items:center}.background[_ngcontent-%COMP%], .background__picture[_ngcontent-%COMP%]{position:absolute;top:0;left:0;width:100%;height:100%}.background__picture__img[_ngcontent-%COMP%]{display:block;width:100%;height:100%;object-fit:cover}.storeSection[_ngcontent-%COMP%]{position:relative;overflow-y:auto;width:100%}.storeSection__header[_ngcontent-%COMP%]{padding:0 8px}.storeSection__header[_ngcontent-%COMP%]   gu-paragraph-text[_ngcontent-%COMP%]{max-width:630px;margin:auto}.storeSection__specials[_ngcontent-%COMP%]{display:flex;flex-wrap:wrap;justify-content:center}.emptyStateSection[_ngcontent-%COMP%]{position:relative;margin:auto}"]
-        }), S
+            directives: [c.O5, c.sg],
+            styles: ["[_nghost-%COMP%]{display: flex;flex-flow: column nowrap;align-items: center}.background[_ngcontent-%COMP%], .background__picture[_ngcontent-%COMP%]{display: none;}.storeSection[_ngcontent-%COMP%]{position: relative;overflow-y: auto;width: 100%}.storeSection__header[_ngcontent-%COMP%]{padding: 0 8px}.storeSection__header[_ngcontent-%COMP%] gu-paragraph-text[_ngcontent-%COMP%]{max-width: 630px;margin: auto}.storeSection__specials[_ngcontent-%COMP%]{display: flex;flex-wrap: wrap;justify-content: center}.emptyStateSection[_ngcontent-%COMP%]{position: relative;margin: auto}"]
+        }), x
     })();
 
-    function fo(S, H) {
-        if (1 & S) {
+    function fo(x, Z) {
+        if (1 & x) {
             const u = e.EpF();
             e.TgZ(0, "gu-secondary-hex-button", 7), e.NdJ("click", function () {
                 return e.CHM(u), e.oxw().secondaryCtaClick()
             }), e.qZA()
         }
-        if (2 & S) {
+        if (2 & x) {
             const u = e.oxw();
             e.Q6J("text", u.secondaryCtaText)
         }
     }
 
-    function vo(S, H) {
-        if (1 & S) {
+    function vo(x, Z) {
+        if (1 & x) {
             const u = e.EpF();
             e.TgZ(0, "gu-primary-hex-button", 7), e.NdJ("click", function () {
                 return e.CHM(u), e.oxw().primaryCtaClick()
             }), e.qZA()
         }
-        if (2 & S) {
+        if (2 & x) {
             const u = e.oxw();
             e.Q6J("text", u.primaryCtaText)
         }
@@ -22296,7 +22422,7 @@ return $.\u0275fac = function (C) {
 
     o(52886), o(98590);
     let bo = (() => {
-        class S {
+        class x {
             constructor(u) {
                 this.activeModal = u, this.onPrimaryCtaClick = () => {
                 }, this.onSecondaryCtaClick = () => {
@@ -22312,10 +22438,10 @@ return $.\u0275fac = function (C) {
             }
         }
 
-        return S.\u0275fac = function (u) {
-            return new (u || S)(e.Y36(Ht.mX))
-        }, S.\u0275cmp = e.Xpm({
-            type: S,
+        return x.\u0275fac = function (u) {
+            return new (u || x)(e.Y36(Zt.mX))
+        }, x.\u0275cmp = e.Xpm({
+            type: x,
             selectors: [["cerberus-confirm-modal"]],
             inputs: {
                 title: "title",
@@ -22329,23 +22455,23 @@ return $.\u0275fac = function (C) {
             vars: 4,
             consts: [["goldBorder", "top"], ["top", "4x-large"], ["align", "center", "fillGradient", "gradients.gold.simple", "fillGradientTarget", "bottom", "size", "small"], ["top", "large"], ["align", "center", "kind", "small", "fillColor", "colors.light.100", 1, "text"], ["top", "2x-large", "bottom", "4x-large", 1, "ctaSection"], ["class", "ctaSection__button", "size", "large", 3, "text", "click", 4, "ngIf"], ["size", "large", 1, "ctaSection__button", 3, "text", "click"]],
             template: function (u, D) {
-                1 & u && (e._UZ(0, "gu-modal-background", 0), e.TgZ(1, "gu-vertical-space", 1), e.TgZ(2, "gu-heading-text", 2), e._uU(3), e.qZA(), e.qZA(), e.TgZ(4, "gu-vertical-space", 3), e.TgZ(5, "gu-paragraph-text", 4), e._uU(6), e.qZA(), e.qZA(), e.TgZ(7, "gu-vertical-space", 5), e.YNc(8, fo, 1, 1, "gu-secondary-hex-button", 6), e.YNc(9, vo, 1, 1, "gu-primary-hex-button", 6), e.qZA()), 2 & u && (e.xp6(3), e.hij(" ", D.title, " "), e.xp6(3), e.hij(" ", D.text, " "), e.xp6(2), e.Q6J("ngIf", D.secondaryCtaText), e.xp6(1), e.Q6J("ngIf", D.primaryCtaText))
+                1 & u && (e._UZ(0, "gu-modal-background", 0), e.TgZ(1, "gu-vertical-space", 1)(2, "gu-heading-text", 2), e._uU(3), e.qZA()(), e.TgZ(4, "gu-vertical-space", 3)(5, "gu-paragraph-text", 4), e._uU(6), e.qZA()(), e.TgZ(7, "gu-vertical-space", 5), e.YNc(8, fo, 1, 1, "gu-secondary-hex-button", 6), e.YNc(9, vo, 1, 1, "gu-primary-hex-button", 6), e.qZA()), 2 & u && (e.xp6(3), e.hij(" ", D.title, " "), e.xp6(3), e.hij(" ", D.text, " "), e.xp6(2), e.Q6J("ngIf", D.secondaryCtaText), e.xp6(1), e.Q6J("ngIf", D.primaryCtaText))
             },
-            directives: [l.O5],
+            directives: [c.O5],
             styles: ["[_nghost-%COMP%]{position:relative;display:flex;flex-direction:column;padding:0 60px;align-items:center;max-width:100vw;width:640px}[_nghost-%COMP%] > *[_ngcontent-%COMP%]{position:relative}.alertIcon[_ngcontent-%COMP%]{font-size:80px}.heading[_ngcontent-%COMP%]{text-transform:uppercase}.ctaSection[_ngcontent-%COMP%]{display:flex;flex-flow:row nowrap}.ctaSection__button[_ngcontent-%COMP%]{min-width:200px}.ctaSection__button[_ngcontent-%COMP%]:nth-child(2){margin-left:16px}"]
-        }), S
+        }), x
     })();
-    var zs = o(92198);
+    var Ws = o(92198);
 
-    function Ye(S, H) {
-        1 & S && e._UZ(0, "gu-icon", 3)
+    function Ye(x, Z) {
+        1 & x && e._UZ(0, "gu-icon", 3)
     }
 
-    const Co = function (S, H) {
-        return {check__complete: S, check__unfinished: H}
+    const Co = function (x, Z) {
+        return {check__complete: x, check__unfinished: Z}
     };
     let yo = (() => {
-        class S {
+        class x {
             constructor() {
             }
 
@@ -22353,37 +22479,37 @@ return $.\u0275fac = function (C) {
             }
         }
 
-        return S.\u0275fac = function (u) {
-            return new (u || S)
-        }, S.\u0275cmp = e.Xpm({
-            type: S,
+        return x.\u0275fac = function (u) {
+            return new (u || x)
+        }, x.\u0275cmp = e.Xpm({
+            type: x,
             selectors: [["tick-box"]],
             inputs: {finished: "finished"},
             decls: 3,
             vars: 5,
             consts: [[1, "check", 3, "ngClass"], [1, "check__box"], ["class", "checkmark", "iconLigature", "checkbox_tick", 4, "ngIf"], ["iconLigature", "checkbox_tick", 1, "checkmark"]],
             template: function (u, D) {
-                1 & u && (e.TgZ(0, "div", 0), e.TgZ(1, "div", 1), e.YNc(2, Ye, 1, 0, "gu-icon", 2), e.qZA(), e.qZA()), 2 & u && (e.Q6J("ngClass", e.WLB(2, Co, D.finished, !D.finished)), e.xp6(2), e.Q6J("ngIf", D.finished))
+                1 & u && (e.TgZ(0, "div", 0)(1, "div", 1), e.YNc(2, Ye, 1, 0, "gu-icon", 2), e.qZA()()), 2 & u && (e.Q6J("ngClass", e.WLB(2, Co, D.finished, !D.finished)), e.xp6(2), e.Q6J("ngIf", D.finished))
             },
-            directives: [l.mk, l.O5],
+            directives: [c.mk, c.O5],
             styles: [".check__text[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22)}.check[_ngcontent-%COMP%]{display:flex;align-items:center;justify-content:center}.check__text[_ngcontent-%COMP%]{font-weight:700;line-height:28px;padding-left:10px}.check__complete[_ngcontent-%COMP%]{color:#50bcff;border-color:#50bcff}.check__unfinished[_ngcontent-%COMP%]{color:#7192b0;border-color:#7192b0}.check__box[_ngcontent-%COMP%]{height:20px;width:20px;background:#0F1B27;border:2px solid #8BE1E0;box-sizing:border-box}.checkmark[_ngcontent-%COMP%]{color:#50bcff;display:flex;font-weight:700}"]
-        }), S
+        }), x
     })();
 
-    function xo(S, H) {
-        if (1 & S && (e.TgZ(0, "tr"), e.TgZ(1, "td"), e._uU(2), e.qZA(), e.TgZ(3, "td"), e._UZ(4, "tick-box", 21), e.qZA(), e.TgZ(5, "td"), e._UZ(6, "tick-box", 21), e.qZA(), e.TgZ(7, "td"), e._UZ(8, "tick-box", 21), e.qZA(), e.TgZ(9, "td"), e._uU(10), e.qZA(), e.qZA()), 2 & S) {
-            const u = H.$implicit;
+    function xo(x, Z) {
+        if (1 & x && (e.TgZ(0, "tr")(1, "td"), e._uU(2), e.qZA(), e.TgZ(3, "td"), e._UZ(4, "tick-box", 21), e.qZA(), e.TgZ(5, "td"), e._UZ(6, "tick-box", 21), e.qZA(), e.TgZ(7, "td"), e._UZ(8, "tick-box", 21), e.qZA(), e.TgZ(9, "td"), e._uU(10), e.qZA()()), 2 & x) {
+            const u = Z.$implicit;
             e.xp6(2), e.Oqu(u.username), e.xp6(2), e.Q6J("finished", u.gu_account), e.xp6(2), e.Q6J("finished", u.coinbase_confirmed), e.xp6(2), e.Q6J("finished", u.game_played), e.xp6(2), e.Oqu(u.payment_status)
         }
     }
 
-    const Ws = function () {
+    const Hs = function () {
         return {breakpoint: "small", size: "large"}
-    }, Hs = function (S) {
-        return [S]
+    }, Zs = function (x) {
+        return [x]
     };
-    let So = (() => {
-        class S {
+    let Po = (() => {
+        class x {
             constructor(u, D, K, _e) {
                 this.activeModal = u, this.analyticsService = D, this.referralService = K, this.authService = _e, this.unsubscribe = new Cs.xQ
             }
@@ -22409,10 +22535,10 @@ return $.\u0275fac = function (C) {
             }
         }
 
-        return S.\u0275fac = function (u) {
-            return new (u || S)(e.Y36(Ht.mX), e.Y36(Et.jt), e.Y36(Et.C_), e.Y36(ye.mI))
-        }, S.\u0275cmp = e.Xpm({
-            type: S,
+        return x.\u0275fac = function (u) {
+            return new (u || x)(e.Y36(Zt.mX), e.Y36(Et.jt), e.Y36(Et.C_), e.Y36(ye.mI))
+        }, x.\u0275cmp = e.Xpm({
+            type: x,
             selectors: [["referrals-status"]],
             inputs: {userId: "userId"},
             decls: 47,
@@ -22421,43 +22547,21 @@ return $.\u0275fac = function (C) {
             template: function (u, D) {
                 1 & u && (e.TgZ(0, "gu-icon", 0), e.NdJ("click", function () {
                     return D.onClose()
-                }), e.qZA(), e.TgZ(1, "div", 1), e.TgZ(2, "gu-vertical-space", 2), e.TgZ(3, "gu-heading-text", 3), e._uU(4, " Referral Status"), e.qZA(), e.qZA(), e.TgZ(5, "gu-vertical-space", 4), e.TgZ(6, "div", 5), e.TgZ(7, "table", 6), e.TgZ(8, "tr"), e.TgZ(9, "th"), e._uU(10, "User"), e.qZA(), e.TgZ(11, "th"), e._uU(12, "GU account"), e.qZA(), e.TgZ(13, "th"), e._uU(14, "Coinbase account"), e.qZA(), e.TgZ(15, "th"), e._uU(16, "Game played"), e.qZA(), e.TgZ(17, "th"), e._uU(18, "Reward Status"), e.qZA(), e.qZA(), e.YNc(19, xo, 11, 5, "tr", 7), e.qZA(), e.qZA(), e.qZA(), e._UZ(20, "div", 8), e.TgZ(21, "gu-vertical-space", 9), e.TgZ(22, "gu-heading-text", 3), e._uU(23, " Earnings"), e.qZA(), e.qZA(), e.TgZ(24, "gu-vertical-space", 9), e.TgZ(25, "div", 10), e._UZ(26, "div", 11), e.TgZ(27, "div", 12), e.TgZ(28, "div", 13), e.TgZ(29, "div", 14), e._uU(30), e.qZA(), e.TgZ(31, "div", 15), e._uU(32, " Worth of Eth "), e.qZA(), e.TgZ(33, "div", 16), e._uU(34, " Earned from Referrals "), e.qZA(), e.qZA(), e.qZA(), e.qZA(), e.qZA(), e.TgZ(35, "gu-vertical-space", 9), e.TgZ(36, "gu-paragraph-text", 17), e._uU(37, " Once a friend has completed the required steps, it will take a few days to verify everything. Your referral earnings will be payed out every 7 days "), e.qZA(), e.qZA(), e.TgZ(38, "gu-vertical-space", 9), e.TgZ(39, "gu-paragraph-text", 17), e.TgZ(40, "strong"), e._uU(41, "Need some help?"), e.qZA(), e._uU(42, " Reach out to us on social media! "), e.qZA(), e.qZA(), e.TgZ(43, "gu-vertical-space", 18), e.TgZ(44, "div", 19), e.TgZ(45, "gu-primary-hex-button", 20), e.NdJ("click", function () {
+                }), e.qZA(), e.TgZ(1, "div", 1)(2, "gu-vertical-space", 2)(3, "gu-heading-text", 3), e._uU(4, " Referral Status"), e.qZA()(), e.TgZ(5, "gu-vertical-space", 4)(6, "div", 5)(7, "table", 6)(8, "tr")(9, "th"), e._uU(10, "User"), e.qZA(), e.TgZ(11, "th"), e._uU(12, "GU account"), e.qZA(), e.TgZ(13, "th"), e._uU(14, "Coinbase account"), e.qZA(), e.TgZ(15, "th"), e._uU(16, "Game played"), e.qZA(), e.TgZ(17, "th"), e._uU(18, "Reward Status"), e.qZA()(), e.YNc(19, xo, 11, 5, "tr", 7), e.qZA()()(), e._UZ(20, "div", 8), e.TgZ(21, "gu-vertical-space", 9)(22, "gu-heading-text", 3), e._uU(23, " Earnings"), e.qZA()(), e.TgZ(24, "gu-vertical-space", 9)(25, "div", 10), e._UZ(26, "div", 11), e.TgZ(27, "div", 12)(28, "div", 13)(29, "div", 14), e._uU(30), e.qZA(), e.TgZ(31, "div", 15), e._uU(32, " Worth of Eth "), e.qZA(), e.TgZ(33, "div", 16), e._uU(34, " Earned from Referrals "), e.qZA()()()()(), e.TgZ(35, "gu-vertical-space", 9)(36, "gu-paragraph-text", 17), e._uU(37, " Once a friend has completed the required steps, it will take a few days to verify everything. Your referral earnings will be payed out every 7 days "), e.qZA()(), e.TgZ(38, "gu-vertical-space", 9)(39, "gu-paragraph-text", 17)(40, "strong"), e._uU(41, "Need some help?"), e.qZA(), e._uU(42, " Reach out to us on social media! "), e.qZA()(), e.TgZ(43, "gu-vertical-space", 18)(44, "div", 19)(45, "gu-primary-hex-button", 20), e.NdJ("click", function () {
                     return D.onClose()
-                }), e._uU(46, " Close Window "), e.qZA(), e.qZA(), e.qZA(), e.qZA()), 2 & u && (e.xp6(3), e.Q6J("responsiveSize", e.VKq(5, Hs, e.DdM(4, Ws))), e.xp6(16), e.Q6J("ngForOf", D.userReferrals), e.xp6(3), e.Q6J("responsiveSize", e.VKq(8, Hs, e.DdM(7, Ws))), e.xp6(8), e.hij(" $", D.totalAmount, " "))
+                }), e._uU(46, " Close Window "), e.qZA()()()()), 2 & u && (e.xp6(3), e.Q6J("responsiveSize", e.VKq(5, Zs, e.DdM(4, Hs))), e.xp6(16), e.Q6J("ngForOf", D.userReferrals), e.xp6(3), e.Q6J("responsiveSize", e.VKq(8, Zs, e.DdM(7, Hs))), e.xp6(8), e.hij(" $", D.totalAmount, " "))
             },
-            directives: [l.sg, yo],
+            directives: [c.sg, yo],
             styles: ["[_nghost-%COMP%]{display:flex;flex-direction:column;max-width:840px;text-align:center}.modal__closeButton[_ngcontent-%COMP%]{position:absolute;top:20px;right:20px;z-index:1;font-size:calc(var(--vh) * 2);color:#8be1e0;cursor:pointer}.modal__closeButton[_ngcontent-%COMP%]:hover{color:#f6f6f6}.referrals__modal__content[_ngcontent-%COMP%]{background:#0F1B27;box-sizing:border-box;border:2px solid #3D5A74;display:flex;flex-direction:column;padding:0 50px;align-items:center}@media only screen and (max-width: 768px){.referrals__modal__content[_ngcontent-%COMP%]{padding:0 20px;overflow-y:auto}}table[_ngcontent-%COMP%], th[_ngcontent-%COMP%], td[_ngcontent-%COMP%]{border-left:2px solid #0A0A0A;border-right:2px solid #0A0A0A;border-collapse:collapse}th[_ngcontent-%COMP%], td[_ngcontent-%COMP%]{text-align:center}th[_ngcontent-%COMP%]{font-size:16px;font-weight:400;line-height:24px;background:#1D2F41;color:#f6f6f6;padding:20px}td[_ngcontent-%COMP%]{font-size:16px;font-weight:400;line-height:24px;padding:10px 5px;color:#464646}tr[_ngcontent-%COMP%]{background:#F6F6F6}tr[_ngcontent-%COMP%]:nth-child(odd){background-color:#d7d7d7}.divider__line[_ngcontent-%COMP%]{border:1px solid #1D2F41;margin:20px;width:100%}.earnings[_ngcontent-%COMP%]{display:flex;flex-direction:row}.earnings__container[_ngcontent-%COMP%]{background:linear-gradient(90deg,rgba(242,242,242,.1) .67%,rgba(255,255,255,.1) 51.76%,rgba(242,242,242,.1) 100%);border:1px solid #7f7f7f;box-sizing:border-box;font-family:Unchained;font-style:normal}.earnings__shine[_ngcontent-%COMP%]{background:linear-gradient(180deg,#fff2d8 0%,#ebc98b 50.34%,#c6a052 100%);width:8px;height:60px;box-sizing:border-box}.earnings__text[_ngcontent-%COMP%]{display:flex;flex-direction:row;justify-content:center;align-items:center;margin:10px}.earnings__value[_ngcontent-%COMP%]{font-weight:700;font-size:32px;line-height:38px;text-transform:uppercase;color:#f6f6f6;padding-right:5px}.earnings__subtext[_ngcontent-%COMP%]{font-weight:700;font-size:12px;line-height:20px;text-transform:uppercase;color:#b6b6b6;padding-right:2vw}.earnings__info[_ngcontent-%COMP%]{font-weight:400;font-size:16px;line-height:24px;color:#f6f6f6}.socialButton[_ngcontent-%COMP%]{cursor:pointer;font-size:35px;margin:0 5px}.referrals_status_container[_ngcontent-%COMP%]{width:100%}@media only screen and (max-width: 768px){.referrals_status_container[_ngcontent-%COMP%]{width:90vw;overflow-x:scroll}}"]
-        }), S
-    })(), Po = (() => {
-        class S {
-            constructor() {
-            }
-
-            ngOnInit() {
-            }
+        }), x
+    })(), So = (() => {
+        class x {
         }
 
-        return S.\u0275fac = function (u) {
-            return new (u || S)
-        }, S.\u0275cmp = e.Xpm({
-            type: S,
-            selectors: [["referrals-card-back"]],
-            decls: 16,
-            vars: 0,
-            consts: [[1, "earnTogether__sideFigure"], [1, "earnTogether__figure"], ["srcset", "/assets/images/social-isolation/referrals/card_bg.webp", "type", "image/webp"], ["src", "/assets/images/social-isolation/referrals/card_bg.png", "alt", "", 1, "stackedCard__top"], [1, "stackedCard__lower", "stackedCard__lower__first"], [1, "stackedCard__lower", "stackedCard__lower__second"], [1, "earnTogether__cardContent"], ["top", "medium", "bottom", "large"], ["iconLigature", "friends_helmet", "fillGradient", "gradients.gold.simple", "fillGradientTarget", "bottom", 1, "earnTogether__icon"], [1, "rewardsBlock__text", "rewardsBlock__totalValue"], ["top", "large", "bottom", "medium"], ["src", "/assets/images/social-isolation/referrals/gu-divder-small.svg", 1, "tasks__divider"], ["fillColor", "colors.light.100", 2, "padding", "0 40px"]],
-            template: function (u, D) {
-                1 & u && (e.TgZ(0, "div", 0), e.TgZ(1, "figure", 1), e.TgZ(2, "picture"), e._UZ(3, "source", 2), e._UZ(4, "img", 3), e.qZA(), e._UZ(5, "div", 4), e._UZ(6, "div", 5), e.qZA(), e.TgZ(7, "div", 6), e.TgZ(8, "gu-vertical-space", 7), e._UZ(9, "gu-icon", 8), e.qZA(), e.TgZ(10, "div", 9), e._uU(11, " 10% "), e.qZA(), e.TgZ(12, "gu-vertical-space", 10), e._UZ(13, "img", 11), e.qZA(), e.TgZ(14, "gu-paragraph-text", 12), e._uU(15, " of referrals money spent added to your wallet "), e.qZA(), e.qZA(), e.qZA())
-            },
-            styles: ["[_nghost-%COMP%]{height:400px}.earnTogether__sideFigure[_ngcontent-%COMP%]{position:relative}.earnTogether__figure[_ngcontent-%COMP%]{min-width:300px}.earnTogether__cardContent[_ngcontent-%COMP%]{position:absolute;z-index:10;width:245px;height:360px;text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center;left:10%}.stackedCard__top[_ngcontent-%COMP%]{box-shadow:4px 4px 8px #0a0a0a;border:1px solid #464646;position:absolute;z-index:3}.stackedCard__lower[_ngcontent-%COMP%]{background:linear-gradient(360deg,#0f1b27 0%,#0f1b27 11.53%,#1d2f41 50.05%,#0f1b27 88.69%,#0f1b27 100%);box-shadow:4px 4px 8px #0a0a0a;border:1px solid #464646;box-sizing:border-box;position:absolute;height:360px;width:240px}.stackedCard__lower__first[_ngcontent-%COMP%]{left:30px;top:15px;z-index:2}.stackedCard__lower__second[_ngcontent-%COMP%]{left:25px;top:25px;z-index:1}.earnTogether__icon[_ngcontent-%COMP%]{font-size:90px}.rewardsBlock__text[_ngcontent-%COMP%]{font-family:Unchained;font-style:normal;font-weight:700;text-transform:uppercase}.rewardsBlock__totalValue[_ngcontent-%COMP%]{font-size:43px;line-height:30px;color:#f6f6f6}.rewardsBlock__totalValue__currency[_ngcontent-%COMP%]{font-size:24px;line-height:29px;text-align:center;color:#d7d7d7}.tasks__divider[_ngcontent-%COMP%]{width:100%}"]
-        }), S
-    })(), ps = (() => {
-        class S {
-        }
-
-        return S.\u0275fac = function (u) {
-            return new (u || S)
-        }, S.\u0275cmp = e.Xpm({
-            type: S,
+        return x.\u0275fac = function (u) {
+            return new (u || x)
+        }, x.\u0275cmp = e.Xpm({
+            type: x,
             selectors: [["referrals-task"]],
             inputs: {
                 taskId: "taskId",
@@ -22469,12 +22573,12 @@ return $.\u0275fac = function (C) {
             vars: 4,
             consts: [[1, "taskId"], ["align", "center", "size", "x-small", "fillGradient", "gradients.gold.simple", 1, "taskId__number"], [1, "taskPicture"], ["srcset", "/assets/images/social-isolation/referrals/task_diamond.webp", "type", "image/webp"], ["src", "/assets/images/social-isolation/referrals/task_diamond.png", "alt", "GU_Task"], [1, "outerBox"], [1, "innerBox"], ["align", "center", "size", "x-small", 1, "taskTitle"], ["alt", "GU_Task", 1, "taskPicture__img", 3, "src"], ["align", "center", "fillColor", "colors.light.300", 1, "taskDescription", 3, "innerHTML"]],
             template: function (u, D) {
-                1 & u && (e.TgZ(0, "div", 0), e.TgZ(1, "gu-heading-text", 1), e._uU(2), e.qZA(), e.TgZ(3, "picture", 2), e._UZ(4, "source", 3), e._UZ(5, "img", 4), e.qZA(), e.qZA(), e.TgZ(6, "div", 5), e.TgZ(7, "div", 6), e.TgZ(8, "gu-heading-text", 7), e._uU(9), e.qZA(), e.TgZ(10, "picture", 2), e._UZ(11, "img", 8), e.qZA(), e._UZ(12, "gu-paragraph-text", 9), e.qZA(), e.qZA()), 2 & u && (e.xp6(2), e.hij(" ", D.taskId, " "), e.xp6(7), e.hij(" ", D.taskTitle, " "), e.xp6(2), e.Q6J("src", D.taskImage, e.LSH), e.xp6(1), e.Q6J("innerHTML", D.taskDescription, e.oJD))
+                1 & u && (e.TgZ(0, "div", 0)(1, "gu-heading-text", 1), e._uU(2), e.qZA(), e.TgZ(3, "picture", 2), e._UZ(4, "source", 3)(5, "img", 4), e.qZA()(), e.TgZ(6, "div", 5)(7, "div", 6)(8, "gu-heading-text", 7), e._uU(9), e.qZA(), e.TgZ(10, "picture", 2), e._UZ(11, "img", 8), e.qZA(), e._UZ(12, "gu-paragraph-text", 9), e.qZA()()), 2 & u && (e.xp6(2), e.hij(" ", D.taskId, " "), e.xp6(7), e.hij(" ", D.taskTitle, " "), e.xp6(2), e.Q6J("src", D.taskImage, e.LSH), e.xp6(1), e.Q6J("innerHTML", D.taskDescription, e.oJD))
             },
             styles: ["[_nghost-%COMP%]{background-color:#0f1b27;display:block;min-height:300px;position:relative;width:300px;border:2px solid #0F1B27;box-sizing:border-box;margin:20px}.outerBox[_ngcontent-%COMP%]{background:linear-gradient(90deg,#c6a052 2.93%,#ebc98b 25.01%,#fff2d8 50.44%,#ebc98b 74.21%,#c6a052 96.95%);box-shadow:0 2px 5px #0000004d;height:100%;width:100%;padding:2px}.innerBox[_ngcontent-%COMP%]{width:100%;height:100%;background:#0F1B27;display:flex;flex-direction:column}.taskId[_ngcontent-%COMP%]{position:absolute;left:50%;top:-32px;transform:translate(-50%)}.taskId__number[_ngcontent-%COMP%]{position:absolute;left:50%;transform:translate(-50%);top:25%}.taskTitle[_ngcontent-%COMP%]{padding:10px;margin-top:30px}.taskPicture__img[_ngcontent-%COMP%]{border-top:1px solid #979797;border-bottom:1px solid #979797;width:100%}.taskDescription[_ngcontent-%COMP%]{padding:8px 10px;font-size:15px}"]
-        }), S
-    })(), ns = (() => {
-        class S {
+        }), x
+    })(), ps = (() => {
+        class x {
             constructor(u, D) {
                 this.analyticsService = u, this.copyService = D
             }
@@ -22512,10 +22616,10 @@ return $.\u0275fac = function (C) {
             }
         }
 
-        return S.\u0275fac = function (u) {
-            return new (u || S)(e.Y36(Et.jt), e.Y36(Et.tX))
-        }, S.\u0275cmp = e.Xpm({
-            type: S,
+        return x.\u0275fac = function (u) {
+            return new (u || x)(e.Y36(Et.jt), e.Y36(Et.tX))
+        }, x.\u0275cmp = e.Xpm({
+            type: x,
             selectors: [["share-button"]],
             inputs: {socialMedia: "socialMedia", referralLink: "referralLink", referralCopy: "referralCopy"},
             decls: 4,
@@ -22524,40 +22628,40 @@ return $.\u0275fac = function (C) {
             template: function (u, D) {
                 1 & u && (e.TgZ(0, "button", 0), e.NdJ("click", function () {
                     return D.shareLink()
-                }), e._UZ(1, "gu-icon", 1), e.TgZ(2, "gu-heading-text", 2), e._uU(3), e.qZA(), e.qZA()), 2 & u && (e.xp6(1), e.Q6J("iconLigature", D.iconLigature), e.xp6(2), e.hij(" ", D.title, " "))
+                }), e._UZ(1, "gu-icon", 1), e.TgZ(2, "gu-heading-text", 2), e._uU(3), e.qZA()()), 2 & u && (e.xp6(1), e.Q6J("iconLigature", D.iconLigature), e.xp6(2), e.hij(" ", D.title, " "))
             },
             styles: ["[_nghost-%COMP%]{margin:10px 10px 10px 0}.shareButton[_ngcontent-%COMP%]{white-space:nowrap;padding:10px 15px;background:transparent;border:2px solid #8be1e0;display:flex;align-items:center;outline:none}.shareButton[_ngcontent-%COMP%]:hover{padding:12px 17px;color:#182531;border:none;background:linear-gradient(to bottom,#AFFAED 0%,#54BBCD 100%)}.shareButton[_ngcontent-%COMP%]:hover   .shareButton__shareText[_ngcontent-%COMP%]{-webkit-text-fill-color:#182531}.shareButton[_ngcontent-%COMP%]:hover   .shareButton__icon[_ngcontent-%COMP%]{-webkit-text-fill-color:black}@media only screen and (max-width: 768px){.shareButton[_ngcontent-%COMP%]{padding:10px}}.shareButton__icon[_ngcontent-%COMP%]{-webkit-text-fill-color:#8be1e0;font-size:calc(var(--vh) * 2.5);margin-right:calc(var(--vw) * .5);display:inline-flex;align-items:flex-start}.shareButton__icon[_ngcontent-%COMP%]:hover{-webkit-text-fill-color:black}@media only screen and (max-width: 768px){.shareButton__icon[_ngcontent-%COMP%]{margin-right:0}}.shareButton__shareText[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#affaed 0%,#8be1e0 50%,#54bbcd 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}@media only screen and (max-width: 768px){.shareButton__shareText[_ngcontent-%COMP%]{display:none}}"]
-        }), S
+        }), x
     })();
 
-    function js(S, H) {
-        if (1 & S && (e.TgZ(0, "option", 3), e._uU(1), e.qZA()), 2 & S) {
-            const u = H.$implicit;
+    function ns(x, Z) {
+        if (1 & x && (e.TgZ(0, "option", 3), e._uU(1), e.qZA()), 2 & x) {
+            const u = Z.$implicit;
             e.Q6J("ngValue", u), e.xp6(1), e.Oqu(u)
         }
     }
 
-    function ko(S, H) {
-        if (1 & S) {
+    function js(x, Z) {
+        if (1 & x) {
             const u = e.EpF();
-            e.TgZ(0, "form", 1), e.TgZ(1, "select", 2), e.NdJ("ngModelChange", function (K) {
+            e.TgZ(0, "form", 1)(1, "select", 2), e.NdJ("ngModelChange", function (K) {
                 return e.CHM(u), e.oxw().updateWallet(K)
             })("ngModelChange", function (K) {
                 return e.CHM(u), e.oxw().selectedWallet = K
-            }), e.TgZ(2, "option", 3), e._uU(3, "Please select a wallet"), e.qZA(), e.YNc(4, js, 2, 2, "option", 4), e.qZA(), e.qZA()
+            }), e.TgZ(2, "option", 3), e._uU(3, "Please select a wallet"), e.qZA(), e.YNc(4, ns, 2, 2, "option", 4), e.qZA()()
         }
-        if (2 & S) {
+        if (2 & x) {
             const u = e.oxw();
             e.xp6(1), e.Q6J("ngModel", u.selectedWallet), e.xp6(1), e.Q6J("ngValue", null), e.xp6(2), e.Q6J("ngForOf", u.playerWallets)
         }
     }
 
-    function Vs(S, H) {
-        1 & S && (e.TgZ(0, "div", 1), e.TgZ(1, "div", 5), e._uU(2, " You don't have a wallet linked. "), e.qZA(), e.TgZ(3, "a", 6), e._uU(4, "Link my wallet"), e.qZA(), e.qZA())
+    function ko(x, Z) {
+        1 & x && (e.TgZ(0, "div", 1)(1, "div", 5), e._uU(2, " You don't have a wallet linked. "), e.qZA(), e.TgZ(3, "a", 6), e._uU(4, "Link my wallet"), e.qZA()())
     }
 
-    let Qo = (() => {
-        class S {
+    let Vs = (() => {
+        class x {
             constructor() {
                 this.walletSelected = new e.vpe
             }
@@ -22567,10 +22671,10 @@ return $.\u0275fac = function (C) {
             }
         }
 
-        return S.\u0275fac = function (u) {
-            return new (u || S)
-        }, S.\u0275cmp = e.Xpm({
-            type: S,
+        return x.\u0275fac = function (u) {
+            return new (u || x)
+        }, x.\u0275cmp = e.Xpm({
+            type: x,
             selectors: [["wallet-settings"]],
             inputs: {playerWallets: "playerWallets", selectedWallet: "selectedWallet"},
             outputs: {walletSelected: "walletSelected"},
@@ -22578,69 +22682,91 @@ return $.\u0275fac = function (C) {
             vars: 2,
             consts: [["class", "settings", 4, "ngIf"], [1, "settings"], ["name", "selectedWallet", "id", "sel1", 1, "settings__select", 3, "ngModel", "ngModelChange"], [3, "ngValue"], [3, "ngValue", 4, "ngFor", "ngForOf"], [1, "settings__label"], ["href", "https://www.godsunchained.com/?linkwallet=true", 1, "settings__cta"]],
             template: function (u, D) {
-                1 & u && (e.YNc(0, ko, 5, 3, "form", 0), e.YNc(1, Vs, 5, 0, "div", 0)), 2 & u && (e.Q6J("ngIf", D.playerWallets && D.playerWallets.length > 0), e.xp6(1), e.Q6J("ngIf", !D.playerWallets || 0 === D.playerWallets.length))
+                1 & u && (e.YNc(0, js, 5, 3, "form", 0), e.YNc(1, ko, 5, 0, "div", 0)), 2 & u && (e.Q6J("ngIf", D.playerWallets && D.playerWallets.length > 0), e.xp6(1), e.Q6J("ngIf", !D.playerWallets || 0 === D.playerWallets.length))
             },
-            directives: [l.O5, i._Y, i.JL, i.F, i.EJ, i.JJ, i.On, i.YN, i.Kr, l.sg],
+            directives: [c.O5, i._Y, i.JL, i.F, i.EJ, i.JJ, i.On, i.YN, i.Kr, c.sg],
             styles: [".settings__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22)}.settings__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9)}.settings__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]{line-height:1.5}.settings__select[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}[_nghost-%COMP%]{display:block}.settings[_ngcontent-%COMP%]{display:flex;flex-flow:column nowrap;width:100%;margin:auto}.settings__label[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 3)}.settings__select[_ngcontent-%COMP%]{color:#fff;font-size:16px;line-height:24px;width:100%;display:flex;align-items:center;background:#0F1B27;border:1px solid #3D5A74;box-sizing:border-box;border-radius:2px;padding:7px;margin-top:calc(var(--vh) * .65)}.settings__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);margin-bottom:0;background:#182531;color:#f6f6f6;border:calc(var(--vh) * .15) solid #0f1b27;border-radius:calc(var(--vh) * .4)}.settings__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.settings__cta[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .65);color:#affaed}"]
-        }), S
+        }), x
+    })(), Qo = (() => {
+        class x {
+            constructor() {
+            }
+
+            ngOnInit() {
+            }
+        }
+
+        return x.\u0275fac = function (u) {
+            return new (u || x)
+        }, x.\u0275cmp = e.Xpm({
+            type: x,
+            selectors: [["referrals-card-back"]],
+            decls: 16,
+            vars: 0,
+            consts: [[1, "earnTogether__sideFigure"], [1, "earnTogether__figure"], ["srcset", "/assets/images/social-isolation/referrals/card_bg.webp", "type", "image/webp"], ["src", "/assets/images/social-isolation/referrals/card_bg.png", "alt", "", 1, "stackedCard__top"], [1, "stackedCard__lower", "stackedCard__lower__first"], [1, "stackedCard__lower", "stackedCard__lower__second"], [1, "earnTogether__cardContent"], ["top", "medium", "bottom", "large"], ["iconLigature", "friends_helmet", "fillGradient", "gradients.gold.simple", "fillGradientTarget", "bottom", 1, "earnTogether__icon"], [1, "rewardsBlock__text", "rewardsBlock__totalValue"], ["top", "large", "bottom", "medium"], ["src", "/assets/images/social-isolation/referrals/gu-divder-small.svg", 1, "tasks__divider"], ["fillColor", "colors.light.100", 2, "padding", "0 40px"]],
+            template: function (u, D) {
+                1 & u && (e.TgZ(0, "div", 0)(1, "figure", 1)(2, "picture"), e._UZ(3, "source", 2)(4, "img", 3), e.qZA(), e._UZ(5, "div", 4)(6, "div", 5), e.qZA(), e.TgZ(7, "div", 6)(8, "gu-vertical-space", 7), e._UZ(9, "gu-icon", 8), e.qZA(), e.TgZ(10, "div", 9), e._uU(11, " 10% "), e.qZA(), e.TgZ(12, "gu-vertical-space", 10), e._UZ(13, "img", 11), e.qZA(), e.TgZ(14, "gu-paragraph-text", 12), e._uU(15, " of referrals money spent added to your wallet "), e.qZA()()())
+            },
+            styles: ["[_nghost-%COMP%]{height:400px}.earnTogether__sideFigure[_ngcontent-%COMP%]{position:relative}.earnTogether__figure[_ngcontent-%COMP%]{min-width:300px}.earnTogether__cardContent[_ngcontent-%COMP%]{position:absolute;z-index:10;width:245px;height:360px;text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center;left:10%}.stackedCard__top[_ngcontent-%COMP%]{box-shadow:4px 4px 8px #0a0a0a;border:1px solid #464646;position:absolute;z-index:3}.stackedCard__lower[_ngcontent-%COMP%]{background:linear-gradient(360deg,#0f1b27 0%,#0f1b27 11.53%,#1d2f41 50.05%,#0f1b27 88.69%,#0f1b27 100%);box-shadow:4px 4px 8px #0a0a0a;border:1px solid #464646;box-sizing:border-box;position:absolute;height:360px;width:240px}.stackedCard__lower__first[_ngcontent-%COMP%]{left:30px;top:15px;z-index:2}.stackedCard__lower__second[_ngcontent-%COMP%]{left:25px;top:25px;z-index:1}.earnTogether__icon[_ngcontent-%COMP%]{font-size:90px}.rewardsBlock__text[_ngcontent-%COMP%]{font-family:Unchained;font-style:normal;font-weight:700;text-transform:uppercase}.rewardsBlock__totalValue[_ngcontent-%COMP%]{font-size:43px;line-height:30px;color:#f6f6f6}.rewardsBlock__totalValue__currency[_ngcontent-%COMP%]{font-size:24px;line-height:29px;text-align:center;color:#d7d7d7}.tasks__divider[_ngcontent-%COMP%]{width:100%}"]
+        }), x
     })();
 
-    function Ks(S, H) {
-        if (1 & S && (e.ynx(0), e._UZ(1, "referrals-task", 30), e.BQk()), 2 & S) {
-            const u = H.$implicit;
+    function Ks(x, Z) {
+        if (1 & x && (e.ynx(0), e._UZ(1, "referrals-task", 30), e.BQk()), 2 & x) {
+            const u = Z.$implicit;
             e.xp6(1), e.Q6J("taskId", u.taskId)("taskTitle", u.taskTitle)("taskDescription", u.taskDescription)("taskImage", u.taskImage)
         }
     }
 
-    function Qs(S, H) {
-        if (1 & S) {
+    function Qs(x, Z) {
+        if (1 & x) {
             const u = e.EpF();
-            e.TgZ(0, "section", 31), e.TgZ(1, "figure", 32), e.TgZ(2, "picture"), e._UZ(3, "source", 33), e._UZ(4, "img", 34), e.qZA(), e.qZA(), e.TgZ(5, "div", 35), e.TgZ(6, "gu-vertical-space", 36), e.TgZ(7, "div", 37), e._uU(8, " Share the below link with your friends "), e.qZA(), e.qZA(), e.TgZ(9, "div", 38), e._uU(10), e.TgZ(11, "strong"), e._uU(12), e.qZA(), e._uU(13, " on the website here "), e.TgZ(14, "span", 39), e._uU(15), e.qZA(), e.qZA(), e.TgZ(16, "div", 40), e._UZ(17, "share-button", 41), e._UZ(18, "share-button", 42), e._UZ(19, "share-button", 42), e.qZA(), e.TgZ(20, "gu-vertical-space", 43), e._UZ(21, "div", 44), e.qZA(), e.TgZ(22, "gu-vertical-space", 45), e.TgZ(23, "gu-paragraph-text", 46), e._uU(24, " Select the wallet you want your rewards to go to "), e.qZA(), e.qZA(), e.TgZ(25, "wallet-settings", 47), e.NdJ("walletSelected", function (K) {
+            e.TgZ(0, "section", 31)(1, "figure", 32)(2, "picture"), e._UZ(3, "source", 33)(4, "img", 34), e.qZA()(), e.TgZ(5, "div", 35)(6, "gu-vertical-space", 36)(7, "div", 37), e._uU(8, " Share the below link with your friends "), e.qZA()(), e.TgZ(9, "div", 38), e._uU(10), e.TgZ(11, "strong"), e._uU(12), e.qZA(), e._uU(13, " on the website here "), e.TgZ(14, "span", 39), e._uU(15), e.qZA()(), e.TgZ(16, "div", 40), e._UZ(17, "share-button", 41)(18, "share-button", 42)(19, "share-button", 42), e.qZA(), e.TgZ(20, "gu-vertical-space", 43), e._UZ(21, "div", 44), e.qZA(), e.TgZ(22, "gu-vertical-space", 45)(23, "gu-paragraph-text", 46), e._uU(24, " Select the wallet you want your rewards to go to "), e.qZA()(), e.TgZ(25, "wallet-settings", 47), e.NdJ("walletSelected", function (K) {
                 return e.CHM(u), e.oxw().updateWallet(K)
-            }), e.qZA(), e.qZA(), e.qZA()
+            }), e.qZA()()()
         }
-        if (2 & S) {
+        if (2 & x) {
             const u = e.oxw();
             e.xp6(10), e.hij(" ", u.referralCopy, " "), e.xp6(2), e.Oqu(u.referralCode), e.xp6(3), e.Oqu(u.referralLink), e.xp6(2), e.Q6J("referralLink", u.referralLink)("referralCopy", u.shareCopy), e.xp6(1), e.Q6J("referralLink", u.referralLink)("referralCopy", u.shareCopy)("socialMedia", "facebook"), e.xp6(1), e.Q6J("referralLink", u.referralLink)("referralCopy", u.shareCopy)("socialMedia", "twitter"), e.xp6(6), e.Q6J("playerWallets", u.playerWallets)("selectedWallet", u.selectedWallet)
         }
     }
 
-    function wo(S, H) {
-        if (1 & S) {
+    function wo(x, Z) {
+        if (1 & x) {
             const u = e.EpF();
-            e.TgZ(0, "div", 48), e.TgZ(1, "gu-primary-hex-button", 49), e.NdJ("click", function () {
+            e.TgZ(0, "div", 48)(1, "gu-primary-hex-button", 49), e.NdJ("click", function () {
                 return e.CHM(u), e.oxw().signIn()
-            }), e._uU(2, " Sign in to begin "), e.qZA(), e.qZA()
+            }), e._uU(2, " Sign in to begin "), e.qZA()()
         }
     }
 
-    function Vt(S, H) {
-        if (1 & S) {
+    function Vt(x, Z) {
+        if (1 & x) {
             const u = e.EpF();
-            e.TgZ(0, "div", 48), e.TgZ(1, "gu-primary-hex-button", 49), e.NdJ("click", function () {
+            e.TgZ(0, "div", 48)(1, "gu-primary-hex-button", 49), e.NdJ("click", function () {
                 return e.CHM(u), e.oxw().signIn()
-            }), e._uU(2, " Sign in to begin "), e.qZA(), e.qZA()
+            }), e._uU(2, " Sign in to begin "), e.qZA()()
         }
     }
 
-    function Ys(S, H) {
-        if (1 & S) {
+    function Ys(x, Z) {
+        if (1 & x) {
             const u = e.EpF();
-            e.TgZ(0, "div", 48), e.TgZ(1, "gu-primary-hex-button", 49), e.NdJ("click", function () {
+            e.TgZ(0, "div", 48)(1, "gu-primary-hex-button", 49), e.NdJ("click", function () {
                 return e.CHM(u), e.oxw().copyShareCode()
-            }), e._uU(2, " Copy share Code "), e.qZA(), e.qZA()
+            }), e._uU(2, " Copy share Code "), e.qZA()()
         }
     }
 
-    const Zt = function () {
+    const Nt = function () {
         return {breakpoint: "small", size: "large"}
-    }, Mt = function (S) {
-        return [S]
+    }, Mt = function (x) {
+        return [x]
     }, gs = function () {
         return {breakpoint: "small", size: "medium"}
     };
-    let Ps = (() => {
-        class S {
+    let Ss = (() => {
+        class x {
             constructor(u, D, K, _e, tt, at) {
                 this.authService = u, this.cerberusModalService = D, this.router = K, this.analyticsService = _e, this.copyService = tt, this.referralService = at, this.selectedWallet = null, this.unsubscribe = new Cs.xQ, this.referralCopy = "If you're looking for the next game to play, Gods Unchained is a great game that you should check out. Sign up using with my referral code: "
             }
@@ -22656,7 +22782,7 @@ return $.\u0275fac = function (C) {
             }
 
             ngOnInit() {
-                this.getWallets(), this.referralTasks = this.getTasks(), this.userId = this.authService.getUserId(), this.isUserSignedIn = !!this.authService.getUserId(), this.authService.account$.pipe((0, Gt.R)(this.unsubscribe), (0, zs.h)(u => !!u), (0, he.q)(1)).subscribe(u => {
+                this.getWallets(), this.referralTasks = this.getTasks(), this.userId = this.authService.getUserId(), this.isUserSignedIn = !!this.authService.getUserId(), this.authService.account$.pipe((0, Gt.R)(this.unsubscribe), (0, Ws.h)(u => !!u), (0, he.q)(1)).subscribe(u => {
                     this.isUserSignedIn = !!u, this.userId = this.isUserSignedIn ? this.authService.getUserId() : 0, this.createReferralCode(this.userId)
                 })
             }
@@ -22670,14 +22796,14 @@ return $.\u0275fac = function (C) {
             }
 
             checkReferralsStatus() {
-                this.cerberusModalService.open(So, {
+                this.cerberusModalService.open(Po, {
                     centered: !0,
                     scrollable: !0
                 }).componentInstance.userId = this.userId
             }
 
             getWallets() {
-                this.authService.account$.pipe((0, zs.h)(u => !!u), (0, us.U)(u => u.addresses)).subscribe(u => {
+                this.authService.account$.pipe((0, Ws.h)(u => !!u), (0, us.U)(u => u.addresses)).subscribe(u => {
                     this.playerWallets = u.filter(D => D.imx_linked).map(D => D.address)
                 })
             }
@@ -22706,20 +22832,20 @@ return $.\u0275fac = function (C) {
             }
         }
 
-        return S.\u0275fac = function (u) {
-            return new (u || S)(e.Y36(ye.mI), e.Y36(Ht.Qz), e.Y36(qt.F0), e.Y36(Et.jt), e.Y36(Et.tX), e.Y36(Et.C_))
-        }, S.\u0275cmp = e.Xpm({
-            type: S,
+        return x.\u0275fac = function (u) {
+            return new (u || x)(e.Y36(ye.mI), e.Y36(Zt.Qz), e.Y36(qt.F0), e.Y36(Et.jt), e.Y36(Et.tX), e.Y36(Et.C_))
+        }, x.\u0275cmp = e.Xpm({
+            type: x,
             selectors: [["cerberus-referrals-route"]],
             decls: 62,
             vars: 13,
             consts: [[1, "intro"], ["top", "5x-large"], ["align", "center", "fillColor", "colors.dark.900", "size", "small", 3, "responsiveSize"], ["top", "large"], ["align", "center", "fillColor", "colors.gunmetal.500", "size", "medium", 1, "subTitle"], ["top", "small"], ["align", "center", "fillColor", "colors.dark.700"], [1, "theMoreYouPurchase"], [1, "steps"], ["top", "2x-large"], [1, "referralSteps"], [4, "ngFor", "ngForOf"], ["class", "share", 4, "ngIf"], ["top", "medium", "bottom", "large"], ["class", "signInToBegin", 4, "ngIf"], [1, "rewards"], ["top", "large", "both", "medium"], ["src", "/assets/images/social-isolation/referrals/tasks_divider.svg", 1, "tasks__divider"], [1, "rewards__container"], [1, "cardBack__container"], ["align", "left", "fillColor", "colors.dark.900", "size", "x-small", 3, "responsiveSize"], ["top", "small", "bottom", "large"], ["align", "left", "fillColor", "colors.gunmetal.500", "fontWeight", "bold", "size", "5x-small"], ["fillColor", "colors.gunmetal.900", "kind", "4x-small"], ["fillColor", "colors.gunmetal.900"], ["top", "small", "bottom", "medium"], ["srcset", "/assets/images/misc-art/misc-art--wizard-with-key.webp", "type", "image/webp"], ["srcset", "/assets/images/misc-art/misc-art--wizard-with-key.jpg", "type", "image/jpg"], ["src", "/assets/images/misc-art/misc-art--wizard-with-key.jpg"], [1, "innerFooter"], [3, "taskId", "taskTitle", "taskDescription", "taskImage"], [1, "share"], [1, "share__figure"], ["srcset", "/assets/images/misc-art/x2_brand_visual.webp", "type", "image/webp"], ["src", "/assets/images/misc-art/x2_brand_visual.png", 1, "share__img"], [1, "share__content"], ["bottom", "medium"], [1, "share__socialMedia__title"], [1, "share__socialMedia__text"], [1, "share__socialMedia__text__Link"], [1, "share__socialMedia__buttons"], [3, "referralLink", "referralCopy"], [3, "referralLink", "referralCopy", "socialMedia"], ["top", "large", "bottom", "large", 2, "width", "100%"], [1, "share__socialMedia__divider__line"], ["top", "large", "bottom", "medium"], ["fillColor", "colors.light.100"], [3, "playerWallets", "selectedWallet", "walletSelected"], [1, "signInToBegin"], ["size", "large", 2, "padding", "0 25px", 3, "click"]],
             template: function (u, D) {
-                1 & u && (e.TgZ(0, "div"), e.TgZ(1, "section", 0), e.TgZ(2, "gu-vertical-space", 1), e.TgZ(3, "gu-heading-text", 2), e._uU(4, " Money Spent Is Money Earned "), e.qZA(), e.qZA(), e.TgZ(5, "gu-vertical-space", 3), e.TgZ(6, "gu-paragraph-text", 4), e._uU(7, " Mortals. Together. Strong. "), e.qZA(), e.qZA(), e.TgZ(8, "gu-vertical-space", 5), e.TgZ(9, "gu-paragraph-text", 6), e.TgZ(10, "div", 7), e._uU(11, " Put down your axe and extend a helping hand to your fellow mortal. By inviting friends who make purchases, you\u2019ll receive great rewards! "), e.qZA(), e.qZA(), e.qZA(), e.qZA(), e.TgZ(12, "section", 8), e.TgZ(13, "gu-vertical-space", 9), e.TgZ(14, "div", 10), e.YNc(15, Ks, 2, 4, "ng-container", 11), e.qZA(), e.qZA(), e.qZA(), e.YNc(16, Qs, 26, 13, "section", 12), e.TgZ(17, "section"), e.TgZ(18, "gu-vertical-space", 13), e.YNc(19, wo, 3, 0, "div", 14), e.qZA(), e.qZA(), e.TgZ(20, "section", 15), e.TgZ(21, "gu-vertical-space", 16), e._UZ(22, "img", 17), e.qZA(), e.TgZ(23, "div", 18), e.TgZ(24, "div", 19), e._UZ(25, "referrals-card-back"), e.qZA(), e.TgZ(26, "div"), e.TgZ(27, "gu-heading-text", 20), e._uU(28, " Earn Together "), e.qZA(), e.TgZ(29, "gu-vertical-space", 21), e.TgZ(30, "gu-paragraph-text", 22), e._uU(31, " Receive 10% of the money spent by the people you refer! "), e.qZA(), e.qZA(), e.TgZ(32, "gu-paragraph-text", 23), e.TgZ(33, "strong"), e._uU(34, "People you refer need to:"), e.qZA(), e.TgZ(35, "ol"), e.TgZ(36, "li"), e._uU(37, "Create a Gods Unchained account"), e.qZA(), e.TgZ(38, "li"), e._uU(39, "Purchase any Divine Order Packs and/or Chests"), e.qZA(), e.TgZ(40, "li"), e._uU(41, "Have a valid wallet linked to Immutable X"), e.qZA(), e.qZA(), e.qZA(), e.TgZ(42, "gu-paragraph-text", 24), e._uU(43, " There is "), e.TgZ(44, "strong"), e._uU(45, "no limit to how many friends you can invite"), e.qZA(), e._uU(46, ", so send your unique codes far and wide. "), e.qZA(), e.TgZ(47, "gu-paragraph-text", 24), e._uU(48, " The processing of referral payments will take place every 14 days. At these intervals any referral payouts due will be calculated and payed out for all purchases made in the previous cycle. "), e.TgZ(49, "strong"), e._uU(50, "Payment will be made in ETH"), e.qZA(), e._uU(51, " directly to your selected Immutable X linked wallet. "), e.qZA(), e._UZ(52, "gu-vertical-space", 13), e.qZA(), e.qZA(), e.qZA(), e.TgZ(53, "gu-vertical-space", 25), e.TgZ(54, "div"), e.YNc(55, Vt, 3, 0, "div", 14), e.YNc(56, Ys, 3, 0, "div", 14), e.qZA(), e.qZA(), e.qZA(), e.TgZ(57, "picture"), e._UZ(58, "source", 26), e._UZ(59, "source", 27), e._UZ(60, "img", 28), e.qZA(), e._UZ(61, "section", 29)), 2 & u && (e.xp6(3), e.Q6J("responsiveSize", e.VKq(8, Mt, e.DdM(7, Zt))), e.xp6(12), e.Q6J("ngForOf", D.referralTasks), e.xp6(1), e.Q6J("ngIf", D.isUserSignedIn), e.xp6(3), e.Q6J("ngIf", !D.isUserSignedIn), e.xp6(8), e.Q6J("responsiveSize", e.VKq(11, Mt, e.DdM(10, gs))), e.xp6(28), e.Q6J("ngIf", !D.isUserSignedIn), e.xp6(1), e.Q6J("ngIf", D.isUserSignedIn))
+                1 & u && (e.TgZ(0, "div")(1, "section", 0)(2, "gu-vertical-space", 1)(3, "gu-heading-text", 2), e._uU(4, " Money Spent Is Money Earned "), e.qZA()(), e.TgZ(5, "gu-vertical-space", 3)(6, "gu-paragraph-text", 4), e._uU(7, " Mortals. Together. Strong. "), e.qZA()(), e.TgZ(8, "gu-vertical-space", 5)(9, "gu-paragraph-text", 6)(10, "div", 7), e._uU(11, " Put down your axe and extend a helping hand to your fellow mortal. By inviting friends who make purchases, you\u2019ll receive great rewards! "), e.qZA()()()(), e.TgZ(12, "section", 8)(13, "gu-vertical-space", 9)(14, "div", 10), e.YNc(15, Ks, 2, 4, "ng-container", 11), e.qZA()()(), e.YNc(16, Qs, 26, 13, "section", 12), e.TgZ(17, "section")(18, "gu-vertical-space", 13), e.YNc(19, wo, 3, 0, "div", 14), e.qZA()(), e.TgZ(20, "section", 15)(21, "gu-vertical-space", 16), e._UZ(22, "img", 17), e.qZA(), e.TgZ(23, "div", 18)(24, "div", 19), e._UZ(25, "referrals-card-back"), e.qZA(), e.TgZ(26, "div")(27, "gu-heading-text", 20), e._uU(28, " Earn Together "), e.qZA(), e.TgZ(29, "gu-vertical-space", 21)(30, "gu-paragraph-text", 22), e._uU(31, " Receive 10% of the money spent by the people you refer! "), e.qZA()(), e.TgZ(32, "gu-paragraph-text", 23)(33, "strong"), e._uU(34, "People you refer need to:"), e.qZA(), e.TgZ(35, "ol")(36, "li"), e._uU(37, "Create a Gods Unchained account"), e.qZA(), e.TgZ(38, "li"), e._uU(39, "Purchase any Divine Order Packs and/or Chests"), e.qZA(), e.TgZ(40, "li"), e._uU(41, "Have a valid wallet linked to Immutable X"), e.qZA()()(), e.TgZ(42, "gu-paragraph-text", 24), e._uU(43, " There is "), e.TgZ(44, "strong"), e._uU(45, "no limit to how many friends you can invite"), e.qZA(), e._uU(46, ", so send your unique codes far and wide. "), e.qZA(), e.TgZ(47, "gu-paragraph-text", 24), e._uU(48, " The processing of referral payments will take place every 14 days. At these intervals any referral payouts due will be calculated and payed out for all purchases made in the previous cycle. "), e.TgZ(49, "strong"), e._uU(50, "Payment will be made in ETH"), e.qZA(), e._uU(51, " directly to your selected Immutable X linked wallet. "), e.qZA(), e._UZ(52, "gu-vertical-space", 13), e.qZA()()(), e.TgZ(53, "gu-vertical-space", 25)(54, "div"), e.YNc(55, Vt, 3, 0, "div", 14), e.YNc(56, Ys, 3, 0, "div", 14), e.qZA()()(), e.TgZ(57, "picture"), e._UZ(58, "source", 26)(59, "source", 27)(60, "img", 28), e.qZA(), e._UZ(61, "section", 29)), 2 & u && (e.xp6(3), e.Q6J("responsiveSize", e.VKq(8, Mt, e.DdM(7, Nt))), e.xp6(12), e.Q6J("ngForOf", D.referralTasks), e.xp6(1), e.Q6J("ngIf", D.isUserSignedIn), e.xp6(3), e.Q6J("ngIf", !D.isUserSignedIn), e.xp6(8), e.Q6J("responsiveSize", e.VKq(11, Mt, e.DdM(10, gs))), e.xp6(28), e.Q6J("ngIf", !D.isUserSignedIn), e.xp6(1), e.Q6J("ngIf", D.isUserSignedIn))
             },
-            directives: [l.sg, l.O5, Po, ps, ns, Qo],
+            directives: [c.sg, So, c.O5, ps, Vs, Qo],
             styles: [".share__socialMedia__title[_ngcontent-%COMP%], .subTitle[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22)}.share__socialMedia__text[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}[_nghost-%COMP%]{overflow-y:auto;background-color:#f6f6f6}a[_ngcontent-%COMP%]{color:#000}.subTitle[_ngcontent-%COMP%]{font-weight:700;line-height:28px}.earnTogether[_ngcontent-%COMP%]{display:flex;flex-direction:row;position:relative;max-width:960px;padding:20px}@media only screen and (max-width: 768px){.earnTogether[_ngcontent-%COMP%]{flex-wrap:wrap;flex-direction:column-reverse;justify-content:center;align-items:center}}.tasks__divider[_ngcontent-%COMP%]{width:100%}.referralSteps[_ngcontent-%COMP%]{display:flex;flex-direction:row;justify-content:center;flex-wrap:wrap;margin:10px}.signInToBegin[_ngcontent-%COMP%]{align-items:center;display:flex;flex-direction:column}.theMoreYouPurchase[_ngcontent-%COMP%]{margin:0 auto;max-width:566px;padding:10px}[_nghost-%COMP%]{display:flex;flex-direction:column;position:relative}[_nghost-%COMP%] > div[_ngcontent-%COMP%]{width:100%;z-index:1;display:flex;flex-direction:column;justify-content:center;align-items:center}[_nghost-%COMP%] > picture[_ngcontent-%COMP%]{align-items:center;bottom:0;display:flex;justify-content:center;left:0;overflow:hidden;position:absolute;right:0;top:0}[_nghost-%COMP%] > picture[_ngcontent-%COMP%]   img[_ngcontent-%COMP%]{width:100%;height:100%;object-fit:cover;object-position:center top}.earnTogether__text[_ngcontent-%COMP%]{display:flex;flex-direction:column}.innerFooter[_ngcontent-%COMP%]{background:#0A0A0A;height:40px;z-index:1;margin-top:-24px;position:relative;clip-path:polygon(0% 0%,calc(50% - 140px) 0%,calc(50% - 124px) 22px,calc(50% + 124px) 22px,calc(50% + 140px) 0%,100% 0%,100% 100%,0% 100%)}.share[_ngcontent-%COMP%]{width:100%;display:flex;flex-direction:row;border-top:1px solid #0A0A0A;border-bottom:1px solid #0A0A0A;flex-wrap:wrap;justify-content:center;align-items:center;background:#0F1B27}@media only screen and (max-width: 768px){.share[_ngcontent-%COMP%]{display:block}}.share__content[_ngcontent-%COMP%]{flex:1;background:#0F1B27;display:flex;flex-direction:column;padding:40px}@media only screen and (max-width: 768px){.share__content[_ngcontent-%COMP%]{align-items:center;text-align:center}}.share__figure[_ngcontent-%COMP%]{flex:1;margin:0;line-height:.5}.share__img[_ngcontent-%COMP%]{width:100%;object-fit:cover;object-position:center center;height:470px}@media only screen and (max-width: 768px){.share__img[_ngcontent-%COMP%]{height:148px}}.share__socialMedia__title[_ngcontent-%COMP%]{font-weight:700;color:#f6f6f6}.share__socialMedia__text[_ngcontent-%COMP%]{font-size:16px;text-align:left;color:#b6b6b6;border:2px solid #3D5A74;box-sizing:border-box;padding:15px;background:#1D2F41}.share__socialMedia__text__Link[_ngcontent-%COMP%]{color:#f6f6f6}.share__socialMedia__buttons[_ngcontent-%COMP%]{display:flex;flex-direction:row;padding:10px 10px 10px 0}.share__socialMedia__divider__line[_ngcontent-%COMP%]{border:1px solid #1D2F41;width:100%}.referral_status_btn[_ngcontent-%COMP%]{width:200px;margin:10px 0;padding:20px}.rewards[_ngcontent-%COMP%]   ol[_ngcontent-%COMP%]{list-style:inside decimal;padding-left:0;margin-block:0}.rewards[_ngcontent-%COMP%]   gu-paragraph-text[_ngcontent-%COMP%]{margin-bottom:32px}.rewards__container[_ngcontent-%COMP%]{display:flex;flex-direction:column-reverse;max-width:960px;margin:0 20px}.cardBack__container[_ngcontent-%COMP%]{display:flex;justify-content:center;margin-bottom:20px}.cardBack__container[_ngcontent-%COMP%] > referrals-card-back[_ngcontent-%COMP%]{margin-right:-80px}@media screen and (min-width: 768px){.rewards__container[_ngcontent-%COMP%]{flex-direction:row}.cardBack__container[_ngcontent-%COMP%]{margin-bottom:0}.cardBack__container[_ngcontent-%COMP%] > referrals-card-back[_ngcontent-%COMP%]{margin-right:-40px}}@media screen and (min-width: 960px){.cardBack__container[_ngcontent-%COMP%] > referrals-card-back[_ngcontent-%COMP%]{margin-right:0}}"]
-        }), S
+        }), x
     })();
     var ks = o(37371);
     o(39765)
@@ -22727,8 +22853,8 @@ return $.\u0275fac = function (C) {
 :
 se => {
     function R(o) {
-        var l = new Error("Cannot find module '" + o + "'");
-        throw l.code = "MODULE_NOT_FOUND", l
+        var c = new Error("Cannot find module '" + o + "'");
+        throw c.code = "MODULE_NOT_FOUND", c
     }
 
     R.keys = () => [], R.resolve = R, R.id = 46313, se.exports = R
