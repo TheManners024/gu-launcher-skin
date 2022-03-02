@@ -5,7 +5,8 @@ running `npm run pack` to disable signing!
 2. Remember to turn off devtools!
 
 ### Locations of interest
-
+- Search for `null == t.user ? null : t.user.won_matches` and `null == t.user ? null : t.user.unique_card_count` are where
+you should replace the match win/loss ratio and unique card count labels.
 - calcTopCards() 
   - Is a method that seems to calculate which card goes on top of the deck that shows in the launcher.
 - pushToActiveDeck(s)
