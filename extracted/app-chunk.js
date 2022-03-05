@@ -10691,7 +10691,7 @@
             if (2 & o) {
                 const t = e.oxw(2);
                 e.xp6(2),
-                    e.hij(" Next milestone - Level ", t.user.level + 1, " "),
+                    e.hij(" Next milestone in " + t.user.xp_to_next + " XP - Level ", t.user.level + 1, " "),
                     e.xp6(1),
                     e.Q6J("progress", t.xpProgress),
                     e.xp6(2),
