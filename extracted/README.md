@@ -40,5 +40,5 @@ So search the string before the n.god part.
 - launchQueue()
   - Used to start a queue to find a match. Need to use the counter to recursively call it
 a few times so we don't have to deal with the error from the first time failure.
-
+- Search for `Next milestone` and replace with `" Next milestone in " + t.user.xp_to_next + " XP - Level "` 
 
