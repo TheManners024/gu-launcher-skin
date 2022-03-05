@@ -349,7 +349,7 @@ app-inventory-cards-quality > header.groupedCardsHeader:before {
     margin-right: calc(var(--vw) * .9);
     border-radius: 4px;
     padding: 4px 8px;
-    margin-top: 16px;
+    margin-top: 4px;
 }
 
 .fluxProgress:not(.fake-selector) app-flux-progress-box:not(.fake-selector) {
