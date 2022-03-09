@@ -790,3 +790,8 @@ gu-modal-background {
 .progressArea {
     text-transform: uppercase;
 }
+
+gu-controllable-vimeo-embed.packOpenVideo,
+gu-controllable-vimeo-embed.introVideo {
+    opacity: 0;
+}

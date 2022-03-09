@@ -21052,12 +21052,11 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    ${(0, ge.asCssProp)((0, wt.userSelect)("none"))};
+    z-index: 1;
   }
 
   :host(.visible) {
     z-index: 1;
-    ${(0, ge.asCssProp)((0, wt.userSelect)("auto"))};
   }
 
   .raffleTicketsArea {
@@ -21139,7 +21138,6 @@
     position: relative;
     width: calc(var(--cw) * 16);
     perspective: calc(var(--cw) * 50);
-    opacity: 0;
   }
 
   .perspectiveWrapper:last-child {
@@ -21155,7 +21153,6 @@
 
   .cardWrapper__frontFace,
   .cardWrapper__rearFace {
-    ${(0, ge.asCssProp)((0, wt.userSelect)("none"))};
     transform: rotateX(0deg);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -21171,7 +21168,6 @@
   .raffleTicketsArea,
   .cardWrapper {
     opacity: 1;
-    ${(0, ge.asCssProp)((0, wt.userSelect)("auto"))};
   }
   .cardWrapper__frontFace,
   .cardWrapper__rearFace {
@@ -21181,7 +21177,6 @@
 
   .cardWrapper__frontFace {
     width: 100%;
-    transform: rotateY(180deg);
     position: relative;
   }
 
@@ -21227,11 +21222,7 @@
   }
 
   .cardWrapper__rearFace {
-    position: absolute;
-    top: 8%;
-    height: 88%;
-    width: 95%;
-    right: 4.5%;
+    display: none;
   }
 
   .cardWrapper__rearFace__img {
@@ -21258,7 +21249,8 @@
                 })
             });
             (0, $.d4)(() => {
-                _e ? this.classList.add("visible") : this.classList.remove("visible"), qe.p8.to(this.shadowRoot.children, {
+                this.classList.add("visible")
+                qe.p8.to(this.shadowRoot.children, {
                     duration: _e ? .3 : 0,
                     opacity: _e ? 1 : 0,
                     stagger: _e ? .15 : 0,
@@ -21414,6 +21406,15 @@
     position: relative;
     padding-bottom: 56.25%;
     width: 100%;
+  }
+  
+  .open-pack-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
   }
 
   .videoAspectRatio__img {
@@ -21734,9 +21735,6 @@
     min-width: 200px;
   }
 
-  .ctasArea__cta--buyPacksCta {
-    margin-left: calc(var(--cw) * 12);
-  }
 `;
     customElements.define("gu-temple-view-layer", (0, lt.x1)({
         renderer: function io({
@@ -21840,56 +21838,18 @@
                 Pe({
                     type: yt,
                     payload: !0
-                }), this.dispatchEvent(new CustomEvent("onPackOpened", {detail: {pack: F}})), tt.current.playVideo(), Pe(Bt(!0))
+                }), this.dispatchEvent(new CustomEvent("onPackOpened", {detail: {pack: F}})), Pe(Bt(!0))
             }, hs = () => {
                 console.log("RESET TEMPLE CODE"), Pe({type: Xe}), qe.p8.set(K.current, {clearProps: "all"})
-            }, ts = M && !h && me, ws = !F.set || Object.keys(a).length === F.cards.length, as = ws && !x.length && M;
+            }, ts = M, ws = !F.set || Object.keys(a).length === F.cards.length, as = ws && !x.length && M;
+            const fillColorMap = {common: '#bcbcbc', rare: '#26b1fb', epic: '#971ded', legendary: '#f9c123'};
             return J.dy`
     <div class="videoAspectRatio" ?domRef=${(0, we.Q)(vt)}>
       <img class="videoAspectRatio__img" alt="ratio image" src="/assets/images/ratio-images/16-x-9-ratio.png" />
-
-      <gu-controllable-vimeo-embed
-        class="introVideo"
-        videoId="405676137"
-        autoPlay
-        pauseOnEndFrame
-        muted
-        @onVideoEnd=${() => Pe({type: Fe, payload: !0})}
-        ?domRef=${(0, we.Q)(at)}
-        .volume=${u}
-      ></gu-controllable-vimeo-embed>
-
-      <gu-controllable-vimeo-embed
-        class=${(0, ne.$)({packOpenVideo: !0, "packOpenVideo--hidden": !h})}
-        pauseOnEndFrame
-        startPausedOnFirstFrame
-        videoId=${Ne}
-        @onVideoLoading=${() => {
-                Pe(ls(!0))
-            }}
-        @onVideoReady=${() => {
-                Pe(ls(!1))
-            }}
-        @onVideoEnd=${() => {
-                Pe(Bt(!1))
-            }}
-        @onVideoProgress=${We => {
-                const {percent: Xs} = We.detail;
-                Xs >= .425 && !L && Pe({type: xt, payload: !0})
-            }}
-        ?domRef=${(0, we.Q)(tt)}
-        .volume=${u}
-      ></gu-controllable-vimeo-embed>
-
-      <i class="targetDropArea" ?domRef=${(0, we.Q)(dt)}></i>
-
-      ${M && !h ? J.dy`
-            <gu-paragraph-text
-              class="helpText"
-              kind="small"
-              text=${F.set ? ts ? "Please wait, loading ..." : "Drag a pack here to open it" : "You have no packs."}
-            ></gu-paragraph-text>
-          ` : null}
+      
+      ${F && F.rarity ? J.dy`
+        <gu-heading-text class="open-pack-header" fillcolor="${fillColorMap[F.rarity] ?? fillColorMap.common}" size="large">${F.rarity} pack</gu-heading-text>
+      ` : null}
 
       <gu-temple-pack-card-listing></gu-temple-pack-card-listing>
 
@@ -21899,12 +21859,10 @@
         ${as ? J.dy`
               <gu-primary-hex-button
                 size="large"
-                @click=${() => {
-                this.dispatchEvent(new CustomEvent("onBuyPacks"))
-            }}
+                href=${`imtbl://${V.gv.routeContent().home.path}`}
                 class="ctasArea__cta ctasArea__cta--buyPacksCta"
               >
-                Buy Packs
+                Play to unlock
               </gu-primary-hex-button>
             ` : null}
         <!-- @NOTE: While a card sale is active, direct users toward buying packs, not playing the game
@@ -21917,14 +21875,18 @@
                 Play to unlock
               </gu-primary-hex-button>
             ` : null} -->
-        ${ws && x.length && !Le ? J.dy`
+        ${x.length ? J.dy`
               <gu-primary-hex-button size="large" @click=${() => {
-                qe.p8.set(K.current, {clearProps: "all"}), Pe({type: It}), Pe(ke(x))
+                qe.p8.set(K.current, {clearProps: "all"});
+                Pe({type: It});
+                Wt();
+                Pe(Bt(!1));
+                Pe({type: Fe, payload: !0});
             }} class="ctasArea__cta">
-                Next Pack
+                Open Next Pack
               </gu-primary-hex-button>
               <gu-vertical-space top="large">
-                <gu-heading-text size="2x-small" align="center"> ${x.length} packs left </gu-heading-text>
+                <gu-heading-text size="2x-small" align="center"> ${x.length - 1} packs left </gu-heading-text>
               </gu-vertical-space>
             ` : null}
       </div>
