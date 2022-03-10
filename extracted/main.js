@@ -353,8 +353,8 @@ function createWindow(frontEndUrl) {
         const path = `${request.url.substring(9)}`;
         callback(path);
     });
-    // https://master.desktop.godsunchained.com/main.15484af39701aa15.js
-    // https://master.desktop.godsunchained.com/848.e88979d493b87547.js
+    // https://master.desktop.godsunchained.com/main.a6cb01e758ef5e84.js
+    // https://master.desktop.godsunchained.com/848.40c4f9c14fa16fc7.js
     electron_1.session.defaultSession.webRequest.onBeforeRequest({
         urls: [
             'https://master.desktop.godsunchained.com/main.*.js',

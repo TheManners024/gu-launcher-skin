@@ -1,14 +1,14 @@
 // noinspection BadExpressionStatementJS,JSStringConcatenationToES6Template
 
 (self.webpackChunkdesktop = self.webpackChunkdesktop || []).push([[179], {
-    63764: (se, R, o) => {
+    63764: (se, U, o) => {
         "use strict";
-        o.d(R, {S: () => y});
-        var c = o(5e3), i = o(69808);
+        o.d(U, {S: () => y});
+        var d = o(5e3), i = o(69808);
         let y = (() => {
             class e {
                 constructor() {
-                    this.canCloseFromInside = !1, this.closeModal$ = new c.vpe
+                    this.canCloseFromInside = !1, this.closeModal$ = new d.vpe
                 }
 
                 ngOnInit() {
@@ -21,7 +21,7 @@
 
             return e.\u0275fac = function (p) {
                 return new (p || e)
-            }, e.\u0275cmp = c.Xpm({
+            }, e.\u0275cmp = d.Xpm({
                 type: e,
                 selectors: [["app-info-modal"]],
                 inputs: {title: "title", text: "text", styles: "styles", canCloseFromInside: "canCloseFromInside"},
@@ -30,28 +30,27 @@
                 vars: 3,
                 consts: [[1, "modal-holder", 3, "ngStyle", "click"], [1, "container-fluid"], [1, "row"], [1, "col-12", "text-center", "gold-text", "bourbon", "title-container"], [1, "col-12", "text-center", "info-container", 3, "innerHTML"]],
                 template: function (p, g) {
-                    1 & p && (c.TgZ(0, "div", 0), c.NdJ("click", function () {
+                    1 & p && (d.TgZ(0, "div", 0), d.NdJ("click", function () {
                         return g.closeModal(!0)
-                    }), c.TgZ(1, "div", 1)(2, "div", 2)(3, "div", 3), c._uU(4), c.qZA()(), c.TgZ(5, "div", 2), c._UZ(6, "div", 4), c.qZA()()()), 2 & p && (c.Q6J("ngStyle", g.styles), c.xp6(4), c.hij(" ", g.title, " "), c.xp6(2), c.Q6J("innerHTML", g.text, c.oJD))
+                    }), d.TgZ(1, "div", 1)(2, "div", 2)(3, "div", 3), d._uU(4), d.qZA()(), d.TgZ(5, "div", 2), d._UZ(6, "div", 4), d.qZA()()()), 2 & p && (d.Q6J("ngStyle", g.styles), d.xp6(4), d.hij(" ", g.title, " "), d.xp6(2), d.Q6J("innerHTML", g.text, d.oJD))
                 },
                 directives: [i.PC],
                 styles: [".modal-holder[_ngcontent-%COMP%]{min-width:calc(var(--vw) * 15.62);border:1px solid white;z-index:21;overflow:auto;background-color:#060b11b3;border-radius:calc(var(--vh) * .4)}.title-container[_ngcontent-%COMP%]{padding:calc(var(--vh) * 1.85);border-bottom:1px solid white;font-size:x-large}.info-container[_ngcontent-%COMP%]{padding:calc(var(--vh) * 3.7)}"]
             }), e
         })()
-    },
-    531: (se, R, o) => {
+    }, 531: (se, U, o) => {
         "use strict";
-        o.d(R, {$$: () => c, ZW: () => g, u4: () => r, VY: () => t});
+        o.d(U, {$$: () => d, ZW: () => g, u4: () => r, VY: () => t});
 
-        class c {
-            constructor(v, k, P, I, A = []) {
-                this.id = v, this.name = k, this.god = P, this.items = A, this.deck_type = I
+        class d {
+            constructor(_, S, k, L, D = []) {
+                this.id = _, this.name = S, this.god = k, this.items = D, this.deck_type = L
             }
         }
 
         class g {
-            constructor(v, k, P = null) {
-                this.deck = v, this.type = k, this.cards = P
+            constructor(_, S, k = null) {
+                this.deck = _, this.type = S, this.cards = k
             }
         }
 
@@ -61,24 +60,22 @@
         })();
 
         class t {
-            constructor(v, k = null, P = !1) {
-                this.deckSelect = v, this.gameModeID = k, this.forAI = P
+            constructor(_, S = null, k = !1) {
+                this.deckSelect = _, this.gameModeID = S, this.forAI = k
             }
         }
-    },
-    57674: (se, R, o) => {
+    }, 57674: (se, U, o) => {
         "use strict";
-        o.d(R, {PE: () => i});
+        o.d(U, {PE: () => i});
         var i = (() => {
             return (g = i || (i = {}))[g.AscID = 0] = "AscID", g[g.DescID = 1] = "DescID", g[g.AscQuality = 2] = "AscQuality", g[g.DescQuality = 3] = "DescQuality", g[g.AscMana = 4] = "AscMana", g[g.DescMana = 5] = "DescMana", g[g.AscScarcity = 6] = "AscScarcity", g[g.AscHealth = 7] = "AscHealth", g[g.DescHealth = 8] = "DescHealth", g[g.AscAttack = 9] = "AscAttack", g[g.DescAttack = 10] = "DescAttack", g[g.AscTribe = 11] = "AscTribe", g[g.DescTribe = 12] = "DescTribe", g[g.AscRarity = 13] = "AscRarity", g[g.DescRarity = 14] = "DescRarity", g[g.AscType = 15] = "AscType", g[g.DescType = 16] = "DescType", g[g.AscGod = 17] = "AscGod", g[g.DescGod = 18] = "DescGod", g[g.AscSet = 19] = "AscSet", g[g.DescSet = 20] = "DescSet", i;
             var g
         })()
-    },
-    33403: (se, R, o) => {
+    }, 33403: (se, U, o) => {
         "use strict";
-        o.d(R, {tO: () => c, zy: () => i, B_: () => y, Gn: () => m});
-        var c = (() => {
-            return (r = c || (c = {}))[r.SOLO = 0] = "SOLO", r[r.CONSTRUCTED = 1] = "CONSTRUCTED", r[r.DIRECT_CHALLENGE = 5] = "DIRECT_CHALLENGE", r[r.SEALED_DECK = 8] = "SEALED_DECK", r[r.TUTORIAL = 6] = "TUTORIAL", c;
+        o.d(U, {tO: () => d, zy: () => i, B_: () => y, Gn: () => m});
+        var d = (() => {
+            return (r = d || (d = {}))[r.SOLO = 0] = "SOLO", r[r.CONSTRUCTED = 1] = "CONSTRUCTED", r[r.DIRECT_CHALLENGE = 5] = "DIRECT_CHALLENGE", r[r.SEALED_DECK = 8] = "SEALED_DECK", r[r.TUTORIAL = 6] = "TUTORIAL", d;
             var r
         })(), i = (() => {
             return (r = i || (i = {}))[r.WEEKEND_EVENT = 2] = "WEEKEND_EVENT", i;
@@ -90,20 +87,20 @@
             return (r = m || (m = {}))[r.CARDS = 0] = "CARDS", r[r.LEVEL = 1] = "LEVEL", r[r.UPDATE = 2] = "UPDATE", r[r.LOCKED = 3] = "LOCKED", r[r.ASSETS_UPDATE = 4] = "ASSETS_UPDATE", m;
             var r
         })()
-    },
-    98009: (se, R, o) => {
+    }, 98009: (se, U, o) => {
         "use strict";
-        o.d(R, {D: () => S});
-        var c = o(73307), i = o(591), y = o(36053), e = o(5254), m = o(21086), p = o(92198), g = o(72986), r = o(21406),
-            t = o(24850), n = o(40963), v = o(2994), k = o(27221), P = o(531), I = o(5e3), A = o(44416), f = o(55778);
+        o.d(U, {D: () => P});
+        var d = o(73307), i = o(591), y = o(36053), e = o(5254), m = o(21086), p = o(92198), g = o(72986), r = o(21406),
+            t = o(24850), n = o(40963), _ = o(2994), S = o(27221), k = o(531), L = o(5e3), D = o(44416), v = o(55778);
         o(63411);
-        let S = (() => {
-            class b {
-                constructor(s, C, w, B) {
-                    this.utils = s, this.gameApiService = C, this.authService = w, this.cardsService = B, this._userDecks = new i.X([]), this._starterDecks = new i.X([]), this._activeDeck = new i.X(null), this._activeDeckChange = new i.X(new P.ZW(null, P.u4.NoActiveDeck)), this._deckSelectMode = new i.X(new P.VY(!1)), this.deckSizeLimit = 30, this.dataStore = {
+        let P = (() => {
+            class C {
+                constructor(s, b, w, B) {
+                    this.utils = s, this.gameApiService = b, this.authService = w, this.cardsService = B, this._userDecks = new i.X([]), this._starterDecks = new i.X([]), this._activeDeck = new i.X(null), this._activeDeckChange = new i.X(new k.ZW(null, k.u4.NoActiveDeck)), this._deckSelectMode = new i.X(new k.VY(!1)), this.deckSizeLimit = 30, this.dataStore = {
                         userDecks: [],
                         starterDecks: [],
                         activeDeck: null,
+                        activeDeckModified: !1,
                         selectMode: null
                     }
                 }
@@ -137,7 +134,8 @@
                 }
 
                 _emitActiveDeck(s) {
-                    this._activeDeckChange.next(s)
+                    const b = s.type;
+                    (b == k.u4.Add || b == k.u4.Remove) && (this.dataStore.activeDeckModified = !0), this._activeDeckChange.next(s)
                 }
 
                 loadUserDecks() {
@@ -145,60 +143,60 @@
                 }
 
                 fetchStarterDecks() {
-                    (0, y.aj)([this.loadStarterDecksApi(), this.cardsService.inventory$, this.cardsService.protoCards$]).pipe((0, p.h)(([s, C, w]) => Object.keys(C).length > 0 && w.size > 0), (0, g.q)(1), (0, r.b)(([s, C, w]) => (0, e.D)(s).pipe((0, t.U)(B => ({
+                    (0, y.aj)([this.loadStarterDecksApi(), this.cardsService.inventory$, this.cardsService.protoCards$]).pipe((0, p.h)(([s, b, w]) => Object.keys(b).length > 0 && w.size > 0), (0, g.q)(1), (0, r.b)(([s, b, w]) => (0, e.D)(s).pipe((0, t.U)(B => ({
                         deck: B,
                         protoCards: w,
-                        inventory: C
-                    })))), (0, t.U)(s => this.convertToDeckStarter(s.deck, s.inventory, s.protoCards)), (0, n.q)(), (0, v.b)(s => {
+                        inventory: b
+                    })))), (0, t.U)(s => this.convertToDeckStarter(s.deck, s.inventory, s.protoCards)), (0, n.q)(), (0, _.b)(s => {
                         this.dataStore.starterDecks = s, this._emitStarterDecks()
-                    }), (0, k.K)(s => (0, m.of)(s))).subscribe()
+                    }), (0, S.K)(s => (0, m.of)(s))).subscribe()
                 }
 
                 loadStarterDecksApi() {
-                    return this.gameApiService.get("/deck?caller=client").pipe((0, t.U)(s => s.filter(C => C.assets.length > 0)))
+                    return this.gameApiService.get("/deck?caller=client").pipe((0, t.U)(s => s.filter(b => b.assets.length > 0)))
                 }
 
                 fetchDecks() {
-                    (0, y.aj)([this.loadDecksApi(), this.cardsService.inventory$, this.cardsService.protoCards$]).pipe((0, p.h)(([s, C, w]) => Object.keys(C).length > 0 && w.size > 0), (0, g.q)(1), (0, r.b)(([s, C, w]) => (0, e.D)(s).pipe((0, t.U)(B => ({
+                    (0, y.aj)([this.loadDecksApi(), this.cardsService.inventory$, this.cardsService.protoCards$]).pipe((0, p.h)(([s, b, w]) => Object.keys(b).length > 0 && w.size > 0), (0, g.q)(1), (0, r.b)(([s, b, w]) => (0, e.D)(s).pipe((0, t.U)(B => ({
                         deck: B,
                         protoCards: w,
-                        inventory: C
-                    })))), (0, t.U)(s => this.convertToDeck(s.deck, s.inventory, s.protoCards)), (0, n.q)(), (0, v.b)(s => {
+                        inventory: b
+                    })))), (0, t.U)(s => this.convertToDeck(s.deck, s.inventory, s.protoCards)), (0, n.q)(), (0, _.b)(s => {
                         this.dataStore.userDecks = s, s.length && (this.dataStore.activeDeck = s[0], this.selectActiveDeck(this.dataStore.activeDeck)), this._emitDecks()
-                    }), (0, k.K)(s => (0, m.of)(s))).subscribe()
+                    }), (0, S.K)(s => (0, m.of)(s))).subscribe()
                 }
 
-                convertToDeck(s, C, w) {
+                convertToDeck(s, b, w) {
                     let B;
                     return B = "sealed_deck" === s.deck_type ? s.protos.map((ce, de) => ({
                         id: s.ids[de],
                         proto: ce,
                         quality: 5,
                         protoCard: w.get(ce)
-                    })) : this.utils.convertIdsToCards(s.ids, C, w), new P.$$(s.id, s.name, s.god, s.deck_type, B)
+                    })) : this.utils.convertIdsToCards(s.ids, b, w), new k.$$(s.id, s.name, s.god, s.deck_type, B)
                 }
 
-                convertToDeckStarter(s, C, w) {
-                    const B = this.utils.convertIdsToCards(s.assets, C, w),
-                        ee = new P.$$(s.id, s.name, s.god, "starter", B);
-                    return ee.locked = !0, ee
+                convertToDeckStarter(s, b, w) {
+                    const B = this.utils.convertIdsToCards(s.assets, b, w),
+                        q = new k.$$(s.id, s.name, s.god, "starter", B);
+                    return q.locked = !0, q
                 }
 
                 createDeck(s) {
-                    return this.createDeckApi(s).pipe((0, g.q)(1), (0, v.b)(C => {
-                        this.dataStore.userDecks.push(C), this._emitDecks(), this.selectActiveDeck(this.deepCopyDeck(C))
+                    return this.createDeckApi(s).pipe((0, g.q)(1), (0, _.b)(b => {
+                        this.dataStore.userDecks.push(b), this._emitDecks(), this.selectActiveDeck(this.deepCopyDeck(b))
                     }))
                 }
 
                 createDeckApi(s) {
-                    const C = {
+                    const b = {
                         id: s.id,
                         name: s.name,
                         god: s.god,
                         timestamp: (new Date).getTime(),
-                        ids: s.items.reduce((ee, ce) => ee.concat(ce.id), [])
+                        ids: s.items.reduce((q, ce) => q.concat(ce.id), [])
                     }, w = this.authService.getUserId(), B = this.authService.getGameSessionTicket();
-                    return this.gameApiService.post(`/account/${w}/deck?session=${B}`, C).pipe((0, t.U)(ee => (s.id = ee, this._emitDecks(), s)))
+                    return this.gameApiService.post(`/account/${w}/deck?session=${B}`, b).pipe((0, t.U)(q => (s.id = q, this._emitDecks(), s)))
                 }
 
                 buildSaveDeckApi() {
@@ -210,45 +208,48 @@
                         deck_type: this.dataStore.activeDeck.deck_type
                     };
                     return Object.assign(Object.assign({}, s), "sealed_deck" === this.dataStore.activeDeck.deck_type ? {
-                        ids: this.dataStore.activeDeck.items.reduce((C, w) => C.concat(w.id), []),
-                        protos: this.dataStore.activeDeck.items.reduce((C, w) => C.concat(w.proto), [])
-                    } : {ids: this.dataStore.activeDeck.items.reduce((C, w) => C.concat(w.id), [])})
+                        ids: this.dataStore.activeDeck.items.reduce((b, w) => b.concat(w.id), []),
+                        protos: this.dataStore.activeDeck.items.reduce((b, w) => b.concat(w.proto), [])
+                    } : {ids: this.dataStore.activeDeck.items.reduce((b, w) => b.concat(w.id), [])})
                 }
 
                 saveActiveDeck(s) {
-                    const C = this.buildSaveDeckApi(), w = this.authService.getUserId(),
+                    if (!this.dataStore.activeDeckModified) return (0, m.of)(this.dataStore.activeDeck.id);
+                    const b = this.buildSaveDeckApi(), w = this.authService.getUserId(),
                         B = this.authService.getGameSessionTicket();
-                    if ("starter" !== this.dataStore.activeDeck.deck_type) return this.gameApiService.put(`/account/${w}/deck/${this.dataStore.activeDeck.id}?session=${B}`, C).pipe((0, g.q)(1), (0, v.b)(() => {
-                        const ee = this.dataStore.userDecks.find(de => de.id === this.dataStore.activeDeck.id),
-                            ce = this.dataStore.userDecks.indexOf(ee);
+                    if ("starter" !== this.dataStore.activeDeck.deck_type) return this.gameApiService.put(`/account/${w}/deck/${this.dataStore.activeDeck.id}?session=${B}`, b).pipe((0, g.q)(1), (0, _.b)(() => {
+                        this.dataStore.activeDeckModified = !1;
+                        const q = this.dataStore.userDecks.find(de => de.id === this.dataStore.activeDeck.id),
+                            ce = this.dataStore.userDecks.indexOf(q);
                         this.dataStore.userDecks[ce] = this.deepCopyDeck(this.dataStore.activeDeck), this._emitDecks()
                     }));
                     if ("starter" === this.dataStore.activeDeck.deck_type) {
-                        const ee = this.dataStore.starterDecks.find(ce => ce.id === this.dataStore.activeDeck.id);
-                        return s && !this.decksChanged(ee, this.dataStore.activeDeck) ? (this.selectActiveDeck(ee), (0, m.of)(ee.id)) : (C.name = `${C.name} Copy`, this.gameApiService.post(`/account/${w}/deck?session=${B}`, C).pipe((0, g.q)(1), (0, v.b)(ce => {
-                            const de = new P.$$(ce, C.name, C.god, "common", [...this.dataStore.activeDeck.items]);
+                        const q = this.dataStore.starterDecks.find(ce => ce.id === this.dataStore.activeDeck.id);
+                        return s && !this.decksChanged(q, this.dataStore.activeDeck) ? (this.selectActiveDeck(q), (0, m.of)(q.id)) : (b.name = `${b.name} Copy`, this.gameApiService.post(`/account/${w}/deck?session=${B}`, b).pipe((0, g.q)(1), (0, _.b)(ce => {
+                            this.dataStore.activeDeckModified = !1;
+                            const de = new k.$$(ce, b.name, b.god, "common", [...this.dataStore.activeDeck.items]);
                             this.dataStore.userDecks.push(de), this._emitDecks(), this.selectActiveDeck(de)
                         })))
                     }
                 }
 
-                decksChanged(s, C) {
-                    if (s.items.length !== C.items.length) return !0;
+                decksChanged(s, b) {
+                    if (s.items.length !== b.items.length) return !0;
                     let w = !1;
-                    return s.items.forEach((B, ee) => {
-                        B.id !== C.items[ee].id && (w = !0)
+                    return s.items.forEach((B, q) => {
+                        B.id !== b.items[q].id && (w = !0)
                     }), !!w
                 }
 
                 deleteDeck(s) {
-                    this.deleteDeckApi(s).pipe((0, g.q)(1), (0, v.b)(C => {
+                    this.deleteDeckApi(s).pipe((0, g.q)(1), (0, _.b)(b => {
                         this.dataStore.userDecks = this.dataStore.userDecks.filter(w => w.id !== s), this._emitDecks(), this.selectActiveDeck(null)
-                    }), (0, k.K)(C => (0, m.of)(C))).subscribe()
+                    }), (0, S.K)(b => (0, m.of)(b))).subscribe()
                 }
 
                 deleteDeckApi(s) {
-                    const C = this.authService.getUserId(), w = this.authService.getGameSessionTicket();
-                    return this.gameApiService.delete(`/account/${C}/deck/${s}?session=${w}`)
+                    const b = this.authService.getUserId(), w = this.authService.getGameSessionTicket();
+                    return this.gameApiService.delete(`/account/${b}/deck/${s}?session=${w}`)
                 }
 
                 loadDecksApi() {
@@ -261,93 +262,92 @@
                 }
 
                 getDeckApi(s) {
-                    const C = this.authService.getUserId();
-                    return this.gameApiService.get(`/account/${C}/deck/${s}`)
+                    const b = this.authService.getUserId();
+                    return this.gameApiService.get(`/account/${b}/deck/${s}`)
                 }
 
                 isDeckComplete(s) {
-                    return s.global ? (0, m.of)(!0) : this.getDeckApi(s.id).pipe((0, t.U)(C => C && C.ids && C.ids.length === this.deckSizeLimit), (0, k.K)(C => (0, m.of)(!1)))
+                    return s.global ? (0, m.of)(!0) : this.getDeckApi(s.id).pipe((0, t.U)(b => b && b.ids && b.ids.length === this.deckSizeLimit), (0, S.K)(b => (0, m.of)(!1)))
                 }
 
-                updateDeckSelectMode(s, C, w) {
-                    this.dataStore.selectMode = new P.VY(s, C, w), this._deckSelectMode.next(Object.assign({}, this.dataStore).selectMode)
+                updateDeckSelectMode(s, b, w) {
+                    this.dataStore.selectMode = new k.VY(s, b, w), this._deckSelectMode.next(Object.assign({}, this.dataStore).selectMode)
                 }
 
                 selectActiveDeck(s) {
-                    this.dataStore.activeDeck = this.deepCopyDeck(s), this._emitActiveDeck(new P.ZW(Object.assign({}, this.dataStore).activeDeck, P.u4.Change))
+                    this.dataStore.activeDeck = this.deepCopyDeck(s), this._emitActiveDeck(new k.ZW(Object.assign({}, this.dataStore).activeDeck, k.u4.Change))
                 }
 
                 selectActiveDeckById(s) {
-                    const C = this.dataStore.userDecks.find(w => w.id === s);
-                    !C || (this.dataStore.activeDeck = this.deepCopyDeck(C), this._emitActiveDeck(new P.ZW(Object.assign({}, this.dataStore).activeDeck, P.u4.Change)))
+                    const b = this.dataStore.userDecks.find(w => w.id === s);
+                    !b || (this.dataStore.activeDeck = this.deepCopyDeck(b), this._emitActiveDeck(new k.ZW(Object.assign({}, this.dataStore).activeDeck, k.u4.Change)))
                 }
 
                 deepCopyDeck(s) {
-                    return new P.$$(s.id, s.name, s.god, s.deck_type, [...s.items])
+                    return new k.$$(s.id, s.name, s.god, s.deck_type, [...s.items])
                 }
 
                 removeDeck(s) {
-                    this.deleteDeck(s.id), s === this.dataStore.activeDeck && (this.dataStore.activeDeck = null, this._emitActiveDeck(new P.ZW(null, P.u4.NoActiveDeck))), this.dataStore.userDecks = this.dataStore.userDecks.filter(C => C !== s), this._emitDecks()
+                    this.deleteDeck(s.id), s === this.dataStore.activeDeck && (this.dataStore.activeDeck = null, this._emitActiveDeck(new k.ZW(null, k.u4.NoActiveDeck))), this.dataStore.userDecks = this.dataStore.userDecks.filter(b => b !== s), this._emitDecks()
                 }
 
-                selectDeck(s, C) {
+                selectDeck(s, b) {
                 }
 
                 updateActiveDeckName(s) {
-                    !this.dataStore.activeDeck || (this.dataStore.activeDeck.name = s, this.saveActiveDeck().pipe((0, g.q)(1)).subscribe())
+                    !this.dataStore.activeDeck || (this.dataStore.activeDeck.name = s, this.dataStore.activeDeckModified = !0, this.saveActiveDeck().pipe((0, g.q)(1)).subscribe())
                 }
 
                 getDeck(s) {
-                    return this.userDecks$.pipe((0, t.U)(C => C.find(w => w.id === s)))
+                    return this.userDecks$.pipe((0, t.U)(b => b.find(w => w.id === s)))
                 }
 
                 pushToActiveDeck(s) {
-                    this.dataStore.activeDeck.items.length >= this.deckSizeLimit ? this._emitActiveDeck(new P.ZW(Object.assign({}, this.dataStore).activeDeck, P.u4.DeckLimit)) : this.canAddCardToDeck(this.dataStore.activeDeck, s).pipe((0, v.b)(C => {
-                        C ? (this.dataStore.activeDeck.items = this.dataStore.activeDeck.items.concat([s]), this._emitActiveDeck(new P.ZW(Object.assign({}, this.dataStore).activeDeck, P.u4.Add, [s]))) : this._activeDeckChange.next(new P.ZW(Object.assign({}, this.dataStore).activeDeck, P.u4.CardLimit, [s]))
+                    this.dataStore.activeDeck.items.length >= this.deckSizeLimit ? this._emitActiveDeck(new k.ZW(Object.assign({}, this.dataStore).activeDeck, k.u4.DeckLimit)) : this.canAddCardToDeck(this.dataStore.activeDeck, s).pipe((0, _.b)(b => {
+                        b ? (this.dataStore.activeDeck.items = this.dataStore.activeDeck.items.concat([s]), this._emitActiveDeck(new k.ZW(Object.assign({}, this.dataStore).activeDeck, k.u4.Add, [s]))) : this._activeDeckChange.next(new k.ZW(Object.assign({}, this.dataStore).activeDeck, k.u4.CardLimit, [s]))
                     })).subscribe()
                 }
 
                 removeCardFromActiveDeck(s) {
-                    this.dataStore.activeDeck.items = this.dataStore.activeDeck.items.filter(C => C !== s), this._emitActiveDeck(new P.ZW(Object.assign({}, this.dataStore).activeDeck, P.u4.Remove, [s]))
+                    this.dataStore.activeDeck.items = this.dataStore.activeDeck.items.filter(b => b !== s), this._emitActiveDeck(new k.ZW(Object.assign({}, this.dataStore).activeDeck, k.u4.Remove, [s]))
                 }
 
                 removeCardsFromActiveDeck(s) {
-                    this.dataStore.activeDeck.items = this.dataStore.activeDeck.items.filter(C => !s.includes(C)), this._emitActiveDeck(new P.ZW(Object.assign({}, this.dataStore).activeDeck, P.u4.Remove, [...s]))
+                    this.dataStore.activeDeck.items = this.dataStore.activeDeck.items.filter(b => !s.includes(b)), this._emitActiveDeck(new k.ZW(Object.assign({}, this.dataStore).activeDeck, k.u4.Remove, [...s]))
                 }
 
-                canAddCardToDeck(s, C) {
-                    return "sealed_deck" === s.deck_type ? (0, m.of)(!0) : this.cardsService.getProtoCard(C.proto).pipe((0, t.U)(w => (w.god === s.god || "neutral" === w.god) && ("legendary" === w.rarity ? s.items.filter(B => B.proto === C.proto).length < 1 : s.items.filter(B => B.proto === C.proto).length < 2)))
+                canAddCardToDeck(s, b) {
+                    return "sealed_deck" === s.deck_type ? (0, m.of)(!0) : this.cardsService.getProtoCard(b.proto).pipe((0, t.U)(w => (w.god === s.god || "neutral" === w.god) && ("legendary" === w.rarity ? s.items.filter(B => B.proto === b.proto).length < 1 : s.items.filter(B => B.proto === b.proto).length < 2)))
                 }
 
-                forgeUpdate(s, C, w) {
-                    this.forgeRemoveIds(s, C), this._emitDecks()
+                forgeUpdate(s, b, w) {
+                    this.forgeRemoveIds(s, b), this._emitDecks()
                 }
 
-                forgeRemoveIds(s, C) {
+                forgeRemoveIds(s, b) {
                     this.dataStore.userDecks.forEach(w => {
                         w.items = w.items.filter(B => -1 === s.indexOf(B.id))
                     })
                 }
 
-                generateUniqueCardId(s, C, w) {
-                    return -Number(`${s}${C}${w}`)
+                generateUniqueCardId(s, b, w) {
+                    return -Number(`${s}${b}${w}`)
                 }
             }
 
-            return b.\u0275fac = function (s) {
-                return new (s || b)(I.LFG(A.F), I.LFG(f.Ft), I.LFG(c.mI), I.LFG(f.dK))
-            }, b.\u0275prov = I.Yz7({token: b, factory: b.\u0275fac}), b
+            return C.\u0275fac = function (s) {
+                return new (s || C)(L.LFG(D.F), L.LFG(v.Ft), L.LFG(d.mI), L.LFG(v.dK))
+            }, C.\u0275prov = L.Yz7({token: C, factory: C.\u0275fac}), C
         })()
-    },
-    23569: (se, R, o) => {
+    }, 23569: (se, U, o) => {
         "use strict";
-        o.d(R, {d: () => r});
-        var c = o(8929), i = o(591), y = o(92198), e = o(24850), m = o(73307), p = o(5e3);
+        o.d(U, {d: () => r});
+        var d = o(8929), i = o(591), y = o(92198), e = o(24850), m = o(73307), p = o(5e3);
         o(63411);
         let r = (() => {
             class t {
-                constructor(v, k) {
-                    this.storage = v, this.authService = k, this.unsubscribe = new c.xQ, this.dataStore = {selectedWallet: null}, this._selectedWallet$ = new i.X(null)
+                constructor(_, S) {
+                    this.storage = _, this.authService = S, this.unsubscribe = new d.xQ, this.dataStore = {selectedWallet: null}, this._selectedWallet$ = new i.X(null)
                 }
 
                 ngOnDestroy() {
@@ -359,7 +359,7 @@
                 }
 
                 get playerWallets$() {
-                    return this.authService.account$.pipe((0, y.h)(v => !!v), (0, e.U)(v => v.addresses.map(k => k.address)))
+                    return this.authService.account$.pipe((0, y.h)(_ => !!_), (0, e.U)(_ => _.addresses.map(S => S.address)))
                 }
 
                 get storageKey() {
@@ -370,44 +370,43 @@
                     this.authService.fetchAccount()
                 }
 
-                obfuscateAddresses(v) {
-                    if (v && 0 !== v.length) return v.map(k => `${k && k.slice(0, 6)}...`)
+                obfuscateAddresses(_) {
+                    if (_ && 0 !== _.length) return _.map(S => `${S && S.slice(0, 6)}...`)
                 }
 
-                saveSelectedWallet(v) {
-                    this.storage.set([this.storageKey], v), this.dataStore.selectedWallet = v, this._selectedWallet$.next(Object.assign({}, this.dataStore).selectedWallet)
+                saveSelectedWallet(_) {
+                    this.storage.set([this.storageKey], _), this.dataStore.selectedWallet = _, this._selectedWallet$.next(Object.assign({}, this.dataStore).selectedWallet)
                 }
 
                 loadSelectedWallet() {
-                    const v = this.storage.get([this.storageKey]);
-                    this.dataStore.selectedWallet = v, this._selectedWallet$.next(Object.assign({}, this.dataStore).selectedWallet)
+                    const _ = this.storage.get([this.storageKey]);
+                    this.dataStore.selectedWallet = _, this._selectedWallet$.next(Object.assign({}, this.dataStore).selectedWallet)
                 }
             }
 
-            return t.\u0275fac = function (v) {
-                return new (v || t)(p.LFG(m.qy), p.LFG(m.mI))
+            return t.\u0275fac = function (_) {
+                return new (_ || t)(p.LFG(m.qy), p.LFG(m.mI))
             }, t.\u0275prov = p.Yz7({token: t, factory: t.\u0275fac, providedIn: "root"}), t
         })()
-    },
-    11130: (se, R, o) => {
+    }, 11130: (se, U, o) => {
         "use strict";
-        o.d(R, {xV: () => ae});
-        var c = o(8929), i = o(591), y = o(21086), e = o(36053), m = o(98723), p = o(41746), g = o(72986), r = o(92198),
-            t = o(2994), n = o(24850), v = o(7625), k = o(61709), P = o(87545), I = o(75778), A = o(40537),
-            f = o(73307), O = o(33403), S = o(14618), b = o(69931), T = o(72224), s = o(5e3), C = o(79763),
-            w = o(69340), B = o(55778), ee = o(51395), ce = o(64523), de = o(96727);
+        o.d(U, {xV: () => ae});
+        var d = o(8929), i = o(591), y = o(21086), e = o(36053), m = o(98723), p = o(41746), g = o(72986), r = o(92198),
+            t = o(2994), n = o(24850), _ = o(7625), S = o(61709), k = o(87545), L = o(75778), D = o(40537),
+            v = o(73307), O = o(33403), P = o(14618), C = o(69931), $ = o(72224), s = o(5e3), b = o(79763),
+            w = o(69340), B = o(55778), q = o(51395), ce = o(64523), de = o(96727);
         o(63411);
 
-        class X {
-            constructor(ye, V, le) {
-                this.name = ye, this.value = V, this.image = le
+        class J {
+            constructor(xe, V, le) {
+                this.name = xe, this.value = V, this.image = le
             }
         }
 
         let ae = (() => {
             class Y {
-                constructor(V, le, Ce, Te, Be, H, he, Q) {
-                    this.gameService = V, this.gameDownloadService = le, this.storage = Ce, this.gameApi = Te, this.authService = Be, this.packService = H, this.sealedService = he, this.ngrxStore = Q, this.BUFFER_TIME = 5e3, this.unsubscribe = new c.xQ, this.dataStore = {gameModes: []}, this._gameModes$ = new i.X({
+                constructor(V, le, ye, Ae, Be, W, he, Q) {
+                    this.gameService = V, this.gameDownloadService = le, this.storage = ye, this.gameApi = Ae, this.authService = Be, this.packService = W, this.sealedService = he, this.ngrxStore = Q, this.BUFFER_TIME = 5e3, this.unsubscribe = new d.xQ, this.dataStore = {gameModes: []}, this._gameModes$ = new i.X({
                         gameModes: [],
                         refresh: !1
                     }), this.watchForUpdate(), this.watchForAssetUpdate(), this.watchForPacks()
@@ -421,15 +420,15 @@
                     return this._gameModes$.asObservable()
                 }
 
-                updateGameModeDeck(V, le, Ce = !1) {
-                    this.getGameMode$(V).pipe((0, g.q)(1), (0, r.h)(Te => void 0 !== Te), (0, t.b)(Te => {
-                        this.saveGameModeDeck(Te.id, Ce, le), Ce ? Te.aiSelectedDeckId = le : Te.lastSelectedDeckId = le, this._emitGameModes()
+                updateGameModeDeck(V, le, ye = !1) {
+                    this.getGameMode$(V).pipe((0, g.q)(1), (0, r.h)(Ae => void 0 !== Ae), (0, t.b)(Ae => {
+                        this.saveGameModeDeck(Ae.id, ye, le), ye ? Ae.aiSelectedDeckId = le : Ae.lastSelectedDeckId = le, this._emitGameModes()
                     })).subscribe()
                 }
 
                 updateGameModeLoadout(V, le) {
-                    this.getGameMode$(V).pipe((0, g.q)(1), (0, r.h)(Ce => void 0 !== Ce), (0, t.b)(Ce => {
-                        this.saveGameModeLoadout(Ce.id, le), Ce.selectedLoadoutId = le, this._emitGameModes()
+                    this.getGameMode$(V).pipe((0, g.q)(1), (0, r.h)(ye => void 0 !== ye), (0, t.b)(ye => {
+                        this.saveGameModeLoadout(ye.id, le), ye.selectedLoadoutId = le, this._emitGameModes()
                     })).subscribe()
                 }
 
@@ -439,24 +438,24 @@
                         p1_id: 49,
                         p2_id: 2,
                         did_win: !0,
-                        p1_stats: [new X("Wins", 103, "https://images.godsunchained.com/art/250/88.png"), new X("Losses", 8, "https://images.godsunchained.com/art/250/89.png"), new X("Damage Dealt", 7300, "https://images.godsunchained.com/art/250/90.png"), new X("Damage Taken", 1600, "https://images.godsunchained.com/art/250/91.png")],
-                        p2_stats: [new X("Wins", 9001, "https://images.godsunchained.com/art/250/88.png"), new X("Losses", 0, "https://images.godsunchained.com/art/250/89.png"), new X("Damage Dealt", 999999, "https://images.godsunchained.com/art/250/90.png"), new X("Damage Taken", 0, "https://images.godsunchained.com/art/250/91.png")]
+                        p1_stats: [new J("Wins", 103, "https://images.godsunchained.com/art/250/88.png"), new J("Losses", 8, "https://images.godsunchained.com/art/250/89.png"), new J("Damage Dealt", 7300, "https://images.godsunchained.com/art/250/90.png"), new J("Damage Taken", 1600, "https://images.godsunchained.com/art/250/91.png")],
+                        p2_stats: [new J("Wins", 9001, "https://images.godsunchained.com/art/250/88.png"), new J("Losses", 0, "https://images.godsunchained.com/art/250/89.png"), new J("Damage Dealt", 999999, "https://images.godsunchained.com/art/250/90.png"), new J("Damage Taken", 0, "https://images.godsunchained.com/art/250/91.png")]
                     })
                 }
 
                 getGameModeDeck(V, le) {
-                    const Ce = this.getGameModeDeckKey(V, le);
-                    return this.storage.get([Ce]) || null
+                    const ye = this.getGameModeDeckKey(V, le);
+                    return this.storage.get([ye]) || null
                 }
 
                 clearGameModeDeck(V, le) {
-                    const Ce = this.getGameModeDeckKey(V, le);
-                    this.storage.delete([Ce])
+                    const ye = this.getGameModeDeckKey(V, le);
+                    this.storage.delete([ye])
                 }
 
-                saveGameModeDeck(V, le, Ce) {
-                    const Te = this.getGameModeDeckKey(V, le);
-                    this.storage.set([Te], Ce)
+                saveGameModeDeck(V, le, ye) {
+                    const Ae = this.getGameModeDeckKey(V, le);
+                    this.storage.set([Ae], ye)
                 }
 
                 getGameModeDeckKey(V, le) {
@@ -469,8 +468,8 @@
                 }
 
                 saveGameModeLoadout(V, le) {
-                    const Ce = this.getGameModeLoadoutKey(V);
-                    this.storage.set([Ce], le)
+                    const ye = this.getGameModeLoadoutKey(V);
+                    this.storage.set([ye], le)
                 }
 
                 getGameModeLoadoutKey(V) {
@@ -482,11 +481,11 @@
                 }
 
                 getGameMode$(V) {
-                    return this.gameModes$.pipe((0, n.U)(({gameModes: le}) => le.find(Ce => Ce.id === V)))
+                    return this.gameModes$.pipe((0, n.U)(({gameModes: le}) => le.find(ye => ye.id === V)))
                 }
 
                 fetchGameModes(V = !1) {
-                    (0, e.aj)([this.fetchPlayerGameModes$(), this.getLock$(), this.fetchPlayerRanks$()]).pipe((0, g.q)(1), (0, n.U)(([le, Ce, Te]) => le.map(Be => this.transformGameModes(Be, Ce, Te))), (0, t.b)(le => {
+                    (0, e.aj)([this.fetchPlayerGameModes$(), this.getLock$(), this.fetchPlayerRanks$()]).pipe((0, g.q)(1), (0, n.U)(([le, ye, Ae]) => le.map(Be => this.transformGameModes(Be, ye, Ae))), (0, t.b)(le => {
                         for (const gm of le) {
                             if (gm.id === 0) { // Solo
                                 gm.image_url = 'https://images.godsunchained.com/art2/1024/1492.jpg';
@@ -506,13 +505,13 @@
                 }
 
                 handleSealedMode(V) {
-                    let le = V.find(Ce => Ce.id === O.B_.SEALED_DECK);
+                    let le = V.find(ye => ye.id === O.B_.SEALED_DECK);
                     !le || this.scheduleSealedModeRefresh(le)
                 }
 
                 scheduleSealedModeRefresh(V) {
-                    const le = Date.now(), Ce = new Date(V.end_time_server).getTime(), Be = Ce + 36e5 - le, H = Ce - le;
-                    H > 0 && H < T.v && (0, m.H)(H).pipe((0, v.R)(this.unsubscribe), (0, g.q)(1)).subscribe(he => this.sealedService.fetchSealed()), Be > 0 && Be < T.v && (0, m.H)(Be).pipe((0, v.R)(this.unsubscribe), (0, g.q)(1)).subscribe(he => this.sealedService.fetchSealed())
+                    const le = Date.now(), ye = new Date(V.end_time_server).getTime(), Be = ye + 36e5 - le, W = ye - le;
+                    W > 0 && W < $.v && (0, m.H)(W).pipe((0, _.R)(this.unsubscribe), (0, g.q)(1)).subscribe(he => this.sealedService.fetchSealed()), Be > 0 && Be < $.v && (0, m.H)(Be).pipe((0, _.R)(this.unsubscribe), (0, g.q)(1)).subscribe(he => this.sealedService.fetchSealed())
                 }
 
                 mockSealedMode() {
@@ -557,47 +556,47 @@
 
                 getLock$() {
                     let V = null;
-                    return (0, e.aj)([this.gameService.currentGameContext$, this.packService.unopenedPacks$, (0, m.H)(0, 6e5)]).pipe((0, r.h)(([le, Ce]) => null != le), (0, k.VS)(([le, Ce]) => {
-                        if (V = null, Ce) {
-                            const Te = Ce.filter(Be => "starter" === Be.pack_source);
-                            Te && Te.length > 0 && (V = {type: O.Gn.CARDS})
+                    return (0, e.aj)([this.gameService.currentGameContext$, this.packService.unopenedPacks$, (0, m.H)(0, 6e5)]).pipe((0, r.h)(([le, ye]) => null != le), (0, S.VS)(([le, ye]) => {
+                        if (V = null, ye) {
+                            const Ae = ye.filter(Be => "starter" === Be.pack_source);
+                            Ae && Ae.length > 0 && (V = {type: O.Gn.CARDS})
                         }
                         return (0, y.of)(le)
-                    }), (0, k.VS)(le => (0, p.$R)((0, y.of)(le), this.gameService.getBranch$(le.id))), (0, k.VS)(([le, Ce]) => "" === Ce.name ? (V = {type: O.Gn.LOCKED}, (0, y.of)([!1, !1])) : (0, p.$R)(this.gameDownloadService.requiresUpdate(le, Ce.name), this.gameDownloadService.requiresAssetsUpdate(le, Ce.name))), (0, k.VS)(([le, Ce]) => (le ? V = {type: O.Gn.UPDATE} : Ce.length > 0 && (V = {type: O.Gn.ASSETS_UPDATE}), (0, y.of)(V))))
+                    }), (0, S.VS)(le => (0, p.$R)((0, y.of)(le), this.gameService.getBranch$(le.id))), (0, S.VS)(([le, ye]) => "" === ye.name ? (V = {type: O.Gn.LOCKED}, (0, y.of)([!1, !1])) : (0, p.$R)(this.gameDownloadService.requiresUpdate(le, ye.name), this.gameDownloadService.requiresAssetsUpdate(le, ye.name))), (0, S.VS)(([le, ye]) => (le ? V = {type: O.Gn.UPDATE} : ye.length > 0 && (V = {type: O.Gn.ASSETS_UPDATE}), (0, y.of)(V))))
                 }
 
                 checkIfRequiresUpdate() {
-                    return this.gameService.currentGameContext$.pipe((0, P.w)(V => (0, p.$R)((0, y.of)(V), this.gameService.getBranch(V.id))), (0, P.w)(([V, le]) => this.gameDownloadService.requiresUpdate(V, le)))
+                    return this.gameService.currentGameContext$.pipe((0, k.w)(V => (0, p.$R)((0, y.of)(V), this.gameService.getBranch(V.id))), (0, k.w)(([V, le]) => this.gameDownloadService.requiresUpdate(V, le)))
                 }
 
                 watchForUpdate() {
-                    this.ngrxStore.select((0, b.DM)()).pipe((0, v.R)(this.unsubscribe), (0, r.h)(V => !!V), (0, r.h)(V => "completed" === V.status), (0, I.x)(), (0, t.b)(V => {
-                        this.updateLocks(!0), this.ngrxStore.dispatch(new S.Tg({status: "idle", percentage: 0}))
+                    this.ngrxStore.select((0, C.DM)()).pipe((0, _.R)(this.unsubscribe), (0, r.h)(V => !!V), (0, r.h)(V => "completed" === V.status), (0, L.x)(), (0, t.b)(V => {
+                        this.updateLocks(!0), this.ngrxStore.dispatch(new P.Tg({status: "idle", percentage: 0}))
                     })).subscribe()
                 }
 
                 watchForAssetUpdate() {
-                    this.ngrxStore.select((0, b.gP)()).pipe((0, v.R)(this.unsubscribe), (0, r.h)(V => !!V), (0, r.h)(V => "completed" === V.status), (0, I.x)(), (0, t.b)(V => {
+                    this.ngrxStore.select((0, C.gP)()).pipe((0, _.R)(this.unsubscribe), (0, r.h)(V => !!V), (0, r.h)(V => "completed" === V.status), (0, L.x)(), (0, t.b)(V => {
                         this.updateLocks(!0)
                     })).subscribe()
                 }
 
                 watchForPacks() {
-                    this.packService.unopenedPacks$.pipe((0, v.R)(this.unsubscribe), (0, I.x)(), (0, t.b)(V => this.updateLocks())).subscribe()
+                    this.packService.unopenedPacks$.pipe((0, _.R)(this.unsubscribe), (0, L.x)(), (0, t.b)(V => this.updateLocks())).subscribe()
                 }
 
                 updateLocks(V = !1) {
                     this.getLock$().pipe((0, g.q)(1), (0, t.b)(le => {
-                        this.dataStore.gameModes.forEach(Ce => {
-                            Ce.lock = le
+                        this.dataStore.gameModes.forEach(ye => {
+                            ye.lock = le
                         })
-                    }), (0, A.x)(() => this._emitGameModes(V))).subscribe()
+                    }), (0, D.x)(() => this._emitGameModes(V))).subscribe()
                 }
 
-                transformGameModes(V, le, Ce) {
-                    const Te = Ce.find(H => H.game_mode === V.id) || null;
+                transformGameModes(V, le, ye) {
+                    const Ae = ye.find(W => W.game_mode === V.id) || null;
                     let Be = Object.assign(Object.assign({}, V), {
-                        rank: Te,
+                        rank: Ae,
                         lock: le,
                         type: V.properties.type,
                         lastSelectedDeckId: this.getGameModeDeck(V.id, !1),
@@ -609,10 +608,10 @@
                 }
 
                 scheduleRefresh(V = []) {
-                    const le = Date.now(), Ce = V.filter(H => 1 === H.rotation && H.end_timestamp > le);
-                    if (0 === Ce.length) return;
-                    const Be = Ce.reduce((H, he) => H.end_timestamp < he.end_timestamp ? H : he).end_timestamp - le;
-                    Be > 0 && Be < T.v && (0, m.H)(Be).pipe((0, v.R)(this.unsubscribe), (0, g.q)(1), (0, t.b)(H => this.fetchGameModes(!0))).subscribe()
+                    const le = Date.now(), ye = V.filter(W => 1 === W.rotation && W.end_timestamp > le);
+                    if (0 === ye.length) return;
+                    const Be = ye.reduce((W, he) => W.end_timestamp < he.end_timestamp ? W : he).end_timestamp - le;
+                    Be > 0 && Be < $.v && (0, m.H)(Be).pipe((0, _.R)(this.unsubscribe), (0, g.q)(1), (0, t.b)(W => this.fetchGameModes(!0))).subscribe()
                 }
 
                 storeUserGameModeOrderMap(V) {
@@ -626,46 +625,45 @@
                 }
 
                 incrementGameModeCount(V, le = 1) {
-                    const Ce = this.authService.getUserId(), Te = this.authService.getGameSessionTicket();
-                    return this.gameApi.post(`/user/${Ce}/mode?session=${Te}`, {game_mode: V, add: le})
+                    const ye = this.authService.getUserId(), Ae = this.authService.getGameSessionTicket();
+                    return this.gameApi.post(`/user/${ye}/mode?session=${Ae}`, {game_mode: V, add: le})
                 }
             }
 
             return Y.\u0275fac = function (V) {
-                return new (V || Y)(s.LFG(C.hM), s.LFG(w.b5), s.LFG(f.qy), s.LFG(B.Ft), s.LFG(f.mI), s.LFG(ee.F), s.LFG(ce.H), s.LFG(de.yh))
+                return new (V || Y)(s.LFG(b.hM), s.LFG(w.b5), s.LFG(v.qy), s.LFG(B.Ft), s.LFG(v.mI), s.LFG(q.F), s.LFG(ce.H), s.LFG(de.yh))
             }, Y.\u0275prov = s.Yz7({token: Y, factory: Y.\u0275fac, providedIn: "root"}), Y
         })()
-    },
-    88632: (se, R, o) => {
+    }, 88632: (se, U, o) => {
         "use strict";
-        o.d(R, {MZ: () => n});
-        var c = o(591), i = o(2994), y = o(73307), e = o(5e3), m = o(55778), p = o(79763);
+        o.d(U, {MZ: () => n});
+        var d = o(591), i = o(2994), y = o(73307), e = o(5e3), m = o(55778), p = o(79763);
         o(63411);
         let n = (() => {
-            class v {
-                constructor(P, I, A) {
-                    this.gameApi = P, this.authService = I, this.gameService = A, this.dataStore = {extendedAccountProperties: null}, this._extendedAccountProperties$ = new c.X(null)
+            class _ {
+                constructor(k, L, D) {
+                    this.gameApi = k, this.authService = L, this.gameService = D, this.dataStore = {extendedAccountProperties: null}, this._extendedAccountProperties$ = new d.X(null)
                 }
 
                 get extendedAccountProperties$() {
                     return this._extendedAccountProperties$.asObservable()
                 }
 
-                getAccountProperties(P, I) {
-                    return (!P || !I) && (P = this.authService.getUserId(), I = this.authService.getGameSessionTicket()), this.gameApi.get(`/account/${P}/properties?session=${I}`)
+                getAccountProperties(k, L) {
+                    return (!k || !L) && (k = this.authService.getUserId(), L = this.authService.getGameSessionTicket()), this.gameApi.get(`/account/${k}/properties?session=${L}`)
                 }
 
-                _emit(P) {
-                    this.dataStore.extendedAccountProperties = P, this._extendedAccountProperties$.next(Object.assign({}, this.dataStore).extendedAccountProperties)
+                _emit(k) {
+                    this.dataStore.extendedAccountProperties = k, this._extendedAccountProperties$.next(Object.assign({}, this.dataStore).extendedAccountProperties)
                 }
 
-                getExtendedAccountPropertiesById(P, I) {
-                    return this.gameApi.get(`/account/${P}/properties?format=extended&session=${I}`).pipe((0, i.b)(A => this._emit(A)))
+                getExtendedAccountPropertiesById(k, L) {
+                    return this.gameApi.get(`/account/${k}/properties?format=extended&session=${L}`).pipe((0, i.b)(D => this._emit(D)))
                 }
 
                 getExtendedAccountProperties() {
-                    const P = this.authService.getUserId(), I = this.authService.getGameSessionTicket();
-                    return this.getExtendedAccountPropertiesById(P, I)
+                    const k = this.authService.getUserId(), L = this.authService.getGameSessionTicket();
+                    return this.getExtendedAccountPropertiesById(k, L)
                 }
 
                 fetchExtendedAccount() {
@@ -673,34 +671,33 @@
                 }
             }
 
-            return v.\u0275fac = function (P) {
-                return new (P || v)(e.LFG(m.Ft), e.LFG(y.mI), e.LFG(p.hM))
-            }, v.\u0275prov = e.Yz7({token: v, factory: v.\u0275fac, providedIn: "root"}), v
+            return _.\u0275fac = function (k) {
+                return new (k || _)(e.LFG(m.Ft), e.LFG(y.mI), e.LFG(p.hM))
+            }, _.\u0275prov = e.Yz7({token: _, factory: _.\u0275fac, providedIn: "root"}), _
         })()
-    },
-    8561: (se, R, o) => {
+    }, 8561: (se, U, o) => {
         "use strict";
-        o.d(R, {GT: () => Rt, OC: () => He, Qc: () => we});
-        var c = o(59633), i = o(8929), y = o(591), e = o(21086), m = o(61737), p = o(98723), g = o(67876), r = o(7625),
-            t = o(24850), n = o(87224), v = o(92198), k = o(87168), P = o(27221), I = o(2994), A = o(72986),
-            f = o(61709), O = o(87545), S = o(77604), b = o(44290), T = o(40537), s = o(73307), C = o(63764),
-            w = o(52492), B = o(33403), ee = o(5231), ce = o(80537), de = o(8611), fe = o(5e3), N = o(40520);
+        o.d(U, {GT: () => Rt, OC: () => ke, Qc: () => we});
+        var d = o(59633), i = o(8929), y = o(591), e = o(21086), m = o(61737), p = o(98723), g = o(67876), r = o(7625),
+            t = o(24850), n = o(87224), _ = o(92198), S = o(87168), k = o(27221), L = o(2994), D = o(72986),
+            v = o(61709), O = o(87545), P = o(77604), C = o(44290), $ = o(40537), s = o(73307), b = o(63764),
+            w = o(52492), B = o(33403), q = o(5231), ce = o(80537), de = o(8611), Ce = o(5e3), z = o(40520);
         o(63411);
         let ae = (() => {
             class Ee {
-                constructor(q) {
-                    this.auth = q, this.createServer()
+                constructor(ee) {
+                    this.auth = ee, this.createServer()
                 }
 
-                respond(q, re) {
-                    return -1 !== q.url.indexOf("config") ? this.getConfig(q, re) : q.url.startsWith("/session") ? this.auth.getGameSessionTicket() : null
+                respond(ee, re) {
+                    return -1 !== ee.url.indexOf("config") ? this.getConfig(ee, re) : ee.url.startsWith("/session") ? this.auth.getGameSessionTicket() : null
                 }
 
-                setConfig(q) {
-                    this.config = q
+                setConfig(ee) {
+                    this.config = ee
                 }
 
-                getConfig(q, re) {
+                getConfig(ee, re) {
                     return this.config
                 }
 
@@ -717,21 +714,21 @@
                 }
             }
 
-            return Ee.\u0275fac = function (q) {
-                return new (q || Ee)(fe.LFG(s.mI))
-            }, Ee.\u0275prov = fe.Yz7({token: Ee, factory: Ee.\u0275fac, providedIn: "root"}), Ee
+            return Ee.\u0275fac = function (ee) {
+                return new (ee || Ee)(Ce.LFG(s.mI))
+            }, Ee.\u0275prov = Ce.Yz7({token: Ee, factory: Ee.\u0275fac, providedIn: "root"}), Ee
         })();
-        var Y = o(79763), ye = o(83035), V = o(88632), le = o(66088), Ce = o(47313), Te = o(11130), Be = o(55778),
-            H = o(98009);
+        var Y = o(79763), xe = o(83035), V = o(88632), le = o(66088), ye = o(47313), Ae = o(11130), Be = o(55778),
+            W = o(98009);
 
         class we {
-            constructor(It, q, re, xe) {
-                this.player = {id: It, deck: q, collection: {id: re}}, this.opponent = xe ? {deck: xe} : void 0
+            constructor(It, ee, re, Se) {
+                this.player = {id: It, deck: ee, collection: {id: re}}, this.opponent = Se ? {deck: Se} : void 0
             }
         }
 
-        var He = (() => {
-            return (Ee = He || (He = {}))[Ee.OUT = 0] = "OUT", Ee[Ee.IN = 1] = "IN", Ee[Ee.PROGRESSION_GAME_MODE = 2] = "PROGRESSION_GAME_MODE", Ee[Ee.PROGRESSION_ACCOUNT = 3] = "PROGRESSION_ACCOUNT", He;
+        var ke = (() => {
+            return (Ee = ke || (ke = {}))[Ee.OUT = 0] = "OUT", Ee[Ee.IN = 1] = "IN", Ee[Ee.PROGRESSION_GAME_MODE = 2] = "PROGRESSION_GAME_MODE", Ee[Ee.PROGRESSION_ACCOUNT = 3] = "PROGRESSION_ACCOUNT", ke;
             var Ee
         })(), Ie = (() => {
             return (Ee = Ie || (Ie = {})).DECK = "deck", Ee.DECK_GLOBAL = "deck_global", Ee.COLLECTION = "collection", Ie;
@@ -739,8 +736,8 @@
         })();
         let Rt = (() => {
             class Ee {
-                constructor(q, re, xe, Ge, W, z, d, _, U, ie, ke, Ve, ct) {
-                    this.http = q, this.server = re, this.gameService = xe, this.queueService = Ge, this.authService = W, this.guUserService = z, this.modalService = d, this.progressionService = _, this.guGameService = U, this.configService = ie, this.audioService = ke, this.analyticsService = Ve, this.deckService = ct, this.numActiveQueues = 0, this.unsubscribe = new i.xQ, this.dataStore = {currentMatchId: null}, this._currentMatchId$ = new y.X(null), this.queueAcknowledge$ = new i.xQ, this.clientServerPongReceived$ = new i.xQ, this._playing$ = new y.X({status: He.OUT}), this.watchQueues(), window.bridge.onQuit(() => {
+                constructor(ee, re, Se, N, H, l, f, R, ie, Oe, Ze, ct, gt) {
+                    this.http = ee, this.server = re, this.gameService = Se, this.queueService = N, this.authService = H, this.guUserService = l, this.modalService = f, this.progressionService = R, this.guGameService = ie, this.configService = Oe, this.audioService = Ze, this.analyticsService = ct, this.deckService = gt, this.numActiveQueues = 0, this.unsubscribe = new i.xQ, this.dataStore = {currentMatchId: null}, this._currentMatchId$ = new y.X(null), this.queueAcknowledge$ = new i.xQ, this.clientServerPongReceived$ = new i.xQ, this._playing$ = new y.X({status: ke.OUT}), this.watchQueues(), window.bridge.onQuit(() => {
                         this.queueService.getGameQueues(1).subscribe(it => {
                             this.trySendingCancelReq(it.mode.id, it.params.player.id)
                         })
@@ -772,32 +769,32 @@
                 }
 
                 watchQueues() {
-                    this.queueService.activeQueues$.pipe((0, r.R)(this.unsubscribe), (0, t.U)(q => q ? q.length : 0)).subscribe(q => this.numActiveQueues = q)
+                    this.queueService.activeQueues$.pipe((0, r.R)(this.unsubscribe), (0, t.U)(ee => ee ? ee.length : 0)).subscribe(ee => this.numActiveQueues = ee)
                 }
 
-                buildOpponent(q) {
+                buildOpponent(ee) {
                     let re = {};
-                    const xe = q.opponent_attributes.find(z => z.type === Ie.COLLECTION),
-                        Ge = q.opponent_attributes.find(z => z.type === Ie.DECK),
-                        W = q.opponent_attributes.find(z => z.type === Ie.DECK_GLOBAL);
-                    return xe && (re = Object.assign(Object.assign({}, re), {collection: {id: xe.value}})), Ge && (re = Object.assign(Object.assign({}, re), {
+                    const Se = ee.opponent_attributes.find(l => l.type === Ie.COLLECTION),
+                        N = ee.opponent_attributes.find(l => l.type === Ie.DECK),
+                        H = ee.opponent_attributes.find(l => l.type === Ie.DECK_GLOBAL);
+                    return Se && (re = Object.assign(Object.assign({}, re), {collection: {id: Se.value}})), N && (re = Object.assign(Object.assign({}, re), {
                         deck: {
-                            id: Ge.value,
+                            id: N.value,
                             global: !1
                         }
-                    })), W && (re = Object.assign(Object.assign({}, re), {deck: Object.assign(Object.assign({}, re.deck), {global: 1 === W.value})})), re
+                    })), H && (re = Object.assign(Object.assign({}, re), {deck: Object.assign(Object.assign({}, re.deck), {global: 1 === H.value})})), re
                 }
 
                 handleQueueResponse() {
-                    this.client.on(21, q => {
-                        const re = this.tryParseJson(q), xe = this.buildOpponent(re);
-                        re.game_mode === B.B_.SERVER_SOLO && (xe.id = 0), this.queueService.getQueue(1, re.game_mode).pipe((0, n.P)(), (0, v.h)(Ge => "active" === Ge.status), (0, k.M)(this.gameService.getBranch$(1)), (0, P.K)(Ge => (console.error("playService->handleQueueResponse() error getting queue", Ge), (0, e.of)([null, null])))).subscribe(([Ge, W]) => {
-                            Ge && (this.queueService.complete(Ge), re.success && (this.dataStore.currentMatchId = re.match_id, this._currentMatchId$.next(this.dataStore.currentMatchId), this.play({
-                                realm: W.id,
-                                mode: Ge.mode.id,
-                                player: Ge.params.player,
+                    this.client.on(21, ee => {
+                        const re = this.tryParseJson(ee), Se = this.buildOpponent(re);
+                        re.game_mode === B.B_.SERVER_SOLO && (Se.id = 0), this.queueService.getQueue(1, re.game_mode).pipe((0, n.P)(), (0, _.h)(N => "active" === N.status), (0, S.M)(this.gameService.getBranch$(1)), (0, k.K)(N => (console.error("playService->handleQueueResponse() error getting queue", N), (0, e.of)([null, null])))).subscribe(([N, H]) => {
+                            N && (this.queueService.complete(N), re.success && (this.dataStore.currentMatchId = re.match_id, this._currentMatchId$.next(this.dataStore.currentMatchId), this.play({
+                                realm: H.id,
+                                mode: N.mode.id,
+                                player: N.params.player,
                                 match_id: re.match_id,
-                                opponent: xe,
+                                opponent: Se,
                                 server: {host: re.location.host, port: re.location.port, password: re.match_pwd}
                             })))
                         })
@@ -805,9 +802,9 @@
                 }
 
                 handleQueueAck() {
-                    this.client.on(30, q => {
-                        const re = this.tryParseJson(q);
-                        this.queueAcknowledge$.next(!0), re.success || (this.guGameService.fetchGameModes(!0), this.queueService.getQueue(1, re.game_mode).pipe((0, n.P)()).subscribe(xe => this.queueService.cancel(xe)), "bot" === re.reason ? this.modalService.createModal(de.n, {}, {
+                    this.client.on(30, ee => {
+                        const re = this.tryParseJson(ee);
+                        this.queueAcknowledge$.next(!0), re.success || (this.guGameService.fetchGameModes(!0), this.queueService.getQueue(1, re.game_mode).pipe((0, n.P)()).subscribe(Se => this.queueService.cancel(Se)), "bot" === re.reason ? this.modalService.createModal(de.n, {}, {
                             blurredBackground: !0,
                             canCloseFromInside: !1,
                             position: w.e1.Center,
@@ -817,11 +814,11 @@
                 }
 
                 handleQueuePing() {
-                    this.client.on(35, q => {
-                        const re = this.tryParseJson(q);
-                        !re || !re.game_mode || this.queueService.getQueue(1, re.game_mode).pipe((0, n.P)(xe => "active" === xe.status), (0, I.b)(() => {
-                            const xe = Object.assign(Object.assign({}, re), {realm: this.branch.name});
-                            this.trySendingSocketMsg(36, xe)
+                    this.client.on(35, ee => {
+                        const re = this.tryParseJson(ee);
+                        !re || !re.game_mode || this.queueService.getQueue(1, re.game_mode).pipe((0, n.P)(Se => "active" === Se.status), (0, L.b)(() => {
+                            const Se = Object.assign(Object.assign({}, re), {realm: this.branch.name});
+                            this.trySendingSocketMsg(36, Se)
                         })).subscribe()
                     })
                 }
@@ -839,14 +836,14 @@
                 }
 
                 handleCancelResponse() {
-                    this.client.on(23, q => {
-                        this.tryParseJson(q)
+                    this.client.on(23, ee => {
+                        this.tryParseJson(ee)
                     })
                 }
 
                 handleRestartRequest() {
-                    this.client.on(40, q => {
-                        this.modalService.createModal(ee.s, {
+                    this.client.on(40, ee => {
+                        this.modalService.createModal(q.s, {
                             title: "Client Updated",
                             message: "Your client has been updated, please reload to continue.",
                             okButtonText: "RELOAD",
@@ -863,134 +860,135 @@
                 connectClient() {
                     if (this.client && this.client.destroy) try {
                         this.client.destroy()
-                    } catch (q) {
-                        console.error("playService->connectClient() unable to destroy client.", q)
+                    } catch (ee) {
+                        console.error("playService->connectClient() unable to destroy client.", ee)
                     }
                     this.client = window.bridge.createClient(this.master.host, this.master.port), this.handleQueueResponse(), this.handleQueueAck(), this.handleQueuePing(), this.handleCancelResponse(), this.handleRestartRequest(), this.handleServerClientPing(), this.handleClientServerPong()
                 }
 
-                tryParseJson(q) {
+                tryParseJson(ee) {
                     let re;
                     try {
-                        re = JSON.parse(q)
-                    } catch (xe) {
-                        console.error("PlayServer->handleQueuePing error parsing message", xe, q)
+                        re = JSON.parse(ee)
+                    } catch (Se) {
+                        console.error("PlayServer->handleQueuePing error parsing message", Se, ee)
                     }
                     return re
                 }
 
-                buildAttributes(q) {
+                buildAttributes(ee) {
                     let re = [];
-                    return q.player && q.player.collection && (re = [...re, {
+                    return ee.player && ee.player.collection && (re = [...re, {
                         type: Ie.COLLECTION,
-                        value: q.player.collection.id
-                    }]), q.opponent && q.opponent.deck && (re = [...re, {
+                        value: ee.player.collection.id
+                    }]), ee.opponent && ee.opponent.deck && (re = [...re, {
                         type: Ie.DECK,
-                        value: q.opponent.deck.id
-                    }], re = [...re, {type: Ie.DECK_GLOBAL, value: q.opponent.deck.global ? 1 : 0}]), re
+                        value: ee.opponent.deck.id
+                    }], re = [...re, {type: Ie.DECK_GLOBAL, value: ee.opponent.deck.global ? 1 : 0}]), re
                 }
 
-                buildQueueMessage(q, re, xe, Ge, W, z) {
+                buildQueueMessage(ee, re, Se, N, H, l) {
                     return {
                         id: re,
-                        realm: W,
-                        deck_id: xe,
+                        realm: H,
+                        deck_id: Se,
                         token: "",
-                        game_mode: q.id,
-                        attributes: Ge,
-                        private_match_password: z
+                        game_mode: ee.id,
+                        attributes: N,
+                        private_match_password: l
                     }
                 }
 
-                start(q, re, xe, Ge) {
-                    const W = this.buildQueueMessage(q, re, xe.player.deck.id, this.buildAttributes(xe), this.branch.name, Ge);
-                    return this.numActiveQueues > 0 ? (0, m._)(ce.k.CODE_0) : this.client.socketConnected ? this.deckService.isDeckComplete(xe.player.deck).pipe((0, A.q)(1), (0, f.VS)(z => z ? this.clientServerPong(q, W, re, xe) : (this.deckService.fetchDecks(), (0, m._)(ce.k.CODE_11)))) : (this.connectClient(), (0, m._)(ce.k.CODE_1))
+                start(ee, re, Se, N) {
+                    const H = this.buildQueueMessage(ee, re, Se.player.deck.id, this.buildAttributes(Se), this.branch.name, N);
+                    return this.numActiveQueues > 0 ? (0, m._)(ce.k.CODE_0) : this.client.socketConnected ? this.deckService.isDeckComplete(Se.player.deck).pipe((0, D.q)(1), (0, v.VS)(l => l ? this.clientServerPong(ee, H, re, Se) : (this.deckService.fetchDecks(), (0, m._)(ce.k.CODE_11)))) : (this.connectClient(), (0, m._)(ce.k.CODE_1))
                 }
 
-                clientServerPong(q, re, xe, Ge) {
+                clientServerPong(ee, re, Se, N) {
                     return this.clientServerPongReceived$.next(!1), this.trySendingSocketMsg(6, re) ? ((0, p.H)(3e3).subscribe(() => {
                         this.clientServerPongReceived$.next(!1)
-                    }), this.clientServerPongReceived$.pipe((0, A.q)(1), (0, f.VS)(z => z ? this.startQueueReq$(q, re, xe, Ge) : (console.log("playService->start() cannot queue, did not receive CLIENT_SERVER_PONG within 3000ms"), this.connectClient(), (0, m._)(ce.k.CODE_9))))) : (this.connectClient(), (0, m._)(ce.k.CODE_8))
+                    }), this.clientServerPongReceived$.pipe((0, D.q)(1), (0, v.VS)(l => l ? this.startQueueReq$(ee, re, Se, N) : (console.log("playService->start() cannot queue, did not receive CLIENT_SERVER_PONG within 3000ms"), this.connectClient(), (0, m._)(ce.k.CODE_9))))) : (this.connectClient(), (0, m._)(ce.k.CODE_8))
                 }
 
-                startQueueReq$(q, re, xe, Ge) {
+                startQueueReq$(ee, re, Se, N) {
                     return this.queueAcknowledge$.next(!1), this.trySendingQueueReq(re) ? ((0, p.H)(3e3).subscribe(() => {
                         this.queueAcknowledge$.next(!1)
-                    }), this.queueAcknowledge$.pipe((0, A.q)(1), (0, f.VS)(z => z ? this.queueService.start(1, q, Ge) : (console.log("playService->startQueueReq$() cannot queue, did not receive ACK message from server within 3000ms"), this.connectClient(), (0, m._)(ce.k.CODE_3))))) : (console.log("playService->startQueueReq$() cannot queue, unable to send queue request message"), this.connectClient(), (0, m._)(ce.k.CODE_2))
+                    }), this.queueAcknowledge$.pipe((0, D.q)(1), (0, v.VS)(l => l ? this.queueService.start(1, ee, N) : (console.log("playService->startQueueReq$() cannot queue, did not receive ACK message from server within 3000ms"), this.connectClient(), (0, m._)(ce.k.CODE_3))))) : (console.log("playService->startQueueReq$() cannot queue, unable to send queue request message"), this.connectClient(), (0, m._)(ce.k.CODE_2))
                 }
 
-                trySendingSocketMsg(q, re) {
-                    console.log("playService->trySendingSocketMsg()", this.socketMsgName(q), re);
+                trySendingSocketMsg(ee, re) {
+                    console.log("playService->trySendingSocketMsg()", this.socketMsgName(ee), re);
                     try {
-                        return this.client.send(q, re), !0
-                    } catch (xe) {
-                        return console.error("playService->trySendingSocketMsg() failed", xe), !1
+                        return this.client.send(ee, re), !0
+                    } catch (Se) {
+                        return console.error("playService->trySendingSocketMsg() failed", Se), !1
                     }
                 }
 
-                trySendingQueueReq(q) {
-                    return this.trySendingSocketMsg(20, q)
+                trySendingQueueReq(ee) {
+                    return this.trySendingSocketMsg(20, ee)
                 }
 
-                trySendingCancelReq(q, re) {
-                    return this.trySendingSocketMsg(22, {game_mode: q, id: re, realm: this.branch.name})
+                trySendingCancelReq(ee, re) {
+                    return this.trySendingSocketMsg(22, {game_mode: ee, id: re, realm: this.branch.name})
                 }
 
-                completeQueue(q) {
+                completeQueue(ee) {
                 }
 
                 get playing$() {
                     return this._playing$.asObservable()
                 }
 
-                setPlaying(q, re) {
-                    this._playing$.next({status: q, gameModeId: re})
+                setPlaying(ee, re) {
+                    this._playing$.next({status: ee, gameModeId: re})
                 }
 
-                buildArgs(q) {
-                    let re = ["-realm", `${q.realm}`, "-user-id", `${q.player.id}`, "-sessionTicket", this.authService.getGameSessionTicket(), "-sessionConfig", JSON.stringify(q)];
-                    return q.match_id && (re = [...re, "-game-id", `${q.match_id}`]), re
+                buildArgs(ee) {
+                    let re = ["-realm", `${ee.realm}`, "-user-id", `${ee.player.id}`, "-sessionTicket", this.authService.getGameSessionTicket(), "-sessionConfig", JSON.stringify(ee)];
+                    return ee.match_id && (re = [...re, "-game-id", `${ee.match_id}`]), re
                 }
 
-                play(q) {
-                    this.server.serverActive() || (this.server.closeServer(), this.server.createServer()), console.log(JSON.stringify(q)), this.server.setConfig(q), this.modalService.destroyModalsStack(), this.setPlaying(He.IN, q.mode);
-                    const re = this.buildArgs(q);
-                    this.gameService.currentGameContext$.pipe((0, A.q)(1), (0, O.w)(xe => this.gameService.play(xe, re)), (0, O.w)(xe => (0, p.H)(2e3, 2e3).pipe((0, S.h)(xe), (0, b.o)(() => window.bridge.isRunning(xe.process.pid)))), (0, T.x)(() => {
-                        window.bridge.focus(), this.audioService.returnToLauncher.play(), q.mode === B.B_.SOLO && this.logGameCompleted(q.mode, "Solo"), q.mode === B.B_.DIRECT_CHALLENGE && this.logGameCompleted(q.mode, "Direct Challenge", q.match_id), this.handleProgression(q.mode)
-                    })).subscribe(g.Z, xe => {
-                        console.error("playService->play() error starting a game", xe), Object.values(ce.k).includes(xe) ? this.showInfoModal("Unable to start game", xe) : this.showInfoModal("Unable to start game", ce.k.CODE_5)
+                play(ee) {
+                    this.server.serverActive() || (this.server.closeServer(), this.server.createServer()), console.log(JSON.stringify(ee)), this.server.setConfig(ee), this.modalService.destroyModalsStack(), this.setPlaying(ke.IN, ee.mode);
+                    const re = this.buildArgs(ee);
+                    this.gameService.currentGameContext$.pipe((0, D.q)(1), (0, O.w)(Se => this.gameService.play(Se, re)), (0, O.w)(Se => (0, p.H)(2e3, 2e3).pipe((0, P.h)(Se), (0, C.o)(() => window.bridge.isRunning(Se.process.pid)))), (0, $.x)(() => {
+                        window.bridge.focus(), this.audioService.returnToLauncher.play(), ee.mode === B.B_.SOLO && this.logGameCompleted(ee.mode, "Solo"), ee.mode === B.B_.DIRECT_CHALLENGE && this.logGameCompleted(ee.mode, "Direct Challenge", ee.match_id), this.handleProgression(ee.mode)
+                    })).subscribe(g.Z, Se => {
+                        console.error("playService->play() error starting a game", Se), Object.values(ce.k).includes(Se) ? this.showInfoModal("Unable to start game", Se) : this.showInfoModal("Unable to start game", ce.k.CODE_5)
                     })
                 }
 
-                logGameCompleted(q, re, xe) {
+                logGameCompleted(ee, re, Se) {
                     "function" == typeof fbq && fbq("track", "ViewContent"), "function" == typeof gtag && gtag("event", "completed", {
                         event_category: "game",
                         event_label: "user"
-                    }), this.analyticsService.postEvent(new c.Game.Completed.Event({
+                    }), this.analyticsService.postEvent(new d.Game.Completed.Event({
                         game_id: 1,
-                        latest_id: xe,
-                        mode_id: q,
+                        latest_id: Se,
+                        mode_id: ee,
                         mode_name: re
                     }))
                 }
 
-                handleProgression(q) {
-                    this.checkWhetherToShowAccountProgress().pipe((0, A.q)(1), (0, I.b)(re => {
-                        this.setPlaying(re && 0 !== q ? He.PROGRESSION_ACCOUNT : He.OUT, q)
+                handleProgression(ee) {
+                    this.checkWhetherToShowAccountProgress().pipe((0, D.q)(1), (0, L.b)(re => {
+                        this.setPlaying(re && 0 !== ee ? ke.PROGRESSION_ACCOUNT : ke.OUT, ee)
                     })).subscribe()
                 }
 
                 checkWhetherToShowAccountProgress() {
-                    const q = this.authService.getUserId(), re = this.progressionService.getStoredAccountProgression(q);
-                    return this.guUserService.getAccountProperties().pipe((0, A.q)(1), (0, t.U)(xe => this.hasProgressed(re, xe)))
+                    const ee = this.authService.getUserId(),
+                        re = this.progressionService.getStoredAccountProgression(ee);
+                    return this.guUserService.getAccountProperties().pipe((0, D.q)(1), (0, t.U)(Se => this.hasProgressed(re, Se)))
                 }
 
-                hasProgressed(q, re) {
-                    return q.lvl !== re.level || q.xp !== re.total_xp
+                hasProgressed(ee, re) {
+                    return ee.lvl !== re.level || ee.xp !== re.total_xp
                 }
 
-                showInfoModal(q, re) {
-                    this.modalService.createModal(C.S, {title: q, text: re}, {
+                showInfoModal(ee, re) {
+                    this.modalService.createModal(b.S, {title: ee, text: re}, {
                         blurredBackground: !0,
                         canCloseFromInside: !1,
                         position: w.e1.Center,
@@ -998,8 +996,8 @@
                     })
                 }
 
-                socketMsgName(q) {
-                    switch (q) {
+                socketMsgName(ee) {
+                    switch (ee) {
                         case 6:
                             return "CLIENT_SERVER_PING";
                         case 7:
@@ -1030,37 +1028,36 @@
                 }
             }
 
-            return Ee.\u0275fac = function (q) {
-                return new (q || Ee)(fe.LFG(N.eN), fe.LFG(ae), fe.LFG(Y.hM), fe.LFG(ye.g), fe.LFG(s.mI), fe.LFG(V.MZ), fe.LFG(le.Z), fe.LFG(Ce.$z), fe.LFG(Te.xV), fe.LFG(Be.LE), fe.LFG(s.pk), fe.LFG(Be.yD), fe.LFG(H.D))
-            }, Ee.\u0275prov = fe.Yz7({token: Ee, factory: Ee.\u0275fac, providedIn: "root"}), Ee
+            return Ee.\u0275fac = function (ee) {
+                return new (ee || Ee)(Ce.LFG(z.eN), Ce.LFG(ae), Ce.LFG(Y.hM), Ce.LFG(xe.g), Ce.LFG(s.mI), Ce.LFG(V.MZ), Ce.LFG(le.Z), Ce.LFG(ye.$z), Ce.LFG(Ae.xV), Ce.LFG(Be.LE), Ce.LFG(s.pk), Ce.LFG(Be.yD), Ce.LFG(W.D))
+            }, Ee.\u0275prov = Ce.Yz7({token: Ee, factory: Ee.\u0275fac, providedIn: "root"}), Ee
         })()
-    },
-    47313: (se, R, o) => {
+    }, 47313: (se, U, o) => {
         "use strict";
-        o.d(R, {oW: () => I, $z: () => T});
-        var c = o(591), i = o(61737), y = o(72986), e = o(2994), m = o(27221), p = o(24850), g = o(73307), r = o(5e3),
+        o.d(U, {oW: () => L, $z: () => $});
+        var d = o(591), i = o(61737), y = o(72986), e = o(2994), m = o(27221), p = o(24850), g = o(73307), r = o(5e3),
             t = o(55778), n = o(11130);
 
-        class I {
-            constructor(C = 0, w = 0, B = 0) {
-                this.xp = C, this.xpToNext = w, this.lvl = B
+        class L {
+            constructor(b = 0, w = 0, B = 0) {
+                this.xp = b, this.xpToNext = w, this.lvl = B
             }
         }
 
-        class S {
-            constructor(C, w, B, ee, ce, de) {
-                this.game_mode = C, this.rating = w, this.rank_level = B, this.win_points = ee, this.loss_points = ce, this.safety_line = de
+        class P {
+            constructor(b, w, B, q, ce, de) {
+                this.game_mode = b, this.rating = w, this.rank_level = B, this.win_points = q, this.loss_points = ce, this.safety_line = de
             }
         }
 
-        let T = (() => {
+        let $ = (() => {
             class s {
-                constructor(w, B, ee) {
-                    this.gameApi = w, this.storage = B, this.guGameService = ee, this.dataStore = {
+                constructor(w, B, q) {
+                    this.gameApi = w, this.storage = B, this.guGameService = q, this.dataStore = {
                         accountThresholds: [],
                         gameRanks: [],
                         userRankLevels: []
-                    }, this._accountThresholds$ = new c.X(Object.assign({}, this.dataStore).accountThresholds), this._gameRanks$ = new c.X(Object.assign({}, this.dataStore).gameRanks), this._userRankLevels$ = new c.X(Object.assign({}, this.dataStore).userRankLevels)
+                    }, this._accountThresholds$ = new d.X(Object.assign({}, this.dataStore).accountThresholds), this._gameRanks$ = new d.X(Object.assign({}, this.dataStore).gameRanks), this._userRankLevels$ = new d.X(Object.assign({}, this.dataStore).userRankLevels)
                 }
 
                 get accountThresholds$() {
@@ -1084,7 +1081,7 @@
                 }
 
                 fetchUserGameProgression({userId: w, gameModeId: B}) {
-                    return this.gameApi.get(`/user/${w}/progression/${B}`).pipe((0, y.q)(1), (0, m.K)(ee => (console.error("error during loading of post game progression stats"), (0, i._)(ee))))
+                    return this.gameApi.get(`/user/${w}/progression/${B}`).pipe((0, y.q)(1), (0, m.K)(q => (console.error("error during loading of post game progression stats"), (0, i._)(q))))
                 }
 
                 fetchGameRanks() {
@@ -1112,7 +1109,7 @@
                 }
 
                 getStoredAccountProgression(w) {
-                    return this.storage.get([`last-progress-${w.toString()}`]) || new I
+                    return this.storage.get([`last-progress-${w.toString()}`]) || new L
                 }
 
                 storeLastGameId(w, B) {
@@ -1128,8 +1125,8 @@
                 }
 
                 getStoredRankedProgression(w, B) {
-                    const ee = this.storage.get([`last-ranked-progress-${w.toString()}`, B.toString()]) || new S(B, 0, 1, 0, 0, 40);
-                    return this.dataStore.userRankLevels.push(ee), this._userRankLevels$.next([...this.dataStore.userRankLevels]), ee
+                    const q = this.storage.get([`last-ranked-progress-${w.toString()}`, B.toString()]) || new P(B, 0, 1, 0, 0, 40);
+                    return this.dataStore.userRankLevels.push(q), this._userRankLevels$.next([...this.dataStore.userRankLevels]), q
                 }
 
                 getRankedProgressions(w) {
@@ -1137,17 +1134,17 @@
                 }
 
                 getRankedProgressionById(w, B) {
-                    return this.getRankedProgressions(w).pipe((0, p.U)(ee => ee.find(ce => ce.game_mode === B)), (0, e.b)(ee => (this.saveRankedProgression(w, ee), ee)))
+                    return this.getRankedProgressions(w).pipe((0, p.U)(q => q.find(ce => ce.game_mode === B)), (0, e.b)(q => (this.saveRankedProgression(w, q), q)))
                 }
 
                 calcPercentage(w, B) {
-                    const ee = this.getLowerBoundaryForLvl(w.lvl, B);
-                    return 100 * (w.xp - ee) / (w.xp + w.xpToNext - ee)
+                    const q = this.getLowerBoundaryForLvl(w.lvl, B);
+                    return 100 * (w.xp - q) / (w.xp + w.xpToNext - q)
                 }
 
                 getLowerBoundaryForLvl(w, B) {
-                    const ee = B.find(ce => ce.level === w - 1);
-                    return ee ? ee.total_xp : 0
+                    const q = B.find(ce => ce.level === w - 1);
+                    return q ? q.total_xp : 0
                 }
             }
 
@@ -1155,21 +1152,20 @@
                 return new (w || s)(r.LFG(t.Ft), r.LFG(g.qy), r.LFG(n.xV))
             }, s.\u0275prov = r.Yz7({token: s, factory: s.\u0275fac}), s
         })()
-    },
-    64523: (se, R, o) => {
+    }, 64523: (se, U, o) => {
         "use strict";
-        o.d(R, {r: () => A, H: () => f});
-        var c = o(72224), i = o(73307), y = o(591), e = o(8929), m = o(98723), p = o(72986), g = o(2994), r = o(7625),
-            t = o(24850), n = o(33403), v = o(5e3), k = o(55778), P = o(83035), I = o(44416), A = (() => {
-                return (O = A || (A = {}))[O.AVAILABLE = 0] = "AVAILABLE", O[O.WAITING_TO_START = 1] = "WAITING_TO_START", O[O.STARTED = 2] = "STARTED", O[O.REWARDS_AVAILABLE = 3] = "REWARDS_AVAILABLE", O[O.ENDED = 4] = "ENDED", A;
+        o.d(U, {r: () => D, H: () => v});
+        var d = o(72224), i = o(73307), y = o(591), e = o(8929), m = o(98723), p = o(72986), g = o(2994), r = o(7625),
+            t = o(24850), n = o(33403), _ = o(5e3), S = o(55778), k = o(83035), L = o(44416), D = (() => {
+                return (O = D || (D = {}))[O.AVAILABLE = 0] = "AVAILABLE", O[O.WAITING_TO_START = 1] = "WAITING_TO_START", O[O.STARTED = 2] = "STARTED", O[O.REWARDS_AVAILABLE = 3] = "REWARDS_AVAILABLE", O[O.ENDED = 4] = "ENDED", D;
                 var O
             })();
-        let f = (() => {
+        let v = (() => {
             class O {
-                constructor(b, T, s, C) {
-                    this.gameApi = b, this.authService = T, this.queueService = s, this.utilService = C, this.dataStore = {
+                constructor(C, $, s, b) {
+                    this.gameApi = C, this.authService = $, this.queueService = s, this.utilService = b, this.dataStore = {
                         sealedMode: null,
-                        sealedModeStatus: A.AVAILABLE
+                        sealedModeStatus: D.AVAILABLE
                     }, this._sealedMode$ = new y.X(null), this._sealedModeStatus$ = new y.X(this.dataStore.sealedModeStatus), this.unsubscribe = new e.xQ
                 }
 
@@ -1186,94 +1182,92 @@
                 }
 
                 fetchSealed() {
-                    const b = this.authService.getUserId(), T = this.authService.getGameSessionTicket();
-                    this.gameApi.get(`/user/${b}/mode/${n.B_.SEALED_DECK}/deck?session=${T}`).pipe((0, p.q)(1)).subscribe(s => {
+                    const C = this.authService.getUserId(), $ = this.authService.getGameSessionTicket();
+                    this.gameApi.get(`/user/${C}/mode/${n.B_.SEALED_DECK}/deck?session=${$}`).pipe((0, p.q)(1)).subscribe(s => {
                         this.updateSealedMode(s)
                     }, s => {
                         this.updateSealedMode(void 0)
                     })
                 }
 
-                enterSealed$(b) {
-                    const T = this.authService.getUserId(), s = this.authService.getGameSessionTicket();
-                    return this.gameApi.post(`/user/${T}/mode/${n.B_.SEALED_DECK}/deck?session=${s}`, {god: b}).pipe((0, p.q)(1), (0, g.b)(C => {
-                        this.updateSealedMode(C)
+                enterSealed$(C) {
+                    const $ = this.authService.getUserId(), s = this.authService.getGameSessionTicket();
+                    return this.gameApi.post(`/user/${$}/mode/${n.B_.SEALED_DECK}/deck?session=${s}`, {god: C}).pipe((0, p.q)(1), (0, g.b)(b => {
+                        this.updateSealedMode(b)
                     }))
                 }
 
-                updateSealedMode(b) {
-                    b && (b.game_mode_data = this.transformSealedModeGameModeData(b.game_mode_data)), this.dataStore.sealedMode = b, this._sealedMode$.next(b ? Object.assign({}, this.dataStore.sealedMode) : void 0), this.handleSealedModeStatus(b)
+                updateSealedMode(C) {
+                    C && (C.game_mode_data = this.transformSealedModeGameModeData(C.game_mode_data)), this.dataStore.sealedMode = C, this._sealedMode$.next(C ? Object.assign({}, this.dataStore.sealedMode) : void 0), this.handleSealedModeStatus(C)
                 }
 
-                transformSealedModeGameModeData(b) {
-                    const T = this.utilService.adjustToServerTime(b.end_time_remaining);
-                    return Object.assign(Object.assign({}, b), {
-                        end_time_server: T,
-                        end_timestamp_server: Date.parse(T),
-                        properties: Object.assign(Object.assign({}, b.properties), {
-                            entry_cutoff_server: this.utilService.adjustToServerTime(b.properties.entry_cutoff_remaining),
-                            start_time_server: this.utilService.adjustToServerTime(b.properties.start_time_remaining)
+                transformSealedModeGameModeData(C) {
+                    const $ = this.utilService.adjustToServerTime(C.end_time_remaining);
+                    return Object.assign(Object.assign({}, C), {
+                        end_time_server: $,
+                        end_timestamp_server: Date.parse($),
+                        properties: Object.assign(Object.assign({}, C.properties), {
+                            entry_cutoff_server: this.utilService.adjustToServerTime(C.properties.entry_cutoff_remaining),
+                            start_time_server: this.utilService.adjustToServerTime(C.properties.start_time_remaining)
                         })
                     })
                 }
 
-                handleSealedModeStatus(b) {
-                    if (b && b.sealed_id) if ("ended" !== b.status) {
-                        if (!this.areRewardsAvailable(b)) return this.areWaitingToStart(b) ? (this.scheduleRefresh(b.game_mode_data.properties.start_time_server), void this.updateSealedModeStatus(A.WAITING_TO_START)) : (this.scheduleRefresh(b.game_mode_data.end_time_server, this.onSealedEnded.bind(this)), void this.updateSealedModeStatus(A.STARTED));
-                        this.updateSealedModeStatus(A.REWARDS_AVAILABLE)
-                    } else this.updateSealedModeStatus(A.ENDED); else this.updateSealedModeStatus(A.AVAILABLE)
+                handleSealedModeStatus(C) {
+                    if (C && C.sealed_id) if ("ended" !== C.status) {
+                        if (!this.areRewardsAvailable(C)) return this.areWaitingToStart(C) ? (this.scheduleRefresh(C.game_mode_data.properties.start_time_server), void this.updateSealedModeStatus(D.WAITING_TO_START)) : (this.scheduleRefresh(C.game_mode_data.end_time_server, this.onSealedEnded.bind(this)), void this.updateSealedModeStatus(D.STARTED));
+                        this.updateSealedModeStatus(D.REWARDS_AVAILABLE)
+                    } else this.updateSealedModeStatus(D.ENDED); else this.updateSealedModeStatus(D.AVAILABLE)
                 }
 
-                scheduleRefresh(b, T) {
-                    const s = Date.now(), w = new Date(b).getTime() + 1e3 - s;
-                    w > 0 && w < c.v && (0, m.H)(w).pipe((0, r.R)(this.unsubscribe), (0, p.q)(1)).subscribe(B => {
-                        this.fetchSealed(), T && T()
+                scheduleRefresh(C, $) {
+                    const s = Date.now(), w = new Date(C).getTime() + 1e3 - s;
+                    w > 0 && w < d.v && (0, m.H)(w).pipe((0, r.R)(this.unsubscribe), (0, p.q)(1)).subscribe(B => {
+                        this.fetchSealed(), $ && $()
                     })
                 }
 
                 onSealedEnded() {
-                    this.queueService.activeQueues$.pipe((0, p.q)(1), (0, t.U)(b => b.find(T => T.mode.id === n.B_.SEALED_DECK))).subscribe(b => {
-                        b && this.queueService.cancel(b)
+                    this.queueService.activeQueues$.pipe((0, p.q)(1), (0, t.U)(C => C.find($ => $.mode.id === n.B_.SEALED_DECK))).subscribe(C => {
+                        C && this.queueService.cancel(C)
                     })
                 }
 
-                areRewardsAvailable(b) {
-                    const T = Date.now(), s = new Date(b.game_mode_data.end_time_server).getTime();
-                    return b.losses >= b.max_losses || b.wins >= b.max_wins || T > s
+                areRewardsAvailable(C) {
+                    const $ = Date.now(), s = new Date(C.game_mode_data.end_time_server).getTime();
+                    return C.losses >= C.max_losses || C.wins >= C.max_wins || $ > s
                 }
 
-                areWaitingToStart(b) {
-                    const T = Date.now(), s = new Date(b.game_mode_data.properties.start_time_server).getTime();
-                    return s && T < s
+                areWaitingToStart(C) {
+                    const $ = Date.now(), s = new Date(C.game_mode_data.properties.start_time_server).getTime();
+                    return s && $ < s
                 }
 
-                updateSealedModeStatus(b) {
-                    this.dataStore.sealedModeStatus = b, this._sealedModeStatus$.next(this.dataStore.sealedModeStatus)
+                updateSealedModeStatus(C) {
+                    this.dataStore.sealedModeStatus = C, this._sealedModeStatus$.next(this.dataStore.sealedModeStatus)
                 }
 
-                claimRewards$(b) {
-                    const T = this.authService.getUserId(), s = this.authService.getGameSessionTicket();
-                    return this.gameApi.put(`/user/${T}/mode/${n.B_.SEALED_DECK}/deck/${b}?session=${s}`, {action: "claim"})
+                claimRewards$(C) {
+                    const $ = this.authService.getUserId(), s = this.authService.getGameSessionTicket();
+                    return this.gameApi.put(`/user/${$}/mode/${n.B_.SEALED_DECK}/deck/${C}?session=${s}`, {action: "claim"})
                 }
             }
 
-            return O.\u0275fac = function (b) {
-                return new (b || O)(v.LFG(k.Ft), v.LFG(i.mI), v.LFG(P.g), v.LFG(I.F))
-            }, O.\u0275prov = v.Yz7({token: O, factory: O.\u0275fac, providedIn: "root"}), O
+            return O.\u0275fac = function (C) {
+                return new (C || O)(_.LFG(S.Ft), _.LFG(i.mI), _.LFG(k.g), _.LFG(L.F))
+            }, O.\u0275prov = _.Yz7({token: O, factory: O.\u0275fac, providedIn: "root"}), O
         })()
-    },
-    80537: (se, R, o) => {
+    }, 80537: (se, U, o) => {
         "use strict";
-        o.d(R, {k: () => c});
-        var c = (() => {
-            return (i = c || (c = {})).CODE_0 = "You are already queueing for another game mode. (Error Code 0)", i.CODE_1 = "Unable to connect to server. Please try again later. If this problem persists, go to Settings and clear the cache. (Error Code 1)", i.CODE_2 = "Unable to connect to server. Please try again later. If this problem persists, go to Settings and clear the cache. (Error Code 2)", i.CODE_3 = "Unable to connect to server. Please try again later. If this problem persists, go to Settings and clear the cache. (Error Code 3)", i.CODE_4 = "Queueing is currently disabled for maintenance. Please try again later. (Error Code 4)", i.CODE_5 = "There was an error while starting the game. (Error Code 5)", i.CODE_6 = "There was an error while starting the game. Unable to verify game files. (Error Code 6)", i.CODE_7 = "There was an error while starting the game. Unable to verify game files. (Error Code 7)", i.CODE_8 = "Unable to connect to server. Please try again later. If this problem persists, go to Settings and clear the cache. (Error Code 8)", i.CODE_9 = "Unable to connect to server. Please try again later. If this problem persists, go to Settings and clear the cache. (Error Code 9)", i.CODE_10 = "Unable to join queue. Suspicious account activity has been detected. (Error Code 10)", i.CODE_11 = "The deck you are queueing with is not complete. (Error Code 11)", i.CODE_12 = "There was an issue authorising the game build download. (Error Code 12)", i.CODE_13 = "There was an issue downloading the game. (Error Code 13)", i.CODE_14 = "There was an issue extracting the game. (Error Code 14)", c;
+        o.d(U, {k: () => d});
+        var d = (() => {
+            return (i = d || (d = {})).CODE_0 = "You are already queueing for another game mode. (Error Code 0)", i.CODE_1 = "Unable to connect to server. Please try again later. If this problem persists, go to Settings and clear the cache. (Error Code 1)", i.CODE_2 = "Unable to connect to server. Please try again later. If this problem persists, go to Settings and clear the cache. (Error Code 2)", i.CODE_3 = "Unable to connect to server. Please try again later. If this problem persists, go to Settings and clear the cache. (Error Code 3)", i.CODE_4 = "Queueing is currently disabled for maintenance. Please try again later. (Error Code 4)", i.CODE_5 = "There was an error while starting the game. (Error Code 5)", i.CODE_6 = "There was an error while starting the game. Unable to verify game files. (Error Code 6)", i.CODE_7 = "There was an error while starting the game. Unable to verify game files. (Error Code 7)", i.CODE_8 = "Unable to connect to server. Please try again later. If this problem persists, go to Settings and clear the cache. (Error Code 8)", i.CODE_9 = "Unable to connect to server. Please try again later. If this problem persists, go to Settings and clear the cache. (Error Code 9)", i.CODE_10 = "Unable to join queue. Suspicious account activity has been detected. (Error Code 10)", i.CODE_11 = "The deck you are queueing with is not complete. (Error Code 11)", i.CODE_12 = "There was an issue authorising the game build download. (Error Code 12)", i.CODE_13 = "There was an issue downloading the game. (Error Code 13)", i.CODE_14 = "There was an issue extracting the game. (Error Code 14)", d;
             var i
         })()
-    },
-    8611: (se, R, o) => {
+    }, 8611: (se, U, o) => {
         "use strict";
-        o.d(R, {n: () => y});
-        var c = o(5e3), i = o(66088);
+        o.d(U, {n: () => y});
+        var d = o(5e3), i = o(66088);
         let y = (() => {
             class e {
                 constructor(p) {
@@ -1293,8 +1287,8 @@
             }
 
             return e.\u0275fac = function (p) {
-                return new (p || e)(c.Y36(i.Z))
-            }, e.\u0275cmp = c.Xpm({
+                return new (p || e)(d.Y36(i.Z))
+            }, e.\u0275cmp = d.Xpm({
                 type: e,
                 selectors: [["app-bot-alert-modal"]],
                 inputs: {title: "title", message: "message", onOk: "onOk", okButtonText: "okButtonText"},
@@ -1302,20 +1296,19 @@
                 vars: 0,
                 consts: [[1, "gradientOverlay"], [1, "title"], [1, "description"], ["size", "large", "text", "accept", 1, "acceptButton", 3, "click"], [1, "rejectText", 3, "click"]],
                 template: function (p, g) {
-                    1 & p && (c._UZ(0, "div", 0), c.TgZ(1, "div", 1), c._uU(2, " account issue "), c.qZA(), c.TgZ(3, "div", 2), c._uU(4, " We\u2019ve detected some unusual activity on your account, and suspect you might be a bot. "), c._UZ(5, "br")(6, "br")(7, "br"), c._uU(8, " You won\u2019t be able to queue for games or fuse cards until we can be sure you\u2019re a human.\n"), c.qZA(), c.TgZ(9, "gu-primary-hex-button", 3), c.NdJ("click", function () {
+                    1 & p && (d._UZ(0, "div", 0), d.TgZ(1, "div", 1), d._uU(2, " account issue "), d.qZA(), d.TgZ(3, "div", 2), d._uU(4, " We\u2019ve detected some unusual activity on your account, and suspect you might be a bot. "), d._UZ(5, "br")(6, "br")(7, "br"), d._uU(8, " You won\u2019t be able to queue for games or fuse cards until we can be sure you\u2019re a human.\n"), d.qZA(), d.TgZ(9, "gu-primary-hex-button", 3), d.NdJ("click", function () {
                         return g.hideModal()
-                    }), c.qZA(), c.TgZ(10, "a", 4), c.NdJ("click", function () {
+                    }), d.qZA(), d.TgZ(10, "a", 4), d.NdJ("click", function () {
                         return g.reject()
-                    }), c._uU(11, " i am not a bot "), c.qZA())
+                    }), d._uU(11, " i am not a bot "), d.qZA())
                 },
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.rejectText[_ngcontent-%COMP%], .description[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.rejectText[_ngcontent-%COMP%], .description[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.description[_ngcontent-%COMP%]{line-height:1.4}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-direction:column;align-items:center;width:calc(var(--vh) * 50);height:calc(var(--vh) * 45);padding-bottom:calc(var(--vw) * 2.5);background-image:url(/gu-assets/images/backgrounds/trader-overlay-bg.webp);background-size:cover;background-position:center}[_nghost-%COMP%] > *[_ngcontent-%COMP%]{position:relative}.gradientOverlay[_ngcontent-%COMP%]{position:absolute;width:calc(var(--vh) * 50);height:calc(var(--vh) * 45);border:1px solid #182531;background:radial-gradient(ellipse at center,rgba(12,22,32,0) -80%,#0c1620 70%)}.title[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;padding-bottom:calc(var(--vh) * 2);padding-top:calc(var(--vh) * 6);text-transform:uppercase}.description[_ngcontent-%COMP%]{margin-top:calc(calc(var(--vw) * 2) * .7);padding-left:calc(var(--vh) * 6);padding-right:calc(var(--vh) * 6);text-align:center}.acceptButton[_ngcontent-%COMP%]{margin-top:calc(var(--vw) * 2)}.rejectText[_ngcontent-%COMP%]{margin-top:calc(var(--vw) * 2);text-transform:uppercase;color:#8be1e0;cursor:pointer}.rejectText[_ngcontent-%COMP%]:hover{text-decoration:underline}"]
             }), e
         })()
-    },
-    5231: (se, R, o) => {
+    }, 5231: (se, U, o) => {
         "use strict";
-        o.d(R, {s: () => y});
-        var c = o(5e3), i = o(66088);
+        o.d(U, {s: () => y});
+        var d = o(5e3), i = o(66088);
         let y = (() => {
             class e {
                 constructor(p) {
@@ -1331,8 +1324,8 @@
             }
 
             return e.\u0275fac = function (p) {
-                return new (p || e)(c.Y36(i.Z))
-            }, e.\u0275cmp = c.Xpm({
+                return new (p || e)(d.Y36(i.Z))
+            }, e.\u0275cmp = d.Xpm({
                 type: e,
                 selectors: [["app-hijack-modal"]],
                 inputs: {title: "title", message: "message", onOk: "onOk", okButtonText: "okButtonText"},
@@ -1340,18 +1333,17 @@
                 vars: 3,
                 consts: [[1, "title-section"], [1, "message-section"], ["size", "large", 1, "cta-button", 3, "text", "click"]],
                 template: function (p, g) {
-                    1 & p && (c.TgZ(0, "div", 0), c._uU(1), c.qZA(), c.TgZ(2, "div", 1), c._uU(3), c.qZA(), c.TgZ(4, "gu-primary-hex-button", 2), c.NdJ("click", function () {
+                    1 & p && (d.TgZ(0, "div", 0), d._uU(1), d.qZA(), d.TgZ(2, "div", 1), d._uU(3), d.qZA(), d.TgZ(4, "gu-primary-hex-button", 2), d.NdJ("click", function () {
                         return g.onOkCLick()
-                    }), c.qZA()), 2 & p && (c.xp6(1), c.Oqu(g.title), c.xp6(2), c.Oqu(g.message), c.xp6(1), c.Q6J("text", g.okButtonText))
+                    }), d.qZA()), 2 & p && (d.xp6(1), d.Oqu(g.title), d.xp6(2), d.Oqu(g.message), d.xp6(1), d.Q6J("text", g.okButtonText))
                 },
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.title-section[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.message-section[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.title-section[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.message-section[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22)}.message-section[_ngcontent-%COMP%]{line-height:1.4}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{border:calc(var(--vh) * .15) solid #527493;background-color:#0c1620;position:relative;display:block;color:#f6f6f6;padding:calc(var(--vw) * 2);width:calc(var(--vw) * 30);display:flex;flex-flow:column nowrap;align-items:center;padding-bottom:calc(var(--vw) * 2.5)}.title-section[_ngcontent-%COMP%]{padding-bottom:calc(var(--vh) * 2);border-bottom:calc(var(--vh) * .15) solid #fff;text-transform:uppercase}.message-section[_ngcontent-%COMP%]{margin-top:calc(calc(var(--vw) * 2) * .7);text-align:center}.cta-button[_ngcontent-%COMP%]{margin-top:calc(var(--vw) * 2)}"]
             }), e
         })()
-    },
-    14618: (se, R, o) => {
+    }, 14618: (se, U, o) => {
         "use strict";
-        o.d(R, {
-            gK: () => c,
+        o.d(U, {
+            gK: () => d,
             ky: () => i,
             Kg: () => y,
             dY: () => e,
@@ -1361,143 +1353,141 @@
             c7: () => r,
             Vm: () => t,
             $9: () => n,
-            X4: () => v,
-            Lg: () => k,
-            P6: () => P,
-            wT: () => I
+            X4: () => _,
+            Lg: () => S,
+            P6: () => k,
+            wT: () => L
         });
-        var c = (() => {
-            return (A = c || (c = {})).GAME_BUILD_DOWNLOAD_CHECK = "[GameResources] Game Build Download Check", A.GAME_BUILD_DOWNLOAD_REQUEST = "[GameResources] Game Build Download Request", A.GAME_BUILD_DOWNLOAD_PROGRESS = "[GameResources] Game Build Download Progress", A.GAME_BUILD_DOWNLOAD_EXTRACT = "[GameResources] Game Build Download Extract", A.GAME_BUILD_DOWNLOAD_SUCCESS = "[GameResources] Game Build Download Success", A.GAME_BUILD_DOWNLOAD_ERROR = "[GameResources] Game Build Download Error", A.GAME_BUILD_DOWNLOAD_UPDATE_STATUS = "[GameResources] Game Build Download Update Status", A.GAME_ASSETS_DOWNLOAD_CHECK = "[GameResources] Game Assets Download Check", A.GAME_ASSETS_DOWNLOAD_REQUEST = "[GameResources] Game Assets Download Request", A.GAME_ASSETS_DOWNLOAD_PROGRESS = "[GameResources] Game Assets Download Progress", A.GAME_ASSETS_DOWNLOAD_SUCCESS = "[GameResources]  Game Assets Download Success", A.GAME_ASSETS_DOWNLOAD_ERROR = "[GameResources]  Game Assets Download Error", A.GAME_ASSETS_DOWNLOAD_UPDATE_STATUS = "[GameResources] Game Assets Download Update Status", c;
-            var A
+        var d = (() => {
+            return (D = d || (d = {})).GAME_BUILD_DOWNLOAD_CHECK = "[GameResources] Game Build Download Check", D.GAME_BUILD_DOWNLOAD_REQUEST = "[GameResources] Game Build Download Request", D.GAME_BUILD_DOWNLOAD_PROGRESS = "[GameResources] Game Build Download Progress", D.GAME_BUILD_DOWNLOAD_EXTRACT = "[GameResources] Game Build Download Extract", D.GAME_BUILD_DOWNLOAD_SUCCESS = "[GameResources] Game Build Download Success", D.GAME_BUILD_DOWNLOAD_ERROR = "[GameResources] Game Build Download Error", D.GAME_BUILD_DOWNLOAD_UPDATE_STATUS = "[GameResources] Game Build Download Update Status", D.GAME_ASSETS_DOWNLOAD_CHECK = "[GameResources] Game Assets Download Check", D.GAME_ASSETS_DOWNLOAD_REQUEST = "[GameResources] Game Assets Download Request", D.GAME_ASSETS_DOWNLOAD_PROGRESS = "[GameResources] Game Assets Download Progress", D.GAME_ASSETS_DOWNLOAD_SUCCESS = "[GameResources]  Game Assets Download Success", D.GAME_ASSETS_DOWNLOAD_ERROR = "[GameResources]  Game Assets Download Error", D.GAME_ASSETS_DOWNLOAD_UPDATE_STATUS = "[GameResources] Game Assets Download Update Status", d;
+            var D
         })();
 
         class i {
-            constructor(f) {
-                this.payload = f, this.type = c.GAME_BUILD_DOWNLOAD_CHECK
+            constructor(v) {
+                this.payload = v, this.type = d.GAME_BUILD_DOWNLOAD_CHECK
             }
         }
 
         class y {
             constructor() {
-                this.type = c.GAME_BUILD_DOWNLOAD_REQUEST
+                this.type = d.GAME_BUILD_DOWNLOAD_REQUEST
             }
         }
 
         class e {
-            constructor(f) {
-                this.payload = f, this.type = c.GAME_BUILD_DOWNLOAD_PROGRESS
+            constructor(v) {
+                this.payload = v, this.type = d.GAME_BUILD_DOWNLOAD_PROGRESS
             }
         }
 
         class m {
-            constructor(f) {
-                this.payload = f, this.type = c.GAME_BUILD_DOWNLOAD_EXTRACT
+            constructor(v) {
+                this.payload = v, this.type = d.GAME_BUILD_DOWNLOAD_EXTRACT
             }
         }
 
         class p {
             constructor() {
-                this.type = c.GAME_BUILD_DOWNLOAD_SUCCESS
+                this.type = d.GAME_BUILD_DOWNLOAD_SUCCESS
             }
         }
 
         class g {
-            constructor(f) {
-                this.payload = f, this.type = c.GAME_BUILD_DOWNLOAD_UPDATE_STATUS
+            constructor(v) {
+                this.payload = v, this.type = d.GAME_BUILD_DOWNLOAD_UPDATE_STATUS
             }
         }
 
         class r {
-            constructor(f) {
-                this.payload = f, this.type = c.GAME_BUILD_DOWNLOAD_ERROR
+            constructor(v) {
+                this.payload = v, this.type = d.GAME_BUILD_DOWNLOAD_ERROR
             }
         }
 
         class t {
-            constructor(f) {
-                this.payload = f, this.type = c.GAME_ASSETS_DOWNLOAD_CHECK
+            constructor(v) {
+                this.payload = v, this.type = d.GAME_ASSETS_DOWNLOAD_CHECK
             }
         }
 
         class n {
             constructor() {
-                this.type = c.GAME_ASSETS_DOWNLOAD_REQUEST
+                this.type = d.GAME_ASSETS_DOWNLOAD_REQUEST
             }
         }
 
-        class v {
-            constructor(f) {
-                this.payload = f, this.type = c.GAME_ASSETS_DOWNLOAD_PROGRESS
+        class _ {
+            constructor(v) {
+                this.payload = v, this.type = d.GAME_ASSETS_DOWNLOAD_PROGRESS
+            }
+        }
+
+        class S {
+            constructor(v) {
+                this.payload = v, this.type = d.GAME_ASSETS_DOWNLOAD_UPDATE_STATUS
             }
         }
 
         class k {
-            constructor(f) {
-                this.payload = f, this.type = c.GAME_ASSETS_DOWNLOAD_UPDATE_STATUS
-            }
-        }
-
-        class P {
             constructor() {
-                this.type = c.GAME_ASSETS_DOWNLOAD_SUCCESS
+                this.type = d.GAME_ASSETS_DOWNLOAD_SUCCESS
             }
         }
 
-        class I {
-            constructor(f) {
-                this.payload = f, this.type = c.GAME_ASSETS_DOWNLOAD_ERROR
+        class L {
+            constructor(v) {
+                this.payload = v, this.type = d.GAME_ASSETS_DOWNLOAD_ERROR
             }
         }
-    },
-    69931: (se, R, o) => {
+    }, 69931: (se, U, o) => {
         "use strict";
-        o.d(R, {VD: () => i, DM: () => y, gP: () => e});
-        var c = o(96727);
-        const i = (0, c.ZF)("gameResources"), y = () => (0, c.P1)(i, m => m.gameBuild),
-            e = () => (0, c.P1)(i, m => m.gameAssets)
-    },
-    63411: (se, R, o) => {
+        o.d(U, {VD: () => i, DM: () => y, gP: () => e});
+        var d = o(96727);
+        const i = (0, d.ZF)("gameResources"), y = () => (0, d.P1)(i, m => m.gameBuild),
+            e = () => (0, d.P1)(i, m => m.gameAssets)
+    }, 63411: (se, U, o) => {
         "use strict";
-        o.d(R, {e: () => f});
-        var c = o(73175), i = o(591), y = o(61737), e = o(21086), m = o(2994), p = o(61709), g = o(27221), r = o(24850),
-            t = o(72986), n = o(40520), v = o(73307), k = o(5e3), P = o(11735);
-        const I = new c.N0;
-        let f = (() => {
+        o.d(U, {e: () => v});
+        var d = o(73175), i = o(591), y = o(61737), e = o(21086), m = o(2994), p = o(61709), g = o(27221), r = o(24850),
+            t = o(72986), n = o(40520), _ = o(73307), S = o(5e3), k = o(11735);
+        const L = new d.N0;
+        let v = (() => {
             class O {
-                constructor(b, T, s, C) {
-                    this.authHostService = b, this.storage = T, this.featureFlagsService = s, this.router = C, this.isRemembering = !0, this.dataStore = {account: null}, this._account$ = new i.X(null)
+                constructor(C, $, s, b) {
+                    this.authHostService = C, this.storage = $, this.featureFlagsService = s, this.router = b, this.isRemembering = !0, this.dataStore = {account: null}, this._account$ = new i.X(null)
                 }
 
-                login(b, T, s) {
-                    return this.authHostService.post("/auth2?type=login&code=" + this.generate(), b).pipe((0, m.b)(C => this.sendAnalytics(!0, b.email, +C.id)), (0, p.VS)(C => this.saveAccount(C, T, s)), (0, m.b)(C => this.fetchAccount()), (0, g.K)(C => (this.sendAnalytics(!1, b.email), (0, y._)(C))))
+                login(C, $, s) {
+                    return this.authHostService.post("/auth2?type=login&code=" + this.generate(), C).pipe((0, m.b)(b => this.sendAnalytics(!0, C.email, +b.id)), (0, p.VS)(b => this.saveAccount(b, $, s)), (0, m.b)(b => this.fetchAccount()), (0, g.K)(b => (this.sendAnalytics(!1, C.email), (0, y._)(b))))
                 }
 
-                saveAccount(b, T, s) {
-                    return this.auth = b, "function" == typeof window.bridge.updateAuthPair && window.bridge.updateAuthPair(b), this.isRemembering = T, T && (this.storage.set(["user_id"], b.id), this.storage.set(["refresh"], b.refresh), this.storage.set(["access"], b.access)), this.authHostService.post(`/account/${b.id}/session`, {game_id: s}).pipe((0, m.b)(C => {
-                        "function" == typeof window.bridge.updateSession && window.bridge.updateSession(C), this.storage.set(["game_session"], C)
-                    }), (0, r.U)(() => !0), (0, g.K)(C => (0, e.of)(!1)))
+                saveAccount(C, $, s) {
+                    return this.auth = C, "function" == typeof window.bridge.updateAuthPair && window.bridge.updateAuthPair(C), this.isRemembering = $, $ && (this.storage.set(["user_id"], C.id), this.storage.set(["refresh"], C.refresh), this.storage.set(["access"], C.access)), this.authHostService.post(`/account/${C.id}/session`, {game_id: s}).pipe((0, m.b)(b => {
+                        "function" == typeof window.bridge.updateSession && window.bridge.updateSession(b), this.storage.set(["game_session"], b)
+                    }), (0, r.U)(() => !0), (0, g.K)(b => (0, e.of)(!1)))
                 }
 
-                getLinkedAddresses(b) {
-                    return this.authHostService.get(`v2/account/${b}`).pipe((0, r.U)(T => T.addresses.map(s => s.address)))
+                getLinkedAddresses(C) {
+                    return this.authHostService.get(`v2/account/${C}`).pipe((0, r.U)($ => $.addresses.map(s => s.address)))
                 }
 
                 fetchSession() {
                     return (0, e.of)(this.getGameSessionTicket())
                 }
 
-                sendAnalytics(b, T, s) {
+                sendAnalytics(C, $, s) {
                 }
 
                 get account$() {
                     return this._account$.asObservable()
                 }
 
-                _emitAccount(b) {
-                    this.dataStore.account = b, this._account$.next(Object.assign({}, this.dataStore).account), this.featureFlagsService.setContext(b ? {
-                        userID: `${b.id}`,
-                        email: b.email,
-                        name: b.username,
+                _emitAccount(C) {
+                    this.dataStore.account = C, this._account$.next(Object.assign({}, this.dataStore).account), this.featureFlagsService.setContext(C ? {
+                        userID: `${C.id}`,
+                        email: C.email,
+                        name: C.username,
                         anonymous: !1
                     } : {anonymous: !0})
                 }
@@ -1511,27 +1501,27 @@
                 }
 
                 fetchAccount() {
-                    const b = this.getUserId();
-                    !b || this.authHostService.get(`/v2/account/${b}`).pipe((0, t.q)(1), (0, m.b)(T => this._emitAccount(T))).subscribe()
+                    const C = this.getUserId();
+                    !C || this.authHostService.get(`/v2/account/${C}`).pipe((0, t.q)(1), (0, m.b)($ => this._emitAccount($))).subscribe()
                 }
 
                 fetchAccountDetails() {
-                    const b = this.getUserId();
-                    if (b) return this.authHostService.get(`/v2/account/${b}`)
+                    const C = this.getUserId();
+                    if (C) return this.authHostService.get(`/v2/account/${C}`)
                 }
 
-                updateCurrentUser(b) {
-                    const T = this.getUserId();
-                    return this.updateUser(T, b)
+                updateCurrentUser(C) {
+                    const $ = this.getUserId();
+                    return this.updateUser($, C)
                 }
 
-                updateUser(b, T) {
-                    return this.authHostService.put("/account/" + b, T).pipe((0, t.q)(1), (0, m.b)(s => this._emitAccount(s)))
+                updateUser(C, $) {
+                    return this.authHostService.put("/account/" + C, $).pipe((0, t.q)(1), (0, m.b)(s => this._emitAccount(s)))
                 }
 
                 getAuthHeader() {
-                    let b = new n.WM;
-                    return b = b.append("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8"), b = b.append("Authorization", this.getAccessToken()), b
+                    let C = new n.WM;
+                    return C = C.append("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8"), C = C.append("Authorization", this.getAccessToken()), C
                 }
 
                 getRefreshToken() {
@@ -1546,21 +1536,21 @@
                     return this.auth
                 }
 
-                register(b) {
-                    return this.authHostService.post("/register", b)
+                register(C) {
+                    return this.authHostService.post("/register", C)
                 }
 
-                resend(b) {
-                    return this.authHostService.post("/resend", {email: b})
+                resend(C) {
+                    return this.authHostService.post("/resend", {email: C})
                 }
 
-                resetPassword(b) {
-                    return this.authHostService.put("/reset", {email: b})
+                resetPassword(C) {
+                    return this.authHostService.put("/reset", {email: C})
                 }
 
                 isLoggedIn() {
-                    const b = this.getRefreshToken();
-                    return null != b && b.length > 0
+                    const C = this.getRefreshToken();
+                    return null != C && C.length > 0
                 }
 
                 logout() {
@@ -1573,84 +1563,83 @@
                 }
 
                 refreshToken() {
-                    const b = this.getRefreshToken();
-                    return this.authHostService.post("/auth2?type=refresh&code=" + this.generate(), {refresh: b}).pipe((0, m.b)(T => {
+                    const C = this.getRefreshToken();
+                    return this.authHostService.post("/auth2?type=refresh&code=" + this.generate(), {refresh: C}).pipe((0, m.b)($ => {
                     }))
                 }
 
-                linkReferralCode(b) {
-                    const T = this.getUserId();
-                    return this.authHostService.post(`/account/${T}/referrer`, {referral: b})
+                linkReferralCode(C) {
+                    const $ = this.getUserId();
+                    return this.authHostService.post(`/account/${$}/referrer`, {referral: C})
                 }
 
                 tokenIsExpired() {
-                    const b = this.getAuthToken();
-                    return I.isTokenExpired(b.access)
+                    const C = this.getAuthToken();
+                    return L.isTokenExpired(C.access)
                 }
 
                 generate() {
-                    function b(N, X) {
-                        return (N.length - N.replace(new RegExp(X, "g"), "").length) / X.length
+                    function C(z, J) {
+                        return (z.length - z.replace(new RegExp(J, "g"), "").length) / J.length
                     }
 
-                    function T(N, X, ae) {
-                        return X > N.length - 1 ? N : N.substr(0, X) + ae + N.substr(X + 1)
+                    function $(z, J, ae) {
+                        return J > z.length - 1 ? z : z.substr(0, J) + ae + z.substr(J + 1)
                     }
 
-                    const s = function (N) {
-                        const ae = Math.pow(16, Math.min(N, 8) - 1), Y = Math.pow(16, Math.min(N, 8)) - 1;
+                    const s = function (z) {
+                        const ae = Math.pow(16, Math.min(z, 8) - 1), Y = Math.pow(16, Math.min(z, 8)) - 1;
                         let V = (Math.floor(Math.random() * (Y - ae + 1)) + ae).toString(16);
-                        for (; V.length < N;) V += s(N - 8);
+                        for (; V.length < z;) V += s(z - 8);
                         return V
-                    }, C = Math.ceil(25 * Math.random()), w = 32 - C - 4;
-                    let B = ("" + s(C) + 2 + s(2) + 2 + s(w)).toLowerCase(), de = b(B, "a") - b(B, "b") + 1, fe = 0;
-                    for (; de > 0 && ("a" !== B[fe] && "b" !== B[fe] && "2" !== B[fe] && (B = T(B, fe, "b"), de--), fe++, !(fe > B.length));) ;
-                    for (; de < 0 && ("a" !== B[fe] && "b" !== B[fe] && "2" !== B[fe] && (B = T(B, fe, "a"), de++), fe++, !(fe > B.length));) ;
+                    }, b = Math.ceil(25 * Math.random()), w = 32 - b - 4;
+                    let B = ("" + s(b) + 2 + s(2) + 2 + s(w)).toLowerCase(), de = C(B, "a") - C(B, "b") + 1, Ce = 0;
+                    for (; de > 0 && ("a" !== B[Ce] && "b" !== B[Ce] && "2" !== B[Ce] && (B = $(B, Ce, "b"), de--), Ce++, !(Ce > B.length));) ;
+                    for (; de < 0 && ("a" !== B[Ce] && "b" !== B[Ce] && "2" !== B[Ce] && (B = $(B, Ce, "a"), de++), Ce++, !(Ce > B.length));) ;
                     return B
                 }
             }
 
-            return O.\u0275fac = function (b) {
-                return new (b || O)(k.LFG(v.LI), k.LFG(v.qy), k.LFG(v.B3), k.LFG(P.F0))
-            }, O.\u0275prov = k.Yz7({token: O, factory: O.\u0275fac}), O
+            return O.\u0275fac = function (C) {
+                return new (C || O)(S.LFG(_.LI), S.LFG(_.qy), S.LFG(_.B3), S.LFG(k.F0))
+            }, O.\u0275prov = S.Yz7({token: O, factory: O.\u0275fac}), O
         })()
-    },
-    69340: (se, R, o) => {
+    }, 69340: (se, U, o) => {
         "use strict";
-        o.d(R, {b5: () => O});
-        var c = o(21086), i = o(41746), y = o(8929), e = o(56498), m = o(24850), p = o(87168), g = o(61709),
-            r = o(87545), t = o(14618), n = o(69931), v = o(5e3), k = o(79763), P = o(44416), I = o(96727);
+        o.d(U, {b5: () => O});
+        var d = o(21086), i = o(41746), y = o(8929), e = o(56498), m = o(24850), p = o(87168), g = o(61709),
+            r = o(87545), t = o(14618), n = o(69931), _ = o(5e3), S = o(79763), k = o(44416), L = o(96727);
         let O = (() => {
-            class S {
-                constructor(T, s, C, w) {
-                    this.gameService = T, this.zone = s, this.utils = C, this.ngrxStore = w, this.downloads = new Map
+            class P {
+                constructor($, s, b, w) {
+                    this.gameService = $, this.zone = s, this.utils = b, this.ngrxStore = w, this.downloads = new Map
                 }
 
                 getCurrentDownload() {
                     return this.currentDownload
                 }
 
-                getVersionFile(T, s) {
+                getVersionFile($, s) {
                     return window.bridge.httpGet(`https://s3-ap-southeast-2.amazonaws.com/gods-builds/manifests/${s}-manifest.json`).pipe(this.utils.enterZone(this.zone))
                 }
 
-                getLatest(T, s) {
-                    return this.getVersionFile(T, s).pipe((0, m.U)(C => C.build_version))
+                getLatest($, s) {
+                    return this.getVersionFile($, s).pipe((0, m.U)(b => b.build_version))
                 }
 
-                getLocal(T) {
-                    return (0, c.of)(this.gameService.getProperty(T.id, "version"))
+                getLocal($) {
+                    return (0, d.of)(this.gameService.getProperty($.id, "version"))
                 }
 
-                getVersions(T, s) {
-                    let C;
-                    return C = (0, i.$R)("local" === s ? this.getLocal(T) : this.getLatest(T, s), this.getLocal(T)), C
+                getVersions($, s) {
+                    let b;
+                    return b = (0, i.$R)("local" === s ? this.getLocal($) : this.getLatest($, s), this.getLocal($)), b
                 }
 
-                requiresUpdate(T, s) {
-                    return this.getVersions(T, s).pipe((0, p.M)(this.ngrxStore.select(n.VD)), (0, g.VS)(([[C, w], B]) => {
-                        let ee = !0;
-                        return w && w === C && (ee = "downloaded" === this.gameService.getProperty(T.id, "status")), ee && "downloading" !== B.gameBuild.status && "extracting" !== B.gameBuild.status && this.ngrxStore.dispatch(new t.ky({isUpdateRequired: ee})), (0, c.of)(ee)
+                requiresUpdate($, s) {
+                    return this.getVersions($, s).pipe((0, p.M)(this.ngrxStore.select(n.VD)), (0, g.VS)(([[b, w], B]) => {
+                        let q = !0;
+                        return w && w === b && (q = "downloaded" === this.gameService.getProperty($.id, "status")), q && "downloading" !== B.gameBuild.status && "extracting" !== B.gameBuild.status && this.ngrxStore.dispatch(new t.ky({isUpdateRequired: q})), (0, d.of)(q)
                     }))
                 }
 
@@ -1658,99 +1647,106 @@
                     return "win32" === window.bridge.platform() ? "win" : "mac"
                 }
 
-                getLatestAssetsVersions(T, s) {
-                    const C = {platform: this.getUserPlatform(), branch: s};
-                    return window.bridge.httpPost("https://oyhca2oyje.execute-api.us-east-1.amazonaws.com/test/1/game/assets", C).pipe(this.utils.enterZone(this.zone))
+                getLatestAssetsVersions($, s) {
+                    const b = {platform: this.getUserPlatform(), branch: s};
+                    return window.bridge.httpPost("https://oyhca2oyje.execute-api.us-east-1.amazonaws.com/test/1/game/assets", b).pipe(this.utils.enterZone(this.zone))
                 }
 
-                getLocalAssetsVersions(T) {
-                    return this.gameService.getProperty(T.id, "assets") ? (0, c.of)(JSON.parse(this.gameService.getProperty(T.id, "assets"))) : (0, c.of)(null)
+                getLocalAssetsVersions($) {
+                    return this.gameService.getProperty($.id, "assets") ? (0, d.of)(JSON.parse(this.gameService.getProperty($.id, "assets"))) : (0, d.of)(null)
                 }
 
-                requiresAssetsUpdate(T, s) {
-                    return (0, i.$R)(this.getLocalAssetsVersions(T), this.getLatestAssetsVersions(T, s)).pipe((0, p.M)(this.ngrxStore.select(n.VD)), (0, r.w)(([[C, w], B]) => {
-                        let ee;
-                        return ee = C ? this.deltaAssetsVersions(C, w) : w, ee.length > 0 && "downloading" !== B.gameAssets.status && this.ngrxStore.dispatch(new t.Vm({isUpdateRequired: ee.length > 0})), (0, c.of)(ee)
+                requiresAssetsUpdate($, s) {
+                    return (0, i.$R)(this.getLocalAssetsVersions($), this.getLatestAssetsVersions($, s)).pipe((0, p.M)(this.ngrxStore.select(n.VD)), (0, r.w)(([[b, w], B]) => {
+                        let q;
+                        return q = b ? this.deltaAssetsVersions(b, w) : w, q.length > 0 && "downloading" !== B.gameAssets.status && this.ngrxStore.dispatch(new t.Vm({isUpdateRequired: q.length > 0})), (0, d.of)(q)
                     }))
                 }
 
-                deltaAssetsVersions(T, s) {
-                    let C = [];
-                    return C = T ? s ? s.filter(w => !T.some(B => w.etag === B.etag)) : [] : s, C
+                deltaAssetsVersions($, s) {
+                    let b = [];
+                    return b = $ ? s ? s.filter(w => !$.some(B => w.etag === B.etag)) : [] : s, b
                 }
 
-                getDownloadInfo(T, s, C) {
-                    return this.gameService.isObfuscatedBranch(T.id) ? {
-                        url: `${T.base_url_auth}/builds/game/${s}/${this.getFileName(T, s)}`,
-                        authToken: C
-                    } : {url: `${T.base_url}/builds/${s}/${this.getFileName(T, s)}`, authToken: void 0}
+                getDownloadInfo($, s, b) {
+                    return this.gameService.isObfuscatedBranch($.id) ? {
+                        url: `${$.base_url_auth}/builds/game/${s}/${this.getFileName($, s)}`,
+                        authToken: b
+                    } : {url: `${$.base_url}/builds/${s}/${this.getFileName($, s)}`, authToken: void 0}
                 }
 
-                getFileName(T, s) {
-                    return "win32" === window.bridge.platform() ? "gods_" + s + T.extensions.windows : "gods_" + s + T.extensions.osx
+                getFileName($, s) {
+                    return "win32" === window.bridge.platform() ? "gods_" + s + $.extensions.windows : "gods_" + s + $.extensions.osx
                 }
 
-                downloadAndExtract(T, s, C) {
-                    const w = this.gameService.getInstallPath(T), B = this.getDownloadInfo(T, s, C),
-                        ee = window.bridge.download(B.url, w, this.getFileName(T, s), C).pipe((0, m.U)(ce => (this.currentDownload.extracting = !0, this.gameService.setProperty(T.id, "version", s), this.gameService.setProperty(T.id, "status", "downloaded"), {
-                            game: T,
-                            fileName: this.getFileName(T, s),
+                downloadAndExtract($, s, b) {
+                    const w = this.gameService.getInstallPath($), B = this.getDownloadInfo($, s, b),
+                        q = window.bridge.download(B.url, w, this.getFileName($, s), b).pipe((0, m.U)(ce => (this.currentDownload.extracting = !0, this.gameService.setProperty($.id, "version", s), this.gameService.setProperty($.id, "status", "downloaded"), {
+                            game: $,
+                            fileName: this.getFileName($, s),
                             installPath: w
                         })));
                     return this.currentDownload = {
                         progress: window.bridge.progress,
-                        download: ee,
+                        download: q,
                         extracting: !1,
                         error$: new y.xQ
                     }, this.currentDownload
                 }
 
-                displayDownloadCompleteNotification(T) {
+                displayDownloadCompleteNotification($) {
                     new window.Notification("Download Complete", {
-                        body: T.title + " has finished downloading.",
+                        body: $.title + " has finished downloading.",
                         silent: !0
                     }).onclick = () => {
                     }
                 }
 
-                deleteFile(T, s) {
-                    const C = window.bridge.join(s, T);
-                    window.bridge.exists(C) && window.bridge.deleteFile(C)
+                deleteFile($, s) {
+                    const b = window.bridge.join(s, $);
+                    window.bridge.exists(b) && window.bridge.deleteFile(b)
                 }
 
-                extractGame(T, s, C) {
+                extractGame($, s, b) {
                     return new e.y(w => {
-                        const B = window.bridge.join(C, s), ee = window.bridge.join(C, T.title);
-                        window.bridge.exists(B) || (console.error("GameDownloadService->extractGame() unable to find file to extract"), w.error("File not found! Cannot extract.")), window.bridge.extract(B, ee, ce => {
-                            "win32" !== window.bridge.platform() ? window.bridge.chmod(ee + "/StandaloneOSXUniversal/gods.app/Contents/MacOS/gods", fe => {
-                                fe ? (console.error(fe), w.error(fe)) : w.next(!0)
+                        const B = window.bridge.join(b, s), q = window.bridge.join(b, $.title);
+                        window.bridge.exists(B) || (console.error("GameDownloadService->extractGame() unable to find file to extract"), w.error("File not found! Cannot extract.")), window.bridge.extract(B, q, ce => {
+                            "win32" !== window.bridge.platform() ? window.bridge.chmod(q + "/StandaloneOSXUniversal/gods.app/Contents/MacOS/gods", Ce => {
+                                Ce ? (console.error(Ce), w.error(Ce)) : w.next(!0)
                             }) : w.next(!0)
                         })
                     }).pipe((0, g.VS)(w => {
-                        if (w) return this.gameService.setProperty(T.id, "status", "extracted"), this.gameService.refreshGameContext(), null != this.currentDownload && (this.currentDownload.extracting = !1), (0, c.of)(w)
+                        if (w) return this.gameService.setProperty($.id, "status", "extracted"), this.gameService.refreshGameContext(), null != this.currentDownload && (this.currentDownload.extracting = !1), (0, d.of)(w)
                     }))
                 }
 
-                uninstallGame(T, s) {
-                    window.bridge.deleteFile(window.bridge.join(s, T.title))
+                uninstallGame($, s) {
+                    const B = "win32" === window.bridge.platform() ? "/StandaloneWindows64" : "/StandaloneOSXUniversal",
+                        q = window.bridge.join(s, $.title, B);
+                    window.bridge.exists(q) && this.uninstallFolder(q)
+                }
+
+                uninstallFolder($) {
+                    window.bridge.clearDirectory($, s => {
+                        s && console.log("@@@@@ uninstallFolder Error Clearing New Assets", s)
+                    })
                 }
             }
 
-            return S.\u0275fac = function (T) {
-                return new (T || S)(v.LFG(k.hM), v.LFG(v.R0b), v.LFG(P.F), v.LFG(I.yh))
-            }, S.\u0275prov = v.Yz7({token: S, factory: S.\u0275fac, providedIn: "root"}), S
+            return P.\u0275fac = function ($) {
+                return new ($ || P)(_.LFG(S.hM), _.LFG(_.R0b), _.LFG(k.F), _.LFG(L.yh))
+            }, P.\u0275prov = _.Yz7({token: P, factory: P.\u0275fac, providedIn: "root"}), P
         })()
-    },
-    79763: (se, R, o) => {
+    }, 79763: (se, U, o) => {
         "use strict";
-        o.d(R, {hM: () => S});
-        var c = o(591), i = o(61737), y = o(21086), e = o(24850), m = o(92198), p = o(72986), g = o(73307),
-            r = o(63764), t = o(80537), n = o(52492), v = o(5e3), k = o(66088), P = o(55778);
+        o.d(U, {hM: () => P});
+        var d = o(591), i = o(61737), y = o(21086), e = o(24850), m = o(92198), p = o(72986), g = o(73307),
+            r = o(63764), t = o(80537), n = o(52492), _ = o(5e3), S = o(66088), k = o(55778);
         o(63411);
-        let S = (() => {
-            class b {
-                constructor(s, C, w, B, ee, ce) {
-                    this.authHostService = s, this.auth = C, this.storage = w, this.modalService = B, this.akuma = ee, this.gameApi = ce, this._currentGameContext$ = new c.X(null), this._branches$ = new c.X([]), this.dataStore = {
+        let P = (() => {
+            class C {
+                constructor(s, b, w, B, q, ce) {
+                    this.authHostService = s, this.auth = b, this.storage = w, this.modalService = B, this.akuma = q, this.gameApi = ce, this._currentGameContext$ = new d.X(null), this._branches$ = new d.X([]), this.dataStore = {
                         currentGameContext: null,
                         branches: []
                     }
@@ -1765,29 +1761,29 @@
                 }
 
                 getBranch$(s) {
-                    const C = this.getProperty(s, "branch"), w = C && "" !== C ? C : "beta";
-                    return this.branches$.pipe((0, e.U)(B => B.find(ee => ee.name === w)), (0, m.h)(B => !!B))
+                    const b = this.getProperty(s, "branch"), w = b && "" !== b ? b : "beta";
+                    return this.branches$.pipe((0, e.U)(B => B.find(q => q.name === w)), (0, m.h)(B => !!B))
                 }
 
                 isObfuscatedBranch(s = 1) {
-                    const C = this.getProperty(s, "branch"), w = this.dataStore.branches.find(B => B.name === C);
+                    const b = this.getProperty(s, "branch"), w = this.dataStore.branches.find(B => B.name === b);
                     return w && w.obfuscated
                 }
 
-                onValidBranch(s, C) {
-                    return !(!s || !C.find(w => w.name === s))
+                onValidBranch(s, b) {
+                    return !(!s || !b.find(w => w.name === s))
                 }
 
                 fetchBranchesExtended(s) {
-                    const C = this.getProperty(s, "branch");
+                    const b = this.getProperty(s, "branch");
                     this.fetchBranchesExtendedApi(s).subscribe(w => {
-                        this.onValidBranch(C, w) || (this.setProperty(s, "branch", "beta"), this.refreshGameContext(), "string" == typeof C && (this.auth.logout(), setTimeout(() => window.location.reload()))), this.dataStore.branches = w, this._branches$.next([...this.dataStore.branches])
+                        this.onValidBranch(b, w) || (this.setProperty(s, "branch", "beta"), this.refreshGameContext(), "string" == typeof b && (this.auth.logout(), setTimeout(() => window.location.reload()))), this.dataStore.branches = w, this._branches$.next([...this.dataStore.branches])
                     })
                 }
 
                 fetchBranchesExtendedApi(s) {
-                    const C = this.auth.getUserId();
-                    return this.authHostService.get(`/game/${s}/player/${C}/branch?format=extended`).pipe((0, p.q)(1))
+                    const b = this.auth.getUserId();
+                    return this.authHostService.get(`/game/${s}/player/${b}/branch?format=extended`).pipe((0, p.q)(1))
                 }
 
                 setGuGameContext() {
@@ -1806,33 +1802,33 @@
                     return this.authHostService.get("/account/" + s + "/game")
                 }
 
-                getUserTutorialMissions(s, C) {
-                    return (!s || !C) && (s = this.auth.getUserId(), C = this.auth.getGameSessionTicket()), this.gameApi.get(`/user/${s}/tutorial?session=${C}`)
+                getUserTutorialMissions(s, b) {
+                    return (!s || !b) && (s = this.auth.getUserId(), b = this.auth.getGameSessionTicket()), this.gameApi.get(`/user/${s}/tutorial?session=${b}`)
                 }
 
-                updateUserTutorialMissions(s, C, w) {
-                    return (!s || !w) && (s = this.auth.getUserId(), w = this.auth.getGameSessionTicket()), this.gameApi.post(`/user/${s}/tutorial?session=${w}`, C)
+                updateUserTutorialMissions(s, b, w) {
+                    return (!s || !w) && (s = this.auth.getUserId(), w = this.auth.getGameSessionTicket()), this.gameApi.post(`/user/${s}/tutorial?session=${w}`, b)
                 }
 
-                setProcessID(s, C) {
+                setProcessID(s, b) {
                     null == this.sessions && (this.sessions = new Map);
                     const w = this.sessions.get(s);
-                    w && (w.pid = C, this.sessions.set(s, w))
+                    w && (w.pid = b, this.sessions.set(s, w))
                 }
 
                 isInstalled(s) {
-                    const C = this.getPlayPath(s), w = window.bridge.exists(C);
-                    return w || console.error("Game is not installed", C), w
+                    const b = this.getPlayPath(s), w = window.bridge.exists(b);
+                    return w || console.error("Game is not installed", b), w
                 }
 
-                play(s, C) {
+                play(s, b) {
                     const w = this.getPlayPath(s);
                     if (!this.isInstalled(s)) return console.error("gameService->play() game not intalled", s.id, s.title), (0, i._)(t.k.CODE_6);
                     let B;
-                    return B = C ? window.bridge.executeArgs(w, C, (ee, ce) => {
+                    return B = b ? window.bridge.executeArgs(w, b, (q, ce) => {
                         if (ce) return console.error("gameService->play()->window.bridge.executeArgs() error starting game", w, ce), (0, i._)(t.k.CODE_7);
                         this.logGameClientLaunched()
-                    }) : window.bridge.execute(w, (ee, ce) => {
+                    }) : window.bridge.execute(w, (q, ce) => {
                         if (ce) return console.error("gameService->play()->window.bridge.execute() error starting game", w, ce), (0, i._)(t.k.CODE_7);
                         this.logGameClientLaunched()
                     }), "win32" !== window.bridge.platform() && B.pid++, this.setProcessID(s.id, B.pid), (0, y.of)({process: B})
@@ -1843,12 +1839,12 @@
                 }
 
                 getPlayPath(s) {
-                    const C = this.getInstallPath(s), w = window.bridge.join(C, s.title);
+                    const b = this.getInstallPath(s), w = window.bridge.join(b, s.title);
                     return "win32" === window.bridge.platform() ? window.bridge.join(w, s.executables.windows) : window.bridge.join(w, s.executables.osx)
                 }
 
-                showInfoModal(s, C) {
-                    this.modalService.createModal(r.S, {title: s, text: C}, {
+                showInfoModal(s, b) {
+                    this.modalService.createModal(r.S, {title: s, text: b}, {
                         blurredBackground: !0,
                         canCloseFromInside: !1,
                         position: n.e1.Center,
@@ -1891,26 +1887,26 @@
                     return this.dataStore.currentGameContext ? this.dataStore.currentGameContext.id : null
                 }
 
-                getProperty(s, C) {
-                    return this.storage.get(["game", String(s), C])
+                getProperty(s, b) {
+                    return this.storage.get(["game", String(s), b])
                 }
 
-                deleteProperty(s, C) {
-                    return this.storage.delete(["game", String(s), C])
+                deleteProperty(s, b) {
+                    return this.storage.delete(["game", String(s), b])
                 }
 
-                setProperty(s, C, w) {
-                    return this.storage.set(["game", String(s), C], w)
+                setProperty(s, b, w) {
+                    return this.storage.set(["game", String(s), b], w)
                 }
 
                 getBranch(s) {
-                    const C = this.getProperty(s, "branch");
-                    return (0, y.of)(C && "" !== C ? C : "beta")
+                    const b = this.getProperty(s, "branch");
+                    return (0, y.of)(b && "" !== b ? b : "beta")
                 }
 
                 clearAssets(s) {
-                    this.setProperty(s, "assets", JSON.stringify([])), window.bridge.clearGUAssets(C => {
-                        console.error("Error Clearing New Assets", C)
+                    this.setProperty(s, "assets", JSON.stringify([])), window.bridge.clearGUAssets(b => {
+                        console.error("Error Clearing New Assets", b)
                     }), location.reload()
                 }
 
@@ -1926,15 +1922,14 @@
                 }
             }
 
-            return b.\u0275fac = function (s) {
-                return new (s || b)(v.LFG(g.LI), v.LFG(g.mI), v.LFG(g.qy), v.LFG(k.Z), v.LFG(P.jt), v.LFG(P.Ft))
-            }, b.\u0275prov = v.Yz7({token: b, factory: b.\u0275fac, providedIn: "root"}), b
+            return C.\u0275fac = function (s) {
+                return new (s || C)(_.LFG(g.LI), _.LFG(g.mI), _.LFG(g.qy), _.LFG(S.Z), _.LFG(k.jt), _.LFG(k.Ft))
+            }, C.\u0275prov = _.Yz7({token: C, factory: C.\u0275fac, providedIn: "root"}), C
         })()
-    },
-    24058: (se, R, o) => {
+    }, 24058: (se, U, o) => {
         "use strict";
-        o.d(R, {m: () => y});
-        var c = o(73307), i = o(5e3);
+        o.d(U, {m: () => y});
+        var d = o(73307), i = o(5e3);
         let y = (() => {
             class e {
                 constructor(p) {
@@ -1964,34 +1959,32 @@
             }
 
             return e.\u0275fac = function (p) {
-                return new (p || e)(i.LFG(c.qy))
+                return new (p || e)(i.LFG(d.qy))
             }, e.\u0275prov = i.Yz7({token: e, factory: e.\u0275fac, providedIn: "root"}), e
         })()
-    },
-    52492: (se, R, o) => {
+    }, 52492: (se, U, o) => {
         "use strict";
-        o.d(R, {e1: () => c, Cg: () => i});
-        var c = (() => {
-            return (e = c || (c = {}))[e.Center = 0] = "Center", e[e.Custom = 1] = "Custom", c;
+        o.d(U, {e1: () => d, Cg: () => i});
+        var d = (() => {
+            return (e = d || (d = {}))[e.Center = 0] = "Center", e[e.Custom = 1] = "Custom", d;
             var e
         })(), i = (() => {
             return (e = i || (i = {}))[e.Fullscreen = 0] = "Fullscreen", e[e.Workarea = 1] = "Workarea", e[e.StretchableFullscreen = 2] = "StretchableFullscreen", e[e.StretchableWorkarea = 3] = "StretchableWorkarea", i;
             var e
         })()
-    },
-    66088: (se, R, o) => {
+    }, 66088: (se, U, o) => {
         "use strict";
-        o.d(R, {Z: () => P});
-        var c = o(8929), i = o(2994), y = o(48031), e = o(5e3), m = o(22313), p = o(69808);
+        o.d(U, {Z: () => k});
+        var d = o(8929), i = o(2994), y = o(48031), e = o(5e3), m = o(22313), p = o(69808);
         const g = ["modalHolder"];
 
-        function r(I, A) {
+        function r(L, D) {
         }
 
         let t = (() => {
-            class I {
-                constructor(f, O, S) {
-                    this.resolver = f, this.sanitizer = O, this.el = S, this.blurredBackground = !1, this.canCloseFromInside = !1, this.canCloseFromOutside = !0, this.closeModal$ = new e.vpe
+            class L {
+                constructor(v, O, P) {
+                    this.resolver = v, this.sanitizer = O, this.el = P, this.blurredBackground = !1, this.canCloseFromInside = !1, this.canCloseFromOutside = !0, this.closeModal$ = new e.vpe
                 }
 
                 get myStyle() {
@@ -1999,8 +1992,8 @@
                 }
 
                 ngOnInit() {
-                    const f = this.resolver.resolveComponentFactory(this.component);
-                    this.componentRef = this.modalHolder.createComponent(f, 0, this.modalHolder.injector, [[]]), Object.assign(this.componentRef.instance, this.inputs), this.calculateLocation()
+                    const v = this.resolver.resolveComponentFactory(this.component);
+                    this.componentRef = this.modalHolder.createComponent(v, 0, this.modalHolder.injector, [[]]), Object.assign(this.componentRef.instance, this.inputs), this.calculateLocation()
                 }
 
                 ngOnDestroy() {
@@ -2010,28 +2003,28 @@
                 calculateLocation() {
                 }
 
-                closeModal(f) {
-                    f && !this.canCloseFromInside || !f && this.canCloseFromOutside && this.closeModal$.emit()
+                closeModal(v) {
+                    v && !this.canCloseFromInside || !v && this.canCloseFromOutside && this.closeModal$.emit()
                 }
 
-                onClickedOutside(f) {
+                onClickedOutside(v) {
                 }
             }
 
-            return I.\u0275fac = function (f) {
-                return new (f || I)(e.Y36(e._Vd), e.Y36(m.H7), e.Y36(e.SBq))
-            }, I.\u0275cmp = e.Xpm({
-                type: I,
+            return L.\u0275fac = function (v) {
+                return new (v || L)(e.Y36(e._Vd), e.Y36(m.H7), e.Y36(e.SBq))
+            }, L.\u0275cmp = e.Xpm({
+                type: L,
                 selectors: [["app-modal"]],
-                viewQuery: function (f, O) {
-                    if (1 & f && e.Gf(g, 7, e.s_b), 2 & f) {
-                        let S;
-                        e.iGM(S = e.CRH()) && (O.modalHolder = S.first)
+                viewQuery: function (v, O) {
+                    if (1 & v && e.Gf(g, 7, e.s_b), 2 & v) {
+                        let P;
+                        e.iGM(P = e.CRH()) && (O.modalHolder = P.first)
                     }
                 },
                 hostVars: 2,
-                hostBindings: function (f, O) {
-                    2 & f && e.Akn(O.myStyle)
+                hostBindings: function (v, O) {
+                    2 & v && e.Akn(O.myStyle)
                 },
                 inputs: {
                     component: "component",
@@ -2045,56 +2038,56 @@
                 decls: 4,
                 vars: 1,
                 consts: [[1, "bgOverlay", 3, "click"], [1, "modalContentContainer", 3, "ngStyle", "click"], ["modalHolder", ""]],
-                template: function (f, O) {
-                    1 & f && (e.TgZ(0, "a", 0), e.NdJ("click", function () {
+                template: function (v, O) {
+                    1 & v && (e.TgZ(0, "a", 0), e.NdJ("click", function () {
                         return O.closeModal(!1)
                     }), e.qZA(), e.TgZ(1, "div", 1), e.NdJ("click", function () {
                         return O.closeModal(!0)
-                    }), e.YNc(2, r, 0, 0, "ng-template", null, 2, e.W1O), e.qZA()), 2 & f && (e.xp6(1), e.Q6J("ngStyle", O.styles))
+                    }), e.YNc(2, r, 0, 0, "ng-template", null, 2, e.W1O), e.qZA()), 2 & v && (e.xp6(1), e.Q6J("ngStyle", O.styles))
                 },
                 directives: [p.PC],
                 styles: ["@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{position:fixed;top:0;left:0;width:100%;height:100%;display:block}.bgOverlay[_ngcontent-%COMP%]{position:absolute;right:0;left:0;top:0;bottom:0;background-color:#0c1620;opacity:.7}.bgOverlay--transparent[_ngcontent-%COMP%]{background:transparent}.modalContentContainer[_ngcontent-%COMP%]{position:absolute;top:0;left:0;opacity:1}"]
-            }), I
+            }), L
         })();
-        var n = o(52492), v = o(44416), k = o(6674);
-        let P = (() => {
-            class I {
-                constructor(f, O, S, b, T) {
-                    this.resolver = f, this.appRef = O, this.utilsService = b, this.resizeService = T, this._modalDestroy$ = new c.xQ, this.modalsStack = [], this.modalFactory = this.resolver.resolveComponentFactory(t), this.renderer = S.createRenderer(null, null), this.resizeService.viewPortUnits$.pipe((0, i.b)(({vh: s}) => this.vh = s)).subscribe()
+        var n = o(52492), _ = o(44416), S = o(6674);
+        let k = (() => {
+            class L {
+                constructor(v, O, P, C, $) {
+                    this.resolver = v, this.appRef = O, this.utilsService = C, this.resizeService = $, this._modalDestroy$ = new d.xQ, this.modalsStack = [], this.modalFactory = this.resolver.resolveComponentFactory(t), this.renderer = P.createRenderer(null, null), this.resizeService.viewPortUnits$.pipe((0, i.b)(({vh: s}) => this.vh = s)).subscribe()
                 }
 
-                setModalVCRs(f, O) {
-                    this.workareaVcr = f, this.fullscreenVcr = O
+                setModalVCRs(v, O) {
+                    this.workareaVcr = v, this.fullscreenVcr = O
                 }
 
                 get modalDestroy$() {
                     return this._modalDestroy$.asObservable()
                 }
 
-                createModal(f, O = {}, {
-                    canCloseFromInside: S = !1,
-                    canCloseFromOutside: b = !0,
-                    blurredBackground: T = !1,
+                createModal(v, O = {}, {
+                    canCloseFromInside: P = !1,
+                    canCloseFromOutside: C = !0,
+                    blurredBackground: $ = !1,
                     position: s = n.e1.Center,
-                    customPosition: C = null,
+                    customPosition: b = null,
                     size: w = n.Cg.StretchableFullscreen
                 } = {}, B) {
-                    const ee = B || this.getVCR(w), ce = this.getModalHolderStyles(s, w, C);
-                    0 === this.modalsStack.length && (this.renderer.addClass(ee.element.nativeElement.parentElement, "addModalBlurBackground"), this.modalsStack.push({
-                        vcr: ee,
-                        nativeElement: ee.element.nativeElement,
-                        parentElement: ee.element.nativeElement.parentElement
+                    const q = B || this.getVCR(w), ce = this.getModalHolderStyles(s, w, b);
+                    0 === this.modalsStack.length && (this.renderer.addClass(q.element.nativeElement.parentElement, "addModalBlurBackground"), this.modalsStack.push({
+                        vcr: q,
+                        nativeElement: q.element.nativeElement,
+                        parentElement: q.element.nativeElement.parentElement
                     }));
-                    const de = this.createModalComponent(f, O, ee, ce, T, S, b);
+                    const de = this.createModalComponent(v, O, q, ce, $, P, C);
                     this.modalsStack.push({
                         component: de,
-                        vcr: ee,
+                        vcr: q,
                         nativeElement: de.instance.el.nativeElement
                     }), this.updateBlur()
                 }
 
-                getVCR(f) {
-                    switch (f) {
+                getVCR(v) {
+                    switch (v) {
                         case n.Cg.Fullscreen:
                         case n.Cg.StretchableFullscreen:
                             return this.fullscreenVcr || this.appRef.components[0].instance.vcr;
@@ -2104,43 +2097,43 @@
                     }
                 }
 
-                getModalHolderStyles(f, O, S) {
-                    if (f === n.e1.Custom) {
-                        (null === S || 2 !== S.split(":").length) && console.error("Provide valid customPosition (SELECTOR:POSITION ex. '#elementId:left')");
-                        const b = S.split(":");
-                        return Object.assign(Object.assign({}, this.getRelativePos(b[0], b[1])), {zIndex: O === n.Cg.Workarea ? y.Rl.measurements.headerBarZLevel - 1 : y.Rl.measurements.modalLayerZLevel})
+                getModalHolderStyles(v, O, P) {
+                    if (v === n.e1.Custom) {
+                        (null === P || 2 !== P.split(":").length) && console.error("Provide valid customPosition (SELECTOR:POSITION ex. '#elementId:left')");
+                        const C = P.split(":");
+                        return Object.assign(Object.assign({}, this.getRelativePos(C[0], C[1])), {zIndex: O === n.Cg.Workarea ? y.Rl.measurements.headerBarZLevel - 1 : y.Rl.measurements.modalLayerZLevel})
                     }
-                    return Object.assign(Object.assign({}, this.getBoundaries(f, O)), {zIndex: O === n.Cg.Workarea ? y.Rl.measurements.headerBarZLevel - 1 : y.Rl.measurements.modalLayerZLevel})
+                    return Object.assign(Object.assign({}, this.getBoundaries(v, O)), {zIndex: O === n.Cg.Workarea ? y.Rl.measurements.headerBarZLevel - 1 : y.Rl.measurements.modalLayerZLevel})
                 }
 
                 destroyTopModal() {
                     if (0 === this.modalsStack.length) return;
-                    const f = this.modalsStack.pop();
-                    this._modalDestroy$.next(f.component.componentType), f.component && f.component.destroy(), f.component = null, this.updateBlur(), 1 === this.modalsStack.length && (this.renderer.removeClass(this.modalsStack[0].parentElement, "addModalBlurBackground"), this.modalsStack = [])
+                    const v = this.modalsStack.pop();
+                    this._modalDestroy$.next(v.component.componentType), v.component && v.component.destroy(), v.component = null, this.updateBlur(), 1 === this.modalsStack.length && (this.renderer.removeClass(this.modalsStack[0].parentElement, "addModalBlurBackground"), this.modalsStack = [])
                 }
 
                 destroyModalsStack() {
-                    0 !== this.modalsStack.length && (this.modalsStack.filter(f => f.component).forEach(f => {
-                        this._modalDestroy$.next(f.component.componentType), f.component.destroy(), f.component = null, f.nativeElement = null
+                    0 !== this.modalsStack.length && (this.modalsStack.filter(v => v.component).forEach(v => {
+                        this._modalDestroy$.next(v.component.componentType), v.component.destroy(), v.component = null, v.nativeElement = null
                     }), this.updateBlur(), this.renderer.removeClass(this.modalsStack[0].parentElement, "addModalBlurBackground"), this.modalsStack = [])
                 }
 
-                createModalComponent(f, O, S, b, T, s, C) {
-                    const w = S.createComponent(this.modalFactory, this.modalsStack.length - 1, S.injector, [[]]);
+                createModalComponent(v, O, P, C, $, s, b) {
+                    const w = P.createComponent(this.modalFactory, this.modalsStack.length - 1, P.injector, [[]]);
                     return Object.assign(w.instance, {
-                        styles: b,
-                        blurredBackground: T,
+                        styles: C,
+                        blurredBackground: $,
                         canCloseFromInside: s,
-                        canCloseFromOutside: C,
-                        component: f,
+                        canCloseFromOutside: b,
+                        component: v,
                         inputs: O
                     }), w.instance.closeModal$.subscribe(() => {
-                        S.remove(), this.destroyTopModal()
+                        P.remove(), this.destroyTopModal()
                     }), w
                 }
 
-                getBoundaries(f, O) {
-                    if (f === n.e1.Center) {
+                getBoundaries(v, O) {
+                    if (v === n.e1.Center) {
                         if (O === n.Cg.StretchableFullscreen || O === n.Cg.StretchableWorkarea) return {
                             "top.%": 50,
                             "left.%": 50,
@@ -2148,35 +2141,35 @@
                         };
                         if (O === n.Cg.Fullscreen || O === n.Cg.Workarea) return {top: 0, bottom: 0, left: 0, right: 0};
                         console.error(`Size '${O}' not supported`)
-                    } else console.error(`Position '${f}' not supported`)
+                    } else console.error(`Position '${v}' not supported`)
                 }
 
-                getRelativePos(f, O) {
-                    const b = window.document.querySelector(f).getBoundingClientRect();
+                getRelativePos(v, O) {
+                    const C = window.document.querySelector(v).getBoundingClientRect();
                     switch (O) {
                         case"left":
                             return {
-                                "right.px": document.body.clientWidth - b.right + b.width + 15,
-                                "top.px": b.top + b.height / 2,
+                                "right.px": document.body.clientWidth - C.right + C.width + 15,
+                                "top.px": C.top + C.height / 2,
                                 transform: "translateY(-50%)"
                             };
                         case"right":
                             return {
-                                "left.px": b.right + 15,
-                                "top.px": b.top + b.height / 2,
+                                "left.px": C.right + 15,
+                                "top.px": C.top + C.height / 2,
                                 transform: "translateY(-50%)"
                             };
                         case"top":
                             return {
                                 top: "unset",
-                                "bottom.px": document.body.clientHeight - b.bottom + b.height + 15,
-                                "left.px": b.left + b.width / 2,
+                                "bottom.px": document.body.clientHeight - C.bottom + C.height + 15,
+                                "left.px": C.left + C.width / 2,
                                 transform: "translateX(-50%)"
                             };
                         case"bottom":
                             return {
-                                "top.px": b.bottom + 15,
-                                "left.px": b.left + b.width / 2,
+                                "top.px": C.bottom + 15,
+                                "left.px": C.left + C.width / 2,
                                 transform: "translateX(-50%)"
                             }
                     }
@@ -2184,31 +2177,30 @@
                 }
 
                 updateBlur() {
-                    if (this.modalsStack.filter(f => !!f.nativeElement).forEach(f => this.setBlurredBackground(f.nativeElement, !1)), this.modalsStack.length > 1) {
-                        const f = this.utilsService.findLastIndex(this.modalsStack, O => O.component && O.component.instance && O.component.instance.blurredBackground);
-                        f > 0 && this.setBlurredBackground(this.modalsStack[f].nativeElement, !0)
+                    if (this.modalsStack.filter(v => !!v.nativeElement).forEach(v => this.setBlurredBackground(v.nativeElement, !1)), this.modalsStack.length > 1) {
+                        const v = this.utilsService.findLastIndex(this.modalsStack, O => O.component && O.component.instance && O.component.instance.blurredBackground);
+                        v > 0 && this.setBlurredBackground(this.modalsStack[v].nativeElement, !0)
                     }
                 }
 
-                setBlurredBackground(f, O) {
-                    let S;
-                    f instanceof Comment ? S = f.previousSibling : (S = f, this.renderer.setStyle(f, "backgroundColor", O ? "rgba(29,47,65, 0.6)" : "unset")), this.renderer.setStyle(S, "backdrop-filter", O ? `blur(${1.5 * this.vh}px)` : "none")
+                setBlurredBackground(v, O) {
+                    let P;
+                    v instanceof Comment ? P = v.previousSibling : (P = v, this.renderer.setStyle(v, "backgroundColor", O ? "rgba(29,47,65, 0.6)" : "unset")), this.renderer.setStyle(P, "backdrop-filter", O ? `blur(${1.5 * this.vh}px)` : "none")
                 }
             }
 
-            return I.\u0275fac = function (f) {
-                return new (f || I)(e.LFG(e._Vd), e.LFG(e.z2F), e.LFG(e.FYo), e.LFG(v.F), e.LFG(k._))
-            }, I.\u0275prov = e.Yz7({token: I, factory: I.\u0275fac}), I
+            return L.\u0275fac = function (v) {
+                return new (v || L)(e.LFG(e._Vd), e.LFG(e.z2F), e.LFG(e.FYo), e.LFG(_.F), e.LFG(S._))
+            }, L.\u0275prov = e.Yz7({token: L, factory: L.\u0275fac}), L
         })()
-    },
-    77391: (se, R, o) => {
+    }, 77391: (se, U, o) => {
         "use strict";
-        o.d(R, {f: () => y});
-        var c = o(591), i = o(5e3);
+        o.d(U, {f: () => y});
+        var d = o(591), i = o(5e3);
         let y = (() => {
             class e {
                 constructor() {
-                    this._currentRoute$ = new c.X("")
+                    this._currentRoute$ = new d.X("")
                 }
 
                 get currentRoute$() {
@@ -2224,11 +2216,10 @@
                 return new (p || e)
             }, e.\u0275prov = i.Yz7({token: e, factory: e.\u0275fac, providedIn: "root"}), e
         })()
-    },
-    236: (se, R, o) => {
+    }, 236: (se, U, o) => {
         "use strict";
-        o.d(R, {u: () => i});
-        var c = o(5e3);
+        o.d(U, {u: () => i});
+        var d = o(5e3);
         let i = (() => {
             class y {
                 transform(m) {
@@ -2239,17 +2230,16 @@
 
             return y.\u0275fac = function (m) {
                 return new (m || y)
-            }, y.\u0275pipe = c.Yjl({name: "duration", type: y, pure: !0}), y
+            }, y.\u0275pipe = d.Yjl({name: "duration", type: y, pure: !0}), y
         })()
-    },
-    83035: (se, R, o) => {
+    }, 83035: (se, U, o) => {
         "use strict";
-        o.d(R, {g: () => r});
-        var c = o(59633), y = o(591), e = o(1059), m = o(92198), p = o(5e3), g = o(55778);
+        o.d(U, {g: () => r});
+        var d = o(59633), y = o(591), e = o(1059), m = o(92198), p = o(5e3), g = o(55778);
         let r = (() => {
             class t {
-                constructor(v, k) {
-                    this.analyticsService = v, this.akumaService = k, this.dataStore = {activeQueues: []}, this._activeQueues$ = new y.X([]), this._queueStatus$ = new y.X(null)
+                constructor(_, S) {
+                    this.analyticsService = _, this.akumaService = S, this.dataStore = {activeQueues: []}, this._activeQueues$ = new y.X([]), this._queueStatus$ = new y.X(null)
                 }
 
                 get queueStatus$() {
@@ -2264,91 +2254,90 @@
                     this._activeQueues$.next(Object.assign({}, this.dataStore).activeQueues)
                 }
 
-                enqueue(v) {
-                    this.dataStore.activeQueues.push(v), this._emitQueues()
+                enqueue(_) {
+                    this.dataStore.activeQueues.push(_), this._emitQueues()
                 }
 
-                dequeue(v) {
-                    this.dataStore.activeQueues = this.dataStore.activeQueues.filter(k => k !== v), this._emitQueues()
+                dequeue(_) {
+                    this.dataStore.activeQueues = this.dataStore.activeQueues.filter(S => S !== _), this._emitQueues()
                 }
 
-                start(v, k, P) {
-                    const I = {game_id: v, mode: k, startTimestamp: (new Date).getTime(), status: "active", params: P};
-                    return this.enqueue(I), this._queueStatus$.next(I), this.logQueueStarted(I), this.getQueueSubset(f => f === I).pipe((0, e.O)(I))
+                start(_, S, k) {
+                    const L = {game_id: _, mode: S, startTimestamp: (new Date).getTime(), status: "active", params: k};
+                    return this.enqueue(L), this._queueStatus$.next(L), this.logQueueStarted(L), this.getQueueSubset(v => v === L).pipe((0, e.O)(L))
                 }
 
-                cancel(v) {
-                    this.dataStore.activeQueues = this.dataStore.activeQueues.filter(k => k && (k.game_id !== v.game_id || k.mode.id !== v.mode.id)), v.status = "cancelled", v.startTimestamp = null, this._queueStatus$.next(v), this._emitQueues(), this.logQueueCancelled(v)
+                cancel(_) {
+                    this.dataStore.activeQueues = this.dataStore.activeQueues.filter(S => S && (S.game_id !== _.game_id || S.mode.id !== _.mode.id)), _.status = "cancelled", _.startTimestamp = null, this._queueStatus$.next(_), this._emitQueues(), this.logQueueCancelled(_)
                 }
 
-                complete(v) {
-                    this.dataStore.activeQueues = this.dataStore.activeQueues.filter(k => k && (k.game_id !== v.game_id || k.mode.id !== v.mode.id)), v.status = "completed", v.startTimestamp = null, this._queueStatus$.next(v), this._emitQueues(), this.logQueueCompleted(v)
+                complete(_) {
+                    this.dataStore.activeQueues = this.dataStore.activeQueues.filter(S => S && (S.game_id !== _.game_id || S.mode.id !== _.mode.id)), _.status = "completed", _.startTimestamp = null, this._queueStatus$.next(_), this._emitQueues(), this.logQueueCompleted(_)
                 }
 
                 stopAllQueues() {
-                    this.dataStore.activeQueues.forEach(v => this.cancel(v))
+                    this.dataStore.activeQueues.forEach(_ => this.cancel(_))
                 }
 
-                getQueue(v, k) {
-                    return this.getQueueSubset(P => P && P.game_id === v && P.mode.id === k)
+                getQueue(_, S) {
+                    return this.getQueueSubset(k => k && k.game_id === _ && k.mode.id === S)
                 }
 
-                getGameQueues(v) {
-                    return this.getQueueSubset(k => k && k.game_id === v)
+                getGameQueues(_) {
+                    return this.getQueueSubset(S => S && S.game_id === _)
                 }
 
-                getQueueSubset(v) {
-                    return this.queueStatus$.pipe((0, m.h)(k => v(k)))
+                getQueueSubset(_) {
+                    return this.queueStatus$.pipe((0, m.h)(S => _(S)))
                 }
 
-                logQueueCancelled(v) {
+                logQueueCancelled(_) {
                     "function" == typeof gtag && gtag("event", "failed", {event_category: "queue"});
-                    const k = {
-                        game_id: v.game_id,
-                        mode_id: v.mode.id,
-                        mode_name: v.mode.name,
+                    const S = {
+                        game_id: _.game_id,
+                        mode_id: _.mode.id,
+                        mode_name: _.mode.name,
                         button_state: "queue_cancelled"
                     };
-                    this.analyticsService.postEvent(new c.Queue.Cancelled.Event(k)), this.akumaService.postEvent("Flow", "_queue_failed", k), this.akumaService.postEvent("Control", "arenaHomeGameStartBtn_pressed", k)
+                    this.analyticsService.postEvent(new d.Queue.Cancelled.Event(S)), this.akumaService.postEvent("Flow", "_queue_failed", S), this.akumaService.postEvent("Control", "arenaHomeGameStartBtn_pressed", S)
                 }
 
-                logQueueCompleted(v) {
+                logQueueCompleted(_) {
                     "function" == typeof gtag && gtag("event", "succeeded", {event_category: "queue"});
-                    const k = {
-                        game_id: v.game_id,
-                        mode_id: v.mode.id,
-                        mode_name: v.mode.name,
+                    const S = {
+                        game_id: _.game_id,
+                        mode_id: _.mode.id,
+                        mode_name: _.mode.name,
                         button_state: "queue_completed"
                     };
-                    this.analyticsService.postEvent(new c.Queue.Completed.Event(k)), this.akumaService.postEvent("Flow", "_queue_succeeded", k)
+                    this.analyticsService.postEvent(new d.Queue.Completed.Event(S)), this.akumaService.postEvent("Flow", "_queue_succeeded", S)
                 }
 
-                logQueueStarted(v) {
+                logQueueStarted(_) {
                     "function" == typeof gtag && gtag("event", "started", {event_category: "queue"});
-                    const k = {
-                        game_id: v.game_id,
-                        mode_id: v.mode.id,
-                        mode_name: v.mode.name,
+                    const S = {
+                        game_id: _.game_id,
+                        mode_id: _.mode.id,
+                        mode_name: _.mode.name,
                         button_state: "queue_started"
                     };
-                    this.analyticsService.postEvent(new c.Queue.Started.Event(k)), this.akumaService.postEvent("Flow", "_queue_started", k), this.akumaService.postEvent("Control", "arenaHomeGameStartBtn_pressed", k)
+                    this.analyticsService.postEvent(new d.Queue.Started.Event(S)), this.akumaService.postEvent("Flow", "_queue_started", S), this.akumaService.postEvent("Control", "arenaHomeGameStartBtn_pressed", S)
                 }
             }
 
-            return t.\u0275fac = function (v) {
-                return new (v || t)(p.LFG(g.yD), p.LFG(g.jt))
+            return t.\u0275fac = function (_) {
+                return new (_ || t)(p.LFG(g.yD), p.LFG(g.jt))
             }, t.\u0275prov = p.Yz7({token: t, factory: t.\u0275fac, providedIn: "root"}), t
         })()
-    },
-    6674: (se, R, o) => {
+    }, 6674: (se, U, o) => {
         "use strict";
-        o.d(R, {_: () => v});
-        var c = o(8929), i = o(591), y = o(23753), e = o(80013), m = o(92198), p = o(2994), g = o(7625), r = o(73307),
+        o.d(U, {_: () => _});
+        var d = o(8929), i = o(591), y = o(23753), e = o(80013), m = o(92198), p = o(2994), g = o(7625), r = o(73307),
             t = o(5e3), n = o(44416);
-        let v = (() => {
-            class k {
-                constructor(I, A, f) {
-                    this.utils = I, this.zone = A, this.storage = f, this.unsubscribe = new c.xQ, this._windowSize$ = new i.X({
+        let _ = (() => {
+            class S {
+                constructor(L, D, v) {
+                    this.utils = L, this.zone = D, this.storage = v, this.unsubscribe = new d.xQ, this._windowSize$ = new i.X({
                         width: 0,
                         height: 0
                     }), this._viewPortUnits$ = new i.X({
@@ -2369,21 +2358,21 @@
                     this.unsubscribe.next(), this.unsubscribe.complete()
                 }
 
-                onResize(I) {
-                    this._windowSize$.next({width: I.target.innerWidth, height: I.target.innerHeight})
+                onResize(L) {
+                    this._windowSize$.next({width: L.target.innerWidth, height: L.target.innerHeight})
                 }
 
-                setViewPortUnits({vh: I, vw: A}) {
-                    this._viewPortUnits$.next({vw: A, vh: I})
+                setViewPortUnits({vh: L, vw: D}) {
+                    this._viewPortUnits$.next({vw: D, vh: L})
                 }
 
                 watchWindowResize() {
-                    (0, y.R)(window, "resize").pipe((0, e.b)(100)).subscribe(I => this.onResize(I))
+                    (0, y.R)(window, "resize").pipe((0, e.b)(100)).subscribe(L => this.onResize(L))
                 }
 
                 watchClientResize() {
-                    this._currentDisplaySize = window.bridge.getDisplaySize(), window.bridge.displayMetricsChange$.pipe(this.utils.enterZone(this.zone), (0, m.h)(I => this.displayMetricsDiffer(I)), (0, p.b)(I => {
-                        this._currentDisplaySize = I, this.resizeClient(this.currentClientSize)
+                    this._currentDisplaySize = window.bridge.getDisplaySize(), window.bridge.displayMetricsChange$.pipe(this.utils.enterZone(this.zone), (0, m.h)(L => this.displayMetricsDiffer(L)), (0, p.b)(L => {
+                        this._currentDisplaySize = L, this.resizeClient(this.currentClientSize)
                     })).subscribe()
                 }
 
@@ -2391,44 +2380,43 @@
                     return this.storage.get([this.ClientSize]) || "medium"
                 }
 
-                resizeClient(I) {
-                    const A = k.clientSizes.find(O => O.name === I);
-                    if (!A) return void console.error(`Client Size: ${I}, not supported`);
-                    this.storage.set([this.ClientSize], A.name);
-                    const f = this.calcClientSize(A.displayPortion, this._currentDisplaySize.width);
-                    window.bridge.setClientSize(f.width, f.height, !0, !0)
+                resizeClient(L) {
+                    const D = S.clientSizes.find(O => O.name === L);
+                    if (!D) return void console.error(`Client Size: ${L}, not supported`);
+                    this.storage.set([this.ClientSize], D.name);
+                    const v = this.calcClientSize(D.displayPortion, this._currentDisplaySize.width);
+                    window.bridge.setClientSize(v.width, v.height, !0, !0)
                 }
 
-                calcClientSize(I, A) {
-                    const f = Math.floor(A * I);
-                    return {width: f, height: Math.floor(9 * f / 16)}
+                calcClientSize(L, D) {
+                    const v = Math.floor(D * L);
+                    return {width: v, height: Math.floor(9 * v / 16)}
                 }
 
-                displayMetricsDiffer(I) {
-                    return I.width !== this._currentDisplaySize.width && I.height !== this._currentDisplaySize.height
+                displayMetricsDiffer(L) {
+                    return L.width !== this._currentDisplaySize.width && L.height !== this._currentDisplaySize.height
                 }
 
                 updateBridgeClientViewport() {
-                    this.viewPortUnits$.pipe((0, m.h)(() => "function" == typeof window.bridge.updateViewportUnits), (0, p.b)(I => window.bridge.updateViewportUnits(I)), (0, g.R)(this.unsubscribe)).subscribe()
+                    this.viewPortUnits$.pipe((0, m.h)(() => "function" == typeof window.bridge.updateViewportUnits), (0, p.b)(L => window.bridge.updateViewportUnits(L)), (0, g.R)(this.unsubscribe)).subscribe()
                 }
             }
 
-            return k.clientSizes = [{name: "small", displayPortion: .5}, {
+            return S.clientSizes = [{name: "small", displayPortion: .5}, {
                 name: "medium",
                 displayPortion: .75
-            }, {name: "large", displayPortion: .85}], k.\u0275fac = function (I) {
-                return new (I || k)(t.LFG(n.F), t.LFG(t.R0b), t.LFG(r.qy))
-            }, k.\u0275prov = t.Yz7({token: k, factory: k.\u0275fac}), k
+            }, {name: "large", displayPortion: .85}], S.\u0275fac = function (L) {
+                return new (L || S)(t.LFG(n.F), t.LFG(t.R0b), t.LFG(r.qy))
+            }, S.\u0275prov = t.Yz7({token: S, factory: S.\u0275fac}), S
         })()
-    },
-    5969: (se, R, o) => {
+    }, 5969: (se, U, o) => {
         "use strict";
-        o.d(R, {g: () => y});
-        var c = o(591), i = o(5e3);
+        o.d(U, {g: () => y});
+        var d = o(591), i = o(5e3);
         let y = (() => {
             class e {
                 constructor() {
-                    this._openSettings$ = new c.X(null)
+                    this._openSettings$ = new d.X(null)
                 }
 
                 get openSettings$() {
@@ -2448,11 +2436,10 @@
                 return new (p || e)
             }, e.\u0275prov = i.Yz7({token: e, factory: e.\u0275fac}), e
         })()
-    },
-    44416: (se, R, o) => {
+    }, 44416: (se, U, o) => {
         "use strict";
-        o.d(R, {F: () => p});
-        var c = o(52886), i = o(56498), y = o(57674), e = o(5e3), m = o(55778);
+        o.d(U, {F: () => p});
+        var d = o(52886), i = o(56498), y = o(57674), e = o(5e3), m = o(55778);
         let p = (() => {
             class g {
                 constructor(t) {
@@ -2469,100 +2456,100 @@
                     return t = Math.ceil(t), n = Math.floor(n), Math.floor(Math.random() * (n - t + 1)) + t
                 }
 
-                arrayToMap(t, n, v) {
-                    return t ? t.reduce((k, P) => (k[n(P)] = v(P), k), {}) : {}
+                arrayToMap(t, n, _) {
+                    return t ? t.reduce((S, k) => (S[n(k)] = _(k), S), {}) : {}
                 }
 
                 groupBy(t, n) {
-                    const v = new Map;
-                    return t.forEach(k => {
-                        const P = n(k), I = v.get(P);
-                        I ? I.push(k) : v.set(P, [k])
-                    }), v
+                    const _ = new Map;
+                    return t.forEach(S => {
+                        const k = n(S), L = _.get(k);
+                        L ? L.push(S) : _.set(k, [S])
+                    }), _
                 }
 
-                convertIdsToCards(t, n, v) {
-                    const k = [];
-                    for (const P in n) if (n[P]) {
-                        const I = v.get(parseInt(P));
-                        n[P].forEach(A => {
-                            if (-1 !== t.indexOf(A.id)) {
-                                const f = new c.Zb(A.id, parseInt(P), A.q, I, A.status);
-                                k.push(f)
+                convertIdsToCards(t, n, _) {
+                    const S = [];
+                    for (const k in n) if (n[k]) {
+                        const L = _.get(parseInt(k));
+                        n[k].forEach(D => {
+                            if (-1 !== t.indexOf(D.id)) {
+                                const v = new d.Zb(D.id, parseInt(k), D.q, L, D.status);
+                                S.push(v)
                             }
                         })
                     }
-                    return k
+                    return S
                 }
 
                 diff(t, n) {
-                    return [...t.filter(P => !n.includes(P)), ...n.filter(P => !t.includes(P))]
+                    return [...t.filter(k => !n.includes(k)), ...n.filter(k => !t.includes(k))]
                 }
 
                 enterZone(t) {
-                    return n => new i.y(v => n.subscribe({
-                        next(k) {
-                            t.run(() => v.next(k))
-                        }, error(k) {
-                            v.error(k)
+                    return n => new i.y(_ => n.subscribe({
+                        next(S) {
+                            t.run(() => _.next(S))
+                        }, error(S) {
+                            _.error(S)
                         }, complete() {
-                            v.complete()
+                            _.complete()
                         }
                     }))
                 }
 
                 findLastIndex(t, n) {
-                    const v = t.slice().reverse().findIndex(n);
-                    return v >= 0 ? t.length - 1 - v : v
+                    const _ = t.slice().reverse().findIndex(n);
+                    return _ >= 0 ? t.length - 1 - _ : _
                 }
 
                 hashCode(t) {
-                    let v, k, n = 0;
+                    let _, S, n = 0;
                     if (0 === t.length) return n;
-                    for (v = 0; v < t.length; v++) k = t.charCodeAt(v), n = (n << 5) - n + k, n |= 0;
+                    for (_ = 0; _ < t.length; _++) S = t.charCodeAt(_), n = (n << 5) - n + S, n |= 0;
                     return n
                 }
 
                 chunk(t, n) {
-                    const v = [];
-                    for (; t.length;) v.push(t.splice(0, n));
-                    return v
+                    const _ = [];
+                    for (; t.length;) _.push(t.splice(0, n));
+                    return _
                 }
 
-                calcTopCards(t, n, v) {
-                    const k = this.filterService.getSort(y.PE.AscScarcity, t), P = [...n].sort(k),
-                        I = Math.min(v, P.length);
-                    return P.slice(I*-1)
+                calcTopCards(t, n, _) {
+                    const S = this.filterService.getSort(y.PE.AscScarcity, t), k = [...n].sort(S),
+                        L = Math.min(_, k.length);
+                    return k.slice(0, L)
                 }
 
                 toISODateString(t) {
-                    function n(v) {
-                        return v < 10 ? "0" + v : v
+                    function n(_) {
+                        return _ < 10 ? "0" + _ : _
                     }
 
                     return t.getUTCFullYear() + "-" + n(t.getUTCMonth() + 1) + "-" + n(t.getUTCDate()) + "T" + n(t.getUTCHours()) + ":" + n(t.getUTCMinutes()) + ":" + n(t.getUTCSeconds()) + "." + n(t.getUTCMilliseconds()) + "Z"
                 }
 
                 calculateContentHeight(t, n) {
-                    let v = t.style.height, k = t.offsetHeight, P = t.scrollHeight, I = t.style.overflow;
-                    if (!(k >= P)) return P;
-                    if (t.style.height = k + n + "px", t.style.overflow = "hidden", P < t.scrollHeight) {
-                        for (; t.offsetHeight >= t.scrollHeight;) t.style.height = (k -= n) + "px";
-                        for (; t.offsetHeight < t.scrollHeight;) t.style.height = k++ + "px";
-                        return t.style.height = v, t.style.overflow = I, k
+                    let _ = t.style.height, S = t.offsetHeight, k = t.scrollHeight, L = t.style.overflow;
+                    if (!(S >= k)) return k;
+                    if (t.style.height = S + n + "px", t.style.overflow = "hidden", k < t.scrollHeight) {
+                        for (; t.offsetHeight >= t.scrollHeight;) t.style.height = (S -= n) + "px";
+                        for (; t.offsetHeight < t.scrollHeight;) t.style.height = S++ + "px";
+                        return t.style.height = _, t.style.overflow = L, S
                     }
                 }
 
                 dictionaryToMap(t) {
-                    return Object.entries(t).map(([n, v]) => ({
+                    return Object.entries(t).map(([n, _]) => ({
                         key: n,
-                        val: v
-                    })).reduce((n, v) => n.set(Number(v.key), v.val), new Map)
+                        val: _
+                    })).reduce((n, _) => n.set(Number(_.key), _.val), new Map)
                 }
 
                 adjustToServerTime(t) {
-                    const n = 1e3 * t, k = (new Date).getTime() + n;
-                    return new Date(k).toISOString()
+                    const n = 1e3 * t, S = (new Date).getTime() + n;
+                    return new Date(S).toISOString()
                 }
             }
 
@@ -2570,63 +2557,61 @@
                 return new (t || g)(e.LFG(m.iZ))
             }, g.\u0275prov = e.Yz7({token: g, factory: g.\u0275fac, providedIn: "root"}), g
         })()
-    },
-    49757: (se, R, o) => {
+    }, 49757: (se, U, o) => {
         "use strict";
-        o.d(R, {m: () => s});
-        var c = o(45210), i = o(69808), y = o(93075), e = o(73307), m = o(51649), p = o(5e3);
+        o.d(U, {m: () => s});
+        var d = o(45210), i = o(69808), y = o(93075), e = o(73307), m = o(51649), p = o(5e3);
         let g = (() => {
-            class C {
+            class b {
             }
 
-            return C.\u0275fac = function (B) {
-                return new (B || C)
-            }, C.\u0275mod = p.oAB({type: C}), C.\u0275inj = p.cJS({
+            return b.\u0275fac = function (B) {
+                return new (B || b)
+            }, b.\u0275mod = p.oAB({type: b}), b.\u0275inj = p.cJS({
                 providers: [{provide: m.R, useClass: m.E}],
                 imports: [[i.ez]]
-            }), C
+            }), b
         })();
         var r = o(55778), t = o(43991);
         let n = (() => {
-            class C {
+            class b {
             }
 
-            return C.\u0275fac = function (B) {
-                return new (B || C)
-            }, C.\u0275mod = p.oAB({type: C}), C.\u0275inj = p.cJS({providers: [t.z], imports: [[i.ez, r.xd]]}), C
+            return b.\u0275fac = function (B) {
+                return new (B || b)
+            }, b.\u0275mod = p.oAB({type: b}), b.\u0275inj = p.cJS({providers: [t.z], imports: [[i.ez, r.xd]]}), b
         })();
-        var v = o(66773), k = o(69878), P = o(23569), I = o(79763), A = o(66088), f = o(236), O = o(18464);
-        let b = (() => {
-            class C {
-                transform(B, ee) {
+        var _ = o(66773), S = o(69878), k = o(23569), L = o(79763), D = o(66088), v = o(236), O = o(18464);
+        let C = (() => {
+            class b {
+                transform(B, q) {
                     const ce = new O.BigNumber(10).pow(18);
                     return B ? new O.BigNumber(B).div(ce) : null
                 }
             }
 
-            return C.\u0275fac = function (B) {
-                return new (B || C)
-            }, C.\u0275pipe = p.Yjl({name: "WeiToEth", type: C, pure: !0}), C
+            return b.\u0275fac = function (B) {
+                return new (B || b)
+            }, b.\u0275pipe = p.Yjl({name: "WeiToEth", type: b, pure: !0}), b
         })();
-        var T = o(5969);
+        var $ = o(5969);
         let s = (() => {
-            class C {
+            class b {
                 static forRoot() {
-                    return {ngModule: C, providers: [A.Z, I.hM, f.u, b, r.$c, P.d, T.g, {provide: e.Ho, useValue: k.N}]}
+                    return {ngModule: b, providers: [D.Z, L.hM, v.u, C, r.$c, k.d, $.g, {provide: e.Ho, useValue: S.N}]}
                 }
             }
 
-            return C.\u0275fac = function (B) {
-                return new (B || C)
-            }, C.\u0275mod = p.oAB({type: C}), C.\u0275inj = p.cJS({imports: [[i.ez, c.aw, y.u5, y.UX, v.W2, n, r.xd, g], c.aw, y.UX, v.W2, r.xd, g]}), C
+            return b.\u0275fac = function (B) {
+                return new (B || b)
+            }, b.\u0275mod = p.oAB({type: b}), b.\u0275inj = p.cJS({imports: [[i.ez, d.aw, y.u5, y.UX, _.W2, n, r.xd, g], d.aw, y.UX, _.W2, r.xd, g]}), b
         })()
-    },
-    69878: (se, R, o) => {
+    }, 69878: (se, U, o) => {
         "use strict";
-        o.d(R, {N: () => A});
-        var c = o(55778), i = o(43991), y = o(63411), e = o(73307), m = o(40886), p = o(26959), g = o(45425),
-            r = o(5254), t = o(68896), n = o(18499), v = o(24850), k = o(5e3);
-        const A = {
+        o.d(U, {N: () => D});
+        var d = o(55778), i = o(43991), y = o(63411), e = o(73307), m = o(40886), p = o(26959), g = o(45425),
+            r = o(5254), t = o(68896), n = o(18499), _ = o(24850), S = o(5e3);
+        const D = {
             production: !0,
             appConfig: "./assets/config/appConfig.prod.json",
             appConfigDev: "./assets/config/appConfig.dev.json",
@@ -2639,9 +2624,9 @@
             immutableWalletPageURL: "https://landing.immutable.com/wallet",
             envClasses: {
                 authService: y.e, ethService: (() => {
-                    class f {
-                        constructor(S) {
-                            this.environment = S, this.initHTTPProvider()
+                    class v {
+                        constructor(P) {
+                            this.environment = P, this.initHTTPProvider()
                         }
 
                         initHTTPProvider() {
@@ -2652,21 +2637,21 @@
                             return this._httpProvider
                         }
 
-                        getTransactionReceipt$(S) {
-                            return (0, r.D)(this._httpProvider.getTransactionReceipt(S))
+                        getTransactionReceipt$(P) {
+                            return (0, r.D)(this._httpProvider.getTransactionReceipt(P))
                         }
 
-                        getBalance(S) {
-                            return (0, r.D)(this._httpProvider.getBalance(S))
+                        getBalance(P) {
+                            return (0, r.D)(this._httpProvider.getBalance(P))
                         }
 
-                        getTransaction$(S) {
-                            return (0, r.D)(this.provider.getTransaction(S))
+                        getTransaction$(P) {
+                            return (0, r.D)(this.provider.getTransaction(P))
                         }
 
-                        getWETHBalance(S) {
-                            let b, T;
-                            return b = new g.ethers.providers.InfuraProvider(this.environment.production ? m.t : m.Y), T = this.environment.production ? "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2" : "0xc778417e063141139fce010982780140aa0cd5ab", (0, r.D)(n.WETH9.at(b, T).balanceOf(S)).pipe((0, v.U)(s => s.toString()))
+                        getWETHBalance(P) {
+                            let C, $;
+                            return C = new g.ethers.providers.InfuraProvider(this.environment.production ? m.t : m.Y), $ = this.environment.production ? "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2" : "0xc778417e063141139fce010982780140aa0cd5ab", (0, r.D)(n.WETH9.at(C, $).balanceOf(P)).pipe((0, _.U)(s => s.toString()))
                         }
 
                         getGasPrice() {
@@ -2674,31 +2659,31 @@
                         }
                     }
 
-                    return f.\u0275fac = function (S) {
-                        return new (S || f)(k.LFG(e.Ho))
-                    }, f.\u0275prov = k.Yz7({token: f, factory: f.\u0275fac}), f
-                })(), cardsService: c.dK, storageService: (() => {
-                    class f {
+                    return v.\u0275fac = function (P) {
+                        return new (P || v)(S.LFG(e.Ho))
+                    }, v.\u0275prov = S.Yz7({token: v, factory: v.\u0275fac}), v
+                })(), cardsService: d.dK, storageService: (() => {
+                    class v {
                         constructor() {
                         }
 
-                        set(S, b) {
-                            return null != b && window.bridge.set(S, b)
+                        set(P, C) {
+                            return null != C && window.bridge.set(P, C)
                         }
 
-                        get(S) {
-                            return window.bridge.get(S)
+                        get(P) {
+                            return window.bridge.get(P)
                         }
 
-                        delete(S) {
-                            return window.bridge.delete(S)
+                        delete(P) {
+                            return window.bridge.delete(P)
                         }
                     }
 
-                    return f.\u0275fac = function (S) {
-                        return new (S || f)
-                    }, f.\u0275prov = k.Yz7({token: f, factory: f.\u0275fac, providedIn: "root"}), f
-                })(), authHostService: c.f1, assetsService: i.z, audioService: c.QF, featureFlagsService: c.ai
+                    return v.\u0275fac = function (P) {
+                        return new (P || v)
+                    }, v.\u0275prov = S.Yz7({token: v, factory: v.\u0275fac, providedIn: "root"}), v
+                })(), authHostService: d.f1, assetsService: i.z, audioService: d.QF, featureFlagsService: d.ai
             },
             clientType: "desktop",
             guWebsite: "https://godsunchained.com",
@@ -2722,14 +2707,13 @@
             immutableXMarketplaceUrlGUCollection: "https://market.immutable.com/assets?collection=0xacb3c6a43d15b907e8433077b6d38ae40936fe2c",
             GUCollectioimmutableXMarketplaceUrlGUInventory: "https://market.immutable.com/inventory/0xacb3c6a43d15b907e8433077b6d38ae40936fe2c"
         }
-    },
-    84740: (se, R, o) => {
+    }, 84740: (se, U, o) => {
         "use strict";
-        var c = o(22313), i = o(8929), y = o(591), e = o(21086), m = o(5254);
+        var d = o(22313), i = o(8929), y = o(591), e = o(21086), m = o(5254);
 
         class r {
-            constructor(L, a, M, F) {
-                this.remote = L, this.directory = a, this.filename = M
+            constructor(A, a, M, F) {
+                this.remote = A, this.directory = a, this.filename = M
             }
 
             start() {
@@ -2747,16 +2731,16 @@
             cancel() {
             }
 
-            download(L) {
+            download(A) {
                 return (0, e.of)()
             }
 
-            dummyDownload(L) {
+            dummyDownload(A) {
                 return (0, e.of)()
             }
         }
 
-        class k {
+        class S {
             constructor() {
                 this.log = void 0, this.warn = void 0, this.error = void 0, this.initLogger()
             }
@@ -2765,31 +2749,31 @@
             }
         }
 
-        k.consoleLog = console.log, k.consoleError = console.error, k.consoleWarn = console.warn;
-        var P = o(35736);
+        S.consoleLog = console.log, S.consoleError = console.error, S.consoleWarn = console.warn;
+        var k = o(35736);
 
-        class A {
-            constructor(L = 1) {
-                this.currentRequests = [], this.runningRequests = 0, this.maxConcurrentRequests = L
+        class D {
+            constructor(A = 1) {
+                this.currentRequests = [], this.runningRequests = 0, this.maxConcurrentRequests = A
             }
 
-            callFunction(L, ...a) {
-                return L.bind(this, a), console.log("callFunction ---- ", L.name, a), new Promise((M, F) => {
-                    this.currentRequests.push({resolve: M, reject: F, fnToCall: L, args: a}), this.tryNext()
+            callFunction(A, ...a) {
+                return A.bind(this, a), console.log("callFunction ---- ", A.name, a), new Promise((M, F) => {
+                    this.currentRequests.push({resolve: M, reject: F, fnToCall: A, args: a}), this.tryNext()
                 })
             }
 
             tryNext() {
                 if (this.currentRequests.length && this.runningRequests < this.maxConcurrentRequests) {
-                    const {resolve: L, reject: a, fnToCall: M, args: F} = this.currentRequests.shift();
-                    this.runningRequests++, M(...F).then(Le => L(Le)).catch(Le => a(Le)).finally(() => {
+                    const {resolve: A, reject: a, fnToCall: M, args: F} = this.currentRequests.shift();
+                    this.runningRequests++, M(...F).then(Le => A(Le)).catch(Le => a(Le)).finally(() => {
                         this.runningRequests--, this.tryNext()
                     })
                 }
             }
         }
 
-        function f(h) {
+        function v(h) {
             return h.join("-")
         }
 
@@ -2797,13 +2781,13 @@
             return "object" == typeof navigator && "string" == typeof navigator.userAgent && navigator.userAgent.indexOf(h) >= 0
         }
 
-        !window.bridge && (!function S() {
+        !window.bridge && (!function P() {
             return O("Electron")
-        }() || function b() {
+        }() || function C() {
             return O("Cypress")
-        }()) && (window.bridge = new class I {
+        }()) && (window.bridge = new class L {
             constructor() {
-                this.logger = new k, this.variant = "browser", this.progress = new i.xQ, this.appsModalExisting$ = new y.X(!1), this.displayMetricsChange$ = new i.xQ, this.isInGame$ = new y.X(!1), this.protocolRedirect$ = new y.X(null), this.watchForDisplayChanges(), this.watchInGameStatus(), this.checkAdditionalArgs(), this.watchForAppsModal(), this.watchProtocolRedirect()
+                this.logger = new S, this.variant = "browser", this.progress = new i.xQ, this.appsModalExisting$ = new y.X(!1), this.displayMetricsChange$ = new i.xQ, this.isInGame$ = new y.X(!1), this.protocolRedirect$ = new y.X(null), this.watchForDisplayChanges(), this.watchInGameStatus(), this.checkAdditionalArgs(), this.watchForAppsModal(), this.watchProtocolRedirect()
             }
 
             getDownloadProgress$() {
@@ -2826,18 +2810,18 @@
                 console.log("Preload->resumeDownload()"), this.gameDownload && this.gameDownload.resume()
             }
 
-            openDialog(L, a) {
+            openDialog(A, a) {
             }
 
-            isRunning(L) {
+            isRunning(A) {
                 return !0
             }
 
-            extract(L, a, M) {
+            extract(A, a, M) {
             }
 
-            download(L, a, M, F) {
-                return console.log("Preload->download(urlr, location, filename)", L, a, M), this.gameDownload = new r(L, a, M), this.progress = new i.xQ, (0, m.D)(this.gameDownload.download({
+            download(A, a, M, F) {
+                return console.log("Preload->download(urlr, location, filename)", A, a, M), this.gameDownload = new r(A, a, M), this.progress = new i.xQ, (0, m.D)(this.gameDownload.download({
                     authToken: F,
                     onStart: me => {
                         console.log("Preload->download()->onStart", me)
@@ -2851,54 +2835,54 @@
                 }))
             }
 
-            downloadAssets(L, a) {
-                console.log("Preload->downloadAssets(WithOutSempahore)", L);
+            downloadAssets(A, a) {
+                console.log("Preload->downloadAssets(WithOutSempahore)", A);
                 let M = [];
-                return M = L.map((F, me) => new r(F.url, a + F.location, F.file_name)), M
+                return M = A.map((F, me) => new r(F.url, a + F.location, F.file_name)), M
             }
 
-            downloadAssetsWithSempahore(L, a, M, F, me) {
-                console.log("Preload->downloadAssetsWithSempahore()", L);
-                const Le = new A(me);
-                return L.map((Ke, Pt) => {
-                    const gt = {
+            downloadAssetsWithSempahore(A, a, M, F, me) {
+                console.log("Preload->downloadAssetsWithSempahore()", A);
+                const Le = new D(me);
+                return A.map((je, xt) => {
+                    const ut = {
                         authToken: F, onStart: be => {
                         }, onProgress: be => {
-                            M[Pt].next(be)
+                            M[xt].next(be)
                         }, onEnd: be => {
-                            M[Pt].complete()
+                            M[xt].complete()
                         }
                     };
-                    console.log(Ke.url, a + Ke.location, Ke.file_name);
-                    const Kt = new r(Ke.url, a + Ke.location, Ke.file_name), ve = Kt.download.bind(Kt, gt);
-                    return (0, m.D)(Le.callFunction(ve, gt))
+                    console.log(je.url, a + je.location, je.file_name);
+                    const Kt = new r(je.url, a + je.location, je.file_name), ve = Kt.download.bind(Kt, ut);
+                    return (0, m.D)(Le.callFunction(ve, ut))
                 })
             }
 
-            onQuit(L) {
+            onQuit(A) {
             }
 
             focus() {
             }
 
-            deleteFile(L) {
+            deleteFile(A) {
             }
 
-            chmod(L, a) {
+            chmod(A, a) {
             }
 
-            execute(L, a) {
+            execute(A, a) {
                 return null
             }
 
-            executeArgs(L, a, M) {
+            executeArgs(A, a, M) {
                 return null
             }
 
             clearCache() {
             }
 
-            exists(L) {
+            exists(A) {
                 return !0
             }
 
@@ -2910,7 +2894,7 @@
                 return ""
             }
 
-            createServer(L, a) {
+            createServer(A, a) {
             }
 
             serverActive() {
@@ -2920,17 +2904,17 @@
             closeServer() {
             }
 
-            set(L, a) {
-                window.sessionStorage.setItem(f(L), JSON.stringify(a))
+            set(A, a) {
+                window.sessionStorage.setItem(v(A), JSON.stringify(a))
             }
 
-            get(L) {
-                const a = window.sessionStorage.getItem(f(L));
+            get(A) {
+                const a = window.sessionStorage.getItem(v(A));
                 return null !== a ? JSON.parse(a) : null
             }
 
-            delete(L) {
-                window.sessionStorage.removeItem(f(L))
+            delete(A) {
+                window.sessionStorage.removeItem(v(A))
             }
 
             minimizeWindow() {
@@ -2942,14 +2926,14 @@
             closeWindow() {
             }
 
-            setFullscreen(L) {
+            setFullscreen(A) {
             }
 
             getDisplaySize() {
                 return {height: 0, width: 0}
             }
 
-            setClientSize(L, a, M = !1, F = !1) {
+            setClientSize(A, a, M = !1, F = !1) {
             }
 
             watchForDisplayChanges() {
@@ -2961,33 +2945,33 @@
             watchForAppsModal() {
             }
 
-            setInGameStatus(L) {
+            setInGameStatus(A) {
             }
 
-            clearGUAssets(L) {
+            clearGUAssets(A) {
             }
 
             checkAdditionalArgs() {
-                const L = P.argv.map(a => a.split("=")).reduce((a, [M, F]) => (a[M] = F, a), {});
-                L["--auth-id"] && L["--auth-access"] && (this.authId = +L["--auth-id"], this.authAccess = L["--auth-access"]), L["--session-ticket"] && (this.sessionTicket = L["--session-ticket"]), L["--vw"] && L["--vh"] && (this.vw = L["--vw"], this.vh = L["--vh"])
+                const A = k.argv.map(a => a.split("=")).reduce((a, [M, F]) => (a[M] = F, a), {});
+                A["--auth-id"] && A["--auth-access"] && (this.authId = +A["--auth-id"], this.authAccess = A["--auth-access"]), A["--session-ticket"] && (this.sessionTicket = A["--session-ticket"]), A["--vw"] && A["--vh"] && (this.vw = A["--vw"], this.vh = A["--vh"])
             }
 
-            updateAuthPair(L) {
+            updateAuthPair(A) {
             }
 
-            updateSession(L) {
+            updateSession(A) {
             }
 
-            updateViewportUnits(L) {
+            updateViewportUnits(A) {
             }
 
-            setClientPosition(L, a, M = !1) {
+            setClientPosition(A, a, M = !1) {
             }
 
             toggleFullscreen() {
             }
 
-            createClient(L, a) {
+            createClient(A, a) {
                 return {
                     on: (M, F) => {
                     }, send: (M, F) => {
@@ -2996,7 +2980,7 @@
                 }
             }
 
-            join(...L) {
+            join(...A) {
             }
 
             version() {
@@ -3005,19 +2989,19 @@
             launcherTarget() {
             }
 
-            httpGet(L) {
-                return (0, m.D)(fetch(L).then(a => a.json()))
+            httpGet(A) {
+                return (0, m.D)(fetch(A).then(a => a.json()))
             }
 
-            httpPost(L, a) {
+            httpPost(A, a) {
                 return (0, e.of)()
             }
         });
-        var T = o(43050), s = o(5e3);
-        const C = JSON.parse('{"buildNumber":"987","branch":"master"}');
-        var w = o.t(C, 2), ee = (o(12751), o(53161)), ce = o(16517), de = o(32182), fe = o(96727), N = o(99565),
-            X = o(60870), ae = o(40520), Y = o(93075), ye = o(76360), V = o(73307), le = o(38076);
-        let Ce = (() => {
+        var $ = o(43050), s = o(5e3);
+        const b = JSON.parse('{"buildNumber":"1024","branch":"master"}');
+        var w = o.t(b, 2), q = (o(12751), o(53161)), ce = o(16517), de = o(32182), Ce = o(96727), z = o(99565),
+            J = o(60870), ae = o(40520), Y = o(93075), xe = o(76360), V = o(73307), le = o(38076);
+        let ye = (() => {
             class h {
                 constructor(a) {
                     this.authService = a
@@ -3034,26 +3018,26 @@
                 return new (a || h)(s.LFG(V.mI))
             }, h.\u0275prov = s.Yz7({token: h, factory: h.\u0275fac, providedIn: "root"}), h
         })();
-        var Te = o(87182), Be = o(85115), H = o(11735);
+        var Ae = o(87182), Be = o(85115), W = o(11735);
         o(57334);
-        var pe = o(45210), Se = o(69808);
-        let Ae = (() => {
+        var ge = o(45210), _e = o(69808);
+        let He = (() => {
             class h {
             }
 
             return h.\u0275fac = function (a) {
                 return new (a || h)
-            }, h.\u0275mod = s.oAB({type: h}), h.\u0275inj = s.cJS({imports: [[Se.ez, pe.aw, Y.u5, Y.UX]]}), h
+            }, h.\u0275mod = s.oAB({type: h}), h.\u0275inj = s.cJS({imports: [[_e.ez, ge.aw, Y.u5, Y.UX]]}), h
         })();
         new s.OlP("recaptcha-service"), new s.OlP("websocket-constructor");
-        let Oe = (() => {
+        let $e = (() => {
             class h {
                 serialize(a) {
                     return {
                         url: a.url,
-                        params: ht(a.root, M => M.params),
-                        queryParams: ht(a.root, M => M.queryParams),
-                        data: Ze(a.root)
+                        params: pt(a.root, M => M.params),
+                        queryParams: pt(a.root, M => M.queryParams),
+                        data: Ne(a.root)
                     }
                 }
             }
@@ -3063,24 +3047,24 @@
             }, h.\u0275prov = s.Yz7({token: h, factory: h.\u0275fac}), h
         })();
 
-        function ht(h, L) {
+        function pt(h, A) {
             if (!h) return {};
-            const a = L(h), M = h.children.find(F => "primary" === F.outlet) || h.firstChild;
-            return Object.assign(Object.assign({}, a), ht(M, L))
+            const a = A(h), M = h.children.find(F => "primary" === F.outlet) || h.firstChild;
+            return Object.assign(Object.assign({}, a), pt(M, A))
         }
 
-        function Ze(h) {
+        function Ne(h) {
             if (!h) return {};
-            const L = h.data, a = h.children.find(M => "primary" === M.outlet) || h.firstChild;
-            return Object.assign(Object.assign({}, L), Ze(a))
+            const A = h.data, a = h.children.find(M => "primary" === M.outlet) || h.firstChild;
+            return Object.assign(Object.assign({}, A), Ne(a))
         }
 
-        const yt = {stateKey: "router", navigationActionTiming: de.R0.PostActivation, serialzer: Oe};
-        (0, fe.ZF)(yt.stateKey);
-        var Fe = o(55778), rt = o(66773), Ie = o(69878), Ee = (o(70893), o(59633)), It = o(61715), q = o(7625),
-            re = o(61709), xe = o(27221), Ge = o(92198), W = o(24850), z = o(2994), _ = (o(48031), o(70655)),
-            U = o(79763);
-        let ie = (() => {
+        const Ot = {stateKey: "router", navigationActionTiming: de.R0.PostActivation, serialzer: $e};
+        (0, Ce.ZF)(Ot.stateKey);
+        var Ge = o(55778), st = o(66773), Ie = o(69878), Ee = (o(70893), o(59633)), It = o(61715), ee = o(7625),
+            re = o(61709), Se = o(27221), N = o(92198), H = o(24850), l = o(2994), R = (o(48031), o(70655)),
+            ie = o(79763);
+        let Oe = (() => {
             class h {
                 constructor(a, M) {
                     this.authHostService = a, this.gameService = M
@@ -3091,18 +3075,18 @@
                 }
 
                 getCurrentGameID() {
-                    return (0, _.mG)(this, void 0, void 0, function* () {
+                    return (0, R.mG)(this, void 0, void 0, function* () {
                         return this.gameService.getGameId()
                     })
                 }
             }
 
             return h.\u0275fac = function (a) {
-                return new (a || h)(s.LFG(V.LI), s.LFG(U.hM))
+                return new (a || h)(s.LFG(V.LI), s.LFG(ie.hM))
             }, h.\u0275prov = s.Yz7({token: h, factory: h.\u0275fac, providedIn: "root"}), h
         })();
-        var ke = o(77391), Ve = o(44416);
-        let ct = (() => {
+        var Ze = o(77391), ct = o(44416);
+        let gt = (() => {
             class h {
                 constructor(a, M, F) {
                     this.utils = a, this.zone = M, this.router = F, this._protocolPayload$ = new i.xQ, this.unsubscribe = new i.xQ
@@ -3117,7 +3101,7 @@
                 }
 
                 watchProtocol() {
-                    window.bridge.protocolRedirect$.pipe(this.utils.enterZone(this.zone), (0, q.R)(this.unsubscribe), (0, Ge.h)(a => !!a), (0, z.b)(({url: a}) => {
+                    window.bridge.protocolRedirect$.pipe(this.utils.enterZone(this.zone), (0, ee.R)(this.unsubscribe), (0, N.h)(a => !!a), (0, l.b)(({url: a}) => {
                         this.handlePayload(a), this.handleRouteChange(a)
                     })).subscribe()
                 }
@@ -3141,12 +3125,12 @@
             }
 
             return h.\u0275fac = function (a) {
-                return new (a || h)(s.LFG(Ve.F), s.LFG(s.R0b), s.LFG(H.F0))
+                return new (a || h)(s.LFG(ct.F), s.LFG(s.R0b), s.LFG(W.F0))
             }, h.\u0275prov = s.Yz7({token: h, factory: h.\u0275fac, providedIn: "root"}), h
         })();
-        var mt = o(6674);
+        var ht = o(6674);
         const it = ["ratioSetter"], Jt = ["*"];
-        let ls = (() => {
+        let ws = (() => {
             class h {
                 constructor(a, M) {
                     this.resizeService = a, this.el = M
@@ -3170,7 +3154,7 @@
             }
 
             return h.\u0275fac = function (a) {
-                return new (a || h)(s.Y36(mt._), s.Y36(s.SBq))
+                return new (a || h)(s.Y36(ht._), s.Y36(s.SBq))
             }, h.\u0275cmp = s.Xpm({
                 type: h,
                 selectors: [["app-auto-letterbox"]],
@@ -3192,9 +3176,9 @@
                 styles: ["[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;height:100vh;width:100vw;background:var(--gu-blue-dark);}.appRatioSetter[_ngcontent-%COMP%]{margin:auto;position:relative;width:100vw;padding-bottom:56.23%}.appRatioSetter__ratioImage[_ngcontent-%COMP%]{display:none}.innerAppContainer[_ngcontent-%COMP%]{position:absolute;width:100%;height:100%;top:0;left:0;overflow:hidden;display:flex;flex-direction:column}@media screen and (min-aspect-ratio:1282/720) {.appRatioSetter[_ngcontent-%COMP%]{height:100vh;width:auto;padding-bottom:0}.appRatioSetter__ratioImage[_ngcontent-%COMP%]{display:block;width:auto;height:100%}}"]
             }), h
         })();
-        var ss = o(52492), Bt = o(41777), _t = o(72986), ft = o(80013), Qe = o(40537), Ht = o(66088), Xt = o(83035);
+        var ss = o(52492), Bt = o(41777), mt = o(72986), _t = o(80013), Ve = o(40537), Ht = o(66088), Xt = o(83035);
 
-        function wt(h, L) {
+        function Pt(h, A) {
             if (1 & h) {
                 const a = s.EpF();
                 s.TgZ(0, "form", 7)(1, "label", 8), s._uU(2, "Username"), s.qZA(), s.TgZ(3, "div", 9)(4, "input", 10), s.NdJ("click", function () {
@@ -3215,8 +3199,8 @@
             os = window.bridge && window.bridge.launcherTarget ? window.bridge.launcherTarget() : "PROD";
         let so = (() => {
             class h {
-                constructor(a, M, F, me, Le, ze, Ke, Pt) {
-                    this.authService = a, this.fb = M, this.audioService = F, this.modalService = me, this.resizeService = Le, this.utils = ze, this.storage = Ke, this.queueService = Pt, this.loading = !1, this.updating = !1, this.version = to, this.launcherTarget = os, this.cerberusBuildNumber = jt, this.cerberusBranch = eo, this.clientSizes = mt._.clientSizes, this.volume = 0, this.volumeControl = new Y.NI(.9), this.unsubscribe = new i.xQ
+                constructor(a, M, F, me, Le, ze, je, xt) {
+                    this.authService = a, this.fb = M, this.audioService = F, this.modalService = me, this.resizeService = Le, this.utils = ze, this.storage = je, this.queueService = xt, this.loading = !1, this.updating = !1, this.version = to, this.launcherTarget = os, this.cerberusBuildNumber = jt, this.cerberusBranch = eo, this.clientSizes = ht._.clientSizes, this.volume = 0, this.volumeControl = new Y.NI(.9), this.unsubscribe = new i.xQ
                 }
 
                 ngOnInit() {
@@ -3229,7 +3213,7 @@
 
                 initVolumeControl() {
                     const a = this.storage.get(["gu-audioVolume"]);
-                    this.volumeControl.setValue(a), this.volumeControl.valueChanges.pipe((0, q.R)(this.unsubscribe), (0, ft.b)(100)).subscribe(M => this.audioService.setGlobalVolume(M))
+                    this.volumeControl.setValue(a), this.volumeControl.valueChanges.pipe((0, ee.R)(this.unsubscribe), (0, _t.b)(100)).subscribe(M => this.audioService.setGlobalVolume(M))
                 }
 
                 logout() {
@@ -3241,7 +3225,7 @@
                 }
 
                 updateUser() {
-                    this.formGroup.invalid ? this.utils.markFormGroupTouched(this.formGroup) : this.updating || (this.updating = !0, this.authService.updateCurrentUser({username: this.formGroup.get("username").value}).pipe((0, Qe.x)(() => {
+                    this.formGroup.invalid ? this.utils.markFormGroupTouched(this.formGroup) : this.updating || (this.updating = !0, this.authService.updateCurrentUser({username: this.formGroup.get("username").value}).pipe((0, Ve.x)(() => {
                         this.updating = !1
                     })).subscribe())
                 }
@@ -3251,7 +3235,7 @@
                 }
 
                 initUserNameForm() {
-                    this.buildFormGroup(), this.loading = !0, this.authService.account$.pipe((0, q.R)(this.unsubscribe), (0, z.b)(a => this.formGroup.get("username").setValue(a.username)), (0, xe.K)(a => (this.logout(), a)), (0, Qe.x)(() => this.loading = !1)).subscribe()
+                    this.buildFormGroup(), this.loading = !0, this.authService.account$.pipe((0, ee.R)(this.unsubscribe), (0, l.b)(a => this.formGroup.get("username").setValue(a.username)), (0, Se.K)(a => (this.logout(), a)), (0, Ve.x)(() => this.loading = !1)).subscribe()
                 }
 
                 buildFormGroup() {
@@ -3263,7 +3247,7 @@
             }
 
             return h.\u0275fac = function (a) {
-                return new (a || h)(s.Y36(V.mI), s.Y36(Y.qu), s.Y36(V.pk), s.Y36(Ht.Z), s.Y36(mt._), s.Y36(Ve.F), s.Y36(V.qy), s.Y36(Xt.g))
+                return new (a || h)(s.Y36(V.mI), s.Y36(Y.qu), s.Y36(V.pk), s.Y36(Ht.Z), s.Y36(ht._), s.Y36(ct.F), s.Y36(V.qy), s.Y36(Xt.g))
             }, h.\u0275cmp = s.Xpm({
                 type: h,
                 selectors: [["app-apollo-settings"]],
@@ -3272,25 +3256,25 @@
                 vars: 9,
                 consts: [["class", "settingsForm", 3, "formGroup", 4, "ngIf"], [1, "audioControl"], [1, "audioControl__heading"], ["id", "volume", "type", "range", "min", "0", "max", "1", "step", "0.1", 1, "audioControl__rangeInput", 3, "formControl"], ["for", "#volume", 1, "audioControl__volumeLabel"], [1, "version-label"], ["size", "regular", "text", "Clear Cache", 1, "settingsForm__bottomCta", "settingsForm__bottomCta--cacheClear", 3, "click"], [1, "settingsForm", 3, "formGroup"], ["for", "usernameInput", 1, "settingsForm__label"], [1, "settingsForm__inputsRow"], ["name", "username", "type", "text", "formControlName", "username", "id", "usernameInput", "aria-describedby", "usernameHelp", 1, "settingsForm__textInput", 3, "click"], ["size", "regular", 1, "settingsForm__cta", 3, "text", "click"], ["id", "usernameHelp", 1, "settingsForm__hintText"]],
                 template: function (a, M) {
-                    1 & a && (s.YNc(0, wt, 8, 2, "form", 0), s.TgZ(1, "div", 1)(2, "label", 2), s._uU(3, "Audio Volume"), s.qZA(), s._UZ(4, "input", 3), s.TgZ(5, "label", 4), s._uU(6), s.qZA()(), s.TgZ(7, "h5", 5), s._uU(8), s.ALo(9, "lowercase"), s.qZA(), s.TgZ(10, "h5", 5), s._uU(11), s.qZA(), s.TgZ(12, "gu-primary-hex-button", 6), s.NdJ("click", function () {
+                    1 & a && (s.YNc(0, Pt, 8, 2, "form", 0), s.TgZ(1, "div", 1)(2, "label", 2), s._uU(3, "Audio Volume"), s.qZA(), s._UZ(4, "input", 3), s.TgZ(5, "label", 4), s._uU(6), s.qZA()(), s.TgZ(7, "h5", 5), s._uU(8), s.ALo(9, "lowercase"), s.qZA(), s.TgZ(10, "h5", 5), s._uU(11), s.qZA(), s.TgZ(12, "gu-primary-hex-button", 6), s.NdJ("click", function () {
                         return M.clearCache()
                     }), s.qZA()), 2 & a && (s.Q6J("ngIf", !M.anonymous), s.xp6(4), s.Q6J("formControl", M.volumeControl), s.xp6(2), s.Oqu(M.volumeControl.value), s.xp6(2), s.AsE("Launcher Version: ", M.version, "-", s.lcZ(9, 7, M.launcherTarget), ""), s.xp6(3), s.AsE("Cerberus Version: ", M.cerberusBranch, ".", M.cerberusBuildNumber, ""))
                 },
-                directives: [Se.O5, Y._Y, Y.JL, Y.sg, Y.Fj, Y.JJ, Y.u, Y.eT, Y.oH],
-                pipes: [Se.i8],
+                directives: [_e.O5, Y._Y, Y.JL, Y.sg, Y.Fj, Y.JJ, Y.u, Y.eT, Y.oH],
+                pipes: [_e.i8],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.version-label[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.settingsForm__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%], .settingsForm__hintText[_ngcontent-%COMP%], .settingsForm__textInput[_ngcontent-%COMP%], .audioControl__heading[_ngcontent-%COMP%], .settingsForm__label[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.version-label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.audioControl__heading[_ngcontent-%COMP%], .settingsForm__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9)}.settingsForm__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%], .settingsForm__hintText[_ngcontent-%COMP%], .settingsForm__textInput[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.settingsForm__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%], .settingsForm__hintText[_ngcontent-%COMP%], .settingsForm__textInput[_ngcontent-%COMP%]{line-height:1.4}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;margin:auto}.settingsForm[_ngcontent-%COMP%]{display:flex;flex-flow:column nowrap;align-self:center;width:70%}.settingsForm__inputsRow[_ngcontent-%COMP%]{display:flex;align-items:center;width:100%}.settingsForm__textInput[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);margin-bottom:0;background:#182531;color:#f6f6f6;border:calc(var(--vh) * .15) solid #0f1b27;border-radius:calc(var(--vh) * .4);flex-grow:1;margin:0 calc(var(--vw) * 1) 0 0}.settingsForm__textInput[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.settingsForm__cta[_ngcontent-%COMP%]{min-width:calc(var(--vw) * 8);flex-grow:0}.settingsForm__hintText[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 2)}.version-label[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 4);text-align:center;user-select:all}.settingsForm__select[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .65);font-size:calc(var(--vh) * 1.9)}.settingsForm__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);margin-bottom:0;background:#182531;color:#f6f6f6;border:calc(var(--vh) * .15) solid #0f1b27;border-radius:calc(var(--vh) * .4)}.settingsForm__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.settingsForm__bottomCta[_ngcontent-%COMP%]{width:70%;margin:0 auto}.settingsForm__bottomCta--cacheClear[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 4);margin-bottom:calc(var(--vh) * 2)}.audioControl[_ngcontent-%COMP%]{width:70%;margin:calc(var(--vh) * 3) auto}.audioControl__volumeLabel[_ngcontent-%COMP%]{display:inline-block;position:relative;width:60px;line-height:20px;text-align:center;border-radius:3px;color:#e0c58f;padding:5px 10px;margin-left:8px}.audioControl__rangeInput[_ngcontent-%COMP%]{-webkit-appearance:none;width:calc(100% - 73px);height:10px;border-radius:5px;background:#1d2f41;outline:none;padding:0;margin:0}.audioControl__rangeInput[_ngcontent-%COMP%]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:20px;height:20px;border-radius:50%;background:#e0c58f;cursor:pointer}.audioControl__rangeInput[_ngcontent-%COMP%]:active::-webkit-slider-thumb{background:#e0c58f}.audioControl__rangeInput[_ngcontent-%COMP%]::-moz-range-thumb{width:20px;height:20px;border:0;border-radius:50%;background:#e0c58f;cursor:pointer}"]
             }), h
         })();
-        var ms = o(69340);
+        var hs = o(69340);
 
-        function qe(h, L) {
+        function Je(h, A) {
             if (1 & h && (s.TgZ(0, "option", 12), s._uU(1), s.qZA()), 2 & h) {
-                const a = L.$implicit;
+                const a = A.$implicit;
                 s.Q6J("ngValue", a.name), s.xp6(1), s.Oqu(a.name)
             }
         }
 
-        function cs(h, L) {
+        function ls(h, A) {
             if (1 & h) {
                 const a = s.EpF();
                 s.ynx(0), s.TgZ(1, "label", 9), s._uU(2, "Branch"), s.qZA(), s.TgZ(3, "select", 10), s.NdJ("ngModelChange", function (F) {
@@ -3299,7 +3283,7 @@
                     return s.CHM(a), s.oxw(2).playClickTinyV1()
                 })("ngModelChange", function (F) {
                     return s.CHM(a), s.oxw(2).branch = F
-                }), s.YNc(4, qe, 2, 2, "option", 11), s.qZA(), s.BQk()
+                }), s.YNc(4, Je, 2, 2, "option", 11), s.qZA(), s.BQk()
             }
             if (2 & h) {
                 const a = s.oxw(2);
@@ -3307,17 +3291,17 @@
             }
         }
 
-        function Es(h, L) {
+        function Es(h, A) {
             if (1 & h && (s.ynx(0), s.TgZ(1, "label", 13), s._uU(2, "Local Version"), s.qZA(), s._UZ(3, "input", 5), s.BQk()), 2 & h) {
                 const a = s.oxw(2);
                 s.xp6(3), s.Q6J("value", a.local)
             }
         }
 
-        function et(h, L) {
+        function Xe(h, A) {
             if (1 & h) {
                 const a = s.EpF();
-                s.TgZ(0, "form", 1), s.YNc(1, cs, 5, 2, "ng-container", 2), s.TgZ(2, "label", 3), s._uU(3, "Installation Path"), s.qZA(), s.TgZ(4, "div", 4), s._UZ(5, "input", 5), s.TgZ(6, "gu-icon", 6), s.NdJ("click", function () {
+                s.TgZ(0, "form", 1), s.YNc(1, ls, 5, 2, "ng-container", 2), s.TgZ(2, "label", 3), s._uU(3, "Installation Path"), s.qZA(), s.TgZ(4, "div", 4), s._UZ(5, "input", 5), s.TgZ(6, "gu-icon", 6), s.NdJ("click", function () {
                     return s.CHM(a), s.oxw().showDialog()
                 }), s.qZA()(), s.YNc(7, Es, 4, 1, "ng-container", 2), s.TgZ(8, "gu-primary-hex-button", 7), s.NdJ("click", function () {
                     return s.CHM(a), s.oxw().clearVersion()
@@ -3375,7 +3359,7 @@
             }
 
             return h.\u0275fac = function (a) {
-                return new (a || h)(s.Y36(U.hM), s.Y36(ms.b5), s.Y36(V.pk))
+                return new (a || h)(s.Y36(ie.hM), s.Y36(hs.b5), s.Y36(V.pk))
             }, h.\u0275cmp = s.Xpm({
                 type: h,
                 selectors: [["app-game-settings"]],
@@ -3384,9 +3368,9 @@
                 vars: 1,
                 consts: [["class", "settingsForm", 4, "ngIf"], [1, "settingsForm"], [4, "ngIf"], ["for", "installpath", 1, "settingsForm__label"], [1, "settingsForm__path"], ["type", "text", "disabled", "", 1, "settingsForm__textInput", 3, "value"], ["iconLigature", "settings_cog", 1, "path-select-btn", 3, "click"], ["size", "large", "text", "Clear Version", 1, "settingsForm__cta", 3, "click"], ["size", "large", "text", "Clear Assets", 1, "settingsForm__cta", 3, "click"], ["for", "sel1", 1, "settingsForm__label"], ["name", "branch", "id", "sel1", 1, "settingsForm__select", 3, "ngModel", "ngModelChange", "click"], [3, "ngValue", 4, "ngFor", "ngForOf"], [3, "ngValue"], [1, "settingsForm__label"]],
                 template: function (a, M) {
-                    1 & a && s.YNc(0, et, 10, 3, "form", 0), 2 & a && s.Q6J("ngIf", M.loaded)
+                    1 & a && s.YNc(0, Xe, 10, 3, "form", 0), 2 & a && s.Q6J("ngIf", M.loaded)
                 },
-                directives: [Se.O5, Y._Y, Y.JL, Y.F, Y.EJ, Y.JJ, Y.On, Se.sg, Y.YN, Y.Kr],
+                directives: [_e.O5, Y._Y, Y.JL, Y.F, Y.EJ, Y.JJ, Y.On, _e.sg, Y.YN, Y.Kr],
                 styles: ["@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.settingsForm__textInput[_ngcontent-%COMP%], .settingsForm__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%], .settingsForm__label[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.settingsForm__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9)}.settingsForm__textInput[_ngcontent-%COMP%], .settingsForm__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.settingsForm__textInput[_ngcontent-%COMP%], .settingsForm__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]{line-height:1.4}[_nghost-%COMP%]{display:block;margin:auto}.settingsForm[_ngcontent-%COMP%]{display:flex;flex-flow:column nowrap;width:60%;margin:auto}.settingsForm__path[_ngcontent-%COMP%]{display:flex}.settingsForm__label[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 3)}.path-select-btn[_ngcontent-%COMP%]{height:calc(var(--vh) * 5);line-height:calc(var(--vh) * 5);width:calc(var(--vh) * 5);margin-top:calc(var(--vh) * .65);background-color:#072337;border-radius:0 calc(var(--vh) * .4) calc(var(--vh) * .4) 0;cursor:pointer;border:calc(var(--vh) * .15) solid #c6a052;border-left:none;text-align:center;display:flex}.path-select-btn[_ngcontent-%COMP%]     i{margin:auto}.settingsForm__select[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .65)}.settingsForm__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);margin-bottom:0;background:#182531;color:#f6f6f6;border:calc(var(--vh) * .15) solid #0f1b27;border-radius:calc(var(--vh) * .4)}.settingsForm__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.settingsForm__textInput[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);margin-bottom:0;background:#182531;color:#f6f6f6;border:calc(var(--vh) * .15) solid #0f1b27;border-radius:calc(var(--vh) * .4);margin-top:calc(var(--vh) * .65)}.settingsForm__textInput[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.settingsForm__textInput[_ngcontent-%COMP%]{flex:1;border:calc(var(--vh) * .15) solid #c6a052;border-radius:calc(var(--vh) * .4) 0 0 calc(var(--vh) * .4)}.settingsForm__cta[_ngcontent-%COMP%]{align-self:center;margin:0 auto;margin-top:calc(var(--vh) * 4)}"]
             }), h
         })(), Ms = (() => {
@@ -3410,7 +3394,7 @@
             }), h
         })();
 
-        function _s(h, L) {
+        function ms(h, A) {
             if (1 & h) {
                 const a = s.EpF();
                 s.TgZ(0, "div", 1), s.NdJ("click", function () {
@@ -3419,26 +3403,26 @@
                 }), s._uU(1), s.qZA()
             }
             if (2 & h) {
-                const a = L.$implicit, M = s.oxw();
+                const a = A.$implicit, M = s.oxw();
                 s.ekj("active", a.title === M.activeTab), s.xp6(1), s.hij(" ", a.title.toUpperCase(), " ")
             }
         }
 
-        function fs(h, L) {
+        function _s(h, A) {
             if (1 & h && s._UZ(0, "app-apollo-settings", 7), 2 & h) {
                 const a = s.oxw();
                 s.Q6J("anonymous", a.anonymous)
             }
         }
 
-        function no(h, L) {
+        function no(h, A) {
             if (1 & h && s._UZ(0, "app-game-settings", 8), 2 & h) {
                 const a = s.oxw();
                 s.Q6J("game", a.selectedGame)
             }
         }
 
-        function Os(h, L) {
+        function Os(h, A) {
             1 & h && s._UZ(0, "app-wallet-settings", 9)
         }
 
@@ -3450,7 +3434,7 @@
 
                 ngOnInit() {
                     const a = this.authService.getUserId();
-                    a ? (this.anonymous = !1, this.gameService.getGames(a).pipe((0, _t.q)(1)).subscribe(M => this.games = M.records)) : this.anonymous = !0
+                    a ? (this.anonymous = !1, this.gameService.getGames(a).pipe((0, mt.q)(1)).subscribe(M => this.games = M.records)) : this.anonymous = !0
                 }
 
                 selectTab(a, M) {
@@ -3459,7 +3443,7 @@
             }
 
             return h.\u0275fac = function (a) {
-                return new (a || h)(s.Y36(U.hM), s.Y36(V.pk), s.Y36(V.mI))
+                return new (a || h)(s.Y36(ie.hM), s.Y36(V.pk), s.Y36(V.mI))
             }, h.\u0275cmp = s.Xpm({
                 type: h,
                 selectors: [["app-settings-modal"]],
@@ -3470,17 +3454,17 @@
                 template: function (a, M) {
                     1 & a && (s.TgZ(0, "aside", 0)(1, "div", 1), s.NdJ("click", function () {
                         return M.selectTab("immutable")
-                    }), s._uU(2, " Immutable "), s.qZA(), s.YNc(3, _s, 2, 3, "div", 2), s.TgZ(4, "div", 1), s.NdJ("click", function () {
+                    }), s._uU(2, " Immutable "), s.qZA(), s.YNc(3, ms, 2, 3, "div", 2), s.TgZ(4, "div", 1), s.NdJ("click", function () {
                         return M.selectTab("wallet")
-                    }), s._uU(5, " WALLET "), s.qZA()(), s.TgZ(6, "div", 3), s.YNc(7, fs, 1, 1, "app-apollo-settings", 4), s.YNc(8, no, 1, 1, "app-game-settings", 5), s.YNc(9, Os, 1, 0, "app-wallet-settings", 6), s.qZA()), 2 & a && (s.xp6(1), s.ekj("active", "immutable" === M.activeTab), s.xp6(2), s.Q6J("ngForOf", M.games), s.xp6(1), s.ekj("active", "wallet" === M.activeTab), s.xp6(2), s.Q6J("@fade", M.activeTab), s.xp6(1), s.Q6J("ngIf", "immutable" === M.activeTab), s.xp6(1), s.Q6J("ngIf", "wallet" !== M.activeTab && "immutable" !== M.activeTab), s.xp6(1), s.Q6J("ngIf", "wallet" === M.activeTab))
+                    }), s._uU(5, " WALLET "), s.qZA()(), s.TgZ(6, "div", 3), s.YNc(7, _s, 1, 1, "app-apollo-settings", 4), s.YNc(8, no, 1, 1, "app-game-settings", 5), s.YNc(9, Os, 1, 0, "app-wallet-settings", 6), s.qZA()), 2 & a && (s.xp6(1), s.ekj("active", "immutable" === M.activeTab), s.xp6(2), s.Q6J("ngForOf", M.games), s.xp6(1), s.ekj("active", "wallet" === M.activeTab), s.xp6(2), s.Q6J("@fade", M.activeTab), s.xp6(1), s.Q6J("ngIf", "immutable" === M.activeTab), s.xp6(1), s.Q6J("ngIf", "wallet" !== M.activeTab && "immutable" !== M.activeTab), s.xp6(1), s.Q6J("ngIf", "wallet" === M.activeTab))
                 },
-                directives: [Se.sg, Se.O5, so, oo, Ms],
+                directives: [_e.sg, _e.O5, so, oo, Ms],
                 styles: ["@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.side-pane-item[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.side-pane-item[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22);line-height:1.4}[_nghost-%COMP%]{width:calc(var(--vw) * 60);height:calc(var(--vh) * 80);border-radius:calc(var(--vh) * .4);background-color:#0c1620;border:calc(var(--vh) * .15) solid #e0c58f;display:flex}.side-pane[_ngcontent-%COMP%]{width:30%;border-right:calc(var(--vh) * .15) solid #e0c58f;display:flex;flex-flow:column nowrap}.side-pane-item[_ngcontent-%COMP%]{padding:calc(var(--vh) * 1.8);color:#f6f6f6;text-align:center;transition:all .15s ease;cursor:pointer}.side-pane-item[_ngcontent-%COMP%]:hover{background-color:#1d2f41}.side-pane-item.active[_ngcontent-%COMP%]{background-color:#182531}.settingsContent[_ngcontent-%COMP%]{padding:calc(var(--vh) * 1.8);flex:1;display:flex}.settingsContent__tab[_ngcontent-%COMP%]{width:calc(var(--vw) * 30)}"],
                 data: {animation: [(0, Bt.X$)("fade", [(0, Bt.eR)("* => *", [(0, Bt.jt)(500, (0, Bt.F4)([(0, Bt.oB)({opacity: 0}), (0, Bt.oB)({opacity: 1})]))])])]}
             }), h
         })();
         var ro = o(5969);
-        let vs = (() => {
+        let fs = (() => {
             class h {
                 constructor(a, M, F, me) {
                     this.modalService = a, this.audioService = M, this.settingsService = F, this.akumaService = me, this.unsubscribe = new i.xQ
@@ -3495,7 +3479,7 @@
                 }
 
                 watchSettingsService() {
-                    this.settingsService.openSettings$.pipe((0, q.R)(this.unsubscribe), (0, Ge.h)(a => !!a)).subscribe(a => {
+                    this.settingsService.openSettings$.pipe((0, ee.R)(this.unsubscribe), (0, N.h)(a => !!a)).subscribe(a => {
                         this.openSettings(a), this.settingsService.markSettingsAsOpen()
                     })
                 }
@@ -3523,7 +3507,7 @@
             }
 
             return h.\u0275fac = function (a) {
-                return new (a || h)(s.Y36(Ht.Z), s.Y36(V.pk), s.Y36(ro.g), s.Y36(Fe.jt))
+                return new (a || h)(s.Y36(Ht.Z), s.Y36(V.pk), s.Y36(ro.g), s.Y36(Ge.jt))
             }, h.\u0275cmp = s.Xpm({
                 type: h,
                 selectors: [["cerberus-draggable-titlebar"]],
@@ -3544,13 +3528,13 @@
                 styles: ["[_nghost-%COMP%]{width:100%;height:28px;z-index:23;background:#1D2F41;display:flex;flex-direction:row-reverse;padding-right:8px}.draggable[_ngcontent-%COMP%]{flex:1;-webkit-app-region:drag}.electronMenuItem[_ngcontent-%COMP%]{cursor:pointer;display:flex;width:28px}.electronMenuItem[_ngcontent-%COMP%]:hover   .electronMenuItem__icon[_ngcontent-%COMP%]{color:#f6f6f6}.electronMenuItem__icon[_ngcontent-%COMP%]{font-size:14px;margin:auto;text-shadow:0 2px 0 rgba(39,39,39,.4);color:#7192b0}"]
             }), h
         })();
-        var ds = o(39765), bs = o(25774), $s = o(97993);
+        var cs = o(39765), vs = o(25774), $s = o(97993);
 
-        function $t(h, L) {
+        function $t(h, A) {
             1 & h && (s.TgZ(0, "cerberus-announce-banner-control", 2), s._UZ(1, "cerberus-controllable-banner"), s.qZA())
         }
 
-        function Ts(h, L) {
+        function Ts(h, A) {
             if (1 & h && (s.ynx(0), s.YNc(1, $t, 2, 0, "cerberus-announce-banner-control", 1), s.BQk()), 2 & h) {
                 const a = s.oxw();
                 s.xp6(1), s.Q6J("featureFlagIf", a.Flags.showControllableBanner)
@@ -3559,12 +3543,12 @@
 
         let io = (() => {
             class h {
-                constructor(a, M, F, me, Le, ze, Ke, Pt, gt) {
-                    this.vcr = a, this.analyticsService = M, this.authService = F, this.activityService = me, this.router = Le, this.navigationService = ze, this.route = Ke, this.protocolService = Pt, this.akumaService = gt, this.Flags = Fe.vU, this.destroyed$ = new i.xQ, this.watchForNavigation(), this.protocolService.watchProtocol()
+                constructor(a, M, F, me, Le, ze, je, xt, ut) {
+                    this.vcr = a, this.analyticsService = M, this.authService = F, this.activityService = me, this.router = Le, this.navigationService = ze, this.route = je, this.protocolService = xt, this.akumaService = ut, this.Flags = Ge.vU, this.destroyed$ = new i.xQ, this.watchForNavigation(), this.protocolService.watchProtocol()
                 }
 
                 ngOnInit() {
-                    this.recordActivity(), this.logSessionStarted(), this.logSessionAuthenticated(), this.authService.account$.pipe((0, q.R)(this.destroyed$)).subscribe(a => {
+                    this.recordActivity(), this.logSessionStarted(), this.logSessionAuthenticated(), this.authService.account$.pipe((0, ee.R)(this.destroyed$)).subscribe(a => {
                         this.isLoggedIn = !!a
                     })
                 }
@@ -3587,20 +3571,20 @@
                     (0, It.F)(3e4).pipe((0, re.VS)(() => {
                         const a = this.authService.getUserId();
                         return a && this.authService.isLoggedIn() ? this.activityService.recordActivity(a) : (0, e.of)()
-                    }), (0, xe.K)((a, M) => (console.error("App->recordActivity() error", a), (0, e.of)(a)))).subscribe()
+                    }), (0, Se.K)((a, M) => (console.error("App->recordActivity() error", a), (0, e.of)(a)))).subscribe()
                 }
 
                 watchForNavigation() {
-                    this.router.events.pipe((0, Ge.h)(a => a instanceof H.m2), (0, W.U)(() => this.route), (0, W.U)(a => {
+                    this.router.events.pipe((0, N.h)(a => a instanceof W.m2), (0, H.U)(() => this.route), (0, H.U)(a => {
                         for (; a.firstChild;) a = a.firstChild;
                         return a
-                    }), (0, re.zg)(a => a.data), (0, W.U)(a => a.hasOwnProperty("state") ? a.state : ""), (0, z.b)(a => this.navigationService.updateCurrentRoute(a))).subscribe(() => {
+                    }), (0, re.zg)(a => a.data), (0, H.U)(a => a.hasOwnProperty("state") ? a.state : ""), (0, l.b)(a => this.navigationService.updateCurrentRoute(a))).subscribe(() => {
                     })
                 }
             }
 
             return h.\u0275fac = function (a) {
-                return new (a || h)(s.Y36(s.s_b), s.Y36(Fe.yD), s.Y36(V.mI), s.Y36(ie), s.Y36(H.F0), s.Y36(ke.f), s.Y36(H.gz), s.Y36(ct), s.Y36(Fe.jt))
+                return new (a || h)(s.Y36(s.s_b), s.Y36(Ge.yD), s.Y36(V.mI), s.Y36(Oe), s.Y36(W.F0), s.Y36(Ze.f), s.Y36(W.gz), s.Y36(gt), s.Y36(Ge.jt))
             }, h.\u0275cmp = s.Xpm({
                 type: h,
                 selectors: [["cerberus-root"]],
@@ -3610,7 +3594,7 @@
                 template: function (a, M) {
                     1 & a && (s.TgZ(0, "app-auto-letterbox"), s._UZ(1, "cerberus-draggable-titlebar"), s.YNc(2, Ts, 2, 1, "ng-container", 0), s._UZ(3, "router-outlet"), s.qZA()), 2 & a && (s.xp6(2), s.Q6J("ngIf", !M.isLoggedIn))
                 },
-                directives: [ls, vs, Se.O5, ds.w, bs.O, $s.i, H.lC],
+                directives: [ws, fs, _e.O5, cs.w, vs.O, $s.i, W.lC],
                 styles: ["[_nghost-%COMP%]{display:block}"]
             }), h
         })(), As = (() => {
@@ -3632,21 +3616,21 @@
                 template: function (a, M) {
                     1 & a && s._UZ(0, "router-outlet")
                 },
-                directives: [H.lC],
+                directives: [W.lC],
                 styles: ["[_nghost-%COMP%]{display:block;flex:1}.screen-overlay[_ngcontent-%COMP%]{width:100%;height:100%;position:absolute;top:0;left:0;z-index:-1}.app-bar[_ngcontent-%COMP%]{right:calc(var(--vw) * 3.33);position:absolute;bottom:0;right:calc(var(--vw) * 10)}"]
             }), h
         })();
-        var Cs = o(75778), Gt = o(98723);
+        var bs = o(75778), Gt = o(98723);
 
-        function Yt(h, L) {
+        function Yt(h, A) {
             1 & h && (s.TgZ(0, "div", 6), s._uU(1, " Username is required "), s.qZA())
         }
 
-        function us(h, L) {
+        function ds(h, A) {
             1 & h && (s.TgZ(0, "div", 6), s._uU(1, " Username must be at least 4 characters long "), s.qZA())
         }
 
-        function qt(h, L) {
+        function qt(h, A) {
             if (1 & h && (s.TgZ(0, "div", 6), s._uU(1), s.qZA()), 2 & h) {
                 const a = s.oxw();
                 s.xp6(1), s.hij(" ", a.usernameError, " ")
@@ -3672,15 +3656,15 @@
                 }
 
                 watchSearch() {
-                    this.usernameControl.valueChanges.pipe((0, q.R)(this.unsubscribe), (0, ft.b)(500), (0, Cs.x)(), (0, z.b)(a => {
+                    this.usernameControl.valueChanges.pipe((0, ee.R)(this.unsubscribe), (0, _t.b)(500), (0, bs.x)(), (0, l.b)(a => {
                         this.username = a, this.usernameError = void 0
                     })).subscribe()
                 }
 
                 submit() {
-                    this.submitUsernameApi$(this.username).pipe((0, _t.q)(1), (0, z.b)(a => {
+                    this.submitUsernameApi$(this.username).pipe((0, mt.q)(1), (0, l.b)(a => {
                         this.modalService.destroyTopModal(), this.router.navigate(["/"])
-                    }), (0, xe.K)(a => (403 === a.status && (this.usernameError = "Username not allowed."), 400 === a.status && (this.usernameError = "Username is invalid."), 500 === a.status && (this.usernameError = "Username is taken."), (0, e.of)(a)))).subscribe()
+                    }), (0, Se.K)(a => (403 === a.status && (this.usernameError = "Username not allowed."), 400 === a.status && (this.usernameError = "Username is invalid."), 500 === a.status && (this.usernameError = "Username is taken."), (0, e.of)(a)))).subscribe()
                 }
 
                 submitUsernameApi$(a) {
@@ -3690,14 +3674,14 @@
 
                 isUsernameValid$(a) {
                     const M = ["immutable", "apollo", "mythic"];
-                    return (0, Gt.H)(1e3).pipe((0, z.b)(F => {
+                    return (0, Gt.H)(1e3).pipe((0, l.b)(F => {
                         this.usernameError = M.some(me => me === a) ? "Username is taken" : void 0
                     }))
                 }
             }
 
             return h.\u0275fac = function (a) {
-                return new (a || h)(s.Y36(H.F0), s.Y36(Ht.Z), s.Y36(ae.eN), s.Y36(V.mI))
+                return new (a || h)(s.Y36(W.F0), s.Y36(Ht.Z), s.Y36(ae.eN), s.Y36(V.mI))
             }, h.\u0275cmp = s.Xpm({
                 type: h,
                 selectors: [["app-username-onboarding"]],
@@ -3705,14 +3689,14 @@
                 vars: 5,
                 consts: [[1, "title"], [1, "onboarding"], ["type", "search", "name", "usernameControl", "maxlength", "15", 1, "form__textInput", 3, "formControl"], [1, "form__inputHint"], ["class", "form__inputHint__text", 4, "ngIf"], ["size", "large", "text", "Submit", 1, "form__submitButton", 3, "disabled", "click"], [1, "form__inputHint__text"]],
                 template: function (a, M) {
-                    1 & a && (s.TgZ(0, "header", 0), s._uU(1, " Unique Username Onboarding "), s.qZA(), s.TgZ(2, "section", 1), s._uU(3, " Onboarding section for inputting username. Please enter a unique username "), s._UZ(4, "input", 2), s.TgZ(5, "div", 3), s.YNc(6, Yt, 2, 0, "div", 4), s.YNc(7, us, 2, 0, "div", 4), s.qZA(), s.TgZ(8, "gu-primary-hex-button", 5), s.NdJ("click", function () {
+                    1 & a && (s.TgZ(0, "header", 0), s._uU(1, " Unique Username Onboarding "), s.qZA(), s.TgZ(2, "section", 1), s._uU(3, " Onboarding section for inputting username. Please enter a unique username "), s._UZ(4, "input", 2), s.TgZ(5, "div", 3), s.YNc(6, Yt, 2, 0, "div", 4), s.YNc(7, ds, 2, 0, "div", 4), s.qZA(), s.TgZ(8, "gu-primary-hex-button", 5), s.NdJ("click", function () {
                         return M.submit()
                     }), s.qZA(), s.TgZ(9, "div", 3), s.YNc(10, qt, 2, 1, "div", 4), s.qZA()()), 2 & a && (s.xp6(4), s.Q6J("formControl", M.usernameControl), s.xp6(2), s.Q6J("ngIf", M.usernameControl.hasError("required") && M.usernameControl.touched), s.xp6(1), s.Q6J("ngIf", M.usernameControl.hasError("minlength") && M.usernameControl.touched), s.xp6(1), s.Q6J("disabled", !M.usernameControl.valid || M.usernameError), s.xp6(2), s.Q6J("ngIf", M.usernameError))
                 },
-                directives: [Y.Fj, Y.nD, Y.JJ, Y.oH, Se.O5],
+                directives: [Y.Fj, Y.nD, Y.JJ, Y.oH, _e.O5],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.form__inputHint__text[_ngcontent-%COMP%], .form__textInput[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.form__inputHint__text[_ngcontent-%COMP%], .form__textInput[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.form__textInput[_ngcontent-%COMP%]{line-height:1.4}[_nghost-%COMP%]{min-width:calc(var(--vw) * 15.62);border:1px solid white;z-index:21;overflow:auto;background-color:#060b11b3;border-radius:calc(var(--vh) * .4);display:flex;flex-direction:column}.title[_ngcontent-%COMP%]{padding:calc(var(--vh) * 1.85);border-bottom:1px solid white;font-size:x-large;text-align:center}.onboarding[_ngcontent-%COMP%]{padding:calc(var(--vh) * 1.85);text-align:center}.form__textInput[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);text-align:center;margin:0 auto;margin-top:calc(var(--vh) * 5);width:calc(var(--vw) * 25);background:#182531;color:#fff;border:1px solid #0f1b27;border-radius:calc(var(--vh) * .4)}.form__textInput[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.form__inputHint[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1);min-height:15px}.form__inputHint__text[_ngcontent-%COMP%]{text-shadow:0 1px 1px rgba(0,0,0,.3)}.form__submitButton[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 4.44);width:calc(var(--vw) * 25);margin-left:auto;margin-right:auto}"]
             }), h
-        })(), ys = (() => {
+        })(), Cs = (() => {
             class h {
                 constructor(a, M) {
                     this.element = a, this.renderer = M, this.onChange = () => {
@@ -3766,7 +3750,7 @@
                 }
 
                 ngOnInit() {
-                    this.control.statusChanges.pipe((0, q.R)(this.destroyed$)).subscribe({
+                    this.control.statusChanges.pipe((0, ee.R)(this.destroyed$)).subscribe({
                         next: a => {
                             this.renderer.setProperty(this.element.nativeElement, "errors", this.getErrors()), this.renderer.setProperty(this.element.nativeElement, "enabled", this.control.dirty)
                         }
@@ -3792,46 +3776,46 @@
             }), h
         })();
 
-        function Et(h, L) {
+        function kt(h, A) {
             if (1 & h && (s.TgZ(0, "gu-body-text", 27), s._uU(1), s.qZA()), 2 & h) {
                 const a = s.oxw();
                 s.xp6(1), s.hij(" ", a.loginError, " ")
             }
         }
 
-        function Ds(h, L) {
+        function Ds(h, A) {
             1 & h && (s.TgZ(0, "div", 16), s._uU(1, " Email address is required "), s.qZA())
         }
 
-        function ao(h, L) {
+        function ao(h, A) {
             1 & h && (s.TgZ(0, "div", 16), s._uU(1, " Enter valid email address "), s.qZA())
         }
 
-        function Tt(h, L) {
+        function Tt(h, A) {
             1 & h && (s.TgZ(0, "div", 16), s._uU(1, " This email is already in use. "), s.qZA())
         }
 
-        function lo(h, L) {
+        function lo(h, A) {
             1 & h && (s.TgZ(0, "div", 16), s._uU(1, " User name is required "), s.qZA())
         }
 
-        function Ls(h, L) {
+        function Ls(h, A) {
             1 & h && (s.TgZ(0, "div", 16), s._uU(1, " User name cannot be the same as email "), s.qZA())
         }
 
-        function Us(h, L) {
+        function Us(h, A) {
             1 & h && (s.TgZ(0, "div", 16), s._uU(1, " Password is required "), s.qZA())
         }
 
-        function Rs(h, L) {
+        function Rs(h, A) {
             1 & h && (s.TgZ(0, "div", 16), s._uU(1, " Passwords must be at least 8 characters long "), s.qZA())
         }
 
-        function Bs(h, L) {
+        function Bs(h, A) {
             1 & h && (s.TgZ(0, "div", 16), s._uU(1, " Passwords don't match "), s.qZA())
         }
 
-        function Gs(h, L) {
+        function Gs(h, A) {
             if (1 & h) {
                 const a = s.EpF();
                 s.TgZ(0, "form", 4), s.NdJ("ngSubmit", function () {
@@ -3860,7 +3844,7 @@
             }
         }
 
-        function Fs(h, L) {
+        function Fs(h, A) {
             if (1 & h) {
                 const a = s.EpF();
                 s.TgZ(0, "div", 17)(1, "div", 18)(2, "div"), s._uU(3, " We've sent an email to "), s.TgZ(4, "span"), s._uU(5), s.qZA(), s._uU(6, " - please follow the link in that email to confirm your account in a browser and then come back to login. "), s.qZA(), s._UZ(7, "gu-primary-hex-button", 19), s.TgZ(8, "div"), s._uU(9, " Still waiting? Try sending again or starting from scratch. "), s.qZA(), s.TgZ(10, "gu-primary-hex-button", 20), s.NdJ("click", function () {
@@ -3875,11 +3859,11 @@
             }
         }
 
-        function co(h, L) {
+        function co(h, A) {
             1 & h && (s.TgZ(0, "div", 9), s._uU(1, " Enter valid email address "), s.qZA())
         }
 
-        function xs(h, L) {
+        function ys(h, A) {
             if (1 & h) {
                 const a = s.EpF();
                 s.TgZ(0, "form", 4), s.NdJ("submit", function () {
@@ -3896,7 +3880,7 @@
             }
         }
 
-        function uo(h, L) {
+        function uo(h, A) {
             if (1 & h) {
                 const a = s.EpF();
                 s.TgZ(0, "div", 10)(1, "div", 11), s._uU(2), s.qZA(), s.TgZ(3, "a", 12), s.NdJ("click", function () {
@@ -3912,8 +3896,8 @@
         const Uo = [{path: "", redirectTo: "game/gu", pathMatch: "full"}, {
             path: "login", component: (() => {
                 class h {
-                    constructor(a, M, F, me, Le, ze, Ke, Pt, gt, Kt, ve, be) {
-                        this.analyticsService = a, this.authService = M, this.fb = F, this.utils = me, this.router = Le, this.modalService = ze, this.vcr = Ke, this.storageService = Pt, this.audioService = gt, this.http = Kt, this.akumaService = ve, this.environment = be, this.loading = !1, this.loginVideoSrc = "/assets/videos/login-video-pallas.webm"
+                    constructor(a, M, F, me, Le, ze, je, xt, ut, Kt, ve, be) {
+                        this.analyticsService = a, this.authService = M, this.fb = F, this.utils = me, this.router = Le, this.modalService = ze, this.vcr = je, this.storageService = xt, this.audioService = ut, this.http = Kt, this.akumaService = ve, this.environment = be, this.loading = !1, this.loginVideoSrc = "/assets/videos/login-video-pallas.webm"
                     }
 
                     ngOnInit() {
@@ -3925,9 +3909,9 @@
                         if (this.loading) return;
                         const a = {email: this.formGroup.value.email, password: this.formGroup.value.password},
                             M = this.formGroup.value.rememberMe;
-                        this.loginError = "", this.loading = !0, this.authService.login(a, M, 1).pipe((0, _t.q)(1), (0, z.b)(F => {
+                        this.loginError = "", this.loading = !0, this.authService.login(a, M, 1).pipe((0, mt.q)(1), (0, l.b)(F => {
                             this.logSessionAuthenticated(F), this.storageService.set(["email"], a.email), this.router.navigate(["/"])
-                        }), (0, xe.K)(F => this.handleLoginError(F)), (0, Qe.x)(() => this.loading = !1)).subscribe()
+                        }), (0, Se.K)(F => this.handleLoginError(F)), (0, Ve.x)(() => this.loading = !1)).subscribe()
                     }
 
                     logSessionAuthenticated(a) {
@@ -3975,13 +3959,13 @@
                 }
 
                 return h.\u0275fac = function (a) {
-                    return new (a || h)(s.Y36(Fe.yD), s.Y36(V.mI), s.Y36(Y.qu), s.Y36(Ve.F), s.Y36(H.F0), s.Y36(Ht.Z), s.Y36(s.s_b), s.Y36(V.qy), s.Y36(V.pk), s.Y36(ae.eN), s.Y36(Fe.jt), s.Y36(V.Ho))
+                    return new (a || h)(s.Y36(Ge.yD), s.Y36(V.mI), s.Y36(Y.qu), s.Y36(ct.F), s.Y36(W.F0), s.Y36(Ht.Z), s.Y36(s.s_b), s.Y36(V.qy), s.Y36(V.pk), s.Y36(ae.eN), s.Y36(Ge.jt), s.Y36(V.Ho))
                 }, h.\u0275cmp = s.Xpm({
                     type: h,
                     selectors: [["cerberus-login"]],
                     decls: 38,
                     vars: 11,
-                    consts: [[1, "columns", "is-gapless", "container"], [1, "column"], [1, "videoWrapper"], ["preload", "", "autoplay", "", "muted", "", "playsinline", "", "loop", "", 1, "loginVideo", 3, "src"], ["videoPlayer", ""], [1, "column", "is-narrow"], [1, "formContainer"], [1, "formWrapper"], [1, "loginForm", 3, "formGroup", "submit"], [1, "logo_wrapper"], ["src", "/assets/images/internal-logos/logo--gods-unchained-flat.svg", 1, "logo"], ["for", "email"], ["plain", "true"], ["formControlName", "email", "name", "email", "id", "email", "data-test-id", "email-input", "name", "email", "type", "email", "placeholder", "e.g. neferu@deadmail.com", 3, "valid", "click"], ["data-test-id", "email-errors", 3, "control"], ["key", "required", "fillColor", "colors.alert", "size", "x-small", "data-test-id", "email-error-required"], ["key", "email", "fillColor", "colors.alert", "size", "x-small", "data-test-id", "email-error-email"], ["for", "password"], ["formControlName", "password", "name", "password", "data-test-id", "password-input", "id", "password", "name", "password", "placeholder", "SomethingSneaky", "required", "", 3, "valid", "click"], ["data-test-id", "password-errors", 3, "control"], ["key", "required", "fillColor", "colors.alert", "size", "x-small", "data-test-id", "password-error-required"], ["class", "loginError", "fillColor", "colors.alert", "size", "x-small", 4, "ngIf"], ["data-test-id", "login-button", "id", "button__SignIn", "theme", "dark", 1, "formButton", "loginForm__submitButton", 3, "loading", "disabled", "click"], ["size", "small", "fontWeight", "bold", "routerLink", "/reset", "fillColor", "colors.light.500", 1, "loginForm__forgottenLink"], [1, "createAccount"], ["size", "medium", "fontWeight", "regular", "fillColor", "colors.light.500", 1, "createAccount__title"], ["type", "secondary", "icon", "leave_website", "iconPosition", "right", "theme", "gunmetal", "text", "CREATE ACCOUNT", 1, "formButton", 3, "href"], ["fillColor", "colors.alert", "size", "x-small", 1, "loginError"]],
+                    consts: [[1, "columns", "is-gapless", "login__container"], [1, "column"], [1, "videoWrapper"], ["preload", "", "autoplay", "", "muted", "", "playsinline", "", "loop", "", 1, "loginVideo", 3, "src"], ["videoPlayer", ""], [1, "column", "is-narrow"], [1, "formContainer"], [1, "formWrapper"], [1, "loginForm", 3, "formGroup", "submit"], [1, "logo_wrapper"], ["src", "/assets/images/internal-logos/logo--gods-unchained-flat.svg", 1, "logo"], ["for", "email"], ["plain", "true"], ["formControlName", "email", "name", "email", "id", "email", "data-test-id", "email-input", "name", "email", "type", "email", "placeholder", "e.g. neferu@deadmail.com", 3, "valid", "click"], ["data-test-id", "email-errors", 3, "control"], ["key", "required", "fillColor", "colors.alert", "size", "x-small", "data-test-id", "email-error-required"], ["key", "email", "fillColor", "colors.alert", "size", "x-small", "data-test-id", "email-error-email"], ["for", "password"], ["formControlName", "password", "name", "password", "data-test-id", "password-input", "id", "password", "name", "password", "placeholder", "SomethingSneaky", "required", "", 3, "valid", "click"], ["data-test-id", "password-errors", 3, "control"], ["key", "required", "fillColor", "colors.alert", "size", "x-small", "data-test-id", "password-error-required"], ["class", "loginError", "fillColor", "colors.alert", "size", "x-small", 4, "ngIf"], ["data-test-id", "login-button", "id", "button__SignIn", "theme", "dark", 1, "formButton", "loginForm__submitButton", 3, "loading", "disabled", "click"], ["size", "small", "fontWeight", "bold", "routerLink", "/reset", "fillColor", "colors.light.500", 1, "loginForm__forgottenLink"], [1, "createAccount"], ["size", "medium", "fontWeight", "regular", "fillColor", "colors.light.500", 1, "createAccount__title"], ["type", "secondary", "icon", "leave_website", "iconPosition", "right", "theme", "gunmetal", "text", "CREATE ACCOUNT", 1, "formButton", 3, "href"], ["fillColor", "colors.alert", "size", "x-small", 1, "loginError"]],
                     template: function (a, M) {
                         1 & a && (s.TgZ(0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "video", 3, 4), s._uU(5, " Your browser does not support HTML5 video. "), s.qZA()()(), s.TgZ(6, "div", 5)(7, "div", 6)(8, "div", 7)(9, "gu-form", 8), s.NdJ("submit", function () {
                             return M.login()
@@ -3989,11 +3973,11 @@
                             return M.playClickTinyV1()
                         }), s.qZA(), s.TgZ(16, "gu-validation-errors", 14)(17, "gu-body-text", 15), s._uU(18, "Email is required."), s.qZA(), s.TgZ(19, "gu-body-text", 16), s._uU(20), s.qZA()(), s.TgZ(21, "gu-label", 17)(22, "gu-body-text", 12), s._uU(23, "Password"), s.qZA()(), s.TgZ(24, "gu-password-input", 18), s.NdJ("click", function () {
                             return M.playClickTinyV1()
-                        }), s.qZA(), s.TgZ(25, "gu-validation-errors", 19)(26, "gu-body-text", 20), s._uU(27, "Password is required."), s.qZA()(), s.YNc(28, Et, 2, 1, "gu-body-text", 21), s.TgZ(29, "gu-standard-button", 22), s.NdJ("click", function () {
+                        }), s.qZA(), s.TgZ(25, "gu-validation-errors", 19)(26, "gu-body-text", 20), s._uU(27, "Password is required."), s.qZA()(), s.YNc(28, kt, 2, 1, "gu-body-text", 21), s.TgZ(29, "gu-standard-button", 22), s.NdJ("click", function () {
                             return M.login()
                         }), s._uU(30, "Log in "), s.qZA(), s.TgZ(31, "gu-body-text", 23), s._uU(32, " Forgotten password? "), s.qZA()()(), s.TgZ(33, "div", 24)(34, "gu-simple-text", 25), s._uU(35, " Don't have an account? "), s.qZA(), s.TgZ(36, "gu-standard-button", 26), s._uU(37, "Create Account "), s.qZA()()()()()), 2 & a && (s.xp6(3), s.Q6J("src", M.loginVideoSrc, s.LSH), s.xp6(6), s.Q6J("formGroup", M.formGroup), s.xp6(6), s.Q6J("valid", M.formGroup.controls.email.valid), s.xp6(1), s.Q6J("control", M.formGroup.controls.email), s.xp6(4), s.hij("", M.formGroup.controls.email.value, " is not a valid email address"), s.xp6(4), s.Q6J("valid", M.formGroup.controls.password.valid), s.xp6(1), s.Q6J("control", M.formGroup.controls.password), s.xp6(3), s.Q6J("ngIf", M.loginError), s.xp6(1), s.Q6J("loading", M.loading)("disabled", !M.formGroup.valid), s.xp6(7), s.Q6J("href", M.environment.guRegisterURL))
                     },
-                    directives: [Y.JL, Y.sg, ys, Y.JJ, Y.u, es, Y.Q7, Se.O5, H.rH],
+                    directives: [Y.JL, Y.sg, Cs, Y.JJ, Y.u, es, Y.Q7, _e.O5, W.rH],
                     styles: ['h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.loginForm__forgottenLink[_ngcontent-%COMP%], .loginForm__inputHint[_ngcontent-%COMP%], .creatAccountArea__text[_ngcontent-%COMP%], .loginForm__textInput[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.loginForm__forgottenLink[_ngcontent-%COMP%], .loginForm__inputHint[_ngcontent-%COMP%], .creatAccountArea__text[_ngcontent-%COMP%], .loginForm__textInput[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.creatAccountArea__text[_ngcontent-%COMP%], .loginForm__textInput[_ngcontent-%COMP%]{line-height:1.4}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;align-items:center;background:#182531;height:100%;position:relative}.logo_wrapper[_ngcontent-%COMP%]{width:100%;text-align:center}.large_logo[_ngcontent-%COMP%]{width:70%}.loginVideo[_ngcontent-%COMP%]{position:absolute;height:100%;width:100%;top:0;left:0;object-fit:cover;object-position:0 0;opacity:1}.loginForm[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 17.7);width:calc(var(--vw) * 17.7);position:relative;display:flex;flex-flow:column nowrap}.loginForm__textInput[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);margin-bottom:0;background:#182531;color:#f6f6f6;border:calc(var(--vh) * .15) solid #0f1b27;border-radius:calc(var(--vh) * .4)}.loginForm__textInput[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.loginForm__inputHint[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .6);text-shadow:0 1px 1px rgba(0,0,0,.3)}.loginForm__forgottenLink[_ngcontent-%COMP%]{text-align:right;color:#f6f6f6;text-shadow:0 1px 1px rgba(0,0,0,.3);margin-top:4px;margin-bottom:8px}.loginForm__submitButton[_ngcontent-%COMP%]{margin-left:auto;margin-right:auto;padding:0 50px;min-width:216px}.creatAccountArea[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 10.9);width:calc(var(--vw) * 17.7);position:relative;display:flex;flex-flow:column nowrap;align-items:center}.creatAccountArea__text[_ngcontent-%COMP%]{text-align:center;font-weight:600;color:#f6f6f6}.notify_users[_ngcontent-%COMP%]{margin-top:20px;color:#f6f6f6;z-index:1;width:600px;text-align:center;background-color:#0f1b27;padding:20px;border-radius:5px;line-height:1.5}']
                 }), h
             })()
@@ -4005,7 +3989,7 @@
                     }
 
                     ngOnInit() {
-                        this.buildFormGroup(), this.logRegistrationStarted(), this.email.valueChanges.pipe((0, q.R)(this.unsubscribe)).subscribe(() => this.emailError = !1)
+                        this.buildFormGroup(), this.logRegistrationStarted(), this.email.valueChanges.pipe((0, ee.R)(this.unsubscribe)).subscribe(() => this.emailError = !1)
                     }
 
                     ngOnDestroy() {
@@ -4045,9 +4029,9 @@
                         for (const me in F) F.hasOwnProperty(me) && this.storageService.set([me], `${F[me]}`);
                         if (this.formGroup.invalid) this.utils.markFormGroupTouched(this.formGroup); else if (!this.loading) {
                             if (this.termsError = !1, this.emailError = !1, !this.agreeToTerms.value) return void (this.termsError = !0);
-                            this.loading = !0, this.auth.register(M).pipe((0, _t.q)(1), (0, z.b)(me => {
+                            this.loading = !0, this.auth.register(M).pipe((0, mt.q)(1), (0, l.b)(me => {
                                 this.finished = !0, a || this.logAccountCreated(Object.assign({id: me}, F))
-                            }), (0, xe.K)(me => (console.error("Register->register()->authService.register() registration unsuccessfull.", me), this.emailError = !0, (0, e.of)([]))), (0, Qe.x)(() => this.loading = !1)).subscribe()
+                            }), (0, Se.K)(me => (console.error("Register->register()->authService.register() registration unsuccessfull.", me), this.emailError = !0, (0, e.of)([]))), (0, Ve.x)(() => this.loading = !1)).subscribe()
                         }
                     }
 
@@ -4058,7 +4042,7 @@
                     passwordMatchValidator(a) {
                         if (!a.parent) return null;
                         const M = a.parent.get("password");
-                        return this.passwordChangeSubscription || (this.passwordChangeSubscription = M.valueChanges.pipe((0, q.R)(this.unsubscribe)).subscribe(() => {
+                        return this.passwordChangeSubscription || (this.passwordChangeSubscription = M.valueChanges.pipe((0, ee.R)(this.unsubscribe)).subscribe(() => {
                             a.updateValueAndValidity()
                         })), M.value !== a.value ? {mismatch: !0} : null
                     }
@@ -4066,7 +4050,7 @@
                     usernameMatchEmailValidator(a) {
                         if (!a.parent) return null;
                         const M = a.parent.get("email");
-                        return this.emailChangeSubscription || (this.emailChangeSubscription = M.valueChanges.pipe((0, q.R)(this.unsubscribe)).subscribe(F => {
+                        return this.emailChangeSubscription || (this.emailChangeSubscription = M.valueChanges.pipe((0, ee.R)(this.unsubscribe)).subscribe(F => {
                             a.updateValueAndValidity()
                         })), a.value === M.value ? {mismatch: !0} : null
                     }
@@ -4112,7 +4096,7 @@
                 }
 
                 return h.\u0275fac = function (a) {
-                    return new (a || h)(s.Y36(Fe.yD), s.Y36(V.mI), s.Y36(Y.qu), s.Y36(Ve.F), s.Y36(V.qy), s.Y36(V.pk))
+                    return new (a || h)(s.Y36(Ge.yD), s.Y36(V.mI), s.Y36(Y.qu), s.Y36(ct.F), s.Y36(V.qy), s.Y36(V.pk))
                 }, h.\u0275cmp = s.Xpm({
                     type: h,
                     selectors: [["app-register"]],
@@ -4122,7 +4106,7 @@
                     template: function (a, M) {
                         1 & a && (s.TgZ(0, "video", 0, 1), s._uU(2, " Your browser does not support HTML5 video.\n"), s.qZA(), s.YNc(3, Gs, 21, 12, "form", 2), s.YNc(4, Fs, 12, 1, "div", 3)), 2 & a && (s.Q6J("src", M.videoSrc, s.LSH), s.xp6(3), s.Q6J("ngIf", !M.finished), s.xp6(1), s.Q6J("ngIf", M.finished))
                     },
-                    directives: [Se.O5, Y._Y, Y.JL, Y.sg, Y.Fj, Y.JJ, Y.u, H.yS, H.rH],
+                    directives: [_e.O5, Y._Y, Y.JL, Y.sg, Y.Fj, Y.JJ, Y.u, W.yS, W.rH],
                     styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.form-check-label[_ngcontent-%COMP%], .nav_login[_ngcontent-%COMP%], .form__backToLogin[_ngcontent-%COMP%], .form__tryAgain[_ngcontent-%COMP%], .form__inputHint[_ngcontent-%COMP%], .form__textInput[_ngcontent-%COMP%], .register-finished[_ngcontent-%COMP%], .success-info[_ngcontent-%COMP%]   .info-label[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.register-finished[_ngcontent-%COMP%], .success-info[_ngcontent-%COMP%]   .info-label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9)}.form-check-label[_ngcontent-%COMP%], .nav_login[_ngcontent-%COMP%], .form__backToLogin[_ngcontent-%COMP%], .form__tryAgain[_ngcontent-%COMP%], .form__inputHint[_ngcontent-%COMP%], .form__textInput[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.form__textInput[_ngcontent-%COMP%]{line-height:1.4}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;align-items:center;background:#182531;height:100%}.video[_ngcontent-%COMP%]{position:absolute;height:100%;width:100%;top:0;left:0;object-fit:cover;object-position:0 0;opacity:.65}.form[_ngcontent-%COMP%], .success-info[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 31);width:calc(var(--vw) * 17.7);position:relative;display:flex;flex-flow:column nowrap}.success-info[_ngcontent-%COMP%]{width:calc(var(--vw) * 27.7)}.success-info[_ngcontent-%COMP%]   .info-label[_ngcontent-%COMP%]{text-align:center;margin-top:calc(var(--vh) * 1.48)}.form__textInput[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);background:#182531;color:#fff;border:1px solid #0f1b27;border-radius:calc(var(--vh) * .4)}.form__textInput[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.form__inputHint[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .6);text-shadow:0 1px 1px rgba(0,0,0,.3)}.form__backToLogin[_ngcontent-%COMP%], .form__tryAgain[_ngcontent-%COMP%]{text-align:center;color:#f6f6f6;text-shadow:0 1px 1px rgba(0,0,0,.3);margin-top:calc(var(--vh) * 2);cursor:pointer}.form__submitButton[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 4.44);margin-bottom:calc(var(--vh) * 4.44);margin-left:auto;margin-right:auto;min-width:160px}.form__subscribe-checkbox[_ngcontent-%COMP%], .form__submitButton[_ngcontent-%COMP%], .nav_login[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 3)}"]
                 }), h
             })()
@@ -4138,7 +4122,7 @@
                     }
 
                     reset() {
-                        this.formGroup.invalid ? this.utils.markFormGroupTouched(this.formGroup) : this.loading || (this.loading = !0, this.authService.resetPassword(this.email.value).pipe((0, _t.q)(1)).subscribe(a => {
+                        this.formGroup.invalid ? this.utils.markFormGroupTouched(this.formGroup) : this.loading || (this.loading = !0, this.authService.resetPassword(this.email.value).pipe((0, mt.q)(1)).subscribe(a => {
                             this.loading = !1, this.finished = !0, this.info = "Follow the instructions sent to you by email in order to reset your password."
                         }, a => {
                             this.loading = !1, this.finished = !0, console.error(a), this.info = "Error has occurred during sending an email. Try again later."
@@ -4163,7 +4147,7 @@
                 }
 
                 return h.\u0275fac = function (a) {
-                    return new (a || h)(s.Y36(V.mI), s.Y36(Y.qu), s.Y36(Ve.F), s.Y36(V.pk))
+                    return new (a || h)(s.Y36(V.mI), s.Y36(Y.qu), s.Y36(ct.F), s.Y36(V.pk))
                 }, h.\u0275cmp = s.Xpm({
                     type: h,
                     selectors: [["app-reset"]],
@@ -4171,13 +4155,13 @@
                     vars: 3,
                     consts: [["preload", "", "autoplay", "", "muted", "", "playsinline", "", "loop", "", 1, "video", 3, "src"], ["videoPlayer", ""], ["class", "form", 3, "formGroup", "submit", 4, "ngIf"], ["class", "success-info", 4, "ngIf"], [1, "form", 3, "formGroup", "submit"], ["aria-describedby", "emailErrorLabel", "name", "email", "type", "email", "formControlName", "email", "placeholder", "Email", 1, "form__textInput", 3, "click"], ["class", "form__inputHint", 4, "ngIf"], ["size", "large", 1, "form__submitButton", 3, "text", "click"], ["routerLink", "/login", 1, "form__backToLogin"], [1, "form__inputHint"], [1, "success-info"], [1, "info-label"], [1, "form__tryAgain", 3, "click"]],
                     template: function (a, M) {
-                        1 & a && (s.TgZ(0, "video", 0, 1), s._uU(2, " Your browser does not support HTML5 video.\n"), s.qZA(), s.YNc(3, xs, 6, 3, "form", 2), s.YNc(4, uo, 7, 1, "div", 3)), 2 & a && (s.Q6J("src", M.videoSrc, s.LSH), s.xp6(3), s.Q6J("ngIf", !M.finished), s.xp6(1), s.Q6J("ngIf", M.finished))
+                        1 & a && (s.TgZ(0, "video", 0, 1), s._uU(2, " Your browser does not support HTML5 video.\n"), s.qZA(), s.YNc(3, ys, 6, 3, "form", 2), s.YNc(4, uo, 7, 1, "div", 3)), 2 & a && (s.Q6J("src", M.videoSrc, s.LSH), s.xp6(3), s.Q6J("ngIf", !M.finished), s.xp6(1), s.Q6J("ngIf", M.finished))
                     },
-                    directives: [Se.O5, Y._Y, Y.JL, Y.sg, Y.Fj, Y.JJ, Y.u, H.yS],
+                    directives: [_e.O5, Y._Y, Y.JL, Y.sg, Y.Fj, Y.JJ, Y.u, W.yS],
                     styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.form__backToLogin[_ngcontent-%COMP%], .form__tryAgain[_ngcontent-%COMP%], .form__inputHint[_ngcontent-%COMP%], .form__textInput[_ngcontent-%COMP%], .success-info[_ngcontent-%COMP%]   .info-label[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.success-info[_ngcontent-%COMP%]   .info-label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9)}.form__backToLogin[_ngcontent-%COMP%], .form__tryAgain[_ngcontent-%COMP%], .form__inputHint[_ngcontent-%COMP%], .form__textInput[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.form__textInput[_ngcontent-%COMP%]{line-height:1.4}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;align-items:center;background:#182531;height:100%}.video[_ngcontent-%COMP%]{position:absolute;height:100%;width:100%;top:0;left:0;object-fit:cover;object-position:0 0;opacity:.65}.form[_ngcontent-%COMP%], .success-info[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 37.96);width:calc(var(--vw) * 17.7);position:relative;display:flex;flex-flow:column nowrap}.success-info[_ngcontent-%COMP%]{width:calc(var(--vw) * 27.7)}.success-info[_ngcontent-%COMP%]   .info-label[_ngcontent-%COMP%]{text-align:center;margin-top:calc(var(--vh) * 1.48)}.form__textInput[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);background:#182531;color:#fff;border:1px solid #0f1b27;border-radius:calc(var(--vh) * .4)}.form__textInput[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.form__inputHint[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .6);text-shadow:0 1px 1px rgba(0,0,0,.3)}.form__backToLogin[_ngcontent-%COMP%], .form__tryAgain[_ngcontent-%COMP%]{text-align:center;color:#f6f6f6;text-shadow:0 1px 1px rgba(0,0,0,.3);margin-top:calc(var(--vh) * 2);cursor:pointer}.form__submitButton[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 4.44);margin-left:auto;margin-right:auto}"]
                 }), h
             })()
-        }, {path: "demo-sheet", component: rt.q6}, {
+        }, {path: "demo-sheet", component: st.q6}, {
             path: "game",
             component: As,
             canActivate: [(() => {
@@ -4187,7 +4171,7 @@
                     }
 
                     canActivate(a, M) {
-                        return this.authService.refreshToken().pipe((0, re.VS)(F => this.authService.saveAccount(F, !0, 1)), (0, xe.K)(F => (this.authService.logout(), (0, e.of)(F))))
+                        return this.authService.refreshToken().pipe((0, re.VS)(F => this.authService.saveAccount(F, !0, 1)), (0, Se.K)(F => (this.authService.logout(), (0, e.of)(F))))
                     }
                 }
 
@@ -4205,14 +4189,14 @@
             return h.\u0275fac = function (a) {
                 return new (a || h)
             }, h.\u0275mod = s.oAB({type: h}), h.\u0275inj = s.cJS({
-                imports: [[H.Bz.forRoot(Uo, {
+                imports: [[W.Bz.forRoot(Uo, {
                     useHash: !0,
                     enableTracing: !1
-                })], H.Bz]
+                })], W.Bz]
             }), h
         })();
-        var go = o(98009), Bo = o(47313), pt = o(41746), Go = o(30567), ho = o(36053), Ft = o(87545), mo = o(43164),
-            Fo = o(52216), No = o(87168), _o = o(33403), Ps = o(28510);
+        var go = o(98009), Bo = o(47313), dt = o(41746), Go = o(30567), ho = o(36053), Ft = o(87545), mo = o(43164),
+            Fo = o(52216), No = o(87168), _o = o(33403), xs = o(28510);
         let zo = (() => {
             class h {
                 constructor(a, M, F) {
@@ -4233,7 +4217,7 @@
             }
 
             return h.\u0275fac = function (a) {
-                return new (a || h)(s.Y36(Ps.Qz), s.Y36(Ps.mX), s.Y36(Fe.jt))
+                return new (a || h)(s.Y36(xs.Qz), s.Y36(xs.mX), s.Y36(Ge.jt))
             }, h.\u0275cmp = s.Xpm({
                 type: h,
                 selectors: [["cerberus-skip-tutorial-modal"]],
@@ -4253,8 +4237,8 @@
         var fo = o(11130), vo = o(8561), bo = o(17268);
         let Ws = (() => {
             class h {
-                constructor(a, M, F, me, Le, ze, Ke, Pt) {
-                    this.cerberusModalService = a, this.queueService = M, this.gameService = F, this.guGameService = me, this.playService = Le, this.authService = ze, this.audioService = Ke, this.akumaService = Pt
+                constructor(a, M, F, me, Le, ze, je, xt) {
+                    this.cerberusModalService = a, this.queueService = M, this.gameService = F, this.guGameService = me, this.playService = Le, this.authService = ze, this.audioService = je, this.akumaService = xt
                 }
 
                 ngOnInit() {
@@ -4264,9 +4248,9 @@
                 beginTutorial() {
                     this.audioService.arenaClickStart.play(), this.akumaService.postControlEvent("tutorial", "Welcome", "", "go", "Btn", "pressed");
                     const a = this.authService.getUserId();
-                    this.queueService.activeQueues$.pipe((0, _t.q)(1)).subscribe(M => {
+                    this.queueService.activeQueues$.pipe((0, mt.q)(1)).subscribe(M => {
                         M.forEach(F => this.queueService.cancel(F))
-                    }), this.gameService.getBranch$(1).pipe((0, _t.q)(1), (0, No.M)(this.guGameService.getGameMode$(_o.B_.TUTORIAL)), (0, z.b)(([M, F]) => {
+                    }), this.gameService.getBranch$(1).pipe((0, mt.q)(1), (0, No.M)(this.guGameService.getGameMode$(_o.B_.TUTORIAL)), (0, l.b)(([M, F]) => {
                         this.playService.play({
                             realm: M.id,
                             mode: _o.B_.TUTORIAL,
@@ -4295,7 +4279,7 @@
             }
 
             return h.\u0275fac = function (a) {
-                return new (a || h)(s.Y36(Ps.Qz), s.Y36(Xt.g), s.Y36(U.hM), s.Y36(fo.xV), s.Y36(vo.GT), s.Y36(V.mI), s.Y36(V.pk), s.Y36(Fe.jt))
+                return new (a || h)(s.Y36(xs.Qz), s.Y36(Xt.g), s.Y36(ie.hM), s.Y36(fo.xV), s.Y36(vo.GT), s.Y36(V.mI), s.Y36(V.pk), s.Y36(Ge.jt))
             }, h.\u0275cmp = s.Xpm({
                 type: h,
                 selectors: [["cerberus-tutorial-start-modal"]],
@@ -4313,72 +4297,75 @@
                 styles: ["[_nghost-%COMP%]{display:flex;background-color:#0f1b27;border:2px solid #3D5A74;box-sizing:border-box;box-shadow:5px 5px 15px #0006;width:1050px}.rightPanel[_ngcontent-%COMP%]{display:flex;flex-direction:column;align-items:center;width:100%}.rightPanel__title[_ngcontent-%COMP%]{margin-top:20px}.rightPanel__subtitle[_ngcontent-%COMP%]{margin:20px;text-align:center}.rightPanel__gameplay[_ngcontent-%COMP%]{margin:0 30px;width:450px}.rightPanel__gameplay__image[_ngcontent-%COMP%]{width:450px;display:block}.rightPanel__gameplay__title[_ngcontent-%COMP%]{background:linear-gradient(to left,#0F1B27 0%,#1D2F41 100%);text-align:center;padding:10px}.rightPanel__howto[_ngcontent-%COMP%]{display:flex;margin-top:10px}.rightPanel__howto__mana[_ngcontent-%COMP%]{margin-right:3px}.rightPanel__howto__win[_ngcontent-%COMP%]{margin-left:3px}.rightPanel__howto__image[_ngcontent-%COMP%]{width:222px;display:block}.rightPanel__howto__title[_ngcontent-%COMP%]{background:linear-gradient(to left,#0F1B27 0%,#1D2F41 100%);text-align:center;padding:10px}.rightPanel__freeStuff[_ngcontent-%COMP%]{position:relative}.rightPanel__freeStuff__bgImage[_ngcontent-%COMP%]{width:510px;display:block;margin-top:35px}.rightPanel__freeStuff__cardImage[_ngcontent-%COMP%]{position:absolute;top:0px;left:15px;height:90px}.rightPanel__freeStuff__text[_ngcontent-%COMP%]{position:absolute;top:45px;left:85px;font-size:15px}.rightPanel__freeStuff__tooltip[_ngcontent-%COMP%]{display:inline;text-align:center}.rightPanel__beginTutorialBtn[_ngcontent-%COMP%]{margin-top:20px;padding:0 40px}.rightPanel__closeTutorialBtn[_ngcontent-%COMP%]{margin-top:20px;font-size:15px;cursor:pointer}.leftPanel[_ngcontent-%COMP%]{position:relative;width:100%}.leftPanel__image[_ngcontent-%COMP%]{max-width:100%;max-height:100%;display:block}.leftPanel__imageShadow[_ngcontent-%COMP%]{width:100%;height:100%;position:absolute;top:0px;background:linear-gradient(180deg,rgba(15,27,39,0) 57.61%,rgba(15,27,39,.7) 73.26%,rgba(15,27,39,.9) 100%)}.leftPanel__logoImage[_ngcontent-%COMP%]{width:330px;position:absolute;bottom:60px;left:0;right:0;margin-left:auto;margin-right:auto}"]
             }), h
         })();
-        var Ye = o(14618), Co = o(88632);
+        var Ke = o(14618), Co = o(88632);
         let xo = (() => {
             class h {
-                constructor(a, M, F, me, Le, ze, Ke, Pt, gt, Kt) {
-                    this.actions$ = a, this.ngrxStore = M, this.gameApi = F, this.authService = me, this.guUserService = Le, this.gameService = ze, this.gameDownloadService = Ke, this.zone = Pt, this.utils = gt, this.cerberusModalService = Kt, this.GameAssetsDownloadRequest$ = (0, ce.GW)(() => this.actions$.pipe((0, ce.l4)(Ye.gK.GAME_ASSETS_DOWNLOAD_REQUEST), (0, Ft.w)(ve => this.gameService.currentGameContext$.pipe((0, Ge.h)(be => null != be), (0, re.VS)(be => (0, pt.$R)((0, e.of)(be), this.gameService.getBranch(be.id))), (0, re.VS)(([be, At]) => (0, pt.$R)((0, e.of)(be), this.gameDownloadService.getLatestAssetsVersions(be, At), this.gameDownloadService.getLocalAssetsVersions(be), this.getBasicAuthToken())), (0, _t.q)(1))), (0, Ft.w)(([ve, be, At, Dt]) => {
+                constructor(a, M, F, me, Le, ze, je, xt, ut, Kt) {
+                    this.actions$ = a, this.ngrxStore = M, this.gameApi = F, this.authService = me, this.guUserService = Le, this.gameService = ze, this.gameDownloadService = je, this.zone = xt, this.utils = ut, this.cerberusModalService = Kt, this.GameAssetsDownloadRequest$ = (0, ce.GW)(() => this.actions$.pipe((0, ce.l4)(Ke.gK.GAME_ASSETS_DOWNLOAD_REQUEST), (0, Ft.w)(ve => this.gameService.currentGameContext$.pipe((0, N.h)(be => null != be), (0, re.VS)(be => (0, dt.$R)((0, e.of)(be), this.gameService.getBranch(be.id))), (0, re.VS)(([be, At]) => (0, dt.$R)((0, e.of)(be), this.gameDownloadService.getLatestAssetsVersions(be, At), this.gameDownloadService.getLocalAssetsVersions(be), this.getBasicAuthToken())), (0, mt.q)(1))), (0, Ft.w)(([ve, be, At, Dt]) => {
                         const zt = this.gameService.isObfuscatedBranch(ve.id) ? Dt : void 0,
                             Wt = this.gameDownloadService.deltaAssetsVersions(At, be),
-                            hs = Wt.reduce((as, We) => as + We.size, 0), is = this.gameService.getAssetsPath(),
+                            gs = Wt.reduce((as, We) => as + We.size, 0), is = this.gameService.getAssetsPath(),
                             ts = Array.from({length: Wt.length}, () => new y.X(null)),
-                            ws = window.bridge.downloadAssetsWithSempahore(Wt, is, ts, zt, 5).map(as => as.pipe(this.utils.enterZone(this.zone)));
+                            ks = window.bridge.downloadAssetsWithSempahore(Wt, is, ts, zt, 5).map(as => as.pipe(this.utils.enterZone(this.zone)));
                         return (0, e.of)({
-                            downloadAssets: ws,
+                            downloadAssets: ks,
                             assetsProgresses: ts,
-                            totalBytes: hs,
+                            totalBytes: gs,
                             game: ve,
                             remoteAssets: be
                         })
-                    }), (0, Ft.w)(ve => (0, pt.$R)((0, Go.D)(ve.downloadAssets).pipe((0, W.U)(be => ({
+                    }), (0, Ft.w)(ve => (0, dt.$R)((0, Go.D)(ve.downloadAssets).pipe((0, H.U)(be => ({
                         downloads: be,
                         game: ve.game,
                         remoteAssets: ve.remoteAssets
-                    }))), (0, ho.aj)(ve.assetsProgresses).pipe((0, mo.p)(1e3), (0, z.b)(be => {
+                    }))), (0, ho.aj)(ve.assetsProgresses).pipe((0, mo.p)(1e3), (0, l.b)(be => {
                         const At = be.reduce((zt, Wt) => Wt ? zt + Wt.bytesCompleted : zt + 0, 0),
                             Dt = Math.round(100 * At / ve.totalBytes);
-                        this.ngrxStore.dispatch(new Ye.X4({percentage: Dt, status: "downloading"}))
-                    })))), (0, Ft.w)(([ve, be]) => (this.gameService.deleteProperty(ve.game.id, "assets"), this.gameService.setProperty(ve.game.id, "assets", JSON.stringify(ve.remoteAssets)), this.gameService.refreshGameContext(), this.gameDownloadService.displayDownloadCompleteNotification(ve.game), [new Ye.P6])), (0, xe.K)((ve, be) => (console.error(ve), this.ngrxStore.dispatch(new Ye.wT({error: ve})), be)))), this.GameAssetsDownloadSuccess$ = (0, ce.GW)(() => this.actions$.pipe((0, ce.l4)(Ye.gK.GAME_ASSETS_DOWNLOAD_SUCCESS), (0, Ft.w)(ve => {
+                        this.ngrxStore.dispatch(new Ke.X4({percentage: Dt, status: "downloading"}))
+                    })))), (0, Ft.w)(([ve, be]) => (this.gameService.deleteProperty(ve.game.id, "assets"), this.gameService.setProperty(ve.game.id, "assets", JSON.stringify(ve.remoteAssets)), this.gameService.refreshGameContext(), this.gameDownloadService.displayDownloadCompleteNotification(ve.game), [new Ke.P6])), (0, Se.K)((ve, be) => (console.error(ve), this.ngrxStore.dispatch(new Ke.wT({error: ve})), be)))), this.GameAssetsDownloadSuccess$ = (0, ce.GW)(() => this.actions$.pipe((0, ce.l4)(Ke.gK.GAME_ASSETS_DOWNLOAD_SUCCESS), (0, Ft.w)(ve => {
                         const be = this.authService.getUserId();
-                        return this.gameService.getUserTutorialMissions(be).pipe((0, _t.q)(1))
-                    }), (0, Ft.w)(ve => (ve[0].completed || this.showTutorialModal(), [new Ye.Lg({
+                        return this.gameService.getUserTutorialMissions(be).pipe((0, mt.q)(1))
+                    }), (0, Ft.w)(ve => (ve[0].completed || this.showTutorialModal(), [new Ke.Lg({
                         status: "idle",
                         percentage: 100
-                    })])), (0, xe.K)((ve, be) => (console.error(ve), be)))), this.GameBuildDownloadExtractRequest$ = (0, ce.GW)(() => this.actions$.pipe((0, ce.l4)(Ye.gK.GAME_BUILD_DOWNLOAD_EXTRACT), (0, W.U)(ve => ve.payload), (0, Ft.w)(ve => this.gameService.getBranch(ve.game.id).pipe((0, W.U)(be => ({
+                    })])), (0, Se.K)((ve, be) => (console.error(ve), be)))), this.GameBuildDownloadExtractRequest$ = (0, ce.GW)(() => this.actions$.pipe((0, ce.l4)(Ke.gK.GAME_BUILD_DOWNLOAD_EXTRACT), (0, H.U)(ve => ve.payload), (0, Ft.w)(ve => this.gameService.getBranch(ve.game.id).pipe((0, H.U)(be => ({
                         branch: be,
                         action: ve
                     })))), (0, Ft.w)(({
                                           branch: ve,
                                           action: be
-                                      }) => this.gameDownloadService.extractGame(be.game, be.fileName, be.installPath).pipe((0, W.U)(At => ({
+                                      }) => this.gameDownloadService.extractGame(be.game, be.fileName, be.installPath).pipe((0, H.U)(At => ({
                         result: At,
                         branch: ve,
                         action: be
-                    })))), (0, Ft.w)(({action: be}) => (this.gameService.setProperty(be.game.id, "status", "extracted"), this.gameService.refreshGameContext(), be.localVersion && this.gameDownloadService.deleteFile(this.gameDownloadService.getFileName(be.game, be.localVersion), this.gameService.getInstallPath(be.game)), this.gameDownloadService.displayDownloadCompleteNotification(be.game), [new Ye.Ry])), (0, xe.K)((ve, be) => (console.error(ve), this.ngrxStore.dispatch(new Ye.c7({error: ve})), be)))), this.GameBuildDownloadRequest$ = (0, ce.GW)(() => this.actions$.pipe((0, ce.l4)(Ye.gK.GAME_BUILD_DOWNLOAD_REQUEST), (0, Ft.w)(ve => this.gameService.currentGameContext$.pipe((0, Ge.h)(be => null != be), (0, re.VS)(be => (0, pt.$R)((0, e.of)(be), this.gameService.getBranch(be.id))), (0, re.VS)(([be, At]) => (0, pt.$R)((0, e.of)(be), this.gameDownloadService.getVersions(be, At), this.getBasicAuthToken())), (0, _t.q)(1))), (0, Ft.w)(([ve, [be, At], Dt]) => {
+                    })))), (0, Ft.w)(({action: be}) => (this.gameService.setProperty(be.game.id, "status", "extracted"), this.gameService.refreshGameContext(), be.remoteVersion && this.gameDownloadService.deleteFile(this.gameDownloadService.getFileName(be.game, be.remoteVersion), this.gameService.getInstallPath(be.game)), be.localVersion && this.gameDownloadService.deleteFile(this.gameDownloadService.getFileName(be.game, be.localVersion), this.gameService.getInstallPath(be.game)), this.gameDownloadService.displayDownloadCompleteNotification(be.game), [new Ke.Ry])), (0, Se.K)((ve, be) => (console.error(ve), this.ngrxStore.dispatch(new Ke.c7({error: ve})), be)))), this.GameBuildDownloadRequest$ = (0, ce.GW)(() => this.actions$.pipe((0, ce.l4)(Ke.gK.GAME_BUILD_DOWNLOAD_REQUEST), (0, Ft.w)(ve => this.gameService.currentGameContext$.pipe((0, N.h)(be => null != be), (0, re.VS)(be => (0, dt.$R)((0, e.of)(be), this.gameService.getBranch(be.id))), (0, re.VS)(([be, At]) => (0, dt.$R)((0, e.of)(be), this.gameDownloadService.getVersions(be, At), this.getBasicAuthToken())), (0, mt.q)(1))), (0, l.b)(([ve]) => {
+                        this.gameDownloadService.uninstallGame(ve, this.gameService.getInstallPath(ve))
+                    }), (0, Ft.w)(([ve, [be, At], Dt]) => {
                         const zt = this.gameService.getInstallPath(ve),
                             Wt = this.gameDownloadService.getDownloadInfo(ve, be, Dt),
-                            hs = this.gameService.isObfuscatedBranch(ve.id) ? Dt : void 0;
-                        return (0, ho.aj)([window.bridge.download(Wt.url, zt, this.getFileName(ve, be), hs).pipe(this.utils.enterZone(this.zone), (0, W.U)(is => ({
+                            gs = this.gameService.isObfuscatedBranch(ve.id) ? Dt : void 0;
+                        return (0, ho.aj)([window.bridge.download(Wt.url, zt, this.getFileName(ve, be), gs).pipe(this.utils.enterZone(this.zone), (0, H.U)(is => ({
                             game: ve,
                             fileName: this.getFileName(ve, be),
                             installPath: zt,
                             remoteVersion: be,
                             localVersion: At
-                        }))), window.bridge.progress.pipe(this.utils.enterZone(this.zone), (0, mo.p)(1e3), (0, Fo.V)(12e4), (0, W.U)(is => (this.ngrxStore.dispatch(new Ye.dY({
+                        }))), window.bridge.progress.pipe(this.utils.enterZone(this.zone), (0, mo.p)(1e3), (0, Fo.V)(12e4), (0, H.U)(is => (this.ngrxStore.dispatch(new Ke.dY({
                             percentage: this.getPercentage(is),
                             status: "downloading"
                         })), is)))])
-                    }), (0, re.zg)(([ve, be]) => (this.gameService.setProperty(ve.game.id, "version", ve.remoteVersion), this.gameService.setProperty(ve.game.id, "status", "downloaded"), [new Ye.yn({
+                    }), (0, re.zg)(([ve, be]) => (this.gameService.setProperty(ve.game.id, "version", ve.remoteVersion), this.gameService.setProperty(ve.game.id, "status", "downloaded"), [new Ke.yn({
                         game: ve.game,
                         fileName: ve.fileName,
                         installPath: ve.installPath,
-                        localVersion: ve.localVersion
-                    })])), (0, xe.K)((ve, be) => (console.error(ve), this.ngrxStore.dispatch(new Ye.c7({error: ve})), be))))
+                        localVersion: ve.localVersion,
+                        remoteVersion: ve.remoteVersion
+                    })])), (0, Se.K)((ve, be) => (console.error(ve), this.ngrxStore.dispatch(new Ke.c7({error: ve})), be))))
                 }
 
                 getBasicAuthToken() {
                     const a = this.authService.getUserId(), M = this.authService.getGameSessionTicket();
-                    return this.gameApi.get(`/user/${a}/build?session=${M}`).pipe((0, W.U)(F => F.basic_auth))
+                    return this.gameApi.get(`/user/${a}/build?session=${M}`).pipe((0, H.U)(F => F.basic_auth))
                 }
 
                 getPercentage(a) {
@@ -4397,7 +4384,7 @@
             }
 
             return h.\u0275fac = function (a) {
-                return new (a || h)(s.LFG(ce.eX), s.LFG(fe.yh), s.LFG(Fe.Ft), s.LFG(V.mI), s.LFG(Co.MZ), s.LFG(U.hM), s.LFG(ms.b5), s.LFG(s.R0b), s.LFG(Ve.F), s.LFG(Ps.Qz))
+                return new (a || h)(s.LFG(ce.eX), s.LFG(Ce.yh), s.LFG(Ge.Ft), s.LFG(V.mI), s.LFG(Co.MZ), s.LFG(ie.hM), s.LFG(hs.b5), s.LFG(s.R0b), s.LFG(ct.F), s.LFG(xs.Qz))
             }, h.\u0275prov = s.Yz7({token: h, factory: h.\u0275fac}), h
         })();
         const Zs = {
@@ -4405,18 +4392,18 @@
             gameAssets: {isUpdateRequired: !1, percentage: 0, status: "idle"}
         };
 
-        function Po(h, L) {
-            switch (L.type) {
-                case Ye.gK.GAME_BUILD_DOWNLOAD_CHECK:
-                    return Object.assign(Object.assign({}, h), {gameBuild: Object.assign(Object.assign({}, h.gameBuild), {isUpdateRequired: L.payload.isUpdateRequired})});
-                case Ye.gK.GAME_BUILD_DOWNLOAD_PROGRESS:
+        function So(h, A) {
+            switch (A.type) {
+                case Ke.gK.GAME_BUILD_DOWNLOAD_CHECK:
+                    return Object.assign(Object.assign({}, h), {gameBuild: Object.assign(Object.assign({}, h.gameBuild), {isUpdateRequired: A.payload.isUpdateRequired})});
+                case Ke.gK.GAME_BUILD_DOWNLOAD_PROGRESS:
                     return Object.assign(Object.assign({}, h), {
                         gameBuild: Object.assign(Object.assign({}, h.gameBuild), {
-                            percentage: L.payload.percentage,
-                            status: L.payload.status
+                            percentage: A.payload.percentage,
+                            status: A.payload.status
                         })
                     });
-                case Ye.gK.GAME_BUILD_DOWNLOAD_SUCCESS:
+                case Ke.gK.GAME_BUILD_DOWNLOAD_SUCCESS:
                     return Object.assign(Object.assign({}, h), {
                         gameBuild: Object.assign(Object.assign({}, h.gameBuild), {
                             isUpdateRequired: !1,
@@ -4424,15 +4411,15 @@
                             percentage: 100
                         })
                     });
-                case Ye.gK.GAME_BUILD_DOWNLOAD_UPDATE_STATUS:
+                case Ke.gK.GAME_BUILD_DOWNLOAD_UPDATE_STATUS:
                     return Object.assign(Object.assign({}, h), {
                         gameBuild: Object.assign(Object.assign({}, h.gameBuild), {
                             isUpdateRequired: h.gameBuild.isUpdateRequired,
-                            status: L.payload.status,
+                            status: A.payload.status,
                             percentage: h.gameBuild.percentage
                         })
                     });
-                case Ye.gK.GAME_BUILD_DOWNLOAD_ERROR:
+                case Ke.gK.GAME_BUILD_DOWNLOAD_ERROR:
                     return Object.assign(Object.assign({}, h), {
                         gameBuild: Object.assign(Object.assign({}, h.gameBuild), {
                             isUpdateRequired: h.gameBuild.isUpdateRequired,
@@ -4440,16 +4427,16 @@
                             percentage: h.gameBuild.percentage
                         })
                     });
-                case Ye.gK.GAME_ASSETS_DOWNLOAD_CHECK:
-                    return Object.assign(Object.assign({}, h), {gameAssets: Object.assign(Object.assign({}, h.gameAssets), {isUpdateRequired: L.payload.isUpdateRequired})});
-                case Ye.gK.GAME_ASSETS_DOWNLOAD_PROGRESS:
+                case Ke.gK.GAME_ASSETS_DOWNLOAD_CHECK:
+                    return Object.assign(Object.assign({}, h), {gameAssets: Object.assign(Object.assign({}, h.gameAssets), {isUpdateRequired: A.payload.isUpdateRequired})});
+                case Ke.gK.GAME_ASSETS_DOWNLOAD_PROGRESS:
                     return Object.assign(Object.assign({}, h), {
                         gameAssets: Object.assign(Object.assign({}, h.gameAssets), {
-                            percentage: L.payload.percentage,
-                            status: L.payload.status
+                            percentage: A.payload.percentage,
+                            status: A.payload.status
                         })
                     });
-                case Ye.gK.GAME_ASSETS_DOWNLOAD_SUCCESS:
+                case Ke.gK.GAME_ASSETS_DOWNLOAD_SUCCESS:
                     return Object.assign(Object.assign({}, h), {
                         gameAssets: Object.assign(Object.assign({}, h.gameAssets), {
                             isUpdateRequired: !1,
@@ -4457,15 +4444,15 @@
                             percentage: 100
                         })
                     });
-                case Ye.gK.GAME_ASSETS_DOWNLOAD_UPDATE_STATUS:
+                case Ke.gK.GAME_ASSETS_DOWNLOAD_UPDATE_STATUS:
                     return Object.assign(Object.assign({}, h), {
                         gameAssets: Object.assign(Object.assign({}, h.gameAssets), {
                             isUpdateRequired: h.gameAssets.isUpdateRequired,
-                            status: L.payload.status,
-                            percentage: L.payload.percentage
+                            status: A.payload.status,
+                            percentage: A.payload.percentage
                         })
                     });
-                case Ye.gK.GAME_ASSETS_DOWNLOAD_ERROR:
+                case Ke.gK.GAME_ASSETS_DOWNLOAD_ERROR:
                     return Object.assign(Object.assign({}, h), {
                         gameAssets: Object.assign(Object.assign({}, h.gameAssets), {
                             isUpdateRequired: h.gameAssets.isUpdateRequired,
@@ -4478,7 +4465,7 @@
             }
         }
 
-        let So = (() => {
+        let Po = (() => {
             class h {
                 constructor() {
                 }
@@ -4488,35 +4475,35 @@
                 return new (a || h)
             }, h.\u0275prov = s.Yz7({token: h, factory: h.\u0275fac}), h
         })();
-        var ps = o(56302);
+        var us = o(56302);
         const js = {wallet: null, user: null};
-        (0, fe.ZF)("account");
+        (0, Ce.ZF)("account");
         var Vt = (() => {
             return (h = Vt || (Vt = {})).INIT_WALLET = "[App] Initialize Wallet", h.INIT_METAMASK = "[App] Initialize MetaMask", h.UPDATE_STORE = "[App] Update Store", h.UPDATE_MARKETPRICE_ETH = "[App] Update Market Price of Ether", Vt;
             var h
         })();
-        const gs = {
-            app: function Ss(h, L) {
-                switch (L.type) {
+        const ps = {
+            app: function Ss(h, A) {
+                switch (A.type) {
                     case Vt.INIT_WALLET:
                     case Vt.INIT_METAMASK:
                         return Object.assign({}, h);
                     default:
                         return h
                 }
-            }, router: de.mg, account: function ko(h = js, L) {
-                switch (L.type) {
-                    case ps.X8.FETCH_USER_ACCOUNT_SUCCESS:
-                        return Object.assign(Object.assign({}, h), {user: L.payload.accountData});
-                    case ps.X8.FETCH_USER_WALLET_SUCCESS:
-                        return Object.assign(Object.assign({}, h), {wallet: L.payload.walletData});
-                    case ps.X8.UPDATE_USER_ETH_BALANCE:
-                        return Object.assign(Object.assign({}, h), {wallet: Object.assign(Object.assign({}, h.wallet), {ethBalance: L.payload.balance})});
+            }, router: de.mg, account: function ko(h = js, A) {
+                switch (A.type) {
+                    case us.X8.FETCH_USER_ACCOUNT_SUCCESS:
+                        return Object.assign(Object.assign({}, h), {user: A.payload.accountData});
+                    case us.X8.FETCH_USER_WALLET_SUCCESS:
+                        return Object.assign(Object.assign({}, h), {wallet: A.payload.walletData});
+                    case us.X8.UPDATE_USER_ETH_BALANCE:
+                        return Object.assign(Object.assign({}, h), {wallet: Object.assign(Object.assign({}, h.wallet), {ethBalance: A.payload.balance})});
                     default:
                         return h
                 }
             }
-        }, ks = [], rs = "reCaptchaOnloadCallback";
+        }, Ps = [], rs = "reCaptchaOnloadCallback";
         let Wo = (() => {
             class h {
                 constructor(a) {
@@ -4598,8 +4585,8 @@
                 return new (a || h)
             }, h.\u0275prov = s.Yz7({token: h, factory: h.\u0275fac, providedIn: "root"}), h
         })();
-        var u = o(24058), D = o(61737), K = o(77604);
-        let _e = (() => {
+        var u = o(24058), T = o(61737), K = o(77604);
+        let fe = (() => {
             class h {
                 constructor(a) {
                     this.auth = a, this.isRefreshingToken = !1, this.tokenSubject = new y.X(null)
@@ -4611,7 +4598,7 @@
 
                 intercept(a, M) {
                     const F = this.auth.getAuthToken();
-                    return M.handle(this.addToken(a, F ? F.access : null)).pipe((0, xe.K)(Le => {
+                    return M.handle(this.addToken(a, F ? F.access : null)).pipe((0, Se.K)(Le => {
                         if (Le instanceof ae.UA) switch (Le.status) {
                             case 400:
                                 return this.badRequest(Le);
@@ -4621,16 +4608,16 @@
                                     this.auth.logout()
                                 }
                         }
-                        return (0, D._)(Le)
+                        return (0, T._)(Le)
                     }))
                 }
 
                 badRequest(a) {
-                    return a && 400 === a.status && a.error && "invalid_grant" === a.error.error ? (this.auth.logout(), null) : (0, D._)(a)
+                    return a && 400 === a.status && a.error && "invalid_grant" === a.error.error ? (this.auth.logout(), null) : (0, T._)(a)
                 }
 
                 unauthorized(a, M) {
-                    return this.isRefreshingToken ? this.tokenSubject.pipe((0, Ge.h)(F => null != F), (0, _t.q)(1), (0, re.VS)(F => M.handle(this.addToken(a, F)))) : (this.isRefreshingToken = !0, this.tokenSubject.next(null), this.auth.refreshToken().pipe((0, re.VS)(F => F && F.refresh ? this.auth.saveAccount(F, this.auth.isRemembering, 1).pipe((0, K.h)(F)) : (this.auth.logout(), (0, e.of)())), (0, re.VS)(F => (this.tokenSubject.next(F.access), M.handle(this.addToken(a, F.access)))), (0, xe.K)(F => (0, D._)("unauthorized")), (0, Qe.x)(() => {
+                    return this.isRefreshingToken ? this.tokenSubject.pipe((0, N.h)(F => null != F), (0, mt.q)(1), (0, re.VS)(F => M.handle(this.addToken(a, F)))) : (this.isRefreshingToken = !0, this.tokenSubject.next(null), this.auth.refreshToken().pipe((0, re.VS)(F => F && F.refresh ? this.auth.saveAccount(F, this.auth.isRemembering, 1).pipe((0, K.h)(F)) : (this.auth.logout(), (0, e.of)())), (0, re.VS)(F => (this.tokenSubject.next(F.access), M.handle(this.addToken(a, F.access)))), (0, Se.K)(F => (0, T._)("unauthorized")), (0, Ve.x)(() => {
                         this.isRefreshingToken = !1
                     })))
                 }
@@ -4640,13 +4627,13 @@
                 return new (a || h)(s.LFG(V.mI))
             }, h.\u0275prov = s.Yz7({token: h, factory: h.\u0275fac}), h
         })();
-        var at, tt = o(49757);
-        let dt = [Fe.LE, {provide: Window, useValue: window}, {
+        var ot, et = o(49757);
+        let at = [Ge.LE, {provide: Window, useValue: window}, {
             provide: s.ip1,
             useFactory: h => () => h.loadConfigurations().toPromise(),
             multi: !0,
-            deps: [Fe.LE]
-        }, {provide: ae.TP, useClass: _e, multi: !0}, {provide: de.GC, useClass: Oe}, {
+            deps: [Ge.LE]
+        }, {provide: ae.TP, useClass: fe, multi: !0}, {provide: de.GC, useClass: $e}, {
             provide: V.B3,
             useClass: Ie.N.envClasses.featureFlagsService
         }, {provide: V.mI, useClass: Ie.N.envClasses.authService}, {
@@ -4658,12 +4645,12 @@
         }, {provide: V.eQ, useClass: Ie.N.envClasses.assetsService}, {
             provide: V.pk,
             useClass: Ie.N.envClasses.audioService
-        }, u.m, X.x0, Ve.F, Fe.Ho, Fe.n2, Fe.dK, go.D, Z, mt._, ct, Wo, Fe.fY, Bo.$z];
-        (null === (at = Ie.N.sentry) || void 0 === at ? void 0 : at.dsn) && (dt = [...dt, ...function he() {
-            return [{provide: s.qLn, useValue: Te.v({showDialog: !1})}, {provide: Be.aN, deps: [H.F0]}, {
+        }, u.m, J.x0, ct.F, Ge.Ho, Ge.n2, Ge.dK, go.D, Z, ht._, gt, Wo, Ge.fY, Bo.$z];
+        (null === (ot = Ie.N.sentry) || void 0 === ot ? void 0 : ot.dsn) && (at = [...at, ...function he() {
+            return [{provide: s.qLn, useValue: Ae.v({showDialog: !1})}, {provide: Be.aN, deps: [W.F0]}, {
                 provide: s.ip1,
-                useFactory: (h, L) => () => L.init(),
-                deps: [Be.aN, Ce],
+                useFactory: (h, A) => () => A.init(),
+                deps: [Be.aN, ye],
                 multi: !0
             }]
         }()]);
@@ -4674,14 +4661,14 @@
             return h.\u0275fac = function (a) {
                 return new (a || h)
             }, h.\u0275mod = s.oAB({type: h, bootstrap: [io]}), h.\u0275inj = s.cJS({
-                providers: dt,
-                imports: [[Y.u5, ae.JF, Ro, Y.UX, ye.PW, c.b2, tt.m.forRoot(), fe.Aw.forRoot(gs, {metaReducers: ks}), de.Qi.forRoot(yt), Ie.N.production ? [] : N.FT.instrument(), ce.sQ.forRoot([So]), fe.Aw.forFeature("gameResources", Po, {initialState: Zs}), ce.sQ.forFeature([xo]), rt.ic, Ae, ee.j]]
+                providers: at,
+                imports: [[Y.u5, ae.JF, Ro, Y.UX, xe.PW, d.b2, et.m.forRoot(), Ce.Aw.forRoot(ps, {metaReducers: Ps}), de.Qi.forRoot(Ot), Ie.N.production ? [] : z.FT.instrument(), ce.sQ.forRoot([Po]), Ce.Aw.forFeature("gameResources", So, {initialState: Zs}), ce.sQ.forFeature([xo]), st.ic, He, q.j]]
             }), h
         })();
-        var Ne;
-        if (Ie.N.production && ((0, s.G48)(), null === (Ne = Ie.N.sentry) || void 0 === Ne ? void 0 : Ne.dsn)) {
+        var Fe;
+        if (Ie.N.production && ((0, s.G48)(), null === (Fe = Ie.N.sentry) || void 0 === Fe ? void 0 : Fe.dsn)) {
             const {buildNumber: h} = w;
-            T.S({
+            $.S({
                 release: `gu-cerberus@0.13.3+${h}`,
                 environment: Ie.N.production ? "production" : "staging",
                 dsn: Ie.N.sentry.dsn,
@@ -4689,15 +4676,13 @@
                 tracesSampleRate: Ie.N.sentry.tracesSampleRate || 0
             })
         }
-        c.q6().bootstrapModule(Pe).catch(h => console.error(h))
-    },
-    12751: (se, R, o) => {
+        d.q6().bootstrapModule(Pe).catch(h => console.error(h))
+    }, 12751: (se, U, o) => {
         "use strict";
         o(10609), window.process = {env: {DEBUG: void 0}}, window.global = window, global.Buffer = o(93172).Buffer, global.process = o(35736)
-    },
-    73307: (se, R, o) => {
+    }, 73307: (se, U, o) => {
         "use strict";
-        o.d(R, {
+        o.d(U, {
             Ho: () => i,
             mI: () => y,
             ux: () => e,
@@ -4705,99 +4690,97 @@
             LI: () => r,
             eQ: () => t,
             pk: () => n,
-            Hd: () => v,
-            B3: () => k
+            Hd: () => _,
+            B3: () => S
         });
-        var c = o(5e3);
-        const i = new c.OlP("environment-settings"), y = new c.OlP("i-auth-service"), e = new c.OlP("i-eth-service"),
-            p = (new c.OlP("i-cards-service"), new c.OlP("i-storage-service")),
-            r = (new c.OlP("i-modal-service"), new c.OlP("i-auth-host-service")), t = new c.OlP("i-assets-service"),
-            n = new c.OlP("i-audio-service"), v = new c.OlP("i-launchdarkly-client"),
-            k = new c.OlP("i-feature-flag-service");
-        new c.OlP("i-deck-code-service"), new c.OlP("apollo-token"), new c.OlP("game-status")
-    },
-    51649: (se, R, o) => {
+        var d = o(5e3);
+        const i = new d.OlP("environment-settings"), y = new d.OlP("i-auth-service"), e = new d.OlP("i-eth-service"),
+            p = (new d.OlP("i-cards-service"), new d.OlP("i-storage-service")),
+            r = (new d.OlP("i-modal-service"), new d.OlP("i-auth-host-service")), t = new d.OlP("i-assets-service"),
+            n = new d.OlP("i-audio-service"), _ = new d.OlP("i-launchdarkly-client"),
+            S = new d.OlP("i-feature-flag-service");
+        new d.OlP("i-deck-code-service"), new d.OlP("apollo-token"), new d.OlP("user_id"), new d.OlP("game-status")
+    }, 51649: (se, U, o) => {
         "use strict";
-        o.d(R, {R: () => r, E: () => t});
-        var c = o(39017), i = o(61737), y = o(36053), e = o(72986), m = o(24850), p = o(5e3), g = o(69439);
+        o.d(U, {R: () => r, E: () => t});
+        var d = o(39017), i = o(61737), y = o(36053), e = o(72986), m = o(24850), p = o(5e3), g = o(69439);
         const r = new p.OlP("deck-code-service");
         let t = (() => {
             class n {
-                constructor(k) {
-                    this.cardsService = k
+                constructor(S) {
+                    this.cardsService = S
                 }
 
-                decodeDeckCode(k) {
-                    let P, I, A;
+                decodeDeckCode(S) {
+                    let k, L, D;
                     try {
-                        ({domain: P, formatCode: I, libraryIds: A} = (0, c.Jx)(k))
-                    } catch (f) {
-                        return (0, i._)(f)
+                        ({domain: k, formatCode: L, libraryIds: D} = (0, d.Jx)(S))
+                    } catch (v) {
+                        return (0, i._)(v)
                     }
-                    return (0, y.aj)([this.cardsService.protoCards$, this.cardsService.inventory$]).pipe((0, e.q)(1), (0, m.U)(([f, O]) => {
-                        const {ownedCards: S, unownedProtos: b} = this.buildFromInventory(f, O, P, A, I);
-                        return {ownedCards: S, unownedProtos: b, domain: P, formatCode: I}
+                    return (0, y.aj)([this.cardsService.protoCards$, this.cardsService.inventory$]).pipe((0, e.q)(1), (0, m.U)(([v, O]) => {
+                        const {ownedCards: P, unownedProtos: C} = this.buildFromInventory(v, O, k, D, L);
+                        return {ownedCards: P, unownedProtos: C, domain: k, formatCode: L}
                     }))
                 }
 
-                validateProtos(k, P, I) {
-                    if (P.length > 30) throw new Error("Too many cards in the deck.");
-                    if (I.length !== P.length) throw new Error("One or more cards in your deck are not valid.");
-                    P.forEach(A => {
-                        const f = k.get(A), O = P.filter(S => S === A).length;
-                        if (O > 2 || ("legendary" === f.rarity || "mythic" === f.rarity) && O > 1) throw new Error("There are too many copies of one or more cards in your deck.")
+                validateProtos(S, k, L) {
+                    if (k.length > 30) throw new Error("Too many cards in the deck.");
+                    if (L.length !== k.length) throw new Error("One or more cards in your deck are not valid.");
+                    k.forEach(D => {
+                        const v = S.get(D), O = k.filter(P => P === D).length;
+                        if (O > 2 || ("legendary" === v.rarity || "mythic" === v.rarity) && O > 1) throw new Error("There are too many copies of one or more cards in your deck.")
                     })
                 }
 
-                buildFromInventory(k, P, I, A, f) {
-                    const O = this.getProtos(A, k, I);
-                    this.validateProtos(k, O, A);
-                    const {ownedCards: S, unownedProtos: b} = this.convertToOwnedUnowned(O, P, k);
-                    return {ownedCards: S, unownedProtos: b, domain: I, formatCode: f}
+                buildFromInventory(S, k, L, D, v) {
+                    const O = this.getProtos(D, S, L);
+                    this.validateProtos(S, O, D);
+                    const {ownedCards: P, unownedProtos: C} = this.convertToOwnedUnowned(O, k, S);
+                    return {ownedCards: P, unownedProtos: C, domain: L, formatCode: v}
                 }
 
-                convertToOwnedUnowned(k, P, I) {
-                    const A = [], f = [];
-                    return k.forEach(O => {
-                        const S = P[O];
-                        if (!S || !S.length) return void f.push(O);
-                        const T = [...S].sort((s, C) => s.q - C.q).filter(s => !A.map(C => C.id).includes(s.id));
-                        if (T && T.length) {
-                            const s = {proto: O, quality: T[0].q, id: T[0].id, protoCard: I.get(O)};
-                            A.push(s)
-                        } else f.push(O)
-                    }), {ownedCards: A, unownedProtos: this.sortProtos(f, I)}
+                convertToOwnedUnowned(S, k, L) {
+                    const D = [], v = [];
+                    return S.forEach(O => {
+                        const P = k[O];
+                        if (!P || !P.length) return void v.push(O);
+                        const $ = [...P].sort((s, b) => s.q - b.q).filter(s => !D.map(b => b.id).includes(s.id));
+                        if ($ && $.length) {
+                            const s = {proto: O, quality: $[0].q, id: $[0].id, protoCard: L.get(O)};
+                            D.push(s)
+                        } else v.push(O)
+                    }), {ownedCards: D, unownedProtos: this.sortProtos(v, L)}
                 }
 
-                sortProtos(k, P) {
-                    return [...k.map(S => P.get(S))].sort((S, b) => S.name < b.name ? -1 : 1).sort((S, b) => S.mana - b.mana).map(S => S.proto)
+                sortProtos(S, k) {
+                    return [...S.map(P => k.get(P))].sort((P, C) => P.name < C.name ? -1 : 1).sort((P, C) => P.mana - C.mana).map(P => P.proto)
                 }
 
-                getProtos(k, P, I) {
-                    const A = [];
-                    return P.forEach((f, O) => {
-                        if ("neutral" !== f.god && f.god !== I) return;
-                        const S = k.filter(b => b === f.lib_id).length;
-                        for (let b = 0; b < S; b++) A.push(O)
-                    }), A
+                getProtos(S, k, L) {
+                    const D = [];
+                    return k.forEach((v, O) => {
+                        if ("neutral" !== v.god && v.god !== L) return;
+                        const P = S.filter(C => C === v.lib_id).length;
+                        for (let C = 0; C < P; C++) D.push(O)
+                    }), D
                 }
 
-                encodeDeck(k, P) {
-                    return (0, c.cv)(k, P)
+                encodeDeck(S, k) {
+                    return (0, d.cv)(S, k)
                 }
             }
 
-            return n.\u0275fac = function (k) {
-                return new (k || n)(p.LFG(g.d))
+            return n.\u0275fac = function (S) {
+                return new (S || n)(p.LFG(g.d))
             }, n.\u0275prov = p.Yz7({token: n, factory: n.\u0275fac, providedIn: "root"}), n
         })()
-    },
-    48031: (se, R, o) => {
+    }, 48031: (se, U, o) => {
         "use strict";
-        o.d(R, {Rl: () => c.Rl});
-        var c = o(39029), i = o(70655), e = (o(61517), o(32830)), m = o(86041), p = o(56418), g = o(65171),
+        o.d(U, {Rl: () => d.Rl});
+        var d = o(39029), i = o(70655), e = (o(61517), o(32830)), m = o(86041), p = o(56418), g = o(65171),
             r = o(80102), t = o(26532), n = o(65281);
-        let v = class extends e.oi {
+        let _ = class extends e.oi {
             constructor() {
                 super(...arguments), this.closable = !0
             }
@@ -4840,9 +4823,9 @@
     `
             }
         };
-        (0, i.gn)([(0, p.C)({type: Boolean})], v.prototype, "closable", void 0), v = (0, i.gn)([(0, m.M)("gu-announce-banner-template")], v);
-        var k = o(47925);
-        let P = class extends e.oi {
+        (0, i.gn)([(0, p.C)({type: Boolean})], _.prototype, "closable", void 0), _ = (0, i.gn)([(0, m.M)("gu-announce-banner-template")], _);
+        var S = o(47925);
+        let k = class extends e.oi {
             constructor() {
                 super(...arguments), this.responsiveSize = []
             }
@@ -4866,25 +4849,25 @@
     `
             }
 
-            pickMarginValue(l, E) {
-                return l ? n.measurements.spacingAmountMapping[l] : E ? n.measurements.spacingAmountMapping[E] : 0
+            pickMarginValue(c, E) {
+                return c ? n.measurements.spacingAmountMapping[c] : E ? n.measurements.spacingAmountMapping[E] : 0
             }
 
             generateVariablesAndMediaQueries() {
-                const l = this.pickMarginValue(this.both, this.top), E = this.pickMarginValue(this.both, this.bottom);
+                const c = this.pickMarginValue(this.both, this.top), E = this.pickMarginValue(this.both, this.bottom);
                 return e.dy`
       <style>
 
         /* DEFINE BASE SIZING */
-        ${(0, t.asCssProp)(`\n          :host {\n            --marginTop: ${l};\n            --marginBottom: ${E};\n          }\n        `)}
+        ${(0, t.asCssProp)(`\n          :host {\n            --marginTop: ${c};\n            --marginBottom: ${E};\n          }\n        `)}
 
         /* DEFINE RESPONSIVE SIZING */
         ${this.responsiveSize.map(({breakpoint: j, topSize: oe, bottomSize: Me, bothSize: Re}) => {
-                    const Je = this.pickMarginValue(Re, oe), St = this.pickMarginValue(Re, Me);
+                    const Qe = this.pickMarginValue(Re, oe), St = this.pickMarginValue(Re, Me);
                     return e.iv`
-            @media screen and (min-width: ${(0, t.asCssProp)(k.breakpointSizeMapping[j])}) {
+            @media screen and (min-width: ${(0, t.asCssProp)(S.breakpointSizeMapping[j])}) {
               :host {
-                ${(0, t.asCssProp)(Je ? `--marginTop: ${Je};` : "")}
+                ${(0, t.asCssProp)(Qe ? `--marginTop: ${Qe};` : "")}
                 ${(0, t.asCssProp)(St ? `--marginBottom: ${St};` : "")}
               }
             }
@@ -4901,8 +4884,8 @@
     `
             }
         };
-        P = (0, i.gn)([(0, m.M)("gu-vertical-space")], P), o(11015);
-        let A = class extends e.oi {
+        k = (0, i.gn)([(0, m.M)("gu-vertical-space")], k), o(11015);
+        let D = class extends e.oi {
             static get styles() {
                 return e.iv`
       :host {
@@ -4929,15 +4912,15 @@
                 return e.dy`
       <gu-vertical-space class="layout" both="2x-large">
         <gu-paragraph-text class="layout__text" kind="large" align="center" fillColor="colors.light.300">
-          Gods Unchained is currently offline while we resolve issues affecting the launcher. Weâ€™ll be back online
+          Gods Unchained is currently offline while we resolve issues affecting the launcher. We’ll be back online
           shortly.
         </gu-paragraph-text>
       </gu-vertical-space>
     `
             }
         };
-        A = (0, i.gn)([(0, m.M)("gu-outage-banner")], A);
-        let f = class extends e.oi {
+        D = (0, i.gn)([(0, m.M)("gu-outage-banner")], D);
+        let v = class extends e.oi {
             static get styles() {
                 return e.iv`
       :host {
@@ -4970,7 +4953,7 @@
     `
             }
         };
-        f = (0, i.gn)([(0, m.M)("gu-ranked-weekend-cancelled-banner")], f);
+        v = (0, i.gn)([(0, m.M)("gu-ranked-weekend-cancelled-banner")], v);
         let O = class extends e.oi {
             static get styles() {
                 return e.iv`
@@ -5006,8 +4989,8 @@
             }
         };
         O = (0, i.gn)([(0, m.M)("gu-maintenance-banner")], O);
-        var S = o(38872), b = o(98539);
-        let T = class extends e.oi {
+        var P = o(38872), C = o(98539);
+        let $ = class extends e.oi {
             constructor() {
                 super(...arguments), this.overlay = !1, this.reveal = !1, this.imageLoader = new Image, this.isLoading = !1
             }
@@ -5075,8 +5058,8 @@
     `
             }
 
-            updated(l) {
-                super.updated(l), l.has("image") && this.image && (this.imageLoader.src = `/assets/images/backdrops/${this.image}`, !this.isLoading && (this.isLoading = !0, (0, r.waitForImageToLoad)(this.imageLoader).then(() => {
+            updated(c) {
+                super.updated(c), c.has("image") && this.image && (this.imageLoader.src = `/assets/images/backdrops/${this.image}`, !this.isLoading && (this.isLoading = !0, (0, r.waitForImageToLoad)(this.imageLoader).then(() => {
                     requestAnimationFrame(() => {
                         this.classList.add("loading"), this.style.backgroundImage = this.imageElement.style.backgroundImage, this.imageElement.style.backgroundImage = `url(/assets/images/backdrops/${this.image})`, this.isLoading = !1, requestAnimationFrame(() => {
                             this.dispatchEvent(new CustomEvent("image-changed", {
@@ -5095,7 +5078,7 @@
 
             renderOverlay() {
                 return this.overlay ? e.dy`
-      <div class="${(0, b.$)({backdrop__overlay: !0, "backdrop__overlay--reveal": this.reveal})}"></div>
+      <div class="${(0, C.$)({backdrop__overlay: !0, "backdrop__overlay--reveal": this.reveal})}"></div>
     ` : e.dy``
             }
 
@@ -5103,11 +5086,11 @@
                 return e.dy` ${this.renderBackdrop()} ${this.renderOverlay()} `
             }
         };
-        (0, i.gn)([(0, p.C)()], T.prototype, "image", void 0), (0, i.gn)([(0, p.C)()], T.prototype, "overlay", void 0), (0, i.gn)([(0, p.C)()], T.prototype, "reveal", void 0), (0, i.gn)([(0, S.I)(".backdrop__image")], T.prototype, "imageElement", void 0), T = (0, i.gn)([(0, m.M)("gu-backdrop")], T);
+        (0, i.gn)([(0, p.C)()], $.prototype, "image", void 0), (0, i.gn)([(0, p.C)()], $.prototype, "overlay", void 0), (0, i.gn)([(0, p.C)()], $.prototype, "reveal", void 0), (0, i.gn)([(0, P.I)(".backdrop__image")], $.prototype, "imageElement", void 0), $ = (0, i.gn)([(0, m.M)("gu-backdrop")], $);
         var s = o(92436);
-        const C = new s.do(G => {
-            G.forEach(l => {
-                l.target.handleResize()
+        const b = new s.do(G => {
+            G.forEach(c => {
+                c.target.handleResize()
             })
         });
         let w = class extends e.oi {
@@ -5148,14 +5131,14 @@
             }
 
             firstUpdated() {
-                C.observe(this), this.handleResize()
+                b.observe(this), this.handleResize()
             }
 
             disconnectedCallback() {
-                C.unobserve(this)
+                b.unobserve(this)
             }
 
-            handleResize(l) {
+            handleResize(c) {
                 const Me = .01 * this.offsetHeight;
                 this.style.setProperty("--cw", .01 * this.offsetWidth + "px"), this.style.setProperty("--ch", `${Me}px`)
             }
@@ -5175,9 +5158,9 @@
             }
         };
         w = (0, i.gn)([(0, m.M)("gu-background-vimeo-embed")], w);
-        var B = o(14879), de = (o(89534), o(51256), o(72650)), fe = o(93270), N = o(40010);
+        var B = o(14879), de = (o(89534), o(51256), o(72650)), Ce = o(93270), z = o(40010);
         const V = e.iv`
-  ${N.W2}
+  ${z.W2}
 
   /* host element establishes 1px outline */
   :host {
@@ -5365,8 +5348,8 @@
             }
         }
 
-        (0, i.gn)([(0, p.C)({reflect: !0})], le.prototype, "type", void 0), customElements.define("gu-gilded-hex-button", (0, de.b)((0, fe.Z)(le))), o(43977);
-        let Te = class extends e.oi {
+        (0, i.gn)([(0, p.C)({reflect: !0})], le.prototype, "type", void 0), customElements.define("gu-gilded-hex-button", (0, de.b)((0, Ce.Z)(le))), o(43977);
+        let Ae = class extends e.oi {
             constructor() {
                 super(...arguments), this.gap = 16, this.layout = "centered", this.visible = !0, this.layouts = {
                     centered: "center",
@@ -5391,8 +5374,8 @@
                 return this.classList.toggle("visible", this.visible), this.style.setProperty("--gap", `${this.gap}px`), this.style.setProperty("--layout", this.layouts[this.layout]), e.dy`<slot></slot>`
             }
         };
-        (0, i.gn)([(0, p.C)()], Te.prototype, "gap", void 0), (0, i.gn)([(0, p.C)()], Te.prototype, "layout", void 0), (0, i.gn)([(0, p.C)()], Te.prototype, "visible", void 0), Te = (0, i.gn)([(0, m.M)("gu-button-group")], Te), o(1949);
-        var H = o(26711);
+        (0, i.gn)([(0, p.C)()], Ae.prototype, "gap", void 0), (0, i.gn)([(0, p.C)()], Ae.prototype, "layout", void 0), (0, i.gn)([(0, p.C)()], Ae.prototype, "visible", void 0), Ae = (0, i.gn)([(0, m.M)("gu-button-group")], Ae), o(1949);
+        var W = o(26711);
         const he = e.iv`
   :host {
     display: inline-flex;
@@ -5710,13 +5693,13 @@
         ?disabled="${this.disabled}"
         href=${this.href}
         target=${this.target}
-        class=${(0, b.$)(this.getClassMap())}
+        class=${(0, C.$)(this.getClassMap())}
       >
         ${this.renderLoader()} ${this.renderIcon()}
         <div class="standard-button__content">
           <slot data-test-id="standard-button-text-slot"></slot>
         </div>
-      </a>` : e.dy` <button ?disabled="${this.disabled}" class=${(0, b.$)(this.getClassMap())}>
+      </a>` : e.dy` <button ?disabled="${this.disabled}" class=${(0, C.$)(this.getClassMap())}>
         ${this.renderLoader()} ${this.renderIcon()}
         <div class="standard-button__content">
           <slot data-test-id="standard-button-text-slot"></slot>
@@ -5727,23 +5710,23 @@
         (0, i.gn)([(0, p.C)({
             reflect: !0,
             type: Boolean,
-            converter: H.b
+            converter: W.b
         })], Q.prototype, "loading", void 0), (0, i.gn)([(0, p.C)({
             reflect: !0,
             type: Boolean,
-            converter: H.b
+            converter: W.b
         })], Q.prototype, "disabled", void 0), (0, i.gn)([(0, p.C)({
             reflect: !0,
             type: Boolean,
-            converter: H.b
+            converter: W.b
         })], Q.prototype, "expand", void 0), (0, i.gn)([(0, p.C)()], Q.prototype, "iconPosition", void 0), (0, i.gn)([(0, p.C)({
             reflect: !0,
             type: Boolean,
-            converter: H.b
+            converter: W.b
         })], Q.prototype, "iconOnly", void 0), (0, i.gn)([(0, p.C)()], Q.prototype, "icon", void 0), (0, i.gn)([(0, p.C)({reflect: !0})], Q.prototype, "type", void 0), (0, i.gn)([(0, p.C)({reflect: !0})], Q.prototype, "theme", void 0), (0, i.gn)([(0, p.C)()], Q.prototype, "href", void 0), (0, i.gn)([(0, p.C)()], Q.prototype, "target", void 0), Q = (0, i.gn)([(0, m.M)("gu-standard-button")], Q);
-        var te = o(12052), ue = o(25297), pe = o(72985), Se = o(58672);
-        const Ae = {text: {type: String}, href: {type: String}, target: {type: String}},
-            je = Object.assign(Object.assign({}, Ae), {
+        var te = o(12052), ue = o(25297), ge = o(72985), _e = o(58672);
+        const He = {text: {type: String}, href: {type: String}, target: {type: String}},
+            Ye = Object.assign(Object.assign({}, He), {
                 loading: {type: String},
                 loadingColor: {type: String},
                 disabled: {type: String},
@@ -5752,7 +5735,7 @@
                 size: {type: String},
                 enableSounds: {type: Boolean},
                 horizontalStretch: {type: String}
-            }), ot = Object.assign(Object.assign({}, Ae), {
+            }), bt = Object.assign(Object.assign({}, He), {
                 color: {type: String},
                 loading: {type: String},
                 loadingColor: {type: String},
@@ -5761,8 +5744,8 @@
                 enableSounds: {type: Boolean},
                 horizontalStretch: {type: String}
             });
-        var Ct = o(91418);
-        const lt = e.iv`
+        var Mt = o(91418);
+        const nt = e.iv`
   ${(0, t.asCssProp)((0, t.setBoxSizing)())}
 
   :host {
@@ -5881,8 +5864,8 @@
     box-shadow: 0px 0px ${(0, t.asCssProp)((0, r.gridUnits)(1))} var(--borderColorHover);
   }
 
-  ${(0, t.asCssProp)(Ct.fillColoringRules)}
-`, $ = 18, ne = e.iv`
+  ${(0, t.asCssProp)(Mt.fillColoringRules)}
+`, I = 18, ne = e.iv`
   ${(0, t.asCssProp)((0, t.setBoxSizing)())}
 
   :host {
@@ -5923,7 +5906,7 @@
   :host([size='large']) {
     height: ${(0, t.asCssProp)("48px")};
     line-height: ${(0, t.asCssProp)("48px")};
-    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)($, $))};
+    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(I, I))};
   }
 
   :host([size='large']) .buttonContent {
@@ -6005,7 +5988,7 @@
     opacity: 0.2;
     ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(11, 11))};
   }
-`, Oe = e.iv`
+`, $e = e.iv`
   ${ne}
 
   :host {
@@ -6044,7 +6027,7 @@
   :host(:hover) .waveArtwork__side {
     opacity: 0.8;
   }
-`, ht = e.iv`
+`, pt = e.iv`
   ${ne}
 
   :host {
@@ -6063,7 +6046,7 @@
   :host(:hover)::before {
     background: ${(0, t.asCssProp)(n.colors.gunmetal[700])};
   }
-`, yt = (e.iv`
+`, Ot = (e.iv`
   ${(0, t.asCssProp)((0, t.setBoxSizing)())}
 
   :host {
@@ -6115,7 +6098,7 @@
     left: 0;
     right: 0;
     background: ${(0, t.asCssProp)(n.colors.dark[500])};
-    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)($, $))};
+    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(I, I))};
   }
 
   .outerGolden {
@@ -6222,7 +6205,7 @@
   :host(.invertColoring:active) .buttonContent__icon {
     ${(0, t.asCssProp)(n.gradients.textFill(n.gradients.gold.simple("bottom")))};
   }
-`), xt = n.colors.light[500], kt = n.colors.gold[500], nt = n.colors.dark[500], Xe = n.colors.dark[900], ut = e.iv`
+`), Ct = n.colors.light[500], yt = n.colors.gold[500], rt = n.colors.dark[500], qe = n.colors.dark[900], lt = e.iv`
   ${(0, t.asCssProp)((0, t.setBoxSizing)())}
   ${ne}
 
@@ -6252,8 +6235,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: ${(0, t.asCssProp)(nt)};
-    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)($, $))};
+    background: ${(0, t.asCssProp)(rt)};
+    ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(I, I))};
   }
 
   .outer {
@@ -6264,10 +6247,10 @@
     ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(17, 17))};
   }
   .outerSilver {
-    background-color: ${(0, t.asCssProp)(xt)};
+    background-color: ${(0, t.asCssProp)(Ct)};
   }
   .outerGold {
-    background-color: ${(0, t.asCssProp)(kt)};
+    background-color: ${(0, t.asCssProp)(yt)};
   }
 
   .innerDark {
@@ -6284,7 +6267,7 @@
     bottom: 7px;
     left: 8px;
     right: 8px;
-    background: ${(0, t.asCssProp)(Xe)};
+    background: ${(0, t.asCssProp)(qe)};
     ${(0, t.asCssProp)((0, t.drawHexShapePolygonMask)(13, 13))};
   }
 
@@ -6309,35 +6292,35 @@
     -webkit-text-fill-color: transparent;
   }
   .buttonContent__textSilver {
-    background-color: ${(0, t.asCssProp)(xt)};
+    background-color: ${(0, t.asCssProp)(Ct)};
   }
   .buttonContent__textGold {
-    background-color: ${(0, t.asCssProp)(kt)};
+    background-color: ${(0, t.asCssProp)(yt)};
   }
 
   /*  HOVER & MOUSEDOWN FX
   ----------------------------------------------------------------------------------- */
   :host(:hover) .innerButtonFillSilver,
   :host(:active) .innerButtonFillSilver {
-    background-color: ${(0, t.asCssProp)(xt)};
+    background-color: ${(0, t.asCssProp)(Ct)};
   }
   :host(:hover) .innerButtonFillGold,
   :host(:active) .innerButtonFillGold {
-    background-color: ${(0, t.asCssProp)(kt)};
+    background-color: ${(0, t.asCssProp)(yt)};
   }
 
   :host(:hover) .buttonContent__text,
   :host(:active) .buttonContent__text {
-    background-color: ${(0, t.asCssProp)(Xe)};
+    background-color: ${(0, t.asCssProp)(qe)};
     background-clip: text;
     -webkit-background-clip: text;
   }
 
   :host(:active)::after {
-    background: ${(0, t.asCssProp)(Xe)};
+    background: ${(0, t.asCssProp)(qe)};
     opacity: 0.2;
   }
-`, Fe = e.iv`
+`, Ge = e.iv`
   ${ne}
 
   :host {
@@ -6357,12 +6340,12 @@
   }
 `;
 
-        function rt(G, l) {
-            return l && "true" !== G ? e.dy` <gu-icon iconLigature=${l} class="buttonContent__icon"></gu-icon> ` : null
+        function st(G, c) {
+            return c && "true" !== G ? e.dy` <gu-icon iconLigature=${c} class="buttonContent__icon"></gu-icon> ` : null
         }
 
-        function Ie(G, l, E = "grey") {
-            return "true" === l ? e.dy`<gu-rectangular-spinner color=${E}></gu-rectangular-spinner>` : G || e.dy` <slot></slot> `
+        function Ie(G, c, E = "grey") {
+            return "true" === c ? e.dy`<gu-rectangular-spinner color=${E}></gu-rectangular-spinner>` : G || e.dy` <slot></slot> `
         }
 
         const It = e.dy`
@@ -6379,11 +6362,11 @@
       <img src="/assets/images/hex-button/hex-button--bottom-wave-art.png" />
     </picture>
   </div>
-`, z = Object.assign(Object.assign({}, je), {invertColoring: {type: Boolean}});
-        customElements.define("gu-special-hex-button", (0, Se.x)({
-            renderer: function W({
+`, l = Object.assign(Object.assign({}, Ye), {invertColoring: {type: Boolean}});
+        customElements.define("gu-special-hex-button", (0, _e.x)({
+            renderer: function H({
                                      text: G,
-                                     loading: l,
+                                     loading: c,
                                      loadingColor: E,
                                      icon: j,
                                      leftIconPosition: oe,
@@ -6391,23 +6374,23 @@
                                  }) {
                 return (0, te.d4)(() => {
                     Me ? this.classList.add("invertColoring") : this.classList.remove("invertColoring")
-                }, [Me]), e.dy` ${(({icon: G, leftIconPosition: l, text: E, loading: j, loadingColor: oe}) => e.dy`
+                }, [Me]), e.dy` ${(({icon: G, leftIconPosition: c, text: E, loading: j, loadingColor: oe}) => e.dy`
   <i class="hexLayer outerKeyline"></i>
   <i class="hexLayer outerGolden"></i>
   <i class="hexLayer innerGunmetal"></i>
   <i class="hexLayer innerButtonFill"></i>
 
-  <div class=${(0, b.$)({buttonContent: !0, "buttonContent--leftIcon": l})}>
+  <div class=${(0, C.$)({buttonContent: !0, "buttonContent--leftIcon": c})}>
     <gu-heading-text class="buttonContent__text" size="2x-small">
       ${Ie(E, j, oe)}
     </gu-heading-text>
-    ${rt(j, G)}
+    ${st(j, G)}
   </div>
-`)({text: G, icon: j, loading: l, loadingColor: E, leftIconPosition: oe})} `
-            }, baseClass: (0, pe.lH)((0, pe.Am)((0, pe.s)((0, pe.Xg)(ue.J)))), props: {properties: z, styles: yt}
-        })), customElements.define("gu-special-hex-flat-button", (0, Se.x)({
-            renderer: function d({color: G, text: l, loading: E, loadingColor: j}) {
-                return e.dy` ${(({color: G, text: l, loading: E, loadingColor: j}) => {
+`)({text: G, icon: j, loading: c, loadingColor: E, leftIconPosition: oe})} `
+            }, baseClass: (0, ge.lH)((0, ge.Am)((0, ge.s)((0, ge.Xg)(ue.J)))), props: {properties: l, styles: Ot}
+        })), customElements.define("gu-special-hex-flat-button", (0, _e.x)({
+            renderer: function f({color: G, text: c, loading: E, loadingColor: j}) {
+                return e.dy` ${(({color: G, text: c, loading: E, loadingColor: j}) => {
                     const oe = G ? G[0].toUpperCase() + G.slice(1) : "Silver";
                     return e.dy`
     <i class="hexLayer outerKeyline"></i>
@@ -6415,59 +6398,59 @@
     <i class="hexLayer innerDark"></i>
     <i class="hexLayer innerButtonFill innerButtonFill${oe}"></i>
 
-    <div class=${(0, b.$)({buttonContent: !0})}>
+    <div class=${(0, C.$)({buttonContent: !0})}>
       <gu-heading-text class="buttonContent__text buttonContent__text${oe}" size="2x-small">
-        ${Ie(l, E, j)}
+        ${Ie(c, E, j)}
       </gu-heading-text>
     </div>
   `
-                })({color: G, text: l, loading: E, loadingColor: j})} `
-            }, props: {properties: ot, styles: ut}, baseClass: (0, pe.Am)((0, pe.s)((0, pe.Xg)(ue.J)))
-        })), customElements.define("gu-primary-hex-button", (0, Se.x)({
-            renderer: function _({text: G, loading: l, loadingColor: E, size: j, icon: oe, leftIconPosition: Me}) {
+                })({color: G, text: c, loading: E, loadingColor: j})} `
+            }, props: {properties: bt, styles: lt}, baseClass: (0, ge.Am)((0, ge.s)((0, ge.Xg)(ue.J)))
+        })), customElements.define("gu-primary-hex-button", (0, _e.x)({
+            renderer: function R({text: G, loading: c, loadingColor: E, size: j, icon: oe, leftIconPosition: Me}) {
                 return e.dy`
-    ${It} ${(({icon: G, leftIconPosition: l, size: E, text: j, loading: oe, loadingColor: Me}) => e.dy`
-  <div class=${(0, b.$)({buttonContent: !0, "buttonContent--leftIcon": l})}>
+    ${It} ${(({icon: G, leftIconPosition: c, size: E, text: j, loading: oe, loadingColor: Me}) => e.dy`
+  <div class=${(0, C.$)({buttonContent: !0, "buttonContent--leftIcon": c})}>
     <gu-heading-text class="buttonContent__text" size=${"large" === E ? "2x-small" : "3x-small"}>
       ${Ie(j, oe, Me)}
     </gu-heading-text>
-    ${rt(oe, G)}
+    ${st(oe, G)}
   </div>
-`)({text: G, icon: oe, size: j, loading: l, loadingColor: E, leftIconPosition: Me})}
+`)({text: G, icon: oe, size: j, loading: c, loadingColor: E, leftIconPosition: Me})}
   `
-            }, props: {properties: je, styles: Oe}, baseClass: (0, pe.lH)((0, pe.Am)((0, pe.s)((0, pe.Xg)(ue.J))))
-        })), customElements.define("gu-secondary-hex-button", (0, Se.x)({
-            renderer: function U({text: G, loading: l, loadingColor: E, icon: j, leftIconPosition: oe}) {
-                return e.dy` ${(({icon: G, leftIconPosition: l, text: E, loading: j, loadingColor: oe}) => e.dy`
-  <div class=${(0, b.$)({buttonContent: !0, "buttonContent--leftIcon": l})}>
+            }, props: {properties: Ye, styles: $e}, baseClass: (0, ge.lH)((0, ge.Am)((0, ge.s)((0, ge.Xg)(ue.J))))
+        })), customElements.define("gu-secondary-hex-button", (0, _e.x)({
+            renderer: function ie({text: G, loading: c, loadingColor: E, icon: j, leftIconPosition: oe}) {
+                return e.dy` ${(({icon: G, leftIconPosition: c, text: E, loading: j, loadingColor: oe}) => e.dy`
+  <div class=${(0, C.$)({buttonContent: !0, "buttonContent--leftIcon": c})}>
     <gu-simple-text class="buttonContent__text" kind="small">
       ${Ie(E, j, oe)}
     </gu-simple-text>
-    ${rt(j, G)}
+    ${st(j, G)}
   </div>
-`)({text: G, icon: j, loading: l, loadingColor: E, leftIconPosition: oe})} `
-            }, props: {properties: je, styles: ht}, baseClass: (0, pe.Am)((0, pe.s)((0, pe.Xg)(ue.J)))
-        })), customElements.define("gu-subtle-hex-button", (0, Se.x)({
-            renderer: function ie({text: G, loading: l, loadingColor: E, size: j, icon: oe, leftIconPosition: Me}) {
+`)({text: G, icon: j, loading: c, loadingColor: E, leftIconPosition: oe})} `
+            }, props: {properties: Ye, styles: pt}, baseClass: (0, ge.Am)((0, ge.s)((0, ge.Xg)(ue.J)))
+        })), customElements.define("gu-subtle-hex-button", (0, _e.x)({
+            renderer: function Oe({text: G, loading: c, loadingColor: E, size: j, icon: oe, leftIconPosition: Me}) {
                 return e.dy` ${(({
                                      icon: G,
-                                     leftIconPosition: l,
+                                     leftIconPosition: c,
                                      text: E,
                                      loading: j,
                                      loadingColor: oe,
                                      size: Me
                                  }) => e.dy`
-  <div class=${(0, b.$)({buttonContent: !0, "buttonContent--leftIcon": l})}>
+  <div class=${(0, C.$)({buttonContent: !0, "buttonContent--leftIcon": c})}>
     <gu-heading-text class="buttonContent__text" size=${"large" === Me ? "2x-small" : "3x-small"}>
       ${Ie(E, j, oe)}
     </gu-heading-text>
-    ${rt(j, G)}
+    ${st(j, G)}
   </div>
-`)({text: G, icon: oe, size: j, loading: l, loadingColor: E, leftIconPosition: Me})} `
-            }, props: {properties: je, styles: Fe}, baseClass: (0, pe.Am)((0, pe.s)((0, pe.Xg)(ue.J)))
+`)({text: G, icon: oe, size: j, loading: c, loadingColor: E, leftIconPosition: Me})} `
+            }, props: {properties: Ye, styles: Ge}, baseClass: (0, ge.Am)((0, ge.s)((0, ge.Xg)(ue.J)))
         }));
-        var ke = o(5284), Ve = o(52102);
-        const {asCssProp: ct} = ke.ZB, {gridUnits: mt} = ke.dz, it = e.iv`
+        var Ze = o(5284), ct = o(52102);
+        const {asCssProp: gt} = Ze.ZB, {gridUnits: ht} = Ze.dz, it = e.iv`
   :host {
     display: inline-flex;
     justify-content: flex-start;
@@ -6477,39 +6460,39 @@
   :host,
   :host([kind='small']),
   :host([kind='help']) {
-    border-bottom: ${ct(mt(.25))} solid;
-    padding-bottom: ${ct(mt(.25))};
+    border-bottom: ${gt(ht(.25))} solid;
+    padding-bottom: ${gt(ht(.25))};
   }
 
   :host([kind='large']) {
-    border-bottom: ${ct(mt(.5))} solid;
-    padding-bottom: ${ct(mt(.25))};
+    border-bottom: ${gt(ht(.5))} solid;
+    padding-bottom: ${gt(ht(.25))};
   }
 
   :host([kind='tag']) {
-    border-bottom: ${ct(mt(.5))} solid;
-    padding-bottom: ${ct(mt(.25))};
+    border-bottom: ${gt(ht(.5))} solid;
+    padding-bottom: ${gt(ht(.25))};
   }
 
   /*  HOVER FX
     ----------------------------------------------------------------------------------- */
   :host(:hover) {
-    border-color: ${ct(n.colors.gold[300])};
-    color: ${ct(n.colors.gold[300])};
+    border-color: ${gt(n.colors.gold[300])};
+    color: ${gt(n.colors.gold[300])};
   }
 `;
-        let Jt = class extends ((0, pe.Xg)(Ve._)) {
+        let Jt = class extends ((0, ge.Xg)(ct._)) {
             static get styles() {
-                const l = [];
-                return super.styles && l.push(super.styles), l.push(it), l
+                const c = [];
+                return super.styles && c.push(super.styles), c.push(it), c
             }
 
             static get properties() {
-                return Object.assign(Object.assign({}, super.properties), Ae)
+                return Object.assign(Object.assign({}, super.properties), He)
             }
         };
         Jt = (0, i.gn)([(0, m.M)("gu-simple-text-button")], Jt);
-        const ls = Object.assign(Object.assign({}, je), {
+        const ws = Object.assign(Object.assign({}, Ye), {
             iconColor: {type: String},
             fillColor: {type: String},
             fillColorHover: {type: String},
@@ -6524,45 +6507,45 @@
             verticalLayout: {type: Boolean},
             square: {type: Boolean}
         });
-        customElements.define("gu-plain-square-button", (0, Se.x)({
+        customElements.define("gu-plain-square-button", (0, _e.x)({
             renderer: function ss({
                                       text: G,
-                                      loading: l,
+                                      loading: c,
                                       loadingColor: E,
                                       icon: j,
                                       iconColor: oe,
                                       leftIconPosition: Me,
                                       fillColor: Re,
-                                      fillColorHover: Je,
+                                      fillColorHover: Qe,
                                       fillGradient: St,
                                       fillGradientTarget: Qt,
-                                      backgroundFillColor: Ot,
+                                      backgroundFillColor: Et,
                                       backgroundFillColorHover: Lt,
-                                      backgroundFillGradient: bt,
-                                      backgroundFillGradientTarget: $e,
+                                      backgroundFillGradient: vt,
+                                      backgroundFillGradientTarget: Te,
                                       borderColor: De,
                                       borderColorHover: Ut,
                                       verticalLayout: Ue,
-                                      square: st
+                                      square: tt
                                   }) {
                 return (0, te.d4)(() => {
                     (0, g.updateColoringVariables)({
                         component: this,
                         iconColor: oe,
                         fillColor: Re,
-                        fillColorHover: Je,
+                        fillColorHover: Qe,
                         fillGradient: St,
                         fillGradientTarget: Qt,
-                        backgroundFillColor: Ot,
+                        backgroundFillColor: Et,
                         backgroundFillColorHover: Lt,
-                        backgroundFillGradient: bt,
-                        backgroundFillGradientTarget: $e,
+                        backgroundFillGradient: vt,
+                        backgroundFillGradientTarget: Te,
                         borderColor: De,
                         borderColorHover: Ut
                     })
-                }, [oe, Re, Je, St, Qt, Ot, Lt, bt, $e, De, Ut]), e.dy`${(({
+                }, [oe, Re, Qe, St, Qt, Et, Lt, vt, Te, De, Ut]), e.dy`${(({
                                                                                icon: G,
-                                                                               leftIconPosition: l,
+                                                                               leftIconPosition: c,
                                                                                text: E,
                                                                                loading: j,
                                                                                loadingColor: oe,
@@ -6570,9 +6553,9 @@
                                                                                square: Re
                                                                            }) => e.dy`
   <div
-    class=${(0, b.$)({
+    class=${(0, C.$)({
                     buttonContent: !0,
-                    "buttonContent--leftIcon": l,
+                    "buttonContent--leftIcon": c,
                     "buttonContent--vertical": Me,
                     "buttonContent--square": Re
                 })}
@@ -6580,16 +6563,16 @@
     <gu-paragraph-text class="buttonContent__text" kind=${Me ? "tag" : "small"} fontWeight="bold">
       ${Ie(E, j, oe)}
     </gu-paragraph-text>
-    ${rt(j, G)}
+    ${st(j, G)}
   </div>
-`)({icon: j, leftIconPosition: Me, loading: l, loadingColor: E, text: G, verticalLayout: Ue, square: st})}`
-            }, props: {properties: ls, styles: lt}, baseClass: (0, pe.Am)((0, pe.s)((0, pe.Xg)(ue.J)))
+`)({icon: j, leftIconPosition: Me, loading: c, loadingColor: E, text: G, verticalLayout: Ue, square: tt})}`
+            }, props: {properties: ws, styles: nt}, baseClass: (0, ge.Am)((0, ge.s)((0, ge.Xg)(ue.J)))
         }));
         var Bt = (() => {
             return (G = Bt || (Bt = {})).img2text = "img2text", G.text2img = "text2img", Bt;
             var G
         })();
-        let _t = class extends e.oi {
+        let mt = class extends e.oi {
             constructor() {
                 super(...arguments), this.direction = Bt.img2text, this.headerSize = "small", this.headerColor = n.colors.light[100], this.textKind = "small", this.textColor = n.colors.light[500], this.backgroundPosition = "top", this.backgroundSize = "contain", this.headerResponsiveSize = [], this.textResponsiveKind = [], this.backgroundImageResponsive = [], this.breakpoint = "medium"
             }
@@ -6638,7 +6621,7 @@
         border-left: 4px solid ${(0, t.asCssProp)(n.colors.gold[500])};
         text-align: left;
       }
-      @media only screen and (min-width: ${(0, t.asCssProp)(k.breakpointSizeMapping["x-small"])}) ) {
+      @media only screen and (min-width: ${(0, t.asCssProp)(S.breakpointSizeMapping["x-small"])}) ) {
         .character {
           height: 440px;
         }
@@ -6651,14 +6634,14 @@
 
             generateBackgroundImageMediaQueries() {
                 return this.backgroundImageResponsive.map(({
-                                                               breakpoint: l,
+                                                               breakpoint: c,
                                                                pos: E,
                                                                size: j
-                                                           }) => `\n        @media screen and (min-width: ${(0, t.asCssProp)(k.breakpointSizeMapping[l])}) {\n          .character {\n            background-image: ${["x-small", "small"].includes(l) ? "linear-gradient(to bottom, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 1) 80%), " : ""}\n            url('${this.background}') !important;\n            background-position: ${(0, t.asCssProp)(E)} !important;\n            background-size: ${(0, t.asCssProp)(j)} !important;\n          }\n        }\n    `).join("\n")
+                                                           }) => `\n        @media screen and (min-width: ${(0, t.asCssProp)(S.breakpointSizeMapping[c])}) {\n          .character {\n            background-image: ${["x-small", "small"].includes(c) ? "linear-gradient(to bottom, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 1) 80%), " : ""}\n            url('${this.background}') !important;\n            background-position: ${(0, t.asCssProp)(E)} !important;\n            background-size: ${(0, t.asCssProp)(j)} !important;\n          }\n        }\n    `).join("\n")
             }
 
             generateMediaQueries() {
-                return `\n      /* DEFINE RESPONSIVE SIZING */\n      ${this.generateBackgroundImageMediaQueries()}\n        @media\n        screen\n        and\n        (min-width: ${(0, t.asCssProp)(k.breakpointSizeMapping[this.breakpoint])}) {\n        .character {\n          flex-direction: column !important;\n          align-items: flex-end !important;\n          justify-content: center !important;\n        }\n        .character-img2text {\n          align-items: flex-end !important;\n        }\n        .character-text2img {\n          align-items: flex-start !important;\n        }\n        .character-text {\n          width: 50% !important;\n          margin: 20px !important;\n        }\n        .character-text-img2text {\n          padding-left: 0 !important;\n          border-left: none !important;\n          padding-right: 20px !important;\n          border-right: 4px solid ${(0, t.asCssProp)(n.colors.gold[500])} !important;\n          text-align: right !important;\n        }\n        .character-text-text2img {\n          padding-right: 0 !important;\n          border-right: none !important;\n          padding-left: 20px !important;\n          border-left: 4px solid ${(0, t.asCssProp)(n.colors.gold[500])} !important;\n          text-align: left !important;\n        }\n      }`
+                return `\n      /* DEFINE RESPONSIVE SIZING */\n      ${this.generateBackgroundImageMediaQueries()}\n        @media\n        screen\n        and\n        (min-width: ${(0, t.asCssProp)(S.breakpointSizeMapping[this.breakpoint])}) {\n        .character {\n          flex-direction: column !important;\n          align-items: flex-end !important;\n          justify-content: center !important;\n        }\n        .character-img2text {\n          align-items: flex-end !important;\n        }\n        .character-text2img {\n          align-items: flex-start !important;\n        }\n        .character-text {\n          width: 50% !important;\n          margin: 20px !important;\n        }\n        .character-text-img2text {\n          padding-left: 0 !important;\n          border-left: none !important;\n          padding-right: 20px !important;\n          border-right: 4px solid ${(0, t.asCssProp)(n.colors.gold[500])} !important;\n          text-align: right !important;\n        }\n        .character-text-text2img {\n          padding-right: 0 !important;\n          border-right: none !important;\n          padding-left: 20px !important;\n          border-left: 4px solid ${(0, t.asCssProp)(n.colors.gold[500])} !important;\n          text-align: left !important;\n        }\n      }`
             }
 
             generateAllStyles() {
@@ -6701,12 +6684,12 @@
     `
             }
         };
-        _t = (0, i.gn)([(0, m.M)("gu-card-character")], _t);
-        var ft = o(7302), Qe = o(49219);
+        mt = (0, i.gn)([(0, m.M)("gu-card-character")], mt);
+        var _t = o(7302), Ve = o(49219);
         const Ht = G => `https://images.godsunchained.com/cardpack-images--${G}`, Xt = G => "undefined" === G || !G;
-        let ge = class extends e.oi {
+        let pe = class extends e.oi {
             constructor() {
-                super(...arguments), this.type = "marketing", this.responsiveSrcsetSizes = `${Qe.imageQualities.normal}px`
+                super(...arguments), this.type = "marketing", this.responsiveSrcsetSizes = `${Ve.imageQualities.normal}px`
             }
 
             static get styles() {
@@ -6746,84 +6729,84 @@
     `
             }
 
-            update(l) {
-                l.has("god") && (this.sanitizedGod = "all" === this.god || "core" === this.god ? "neutral" : this.god), super.update(l)
+            update(c) {
+                c.has("god") && (this.sanitizedGod = "all" === this.god || "core" === this.god ? "neutral" : this.god), super.update(c)
             }
 
-            updated(l) {
-                super.updated(l), this.image && (this.image.complete ? (this.classList.remove("loading", "error"), this.notifyState("loaded")) : (this.classList.remove("error"), this.classList.add("loading"), this.notifyState("loading"), (0, r.waitForImageToLoad)(this.image).then(() => {
+            updated(c) {
+                super.updated(c), this.image && (this.image.complete ? (this.classList.remove("loading", "error"), this.notifyState("loaded")) : (this.classList.remove("error"), this.classList.add("loading"), this.notifyState("loading"), (0, r.waitForImageToLoad)(this.image).then(() => {
                     this.classList.remove("loading", "error"), this.notifyState("loaded")
                 }).catch(() => {
                     this.classList.remove("loading"), this.classList.add("error"), this.notifyState("error")
                 })))
             }
 
-            notifyState(l) {
-                this.dispatchEvent(new CustomEvent(l, {detail: this, bubbles: !1, composed: !1}))
+            notifyState(c) {
+                this.dispatchEvent(new CustomEvent(c, {detail: this, bubbles: !1, composed: !1}))
             }
 
             render() {
-                const {type: l, set: E, rarity: j, sanitizedGod: oe, responsiveSrcsetSizes: Me} = this;
-                return Xt(l) || Xt(E) || Xt(oe) || Xt(j) ? e.dy`` : e.dy`
-      <picture class="picture picture--${l}">
+                const {type: c, set: E, rarity: j, sanitizedGod: oe, responsiveSrcsetSizes: Me} = this;
+                return Xt(c) || Xt(E) || Xt(oe) || Xt(j) ? e.dy`` : e.dy`
+      <picture class="picture picture--${c}">
         <source
-          srcset=${Object.keys(Qe.imageQualities).map(Re => {
-                    const Je = Qe.imageQualities[Re];
-                    return `${Ht(l)}/${Je}/${E}--${oe}--${j}.webp ${Je}w`
+          srcset=${Object.keys(Ve.imageQualities).map(Re => {
+                    const Qe = Ve.imageQualities[Re];
+                    return `${Ht(c)}/${Qe}/${E}--${oe}--${j}.webp ${Qe}w`
                 }).join(", ")}
           type="image/webp"
           sizes="${Me}"
         />
         <source
-          srcset=${Object.keys(Qe.imageQualities).map(Re => {
-                    const Je = Qe.imageQualities[Re];
-                    return `${Ht(l)}/${Je}/${E}--${oe}--${j}.png ${Je}w`
+          srcset=${Object.keys(Ve.imageQualities).map(Re => {
+                    const Qe = Ve.imageQualities[Re];
+                    return `${Ht(c)}/${Qe}/${E}--${oe}--${j}.png ${Qe}w`
                 }).join(",")}
           type="image/png"
           sizes="${Me}"
         />
         <img
           class="image"
-          src="${Ht(l)}/${Qe.imageQualities.small}/${E}--${oe}--${j}.png"
+          src="${Ht(c)}/${Ve.imageQualities.small}/${E}--${oe}--${j}.png"
           alt="Card Pack Image"
         />
       </picture>
     `
             }
         };
-        (0, i.gn)([(0, p.C)({type: String})], ge.prototype, "set", void 0), (0, i.gn)([(0, p.C)({type: String})], ge.prototype, "rarity", void 0), (0, i.gn)([(0, p.C)({type: String})], ge.prototype, "god", void 0), (0, i.gn)([(0, p.C)({type: String})], ge.prototype, "type", void 0), (0, i.gn)([(0, p.C)({type: String})], ge.prototype, "responsiveSrcsetSizes", void 0), (0, i.gn)([(0, ft.S)()], ge.prototype, "sanitizedGod", void 0), (0, i.gn)([(0, S.I)(".image")], ge.prototype, "image", void 0), ge = (0, i.gn)([(0, m.M)("gu-card-pack-picture")], ge);
-        const wt = (G, l) => `https://card.godsunchained.com/?id=${G}&q=${l}`;
+        (0, i.gn)([(0, p.C)({type: String})], pe.prototype, "set", void 0), (0, i.gn)([(0, p.C)({type: String})], pe.prototype, "rarity", void 0), (0, i.gn)([(0, p.C)({type: String})], pe.prototype, "god", void 0), (0, i.gn)([(0, p.C)({type: String})], pe.prototype, "type", void 0), (0, i.gn)([(0, p.C)({type: String})], pe.prototype, "responsiveSrcsetSizes", void 0), (0, i.gn)([(0, _t.S)()], pe.prototype, "sanitizedGod", void 0), (0, i.gn)([(0, P.I)(".image")], pe.prototype, "image", void 0), pe = (0, i.gn)([(0, m.M)("gu-card-pack-picture")], pe);
+        const Pt = (G, c) => `https://card.godsunchained.com/?id=${G}&q=${c}`;
         let jt = class extends e.oi {
             constructor() {
-                super(...arguments), this.quality = 1, this.protoId = 1, this.responsiveSrcsetSizes = `${Qe.imageQualities.normal}px`, this.showLoadingState = !1
+                super(...arguments), this.quality = 1, this.protoId = 1, this.responsiveSrcsetSizes = `${Ve.imageQualities.normal}px`, this.showLoadingState = !1
             }
 
-            updated(l) {
-                super.updated(l), (l.has("protoId") || l.has("quality")) && (this.classList.add("loading"), (0, r.waitForImageToLoad)(this.image).then(() => this.classList.remove("loading")))
+            updated(c) {
+                super.updated(c), (c.has("protoId") || c.has("quality")) && (this.classList.add("loading"), (0, r.waitForImageToLoad)(this.image).then(() => this.classList.remove("loading")))
             }
 
             render() {
                 return e.dy`
       <picture class="picture">
         <source
-          srcset=${Object.keys(Qe.imageQualities).map(l => {
-                    const E = Qe.imageQualities[l];
-                    return `${wt(this.protoId, this.quality)}&w=${E} ${E}w`
+          srcset=${Object.keys(Ve.imageQualities).map(c => {
+                    const E = Ve.imageQualities[c];
+                    return `${Pt(this.protoId, this.quality)}&w=${E} ${E}w`
                 }).join(", ")}
           type="image/webp"
           sizes="${this.responsiveSrcsetSizes}"
         />
         <source
-          srcset=${Object.keys(Qe.imageQualities).map(l => {
-                    const E = Qe.imageQualities[l];
-                    return `${wt(this.protoId, this.quality)}&w=${E}&png=true ${E}w`
+          srcset=${Object.keys(Ve.imageQualities).map(c => {
+                    const E = Ve.imageQualities[c];
+                    return `${Pt(this.protoId, this.quality)}&w=${E}&png=true ${E}w`
                 }).join(", ")}
           type="image/png"
           sizes="${this.responsiveSrcsetSizes}"
         />
         <img
           class="image"
-          src="${wt(this.protoId, this.quality)}&w=${Qe.imageQualities.small}&png=true"
+          src="${Pt(this.protoId, this.quality)}&w=${Ve.imageQualities.small}&png=true"
           alt="Card Pack Image"
         />
       </picture>
@@ -6870,14 +6853,14 @@
       color: ${(0, t.asCssProp)(n.colors.light[100])};
       opacity: 0;
     }
-  `, (0, i.gn)([(0, p.C)()], jt.prototype, "quality", void 0), (0, i.gn)([(0, p.C)()], jt.prototype, "protoId", void 0), (0, i.gn)([(0, ft.S)()], jt.prototype, "responsiveSrcsetSizes", void 0), (0, i.gn)([(0, ft.S)()], jt.prototype, "showLoadingState", void 0), (0, i.gn)([(0, S.I)("img.image")], jt.prototype, "image", void 0), jt = (0, i.gn)([(0, m.M)("gu-card-picture")], jt);
-        var eo = o(71459), to = o.n(eo), os = o(49749), so = o(63082), ms = o.n(so);
-        const cs_ALL = "slidesListing__slide", cs_CURRENT = "slidesListing__slide--currentSlide", Es = new s.do(G => {
-            G.forEach(l => {
-                l.target.handleResize()
+  `, (0, i.gn)([(0, p.C)()], jt.prototype, "quality", void 0), (0, i.gn)([(0, p.C)()], jt.prototype, "protoId", void 0), (0, i.gn)([(0, _t.S)()], jt.prototype, "responsiveSrcsetSizes", void 0), (0, i.gn)([(0, _t.S)()], jt.prototype, "showLoadingState", void 0), (0, i.gn)([(0, P.I)("img.image")], jt.prototype, "image", void 0), jt = (0, i.gn)([(0, m.M)("gu-card-picture")], jt);
+        var eo = o(71459), to = o.n(eo), os = o(49749), so = o(63082), hs = o.n(so);
+        const ls_ALL = "slidesListing__slide", ls_CURRENT = "slidesListing__slide--currentSlide", Es = new s.do(G => {
+            G.forEach(c => {
+                c.target.handleResize()
             })
         });
-        let et = class extends e.oi {
+        let Xe = class extends e.oi {
             constructor() {
                 super(...arguments), this.slidesPerView = 1, this.spaceBetween = 0, this.centeredSlides = !1, this.responsiveBreakpoints = [], this.state = {
                     leftLocked: !1,
@@ -6901,7 +6884,7 @@
                     slideCenteringSideMargin: 0,
                     left: 0,
                     top: 0
-                }, this.debouncedResize = ms()(() => {
+                }, this.debouncedResize = hs()(() => {
                     this.layoutSlides(), this.updatePaneClasses(), this.reset()
                 }, 500)
             }
@@ -6953,9 +6936,9 @@
                     passive: !1,
                     capture: !0,
                     startDirectionLoopCount: 1
-                }), this.gestureControl.on("pan.prestart", l => {
-                    l.sourceEvent instanceof MouseEvent && l.sourceEvent.preventDefault()
-                }), this.gestureControl.on("pan.start", l => this.onPanStart(l)), this.gestureControl.on("pan.all", l => this.onPan(l)), this.gestureControl.on("pan.end", l => this.onPanEnd(l)), this.storeSlideDoms(), this.handleResize(), this.updatePaneClasses()
+                }), this.gestureControl.on("pan.prestart", c => {
+                    c.sourceEvent instanceof MouseEvent && c.sourceEvent.preventDefault()
+                }), this.gestureControl.on("pan.start", c => this.onPanStart(c)), this.gestureControl.on("pan.all", c => this.onPan(c)), this.gestureControl.on("pan.end", c => this.onPanEnd(c)), this.storeSlideDoms(), this.handleResize(), this.updatePaneClasses()
             }
 
             disconnectedCallback() {
@@ -6963,8 +6946,8 @@
             }
 
             get onLastSlide() {
-                const {state: {currentSlideIndexes: l}} = this;
-                return this.state.centeredSlides ? l[l.length - 1] >= this.state.totalSlidesCount : l[l.length - 1] >= this.state.totalSlidesCount - 1
+                const {state: {currentSlideIndexes: c}} = this;
+                return this.state.centeredSlides ? c[c.length - 1] >= this.state.totalSlidesCount : c[c.length - 1] >= this.state.totalSlidesCount - 1
             }
 
             get onFirstSlide() {
@@ -6982,52 +6965,52 @@
             layoutSlides() {
                 this.slidesListingDom.style.width = `${this.dimensions.totalWidth + 2 * this.dimensions.slideCenteringSideMargin}px`, os.p8.set(this.slideDoms, {
                     width: this.dimensions.slideWidth,
-                    marginLeft: l => this.state.centeredSlides && 0 === l ? this.dimensions.slideCenteringSideMargin : 0,
-                    marginRight: l => l === this.state.totalSlidesCount - 1 ? this.dimensions.slideCenteringSideMargin : this.state.spaceBetween
+                    marginLeft: c => this.state.centeredSlides && 0 === c ? this.dimensions.slideCenteringSideMargin : 0,
+                    marginRight: c => c === this.state.totalSlidesCount - 1 ? this.dimensions.slideCenteringSideMargin : this.state.spaceBetween
                 })
             }
 
-            onPanStart(l) {
+            onPanStart(c) {
                 this.slidesListingDom.style.cursor = "grabbing", this.direction = null, this.state.startTranslateX = 0 === this.state.currentSlideIndexes[0] ? 0 : this.state.translateX, this.state.translateX = 0, this.state.rightLocked = !1, this.state.leftLocked = !1, this.setXTrans("left", 0)
             }
 
-            onPan(l) {
-                this.setXTrans(l.deltaX < 0 ? "left" : "right", l.deltaX)
+            onPan(c) {
+                this.setXTrans(c.deltaX < 0 ? "left" : "right", c.deltaX)
             }
 
-            setXTrans(l, E) {
-                this.direction = l;
+            setXTrans(c, E) {
+                this.direction = c;
                 let j = 1;
                 const oe = E * j, Me = this.state.startTranslateX + oe;
-                "right" === l && Me >= 0 ? this.state.rightLocked || (this.state.lockTranslateX = oe, this.state.rightLocked = !0) : this.state.rightLocked = !1, "left" === l && this.dimensions.totalWidth - this.dimensions.width + Me + 2 * this.dimensions.slideCenteringSideMargin <= 0 ? this.state.leftLocked || (this.state.lockTranslateX = oe, this.state.leftLocked = !0) : this.state.leftLocked = !1, j = this.state.leftLocked || this.state.rightLocked ? .1 : 1;
-                let Je = this.state.startTranslateX + oe;
-                (this.state.rightLocked || this.state.leftLocked) && (Je = this.state.startTranslateX + this.state.lockTranslateX + (E - this.state.lockTranslateX) * j), this.state.translateX = Je, this.drawFrame()
+                "right" === c && Me >= 0 ? this.state.rightLocked || (this.state.lockTranslateX = oe, this.state.rightLocked = !0) : this.state.rightLocked = !1, "left" === c && this.dimensions.totalWidth - this.dimensions.width + Me + 2 * this.dimensions.slideCenteringSideMargin <= 0 ? this.state.leftLocked || (this.state.lockTranslateX = oe, this.state.leftLocked = !0) : this.state.leftLocked = !1, j = this.state.leftLocked || this.state.rightLocked ? .1 : 1;
+                let Qe = this.state.startTranslateX + oe;
+                (this.state.rightLocked || this.state.leftLocked) && (Qe = this.state.startTranslateX + this.state.lockTranslateX + (E - this.state.lockTranslateX) * j), this.state.translateX = Qe, this.drawFrame()
             }
 
-            onPanEnd(l) {
+            onPanEnd(c) {
                 console.log("!!!!!!!! PAN END"), this.slidesListingDom.style.cursor = null;
                 const E = Math.abs(this.state.translateX - this.state.startTranslateX),
                     j = this.state.slidesPerView > 1 ? .8 : .5;
                 let oe = Math.abs(E) / (this.dimensions.slideWidth * j);
-                return !this.state.centeredSlides && !this.onLastSlide && Math.abs(this.state.translateX - this.dimensions.width) >= this.dimensions.totalWidth ? this.nextSlides(null, [this.state.totalSlidesCount - 2, this.state.totalSlidesCount - 1, this.state.totalSlidesCount]) : (!this.state.centeredSlides && this.onLastSlide && this.state.hasRemainderSlide && (oe = oe >= .5 ? 1 : oe), Math.floor(oe) >= 1 ? this.state.translateX < this.state.startTranslateX ? this.nextSlides(Math.floor(oe)) : this.prevSlides(Math.floor(oe)) : l.isSwipe ? "right" === l.swipeDirection ? this.prevSlides(1) : "left" === l.swipeDirection ? this.nextSlides(1) : null : this.reset())
+                return !this.state.centeredSlides && !this.onLastSlide && Math.abs(this.state.translateX - this.dimensions.width) >= this.dimensions.totalWidth ? this.nextSlides(null, [this.state.totalSlidesCount - 2, this.state.totalSlidesCount - 1, this.state.totalSlidesCount]) : (!this.state.centeredSlides && this.onLastSlide && this.state.hasRemainderSlide && (oe = oe >= .5 ? 1 : oe), Math.floor(oe) >= 1 ? this.state.translateX < this.state.startTranslateX ? this.nextSlides(Math.floor(oe)) : this.prevSlides(Math.floor(oe)) : c.isSwipe ? "right" === c.swipeDirection ? this.prevSlides(1) : "left" === c.swipeDirection ? this.nextSlides(1) : null : this.reset())
             }
 
             drawFrame() {
                 this.resetAnimation && this.resetAnimation.kill(), os.p8.set(this.slidesListingDom, {x: this.state.translateX})
             }
 
-            onSlotChange(l) {
+            onSlotChange(c) {
                 this.storeSlideDoms(), this.updatePaneClasses(), this.setCarouselHeight()
             }
 
             storeSlideDoms() {
-                const l = this.shadowRoot.getElementById("slidesSlot");
-                this.slideDoms = l.assignedElements(), this.state.totalSlidesCount = this.slideDoms.length
+                const c = this.shadowRoot.getElementById("slidesSlot");
+                this.slideDoms = c.assignedElements(), this.state.totalSlidesCount = this.slideDoms.length
             }
 
             updatePaneClasses() {
-                this.slideDoms.forEach((l, E) => {
-                    l.classList.remove(cs_ALL, cs_CURRENT), l.classList.add(cs_ALL), -1 !== this.state.currentSlideIndexes.indexOf(E) && l.classList.add(cs_CURRENT)
+                this.slideDoms.forEach((c, E) => {
+                    c.classList.remove(ls_ALL, ls_CURRENT), c.classList.add(ls_ALL), -1 !== this.state.currentSlideIndexes.indexOf(E) && c.classList.add(ls_CURRENT)
                 })
             }
 
@@ -7036,15 +7019,15 @@
             }
 
             getTransToFirstSlide() {
-                const l = this.state.currentSlideIndexes[0];
-                return -1 * (l * this.dimensions.slideWidth + this.state.spaceBetween * l)
+                const c = this.state.currentSlideIndexes[0];
+                return -1 * (c * this.dimensions.slideWidth + this.state.spaceBetween * c)
             }
 
-            reset({duration: l = .25, specialResetForEndOfSlides: E = !1} = {}) {
+            reset({duration: c = .25, specialResetForEndOfSlides: E = !1} = {}) {
                 E && (this.state.specialRemainderSlideActive = E);
                 let j = this.state.specialRemainderSlideActive ? this.getTransToLastSlide() : this.getTransToFirstSlide();
                 this.state.centeredSlides && this.onLastSlide && (j = this.getTransToLastSlide()), j !== this.state.translateX && (this.state.translateX = j, this.resetAnimation = os.p8.to(this.slidesListingDom, {
-                    duration: l,
+                    duration: c,
                     x: this.state.translateX,
                     ease: "power2.inOut"
                 })), this.setCarouselHeight()
@@ -7052,8 +7035,8 @@
 
             setCarouselHeight() {
                 if (this.state.centeredSlides) return !1;
-                const l = this.getMaxCurrentSlideHeight();
-                this.slidesListingDom.style.height = `${l}px`
+                const c = this.getMaxCurrentSlideHeight();
+                this.slidesListingDom.style.height = `${c}px`
             }
 
             getMaxCurrentSlideHeight() {
@@ -7063,11 +7046,11 @@
                 }, 0)
             }
 
-            emitSlideChange(l) {
+            emitSlideChange(c) {
                 let E = this.state.currentSlideIndexes;
                 this.state.centeredSlides && (E = E.map(this.onFirstSlide ? (j, oe) => 0 === oe ? null : j - 1 : this.onLastSlide ? (j, oe) => oe === E.length - 1 ? null : j : (j, oe) => j - 1)), this.dispatchEvent(new CustomEvent("onSlideChange", {
                     detail: {
-                        direction: l,
+                        direction: c,
                         currentActiveSlides: E,
                         atEnd: this.onLastSlide,
                         atStart: this.onFirstSlide
@@ -7075,29 +7058,29 @@
                 }))
             }
 
-            incrementCurrentIndexes(l, E) {
-                this.state.currentSlideIndexes = l || this.state.currentSlideIndexes.map(j => null === j ? 0 : j + E)
+            incrementCurrentIndexes(c, E) {
+                this.state.currentSlideIndexes = c || this.state.currentSlideIndexes.map(j => null === j ? 0 : j + E)
             }
 
-            assignResponsiveVariables(l) {
+            assignResponsiveVariables(c) {
                 const E = this.responsiveBreakpoints.filter(j => {
-                    const oe = parseInt(k.breakpointSizeMapping[j.minWidth], 10);
-                    return l >= oe
+                    const oe = parseInt(S.breakpointSizeMapping[j.minWidth], 10);
+                    return c >= oe
                 }).sort((j, oe) => {
-                    const Me = parseInt(k.breakpointSizeMapping[j.minWidth], 10);
-                    return parseInt(k.breakpointSizeMapping[oe.minWidth], 10) - Me
+                    const Me = parseInt(S.breakpointSizeMapping[j.minWidth], 10);
+                    return parseInt(S.breakpointSizeMapping[oe.minWidth], 10) - Me
                 })[0];
                 if (E) {
                     const {slidesPerView: j, spaceBetween: oe, minWidth: Me} = E,
-                        Re = parseInt(k.breakpointSizeMapping[Me], 10);
-                    l >= Re && ("number" == typeof j && (this.state.slidesPerView = j), "number" == typeof oe && (this.state.spaceBetween = oe))
+                        Re = parseInt(S.breakpointSizeMapping[Me], 10);
+                    c >= Re && ("number" == typeof j && (this.state.slidesPerView = j), "number" == typeof oe && (this.state.spaceBetween = oe))
                 } else this.state.slidesPerView = this.slidesPerView, this.state.spaceBetween = this.spaceBetween;
                 1 === this.state.slidesPerView ? (this.state.spaceBetween = 0, this.state.centeredSlides = !1) : this.state.centeredSlides = this.centeredSlides, this.state.currentSlideIndexes.length !== Math.ceil(this.state.slidesPerView) && (this.state.currentSlideIndexes = Array(Math.ceil(this.state.slidesPerView)).fill(0).map((j, oe) => oe))
             }
 
-            nextSlides(l = 1, E) {
+            nextSlides(c = 1, E) {
                 if (this.onLastSlide) return E && this.incrementCurrentIndexes(E), this.reset({specialResetForEndOfSlides: !0});
-                this.incrementCurrentIndexes(E, l), this.state.translateX = this.state.startTranslateX + (this.dimensions.slideWidth + this.state.spaceBetween) * l * -1, os.p8.to(this.slidesListingDom, {
+                this.incrementCurrentIndexes(E, c), this.state.translateX = this.state.startTranslateX + (this.dimensions.slideWidth + this.state.spaceBetween) * c * -1, os.p8.to(this.slidesListingDom, {
                     duration: .25,
                     x: this.state.translateX,
                     ease: "power2.inOut",
@@ -7107,9 +7090,9 @@
                 })
             }
 
-            prevSlides(l = 1, E) {
+            prevSlides(c = 1, E) {
                 if (this.onFirstSlide || this.state.specialRemainderSlideActive) return this.state.specialRemainderSlideActive = !1, this.reset();
-                this.incrementCurrentIndexes(E, -1 * l), this.state.translateX = this.state.startTranslateX + (this.dimensions.slideWidth + this.state.spaceBetween) * l, os.p8.to(this.slidesListingDom, {
+                this.incrementCurrentIndexes(E, -1 * c), this.state.translateX = this.state.startTranslateX + (this.dimensions.slideWidth + this.state.spaceBetween) * c, os.p8.to(this.slidesListingDom, {
                     duration: .25,
                     x: this.state.translateX,
                     ease: "power2.inOut",
@@ -7119,23 +7102,23 @@
                 })
             }
 
-            gotoSlide(l) {
-                if (l < 0 || l > this.state.totalSlidesCount - 1 || this.state.centeredSlides) return console.error("Error! Application requested a bad slide index:", l), !1;
-                this.state.currentSlideIndexes = this.state.currentSlideIndexes.map(() => l).map((E, j) => E + j), this.reset(), this.emitSlideChange()
+            gotoSlide(c) {
+                if (c < 0 || c > this.state.totalSlidesCount - 1 || this.state.centeredSlides) return console.error("Error! Application requested a bad slide index:", c), !1;
+                this.state.currentSlideIndexes = this.state.currentSlideIndexes.map(() => c).map((E, j) => E + j), this.reset(), this.emitSlideChange()
             }
 
             handleResize() {
-                const {width: l, height: E, left: j, top: oe} = this.getBoundingClientRect();
-                this.assignResponsiveVariables(l);
-                const Me = Math.floor(l - this.state.spaceBetween * (this.state.slidesPerView - 1)),
+                const {width: c, height: E, left: j, top: oe} = this.getBoundingClientRect();
+                this.assignResponsiveVariables(c);
+                const Me = Math.floor(c - this.state.spaceBetween * (this.state.slidesPerView - 1)),
                     Re = Math.floor(Me / this.state.slidesPerView),
-                    Je = Math.floor(this.state.totalSlidesCount * Re + this.state.spaceBetween * (this.state.totalSlidesCount - 1)),
-                    St = this.state.centeredSlides ? Math.floor(.5 * (l - Re)) : 0;
+                    Qe = Math.floor(this.state.totalSlidesCount * Re + this.state.spaceBetween * (this.state.totalSlidesCount - 1)),
+                    St = this.state.centeredSlides ? Math.floor(.5 * (c - Re)) : 0;
                 this.dimensions = {
-                    width: l,
+                    width: c,
                     height: E,
                     slideWidth: Re,
-                    totalWidth: Je,
+                    totalWidth: Qe,
                     slideCenteringSideMargin: St,
                     left: j,
                     top: oe
@@ -7150,9 +7133,9 @@
     `
             }
         };
-        et = (0, i.gn)([(0, m.M)("gu-carousel")], et);
+        Xe = (0, i.gn)([(0, m.M)("gu-carousel")], Xe);
         var oo = o(89728), Ms = o(19444);
-        const _s = "20px";
+        const ms = "20px";
         let Os = class extends e.oi {
             constructor() {
                 super(...arguments), this.labelText = "", this.size = "normal", this.checked = !1, this.labelPlacement = "left", this.id = "", this.kind = "tag"
@@ -7179,7 +7162,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    min-height: ${(0, t.asCssProp)(_s)};
+    min-height: ${(0, t.asCssProp)(ms)};
   }
 
   :host([size='large']) .checkmark {
@@ -7220,8 +7203,8 @@
   }
 
   .checkmark {
-    width: ${(0, t.asCssProp)(_s)};
-    height: ${(0, t.asCssProp)(_s)};
+    width: ${(0, t.asCssProp)(ms)};
+    height: ${(0, t.asCssProp)(ms)};
     border: 2px solid ${(0, t.asCssProp)(n.colors.gunmetal[500])};
     background: ${(0, t.asCssProp)(n.colors.gunmetal[900])};
     color: ${(0, t.asCssProp)(n.colors.apocyan[300])};
@@ -7257,9 +7240,9 @@
             }
 
             render() {
-                const {onCheck: l, checked: E, labelText: j, kind: oe} = this, Me = (0, Ms.v4)();
+                const {onCheck: c, checked: E, labelText: j, kind: oe} = this, Me = (0, Ms.v4)();
                 return e.dy`
-      <input id=${Me} type="checkbox" class="input" @change=${l} .checked=${E} />
+      <input id=${Me} type="checkbox" class="input" @change=${c} .checked=${E} />
       <gu-icon class="checkmark" iconLigature=${this.checked ? "checkbox_tick" : ""}></gu-icon>
       ${void 0 !== j ? e.dy`
             <label for=${Me} class="label">
@@ -7274,20 +7257,20 @@
         let $t = class extends e.oi {
             constructor() {
                 super(...arguments), this.darkBackground = !1, this.targetTime = 1755790779, this.showFields = ro, this.size = "large", this.simpleTextDisplay = !1, this.simpleTextKind = "small", this.padZeroes = !1, this.getDelta = () => new Date(1e3 * this.targetTime).getTime() - (new Date).getTime(), this.getTimeRemaining = () => {
-                    const l = this.getDelta();
-                    let E = Math.floor(l / 864e5), j = Math.floor(l % 864e5 / 36e5), oe = Math.floor(l % 36e5 / 6e4),
-                        Me = Math.floor(l % 6e4 / 1e3);
+                    const c = this.getDelta();
+                    let E = Math.floor(c / 864e5), j = Math.floor(c % 864e5 / 36e5), oe = Math.floor(c % 36e5 / 6e4),
+                        Me = Math.floor(c % 6e4 / 1e3);
                     return E = E < 0 ? 0 : E, j = j < 0 ? 0 : j, oe = oe < 0 ? 0 : oe, Me = Me < 0 ? 0 : Me, {
                         seconds: this.addPadding(`${Me}`),
                         minutes: this.addPadding(`${oe}`),
                         hours: this.addPadding(`${j}`),
                         days: this.addPadding(`${E}`)
                     }
-                }, this.addPadding = l => l.length < 2 && this.padZeroes ? `0${l}` : l, this.getHeadingTextSize = l => "small" === l ? "small" : "large", this.getDividerHeadingTextSize = l => "small" === l ? "large" : "x-large", this.getSimpleTextKind = l => "small" === l ? "micro" : "small"
+                }, this.addPadding = c => c.length < 2 && this.padZeroes ? `0${c}` : c, this.getHeadingTextSize = c => "small" === c ? "small" : "large", this.getDividerHeadingTextSize = c => "small" === c ? "large" : "x-large", this.getSimpleTextKind = c => "small" === c ? "micro" : "small"
             }
 
-            update(l) {
-                l.has("targetTime") && this.initializeCounter(), l.has("simpleTextDisplay") && (this.simpleTextDisplay ? this.classList.add("simpleTextMode") : this.classList.remove("simpleTextMode")), super.update(l)
+            update(c) {
+                c.has("targetTime") && this.initializeCounter(), c.has("simpleTextDisplay") && (this.simpleTextDisplay ? this.classList.add("simpleTextMode") : this.classList.remove("simpleTextMode")), super.update(c)
             }
 
             disconnectedCallback() {
@@ -7300,8 +7283,8 @@
                 }, 1e3)
             }
 
-            maybePluralise(l, E) {
-                return 1 === l ? E.replace(/s$/, "") : E
+            maybePluralise(c, E) {
+                return 1 === c ? E.replace(/s$/, "") : E
             }
 
             render() {
@@ -7309,26 +7292,26 @@
                     component: this,
                     fillColor: this.fillColor
                 }), this.simpleTextDisplay ? e.dy`
-          ${this.showFields.map((l, E) => e.dy` <gu-simple-text
+          ${this.showFields.map((c, E) => e.dy` <gu-simple-text
               fillColor=${this.fillColor}
               .kind=${this.simpleTextKind}
               align="center"
             >
-              ${this.timeLeft[l]}
+              ${this.timeLeft[c]}
               ${E < this.showFields.length - 1 ? e.dy`<span class="simpleTextDivider"> : </span>` : null}
             </gu-simple-text>`)}
         ` : e.dy`
-          ${this.showFields.map((l, E) => e.dy`
+          ${this.showFields.map((c, E) => e.dy`
               <div
-                class=${(0, b.$)({digit: !0, [`digit--${this.size}`]: !0, darkBackground: this.darkBackground})}
+                class=${(0, C.$)({digit: !0, [`digit--${this.size}`]: !0, darkBackground: this.darkBackground})}
               >
-                <gu-heading-text size=${this.getHeadingTextSize(this.size)}> ${this.timeLeft[l]} </gu-heading-text>
+                <gu-heading-text size=${this.getHeadingTextSize(this.size)}> ${this.timeLeft[c]} </gu-heading-text>
                 <gu-simple-text
                   fillColor=${this.fillColor}
                   kind=${this.getSimpleTextKind(this.size)}
                   align="center"
                   class="label"
-                  .text=${this.maybePluralise(parseInt(this.timeLeft[l], 10), l)}
+                  .text=${this.maybePluralise(parseInt(this.timeLeft[c], 10), c)}
                 ></gu-simple-text>
               </div>
               ${E < this.showFields.length - 1 ? e.dy`<gu-heading-text
@@ -7404,7 +7387,7 @@
       line-height: ${(0, t.asCssProp)((0, r.gridUnits)(15))};
       margin-bottom: ${(0, t.asCssProp)((0, r.gridUnits)(2.5))};
     }
-  `, (0, i.gn)([(0, p.C)()], $t.prototype, "darkBackground", void 0), (0, i.gn)([(0, p.C)()], $t.prototype, "targetTime", void 0), (0, i.gn)([(0, p.C)()], $t.prototype, "showFields", void 0), (0, i.gn)([(0, p.C)()], $t.prototype, "fillColor", void 0), (0, i.gn)([(0, p.C)()], $t.prototype, "size", void 0), (0, i.gn)([(0, p.C)()], $t.prototype, "simpleTextDisplay", void 0), (0, i.gn)([(0, p.C)()], $t.prototype, "simpleTextKind", void 0), (0, i.gn)([(0, p.C)()], $t.prototype, "padZeroes", void 0), (0, i.gn)([(0, ft.S)()], $t.prototype, "timeLeft", void 0), $t = (0, i.gn)([(0, m.M)("gu-countdown-timer")], $t);
+  `, (0, i.gn)([(0, p.C)()], $t.prototype, "darkBackground", void 0), (0, i.gn)([(0, p.C)()], $t.prototype, "targetTime", void 0), (0, i.gn)([(0, p.C)()], $t.prototype, "showFields", void 0), (0, i.gn)([(0, p.C)()], $t.prototype, "fillColor", void 0), (0, i.gn)([(0, p.C)()], $t.prototype, "size", void 0), (0, i.gn)([(0, p.C)()], $t.prototype, "simpleTextDisplay", void 0), (0, i.gn)([(0, p.C)()], $t.prototype, "simpleTextKind", void 0), (0, i.gn)([(0, p.C)()], $t.prototype, "padZeroes", void 0), (0, i.gn)([(0, _t.S)()], $t.prototype, "timeLeft", void 0), $t = (0, i.gn)([(0, m.M)("gu-countdown-timer")], $t);
         const Ts = (0, t.asCssProp)(`${n.measurements.standardBorderSize} solid ${n.colors.gold[500]}`);
         let As = class extends e.oi {
             constructor() {
@@ -7444,12 +7427,12 @@
     height: auto;
     background-color: ${(0, t.asCssProp)(n.colors.gunmetal[900])};
     border-right: ${Ts};
-    padding: ${(0, t.asCssProp)(`${ke.dz.gridUnits(2)}`)} 0;
+    padding: ${(0, t.asCssProp)(`${Ze.dz.gridUnits(2)}`)} 0;
     z-index: 1;
   }
 
   .dropdownMenu__item {
-    padding: ${(0, t.asCssProp)(`${ke.dz.gridUnits(2)} ${ke.dz.gridUnits(4)};`)};
+    padding: ${(0, t.asCssProp)(`${Ze.dz.gridUnits(2)} ${Ze.dz.gridUnits(4)};`)};
     cursor: pointer;
     margin: 0;
     white-space: nowrap;
@@ -7475,22 +7458,22 @@
                 }
             }
 
-            toggleMenu(l) {
-                l.stopPropagation(), this.expanded = !this.expanded
+            toggleMenu(c) {
+                c.stopPropagation(), this.expanded = !this.expanded
             }
 
             get selectedItem() {
-                return this.items ? this.items.find(l => l.id === this.selectedId) : null
+                return this.items ? this.items.find(c => c.id === this.selectedId) : null
             }
 
-            selectDropDownItem(l) {
-                this.selectedId = l, this.expanded = !1, this.dispatchEvent(new CustomEvent("onSelect", {detail: {item: this.selectedItem}}))
+            selectDropDownItem(c) {
+                this.selectedId = c, this.expanded = !1, this.dispatchEvent(new CustomEvent("onSelect", {detail: {item: this.selectedItem}}))
             }
 
             render() {
                 return e.dy`
       <gu-simple-text
-        class=${(0, b.$)({dropdownToggle: !0, "dropdownToggle--expanded": this.expanded})}
+        class=${(0, C.$)({dropdownToggle: !0, "dropdownToggle--expanded": this.expanded})}
         @click=${this.toggleMenu}
         kind="tag"
       >
@@ -7500,15 +7483,15 @@
       </gu-simple-text>
 
       <div
-        class=${(0, b.$)({dropdownMenu: !0, "dropdownMenu--expanded": this.expanded})}
+        class=${(0, C.$)({dropdownMenu: !0, "dropdownMenu--expanded": this.expanded})}
       >
-        ${this.items.map(l => e.dy`
+        ${this.items.map(c => e.dy`
             <gu-simple-text
-              class=${(0, b.$)({dropdownMenu__item: !0, "dropdownMenu__item--selected": l.id === this.selectedId})}
-              @click=${() => this.selectDropDownItem(l.id)}
+              class=${(0, C.$)({dropdownMenu__item: !0, "dropdownMenu__item--selected": c.id === this.selectedId})}
+              @click=${() => this.selectDropDownItem(c.id)}
               kind="tag"
             >
-              ${l.name}
+              ${c.name}
             </gu-simple-text>
           `)}
       </div>
@@ -7533,12 +7516,12 @@
             }
 
             updateTime() {
-                const l = new Date, E = Math.floor((this.target.getTime() - l.getTime()) / 1e3), j = [];
+                const c = new Date, E = Math.floor((this.target.getTime() - c.getTime()) / 1e3), j = [];
                 E > 604800 && j.push(this.withUnit(Math.floor(E / 604800), "w")), E > 86400 && j.push(this.withUnit(Math.floor(E % 604800 / 86400), "d")), E > 3600 && j.push(this.withUnit(Math.floor(E % 86400 / 3600), "h")), E > 60 && j.push(this.withUnit(Math.floor(E % 3600 / 60), "min")), j.push(this.withUnit(E % 60, "s")), this.time = j.join(" "), this.requestUpdate("time")
             }
 
-            withUnit(l, E) {
-                return `${Math.max(l, 0)}${E}`
+            withUnit(c, E) {
+                return `${Math.max(c, 0)}${E}`
             }
 
             stop() {
@@ -7654,7 +7637,7 @@
             }
 
             renderHeader() {
-                var l, E, j, oe;
+                var c, E, j, oe;
                 return e.dy`
       <gu-vertical-space bottom="small" data-test-id="game-mode-options-header">
         <gu-heading-text
@@ -7663,7 +7646,7 @@
           data-test-id="game-mode-title"
           fillGradient="gradients.gold.simple"
         >
-          ${null !== (E = null === (l = this.gameMode) || void 0 === l ? void 0 : l.name) && void 0 !== E ? E : ""} ${this.renderTitleExtras()}
+          ${null !== (E = null === (c = this.gameMode) || void 0 === c ? void 0 : c.name) && void 0 !== E ? E : ""} ${this.renderTitleExtras()}
         </gu-heading-text>
         ${this.renderCountdownTimer()}
         <gu-paragraph-text
@@ -7679,8 +7662,8 @@
             }
 
             renderCountdownTimer() {
-                var l, E;
-                return null !== (E = null === (l = this.gameMode) || void 0 === l ? void 0 : l.expiry) && void 0 !== E && E ? Math.floor((this.gameMode.expiry.getTime() - (new Date).getTime()) / 1e3) > 7776e3 ? e.dy`` : e.dy`
+                var c, E;
+                return null !== (E = null === (c = this.gameMode) || void 0 === c ? void 0 : c.expiry) && void 0 !== E && E ? Math.floor((this.gameMode.expiry.getTime() - (new Date).getTime()) / 1e3) > 7776e3 ? e.dy`` : e.dy`
       <gu-paragraph-text
         class="game-mode-options__timer"
         kind="micro"
@@ -7693,15 +7676,15 @@
             }
 
             renderTitleExtras() {
-                var l, E;
-                return null !== (E = null === (l = this.gameMode) || void 0 === l ? void 0 : l.ranked) && void 0 !== E && E ? e.dy`<gu-icon class="game-mode-options__extra" iconLigature="flux_symbol"></gu-icon>` : e.dy``
+                var c, E;
+                return null !== (E = null === (c = this.gameMode) || void 0 === c ? void 0 : c.ranked) && void 0 !== E && E ? e.dy`<gu-icon class="game-mode-options__extra" iconLigature="flux_symbol"></gu-icon>` : e.dy``
             }
 
             render() {
-                var l;
-                return this.gameMode && (this.type = this.gameMode.key), this.style.setProperty("--image", `url(${null !== (l = this.images[this.type]) && void 0 !== l ? l : ""})`), e.dy`
+                var c;
+                return this.gameMode && (this.type = this.gameMode.key), this.style.setProperty("--image", `url(${null !== (c = this.images[this.type]) && void 0 !== c ? c : ""})`), e.dy`
       <div
-        class=${(0, b.$)({
+        class=${(0, C.$)({
                     "game-mode-options": !0,
                     [`game-mode-options--${this.type}`]: "" !== this.type,
                     "game-mode-options--hidden": "" === this.type
@@ -7717,7 +7700,7 @@
             }
         };
         (0, i.gn)([(0, p.C)()], Yt.prototype, "gameMode", void 0), (0, i.gn)([(0, p.C)()], Yt.prototype, "isRunning", void 0), (0, i.gn)([(0, p.C)()], Yt.prototype, "error", void 0), (0, i.gn)([(0, p.C)()], Yt.prototype, "complete", void 0), Yt = (0, i.gn)([(0, m.M)("gu-game-mode-panel")], Yt);
-        let us = class extends e.oi {
+        let ds = class extends e.oi {
             constructor() {
                 super(...arguments), this.gameModes = [], this.images = {
                     tutorial: "/assets/images/game-modes/selector/tutorial.png",
@@ -7827,41 +7810,41 @@
     `
             }
 
-            onClick(l) {
-                this.active = l, this.dispatchEvent(new CustomEvent("gameModeSelection", {
-                    detail: l,
+            onClick(c) {
+                this.active = c, this.dispatchEvent(new CustomEvent("gameModeSelection", {
+                    detail: c,
                     bubbles: !0,
                     composed: !0
                 }))
             }
 
-            renderTile(l) {
+            renderTile(c) {
                 var E;
                 return e.dy`
       <li
-        class=${(0, b.$)({"game-mode-tile": !0, "game-mode-tile--active": this.active && this.active.key === l.key})}
-        style="background-image: url(${null !== (E = this.images[l.key]) && void 0 !== E ? E : this.images.solo});"
+        class=${(0, C.$)({"game-mode-tile": !0, "game-mode-tile--active": this.active && this.active.key === c.key})}
+        style="background-image: url(${null !== (E = this.images[c.key]) && void 0 !== E ? E : this.images.solo});"
       >
         <a
           class="game-mode-tile__link"
           data-test-id="game-mode-tile-link"
           href="javascript:void(0)"
-          @click=${() => this.onClick(l)}
+          @click=${() => this.onClick(c)}
         >
           <gu-heading-text class="game-mode-tile__title" size="2x-small" fillColor="${n.colors.light[100]}">
-            ${l.name}
+            ${c.name}
           </gu-heading-text>
           <gu-paragraph-text class="game-mode-tile__description" kind="micro" fillColor="${n.colors.light[100]}">
-            ${l.description}
+            ${c.description}
           </gu-paragraph-text>
-          ${this.renderExtras(l)}
+          ${this.renderExtras(c)}
         </a>
       </li>
     `
             }
 
-            renderExtras(l) {
-                return l.ranked ? e.dy`
+            renderExtras(c) {
+                return c.ranked ? e.dy`
         <div class="game-mode-tile__extra">
           <gu-icon iconLigature="flux_symbol" fillColor="black"></gu-icon>
         </div>
@@ -7871,12 +7854,12 @@
             render() {
                 return e.dy`
       <ul class="game-modes">
-        ${this.gameModes.map(l => this.renderTile(l))}
+        ${this.gameModes.map(c => this.renderTile(c))}
       </ul>
     `
             }
         };
-        us = (0, i.gn)([(0, m.M)("gu-game-modes")], us);
+        ds = (0, i.gn)([(0, m.M)("gu-game-modes")], ds);
         let qt = class extends e.oi {
             constructor() {
                 super(...arguments), this.time = "00:00"
@@ -7892,7 +7875,7 @@
 
             start() {
                 this.timer || (this.timer = setInterval(() => {
-                    const l = new Date, E = Math.floor((l.getTime() - this.started.getTime()) / 1e3),
+                    const c = new Date, E = Math.floor((c.getTime() - this.started.getTime()) / 1e3),
                         j = ("00" + Math.floor(E / 60)).substr(-2, 2), oe = ("00" + E % 60).substr(-2, 2);
                     this.time = `${j}:${oe}`, this.requestUpdate("time")
                 }, 1e3))
@@ -8015,7 +7998,7 @@
                 return this.classList.toggle("visible", !!this.gameMode), e.dy`
       <div
         data-test-id="game-queue-panel-panel"
-        class=${(0, b.$)({
+        class=${(0, C.$)({
                     "game-queue-panel__content": !0,
                     [`game-queue-panel__content--type-${this.gameMode ? this.gameMode.key : ""}`]: !!this.gameMode
                 })}
@@ -8043,12 +8026,12 @@
             }
         };
         Zt = (0, i.gn)([(0, m.M)("gu-game-queue-panel")], Zt);
-        let ys = class extends e.oi {
+        let Cs = class extends e.oi {
             render() {
                 return e.dy`<slot></slot>`
             }
         };
-        ys.styles = e.iv`
+        Cs.styles = e.iv`
     ${(0, t.asCssProp)((0, t.setBoxSizing)())}
     :host {
       height: ${(0, t.asCssProp)(`${n.measurements.standardHeaderAlertBarHeight}px`)};
@@ -8056,8 +8039,8 @@
       display: flex;
       background: ${(0, t.asCssProp)(n.colors.light[100])};
     }
-  `, ys = (0, i.gn)([(0, m.M)("gu-header-alert-bar")], ys);
-        const es = (0, r.gridUnits)(5), Et = (0, r.gridUnits)(5), Is = (0, r.gridUnits)(8), Ds = (0, r.gridUnits)(10),
+  `, Cs = (0, i.gn)([(0, m.M)("gu-header-alert-bar")], Cs);
+        const es = (0, r.gridUnits)(5), kt = (0, r.gridUnits)(5), Is = (0, r.gridUnits)(8), Ds = (0, r.gridUnits)(10),
             ao = e.iv`
   ${(0, t.asCssProp)((0, t.setBoxSizing)())}
 
@@ -8125,11 +8108,11 @@
 `;
         var Tt = o(4390), lo = o(97223);
         const Ls = "TOGGLE_NAV", Us = "CLOSE_NAV", Rs = "TOGGLE_SUB_MENU", Bs = "UPDATE_CURRENT_ROUTE",
-            Gs = "CLOSE_ALL_SUB_MENUS", Fs = "TOGGLE_USER_MENU", Ns = "CLOSE_USER_MENU", xs = () => ({type: Us}),
+            Gs = "CLOSE_ALL_SUB_MENUS", Fs = "TOGGLE_USER_MENU", Ns = "CLOSE_USER_MENU", ys = () => ({type: Us}),
             zs = G => ({type: Bs, payload: G}),
             go = {currentRoute: "", navMenuOpen: !1, navSubMenusOpen: {}, userMenuOpen: !1},
-            pt = (0, lo.MT)((G = go, {type: l, payload: E}) => {
-                switch (l) {
+            dt = (0, lo.MT)((G = go, {type: c, payload: E}) => {
+                switch (c) {
                     case Ls:
                         return Object.assign(Object.assign({}, G), {navMenuOpen: !G.navMenuOpen, userMenuOpen: !1});
                     case Us:
@@ -8153,37 +8136,37 @@
                 router: {type: Object},
                 ngZone: {type: Object}
             };
-        customElements.define("gu-header-bar", (0, Se.x)({
-            renderer: function Go({navigationItems: G, router: l, ngZone: E}) {
+        customElements.define("gu-header-bar", (0, _e.x)({
+            renderer: function Go({navigationItems: G, router: c, ngZone: E}) {
                 if (!G) return null;
-                const j = (0, c.v9)({store: pt, selector: Ot => Ot.navMenuOpen}),
-                    oe = (0, c.I0)(pt), [Me, Re] = (0, te.eJ)(!1), Je = () => {
-                        oe(xs()), (0, Tt.pR)(l, E, G.home.path), this.dispatchEvent(new CustomEvent("onLogoClick"))
+                const j = (0, d.v9)({store: dt, selector: Et => Et.navMenuOpen}),
+                    oe = (0, d.I0)(dt), [Me, Re] = (0, te.eJ)(!1), Qe = () => {
+                        oe(ys()), (0, Tt.pR)(c, E, G.home.path), this.dispatchEvent(new CustomEvent("onLogoClick"))
                     };
                 return (0, te.d4)(() => {
                     Re((() => {
                         if (!G) return !1;
-                        let Ot = !1;
+                        let Et = !1;
                         e:for (const Lt of Object.keys(G)) {
-                            const bt = G[Lt];
-                            if (bt.children) {
-                                for (const $e of Object.keys(bt.children)) if (bt.children[$e].showNotificationBubble) {
-                                    Ot = !0;
+                            const vt = G[Lt];
+                            if (vt.children) {
+                                for (const Te of Object.keys(vt.children)) if (vt.children[Te].showNotificationBubble) {
+                                    Et = !0;
                                     break e
                                 }
-                            } else if (bt.showNotificationBubble) {
-                                Ot = !0;
+                            } else if (vt.showNotificationBubble) {
+                                Et = !0;
                                 break e
                             }
                         }
-                        return Ot
+                        return Et
                     })())
                 }, [G]), e.dy`
     <gu-icon
       class="menuToggleButton ${j ? "menuToggleButton--open" : ""}"
       iconLigature=${j ? "close_x" : "hamburger_menu"}
-      @click=${Ot => {
-                    Ot.cancelBubble = !0, oe({type: Ls})
+      @click=${Et => {
+                    Et.cancelBubble = !0, oe({type: Ls})
                 }}
       fillColor=${n.colors.gunmetal[100]}
     >
@@ -8192,7 +8175,7 @@
           <gu-notification-bubble class="notificationBubble ${j ? "notificationBubble--hide" : ""}">
           </gu-notification-bubble>
         ` : null}
-    <div class="logoArea" @click=${() => Je()}>
+    <div class="logoArea" @click=${() => Qe()}>
       <picture class="logoArea__guIcon">
         <source type="image/webp" srcset="/assets/images/internal-logos/logo--gods-unchained-icon.webp" />
         <source type="image/png" srcset="/assets/images/internal-logos/logo--gods-unchained-icon.png" />
@@ -8212,7 +8195,7 @@
       </gu-heading-text>
     </div>
 
-    <gu-menu .router=${l} .ngZone=${E} .navigationItems=${G}></gu-menu>
+    <gu-menu .router=${c} .ngZone=${E} .navigationItems=${G}></gu-menu>
 
     <div class="userArea">
       <slot name="userArea"></slot>
@@ -8452,45 +8435,45 @@
     }
   }
 `;
-        customElements.define("gu-menu", (0, Se.x)({
-            renderer: function No({navigationItems: G, router: l, ngZone: E}) {
-                const j = (0, c.v9)({store: pt, selector: $e => $e.navMenuOpen}),
-                    oe = (0, c.v9)({store: pt, selector: $e => $e.currentRoute}),
-                    Me = (0, c.v9)({store: pt, selector: $e => $e.navSubMenusOpen}), Re = (0, c.I0)(pt);
+        customElements.define("gu-menu", (0, _e.x)({
+            renderer: function No({navigationItems: G, router: c, ngZone: E}) {
+                const j = (0, d.v9)({store: dt, selector: Te => Te.navMenuOpen}),
+                    oe = (0, d.v9)({store: dt, selector: Te => Te.currentRoute}),
+                    Me = (0, d.v9)({store: dt, selector: Te => Te.navSubMenusOpen}), Re = (0, d.I0)(dt);
                 (0, te.d4)(() => {
-                    Re(zs(l.url));
-                    const $e = l.events.pipe((0, Ft.h)(De => De instanceof mo.m2)).subscribe(De => {
+                    Re(zs(c.url));
+                    const Te = c.events.pipe((0, Ft.h)(De => De instanceof mo.m2)).subscribe(De => {
                         Re(zs(De.url))
                     });
                     return () => {
-                        $e.unsubscribe()
+                        Te.unsubscribe()
                     }
                 }, []), (0, te.d4)(() => {
                     j ? this.classList.add("open") : this.classList.remove("open")
                 }, [j]);
-                const Je = $e => {
+                const Qe = Te => {
                     this.dispatchEvent(new CustomEvent("onMenuDropDownOpen", {
-                        detail: {navItem: $e},
+                        detail: {navItem: Te},
                         bubbles: !0,
                         composed: !0
-                    })), Re((G => ({type: Rs, payload: G}))($e.path))
-                }, Qt = $e => $e.children ? Je($e) : ($e => {
-                    $e(), Re(xs())
-                })($e.url ? () => {
-                    this.dispatchEvent((0, Tt.Cs)($e)), (0, Tt.rb)($e)
-                } : () => (0, Tt.pR)(l, E, $e.path)), Ot = $e => {
+                    })), Re((G => ({type: Rs, payload: G}))(Te.path))
+                }, Qt = Te => Te.children ? Qe(Te) : (Te => {
+                    Te(), Re(ys())
+                })(Te.url ? () => {
+                    this.dispatchEvent((0, Tt.Cs)(Te)), (0, Tt.rb)(Te)
+                } : () => (0, Tt.pR)(c, E, Te.path)), Et = Te => {
                     let De = !1;
-                    const {children: Ut} = $e;
-                    return ("/" === oe && "home" === $e.shortName || -1 !== oe.indexOf($e.path) && "home" !== $e.shortName || !!Ut && (0, Tt.M0)(Ut, oe)) && (De = !0), De
-                }, Lt = $e => !!Me[$e.path];
+                    const {children: Ut} = Te;
+                    return ("/" === oe && "home" === Te.shortName || -1 !== oe.indexOf(Te.path) && "home" !== Te.shortName || !!Ut && (0, Tt.M0)(Ut, oe)) && (De = !0), De
+                }, Lt = Te => !!Me[Te.path];
                 return e.dy`
-    ${Object.keys(G).map($e => {
-                    const De = G[$e], Ut = !De.children && !!De.url;
+    ${Object.keys(G).map(Te => {
+                    const De = G[Te], Ut = !De.children && !!De.url;
                     return e.dy`
         <div
-          class=${(0, b.$)({
+          class=${(0, C.$)({
                         menuItem: !0,
-                        "menuItem--selected": Ot(De),
+                        "menuItem--selected": Et(De),
                         "menuItem--opened": Lt(De),
                         "menuItem--hasSubMenu": !!De.children,
                         "menuItem--isExternal": Ut
@@ -8521,18 +8504,18 @@
           ${Ut ? e.dy` <gu-icon class="menuItem__externalIcon" iconLigature="leave_website"></gu-icon> ` : null}
           ${De.children ? e.dy`
                 <gu-icon
-                  class=${(0, b.$)({menuItem__caret: !0, "menuItem__caret--rotated": Lt(De)})}
+                  class=${(0, C.$)({menuItem__caret: !0, "menuItem__caret--rotated": Lt(De)})}
                   iconLigature="caret_down"
                 ></gu-icon>
                 <gu-sub-menu
-                  .router=${l}
+                  .router=${c}
                   .ngZone=${E}
                   .subMenuItems=${De.children}
                   .topLevelPath=${De.path}
                 ></gu-sub-menu>
               ` : null}
-          ${De.showNotificationBubble || ($e => !!$e.children && Object.keys($e.children).reduce((De, Ut) => {
-                        const Ue = $e.children[Ut];
+          ${De.showNotificationBubble || (Te => !!Te.children && Object.keys(Te.children).reduce((De, Ut) => {
+                        const Ue = Te.children[Ut];
                         return !(!Ue || !Ue.showNotificationBubble) || De
                     }, !1))(De) ? e.dy` <gu-notification-bubble></gu-notification-bubble> ` : null}
         </div>
@@ -8545,7 +8528,7 @@
                 styles: Fo
             }
         }));
-        const Ps = e.iv`
+        const xs = e.iv`
   ${(0, t.asCssProp)((0, t.setBoxSizing)())}
 
   :host {
@@ -8668,20 +8651,20 @@
     }
   }
 `;
-        customElements.define("gu-sub-menu", (0, Se.x)({
-            renderer: function zo({topLevelPath: G, subMenuItems: l, router: E, ngZone: j}) {
-                const oe = (0, c.v9)({store: pt, selector: Ue => Ue.navSubMenusOpen}),
-                    Me = (0, c.v9)({store: pt, selector: Ue => Ue.currentRoute}), Re = (0, c.I0)(pt), Je = Ue => {
-                        Ue.url ? (this.dispatchEvent((0, Tt.Cs)(Ue)), (0, Tt.rb)(Ue)) : function st() {
-                            Re(xs()), (0, Tt.pR)(E, j, Ue.path)
+        customElements.define("gu-sub-menu", (0, _e.x)({
+            renderer: function zo({topLevelPath: G, subMenuItems: c, router: E, ngZone: j}) {
+                const oe = (0, d.v9)({store: dt, selector: Ue => Ue.navSubMenusOpen}),
+                    Me = (0, d.v9)({store: dt, selector: Ue => Ue.currentRoute}), Re = (0, d.I0)(dt), Qe = Ue => {
+                        Ue.url ? (this.dispatchEvent((0, Tt.Cs)(Ue)), (0, Tt.rb)(Ue)) : function tt() {
+                            Re(ys()), (0, Tt.pR)(E, j, Ue.path)
                         }()
-                    }, Qt = Ue => Me.includes(Ue.path), Ot = ms()(() => {
-                        this.style.setProperty("--maxHeight", `${bt.offsetHeight}px`)
+                    }, Qt = Ue => Me.includes(Ue.path), Et = hs()(() => {
+                        this.style.setProperty("--maxHeight", `${vt.offsetHeight}px`)
                     }, 500), Lt = new s.do(Ue => {
-                        Ue.forEach(() => Ot())
+                        Ue.forEach(() => Et())
                     });
-                let bt;
-                (0, te.d4)(() => (bt = this.shadowRoot.querySelector(".subMenu"), Lt.observe(bt), () => Lt.unobserve(bt)), []);
+                let vt;
+                (0, te.d4)(() => (vt = this.shadowRoot.querySelector(".subMenu"), Lt.observe(vt), () => Lt.unobserve(vt)), []);
                 const De = () => {
                     document.removeEventListener("click", Ut)
                 }, Ut = Ue => {
@@ -8691,22 +8674,22 @@
                     document.addEventListener("click", Ut)
                 })) : (this.classList.remove("open"), De()), () => De()), [oe]), e.dy`
     <ul class="subMenu">
-      ${Object.keys(l).map(Ue => {
-                    const st = l[Ue], Yo = {subMenu__item: !0, "subMenu__item--selected": Qt(st)};
+      ${Object.keys(c).map(Ue => {
+                    const tt = c[Ue], Yo = {subMenu__item: !0, "subMenu__item--selected": Qt(tt)};
                     return e.dy`
           <li
-            class=${(0, b.$)(Yo)}
+            class=${(0, C.$)(Yo)}
             @click=${Ko => {
-                        Ko.cancelBubble = !0, Je(st)
+                        Ko.cancelBubble = !0, Qe(tt)
                     }}
           >
-            ${st.longName ? e.dy`
+            ${tt.longName ? e.dy`
                   <gu-simple-text
                     class="item__longName"
                     kind="large"
                     .responsiveKind=${[{breakpoint: "small", kind: "tag"}]}
                   >
-                    ${st.longName}
+                    ${tt.longName}
                   </gu-simple-text>
                 ` : null}
 
@@ -8715,11 +8698,11 @@
               kind="large"
               .responsiveKind=${[{breakpoint: "small", kind: "tag"}]}
             >
-              ${st.shortName}
+              ${tt.shortName}
             </gu-simple-text>
 
-            ${st.url ? e.dy` <gu-icon class="item__externalIcon" iconLigature="leave_website"></gu-icon> ` : null}
-            ${st.showNotificationBubble ? e.dy` <gu-notification-bubble></gu-notification-bubble> ` : null}
+            ${tt.url ? e.dy` <gu-icon class="item__externalIcon" iconLigature="leave_website"></gu-icon> ` : null}
+            ${tt.showNotificationBubble ? e.dy` <gu-notification-bubble></gu-notification-bubble> ` : null}
           </li>
         `
                 })}
@@ -8732,7 +8715,7 @@
                     router: {type: Object},
                     ngZone: {type: Object},
                     topLevelPath: {type: String}
-                }, styles: Ps
+                }, styles: xs
             }
         }));
         const vo = e.iv`
@@ -8740,7 +8723,7 @@
 
   :host {
     display: block;
-    height: ${Qe.standardHeaderHeight}px;
+    height: ${Ve.standardHeaderHeight}px;
   }
 
   gu-user-details {
@@ -8911,10 +8894,10 @@
     }
   }
 `;
-        customElements.define("gu-header-user-area", (0, Se.x)({
+        customElements.define("gu-header-user-area", (0, _e.x)({
             renderer: function bo({
                                       menuItems: G,
-                                      router: l,
+                                      router: c,
                                       ngZone: E,
                                       userProperties: j,
                                       downloadLauncherUrl: oe,
@@ -8922,20 +8905,20 @@
                                       userFluxTotal: Re
                                   }) {
                 if (!G) return null;
-                const Je = (0, c.v9)({store: pt, selector: De => De.userMenuOpen}),
-                    St = (0, c.I0)(pt), [Qt, Ot] = (0, te.eJ)(!1), $e = () => {
+                const Qe = (0, d.v9)({store: dt, selector: De => De.userMenuOpen}),
+                    St = (0, d.I0)(dt), [Qt, Et] = (0, te.eJ)(!1), Te = () => {
                         this.dispatchEvent(new CustomEvent("onUserDetailsClick"))
                     };
                 return e.dy`
     ${j ? e.dy`
           <div
-            class=${(0, b.$)({userDetailsArea: !0, "userDetailsArea--open": Je})}
+            class=${(0, C.$)({userDetailsArea: !0, "userDetailsArea--open": Qe})}
           >
             <gu-user-details
               .userProperties=${j}
               .userStarsTotal=${Me}
               .userFluxTotal=${Re}
-              @click=${$e}
+              @click=${Te}
             ></gu-user-details>
             <div class="userDetailsArea__imgContainer" @click=${() => St({type: Fs})}>
               ${Qt ? e.dy`<gu-notification-bubble highPriority="true"></gu-notification-bubble>` : null}
@@ -8954,10 +8937,10 @@
             .userProperties=${j}
             .userStarsTotal=${Me}
             .userFluxTotal=${Re}
-            .router=${l}
+            .router=${c}
             .ngZone=${E}
             .menuItems=${G}
-            @onUserDetailsClick=${$e}
+            @onUserDetailsClick=${Te}
           ></gu-user-menu>
         ` : e.dy`
           <div class="signedOutArea">
@@ -8994,7 +8977,7 @@
                 }, styles: vo
             }
         }));
-        const Ye = e.iv`
+        const Ke = e.iv`
   ${(0, t.asCssProp)((0, t.setBoxSizing)())}
 
   :host {
@@ -9070,23 +9053,23 @@
   }
 `, Co = new CustomEvent("onLogout", {bubbles: !0, composed: !0}),
             yo = new CustomEvent("onConnectWallet", {bubbles: !0, composed: !0});
-        customElements.define("gu-user-menu", (0, Se.x)({
+        customElements.define("gu-user-menu", (0, _e.x)({
             renderer: function xo({
                                       userProperties: G,
-                                      router: l,
+                                      router: c,
                                       ngZone: E,
                                       menuItems: j,
                                       userStarsTotal: oe,
                                       userFluxTotal: Me
                                   }) {
-                const Re = (0, c.v9)({store: pt, selector: Ue => Ue.userMenuOpen}), Je = (0, c.I0)(pt),
+                const Re = (0, d.v9)({store: dt, selector: Ue => Ue.userMenuOpen}), Qe = (0, d.I0)(dt),
                     St = () => this.dispatchEvent(yo), Qt = () => this.dispatchEvent(Co), Lt = () => {
-                        document.removeEventListener("click", bt)
-                    }, bt = Ue => {
-                        Je({type: Ns})
+                        document.removeEventListener("click", vt)
+                    }, vt = Ue => {
+                        Qe({type: Ns})
                     };
                 return (0, te.d4)(() => (Re ? (this.classList.add("open"), setTimeout(() => {
-                    document.addEventListener("click", bt)
+                    document.addEventListener("click", vt)
                 })) : (this.classList.remove("open"), Lt()), () => Lt()), [Re]), e.dy`
     <gu-user-details
       verticalLayout
@@ -9098,24 +9081,24 @@
                 }}
     ></gu-user-details>
     ${Object.keys(j).map(Ue => {
-                    const st = j[Ue];
-                    return st.visible ? e.dy`
+                    const tt = j[Ue];
+                    return tt.visible ? e.dy`
             <div class="menuItem" @click=${() => (Ue => {
-                        "Log Out" === Ue.shortName ? Qt() : "Connect Wallet" === Ue.shortName ? St() : Ue.url ? (0, Tt.rb)(Ue) : Ue.path && (0, Tt.pR)(l, E, Ue.path)
-                    })(st)}>
-              <gu-simple-text class="menuItem__shortName" kind="small"> ${st.shortName} </gu-simple-text>
+                        "Log Out" === Ue.shortName ? Qt() : "Connect Wallet" === Ue.shortName ? St() : Ue.url ? (0, Tt.rb)(Ue) : Ue.path && (0, Tt.pR)(c, E, Ue.path)
+                    })(tt)}>
+              <gu-simple-text class="menuItem__shortName" kind="small"> ${tt.shortName} </gu-simple-text>
 
-              ${st.showNotificationBubble ? e.dy` <gu-notification-bubble highPriority="true"></gu-notification-bubble> ` : null}
-              ${st.children ? e.dy`
+              ${tt.showNotificationBubble ? e.dy` <gu-notification-bubble highPriority="true"></gu-notification-bubble> ` : null}
+              ${tt.children ? e.dy`
                     <div class="menuItem__subMenu">
-                      ${Object.keys(st.children).map(Yo => {
-                        const Ko = st.children[Yo];
+                      ${Object.keys(tt.children).map(Yo => {
+                        const Ko = tt.children[Yo];
                         return e.dy`
                           <gu-simple-text
                             kind="tag"
                             class="menuItem__subMenu__item"
-                            @click=${_n => ((Ue, st) => {
-                            Ue.stopPropagation(), st.url ? (0, Tt.rb)(st) : st.path && (0, Tt.pR)(l, E, st.path)
+                            @click=${_n => ((Ue, tt) => {
+                            Ue.stopPropagation(), tt.url ? (0, Tt.rb)(tt) : tt.path && (0, Tt.pR)(c, E, tt.path)
                         })(_n, Ko)}
                             fillColor=${n.colors.gunmetal[100]}
                           >
@@ -9138,7 +9121,7 @@
                     menuItems: {type: Object},
                     router: {type: Object},
                     ngZone: {type: Object}
-                }, styles: Ye
+                }, styles: Ke
             }
         }));
         const Zs = e.iv`
@@ -9273,16 +9256,16 @@
   :host(.verticalLayout) .row__userName {
     margin-top: ${(0, t.asCssProp)((0, r.gridUnits)(.5))};
   }
-`, So = {
+`, Po = {
             userProperties: {type: Object},
             userStarsTotal: {type: String},
             userFluxTotal: {type: String},
             verticalLayout: {type: Boolean}
         };
-        customElements.define("gu-user-details", (0, Se.x)({
-            renderer: function Po({
+        customElements.define("gu-user-details", (0, _e.x)({
+            renderer: function So({
                                       userProperties: G,
-                                      userStarsTotal: l = "0",
+                                      userStarsTotal: c = "0",
                                       userFluxTotal: E = "0",
                                       verticalLayout: j
                                   }) {
@@ -9302,17 +9285,17 @@
         class="side__part side__part--stars"
       >
         <gu-icon iconLigature="collectable_stars" class="side__part__icon"></gu-icon>
-        ${l || "0"} STARS
+        ${c || "0"} STARS
       </gu-simple-text>
       <div class="side__hoverGradient"></div>
     </div>
   `
-            }, props: {properties: So, styles: Zs}
+            }, props: {properties: Po, styles: Zs}
         }));
-        const ps = [824, 825, 826, 827, 828, 829];
+        const us = [824, 825, 826, 827, 828, 829];
         let ns = class extends e.oi {
             constructor() {
-                super(...arguments), this.videoId = 412954513, this.cropVideoFromTop = !0, this.randomChampionProto = ps[parseInt("" + (Math.random() * ps.length - 1), 10)]
+                super(...arguments), this.videoId = 412954513, this.cropVideoFromTop = !0, this.randomChampionProto = us[parseInt("" + (Math.random() * us.length - 1), 10)]
             }
 
             connectedCallback() {
@@ -9417,7 +9400,7 @@
       left: 0;
     }
 
-    @media screen and (min-width: ${(0, t.asCssProp)(k.breakpointSizeMapping.small)}) {
+    @media screen and (min-width: ${(0, t.asCssProp)(S.breakpointSizeMapping.small)}) {
       .videoBackground {
         display: block;
       }
@@ -9430,7 +9413,7 @@
         height: 50%;
       }
     }
-  `, (0, i.gn)([(0, p.C)()], ns.prototype, "videoId", void 0), (0, i.gn)([(0, p.C)()], ns.prototype, "cropVideoFromTop", void 0), (0, i.gn)([(0, ft.S)()], ns.prototype, "randomChampionProto", void 0), ns = (0, i.gn)([(0, m.M)("gu-hero-video-banner")], ns);
+  `, (0, i.gn)([(0, p.C)()], ns.prototype, "videoId", void 0), (0, i.gn)([(0, p.C)()], ns.prototype, "cropVideoFromTop", void 0), (0, i.gn)([(0, _t.S)()], ns.prototype, "randomChampionProto", void 0), ns = (0, i.gn)([(0, m.M)("gu-hero-video-banner")], ns);
         var js = o(66974);
         const ko = ["xx-small", "x-small", "small", "medium", "large"],
             Ks = {"xx-small": "10px", "x-small": "12px", small: "14px", medium: "16px", large: "20px"},
@@ -9449,7 +9432,7 @@
   :host {
     display: inline;
     font-family: 'Open Sans', sans-serif;
-    ${(0, t.asCssProp)(ke.uA.enhancedTextRenderingStyles)};
+    ${(0, t.asCssProp)(Ze.uA.enhancedTextRenderingStyles)};
     font-size: ${(0, t.asCssProp)(Ks.medium)};
   }
 
@@ -9482,16 +9465,16 @@
         `).join("\n"))}
 
   ${(0, t.asCssProp)(js.textAlignRules)}
-  ${(0, t.asCssProp)(Ct.fillColoringRules)}
+  ${(0, t.asCssProp)(Mt.fillColoringRules)}
 `
             }
 
-            static hasColoringPropertyChanged(l) {
-                return l.has("fillColor") || l.has("fillGradient") || l.has("fillGradientTarget")
+            static hasColoringPropertyChanged(c) {
+                return c.has("fillColor") || c.has("fillGradient") || c.has("fillGradientTarget")
             }
 
-            updated(l) {
-                if (Ys.hasColoringPropertyChanged(l)) {
+            updated(c) {
+                if (Ys.hasColoringPropertyChanged(c)) {
                     const {fillColor: E, fillGradient: j, fillGradientTarget: oe} = this;
                     (0, g.updateColoringVariables)({
                         component: this,
@@ -9503,12 +9486,12 @@
             }
 
             generateMediaQueries() {
-                const {breakpointSizeMapping: l} = n.breakpoints, {asCssProp: E} = ke.ZB;
+                const {breakpointSizeMapping: c} = n.breakpoints, {asCssProp: E} = Ze.ZB;
                 return this.responsiveSizes.length ? e.dy`
           <style>
             /* DEFINE RESPONSIVE SIZING */
             ${this.responsiveSizes.map(({breakpoint: j, size: oe = "small"}) => e.iv`
-                @media screen and (min-width: ${E(l[j])}) {
+                @media screen and (min-width: ${E(c[j])}) {
                   :host(.overWrite[size='${E(this.size)}']),
                   :host(.overWrite[size='${E(this.size)}']) ::slotted(*) {
                     font-size: ${E(Ks[oe])} !important;
@@ -9545,7 +9528,7 @@
             reflect: !0
         })], Nt.prototype, "plain", void 0), (0, i.gn)([(0, p.C)({type: Array})], Nt.prototype, "responsiveSizes", void 0), Nt = Ys = (0, i.gn)([(0, m.M)("gu-body-text")], Nt);
 
-        class Mt extends e.oi {
+        class wt extends e.oi {
             constructor() {
                 super(...arguments), this.disabled = !1, this.valid = void 0, this.dirty = !1, this.status = "initial", this.keyHandlers = {Escape: () => this.reset()}
             }
@@ -9558,12 +9541,12 @@
     `
             }
 
-            firstUpdated(l) {
+            firstUpdated(c) {
                 this.initialValue = this.value, this.dispatchEvent(new CustomEvent("registerFormControl", {
                     detail: {control: this},
                     bubbles: !0,
                     composed: !0
-                })), super.firstUpdated(l)
+                })), super.firstUpdated(c)
             }
 
             connectedCallback() {
@@ -9578,14 +9561,14 @@
                 this.dirty = !0
             }
 
-            update(l) {
-                this.status = this.disabled ? "disabled" : this.dirty ? this.valid ? "valid" : "invalid" : "initial", super.update(l)
+            update(c) {
+                this.status = this.disabled ? "disabled" : this.dirty ? this.valid ? "valid" : "invalid" : "initial", super.update(c)
             }
 
-            handleKey(l) {
+            handleKey(c) {
                 if (this.disabled) return;
-                const E = this.keyHandlers[l.code];
-                E && E(l)
+                const E = this.keyHandlers[c.code];
+                E && E(c)
             }
 
             reset() {
@@ -9593,11 +9576,11 @@
             }
         }
 
-        (0, i.gn)([(0, p.C)()], Mt.prototype, "name", void 0), (0, i.gn)([(0, p.C)()], Mt.prototype, "value", void 0), (0, i.gn)([(0, p.C)({
+        (0, i.gn)([(0, p.C)()], wt.prototype, "name", void 0), (0, i.gn)([(0, p.C)()], wt.prototype, "value", void 0), (0, i.gn)([(0, p.C)({
             reflect: !0,
             type: Boolean
-        })], Mt.prototype, "disabled", void 0), (0, i.gn)([(0, p.C)()], Mt.prototype, "valid", void 0), (0, i.gn)([(0, ft.S)()], Mt.prototype, "dirty", void 0), (0, i.gn)([(0, ft.S)()], Mt.prototype, "status", void 0);
-        let gs = class extends Mt {
+        })], wt.prototype, "disabled", void 0), (0, i.gn)([(0, p.C)()], wt.prototype, "valid", void 0), (0, i.gn)([(0, _t.S)()], wt.prototype, "dirty", void 0), (0, i.gn)([(0, _t.S)()], wt.prototype, "status", void 0);
+        let ps = class extends wt {
             constructor() {
                 super(...arguments), this.size = "normal"
             }
@@ -9671,27 +9654,27 @@
     `
             }
 
-            getInputHandler(l) {
+            getInputHandler(c) {
                 return E => {
-                    E.stopPropagation(), this.updateValue(l, E.target.checked), this.dispatchEvent(new CustomEvent("input", {detail: {value: this.value}}))
+                    E.stopPropagation(), this.updateValue(c, E.target.checked), this.dispatchEvent(new CustomEvent("input", {detail: {value: this.value}}))
                 }
             }
 
-            onChange(l) {
-                l.stopPropagation(), this.dispatchEvent(new CustomEvent("change", {detail: {value: this.value}}))
+            onChange(c) {
+                c.stopPropagation(), this.dispatchEvent(new CustomEvent("change", {detail: {value: this.value}}))
             }
 
-            updateValue(l, E) {
+            updateValue(c, E) {
                 this.value = E
             }
 
             activate() {
-                const l = this.renderRoot.querySelector("input");
-                l && l.click()
+                const c = this.renderRoot.querySelector("input");
+                c && c.click()
             }
 
-            unfocus(l) {
-                l.x > 0 && l.y > 0 && l.target.blur()
+            unfocus(c) {
+                c.x > 0 && c.y > 0 && c.target.blur()
             }
 
             render() {
@@ -9710,8 +9693,8 @@
     `
             }
         };
-        (0, i.gn)([(0, p.C)()], gs.prototype, "size", void 0), gs = (0, i.gn)([(0, m.M)("gu-checkbox")], gs);
-        let Ss = class extends gs {
+        (0, i.gn)([(0, p.C)()], ps.prototype, "size", void 0), ps = (0, i.gn)([(0, m.M)("gu-checkbox")], ps);
+        let Ss = class extends ps {
             constructor() {
                 super(...arguments), this.options = [], this.value = []
             }
@@ -9733,37 +9716,37 @@
     `
             }
 
-            updateValue(l, E) {
-                E ? this.value.splice(this.value.push(l)) : this.value.splice(this.value.indexOf(l), 1)
+            updateValue(c, E) {
+                E ? this.value.splice(this.value.push(c)) : this.value.splice(this.value.indexOf(c), 1)
             }
 
             activate() {
-                const l = this.renderRoot.querySelector("input");
-                l && l.focus()
+                const c = this.renderRoot.querySelector("input");
+                c && c.focus()
             }
 
             render() {
                 return e.dy`
-      ${this.options.map(l => e.dy`
+      ${this.options.map(c => e.dy`
           <label class="checkbox__label">
             <input
               type="checkbox"
               class="checkbox__input"
-              @input=${this.getInputHandler(l.value)}
+              @input=${this.getInputHandler(c.value)}
               @change=${this.onChange}
               @click=${this.unfocus}
-              .checked=${!!this.value.find(E => E == l.value)}
+              .checked=${!!this.value.find(E => E == c.value)}
               .disabled=${this.disabled}
               data-test-id="checkbox-native-element"
             />
-            <gu-body-text size="medium" plain="true">${l.label}</gu-body-text>
+            <gu-body-text size="medium" plain="true">${c.label}</gu-body-text>
           </label>
         `)}
     `
             }
         };
         (0, i.gn)([(0, p.C)()], Ss.prototype, "options", void 0), Ss = (0, i.gn)([(0, m.M)("gu-checkbox-group")], Ss);
-        var ks = o(30252);
+        var Ps = o(30252);
         let Js = class extends e.oi {
             constructor() {
                 super(...arguments), this.controls = []
@@ -9785,29 +9768,29 @@
                 super.disconnectedCallback(), this.removeEventListener("registerFormControl", this.registerControl), this.removeEventListener("implicitSubmit", this.handleSubmissionRequest)
             }
 
-            registerControl(l) {
-                l.stopPropagation(), this.controls.push(l.detail.control)
+            registerControl(c) {
+                c.stopPropagation(), this.controls.push(c.detail.control)
             }
 
-            handleSubmissionRequest(l) {
-                l.stopPropagation();
+            handleSubmissionRequest(c) {
+                c.stopPropagation();
                 const E = this.findInvalidControl();
                 E ? E.activate() : this.submit()
             }
 
             findInvalidControl() {
-                return this.controls.find(l => !l.valid)
+                return this.controls.find(c => !c.valid)
             }
 
             submit() {
-                this.dispatchEvent(new CustomEvent("submit", {detail: {values: this.controls.reduce((l, E) => (l[E.name] = E.value, l), {})}}))
+                this.dispatchEvent(new CustomEvent("submit", {detail: {values: this.controls.reduce((c, E) => (c[E.name] = E.value, c), {})}}))
             }
 
             render() {
                 return e.dy`<slot></slot>`
             }
         };
-        (0, i.gn)([(0, ks.v)("", !0)], Js.prototype, "slotted", void 0), Js = (0, i.gn)([(0, m.M)("gu-form")], Js);
+        (0, i.gn)([(0, Ps.v)("", !0)], Js.prototype, "slotted", void 0), Js = (0, i.gn)([(0, m.M)("gu-form")], Js);
         let rs = class extends e.oi {
             constructor() {
                 super(...arguments), this.for = "", this.id = `gu-label-${(0, Ms.v4)()}`
@@ -9832,7 +9815,7 @@
                 super.disconnectedCallback(), this.removeEventListener("click", this.onClick)
             }
 
-            associate(l) {
+            associate(c) {
                 Promise.resolve().then(() => {
                     const E = this.findTarget();
                     !E || E === this.target || (this.target && this.target.removeAttribute("aria-labelledby"), E.setAttribute("aria-labelledby", this.id), this.target = E)
@@ -9840,19 +9823,19 @@
             }
 
             findTarget() {
-                return this.for ? this.getRootNode().getElementById(this.for) : this.slotted ? this.slotted.find(l => l instanceof Mt) : void 0
+                return this.for ? this.getRootNode().getElementById(this.for) : this.slotted ? this.slotted.find(c => c instanceof wt) : void 0
             }
 
-            onClick(l) {
+            onClick(c) {
                 const E = this.target;
-                E && l.target !== E && E.activate()
+                E && c.target !== E && E.activate()
             }
 
             render() {
                 return e.dy`<slot @slotchange=${this.associate} class="label__slot"></slot>`
             }
         };
-        (0, i.gn)([(0, p.C)()], rs.prototype, "for", void 0), (0, i.gn)([(0, p.C)({reflect: !0})], rs.prototype, "id", void 0), (0, i.gn)([(0, ks.v)("", !0)], rs.prototype, "slotted", void 0), rs = (0, i.gn)([(0, m.M)("gu-label")], rs);
+        (0, i.gn)([(0, p.C)()], rs.prototype, "for", void 0), (0, i.gn)([(0, p.C)({reflect: !0})], rs.prototype, "id", void 0), (0, i.gn)([(0, Ps.v)("", !0)], rs.prototype, "slotted", void 0), rs = (0, i.gn)([(0, m.M)("gu-label")], rs);
         const Wo = {
             email: "email",
             phone: "tel",
@@ -9862,7 +9845,7 @@
             url: "url",
             number: "number"
         }, x = {invalid: "alert_triangle", valid: "checkbox_tick", initial: ""};
-        let Z = class extends Mt {
+        let Z = class extends wt {
             constructor() {
                 super(...arguments), this.size = "normal", this.type = "text", this.placeholder = "", this.keyHandlers = {
                     Escape: () => this.reset(),
@@ -9968,8 +9951,8 @@
                 this.dispatchEvent(new CustomEvent("change", {detail: {value: this.value}}))
             }
 
-            onInput(l) {
-                this.value = l.target.value, l.stopPropagation(), this.dispatchEvent(new CustomEvent("input", {detail: {value: this.value}}))
+            onInput(c) {
+                this.value = c.target.value, c.stopPropagation(), this.dispatchEvent(new CustomEvent("input", {detail: {value: this.value}}))
             }
 
             activate() {
@@ -9987,11 +9970,11 @@
             }
 
             render() {
-                var l;
+                var c;
                 return e.dy`
       <input
         type=${this.getInputType()}
-        .value=${null !== (l = this.value) && void 0 !== l ? l : ""}
+        .value=${null !== (c = this.value) && void 0 !== c ? c : ""}
         class="input__input input__input--status-${this.status}"
         @input="${this.onInput}"
         @change=${this.onChange}
@@ -10003,11 +9986,11 @@
     `
             }
         };
-        (0, i.gn)([(0, p.C)()], Z.prototype, "size", void 0), (0, i.gn)([(0, p.C)()], Z.prototype, "type", void 0), (0, i.gn)([(0, p.C)()], Z.prototype, "placeholder", void 0), (0, i.gn)([(0, S.I)(".input__input")], Z.prototype, "input", void 0), Z = (0, i.gn)([(0, m.M)("gu-input")], Z);
+        (0, i.gn)([(0, p.C)()], Z.prototype, "size", void 0), (0, i.gn)([(0, p.C)()], Z.prototype, "type", void 0), (0, i.gn)([(0, p.C)()], Z.prototype, "placeholder", void 0), (0, i.gn)([(0, P.I)(".input__input")], Z.prototype, "input", void 0), Z = (0, i.gn)([(0, m.M)("gu-input")], Z);
         var u = o(61462);
-        const D = {hidden: "password", visible: "text"},
+        const T = {hidden: "password", visible: "text"},
             K = {visible: "action_showPassword", hidden: "action_hidePassword"};
-        let _e = class extends Z {
+        let fe = class extends Z {
             constructor() {
                 super(...arguments), this.mode = "hidden"
             }
@@ -10041,12 +10024,12 @@
     `
             }
 
-            toggleMode(l) {
-                l.stopPropagation(), l.preventDefault(), !this.disabled && (this.mode = "hidden" === this.mode ? "visible" : "hidden", l.detail > 0 && this.input.focus())
+            toggleMode(c) {
+                c.stopPropagation(), c.preventDefault(), !this.disabled && (this.mode = "hidden" === this.mode ? "visible" : "hidden", c.detail > 0 && this.input.focus())
             }
 
             getInputType() {
-                return D[this.mode]
+                return T[this.mode]
             }
 
             renderIcon() {
@@ -10055,7 +10038,7 @@
         class="input__toggle"
         href="javascript:void(0)"
         @click=${this.toggleMode}
-        @keyup=${l => l.stopPropagation()}
+        @keyup=${c => c.stopPropagation()}
         data-test-id="password-input-visibility-toggle"
       >
         <gu-icon
@@ -10066,8 +10049,8 @@
     `
             }
         };
-        (0, i.gn)([(0, ft.S)()], _e.prototype, "mode", void 0), _e = (0, i.gn)([(0, m.M)("gu-password-input")], _e);
-        let tt = class extends Mt {
+        (0, i.gn)([(0, _t.S)()], fe.prototype, "mode", void 0), fe = (0, i.gn)([(0, m.M)("gu-password-input")], fe);
+        let et = class extends wt {
             constructor() {
                 super(...arguments), this.options = [], this.size = "normal"
             }
@@ -10138,55 +10121,55 @@
     `
             }
 
-            getInputHandler(l) {
+            getInputHandler(c) {
                 return E => {
-                    E.stopPropagation(), this.value = l, this.dispatchEvent(new CustomEvent("input", {detail: {value: this.value}}))
+                    E.stopPropagation(), this.value = c, this.dispatchEvent(new CustomEvent("input", {detail: {value: this.value}}))
                 }
             }
 
-            onChange(l) {
-                l.stopPropagation(), this.dispatchEvent(new CustomEvent("change", {detail: {value: this.value}}))
+            onChange(c) {
+                c.stopPropagation(), this.dispatchEvent(new CustomEvent("change", {detail: {value: this.value}}))
             }
 
             activate() {
-                let l = this.renderRoot.querySelector("input:checked");
-                l || (l = this.renderRoot.querySelector("input")), l.focus()
+                let c = this.renderRoot.querySelector("input:checked");
+                c || (c = this.renderRoot.querySelector("input")), c.focus()
             }
 
-            unfocus(l) {
-                l.x > 0 && l.y > 0 && l.target.blur()
+            unfocus(c) {
+                c.x > 0 && c.y > 0 && c.target.blur()
             }
 
             render() {
                 return e.dy`
-      ${this.options.map(l => e.dy`
+      ${this.options.map(c => e.dy`
           <label class="radio-button__label">
             <input
               type="radio"
               class="radio-button__input"
-              @input=${this.getInputHandler(l.value)}
+              @input=${this.getInputHandler(c.value)}
               @change=${this.onChange}
               @click=${this.unfocus}
-              .checked=${this.value == l.value}
+              .checked=${this.value == c.value}
               .disabled=${this.disabled}
               data-test-id="radio-button-native-element"
             />
-            <gu-body-text size="medium" plain="true">${l.label}</gu-body-text>
+            <gu-body-text size="medium" plain="true">${c.label}</gu-body-text>
           </label>
         `)}
     `
             }
         };
-        (0, i.gn)([(0, p.C)()], tt.prototype, "options", void 0), (0, i.gn)([(0, p.C)()], tt.prototype, "size", void 0), tt = (0, i.gn)([(0, m.M)("gu-radio-button-group")], tt);
-        let at = class extends Mt {
+        (0, i.gn)([(0, p.C)()], et.prototype, "options", void 0), (0, i.gn)([(0, p.C)()], et.prototype, "size", void 0), et = (0, i.gn)([(0, m.M)("gu-radio-button-group")], et);
+        let ot = class extends wt {
             constructor() {
-                super(...arguments), this.value = 50, this.min = 0, this.max = 100, this.updateHelper = l => {
-                    requestAnimationFrame(() => requestAnimationFrame(l))
+                super(...arguments), this.value = 50, this.min = 0, this.max = 100, this.updateHelper = c => {
+                    requestAnimationFrame(() => requestAnimationFrame(c))
                 }
             }
 
             static get styles() {
-                const l = e.iv`linear-gradient(90deg, #AFFAED 0%, #8BE1E0 50.34%, #54BBCD 100%)`, E = e.iv`
+                const c = e.iv`linear-gradient(90deg, #AFFAED 0%, #8BE1E0 50.34%, #54BBCD 100%)`, E = e.iv`
       border: 1px solid ${(0, t.asCssProp)(n.colors.gunmetal[900])};
       height: 26px;
       width: 8px;
@@ -10201,7 +10184,7 @@
       box-shadow: 0 0 6px rgba(0, 0, 0, 0.35);
       border-radius: 4px;
     `, oe = e.iv`
-      background: ${l}, ${(0, t.asCssProp)(n.colors.gunmetal[700])};
+      background: ${c}, ${(0, t.asCssProp)(n.colors.gunmetal[700])};
       background-size: var(--value, 0) 100%;
       background-repeat: no-repeat;
       transition: var(--transition, 'background-size') 0.5s ease;
@@ -10256,7 +10239,7 @@
       }
 
       .range__input::-ms-fill-lower {
-        background: ${l};
+        background: ${c};
         border: 2px solid ${(0, t.asCssProp)(n.colors.gunmetal[700])};
       }
 
@@ -10278,22 +10261,22 @@
                 this.style.setProperty("--value", Math.min(100, Math.max(0, (this.value - this.min) / (this.max - this.min) * 100)) + "%")
             }
 
-            onInput(l) {
-                l.stopPropagation();
-                const E = l.target;
+            onInput(c) {
+                c.stopPropagation();
+                const E = c.target;
                 void 0 !== E.value && (this.value = parseFloat(E.value), this.updateSelectedRangeHighlight(), this.dispatchEvent(new CustomEvent("input", {detail: {value: this.value}})))
             }
 
-            onChange(l) {
-                l.stopPropagation(), this.dispatchEvent(new CustomEvent("change", {detail: {value: this.value}}))
+            onChange(c) {
+                c.stopPropagation(), this.dispatchEvent(new CustomEvent("change", {detail: {value: this.value}}))
             }
 
-            update(l) {
-                super.update(l), l.has("value") && this.updateHelper(this.updateSelectedRangeHighlight.bind(this))
+            update(c) {
+                super.update(c), c.has("value") && this.updateHelper(this.updateSelectedRangeHighlight.bind(this))
             }
 
-            firstUpdated(l) {
-                super.firstUpdated(l), this.style.setProperty("--value", "0%"), this.updateHelper = E => E(), this.style.setProperty("--transition", "background-size"), setTimeout(() => {
+            firstUpdated(c) {
+                super.firstUpdated(c), this.style.setProperty("--value", "0%"), this.updateHelper = E => E(), this.style.setProperty("--transition", "background-size"), setTimeout(() => {
                     this.style.setProperty("--transition", "none")
                 }, 500)
             }
@@ -10318,8 +10301,8 @@
     `
             }
         };
-        (0, i.gn)([(0, p.C)()], at.prototype, "value", void 0), (0, i.gn)([(0, p.C)()], at.prototype, "min", void 0), (0, i.gn)([(0, p.C)()], at.prototype, "max", void 0), (0, i.gn)([(0, S.I)(".range__input")], at.prototype, "input", void 0), at = (0, i.gn)([(0, m.M)("gu-range-input")], at);
-        const vt = e.iv`
+        (0, i.gn)([(0, p.C)()], ot.prototype, "value", void 0), (0, i.gn)([(0, p.C)()], ot.prototype, "min", void 0), (0, i.gn)([(0, p.C)()], ot.prototype, "max", void 0), (0, i.gn)([(0, P.I)(".range__input")], ot.prototype, "input", void 0), ot = (0, i.gn)([(0, m.M)("gu-range-input")], ot);
+        const ft = e.iv`
   :host {
     display: flex;
     position: relative;
@@ -10429,41 +10412,41 @@
     ${(0, t.asCssProp)((0, u.userSelect)("none"))};
   }
 `;
-        let dt = class extends Mt {
+        let at = class extends wt {
             constructor() {
                 super(...arguments), this.placeholder = "", this.options = [], this.stretch = !1, this.open = !1
             }
 
             static get styles() {
-                return vt
+                return ft
             }
 
-            update(l) {
+            update(c) {
                 var E;
-                if (l.has("disabled") && this.disabled && (this.open = !1), l.has("options")) {
+                if (c.has("disabled") && this.disabled && (this.open = !1), c.has("options")) {
                     const j = this.findSelectedOption();
                     this.value = null !== (E = null == j ? void 0 : j.value) && void 0 !== E ? E : void 0
                 }
-                (l.has("value") || l.has("options")) && this.notify(), super.update(l)
+                (c.has("value") || c.has("options")) && this.notify(), super.update(c)
             }
 
-            toggleOpen(l) {
-                this.open = !this.disabled && (void 0 !== l ? l : !this.open)
+            toggleOpen(c) {
+                this.open = !this.disabled && (void 0 !== c ? c : !this.open)
             }
 
             getToggleIcon() {
                 return this.open ? "chevron_up" : "chevron_down"
             }
 
-            renderSelectOptions(l) {
+            renderSelectOptions(c) {
                 return e.dy`
       ${this.options.map(E => e.dy`<a
             href="javascript:void(0)"
             @click=${() => this.selectOption(E)}
-            class=${(0, b.$)({select__option: !0, "select__option--selected": this.value === E.value})}
+            class=${(0, C.$)({select__option: !0, "select__option--selected": this.value === E.value})}
             ><gu-body-text
               size="medium"
-              fillColor=${l}
+              fillColor=${c}
               fontWeight=${this.value === E.value ? "bold" : "normal"}
               plain="true"
               >${E.label}</gu-body-text
@@ -10472,8 +10455,8 @@
     `
             }
 
-            selectOption(l) {
-                this.value = l ? l.value : void 0, this.open = !1
+            selectOption(c) {
+                this.value = c ? c.value : void 0, this.open = !1
             }
 
             notify() {
@@ -10492,8 +10475,8 @@
                 this.link.focus()
             }
 
-            handleKeyPress(l) {
-                if (!this.disabled) switch (l.code) {
+            handleKeyPress(c) {
+                if (!this.disabled) switch (c.code) {
                     case"Enter":
                     case"Space":
                         this.toggleOpen();
@@ -10504,27 +10487,27 @@
             }
 
             findSelectedOption() {
-                return this.options.find(l => l.value === this.value)
+                return this.options.find(c => c.value === this.value)
             }
 
             getTextColor() {
-                let l;
+                let c;
                 switch (this.theme) {
                     case"gunmetal":
                     default:
-                        l = "colors.light.300";
+                        c = "colors.light.300";
                         break;
                     case"white":
-                        l = "colors.dark.300";
+                        c = "colors.dark.300";
                         break;
                     case"black":
-                        l = "colors.light.500"
+                        c = "colors.light.500"
                 }
-                return l
+                return c
             }
 
             render() {
-                const l = this.findSelectedOption(), E = this.getTextColor();
+                const c = this.findSelectedOption(), E = this.getTextColor();
                 return e.dy`
       <div class="select__container">
         <a
@@ -10542,12 +10525,12 @@
             plain="true"
             fontWeight="bold"
           >
-            ${this.value && l ? l.label : this.placeholder}
+            ${this.value && c ? c.label : this.placeholder}
           </gu-body-text>
           <gu-icon class="select__icon" iconLigature="${this.getToggleIcon()}" fillColor="${E}"></gu-icon>
         </a>
         <div
-          class=${(0, b.$)({select__menu: !0, "select__menu--visibility-hidden": !this.open})}
+          class=${(0, C.$)({select__menu: !0, "select__menu--visibility-hidden": !this.open})}
         >
           ${this.renderSelectOptions(E)}
         </div>
@@ -10555,11 +10538,11 @@
     `
             }
         };
-        (0, i.gn)([(0, p.C)()], dt.prototype, "theme", void 0), (0, i.gn)([(0, p.C)()], dt.prototype, "placeholder", void 0), (0, i.gn)([(0, p.C)({type: Array})], dt.prototype, "options", void 0), (0, i.gn)([(0, p.C)({
+        (0, i.gn)([(0, p.C)()], at.prototype, "theme", void 0), (0, i.gn)([(0, p.C)()], at.prototype, "placeholder", void 0), (0, i.gn)([(0, p.C)({type: Array})], at.prototype, "options", void 0), (0, i.gn)([(0, p.C)({
             type: Boolean,
             reflect: !0
-        })], dt.prototype, "stretch", void 0), (0, i.gn)([(0, ft.S)()], dt.prototype, "open", void 0), (0, i.gn)([(0, S.I)(".select__heading")], dt.prototype, "link", void 0), dt = (0, i.gn)([(0, m.M)("gu-select")], dt);
-        let Pe = class extends Mt {
+        })], at.prototype, "stretch", void 0), (0, i.gn)([(0, _t.S)()], at.prototype, "open", void 0), (0, i.gn)([(0, P.I)(".select__heading")], at.prototype, "link", void 0), at = (0, i.gn)([(0, m.M)("gu-select")], at);
+        let Pe = class extends wt {
             constructor() {
                 super(...arguments), this.size = "normal", this.placeholder = ""
             }
@@ -10625,8 +10608,8 @@
                 this.dispatchEvent(new CustomEvent("change", {detail: {value: this.value}}))
             }
 
-            onInput(l) {
-                this.value = l.target.value, l.stopPropagation(), this.dispatchEvent(new CustomEvent("input", {detail: {value: this.value}}))
+            onInput(c) {
+                this.value = c.target.value, c.stopPropagation(), this.dispatchEvent(new CustomEvent("input", {detail: {value: this.value}}))
             }
 
             activate() {
@@ -10634,7 +10617,7 @@
             }
 
             render() {
-                var l;
+                var c;
                 return e.dy`
       <textarea
         class="textarea__input textarea__input--status-${this.status}"
@@ -10643,13 +10626,13 @@
         placeholder=${this.placeholder}
         .disabled=${this.disabled}
         data-test-id="textarea-native-element"
-        .value=${null !== (l = this.value) && void 0 !== l ? l : ""}
+        .value=${null !== (c = this.value) && void 0 !== c ? c : ""}
       ></textarea>
     `
             }
         };
-        (0, i.gn)([(0, p.C)()], Pe.prototype, "size", void 0), (0, i.gn)([(0, p.C)()], Pe.prototype, "placeholder", void 0), (0, i.gn)([(0, S.I)(".textarea__input")], Pe.prototype, "input", void 0), Pe = (0, i.gn)([(0, m.M)("gu-textarea")], Pe);
-        let Ne = class extends e.oi {
+        (0, i.gn)([(0, p.C)()], Pe.prototype, "size", void 0), (0, i.gn)([(0, p.C)()], Pe.prototype, "placeholder", void 0), (0, i.gn)([(0, P.I)(".textarea__input")], Pe.prototype, "input", void 0), Pe = (0, i.gn)([(0, m.M)("gu-textarea")], Pe);
+        let Fe = class extends e.oi {
             constructor() {
                 super(...arguments), this.errors = [], this.enabled = !1
             }
@@ -10680,13 +10663,13 @@
     `
             }
 
-            updated(l) {
-                super.updated(l), l.has("errors") && this.updateErrors()
+            updated(c) {
+                super.updated(c), c.has("errors") && this.updateErrors()
             }
 
             updateErrors() {
                 Promise.resolve().then(() => {
-                    !this.slotted || this.slotted.forEach(l => l.classList.toggle("validation-errors--active", !(!this.enabled || !this.errors.find(E => E === l.getAttribute("key")))))
+                    !this.slotted || this.slotted.forEach(c => c.classList.toggle("validation-errors--active", !(!this.enabled || !this.errors.find(E => E === c.getAttribute("key")))))
                 })
             }
 
@@ -10694,8 +10677,8 @@
                 return e.dy`<slot @slotchange=${this.updateErrors()}></slot>`
             }
         };
-        (0, i.gn)([(0, p.C)()], Ne.prototype, "errors", void 0), (0, i.gn)([(0, p.C)()], Ne.prototype, "enabled", void 0), (0, i.gn)([(0, ks.v)("", !0, "[key]")], Ne.prototype, "slotted", void 0), Ne = (0, i.gn)([(0, m.M)("gu-validation-errors")], Ne);
-        const h = (0, r.gridUnits)(.5), L = e.iv`
+        (0, i.gn)([(0, p.C)()], Fe.prototype, "errors", void 0), (0, i.gn)([(0, p.C)()], Fe.prototype, "enabled", void 0), (0, i.gn)([(0, Ps.v)("", !0, "[key]")], Fe.prototype, "slotted", void 0), Fe = (0, i.gn)([(0, m.M)("gu-validation-errors")], Fe);
+        const h = (0, r.gridUnits)(.5), A = e.iv`
   :host {
     width: 100%;
     display: flex;
@@ -10767,7 +10750,7 @@
 `;
         let a = class extends e.oi {
             static get styles() {
-                return L
+                return A
             }
 
             renderIcon() {
@@ -10791,14 +10774,14 @@
           data-test-id="loadout-display-board"
         ></gu-loadout-part>
         <div class="innerContainer__trinkets">
-          ${this.trinkets.map(l => e.dy`
+          ${this.trinkets.map(c => e.dy`
               <gu-loadout-part
-                class=${(0, b.$)({
+                class=${(0, C.$)({
                     innerContainer__trinkets__trinket: !0,
-                    "innerContainer__trinkets__trinket--left": 1 === l.slot,
-                    "innerContainer__trinkets__trinket--right": 2 === l.slot
+                    "innerContainer__trinkets__trinket--left": 1 === c.slot,
+                    "innerContainer__trinkets__trinket--right": 2 === c.slot
                 })}
-                .trinket=${l}
+                .trinket=${c}
                 ?hideText=${!0}
                 ?noAspectRatio=${!0}
                 ?hideCount=${!0}
@@ -10864,11 +10847,11 @@
                         bubbles: !0,
                         detail: {address: this.address}
                     }))
-                }).bind(this), this.onDropdownSelect = (l => {
-                    l.stopPropagation(), this.dispatchEvent(new CustomEvent("onDropdownSelect", {
+                }).bind(this), this.onDropdownSelect = (c => {
+                    c.stopPropagation(), this.dispatchEvent(new CustomEvent("onDropdownSelect", {
                         composed: !0,
                         bubbles: !0,
-                        detail: {address: this.address, menuItem: l.detail}
+                        detail: {address: this.address, menuItem: c.detail}
                     }))
                 }).bind(this)
             }
@@ -11150,8 +11133,8 @@
     `
             }
 
-            update(l) {
-                this.showEmptyState = !(this.userWallets && this.userWallets.length || this.connectedWallet && this.connectedWallet.length), this.showImxLink = this.userWallets && this.userWallets.length > 0, this.allImxLinked = this.userWallets && this.userWallets.every(E => E.imx_linked), super.update(l)
+            update(c) {
+                this.showEmptyState = !(this.userWallets && this.userWallets.length || this.connectedWallet && this.connectedWallet.length), this.showImxLink = this.userWallets && this.userWallets.length > 0, this.allImxLinked = this.userWallets && this.userWallets.every(E => E.imx_linked), super.update(c)
             }
 
             onImxLinkClick() {
@@ -11258,13 +11241,13 @@
           </gu-paragraph-text>
           ${this.renderImxLink()}
         </gu-vertical-space>
-        ${this.userWallets.map(l => this.walletActionLoading === l.address ? e.dy`
+        ${this.userWallets.map(c => this.walletActionLoading === c.address ? e.dy`
               <div class="walletList__addWallet"><gu-rectangular-spinner color="apocyan"></gu-rectangular-spinner></div>
             ` : e.dy` <gu-wallet-display
-            address=${l.address}
+            address=${c.address}
             .walletDropdownMenuOptions=${this.walletDropdownMenuOptions}
-            ?imxLinked="${l.imx_linked}"
-            ?defaultWallet="${l.is_default}"
+            ?imxLinked="${c.imx_linked}"
+            ?defaultWallet="${c.is_default}"
             ?defaultWalletEnabled="${this.defaultWalletEnabled}"
             class="walletsList__wallet"
           ></gu-wallet-display>`)}
@@ -11279,8 +11262,8 @@
     `
             }
         };
-        (0, i.gn)([(0, p.C)()], ze.prototype, "userWallets", void 0), (0, i.gn)([(0, p.C)()], ze.prototype, "imxLinkLoading", void 0), (0, i.gn)([(0, p.C)()], ze.prototype, "connectedWallet", void 0), (0, i.gn)([(0, p.C)()], ze.prototype, "connectedWalletGuLinked", void 0), (0, i.gn)([(0, p.C)()], ze.prototype, "guLinkLoading", void 0), (0, i.gn)([(0, p.C)()], ze.prototype, "walletActionLoading", void 0), (0, i.gn)([(0, p.C)()], ze.prototype, "defaultWalletEnabled", void 0), (0, i.gn)([(0, p.C)()], ze.prototype, "walletDropdownMenuOptions", void 0), (0, i.gn)([(0, ft.S)()], ze.prototype, "showEmptyState", void 0), (0, i.gn)([(0, ft.S)()], ze.prototype, "showImxLink", void 0), (0, i.gn)([(0, ft.S)()], ze.prototype, "allImxLinked", void 0), ze = (0, i.gn)([(0, m.M)("gu-wallets-list")], ze);
-        let Ke = class extends e.oi {
+        (0, i.gn)([(0, p.C)()], ze.prototype, "userWallets", void 0), (0, i.gn)([(0, p.C)()], ze.prototype, "imxLinkLoading", void 0), (0, i.gn)([(0, p.C)()], ze.prototype, "connectedWallet", void 0), (0, i.gn)([(0, p.C)()], ze.prototype, "connectedWalletGuLinked", void 0), (0, i.gn)([(0, p.C)()], ze.prototype, "guLinkLoading", void 0), (0, i.gn)([(0, p.C)()], ze.prototype, "walletActionLoading", void 0), (0, i.gn)([(0, p.C)()], ze.prototype, "defaultWalletEnabled", void 0), (0, i.gn)([(0, p.C)()], ze.prototype, "walletDropdownMenuOptions", void 0), (0, i.gn)([(0, _t.S)()], ze.prototype, "showEmptyState", void 0), (0, i.gn)([(0, _t.S)()], ze.prototype, "showImxLink", void 0), (0, i.gn)([(0, _t.S)()], ze.prototype, "allImxLinked", void 0), ze = (0, i.gn)([(0, m.M)("gu-wallets-list")], ze);
+        let je = class extends e.oi {
             constructor() {
                 super(...arguments), this.connectedWallet = "", this.webWalletConnecting = !1
             }
@@ -11419,8 +11402,8 @@
     `
             }
         };
-        (0, i.gn)([(0, p.C)()], Ke.prototype, "connectedWallet", void 0), (0, i.gn)([(0, p.C)()], Ke.prototype, "webWalletConnecting", void 0), Ke = (0, i.gn)([(0, m.M)("gu-wallets-header")], Ke);
-        let Pt = class extends e.oi {
+        (0, i.gn)([(0, p.C)()], je.prototype, "connectedWallet", void 0), (0, i.gn)([(0, p.C)()], je.prototype, "webWalletConnecting", void 0), je = (0, i.gn)([(0, m.M)("gu-wallets-header")], je);
+        let xt = class extends e.oi {
             constructor() {
                 super(...arguments), this.goldBorder = null
             }
@@ -11464,8 +11447,8 @@
                 return e.dy`<div class="border ${"top" === this.goldBorder ? "borderGoldTop" : ""}"></div>`
             }
         };
-        Pt = (0, i.gn)([(0, m.M)("gu-modal-background")], Pt);
-        const gt = `\nlinear-gradient(\n  90deg,\n  rgba(${(0, t.asCssProp)((0, g.hexToCssRgbString)(n.colors.gunmetal[900]))}, 1) 0%,\n  rgba(${(0, t.asCssProp)((0, g.hexToCssRgbString)(n.colors.gunmetal[900]))}, 0.8) 25%,\n  rgba(0, 0, 0, 0) 50%,\n  rgba(${(0, t.asCssProp)((0, g.hexToCssRgbString)(n.colors.gunmetal[900]))}, 0.8) 75%,\n  rgba(${(0, t.asCssProp)((0, g.hexToCssRgbString)(n.colors.gunmetal[900]))}, 1) 100%\n)`;
+        xt = (0, i.gn)([(0, m.M)("gu-modal-background")], xt);
+        const ut = `\nlinear-gradient(\n  90deg,\n  rgba(${(0, t.asCssProp)((0, g.hexToCssRgbString)(n.colors.gunmetal[900]))}, 1) 0%,\n  rgba(${(0, t.asCssProp)((0, g.hexToCssRgbString)(n.colors.gunmetal[900]))}, 0.8) 25%,\n  rgba(0, 0, 0, 0) 50%,\n  rgba(${(0, t.asCssProp)((0, g.hexToCssRgbString)(n.colors.gunmetal[900]))}, 0.8) 75%,\n  rgba(${(0, t.asCssProp)((0, g.hexToCssRgbString)(n.colors.gunmetal[900]))}, 1) 100%\n)`;
         let Kt = class extends e.oi {
             static get properties() {
                 return {background: {type: String}}
@@ -11490,43 +11473,43 @@
       }
 
       :host([background='nature']) {
-        background-image: ${(0, t.asCssProp)(gt)},
+        background-image: ${(0, t.asCssProp)(ut)},
           url('https://images.godsunchained.com/god-art/1024/nature--aeona.webp');
         background-position-y: -238px;
       }
 
       :host([background='war']) {
-        background-image: ${(0, t.asCssProp)(gt)},
+        background-image: ${(0, t.asCssProp)(ut)},
           url('https://images.godsunchained.com/god-art/1024/war--auros.webp');
         background-position-y: -195px;
       }
 
       :host([background='magic']) {
-        background-image: ${(0, t.asCssProp)(gt)},
+        background-image: ${(0, t.asCssProp)(ut)},
           url('https://images.godsunchained.com/god-art/1024/magic--elyrian.webp');
         background-position-y: -195px;
       }
 
       :host([background='death']) {
-        background-image: ${(0, t.asCssProp)(gt)},
+        background-image: ${(0, t.asCssProp)(ut)},
           url('https://images.godsunchained.com/god-art/1024/death--malissus.webp');
         background-position-y: -330px;
       }
 
       :host([background='light']) {
-        background-image: ${(0, t.asCssProp)(gt)},
+        background-image: ${(0, t.asCssProp)(ut)},
           url('https://images.godsunchained.com/god-art/1024/light--thaeriel.webp');
         background-position-y: -267px;
       }
 
       :host([background='deception']) {
-        background-image: ${(0, t.asCssProp)(gt)},
+        background-image: ${(0, t.asCssProp)(ut)},
           url('https://images.godsunchained.com/god-art/1024/deception--ludia.webp');
         background-position-y: -336px;
       }
 
       :host([background='neutral']) {
-        background-image: ${(0, t.asCssProp)(gt)}, url('/assets/images/misc-art/misc-art--C8-026.webp');
+        background-image: ${(0, t.asCssProp)(ut)}, url('/assets/images/misc-art/misc-art--C8-026.webp');
         background-position-y: -18px;
       }
 
@@ -11534,7 +11517,7 @@
         Will be difficult though as each bg image will require a different background-position-y
       */
       :host([background='87055']) {
-        background-image: ${(0, t.asCssProp)(gt)}, url('https://images.godsunchained.com/art2/1024/87055.webp');
+        background-image: ${(0, t.asCssProp)(ut)}, url('https://images.godsunchained.com/art2/1024/87055.webp');
         background-position-y: -180px;
       }
 
@@ -11748,59 +11731,59 @@
     `
             }
 
-            onClick(l) {
-                this.dispatchEvent(new CustomEvent("navigation", {detail: l, bubbles: !0, composed: !0}))
+            onClick(c) {
+                this.dispatchEvent(new CustomEvent("navigation", {detail: c, bubbles: !0, composed: !0}))
             }
 
-            renderIcon(l) {
-                return l.logo ? e.dy` <gu-logo class="navigation__item__icon" type="${l.logo}" size="28"></gu-logo> ` : l.icon ? e.dy` <gu-icon class="navigation__item__icon" iconLigature=${l.icon}></gu-icon> ` : e.dy``
+            renderIcon(c) {
+                return c.logo ? e.dy` <gu-logo class="navigation__item__icon" type="${c.logo}" size="28"></gu-logo> ` : c.icon ? e.dy` <gu-icon class="navigation__item__icon" iconLigature=${c.icon}></gu-icon> ` : e.dy``
             }
 
-            renderEntry(l) {
+            renderEntry(c) {
                 const E = "main" === this.type ? "micro" : "tag";
                 return e.dy`
       <li
-        class=${(0, b.$)({
+        class=${(0, C.$)({
                     navigation__item: !0,
-                    "navigation__item--active": this.active && this.active.indexOf(l.key) > -1
+                    "navigation__item--active": this.active && this.active.indexOf(c.key) > -1
                 })}
       >
         <a
           class="navigation__item__link"
           href="javascript:void(0);"
-          @click=${() => this.onClick(l)}
+          @click=${() => this.onClick(c)}
           data-test-id="navigation.item.link"
         >
-          ${this.renderIcon(l)}
+          ${this.renderIcon(c)}
 
           <gu-simple-text class="navigation__item__name" kind="${E}" fontWeight="bold">
-            ${l.name}
+            ${c.name}
           </gu-simple-text>
         </a>
       </li>
     `
             }
 
-            renderGroups(l) {
+            renderGroups(c) {
                 return e.dy`
-      ${Object.keys(l).map(E => e.dy`
+      ${Object.keys(c).map(E => e.dy`
           <ul class="navigation__items navigation__items--${E}">
-            ${this.renderEntries(l[E])}
+            ${this.renderEntries(c[E])}
           </ul>
         `)}
     `
             }
 
-            renderEntries(l) {
+            renderEntries(c) {
                 return e.dy`
-      ${Object.keys(l).map(E => this.renderEntry(Object.assign(Object.assign({}, l[E]), {key: E})))}
+      ${Object.keys(c).map(E => this.renderEntry(Object.assign(Object.assign({}, c[E]), {key: E})))}
     `
             }
 
             render() {
                 return e.dy`
       <nav
-        class="${(0, b.$)({navigation: !0, [`navigation--type-${this.type}`]: !0, "navigation--visible": this.visible})}"
+        class="${(0, C.$)({navigation: !0, [`navigation--type-${this.type}`]: !0, "navigation--visible": this.visible})}"
       >
         ${this.renderGroups(this.entries)}
         <slot></slot>
@@ -11884,12 +11867,12 @@
                 this.currentPage < this.numberOfPages && this.goToPage(this.currentPage + 1)
             }
 
-            goToPage(l) {
-                l !== this.currentPage && this.dispatchGoToPageEvent(l)
+            goToPage(c) {
+                c !== this.currentPage && this.dispatchGoToPageEvent(c)
             }
 
-            dispatchGoToPageEvent(l) {
-                const E = new CustomEvent("go-to-page", {detail: {pageNumber: l}});
+            dispatchGoToPageEvent(c) {
+                const E = new CustomEvent("go-to-page", {detail: {pageNumber: c}});
                 this.dispatchEvent(E)
             }
 
@@ -11897,7 +11880,7 @@
                 return e.dy`
       <gu-icon class="pagination__chevron" iconLigature="chevron_left" @click=${this.previousPage}></gu-icon>
 
-      ${new Array(this.numberOfPages).fill("").map((l, E) => e.dy`<span
+      ${new Array(this.numberOfPages).fill("").map((c, E) => e.dy`<span
               class="pagination__index ${E + 1 === this.currentPage ? "pagination__active-index" : ""}"
               @click=${() => this.goToPage(E + 1)}
               >${E + 1}</span
@@ -12074,7 +12057,7 @@
         };
         Wt = (0, i.gn)([(0, m.M)("gu-progress-bar")], Wt);
 
-        class hs extends e.oi {
+        class gs extends e.oi {
             constructor() {
                 super(...arguments), this.active = !1, this.ready = Promise.resolve()
             }
@@ -12093,12 +12076,12 @@
                 })
             }
 
-            wait(l) {
-                return new Promise(E => setTimeout(E, l))
+            wait(c) {
+                return new Promise(E => setTimeout(E, c))
             }
 
-            update(l) {
-                l.has("active") && this.active && this.execute(), super.update(l)
+            update(c) {
+                c.has("active") && this.active && this.execute(), super.update(c)
             }
 
             execute() {
@@ -12116,8 +12099,8 @@
             }
         }
 
-        (0, i.gn)([(0, p.C)({type: Boolean, reflect: !0})], hs.prototype, "active", void 0);
-        let ts = class extends hs {
+        (0, i.gn)([(0, p.C)({type: Boolean, reflect: !0})], gs.prototype, "active", void 0);
+        let ts = class extends gs {
             constructor() {
                 super(...arguments), this.progress = 0
             }
@@ -12323,14 +12306,14 @@
 
             run() {
                 return (0, i.mG)(this, void 0, void 0, function* () {
-                    const l = this.progress >= 100 ? 100 : Math.min(this.progress, 98);
-                    this.style.setProperty("--barWidth", `${l}%`), yield this.wait(500)
+                    const c = this.progress >= 100 ? 100 : Math.min(this.progress, 98);
+                    this.style.setProperty("--barWidth", `${c}%`), yield this.wait(500)
                 })
             }
 
             render() {
-                const l = this.progress >= 100 ? 100 : Math.min(this.progress, 98);
-                return this.style.setProperty("--barWidth", `${l}%`), e.dy`
+                const c = this.progress >= 100 ? 100 : Math.min(this.progress, 98);
+                return this.style.setProperty("--barWidth", `${c}%`), e.dy`
       <div class="milestone-progress__rewards">
         <div class="milestone-progress__previous-rewards">
           <slot name="previous-reward-icon"></slot>
@@ -12349,7 +12332,7 @@
           <div class="milestone-progress__container">
             <div
               data-test-id="milestone-progress-bar.gem-start"
-              class=${(0, b.$)({
+              class=${(0, C.$)({
                     "milestone-progress__milestone-gem-outer": !0,
                     "milestone-progress__milestone-gem-outer--unachieved": 0 === this.progress
                 })}
@@ -12359,7 +12342,7 @@
             <div class="milestone-progress__progress-bar" progress=${this.progress}></div>
             <div
               data-test-id="milestone-progress-bar.gem-end"
-              class=${(0, b.$)({
+              class=${(0, C.$)({
                     "milestone-progress__milestone-gem-outer": !0,
                     "milestone-progress__milestone-gem-outer--unachieved": this.progress < 100
                 })}
@@ -12369,7 +12352,7 @@
           </div>
           <div
             data-test-id="milestone-progress-bar.trail"
-            class=${(0, b.$)({
+            class=${(0, C.$)({
                     "milestone-progress__extra": !0,
                     "milestone-progress__extra--last": this.progress >= 100
                 })}
@@ -12389,7 +12372,7 @@
             }
         };
         ts.progressWidth = 60, (0, i.gn)([(0, p.C)({type: Number})], ts.prototype, "progress", void 0), ts = (0, i.gn)([(0, m.M)("gu-milestone-progress-bar")], ts);
-        let ws = class extends e.oi {
+        let ks = class extends e.oi {
             constructor() {
                 super(...arguments), this.totalSteps = 9, this.filledSteps = 2, this.fillGradient = "gradients.apocyan.simple", this.fillGradientTarget = "bottom", this.bridgeColor = "colors.apocyan.300", this.squareSize = `${(0, r.gridUnits)(4)}`, this.squareBridgeRatio = "3/4"
             }
@@ -12483,7 +12466,7 @@
 
             render() {
                 return (0, g.setPropertyGradientFromVariable)(this.style, this.fillGradient, "--backgroundFillGradient", this.fillGradientTarget), (0, g.setPropertyColorFromVariable)(this.style, this.bridgeColor, "--backgroundFillColor"), this.style.setProperty("--squareSize", this.squareSize), this.style.setProperty("--bridgeSize", `calc(${this.squareSize} * ${this.squareBridgeRatio})`), e.dy`
-      ${new Array(this.totalSteps).fill(0).map((l, E) => {
+      ${new Array(this.totalSteps).fill(0).map((c, E) => {
                     const j = E < this.filledSteps;
                     return e.dy`
           <div class="box ${j ? "box--filled" : ""}">
@@ -12495,7 +12478,7 @@
     `
             }
         };
-        ws = (0, i.gn)([(0, m.M)("gu-progress-step-counter")], ws);
+        ks = (0, i.gn)([(0, m.M)("gu-progress-step-counter")], ks);
         let as = class extends e.oi {
             static get styles() {
                 return e.iv`
@@ -12933,18 +12916,18 @@
     `
             }
 
-            gotoSocialLink(l) {
-                window.open(l)
+            gotoSocialLink(c) {
+                window.open(c)
             }
 
             render() {
                 return e.dy`
-      ${this.accounts.map(l => e.dy`
+      ${this.accounts.map(c => e.dy`
           <gu-icon
             class="socialButton"
-            iconLigature="social_${l.name}"
+            iconLigature="social_${c.name}"
             fillGradient=${n.gradients.gold.simple("bottom")}
-            @click=${() => this.gotoSocialLink(l.link)}
+            @click=${() => this.gotoSocialLink(c.link)}
           ></gu-icon>
         `)}
     `
@@ -12985,14 +12968,14 @@
         padding-top: ${(0, t.asCssProp)((0, r.gridUnits)(8))};
       }
 
-      @media screen and (min-width: ${(0, t.asCssProp)(k.breakpointSizeMapping.medium)}) {
+      @media screen and (min-width: ${(0, t.asCssProp)(S.breakpointSizeMapping.medium)}) {
         :host {
           flex-basis: 34%;
           min-width: unset;
         }
       }
 
-      @media screen and (min-width: ${(0, t.asCssProp)(k.breakpointSizeMapping.large)}) {
+      @media screen and (min-width: ${(0, t.asCssProp)(S.breakpointSizeMapping.large)}) {
         :host {
           flex-basis: 21%;
         }
@@ -13360,10 +13343,10 @@
         })], Zo.prototype, "selectedOptionIndex", void 0), Zo = (0, i.gn)([(0, m.M)("gu-two-value-switch")], Zo);
         let Oo = class extends e.oi {
             constructor() {
-                super(...arguments), this.values = [], this.selectedIndex = 0, this.idPrefix = "", this.onClick = (l, E) => {
+                super(...arguments), this.values = [], this.selectedIndex = 0, this.idPrefix = "", this.onClick = (c, E) => {
                     this.selectedIndex = E, this.dispatchEvent(new CustomEvent("onItemClicked", {
                         composed: !0,
-                        detail: {index: E, value: l}
+                        detail: {index: E, value: c}
                     }))
                 }
             }
@@ -13382,11 +13365,11 @@
 
             render() {
                 return this.values ? e.dy`
-          ${this.values.map((l, E) => e.dy`<gu-square-selection-row-item
+          ${this.values.map((c, E) => e.dy`<gu-square-selection-row-item
               .selected=${E === this.selectedIndex}
-              .value="${l}"
-              @click=${() => this.onClick(l, E)}
-              id=${`${this.idPrefix}item-${l}`}
+              .value="${c}"
+              @click=${() => this.onClick(c, E)}
+              id=${`${this.idPrefix}item-${c}`}
             >
             </gu-square-selection-row-item>`)}
         ` : null
@@ -13443,7 +13426,7 @@
         (0, i.gn)([(0, p.C)({reflect: !0})], jo.prototype, "value", void 0), (0, i.gn)([(0, p.C)({
             reflect: !0,
             type: Boolean,
-            converter: H.b
+            converter: W.b
         })], jo.prototype, "selected", void 0), jo = (0, i.gn)([(0, m.M)("gu-square-selection-row-item")], jo);
         const dn = e.iv`
   ${(0, t.asCssProp)((0, t.setBoxSizing)())}
@@ -13513,23 +13496,23 @@
                 super(...arguments), this.labelText = "", this.initialHelpText = "", this.placeholderText = "", this.successHelpText = "", this.errorHelpText = "", this.align = "left", this.currentStatus = {
                     status: "initial",
                     helpText: this.initialHelpText
-                }, this.inputValue = "", this.validateToPattern = [], this.obfuscateInputText = !1, this.updateValue = l => {
-                    this.inputValue = l, this.dispatchEvent(new CustomEvent("onValueChange", {
+                }, this.inputValue = "", this.validateToPattern = [], this.obfuscateInputText = !1, this.updateValue = c => {
+                    this.inputValue = c, this.dispatchEvent(new CustomEvent("onValueChange", {
                         detail: {
-                            newValue: l,
-                            valid: this.validateValue(l)
+                            newValue: c,
+                            valid: this.validateValue(c)
                         }
                     }))
-                }, this.onInputChange = l => {
-                    this.updateValue(l.target.value)
-                }, this.onInputType = l => {
-                    const E = l.target, {value: j} = E;
+                }, this.onInputChange = c => {
+                    this.updateValue(c.target.value)
+                }, this.onInputType = c => {
+                    const E = c.target, {value: j} = E;
                     this.updateValue(j), this.validateValue(j) && "error" === this.currentStatus.status && this.setCurrentStatus({
                         status: "initial",
                         helpText: this.initialHelpText
                     })
-                }, this.onInputBlur = l => {
-                    const E = l.target, {value: j} = E;
+                }, this.onInputBlur = c => {
+                    const E = c.target, {value: j} = E;
                     return this.validateValue(j) ? this.setCurrentStatus({
                         status: "success",
                         helpText: this.successHelpText
@@ -13560,12 +13543,12 @@
                 this.initialValue && (this.inputValue = this.initialValue, this.requestUpdate())
             }
 
-            updated(l) {
-                super.updated(l), "error" === this.currentStatus.status ? (this.classList.add("error"), this.classList.remove("success", "initial")) : "success" === this.currentStatus.status ? (this.classList.remove("error", "initial"), this.classList.add("success")) : (this.classList.remove("error", "success"), this.classList.add("initial"))
+            updated(c) {
+                super.updated(c), "error" === this.currentStatus.status ? (this.classList.add("error"), this.classList.remove("success", "initial")) : "success" === this.currentStatus.status ? (this.classList.remove("error", "initial"), this.classList.add("success")) : (this.classList.remove("error", "success"), this.classList.add("initial"))
             }
 
-            setCurrentStatus(l) {
-                const {status: E, helpText: j} = l;
+            setCurrentStatus(c) {
+                const {status: E, helpText: j} = c;
                 this.currentStatus = {status: E, helpText: j}, this.requestUpdate()
             }
 
@@ -13584,14 +13567,14 @@
                 }
             }
 
-            validateValue(l) {
+            validateValue(c) {
                 let E = !0;
                 return this.validateToPattern.map(j => {
                     if (!E) return !1;
-                    if (j instanceof RegExp) E = j.test(l); else if (-1 !== j.indexOf("not-")) {
+                    if (j instanceof RegExp) E = j.test(c); else if (-1 !== j.indexOf("not-")) {
                         const oe = j.split("not-").pop();
-                        E = !To[oe].test(l)
-                    } else E = To[j] && "function" == typeof To[j] ? To[j](l) : To[j].test(l)
+                        E = !To[oe].test(c)
+                    } else E = To[j] && "function" == typeof To[j] ? To[j](c) : To[j].test(c)
                 }), E
             }
 
@@ -13684,7 +13667,7 @@
       </style>
 
       ${this.labelText ? e.dy` <gu-simple-text class="labelText" fontWeight="bold" kind="small"> ${this.labelText} </gu-simple-text> ` : null}
-      <div class=${(0, b.$)({inputArea: !0})}>
+      <div class=${(0, C.$)({inputArea: !0})}>
         <input
           placeholder=${this.placeholderText ? this.placeholderText : ""}
           type=${this.obfuscateInputText ? "password" : "text"}
@@ -13825,10 +13808,10 @@
         rn = (0, i.gn)([(0, m.M)("gu-will-you-survive-banner")], rn);
         let Vo = class extends e.oi {
             constructor() {
-                super(...arguments), this.values = [], this.selectedIndex = 0, this.itemClicked = (l, E) => {
+                super(...arguments), this.values = [], this.selectedIndex = 0, this.itemClicked = (c, E) => {
                     this.selectedIndex = E, this.dispatchEvent(new CustomEvent("onItemClicked", {
                         composed: !0,
-                        detail: {index: E, value: l}
+                        detail: {index: E, value: c}
                     }))
                 }
             }
@@ -13850,11 +13833,11 @@
 
             render() {
                 return this.values ? e.dy`
-          ${this.values.map((l, E) => e.dy`<gu-tabs-collection-item
+          ${this.values.map((c, E) => e.dy`<gu-tabs-collection-item
               .selected=${E === this.selectedIndex}
               .firstItem=${0 === E}
-              .value="${l}"
-              @click=${() => this.itemClicked(l, E)}
+              .value="${c}"
+              @click=${() => this.itemClicked(c, E)}
             >
             </gu-tabs-collection-item>`)}
         ` : null
@@ -13934,11 +13917,11 @@
         })], Ao.prototype, "value", void 0), (0, i.gn)([(0, p.C)({
             reflect: !0,
             type: Boolean,
-            converter: H.b
+            converter: W.b
         })], Ao.prototype, "selected", void 0), (0, i.gn)([(0, p.C)({
             reflect: !0,
             type: Boolean,
-            converter: H.b
+            converter: W.b
         })], Ao.prototype, "firstItem", void 0), Ao = (0, i.gn)([(0, m.M)("gu-tabs-collection-item")], Ao);
         let Io = class extends e.oi {
             static get styles() {
@@ -13957,7 +13940,7 @@
         object-fit: cover;
       }
 
-      @media screen and (min-width: ${(0, t.asCssProp)(k.breakpointSizeMapping.small)}) {
+      @media screen and (min-width: ${(0, t.asCssProp)(S.breakpointSizeMapping.small)}) {
         img {
           max-width: ${(0, t.asCssProp)((0, r.gridUnits)(58))};
         }
@@ -13967,19 +13950,19 @@
         }
       }
 
-      @media screen and (min-width: ${(0, t.asCssProp)(k.breakpointSizeMapping.medium)}) {
+      @media screen and (min-width: ${(0, t.asCssProp)(S.breakpointSizeMapping.medium)}) {
         img {
           max-width: ${(0, t.asCssProp)((0, r.gridUnits)(75))};
         }
       }
 
-      @media screen and (min-width: ${(0, t.asCssProp)(k.breakpointSizeMapping.large)}) {
+      @media screen and (min-width: ${(0, t.asCssProp)(S.breakpointSizeMapping.large)}) {
         img {
           max-width: ${(0, t.asCssProp)((0, r.gridUnits)(92))};
         }
       }
 
-      @media screen and (min-width: ${(0, t.asCssProp)(k.breakpointSizeMapping["x-large"])}) {
+      @media screen and (min-width: ${(0, t.asCssProp)(S.breakpointSizeMapping["x-large"])}) {
         img {
           max-width: ${(0, t.asCssProp)((0, r.gridUnits)(100))};
         }
@@ -14120,11 +14103,11 @@
             }
 
             connectedCallback() {
-                super.connectedCallback(), window.addEventListener("click", l => this.onClick(l)), window.addEventListener("scroll", () => this.onScroll())
+                super.connectedCallback(), window.addEventListener("click", c => this.onClick(c)), window.addEventListener("scroll", () => this.onScroll())
             }
 
             disconnectedCallback() {
-                window.removeEventListener("click", l => this.onClick(l)), window.removeEventListener("scroll", () => this.onScroll()), super.disconnectedCallback()
+                window.removeEventListener("click", c => this.onClick(c)), window.removeEventListener("scroll", () => this.onScroll()), super.disconnectedCallback()
             }
 
             static get styles() {
@@ -14153,13 +14136,13 @@
       rgba(${(0, t.asCssProp)((0, g.hexToCssRgbString)(n.colors.black))}, 25%);
     padding: 0;
     margin: 0;
-    z-index: ${Qe.modalLayerZLevel};
+    z-index: ${Ve.modalLayerZLevel};
   }
 `
             }
 
-            selectDropDownItem(l) {
-                this.current = l, this.open = !1, this.dispatchEvent(new CustomEvent("onSelect", {
+            selectDropDownItem(c) {
+                this.current = c, this.open = !1, this.dispatchEvent(new CustomEvent("onSelect", {
                     composed: !0,
                     bubbles: !0,
                     detail: Object.assign({}, this.current)
@@ -14172,8 +14155,8 @@
                 })
             }
 
-            onClick(l) {
-                !l.composedPath().includes(this) && this.open && (this.open = !1)
+            onClick(c) {
+                !c.composedPath().includes(this) && this.open && (this.open = !1)
             }
 
             onScroll() {
@@ -14184,21 +14167,21 @@
                 return e.dy`
       <slot name="dropdownControl" data-test-id="dropdown-control" @click=${this.toggleOpen}></slot>
       <ul
-        class=${(0, b.$)({"dropdown-menu--hidden": !this.open, "dropdown-menu-content": this.open})}
+        class=${(0, C.$)({"dropdown-menu--hidden": !this.open, "dropdown-menu-content": this.open})}
       >
-        ${this.items.map((l, E, j) => e.dy`
+        ${this.items.map((c, E, j) => e.dy`
               <gu-dropdown-menu-item
                 .align=${this.align}
-                .item=${l}
+                .item=${c}
                 .last=${j.length - 1 === E}
-                @click=${() => this.selectDropDownItem(l)}
+                @click=${() => this.selectDropDownItem(c)}
               ></gu-dropdown-menu-item>
             `)}
       </ul>
     `
             }
         };
-        (0, i.gn)([(0, p.C)({type: Array})], qs.prototype, "items", void 0), (0, i.gn)([(0, p.C)({type: String})], qs.prototype, "align", void 0), (0, i.gn)([(0, ft.S)()], qs.prototype, "open", void 0), (0, i.gn)([(0, ft.S)({hasChanged: (G, l) => (null == G ? void 0 : G.value) !== (null == l ? void 0 : l.value)})], qs.prototype, "current", void 0), qs = (0, i.gn)([(0, m.M)("gu-dropdown-menu")], qs);
+        (0, i.gn)([(0, p.C)({type: Array})], qs.prototype, "items", void 0), (0, i.gn)([(0, p.C)({type: String})], qs.prototype, "align", void 0), (0, i.gn)([(0, _t.S)()], qs.prototype, "open", void 0), (0, i.gn)([(0, _t.S)({hasChanged: (G, c) => (null == G ? void 0 : G.value) !== (null == c ? void 0 : c.value)})], qs.prototype, "current", void 0), qs = (0, i.gn)([(0, m.M)("gu-dropdown-menu")], qs);
         let Do = class extends e.oi {
             constructor() {
                 super(...arguments), this.item = {id: "", value: ""}, this.last = !1
@@ -14277,11 +14260,10 @@
             type: Boolean,
             reflect: !0
         })], Do.prototype, "last", void 0), Do = (0, i.gn)([(0, m.M)("gu-dropdown-menu-item")], Do)
-    },
-    14879: (se, R, o) => {
+    }, 14879: (se, U, o) => {
         "use strict";
-        o.d(R, {o: () => g});
-        var c = o(70655), y = (o(1949), o(32830)), e = o(56418), m = o(98539), p = o(26711);
+        o.d(U, {o: () => g});
+        var d = o(70655), y = (o(1949), o(32830)), e = o(56418), m = o(98539), p = o(26711);
 
         class g extends y.oi {
             constructor() {
@@ -14313,23 +14295,22 @@
             }
         }
 
-        (0, c.gn)([(0, e.C)({
+        (0, d.gn)([(0, e.C)({
             reflect: !0,
             type: Boolean,
             converter: p.b
-        })], g.prototype, "loading", void 0), (0, c.gn)([(0, e.C)({
+        })], g.prototype, "loading", void 0), (0, d.gn)([(0, e.C)({
             reflect: !0,
             type: Boolean,
             converter: p.b
-        })], g.prototype, "disabled", void 0), (0, c.gn)([(0, e.C)({
+        })], g.prototype, "disabled", void 0), (0, d.gn)([(0, e.C)({
             reflect: !0,
             type: Boolean,
             converter: p.b
-        })], g.prototype, "expand", void 0), (0, c.gn)([(0, e.C)()], g.prototype, "icon", void 0), (0, c.gn)([(0, e.C)()], g.prototype, "iconPosition", void 0), (0, c.gn)([(0, e.C)({reflect: !0})], g.prototype, "type", void 0)
-    },
-    43977: (se, R, o) => {
+        })], g.prototype, "expand", void 0), (0, d.gn)([(0, e.C)()], g.prototype, "icon", void 0), (0, d.gn)([(0, e.C)()], g.prototype, "iconPosition", void 0), (0, d.gn)([(0, e.C)({reflect: !0})], g.prototype, "type", void 0)
+    }, 43977: (se, U, o) => {
         "use strict";
-        var c = o(70655), y = (o(61517), o(32830)), e = o(86041), m = o(80102), p = o(26532), g = o(65281);
+        var d = o(70655), y = (o(61517), o(32830)), e = o(86041), m = o(80102), p = o(26532), g = o(65281);
         let r = class extends y.oi {
             static get styles() {
                 return y.iv`
@@ -14373,13 +14354,12 @@
     `
             }
         };
-        r = (0, c.gn)([(0, e.M)("gu-circular-close-button")], r)
-    },
-    89534: (se, R, o) => {
+        r = (0, d.gn)([(0, e.M)("gu-circular-close-button")], r)
+    }, 89534: (se, U, o) => {
         "use strict";
-        var c = o(70655), i = o(32830), y = o(56418), e = o(72650), m = o(93270), p = o(14879), g = o(80102),
+        var d = o(70655), i = o(32830), y = o(56418), e = o(72650), m = o(93270), p = o(14879), g = o(80102),
             r = o(26532), t = o(65281), n = o(40010);
-        const A = i.iv`
+        const D = i.iv`
   ${n.W2}
 
   .button__icon {
@@ -14507,13 +14487,13 @@
   }
 `;
 
-        class f extends p.o {
+        class v extends p.o {
             constructor() {
                 super(...arguments), this.type = "secondary"
             }
 
             static get styles() {
-                return A
+                return D
             }
 
             renderArtwork() {
@@ -14547,13 +14527,12 @@
             }
         }
 
-        (0, c.gn)([(0, y.C)({reflect: !0})], f.prototype, "type", void 0), (0, c.gn)([(0, y.C)()], f.prototype, "size", void 0), customElements.define("gu-hex-button", (0, e.b)((0, m.Z)(f)))
-    },
-    40010: (se, R, o) => {
+        (0, d.gn)([(0, y.C)({reflect: !0})], v.prototype, "type", void 0), (0, d.gn)([(0, y.C)()], v.prototype, "size", void 0), customElements.define("gu-hex-button", (0, e.b)((0, m.Z)(v)))
+    }, 40010: (se, U, o) => {
         "use strict";
-        o.d(R, {W2: () => n});
-        var c = o(32830), i = o(80102), y = o(26532), e = o(65281);
-        const m = c.iv`
+        o.d(U, {W2: () => n});
+        var d = o(32830), i = o(80102), y = o(26532), e = o(65281);
+        const m = d.iv`
   :host {
     cursor: pointer;
     display: inline-flex;
@@ -14643,7 +14622,7 @@
   :host([disabled='true']) {
     filter: grayscale(100%);
   }
-`, n = c.iv`
+`, n = d.iv`
   ${m}
 
   :host {
@@ -14694,33 +14673,32 @@
     font-size: ${(0, y.asCssProp)((0, i.gridUnits)(5.5))};
   }
 `
-    },
-    62701: (se, R, o) => {
+    }, 62701: (se, U, o) => {
         "use strict";
-        o.d(R, {w: () => k});
-        var c = o(70655), i = o(92436), y = o(87435), e = o(32830), m = o(86041), p = o(5284), g = o(26532),
+        o.d(U, {w: () => S});
+        var d = o(70655), i = o(92436), y = o(87435), e = o(32830), m = o(86041), p = o(5284), g = o(26532),
             r = o(65281);
-        const t = new i.do(I => {
-            I.forEach(A => {
-                A.target.handleResize()
+        const t = new i.do(L => {
+            L.forEach(D => {
+                D.target.handleResize()
             })
-        }), n = new CustomEvent("onVideoEnd"), k = I => new Promise(A => {
-            setTimeout(() => A(), I)
+        }), n = new CustomEvent("onVideoEnd"), S = L => new Promise(D => {
+            setTimeout(() => D(), L)
         });
-        let P = class extends e.oi {
+        let k = class extends e.oi {
             constructor() {
                 super(...arguments), this.muted = !1, this.autoPlay = !1, this.loopVideo = !1, this.showControls = !1, this.pauseOnEndFrame = !1, this.startPausedOnFirstFrame = !1, this.volume = 1, this.dimensions = {
                     width: 0,
                     height: 0
                 }, this.hasSignalledEnd = !1, this.onVideoLoaded = () => {
                     console.log("VIDEO IS LOADED (not necessarily fully buffered though)", this.videoId);
-                    const A = () => {
+                    const D = () => {
                         this.bindPlayListeners(), this.delayedEmitVideoReady(), this.setVolume()
                     };
-                    this.startPausedOnFirstFrame ? this.gotoTimeAndPause(.02).then(() => A()) : A()
-                }, this.onVideoUpdate = A => {
-                    const {percent: f} = A;
-                    this.dispatchEvent(new CustomEvent("onVideoProgress", {detail: {percent: f}})), this.pauseOnEndFrame && f >= .88 && (this.pauseVideo(), this.hasSignalledEnd || (this.hasSignalledEnd = !0, this.dispatchEvent(n)))
+                    this.startPausedOnFirstFrame ? this.gotoTimeAndPause(.02).then(() => D()) : D()
+                }, this.onVideoUpdate = D => {
+                    const {percent: v} = D;
+                    this.dispatchEvent(new CustomEvent("onVideoProgress", {detail: {percent: v}})), this.pauseOnEndFrame && v >= .88 && (this.pauseVideo(), this.hasSignalledEnd || (this.hasSignalledEnd = !0, this.dispatchEvent(n)))
                 }, this.delayedEmitVideoReady = () => setTimeout(() => {
                     this.hasSignalledEnd = !1, this.classList.remove("hideVideo"), this.dispatchEvent(new CustomEvent("onVideoReady"))
                 }, 350)
@@ -14772,8 +14750,8 @@
                 this.handleResize(), t.observe(this)
             }
 
-            updated(A) {
-                super.updated(A), A.has("videoId") && this.videoId ? this.handleVideoIdUpdated() : A.has("volume") && this.setVolume()
+            updated(D) {
+                super.updated(D), D.has("videoId") && this.videoId ? this.handleVideoIdUpdated() : D.has("volume") && this.setVolume()
             }
 
             disconnectedCallback() {
@@ -14781,10 +14759,10 @@
             }
 
             handleVideoIdUpdated() {
-                return (0, c.mG)(this, void 0, void 0, function* () {
+                return (0, d.mG)(this, void 0, void 0, function* () {
                     if (this.vimeoControl) {
-                        const A = yield this.vimeoControl.getVideoId();
-                        return console.log("@@@@@@@@@@@@", A, this.videoId), this.videoId === A ? this.reInitCurrentVideo() : this.loadNewVideoId()
+                        const D = yield this.vimeoControl.getVideoId();
+                        return console.log("@@@@@@@@@@@@", D, this.videoId), this.videoId === D ? this.reInitCurrentVideo() : this.loadNewVideoId()
                     }
                     this.initVideo()
                 })
@@ -14799,11 +14777,11 @@
             }
 
             loadNewVideoId() {
-                console.log("@@@@@ LOAD NEW VIDEO ID @@@@@@"), this.unBindEventsAndReset(), this.vimeoControl.loadVideo(this.videoId).then(() => this.onVideoLoaded()).catch(A => console.log(A))
+                console.log("@@@@@ LOAD NEW VIDEO ID @@@@@@"), this.unBindEventsAndReset(), this.vimeoControl.loadVideo(this.videoId).then(() => this.onVideoLoaded()).catch(D => console.log(D))
             }
 
             initVideo() {
-                const A = {
+                const D = {
                     title: !1,
                     byline: !1,
                     portrait: !1,
@@ -14815,7 +14793,7 @@
                     loop: this.loopVideo,
                     autoplay: this.autoPlay
                 };
-                this.classList.add("hideVideo"), this.dispatchEvent(new CustomEvent("onVideoLoading")), this.vimeoControl = new y.Z(this, A), this.vimeoControl.on("loaded", this.onVideoLoaded)
+                this.classList.add("hideVideo"), this.dispatchEvent(new CustomEvent("onVideoLoading")), this.vimeoControl = new y.Z(this, D), this.vimeoControl.on("loaded", this.onVideoLoaded)
             }
 
             setVolume() {
@@ -14828,22 +14806,22 @@
                 }), this.vimeoControl.on("timeupdate", this.onVideoUpdate)
             }
 
-            gotoTimeAndPause(A) {
-                return (0, c.mG)(this, void 0, void 0, function* () {
+            gotoTimeAndPause(D) {
+                return (0, d.mG)(this, void 0, void 0, function* () {
                     try {
-                        return console.log("gotoTimeAndPause(time)", A, this.videoId), yield this.vimeoControl.setMuted(!0), console.log("gotoTimeAndPause > this.vimeoControl.setMuted(true) resolved", this.videoId, A), yield this.vimeoControl.play(), console.log("gotoTimeAndPause > this.vimeoControl.play() resolved", this.videoId, A), p.I5.isSafari() && (yield k(350), console.log("gotoTimeAndPause > artificialDelay() resolved", this.videoId, A)), yield this.vimeoControl.pause(), console.log("gotoTimeAndPause > this.vimeoControl.pause() resolved", this.videoId, A), yield this.vimeoControl.setCurrentTime(A), console.log("gotoTimeAndPause > this.vimeoControl.setCurrentTime(time) resolved", this.videoId, A), this.setVolume(), console.log("gotoTimeAndPause > ALL STEPS resolved")
-                    } catch (f) {
-                        console.error("gotoTimeAndPause ERROR:", f)
+                        return console.log("gotoTimeAndPause(time)", D, this.videoId), yield this.vimeoControl.setMuted(!0), console.log("gotoTimeAndPause > this.vimeoControl.setMuted(true) resolved", this.videoId, D), yield this.vimeoControl.play(), console.log("gotoTimeAndPause > this.vimeoControl.play() resolved", this.videoId, D), p.I5.isSafari() && (yield S(350), console.log("gotoTimeAndPause > artificialDelay() resolved", this.videoId, D)), yield this.vimeoControl.pause(), console.log("gotoTimeAndPause > this.vimeoControl.pause() resolved", this.videoId, D), yield this.vimeoControl.setCurrentTime(D), console.log("gotoTimeAndPause > this.vimeoControl.setCurrentTime(time) resolved", this.videoId, D), this.setVolume(), console.log("gotoTimeAndPause > ALL STEPS resolved")
+                    } catch (v) {
+                        console.error("gotoTimeAndPause ERROR:", v)
                     }
                 })
             }
 
-            playVideo(A) {
-                console.log("playVideo(time)", A);
-                const f = () => {
+            playVideo(D) {
+                console.log("playVideo(time)", D);
+                const v = () => {
                     this.hasSignalledEnd = !1, this.vimeoControl.play()
                 };
-                return void 0 !== A ? this.gotoTimeAndPause(A).then(() => f()) : f()
+                return void 0 !== D ? this.gotoTimeAndPause(D).then(() => v()) : v()
             }
 
             pauseVideo() {
@@ -14865,11 +14843,10 @@
     `
             }
         };
-        P = (0, c.gn)([(0, m.M)("gu-controllable-vimeo-embed")], P)
-    },
-    99454: (se, R, o) => {
+        k = (0, d.gn)([(0, m.M)("gu-controllable-vimeo-embed")], k)
+    }, 99454: (se, U, o) => {
         "use strict";
-        var c = o(70655), i = o(32830), y = o(86041), e = o(26532), m = o(61462);
+        var d = o(70655), i = o(32830), y = o(86041), e = o(26532), m = o(61462);
         let p = class extends i.oi {
             static get properties() {
                 return {}
@@ -14929,12 +14906,11 @@
     `
             }
         };
-        p = (0, c.gn)([(0, y.M)("gu-form-context")], p)
-    },
-    4390: (se, R, o) => {
+        p = (0, d.gn)([(0, y.M)("gu-form-context")], p)
+    }, 4390: (se, U, o) => {
         "use strict";
 
-        function c(p, g, r) {
+        function d(p, g, r) {
             g.runTask(() => p.navigate([r]))
         }
 
@@ -14946,13 +14922,12 @@
             return Object.keys(p).reduce((r, t) => -1 !== g.indexOf(p[t].path) || r, !1)
         }
 
-        o.d(R, {pR: () => c, rb: () => i, M0: () => e, Cs: () => m});
+        o.d(U, {pR: () => d, rb: () => i, M0: () => e, Cs: () => m});
         const m = p => new CustomEvent("onExternalNavItemClick", {detail: {navItem: p}, bubbles: !0, composed: !0})
-    },
-    61517: (se, R, o) => {
+    }, 61517: (se, U, o) => {
         "use strict";
-        var c = o(32830), i = o(5284), y = o(65171), e = o(26532), m = o(65281), p = o(91418);
-        customElements.define("gu-icon", class g extends c.oi {
+        var d = o(32830), i = o(5284), y = o(65171), e = o(26532), m = o(65281), p = o(91418);
+        customElements.define("gu-icon", class g extends d.oi {
             constructor() {
                 super(...arguments), this.iconLigature = "", this.fillGradientTarget = "top"
             }
@@ -14967,7 +14942,7 @@
             }
 
             static get styles() {
-                return c.iv`
+                return d.iv`
       :host {
         display: inline-flex;
         font-weight: 400 !important;
@@ -15005,13 +14980,12 @@
                     fillColor: this.fillColor,
                     fillGradient: this.fillGradient,
                     fillGradientTarget: this.fillGradientTarget
-                }), c.dy`<i class="icon">${this.iconLigature}</i>`
+                }), d.dy`<i class="icon">${this.iconLigature}</i>`
             }
         })
-    },
-    1949: (se, R, o) => {
+    }, 1949: (se, U, o) => {
         "use strict";
-        var c = o(70655), i = o(32830), y = o(56418), e = o(86041), m = o(80102), p = o(26532), g = o(65281);
+        var d = o(70655), i = o(32830), y = o(56418), e = o(86041), m = o(80102), p = o(26532), g = o(65281);
         let r = class extends i.oi {
             constructor() {
                 super(...arguments), this.color = "grey"
@@ -15096,13 +15070,12 @@
     `
             }
         };
-        (0, c.gn)([(0, y.C)({type: String})], r.prototype, "color", void 0), r = (0, c.gn)([(0, e.M)("gu-rectangular-spinner")], r)
-    },
-    90004: (se, R, o) => {
+        (0, d.gn)([(0, y.C)({type: String})], r.prototype, "color", void 0), r = (0, d.gn)([(0, e.M)("gu-rectangular-spinner")], r)
+    }, 90004: (se, U, o) => {
         "use strict";
-        var c = o(70655), e = (o(51256), o(52102), o(32830)), m = o(56418), p = o(86041), g = o(65281), r = o(65171),
+        var d = o(70655), e = (o(51256), o(52102), o(32830)), m = o(56418), p = o(86041), g = o(65281), r = o(65171),
             t = o(80102), n = o(26532);
-        const v = (0, n.asCssProp)((0, t.gridUnits)(11)), k = e.iv`
+        const _ = (0, n.asCssProp)((0, t.gridUnits)(11)), S = e.iv`
   ${(0, n.asCssProp)((0, n.setBoxSizing)())}
 
   :host {
@@ -15174,9 +15147,9 @@
     left: 50%;
     top: ${(0, n.asCssProp)((0, t.gridUnits)(-5))};
     transform: translate(-50%, 0);
-    width: ${v};
-    height: ${v};
-    line-height: ${v};
+    width: ${_};
+    height: ${_};
+    line-height: ${_};
     background: url('/assets/images/ui-embellishments/ui--count-background-diamonds.svg') center no-repeat;
     background-size: contain;
   }
@@ -15243,16 +15216,16 @@
   }
 `;
         o(29939), o(28917);
-        let S = class extends e.oi {
+        let P = class extends e.oi {
             static get styles() {
-                return k
+                return S
             }
 
             renderText() {
-                var T, s, C, w;
+                var $, s, b, w;
                 if (this.hideText) return e.dy``;
-                const B = (null === (s = null === (T = this.board) || void 0 === T ? void 0 : T.class_properties) || void 0 === s ? void 0 : s.quality) || (null === (w = null === (C = this.board) || void 0 === C ? void 0 : C.class_properties) || void 0 === w ? void 0 : w.effort),
-                    ee = this.trinket ? this.trinket.name : this.board ? this.board.name : "";
+                const B = (null === (s = null === ($ = this.board) || void 0 === $ ? void 0 : $.class_properties) || void 0 === s ? void 0 : s.quality) || (null === (w = null === (b = this.board) || void 0 === b ? void 0 : b.class_properties) || void 0 === w ? void 0 : w.effort),
+                    q = this.trinket ? this.trinket.name : this.board ? this.board.name : "";
                 return e.dy`
       <i class="gradientSkrim"></i>
       <div class="textFields">
@@ -15260,33 +15233,33 @@
           ${B}
         </gu-simple-text>
         <gu-heading-text class="textFields__itemName" size="2x-small" fillGradient=${g.gradients.gold.simple()}>
-          ${ee}
+          ${q}
         </gu-heading-text>
       </div>
     `
             }
 
             renderCount() {
-                var T, s;
-                let C;
-                return !this.hideCount && void 0 !== this.count && (C = (null === (T = this.trinket) || void 0 === T ? void 0 : T.owned) || (null === (s = this.board) || void 0 === s ? void 0 : s.owned) ? this.count : 0), this.hideCount || void 0 === C ? e.dy`` : e.dy`
+                var $, s;
+                let b;
+                return !this.hideCount && void 0 !== this.count && (b = (null === ($ = this.trinket) || void 0 === $ ? void 0 : $.owned) || (null === (s = this.board) || void 0 === s ? void 0 : s.owned) ? this.count : 0), this.hideCount || void 0 === b ? e.dy`` : e.dy`
         <gu-simple-text class="countDisplay" align="center" kind="micro" data-test-id="loadout-part-count">
-          x<strong>${Math.min(C, 99)}</strong>${C > 99 ? "+" : null}
+          x<strong>${Math.min(b, 99)}</strong>${b > 99 ? "+" : null}
         </gu-simple-text>
       `
             }
 
             render() {
-                var T, s, b;
-                return this.noAspectRatio ? this.classList.add("noAspectRatio") : this.classList.remove("noAspectRatio"), (null === (T = this.trinket) || void 0 === T ? void 0 : T.owned) || (null === (s = this.board) || void 0 === s ? void 0 : s.owned) ? this.classList.remove("notOwned") : this.classList.add("notOwned"), this.equipped ? this.classList.add("equipped") : this.classList.remove("equipped"), this.hideText ? this.classList.add("hideText") : this.classList.remove("hideText"), this.hideCount ? this.classList.add("hideCount") : this.classList.remove("hideCount"), this.hideBorder ? this.classList.add("hideBorder") : this.classList.remove("hideBorder"), e.dy`
+                var $, s, C;
+                return this.noAspectRatio ? this.classList.add("noAspectRatio") : this.classList.remove("noAspectRatio"), (null === ($ = this.trinket) || void 0 === $ ? void 0 : $.owned) || (null === (s = this.board) || void 0 === s ? void 0 : s.owned) ? this.classList.remove("notOwned") : this.classList.add("notOwned"), this.equipped ? this.classList.add("equipped") : this.classList.remove("equipped"), this.hideText ? this.classList.add("hideText") : this.classList.remove("hideText"), this.hideCount ? this.classList.add("hideCount") : this.classList.remove("hideCount"), this.hideBorder ? this.classList.add("hideBorder") : this.classList.remove("hideBorder"), e.dy`
       <div class="innerContainer">
-        ${this.trinket ? ((b, T) => "Good Kitty Statue" === b.name ? ((b, T) => {
+        ${this.trinket ? ((C, $) => "Good Kitty Statue" === C.name ? ((C, $) => {
                     var s;
-                    let C = "#6B6B70", w = "#B1AEB9", B = "#E1E1E1";
-                    return (null === (s = null == b ? void 0 : b.properties) || void 0 === s ? void 0 : s.fur_color) && (C = b.properties.fur_color, w = b.properties.belly_color, B = b.properties.eyes_color), T ? e.dy`
+                    let b = "#6B6B70", w = "#B1AEB9", B = "#E1E1E1";
+                    return (null === (s = null == C ? void 0 : C.properties) || void 0 === s ? void 0 : s.fur_color) && (b = C.properties.fur_color, w = C.properties.belly_color, B = C.properties.eyes_color), $ ? e.dy`
       <gu-regular-crypto-kitty-head
         class="itemImage itemImage--trinket itemImage--cryptoKittyHead"
-        .furColor=${C}
+        .furColor=${b}
         .bellyColor=${w}
         .eyeColor=${B}
         data-test-id="loadout-part-trinket"
@@ -15294,22 +15267,22 @@
     ` : e.dy`
     <gu-regular-crypto-kitty
       class="itemImage itemImage--trinket itemImage--cryptoKitty"
-      .furColor=${C}
+      .furColor=${b}
       .bellyColor=${w}
       .eyeColor=${B}
       data-test-id="loadout-part-trinket"
     ></gu-regular-crypto-kitty>
   `
-                })(b, T) : e.dy`<img
+                })(C, $) : e.dy`<img
     class="itemImage itemImage--trinket"
-    src="https://images.godsunchained.com/collectables/trinkets/${b.proto}--preview.webp"
+    src="https://images.godsunchained.com/collectables/trinkets/${C.proto}--preview.webp"
     alt=""
     data-test-id="loadout-part-trinket"
   />`)(this.trinket, this.noAspectRatio) : null}
-        ${this.board ? (b = this.board.proto, e.dy`
+        ${this.board ? (C = this.board.proto, e.dy`
   <img
     class="itemImage itemImage--board"
-    src="https://images.godsunchained.com/collectables/boards/${b}--thumb.webp"
+    src="https://images.godsunchained.com/collectables/boards/${C}--thumb.webp"
     alt=""
     data-test-id="loadout-part-board"
   />
@@ -15319,14 +15292,13 @@
     `
             }
         };
-        (0, c.gn)([(0, m.C)({
+        (0, d.gn)([(0, m.C)({
             type: Number,
             reflect: !0
-        })], S.prototype, "count", void 0), (0, c.gn)([(0, m.C)({type: Object})], S.prototype, "board", void 0), (0, c.gn)([(0, m.C)({type: Object})], S.prototype, "trinket", void 0), (0, c.gn)([(0, m.C)({type: Boolean})], S.prototype, "equipped", void 0), (0, c.gn)([(0, m.C)({type: Boolean})], S.prototype, "noAspectRatio", void 0), (0, c.gn)([(0, m.C)({type: Boolean})], S.prototype, "hideText", void 0), (0, c.gn)([(0, m.C)({type: Boolean})], S.prototype, "hideCount", void 0), (0, c.gn)([(0, m.C)({type: Boolean})], S.prototype, "hideBorder", void 0), S = (0, c.gn)([(0, p.M)("gu-loadout-part")], S)
-    },
-    29939: (se, R, o) => {
+        })], P.prototype, "count", void 0), (0, d.gn)([(0, m.C)({type: Object})], P.prototype, "board", void 0), (0, d.gn)([(0, m.C)({type: Object})], P.prototype, "trinket", void 0), (0, d.gn)([(0, m.C)({type: Boolean})], P.prototype, "equipped", void 0), (0, d.gn)([(0, m.C)({type: Boolean})], P.prototype, "noAspectRatio", void 0), (0, d.gn)([(0, m.C)({type: Boolean})], P.prototype, "hideText", void 0), (0, d.gn)([(0, m.C)({type: Boolean})], P.prototype, "hideCount", void 0), (0, d.gn)([(0, m.C)({type: Boolean})], P.prototype, "hideBorder", void 0), P = (0, d.gn)([(0, p.M)("gu-loadout-part")], P)
+    }, 29939: (se, U, o) => {
         "use strict";
-        var c = o(70655), i = o(32830), y = o(56418), e = o(86041), m = o(26532), p = o(65281);
+        var d = o(70655), i = o(32830), y = o(56418), e = o(86041), m = o(26532), p = o(65281);
         let g = class extends i.oi {
             static get styles() {
                 return i.iv`
@@ -15399,11 +15371,10 @@
     `
             }
         };
-        (0, c.gn)([(0, y.C)({type: String})], g.prototype, "furColor", void 0), (0, c.gn)([(0, y.C)({type: String})], g.prototype, "bellyColor", void 0), (0, c.gn)([(0, y.C)({type: String})], g.prototype, "eyeColor", void 0), g = (0, c.gn)([(0, e.M)("gu-regular-crypto-kitty-head")], g)
-    },
-    28917: (se, R, o) => {
+        (0, d.gn)([(0, y.C)({type: String})], g.prototype, "furColor", void 0), (0, d.gn)([(0, y.C)({type: String})], g.prototype, "bellyColor", void 0), (0, d.gn)([(0, y.C)({type: String})], g.prototype, "eyeColor", void 0), g = (0, d.gn)([(0, e.M)("gu-regular-crypto-kitty-head")], g)
+    }, 28917: (se, U, o) => {
         "use strict";
-        var c = o(70655), i = o(32830), y = o(56418), e = o(86041), m = o(26532), p = o(65281);
+        var d = o(70655), i = o(32830), y = o(56418), e = o(86041), m = o(26532), p = o(65281);
         let g = class extends i.oi {
             static get styles() {
                 return i.iv`
@@ -15480,13 +15451,12 @@
     `
             }
         };
-        (0, c.gn)([(0, y.C)({type: String})], g.prototype, "furColor", void 0), (0, c.gn)([(0, y.C)({type: String})], g.prototype, "bellyColor", void 0), (0, c.gn)([(0, y.C)({type: String})], g.prototype, "eyeColor", void 0), g = (0, c.gn)([(0, e.M)("gu-regular-crypto-kitty")], g)
-    },
-    65694: (se, R, o) => {
+        (0, d.gn)([(0, y.C)({type: String})], g.prototype, "furColor", void 0), (0, d.gn)([(0, y.C)({type: String})], g.prototype, "bellyColor", void 0), (0, d.gn)([(0, y.C)({type: String})], g.prototype, "eyeColor", void 0), g = (0, d.gn)([(0, e.M)("gu-regular-crypto-kitty")], g)
+    }, 65694: (se, U, o) => {
         "use strict";
-        var c = o(70655), g = (o(90004), o(51256), o(11015), o(61517), o(43977), o(32830)), r = o(56418), t = o(7302),
-            n = o(86041), v = o(98539), k = o(65281), P = o(65171), I = o(80102), A = o(26532);
-        const f = g.iv`
+        var d = o(70655), g = (o(90004), o(51256), o(11015), o(61517), o(43977), o(32830)), r = o(56418), t = o(7302),
+            n = o(86041), _ = o(98539), S = o(65281), k = o(65171), L = o(80102), D = o(26532);
+        const v = g.iv`
   :host {
     display: block;
     width: 100%;
@@ -15507,8 +15477,8 @@
     border-radius: 50%;
     background: linear-gradient(
       to top,
-      rgba(${(0, A.asCssProp)((0, P.hexToCssRgbString)(k.colors.dark[900]))}, 1) 0%,
-      rgba(${(0, A.asCssProp)((0, P.hexToCssRgbString)(k.colors.dark[900]))}, 0) 70%
+      rgba(${(0, D.asCssProp)((0, k.hexToCssRgbString)(S.colors.dark[900]))}, 1) 0%,
+      rgba(${(0, D.asCssProp)((0, k.hexToCssRgbString)(S.colors.dark[900]))}, 0) 70%
     );
   }
 
@@ -15520,10 +15490,10 @@
     top: 0;
     left: 0;
     border-radius: 50%;
-    border: ${(0, A.asCssProp)((0, I.gridUnits)(.5))} solid ${(0, A.asCssProp)(k.colors.gunmetal[500])};
-    background: ${(0, A.asCssProp)(k.colors.gunmetal[900])};
+    border: ${(0, D.asCssProp)((0, L.gridUnits)(.5))} solid ${(0, D.asCssProp)(S.colors.gunmetal[500])};
+    background: ${(0, D.asCssProp)(S.colors.gunmetal[900])};
     overflow: hidden;
-    box-shadow: 0px 0px ${(0, A.asCssProp)((0, I.gridUnits)(2))} rgba(${(0, A.asCssProp)((0, P.hexToCssRgbString)(k.colors.dark[900]))}, 0.65);
+    box-shadow: 0px 0px ${(0, D.asCssProp)((0, L.gridUnits)(2))} rgba(${(0, D.asCssProp)((0, k.hexToCssRgbString)(S.colors.dark[900]))}, 0.65);
   }
 
   .trinketName {
@@ -15549,12 +15519,12 @@
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    color: ${(0, A.asCssProp)(k.colors.gunmetal[500])};
+    color: ${(0, D.asCssProp)(S.colors.gunmetal[500])};
   }
 
   .uiTextArea__icon {
-    font-size: ${(0, A.asCssProp)((0, I.gridUnits)(7))};
-    margin-bottom: ${(0, A.asCssProp)((0, I.gridUnits)(1))};
+    font-size: ${(0, D.asCssProp)((0, L.gridUnits)(7))};
+    margin-bottom: ${(0, D.asCssProp)((0, L.gridUnits)(1))};
   }
 
   .uiTextArea__text--choose {
@@ -15578,15 +15548,15 @@
   }
 
   .innerContainer--highlight .trinket {
-    border-color: ${(0, A.asCssProp)(k.colors.gold[300])};
+    border-color: ${(0, D.asCssProp)(S.colors.gold[300])};
   }
 
   .innerContainer--highlight:hover .trinket {
-    border-color: ${(0, A.asCssProp)(k.colors.apocyan[300])};
+    border-color: ${(0, D.asCssProp)(S.colors.apocyan[300])};
   }
 
   .innerContainer--highlight .uiTextArea {
-    color: ${(0, A.asCssProp)(k.colors.light[100])};
+    color: ${(0, D.asCssProp)(S.colors.light[100])};
   }
 
   /*
@@ -15610,17 +15580,17 @@
             }
 
             static get styles() {
-                return f
+                return v
             }
 
-            update(b) {
-                b.has("highlight") && !b.get("highlight") && (this.hideNameText = !1), super.update(b)
+            update(C) {
+                C.has("highlight") && !C.get("highlight") && (this.hideNameText = !1), super.update(C)
             }
 
             renderTrinketName() {
                 return this.hideNameText ? g.dy`` : g.dy`
       <gu-heading-text
-        fillGradient=${k.gradients.gold.simple()}
+        fillGradient=${S.gradients.gold.simple()}
         class="trinketName"
         align="center"
         size="2x-small"
@@ -15674,7 +15644,7 @@
             render() {
                 return g.dy`
       <div
-        class=${(0, v.$)({
+        class=${(0, _.$)({
                     innerContainer: !0,
                     "innerContainer--highlight": this.highlight,
                     "innerContainer--equipped": !!this.trinket
@@ -15698,13 +15668,12 @@
     `
             }
         };
-        (0, c.gn)([(0, r.C)({type: Object})], O.prototype, "trinket", void 0), (0, c.gn)([(0, r.C)({type: Boolean})], O.prototype, "highlight", void 0), (0, c.gn)([(0, t.S)()], O.prototype, "hideNameText", void 0), O = (0, c.gn)([(0, n.M)("gu-selected-trinket")], O)
-    },
-    69039: (se, R, o) => {
+        (0, d.gn)([(0, r.C)({type: Object})], O.prototype, "trinket", void 0), (0, d.gn)([(0, r.C)({type: Boolean})], O.prototype, "highlight", void 0), (0, d.gn)([(0, t.S)()], O.prototype, "hideNameText", void 0), O = (0, d.gn)([(0, n.M)("gu-selected-trinket")], O)
+    }, 69039: (se, U, o) => {
         "use strict";
-        o.d(R, {Q: () => y});
-        var c = o(30109);
-        const y = (0, c.XM)(class i extends c.Xe {
+        o.d(U, {Q: () => y});
+        var d = o(30109);
+        const y = (0, d.XM)(class i extends d.Xe {
             constructor(m) {
                 super(m)
             }
@@ -15716,16 +15685,15 @@
             render(m) {
             }
         })
-    },
-    25297: (se, R, o) => {
+    }, 25297: (se, U, o) => {
         "use strict";
-        o.d(R, {J: () => e});
-        var c = o(12052), i = o(32830);
+        o.d(U, {J: () => e});
+        var d = o(12052), i = o(32830);
         const y = Promise.resolve().then.bind(Promise.resolve());
 
         class e extends i.oi {
             constructor() {
-                super(), this.haunted = new c.ZM(() => this.requestUpdate(), this)
+                super(), this.haunted = new d.ZM(() => this.requestUpdate(), this)
             }
 
             update(p) {
@@ -15742,10 +15710,9 @@
                 this.haunted.teardown(), super.disconnectedCallback()
             }
         }
-    },
-    65171: (se, R, o) => {
+    }, 65171: (se, U, o) => {
         "use strict";
-        o.r(R), o.d(R, {
+        o.r(U), o.d(U, {
             componentToHex: () => i,
             loopForVariable: () => y,
             rgbToHex: () => e,
@@ -15755,71 +15722,70 @@
             setPropertyGradient: () => r,
             setPropertyColorFromVariable: () => t,
             setPropertyColor: () => n,
-            setBorderColorHoverFromVariable: () => v,
-            setBorderColorHover: () => k,
-            setBackgroundFillHoverFromVariable: () => P,
-            setBackgroundFillHover: () => I,
-            updateColoringVariables: () => A
+            setBorderColorHoverFromVariable: () => _,
+            setBorderColorHover: () => S,
+            setBackgroundFillHoverFromVariable: () => k,
+            setBackgroundFillHover: () => L,
+            updateColoringVariables: () => D
         });
-        var c = o(65281);
-        const i = f => {
-            const O = f.toString(16);
+        var d = o(65281);
+        const i = v => {
+            const O = v.toString(16);
             return 1 === O.length ? "0" + O : O
-        }, y = f => {
-            const O = f.split(".");
-            let S = c;
-            for (let b = 0; b < O.length; b++) S = S[O[b]];
-            return S
-        }, e = (f, O, S) => `#${i(f)}${i(O)}${i(S)}`, m = f => {
-            const O = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(f);
+        }, y = v => {
+            const O = v.split(".");
+            let P = d;
+            for (let C = 0; C < O.length; C++) P = P[O[C]];
+            return P
+        }, e = (v, O, P) => `#${i(v)}${i(O)}${i(P)}`, m = v => {
+            const O = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(v);
             return O ? {r: parseInt(O[1], 16), g: parseInt(O[2], 16), b: parseInt(O[3], 16)} : void 0
-        }, p = f => {
-            const O = m(f);
-            return O ? `${O.r}, ${O.g}, ${O.b}` : f
-        }, g = (f, O, S, b) => {
-            const s = y(O)(b).replace(/;/gm, "");
-            f.setProperty(S, s)
-        }, r = (f, O, S) => {
-            f.setProperty(S, O.replace(/;/gm, ""))
-        }, t = (f, O, S) => {
-            const b = y(O);
-            f.setProperty(S, b)
-        }, n = (f, O, S) => {
-            f.setProperty(S, O)
-        }, v = (f, O) => {
-            const S = y(O);
-            f.setProperty("--borderColorHover", S)
-        }, k = (f, O) => {
-            f.setProperty("--borderColorHover", O)
-        }, P = (f, O) => {
-            const S = y(O);
-            f.setProperty("--backgroundFillColorHover", S)
-        }, I = (f, O) => {
-            f.setProperty("--backgroundFillColorHover", O)
-        }, A = ({
-                    component: f,
+        }, p = v => {
+            const O = m(v);
+            return O ? `${O.r}, ${O.g}, ${O.b}` : v
+        }, g = (v, O, P, C) => {
+            const s = y(O)(C).replace(/;/gm, "");
+            v.setProperty(P, s)
+        }, r = (v, O, P) => {
+            v.setProperty(P, O.replace(/;/gm, ""))
+        }, t = (v, O, P) => {
+            const C = y(O);
+            v.setProperty(P, C)
+        }, n = (v, O, P) => {
+            v.setProperty(P, O)
+        }, _ = (v, O) => {
+            const P = y(O);
+            v.setProperty("--borderColorHover", P)
+        }, S = (v, O) => {
+            v.setProperty("--borderColorHover", O)
+        }, k = (v, O) => {
+            const P = y(O);
+            v.setProperty("--backgroundFillColorHover", P)
+        }, L = (v, O) => {
+            v.setProperty("--backgroundFillColorHover", O)
+        }, D = ({
+                    component: v,
                     fillColor: O,
-                    fillColorHover: S,
-                    fillGradient: b,
-                    fillGradientTarget: T,
+                    fillColorHover: P,
+                    fillGradient: C,
+                    fillGradientTarget: $,
                     borderColor: s,
-                    borderColorHover: C,
+                    borderColorHover: b,
                     backgroundFillColor: w,
                     backgroundFillColorHover: B,
-                    backgroundFillGradient: ee,
+                    backgroundFillGradient: q,
                     backgroundFillGradientTarget: ce,
                     iconColor: de
                 }) => {
-            O && (f.setAttribute("fillColor", O), /colors\./.test(O) ? t(f.style, O, "--textFillColor") : n(f.style, O, "--textFillColor")), S && (f.setAttribute("fillColorHover", S), /colors\./.test(S) ? t(f.style, S, "--textFillColorHover") : n(f.style, S, "--textFillColorHover")), s && (f.setAttribute("borderColor", s), /colors\./.test(s) ? t(f.style, s, "--borderColor") : n(f.style, s, "--borderColor")), C && (f.setAttribute("borderColorHover", C), /colors\./.test(C) ? t(f.style, C, "--borderColorHover") : n(f.style, C, "--borderColorHover")), C && (f.setAttribute("borderColorHover", C), /colors\./.test(C) ? v(f.style, C) : k(f.style, C)), w && (f.setAttribute("backgroundFillColor", w), /colors\./.test(w) ? t(f.style, w, "--backgroundFillColor") : n(f.style, w, "--backgroundFillColor")), B && (f.setAttribute("backgroundFillColorHover", B), /colors\./.test(B) ? t(f.style, B, "--backgroundFillColorHover") : n(f.style, B, "--backgroundFillColorHover")), de && (f.setAttribute("iconColor", de), /colors\./.test(de) ? t(f.style, de, "--iconColor") : n(f.style, de, "--iconColor")), B && (f.setAttribute("backgroundFillColorHover", B), /colors\./.test(B) ? P(f.style, B) : I(f.style, B)), ee && (f.setAttribute("backgroundFillGradient", ee), /gradients\./.test(ee) ? g(f.style, ee, "--backgroundFillGradient", ce) : r(f.style, ee, "--backgroundFillGradient")), b && (f.setAttribute("fillGradient", b), /gradients\./.test(b) ? g(f.style, b, "--textFillGradient", T) : r(f.style, b, "--textFillGradient"))
+            O && (v.setAttribute("fillColor", O), /colors\./.test(O) ? t(v.style, O, "--textFillColor") : n(v.style, O, "--textFillColor")), P && (v.setAttribute("fillColorHover", P), /colors\./.test(P) ? t(v.style, P, "--textFillColorHover") : n(v.style, P, "--textFillColorHover")), s && (v.setAttribute("borderColor", s), /colors\./.test(s) ? t(v.style, s, "--borderColor") : n(v.style, s, "--borderColor")), b && (v.setAttribute("borderColorHover", b), /colors\./.test(b) ? t(v.style, b, "--borderColorHover") : n(v.style, b, "--borderColorHover")), b && (v.setAttribute("borderColorHover", b), /colors\./.test(b) ? _(v.style, b) : S(v.style, b)), w && (v.setAttribute("backgroundFillColor", w), /colors\./.test(w) ? t(v.style, w, "--backgroundFillColor") : n(v.style, w, "--backgroundFillColor")), B && (v.setAttribute("backgroundFillColorHover", B), /colors\./.test(B) ? t(v.style, B, "--backgroundFillColorHover") : n(v.style, B, "--backgroundFillColorHover")), de && (v.setAttribute("iconColor", de), /colors\./.test(de) ? t(v.style, de, "--iconColor") : n(v.style, de, "--iconColor")), B && (v.setAttribute("backgroundFillColorHover", B), /colors\./.test(B) ? k(v.style, B) : L(v.style, B)), q && (v.setAttribute("backgroundFillGradient", q), /gradients\./.test(q) ? g(v.style, q, "--backgroundFillGradient", ce) : r(v.style, q, "--backgroundFillGradient")), C && (v.setAttribute("fillGradient", C), /gradients\./.test(C) ? g(v.style, C, "--textFillGradient", $) : r(v.style, C, "--textFillGradient"))
         }
-    },
-    5284: (se, R, o) => {
+    }, 5284: (se, U, o) => {
         "use strict";
-        o.d(R, {gt: () => y, I5: () => c, dz: () => p, ZB: () => r, uA: () => i});
-        var c = {};
-        o.r(c), o.d(c, {isIos: () => e, isSafari: () => m});
+        o.d(U, {gt: () => y, I5: () => d, dz: () => p, ZB: () => r, uA: () => i});
+        var d = {};
+        o.r(d), o.d(d, {isIos: () => e, isSafari: () => m});
         var i = {};
-        o.r(i), o.d(i, {enhancedTextRenderingStyles: () => k, stringContainsEmoji: () => v, uppercaseWord: () => P});
+        o.r(i), o.d(i, {enhancedTextRenderingStyles: () => S, stringContainsEmoji: () => _, uppercaseWord: () => k});
         var y = o(65171);
 
         function e() {
@@ -15828,27 +15794,26 @@
 
         const m = () => /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
         var p = o(80102), r = (o(26711), o(26532)), t = o(89747), n = o.n(t);
-        const v = I => n()().test(I),
-            k = "\n  /* Get fonts to look slightly nicer where possible */\n  -webkit-font-smoothing: subpixel-antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  text-rendering: optimizeLegibility\n",
-            P = I => I.charAt(0).toUpperCase() + I.slice(1)
-    },
-    80102: (se, R, o) => {
+        const _ = L => n()().test(L),
+            S = "\n  /* Get fonts to look slightly nicer where possible */\n  -webkit-font-smoothing: subpixel-antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  text-rendering: optimizeLegibility\n",
+            k = L => L.charAt(0).toUpperCase() + L.slice(1)
+    }, 80102: (se, U, o) => {
         "use strict";
-        o.r(R), o.d(R, {
-            gridUnits: () => c,
+        o.r(U), o.d(U, {
+            gridUnits: () => d,
             checkOutOfBounds: () => i,
             getOuterHeight: () => y,
             waitForImageToLoad: () => e
         });
-        const c = m => 4 * m + "px", i = ({
+        const d = m => 4 * m + "px", i = ({
                                               x: m,
                                               y: p,
                                               left: g,
                                               top: r,
                                               width: t,
                                               height: n,
-                                              tolerance: v = 2
-                                          }) => (window.scrollY >= r && (r -= window.scrollY, n += window.scrollY), p >= Math.floor(n + r - v) || p <= r + v || m >= Math.floor(t + g - v) || m <= g + v),
+                                              tolerance: _ = 2
+                                          }) => (window.scrollY >= r && (r -= window.scrollY, n += window.scrollY), p >= Math.floor(n + r - _) || p <= r + _ || m >= Math.floor(t + g - _) || m <= g + _),
             y = m => {
                 const p = window.getComputedStyle(m), g = parseInt(p.getPropertyValue("margin-top")),
                     r = parseInt(p.getPropertyValue("margin-bottom"));
@@ -15856,22 +15821,20 @@
             }, e = m => new Promise((p, g) => {
                 const r = () => {
                     m.removeEventListener("load", n), m.removeEventListener("error", t)
-                }, t = v => {
-                    console.error("Awww snap! <img> or <picture> LOAD ERROR:", v, m.src), r(), g()
+                }, t = _ => {
+                    console.error("Awww snap! <img> or <picture> LOAD ERROR:", _, m.src), r(), g()
                 }, n = () => {
                     r(), p()
                 };
                 m.complete ? p() : (m.addEventListener("load", n), m.addEventListener("error", t))
             })
-    },
-    26711: (se, R, o) => {
+    }, 26711: (se, U, o) => {
         "use strict";
-        o.d(R, {b: () => c});
-        const c = {fromAttribute: i => i && "false" !== i, toAttribute: i => i ? "true" : "false"}
-    },
-    26532: (se, R, o) => {
+        o.d(U, {b: () => d});
+        const d = {fromAttribute: i => i && "false" !== i, toAttribute: i => i ? "true" : "false"}
+    }, 26532: (se, U, o) => {
         "use strict";
-        o.r(R), o.d(R, {
+        o.r(U), o.d(U, {
             asCssProp: () => y,
             drawHexShapePolygonMask: () => e,
             drawBottomHexShapePolygonMask: () => m,
@@ -15881,40 +15844,38 @@
             styleScrollbars: () => t,
             inset: () => n
         });
-        var c = o(32830), i = o(65281);
-        const y = v => c.iv`${(0, c.$m)(v)}`,
-            e = (v, k, P = 0) => '',
-            m = v => '',
-            p = (v = "border-box") => `\n  :host,\n  :host *,\n  :host *::before,\n  :host *::after {\n    box-sizing: ${v};\n  }\n`,
-            g = (v, k, P = "initial", I = .3, A = 0) => `\n  ${v} {\n    opacity: 0;\n    height: 0;\n    transition: opacity ${I}s ease, height 0s ${I}s, transform ${I}s ease;\n    ${A ? `transform: translateY(${A}px);` : ""}\n  }\n  ${k} {\n    opacity: 1;\n    height: ${P};\n    transition: opacity ${I}s ease, height 0s 0s, transform ${I}s ease;\n    ${A ? "transform: translateY(0);" : ""}\n  }\n`,
-            r = (v, k = .3, P = 10, I = 12) => `\n  ${v} {\n    animation: listReveal ${k}s ease-out backwards;\n    animation-delay: ${.1 * P}s;\n  }\n\n  ${[...Array(P).keys()].map(A => `\n      ${v}:nth-of-type(${A}) {\n        animation-delay: ${.1 * A}s;\n      }\n    `).join("\n")}\n\n  @keyframes listReveal {\n    from {\n      transform: translateY(${I}px);\n      opacity: 0;\n    }\n    to {\n      transform: translateY(0);\n      opacity: 1;\n    }\n  }\n`,
-            t = (v = "") => `\n  ${v}::-webkit-scrollbar {\n    width: 4px;\n  }\n\n  ${v}::-webkit-scrollbar-thumb {\n    width: 4px;\n    background: ${i.colors.gunmetal[500]};\n    border-radius: 2px;\n  }\n`,
-            n = (v, k = v, P = v, I = k) => c.iv`
-  top: ${v}px;
-  right: ${k}px;
-  bottom: ${P}px;
-  left: ${I}px;
+        var d = o(32830), i = o(65281);
+        const y = _ => d.iv`${(0, d.$m)(_)}`,
+            e = (_, S, k = 0) => ``,
+            m = _ => ``,
+            p = (_ = "border-box") => `\n  :host,\n  :host *,\n  :host *::before,\n  :host *::after {\n    box-sizing: ${_};\n  }\n`,
+            g = (_, S, k = "initial", L = .3, D = 0) => `\n  ${_} {\n    opacity: 0;\n    height: 0;\n    transition: opacity ${L}s ease, height 0s ${L}s, transform ${L}s ease;\n    ${D ? `transform: translateY(${D}px);` : ""}\n  }\n  ${S} {\n    opacity: 1;\n    height: ${k};\n    transition: opacity ${L}s ease, height 0s 0s, transform ${L}s ease;\n    ${D ? "transform: translateY(0);" : ""}\n  }\n`,
+            r = (_, S = .3, k = 10, L = 12) => `\n  ${_} {\n    animation: listReveal ${S}s ease-out backwards;\n    animation-delay: ${.1 * k}s;\n  }\n\n  ${[...Array(k).keys()].map(D => `\n      ${_}:nth-of-type(${D}) {\n        animation-delay: ${.1 * D}s;\n      }\n    `).join("\n")}\n\n  @keyframes listReveal {\n    from {\n      transform: translateY(${L}px);\n      opacity: 0;\n    }\n    to {\n      transform: translateY(0);\n      opacity: 1;\n    }\n  }\n`,
+            t = (_ = "") => `\n  ${_}::-webkit-scrollbar {\n    width: 4px;\n  }\n\n  ${_}::-webkit-scrollbar-thumb {\n    width: 4px;\n    background: ${i.colors.gunmetal[500]};\n    border-radius: 2px;\n  }\n`,
+            n = (_, S = _, k = _, L = S) => d.iv`
+  top: ${_}px;
+  right: ${S}px;
+  bottom: ${k}px;
+  left: ${L}px;
 `
-    },
-    39029: (se, R, o) => {
+    }, 39029: (se, U, o) => {
         "use strict";
-        o.d(R, {x1: () => i.x, I0: () => m, v9: () => e, Rl: () => g}), o(25297);
+        o.d(U, {x1: () => i.x, I0: () => m, v9: () => e, Rl: () => g}), o(25297);
         var i = o(58672), y = o(12052);
-        const e = ({store: n, selector: v}) => {
-            const [k, P] = (0, y.eJ)(v(n.getState()));
+        const e = ({store: n, selector: _}) => {
+            const [S, k] = (0, y.eJ)(_(n.getState()));
             return (0, y.d4)(() => n.subscribe(() => {
-                const I = v(n.getState());
-                P(I)
-            }), [v]), k
-        }, m = n => v => n.dispatch(v);
+                const L = _(n.getState());
+                k(L)
+            }), [_]), S
+        }, m = n => _ => n.dispatch(_);
         o(5284);
         var g = o(65281);
         o(72985), o(69039)
-    },
-    72650: (se, R, o) => {
+    }, 72650: (se, U, o) => {
         "use strict";
-        o.d(R, {b: () => g});
-        var c = o(70655), i = o(46461), e = o(56418);
+        o.d(U, {b: () => g});
+        var d = o(70655), i = o(46461), e = o(56418);
         const m = {
             default: {
                 ogg: "/assets/audio/buttons/hover--primary.ogg",
@@ -15935,20 +15896,20 @@
                     super(...arguments), this.audibleHover = "", this.audibleClick = "", this.howl = i.Howl
                 }
 
-                updated(v) {
-                    super.updated(v), this.updateHoverSound(), this.updateClickSound()
+                updated(_) {
+                    super.updated(_), this.updateHoverSound(), this.updateClickSound()
                 }
 
                 disconnectedCallback() {
                     super.disconnectedCallback(), this.disconnectHover(), this.disconnectClick()
                 }
 
-                handleHover(v) {
-                    v.preventDefault(), this.hoverControl.play()
+                handleHover(_) {
+                    _.preventDefault(), this.hoverControl.play()
                 }
 
-                handleClick(v) {
-                    v.preventDefault(), this.clickControl.play()
+                handleClick(_) {
+                    _.preventDefault(), this.clickControl.play()
                 }
 
                 updateHoverSound() {
@@ -15976,13 +15937,12 @@
                 }
             }
 
-            return (0, c.gn)([(0, e.C)({type: String})], t.prototype, "audibleHover", void 0), (0, c.gn)([(0, e.C)({type: String})], t.prototype, "audibleClick", void 0), t
+            return (0, d.gn)([(0, e.C)({type: String})], t.prototype, "audibleHover", void 0), (0, d.gn)([(0, e.C)({type: String})], t.prototype, "audibleClick", void 0), t
         }
-    },
-    72985: (se, R, o) => {
+    }, 72985: (se, U, o) => {
         "use strict";
-        o.d(R, {Am: () => m, lH: () => g, Xg: () => i, s: () => c});
-        const c = t => class extends t {
+        o.d(U, {Am: () => m, lH: () => g, Xg: () => i, s: () => d});
+        const d = t => class extends t {
             update(n) {
                 this.setAttribute("disabled", `${this.disabled}`), this.setAttribute("loading", `${this.loading}`), this.setAttribute("horizontalStretch", `${this.horizontalStretch}`), super.update(n)
             }
@@ -16000,8 +15960,8 @@
             }
 
             clickLinkHandler() {
-                const {target: n, href: v} = this;
-                n ? window.open(v, n) : window.location.href = v
+                const {target: n, href: _} = this;
+                n ? window.open(_, n) : window.location.href = _
             }
         };
         var y = o(46461);
@@ -16092,11 +16052,10 @@
             }
         };
         o(72650)
-    },
-    93270: (se, R, o) => {
+    }, 93270: (se, U, o) => {
         "use strict";
-        o.d(R, {Z: () => y});
-        var c = o(70655), i = o(56418);
+        o.d(U, {Z: () => y});
+        var d = o(70655), i = o(56418);
         const y = e => {
             class m extends e {
                 constructor() {
@@ -16121,13 +16080,12 @@
                 }
             }
 
-            return (0, c.gn)([(0, i.C)({type: String})], m.prototype, "href", void 0), (0, c.gn)([(0, i.C)({type: String})], m.prototype, "target", void 0), m
+            return (0, d.gn)([(0, i.C)({type: String})], m.prototype, "href", void 0), (0, d.gn)([(0, i.C)({type: String})], m.prototype, "target", void 0), m
         }
-    },
-    47925: (se, R, o) => {
+    }, 47925: (se, U, o) => {
         "use strict";
-        o.r(R), o.d(R, {breakpointSizeMapping: () => c});
-        const c = {
+        o.r(U), o.d(U, {breakpointSizeMapping: () => d});
+        const d = {
             "2x-small": "360px",
             "x-small": "512px",
             small: "768px",
@@ -16136,11 +16094,10 @@
             "x-large": "1400px",
             "2x-large": "1600px"
         }
-    },
-    91418: (se, R, o) => {
+    }, 91418: (se, U, o) => {
         "use strict";
-        o.r(R), o.d(R, {
-            gunmetal: () => c,
+        o.r(U), o.d(U, {
+            gunmetal: () => d,
             light: () => i,
             white: () => y,
             black: () => e,
@@ -16150,18 +16107,18 @@
             gold: () => r,
             aqua: () => t,
             card: () => n,
-            alert: () => v,
-            quality: () => k,
-            rarity: () => P,
-            god: () => I,
-            fillColoringRules: () => A
+            alert: () => _,
+            quality: () => S,
+            rarity: () => k,
+            god: () => L,
+            fillColoringRules: () => D
         });
-        const c = {100: "#90CAF9", 300: "#527493", 500: "#3D5A74", 700: "#1D2F41", 900: "#0F1B27"},
+        const d = {100: "#90CAF9", 300: "#527493", 500: "#3D5A74", 700: "#1D2F41", 900: "#0F1B27"},
             i = {100: "#F6F6F6", 300: "#D7D7D7", 500: "#B6B6B6", 700: "#979797", 900: "#7F7F7F"}, y = "#ffffff",
             e = "#000000", m = {100: "#7F7F7F", 300: "#646464", 500: "#464646", 700: "#272727", 900: "#0A0A0A"},
             p = {100: "#AFFAED", 300: "#03A9F4", 500: "#54BBCD"}, g = {100: "#FCF7D4", 300: "#F7EA9B", 500: "#F2DC63"},
             r = {100: "#FFF2D8", 300: "#FBC02D", 500: "#C6A052"}, t = {200: "#affaed", 300: "#8be1e0", 500: "#54bbcd"},
-            n = {creature: "#ebd08a", spell: "#76b5ad", weapon: "#7a608c"}, v = "#FF8B01", k = {
+            n = {creature: "#ebd08a", spell: "#76b5ad", weapon: "#7a608c"}, _ = "#FF8B01", S = {
                 plain: "#8295A2",
                 bronze: "#6A8B35",
                 iron: "#3D91B9",
@@ -16170,7 +16127,7 @@
                 gold: "#E5D93C",
                 diamond: "#94E6FB",
                 mythic: "#ffffff"
-            }, P = {common: "#6D6C6D", rare: "#3C8ED2", epic: "#6D1FC4", legendary: "#D8A638", mythic: "#D02C3A"}, I = {
+            }, k = {common: "#6D6C6D", rare: "#3C8ED2", epic: "#6D1FC4", legendary: "#D8A638", mythic: "#D02C3A"}, L = {
                 deception: {primary: "#FA77FC", secondary: "#CA3FD8", tertiary: "#8F189B"},
                 war: {primary: "#FF8B01", secondary: "#D73333", tertiary: "#99011A"},
                 death: {primary: "#9C4EF9", secondary: "#35145B", tertiary: "#35145B"},
@@ -16178,21 +16135,20 @@
                 nature: {primary: "#9DE764", secondary: "#5AC33F", tertiary: "#4C772F"},
                 light: {primary: "#FBE29F", secondary: "#FFD76E", tertiary: "#FAB248"}
             },
-            A = "\n  /* Styles to use when there is a gradientFill set ... */\n  :host([fillGradient]),\n  :host([fillGradient]) ::slotted(*) {\n    background: var(--textFillGradient);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n  }\n\n  /* Styles to use when there is a simple fill color set ... */\n  :host([fillColor]),\n  :host([fillColor]) ::slotted(*) {\n    color: var(--textFillColor);\n\n    /* Use the text coloring for border color, and allow it to be over-written */\n    border-color: var(--textFillColor);\n  }\n\n  /* Styles to use when there is a simple fill color hover set ... */\n  :host([fillColorHover]:hover),\n  :host([fillColorHover]:hover) ::slotted(*) {\n    color: var(--textFillColorHover);\n\n    /* Use the text coloring for border color, and allow it to be over-written */\n    border-color: var(--textFillColorHover);\n  }\n\n  /* Styles to use when there is a simple border color set ... */\n  :host([borderColor]),\n  :host([borderColor]) ::slotted(*) {\n    border-color: var(--borderColor);\n  }\n\n  /* Styles to use when there is a simple border color hover set ... */\n  :host([borderColorHover]:hover),\n  :host([borderColorHover]:hover) ::slotted(*) {\n    border-color: var(--borderColorHover);\n  }\n\n  /* Styles to use when there is a simple background color fill set ... */\n  :host([backgroundFillColor]),\n  :host([backgroundFillColor]) ::slotted(*) {\n    background-color: var(--backgroundFillColor);\n  }\n\n  /* Styles to use when there is a simple background color fill hover set ... */\n  :host([backgroundFillColorHover]:hover),\n  :host([backgroundFillColorHover]:hover) ::slotted(*) {\n    background-color: var(--backgroundFillColorHover);\n  }\n"
-    },
-    65281: (se, R, o) => {
+            D = "\n  /* Styles to use when there is a gradientFill set ... */\n  :host([fillGradient]),\n  :host([fillGradient]) ::slotted(*) {\n    background: var(--textFillGradient);\n    -webkit-background-clip: text;\n    background-clip: text;\n    -webkit-text-fill-color: transparent;\n  }\n\n  /* Styles to use when there is a simple fill color set ... */\n  :host([fillColor]),\n  :host([fillColor]) ::slotted(*) {\n    color: var(--textFillColor);\n\n    /* Use the text coloring for border color, and allow it to be over-written */\n    border-color: var(--textFillColor);\n  }\n\n  /* Styles to use when there is a simple fill color hover set ... */\n  :host([fillColorHover]:hover),\n  :host([fillColorHover]:hover) ::slotted(*) {\n    color: var(--textFillColorHover);\n\n    /* Use the text coloring for border color, and allow it to be over-written */\n    border-color: var(--textFillColorHover);\n  }\n\n  /* Styles to use when there is a simple border color set ... */\n  :host([borderColor]),\n  :host([borderColor]) ::slotted(*) {\n    border-color: var(--borderColor);\n  }\n\n  /* Styles to use when there is a simple border color hover set ... */\n  :host([borderColorHover]:hover),\n  :host([borderColorHover]:hover) ::slotted(*) {\n    border-color: var(--borderColorHover);\n  }\n\n  /* Styles to use when there is a simple background color fill set ... */\n  :host([backgroundFillColor]),\n  :host([backgroundFillColor]) ::slotted(*) {\n    background-color: var(--backgroundFillColor);\n  }\n\n  /* Styles to use when there is a simple background color fill hover set ... */\n  :host([backgroundFillColorHover]:hover),\n  :host([backgroundFillColorHover]:hover) ::slotted(*) {\n    background-color: var(--backgroundFillColorHover);\n  }\n"
+    }, 65281: (se, U, o) => {
         "use strict";
-        o.r(R), o.d(R, {
-            animation: () => c,
+        o.r(U), o.d(U, {
+            animation: () => d,
             breakpoints: () => r,
             colors: () => t,
             gradients: () => i,
-            measurements: () => S,
-            typography: () => b,
-            uifx: () => T
+            measurements: () => P,
+            typography: () => C,
+            uifx: () => $
         });
-        var c = {};
-        o.r(c), o.d(c, {
+        var d = {};
+        o.r(d), o.d(d, {
             slowTransition: () => g,
             slowTransitionDuration: () => m,
             standardTransition: () => p,
@@ -16201,14 +16157,14 @@
         });
         var i = {};
         o.r(i), o.d(i, {
-            apocyan: () => P,
-            dark: () => I,
-            god: () => f,
+            apocyan: () => k,
+            dark: () => L,
+            god: () => v,
             gold: () => n,
-            gunmetal: () => v,
-            light: () => A,
+            gunmetal: () => _,
+            light: () => D,
             textFill: () => O,
-            yellow: () => k
+            yellow: () => S
         });
         const y = "150ms", e = "ease-in-out", m = "300ms", p = s => `\n  transition: ${s} ${y}\n  ${e};\n`,
             g = s => `\n  transition: ${s} ${m}\n  ${e};\n`;
@@ -16218,18 +16174,18 @@
                 mirror: (s = "bottom") => `\n  linear-gradient(\n    to ${s},\n    ${t.gold[500]} 0%,\n    ${t.gold[100]} 50%,\n    ${t.gold[500]} 100%\n  );\n`,
                 complex: (s = "top") => `\n  linear-gradient(\n    to ${s},\n    #FFFDF0 0%,\n    #FBEBC1 14%,\n    #E6C675 25%,\n    #F6DF6E 40%,\n    #B27E18 60%,\n    #DEAB61 73%,\n    #A67B4B 85%,\n    #664320 100%\n  );\n`,
                 horizontal: (s = "right") => `\n  linear-gradient(\n    to ${s},\n    ${t.gold[500]} 3%,\n    ${t.gold[300]} 25%,\n    ${t.gold[100]} 50%,\n    ${t.gold[300]} 75%,\n    ${t.gold[500]} 97%\n  );\n`
-            }, v = {
+            }, _ = {
                 simple: (s = "bottom") => `\n  linear-gradient(\n    to ${s},\n    ${t.gunmetal[900]} 0%,\n    ${t.gunmetal[700]} 100%\n  );`,
                 mirror: (s = "bottom") => `\n  linear-gradient(\n    to ${s},\n    ${t.gunmetal[900]} 0%,\n    ${t.gunmetal[700]} 50%,\n    ${t.gunmetal[900]} 100%\n  );\n`
             },
-            k = {simple: (s = "top") => `\n  linear-gradient(\n    to ${s},\n    ${t.yellow[100]} 0%,\n    ${t.yellow[300]} 50%,\n    ${t.yellow[500]} 100%\n  );\n`},
-            P = {
+            S = {simple: (s = "top") => `\n  linear-gradient(\n    to ${s},\n    ${t.yellow[100]} 0%,\n    ${t.yellow[300]} 50%,\n    ${t.yellow[500]} 100%\n  );\n`},
+            k = {
                 simple: (s = "top") => `linear-gradient(\n    to ${s},\n    ${t.apocyan[100]} 0%,\n    ${t.apocyan[500]} 100%\n  );`,
                 mirror: (s = "top") => `linear-gradient(\n    to ${s},\n    ${t.apocyan[500]} 0%,\n    ${t.apocyan[100]} 50%,\n    ${t.apocyan[500]} 100%\n  );`
             },
-            I = {simple: (s = "top") => `linear-gradient(\n    to ${s},\n    ${t.dark[500]} 100%,\n    ${t.dark[900]} 100%\n  );`},
-            A = {simple: (s = "top") => `linear-gradient(\n    to ${s},\n    ${t.light[100]} 100%,\n    ${t.light[300]} 100%\n  );`},
-            f = {
+            L = {simple: (s = "top") => `linear-gradient(\n    to ${s},\n    ${t.dark[500]} 100%,\n    ${t.dark[900]} 100%\n  );`},
+            D = {simple: (s = "top") => `linear-gradient(\n    to ${s},\n    ${t.light[100]} 100%,\n    ${t.light[300]} 100%\n  );`},
+            v = {
                 deception: (s = "top") => `linear-gradient(\n      to ${s},\n      ${t.god.deception.primary} 0%,\n      ${t.god.deception.secondary} 50%,\n      ${t.god.deception.tertiary} 100%\n    )`,
                 war: (s = "top") => `linear-gradient(\n      to ${s},\n      ${t.god.war.primary} 0%,\n      ${t.god.war.secondary} 50%,\n      ${t.god.war.tertiary} 100%\n    )`,
                 death: (s = "top") => `linear-gradient(\n      to ${s},\n      ${t.god.death.primary} 0%,\n      ${t.god.death.secondary} 50%,\n      ${t.god.death.tertiary} 100%\n    )`,
@@ -16238,11 +16194,10 @@
                 light: (s = "top") => `\n    linear-gradient(\n      to ${s},\n      ${t.god.light.primary} 0%,\n      ${t.god.light.secondary} 50%,\n      ${t.god.light.tertiary} 100%\n    )`
             },
             O = s => `background: ${s};\n  background-clip: text;\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;`;
-        var S = o(49219), b = o(66974), T = o(61462)
-    },
-    49219: (se, R, o) => {
+        var P = o(49219), C = o(66974), $ = o(61462)
+    }, 49219: (se, U, o) => {
         "use strict";
-        o.r(R), o.d(R, {
+        o.r(U), o.d(U, {
             spacingAmountMapping: () => i,
             standardTransitionDuration: () => y,
             standardTransitionEasing: () => e,
@@ -16252,12 +16207,12 @@
             standardHeaderHeightInCss: () => r,
             standardHeaderAlertBarHeight: () => t,
             headerBarZLevel: () => n,
-            electronMenuBarZLevel: () => v,
-            modalLayerZLevel: () => k,
-            electronTitleBarHeight: () => P,
-            imageQualities: () => I
+            electronMenuBarZLevel: () => _,
+            modalLayerZLevel: () => S,
+            electronTitleBarHeight: () => k,
+            imageQualities: () => L
         });
-        var c = o(80102);
+        var d = o(80102);
         const i = {
                 "2x-small": "2px",
                 "x-small": "4px",
@@ -16273,13 +16228,12 @@
                 "7x-large": "128px",
                 "8x-large": "192px",
                 "9x-large": "320px"
-            }, y = "150ms", e = "ease-in-out", m = "1px", p = (0, c.gridUnits)(7), g = 80, r = "80px", t = 50, n = 22,
-            v = 23, k = 22, P = (0, c.gridUnits)(7), I = {small: 128, normal: 256, high: 512, xHigh: 720, best: 1024}
-    },
-    66974: (se, R, o) => {
+            }, y = "150ms", e = "ease-in-out", m = "1px", p = (0, d.gridUnits)(7), g = 80, r = "80px", t = 50, n = 22,
+            _ = 23, S = 22, k = (0, d.gridUnits)(7), L = {small: 128, normal: 256, high: 512, xHigh: 720, best: 1024}
+    }, 66974: (se, U, o) => {
         "use strict";
-        o.r(R), o.d(R, {
-            iconTextStyles: () => c,
+        o.r(U), o.d(U, {
+            iconTextStyles: () => d,
             headingFont: () => i,
             simpleFont: () => y,
             textAlignRules: () => e,
@@ -16287,7 +16241,7 @@
             simpleTextSizeMapping: () => p,
             baseSimpleTextStyles: () => g
         });
-        const c = "\n  font-family: 'gu-cons';\n  font-feature-settings: 'liga' 1;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  vertical-align: middle;\n  letter-spacing: 0;\n  line-height: 1;\n\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n",
+        const d = "\n  font-family: 'gu-cons';\n  font-feature-settings: 'liga' 1;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  vertical-align: middle;\n  letter-spacing: 0;\n  line-height: 1;\n\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n",
             i = "\n  font-family: 'Unchained', serif;\n", y = "\n  font-family: 'Open Sans', sans-serif;\n",
             e = "\n  :host([align='center']),\n  :host([align='center']) ::slotted(*) {\n    text-align: center;\n  }\n\n  :host([align='left']),\n  :host([align='left']) ::slotted(*) {\n    text-align: left;\n  }\n\n  :host([align='right']),\n  :host([align='right']) ::slotted(*) {\n    text-align: right;\n  }\n",
             m = {
@@ -16300,18 +16254,16 @@
                 "2x-large": "72px"
             }, p = {large: "20px", small: "16px", help: "14px", tag: "12px", micro: "10px"},
             g = `\n  ${y}\n  line-height: 1.1;\n`
-    },
-    61462: (se, R, o) => {
+    }, 61462: (se, U, o) => {
         "use strict";
-        o.r(R), o.d(R, {userSelect: () => c});
-        const c = i => `\n    -webkit-user-select: ${i};\n    user-select: ${i};\n    pointer-events: ${i};\n  `
-    },
-    58672: (se, R, o) => {
+        o.r(U), o.d(U, {userSelect: () => d});
+        const d = i => `\n    -webkit-user-select: ${i};\n    user-select: ${i};\n    pointer-events: ${i};\n  `
+    }, 58672: (se, U, o) => {
         "use strict";
-        o.d(R, {x: () => i});
-        var c = o(25297);
+        o.d(U, {x: () => i});
+        var d = o(25297);
 
-        function i({renderer: y, baseClass: e = c.J, props: m = {}}) {
+        function i({renderer: y, baseClass: e = d.J, props: m = {}}) {
             const p = class extends e {
                 render() {
                     return y.call(this, this)
@@ -16319,12 +16271,11 @@
             };
             return Object.entries(m).forEach(([g, r]) => p[g] = r), p
         }
-    },
-    51256: (se, R, o) => {
+    }, 51256: (se, U, o) => {
         "use strict";
-        var c = o(70655), i = o(32830), y = o(56418), e = o(86041), m = o(5284), p = o(65171), g = o(26532),
+        var d = o(70655), i = o(32830), y = o(56418), e = o(86041), m = o(5284), p = o(65171), g = o(26532),
             r = o(65281), t = o(47925), n = o(91418);
-        let v = class extends i.oi {
+        let _ = class extends i.oi {
             constructor() {
                 super(...arguments), this.size = "small", this.align = "center", this.responsiveSize = []
             }
@@ -16394,11 +16345,11 @@
                 return this.responsiveSize.length ? i.dy`
           <style>
             /* DEFINE RESPONSIVE SIZING */
-            ${this.responsiveSize.map(({breakpoint: P, size: I}) => i.iv`
-                @media screen and (min-width: ${(0, g.asCssProp)(t.breakpointSizeMapping[P])}) {
+            ${this.responsiveSize.map(({breakpoint: k, size: L}) => i.iv`
+                @media screen and (min-width: ${(0, g.asCssProp)(t.breakpointSizeMapping[k])}) {
                   :host(.overWrite[size='${(0, g.asCssProp)(this.size)}']),
                   :host(.overWrite[size='${(0, g.asCssProp)(this.size)}']) ::slotted(*) {
-                    font-size: ${(0, g.asCssProp)(r.typography.headingSizeMapping[I])} !important;
+                    font-size: ${(0, g.asCssProp)(r.typography.headingSizeMapping[L])} !important;
                   }
                 }
               `)}
@@ -16407,23 +16358,22 @@
             }
 
             render() {
-                const {fillColor: P, fillGradient: I, fillGradientTarget: A} = this;
+                const {fillColor: k, fillGradient: L, fillGradientTarget: D} = this;
                 return (0, p.updateColoringVariables)({
                     component: this,
-                    fillColor: P,
-                    fillGradient: I,
-                    fillGradientTarget: A
+                    fillColor: k,
+                    fillGradient: L,
+                    fillGradientTarget: D
                 }), this.setAttribute("size", this.size), this.responsiveSize.length ? this.classList.add("overWrite") : this.classList.remove("overWrite"), i.dy`
       ${this.generateMediaQueries()}
       <slot></slot>
     `
             }
         };
-        (0, c.gn)([(0, y.C)({type: String})], v.prototype, "size", void 0), (0, c.gn)([(0, y.C)({type: String})], v.prototype, "align", void 0), (0, c.gn)([(0, y.C)({type: String})], v.prototype, "fillColor", void 0), (0, c.gn)([(0, y.C)({type: String})], v.prototype, "fillGradient", void 0), (0, c.gn)([(0, y.C)({type: String})], v.prototype, "fillGradientTarget", void 0), (0, c.gn)([(0, y.C)({type: Array})], v.prototype, "responsiveSize", void 0), v = (0, c.gn)([(0, e.M)("gu-heading-text")], v)
-    },
-    11015: (se, R, o) => {
+        (0, d.gn)([(0, y.C)({type: String})], _.prototype, "size", void 0), (0, d.gn)([(0, y.C)({type: String})], _.prototype, "align", void 0), (0, d.gn)([(0, y.C)({type: String})], _.prototype, "fillColor", void 0), (0, d.gn)([(0, y.C)({type: String})], _.prototype, "fillGradient", void 0), (0, d.gn)([(0, y.C)({type: String})], _.prototype, "fillGradientTarget", void 0), (0, d.gn)([(0, y.C)({type: Array})], _.prototype, "responsiveSize", void 0), _ = (0, d.gn)([(0, e.M)("gu-heading-text")], _)
+    }, 11015: (se, U, o) => {
         "use strict";
-        var c = o(70655), i = o(32830), y = o(86041), e = o(52102);
+        var d = o(70655), i = o(32830), y = o(86041), e = o(52102);
         let m = class extends e._ {
             static get styles() {
                 return i.iv`
@@ -16456,15 +16406,14 @@
     `
             }
         };
-        m = (0, c.gn)([(0, y.M)("gu-paragraph-text")], m)
-    },
-    52102: (se, R, o) => {
+        m = (0, d.gn)([(0, y.M)("gu-paragraph-text")], m)
+    }, 52102: (se, U, o) => {
         "use strict";
-        o.d(R, {_: () => P});
-        var c = o(70655), i = o(32830), y = o(56418), e = o(86041), m = o(5284), p = o(65281), g = o(26532),
+        o.d(U, {_: () => k});
+        var d = o(70655), i = o(32830), y = o(56418), e = o(86041), m = o(5284), p = o(65281), g = o(26532),
             r = o(91418), t = o(66974), n = o(61462);
-        const v = `\n  font-size: ${(0, g.asCssProp)(p.typography.simpleTextSizeMapping.tag)};\n  font-weight: 700;\n  text-transform: uppercase;\n`;
-        let P = class extends i.oi {
+        const _ = `\n  font-size: ${(0, g.asCssProp)(p.typography.simpleTextSizeMapping.tag)};\n  font-weight: 700;\n  text-transform: uppercase;\n`;
+        let k = class extends i.oi {
             constructor() {
                 super(...arguments), this.align = "center", this.fontStyle = "regular", this.responsiveKind = []
             }
@@ -16505,7 +16454,7 @@
 
   :host([kind='tag']),
   :host([kind='tag']) ::slotted(*) {
-    ${(0, g.asCssProp)(v)};
+    ${(0, g.asCssProp)(_)};
   }
 
   :host([fontStyle='italic']),
@@ -16524,18 +16473,18 @@
             }
 
             generateMediaQueries() {
-                const {breakpointSizeMapping: A} = p.breakpoints, {asCssProp: f} = m.ZB, {simpleTextSizeMapping: O} = p.typography;
+                const {breakpointSizeMapping: D} = p.breakpoints, {asCssProp: v} = m.ZB, {simpleTextSizeMapping: O} = p.typography;
                 return this.responsiveKind.length ? i.dy`
           <style>
             /* DEFINE RESPONSIVE SIZING */
-            ${this.responsiveKind.map(({breakpoint: S, kind: b = "small"}) => i.iv`
-                @media screen and (min-width: ${f(A[S])}) {
-                  :host(.overWrite[kind='${f(this.kind)}']),
-                  :host(.overWrite[kind='${f(this.kind)}']) ::slotted(*) {
-                    font-size: ${f(O[b])} !important;
-                    ${f("tag" !== b ? "bold" === this.fontWeight ? "font-weight: 700" : "font-weight: 400" : "")};
-                    ${f("tag" === b ? v : "")};
-                    ${f("help" === b ? "font-style: italic" : "")};
+            ${this.responsiveKind.map(({breakpoint: P, kind: C = "small"}) => i.iv`
+                @media screen and (min-width: ${v(D[P])}) {
+                  :host(.overWrite[kind='${v(this.kind)}']),
+                  :host(.overWrite[kind='${v(this.kind)}']) ::slotted(*) {
+                    font-size: ${v(O[C])} !important;
+                    ${v("tag" !== C ? "bold" === this.fontWeight ? "font-weight: 700" : "font-weight: 400" : "")};
+                    ${v("tag" === C ? _ : "")};
+                    ${v("help" === C ? "font-style: italic" : "")};
                   }
                 }
               `)}
@@ -16544,59 +16493,57 @@
             }
 
             render() {
-                const {updateColoringVariables: A} = m.gt, {
-                    fillColor: f,
+                const {updateColoringVariables: D} = m.gt, {
+                    fillColor: v,
                     fillGradient: O,
-                    fillGradientTarget: S,
-                    borderColor: b,
-                    fillColorHover: T
+                    fillGradientTarget: P,
+                    borderColor: C,
+                    fillColorHover: $
                 } = this;
-                return A({
+                return D({
                     component: this,
-                    fillColor: f,
-                    fillColorHover: T,
+                    fillColor: v,
+                    fillColorHover: $,
                     fillGradient: O,
-                    fillGradientTarget: S,
-                    borderColor: b
+                    fillGradientTarget: P,
+                    borderColor: C
                 }), this.setAttribute("kind", this.kind), this.responsiveKind.length ? this.classList.add("overWrite") : this.classList.remove("overWrite"), i.dy`
       ${this.generateMediaQueries()} ${this.text ? this.text : ""}
       <slot></slot>
     `
             }
         };
-        (0, c.gn)([(0, y.C)()], P.prototype, "kind", void 0), (0, c.gn)([(0, y.C)()], P.prototype, "align", void 0), (0, c.gn)([(0, y.C)()], P.prototype, "fontStyle", void 0), (0, c.gn)([(0, y.C)()], P.prototype, "fontWeight", void 0), (0, c.gn)([(0, y.C)()], P.prototype, "text", void 0), (0, c.gn)([(0, y.C)()], P.prototype, "fillColor", void 0), (0, c.gn)([(0, y.C)()], P.prototype, "fillColorHover", void 0), (0, c.gn)([(0, y.C)()], P.prototype, "borderColor", void 0), (0, c.gn)([(0, y.C)()], P.prototype, "fillGradient", void 0), (0, c.gn)([(0, y.C)()], P.prototype, "fillGradientTarget", void 0), (0, c.gn)([(0, y.C)()], P.prototype, "responsiveKind", void 0), P = (0, c.gn)([(0, e.M)("gu-simple-text")], P)
-    },
-    56302: (se, R, o) => {
+        (0, d.gn)([(0, y.C)()], k.prototype, "kind", void 0), (0, d.gn)([(0, y.C)()], k.prototype, "align", void 0), (0, d.gn)([(0, y.C)()], k.prototype, "fontStyle", void 0), (0, d.gn)([(0, y.C)()], k.prototype, "fontWeight", void 0), (0, d.gn)([(0, y.C)()], k.prototype, "text", void 0), (0, d.gn)([(0, y.C)()], k.prototype, "fillColor", void 0), (0, d.gn)([(0, y.C)()], k.prototype, "fillColorHover", void 0), (0, d.gn)([(0, y.C)()], k.prototype, "borderColor", void 0), (0, d.gn)([(0, y.C)()], k.prototype, "fillGradient", void 0), (0, d.gn)([(0, y.C)()], k.prototype, "fillGradientTarget", void 0), (0, d.gn)([(0, y.C)()], k.prototype, "responsiveKind", void 0), k = (0, d.gn)([(0, e.M)("gu-simple-text")], k)
+    }, 56302: (se, U, o) => {
         "use strict";
-        o.d(R, {X8: () => c, IU: () => m, Qo: () => r});
-        var c = (() => {
-            return (t = c || (c = {})).FETCH_USER_WALLET = "[Account] Fetch User Wallet", t.FETCH_USER_WALLET_SUCCESS = "[Account] Fetch User Wallet Success", t.FETCH_USER_WALLET_ERROR = "[Account] Fetch User Wallet Error", t.UPDATE_USER_ETH_BALANCE = "[Account] Update User Eth Balance", t.FETCH_USER_ACCOUNT = "[Account] Fetch User Account", t.FETCH_USER_ACCOUNT_SUCCESS = "[Account] Fetch User Account Success", t.FETCH_USER_ACCOUNT_ERROR = "[Account] Fetch User Account Error", c;
+        o.d(U, {X8: () => d, IU: () => m, Qo: () => r});
+        var d = (() => {
+            return (t = d || (d = {})).FETCH_USER_WALLET = "[Account] Fetch User Wallet", t.FETCH_USER_WALLET_SUCCESS = "[Account] Fetch User Wallet Success", t.FETCH_USER_WALLET_ERROR = "[Account] Fetch User Wallet Error", t.UPDATE_USER_ETH_BALANCE = "[Account] Update User Eth Balance", t.FETCH_USER_ACCOUNT = "[Account] Fetch User Account", t.FETCH_USER_ACCOUNT_SUCCESS = "[Account] Fetch User Account Success", t.FETCH_USER_ACCOUNT_ERROR = "[Account] Fetch User Account Error", d;
             var t
         })();
 
         class m {
             constructor() {
-                this.type = c.FETCH_USER_WALLET
+                this.type = d.FETCH_USER_WALLET
             }
         }
 
         class r {
             constructor(n) {
-                this.payload = n, this.type = c.UPDATE_USER_ETH_BALANCE
+                this.payload = n, this.type = d.UPDATE_USER_ETH_BALANCE
             }
         }
-    },
-    43991: (se, R, o) => {
+    }, 43991: (se, U, o) => {
         "use strict";
-        o.d(R, {z: () => P});
-        var c = o(40520), i = o(73307), y = o(52909), e = o(591), m = o(30567), p = o(72986), g = o(24850), r = (() => {
-            return (I = r || (r = {})).CARD = "card", I.DECK = "deck", I.PACKAGE = "package", I.TOME = "tome", I.CARD_BACK = "cardback", I.BOARD = "board", I.TRINKET = "trinket", I.EMOTE = "emote", I.ICON = "icon", r;
-            var I
-        })(), v = o(5e3), k = o(55778);
-        let P = (() => {
-            class I {
-                constructor(f, O, S, b) {
-                    this.authService = f, this.marketplaceApiService = O, this.authHostService = S, this.guApiService = b, this.dataStore = {
+        o.d(U, {z: () => k});
+        var d = o(40520), i = o(73307), y = o(52909), e = o(591), m = o(30567), p = o(72986), g = o(24850), r = (() => {
+            return (L = r || (r = {})).CARD = "card", L.DECK = "deck", L.PACKAGE = "package", L.TOME = "tome", L.CARD_BACK = "cardback", L.BOARD = "board", L.TRINKET = "trinket", L.EMOTE = "emote", L.ICON = "icon", r;
+            var L
+        })(), _ = o(5e3), S = o(55778);
+        let k = (() => {
+            class L {
+                constructor(v, O, P, C) {
+                    this.authService = v, this.marketplaceApiService = O, this.authHostService = P, this.guApiService = C, this.dataStore = {
                         usersSoldCards: [],
                         userHasNewSoldCards: !1
                     }, this._usersSoldCards = new e.X([]), this._userHasNewSoldCards = new e.X(!1), console.log("@Cerberus/AssetsService constructor")
@@ -16611,152 +16558,149 @@
                 }
 
                 getBoardsAndTrinkets() {
-                    const f = this.authService.getUserId();
-                    return this.marketplaceApiService.get(`/user/${f}/asset?type=board&type=trinket`)
+                    const v = this.authService.getUserId();
+                    return this.marketplaceApiService.get(`/user/${v}/asset?type=board&type=trinket`)
                 }
 
-                getAssetFilters(f) {
-                    return this.marketplaceApiService.get("/property", {params: this.appendFilterParams(f)})
+                getAssetFilters(v) {
+                    return this.marketplaceApiService.get("/property", {params: this.appendFilterParams(v)})
                 }
 
-                getAssetGroups(f, O) {
-                    return this.marketplaceApiService.get("/assetgroup", {params: this.appendSearchParams(f, O)})
+                getAssetGroups(v, O) {
+                    return this.marketplaceApiService.get("/assetgroup", {params: this.appendSearchParams(v, O)})
                 }
 
-                appendSearchParams(f, O) {
-                    let S = new c.LE;
-                    if (O.sortBy && (S = S.append("sort", O.sortBy)), O.orderBy && (S = S.append("order", O.orderBy)), O.groupBy) {
-                        switch (S = S.append("group", O.groupBy), O.assetType) {
+                appendSearchParams(v, O) {
+                    let P = new d.LE;
+                    if (O.sortBy && (P = P.append("sort", O.sortBy)), O.orderBy && (P = P.append("order", O.orderBy)), O.groupBy) {
+                        switch (P = P.append("group", O.groupBy), O.assetType) {
                             case r.CARD:
-                                S = S.append("group", "quality_name"), S = S.append("group", "quality");
+                                P = P.append("group", "quality_name"), P = P.append("group", "quality");
                                 break;
                             case r.BOARD:
-                                S = S.append("group", "level");
+                                P = P.append("group", "level");
                                 break;
                             case r.TRINKET:
-                                S = S.append("group", "heads");
+                                P = P.append("group", "heads");
                                 break;
                             default:
-                                S = S.append("group", "quality_name"), S = S.append("group", "quality")
+                                P = P.append("group", "quality_name"), P = P.append("group", "quality")
                         }
-                        S = S.append("group", "proto")
+                        P = P.append("group", "proto")
                     }
-                    return O.splitBy && (S = S.append("split", O.splitBy)), O.currentPage && (S = S.append("page", O.currentPage.toString())), O.perPage && (S = S.append("perPage", O.perPage.toString())), O.assetType && (S = S.append("asset_type", O.assetType)), f.owner && (S = S.append("owner", f.owner)), f.token_id && (S = S.append("token_id", f.token_id)), f.contract && (S = S.append("contract", f.contract)), f.properties && f.properties.length > 0 && (S = S.append("properties", this.stringifyMetaDataFilters(f.properties))), f.class_properties && f.class_properties.length > 0 && (S = S.append("class_properties", this.stringifyMetaDataFilters(f.class_properties))), S
+                    return O.splitBy && (P = P.append("split", O.splitBy)), O.currentPage && (P = P.append("page", O.currentPage.toString())), O.perPage && (P = P.append("perPage", O.perPage.toString())), O.assetType && (P = P.append("asset_type", O.assetType)), v.owner && (P = P.append("owner", v.owner)), v.token_id && (P = P.append("token_id", v.token_id)), v.contract && (P = P.append("contract", v.contract)), v.properties && v.properties.length > 0 && (P = P.append("properties", this.stringifyMetaDataFilters(v.properties))), v.class_properties && v.class_properties.length > 0 && (P = P.append("class_properties", this.stringifyMetaDataFilters(v.class_properties))), P
                 }
 
-                appendFilterParams(f) {
-                    let O = new c.LE;
-                    return f.owner && (O = O.append("owner", f.owner)), f.asset_type && (O = O.append("asset_type", f.asset_type)), f.token_id && (O = O.append("token_id", f.token_id)), f.contract && (O = O.append("contract", f.contract)), f.properties && f.properties.length > 0 && (console.log("properties", this.stringifyMetaDataFilters(f.properties)), O = O.append("properties", this.stringifyMetaDataFilters(f.properties))), f.class_properties && f.class_properties.length > 0 && (O = O.append("class_properties", this.stringifyMetaDataFilters(f.class_properties))), O
+                appendFilterParams(v) {
+                    let O = new d.LE;
+                    return v.owner && (O = O.append("owner", v.owner)), v.asset_type && (O = O.append("asset_type", v.asset_type)), v.token_id && (O = O.append("token_id", v.token_id)), v.contract && (O = O.append("contract", v.contract)), v.properties && v.properties.length > 0 && (console.log("properties", this.stringifyMetaDataFilters(v.properties)), O = O.append("properties", this.stringifyMetaDataFilters(v.properties))), v.class_properties && v.class_properties.length > 0 && (O = O.append("class_properties", this.stringifyMetaDataFilters(v.class_properties))), O
                 }
 
-                stringifyMetaDataFilters(f) {
-                    const O = JSON.stringify(f);
+                stringifyMetaDataFilters(v) {
+                    const O = JSON.stringify(v);
                     return encodeURI(O)
                 }
 
-                getSoldAssets({userId: f = this.authService.getUserId(), showNotifications: O = !0} = {}) {
-                    console.log("@Cerberus/AssetsService.getSoldAssets({ userId, showNotifications })", f, O), this.marketplaceApiService.get(`/user/${f}/sold`).pipe((0, p.q)(1)).subscribe(S => {
-                        O && this.checkForNewCards(S) && (this.dataStore.userHasNewSoldCards = !0, this._userHasNewSoldCards.next(this.dataStore.userHasNewSoldCards)), this.dataStore.usersSoldCards = S, this._usersSoldCards.next([...this.dataStore.usersSoldCards])
+                getSoldAssets({userId: v = this.authService.getUserId(), showNotifications: O = !0} = {}) {
+                    console.log("@Cerberus/AssetsService.getSoldAssets({ userId, showNotifications })", v, O), this.marketplaceApiService.get(`/user/${v}/sold`).pipe((0, p.q)(1)).subscribe(P => {
+                        O && this.checkForNewCards(P) && (this.dataStore.userHasNewSoldCards = !0, this._userHasNewSoldCards.next(this.dataStore.userHasNewSoldCards)), this.dataStore.usersSoldCards = P, this._usersSoldCards.next([...this.dataStore.usersSoldCards])
                     })
                 }
 
-                checkForNewCards(f) {
-                    return !(!f[0] || this.dataStore.usersSoldCards[0] && this.cardsAreTheSame(f[0], this.dataStore.usersSoldCards[0]))
+                checkForNewCards(v) {
+                    return !(!v[0] || this.dataStore.usersSoldCards[0] && this.cardsAreTheSame(v[0], this.dataStore.usersSoldCards[0]))
                 }
 
-                cardsAreTheSame(f, O) {
-                    return f.address === O.address && f.token_id === O.token_id
+                cardsAreTheSame(v, O) {
+                    return v.address === O.address && v.token_id === O.token_id
                 }
 
-                getProtoDetails(f) {
-                    return this.guApiService.get(`/proto/${f}`)
+                getProtoDetails(v) {
+                    return this.guApiService.get(`/proto/${v}`)
                 }
 
                 clearNewSoldCards() {
                     this.dataStore.userHasNewSoldCards = !1, this._userHasNewSoldCards.next(this.dataStore.userHasNewSoldCards)
                 }
 
-                getSellingAssets$(f = 1, O = 31, S = this.authService.getUserId()) {
-                    return this.marketplaceApiService.get(`/user/${S}/selling?page=${f}&perPage=${O}`)
+                getSellingAssets$(v = 1, O = 31, P = this.authService.getUserId()) {
+                    return this.marketplaceApiService.get(`/user/${P}/selling?page=${v}&perPage=${O}`)
                 }
 
-                getUsernamesFromAddresses(f) {
+                getUsernamesFromAddresses(v) {
                     const O = [];
-                    for (let S = 0; S < f.length; S++) O.push(this.getUsernameFromAddress(f[S].owner).pipe((0, g.U)(b => b)));
+                    for (let P = 0; P < v.length; P++) O.push(this.getUsernameFromAddress(v[P].owner).pipe((0, g.U)(C => C)));
                     return (0, m.D)(O)
                 }
 
-                getUsernameFromAddress(f) {
-                    return this.authHostService.get(`/account/${f}/username`)
+                getUsernameFromAddress(v) {
+                    return this.authHostService.get(`/account/${v}/username`)
                 }
 
-                mapPriceHistory(f) {
-                    return f ? f.map(O => {
-                        const b = new Date(0).setUTCSeconds(O.block_timestamp), T = y.O$.from(10).pow(18);
-                        return {price: y.O$.from(O.taker_asset_amount).div(T).toNumber(), timestamp: b}
+                mapPriceHistory(v) {
+                    return v ? v.map(O => {
+                        const C = new Date(0).setUTCSeconds(O.block_timestamp), $ = y.O$.from(10).pow(18);
+                        return {price: y.O$.from(O.taker_asset_amount).div($).toNumber(), timestamp: C}
                     }) : []
                 }
 
-                getAssetGroupPriceHistory(f, O, S, b) {
-                    console.log(O, S);
-                    let T = {};
-                    switch (b) {
+                getAssetGroupPriceHistory(v, O, P, C) {
+                    console.log(O, P);
+                    let $ = {};
+                    switch (C) {
                         case r.CARD:
-                            T = JSON.stringify({proto: parseInt(O, 10), quality: parseInt(S, 10)});
+                            $ = JSON.stringify({proto: parseInt(O, 10), quality: parseInt(P, 10)});
                             break;
                         case r.TRINKET:
-                            T = void 0 !== S && "undefined" !== S ? JSON.stringify({heads: parseInt(S, 10)}) : JSON.stringify({});
+                            $ = void 0 !== P && "undefined" !== P ? JSON.stringify({heads: parseInt(P, 10)}) : JSON.stringify({});
                             break;
                         case r.BOARD:
-                            T = JSON.stringify({level: parseInt(S, 10)});
+                            $ = JSON.stringify({level: parseInt(P, 10)});
                             break;
                         default:
-                            T = JSON.stringify({})
+                            $ = JSON.stringify({})
                     }
-                    return this.marketplaceApiService.get(`/asset/${f}/price`, {
+                    return this.marketplaceApiService.get(`/asset/${v}/price`, {
                         params: {
-                            type: b,
-                            asset_group: T
+                            type: C,
+                            asset_group: $
                         }
                     }).pipe((0, g.U)(s => this.mapPriceHistory(s)))
                 }
 
-                getAssetPriceHistory(f, O) {
-                    return this.marketplaceApiService.get(`/asset/${f}/${O}/price`).pipe((0, g.U)(S => this.mapPriceHistory(S)))
+                getAssetPriceHistory(v, O) {
+                    return this.marketplaceApiService.get(`/asset/${v}/${O}/price`).pipe((0, g.U)(P => this.mapPriceHistory(P)))
                 }
 
-                getOwnedAssets$(f = 1, O = 31, S = this.authService.getUserId()) {
-                    return this.marketplaceApiService.get(`/user/${S}/asset/ethereumgroup?page=${f}&perPage=${O}`)
+                getOwnedAssets$(v = 1, O = 31, P = this.authService.getUserId()) {
+                    return this.marketplaceApiService.get(`/user/${P}/asset/ethereumgroup?page=${v}&perPage=${O}`)
                 }
 
-                getOwnedAssets(f, O, S = this.authService.getUserId()) {
-                    return this.marketplaceApiService.get(`/user/${S}/asset/ethereumgroup`, {params: this.appendSearchParams(f, O)})
+                getOwnedAssets(v, O, P = this.authService.getUserId()) {
+                    return this.marketplaceApiService.get(`/user/${P}/asset/ethereumgroup`, {params: this.appendSearchParams(v, O)})
                 }
 
-                getOwnedAssetFilters(f, O = this.authService.getUserId()) {
-                    return this.marketplaceApiService.get(`/user/${O}/asset/ethereum/property`, {params: this.appendFilterParams(f)})
+                getOwnedAssetFilters(v, O = this.authService.getUserId()) {
+                    return this.marketplaceApiService.get(`/user/${O}/asset/ethereum/property`, {params: this.appendFilterParams(v)})
                 }
             }
 
-            return I.\u0275fac = function (f) {
-                return new (f || I)(v.LFG(i.mI), v.LFG(k._q), v.LFG(i.LI), v.LFG(k.Ho))
-            }, I.\u0275prov = v.Yz7({token: I, factory: I.\u0275fac}), I
+            return L.\u0275fac = function (v) {
+                return new (v || L)(_.LFG(i.mI), _.LFG(S._q), _.LFG(i.LI), _.LFG(S.Ho))
+            }, L.\u0275prov = _.Yz7({token: L, factory: L.\u0275fac}), L
         })()
-    },
-    40886: (se, R, o) => {
+    }, 40886: (se, U, o) => {
         "use strict";
-        o.d(R, {Y: () => c, t: () => i});
-        const c = 3, i = 1
-    },
-    72224: (se, R, o) => {
+        o.d(U, {Y: () => d, t: () => i});
+        const d = 3, i = 1
+    }, 72224: (se, U, o) => {
         "use strict";
-        o.d(R, {v: () => c});
-        const c = 2147483647
-    },
-    69181: (se, R, o) => {
+        o.d(U, {v: () => d});
+        const d = 2147483647
+    }, 69181: (se, U, o) => {
         "use strict";
-        o.d(R, {$: () => c});
-        const c = [{name: "twitter", link: "https://twitter.com/GodsUnchained"}, {
+        o.d(U, {$: () => d});
+        const d = [{name: "twitter", link: "https://twitter.com/GodsUnchained"}, {
             name: "reddit",
             link: "https://www.reddit.com/r/GodsUnchained/"
         }, {name: "facebook", link: "https://www.facebook.com/godsunchained/"}, {
@@ -16766,16 +16710,15 @@
             name: "youtube",
             link: "https://www.youtube.com/channel/UCGQ1oWpKFfjsLYiTYALAlSA"
         }, {name: "twitch", link: "https://www.twitch.tv/godsunchained/videos"}]
-    },
-    94057: (se, R, o) => {
+    }, 94057: (se, U, o) => {
         "use strict";
-        o.d(R, {gv: () => y, zy: () => c, CF: () => i});
-        var c = {};
-        o.r(c), o.d(c, {Y: () => e});
+        o.d(U, {gv: () => y, zy: () => d, CF: () => i});
+        var d = {};
+        o.r(d), o.d(d, {Y: () => e});
         var i = {};
-        o.r(i), o.d(i, {J: () => Ae, Y: () => je});
+        o.r(i), o.d(i, {J: () => He, Y: () => Ye});
         var y = {};
-        o.r(y), o.d(y, {routeContent: () => ot, userMenuItemsContent: () => Ct});
+        o.r(y), o.d(y, {routeContent: () => bt, userMenuItemsContent: () => Mt});
         const e = [{
             name: "lysander",
             title: "Lysander: Champion of Light",
@@ -16820,10 +16763,10 @@
             protoId: 827
         }];
         o(69181), o(94417), o(40520), o(591), o(8929), o(36053), o(21086), o(61737), o(24850), o(2994), o(72986), o(61709), o(27221);
-        var S = o(73175);
-        o(73307), o(5e3), o(55778), new S.N0, o(40886), o(52909), o(67806), o(26959), o(74323), o(47760), o(18499), o(45425), o(5254), o(68896), o(56498), o(92198), o(56302), o(96727), o(11735), o(43991);
-        var Se = o(1025);
-        const Ae = {
+        var P = o(73175);
+        o(73307), o(5e3), o(55778), new P.N0, o(40886), o(52909), o(67806), o(26959), o(74323), o(47760), o(18499), o(45425), o(5254), o(68896), o(56498), o(92198), o(56302), o(96727), o(11735), o(43991);
+        var _e = o(1025);
+        const He = {
             home: {
                 shortName: "home",
                 path: "",
@@ -16888,7 +16831,7 @@
                         pageTitle: "Learn: Stay Play Get Paid",
                         keywords: "",
                         description: "",
-                        featureFlag: Se.v.spgpEnabled
+                        featureFlag: _e.v.spgpEnabled
                     },
                     referrals: {
                         shortName: "Referrals",
@@ -16897,7 +16840,7 @@
                         pageTitle: "Learn: Referrals",
                         keywords: "",
                         description: "",
-                        featureFlag: Se.v.referralsEnabled
+                        featureFlag: _e.v.referralsEnabled
                     }
                 }
             },
@@ -16926,30 +16869,30 @@
                         shortName: "About",
                         path: "token/about",
                         pageTitle: "Learn about GODS token",
-                        featureFlag: Se.v.tokenEnabled
+                        featureFlag: _e.v.tokenEnabled
                     },
                     airdrop: {
                         shortName: "Claim",
                         path: "token/claim",
                         pageTitle: "Claim GODS token",
-                        featureFlag: Se.v.claimAirdropEnabled
+                        featureFlag: _e.v.claimAirdropEnabled
                     },
                     staking: {
                         shortName: "Staking",
                         path: "token/staking",
                         pageTitle: "Staking $GODS token",
-                        featureFlag: Se.v.stakingEnabled
+                        featureFlag: _e.v.stakingEnabled
                     }
                 }
             }
-        }, je = {
+        }, Ye = {
             manageWallets: {
                 shortName: "Manage Wallets",
                 path: "manage-wallets",
                 pageTitle: "Connect a wallet to your GodsUnchained user account",
                 visible: !0
             }, logOut: {shortName: "Log Out", visible: !0}
-        }, ot = we => ({
+        }, bt = we => ({
             home: {
                 shortName: "arena",
                 path: "game/gu/game-modes",
@@ -16975,14 +16918,14 @@
                 pageTitle: "Collections: Your collections"
             },
             workshop: {shortName: "workshop", path: "game/gu/my-decks", icon: "nav_workshop"},
-            forge: {path: "game/gu/forge", icon: "nav_forge", shortName: "forge", featureFlag: Se.v.forgeEnabled},
+            forge: {path: "game/gu/forge", icon: "nav_forge", shortName: "forge", featureFlag: _e.v.forgeEnabled},
             openPacks: {shortName: "open packs", path: "game/gu/temple", icon: "nav_temple"},
             learn: {
                 shortName: "learn",
                 icon: "nav_library",
                 path: "learn",
                 children: {
-                    cards: {shortName: "cards", url: `${we.guWebsite}/${Ae.learn.children.cards.path}`},
+                    cards: {shortName: "cards", url: `${we.guWebsite}/${He.learn.children.cards.path}`},
                     faq: {
                         shortName: "faq",
                         url: "//support.godsunchained.com/hc/en-us/sections/1500001033441-Gods-Unchained-FAQ"
@@ -16997,72 +16940,69 @@
             buyPacks: {
                 shortName: "buy packs",
                 icon: "trader_package",
-                url: `${we.guWebsite}/${Ae.buyPacks.path}`,
+                url: `${we.guWebsite}/${He.buyPacks.path}`,
                 external: !0
             }
-        }), Ct = we => ({
+        }), Mt = we => ({
             playToEarn: {
                 shortName: "Play to Earn",
                 path: "game/gu/play-to-earn",
-                featureFlag: Se.v.playToEarnEnabled,
+                featureFlag: _e.v.playToEarnEnabled,
                 visible: !0
             },
             manageWallets: {
                 shortName: "Manage Wallets",
-                url: `${we.guWebsite}/${je.manageWallets.path}`,
+                url: `${we.guWebsite}/${Ye.manageWallets.path}`,
                 pageTitle: "Connect a wallet to your GodsUnchained user account",
                 visible: !0
             },
             logOut: {shortName: "Log Out", visible: !0}
         })
-    },
-    52886: (se, R, o) => {
+    }, 52886: (se, U, o) => {
         "use strict";
-        o.d(R, {Zb: () => y, nE: () => k, nJ: () => c, Xl: () => i, PE: () => P});
-        var c = (() => {
-            return (S = c || (c = {}))[S.DIAMOND = 1] = "DIAMOND", S[S.GOLD = 2] = "GOLD", S[S.SHADOW = 3] = "SHADOW", S[S.METEORITE = 4] = "METEORITE", S[S.PLAIN = 5] = "PLAIN", c;
-            var S
+        o.d(U, {Zb: () => y, nE: () => S, nJ: () => d, Xl: () => i, PE: () => k});
+        var d = (() => {
+            return (P = d || (d = {}))[P.DIAMOND = 1] = "DIAMOND", P[P.GOLD = 2] = "GOLD", P[P.SHADOW = 3] = "SHADOW", P[P.METEORITE = 4] = "METEORITE", P[P.PLAIN = 5] = "PLAIN", d;
+            var P
         })();
         const i = {
-            [c.DIAMOND]: "diamond",
-            [c.GOLD]: "gold",
-            [c.SHADOW]: "shadow",
-            [c.METEORITE]: "meteorite",
-            [c.PLAIN]: "plain"
+            [d.DIAMOND]: "diamond",
+            [d.GOLD]: "gold",
+            [d.SHADOW]: "shadow",
+            [d.METEORITE]: "meteorite",
+            [d.PLAIN]: "plain"
         };
 
         class y {
-            constructor(b, T, s, C, w) {
-                this.id = b, this.proto = T, this.quality = s, this.protoCard = C, this.status = w
+            constructor(C, $, s, b, w) {
+                this.id = C, this.proto = $, this.quality = s, this.protoCard = b, this.status = w
             }
         }
 
-        var k = (() => {
-            return (S = k || (k = {}))[S.All = -1] = "All", S[S.Owned = 0] = "Owned", S[S.Unowned = 1] = "Unowned", S[S.Processing = 2] = "Processing", k;
-            var S
-        })(), P = (() => {
-            return (S = P || (P = {}))[S.AscID = 0] = "AscID", S[S.DescID = 1] = "DescID", S[S.AscQuality = 2] = "AscQuality", S[S.DescQuality = 3] = "DescQuality", S[S.AscMana = 4] = "AscMana", S[S.DescMana = 5] = "DescMana", S[S.AscScarcity = 6] = "AscScarcity", S[S.AscHealth = 7] = "AscHealth", S[S.DescHealth = 8] = "DescHealth", S[S.AscAttack = 9] = "AscAttack", S[S.DescAttack = 10] = "DescAttack", S[S.AscTribe = 11] = "AscTribe", S[S.DescTribe = 12] = "DescTribe", S[S.AscRarity = 13] = "AscRarity", S[S.DescRarity = 14] = "DescRarity", S[S.AscType = 15] = "AscType", S[S.DescType = 16] = "DescType", S[S.AscGod = 17] = "AscGod", S[S.DescGod = 18] = "DescGod", S[S.AscSet = 19] = "AscSet", S[S.DescSet = 20] = "DescSet", P;
-            var S
+        var S = (() => {
+            return (P = S || (S = {}))[P.All = -1] = "All", P[P.Owned = 0] = "Owned", P[P.Unowned = 1] = "Unowned", P[P.Processing = 2] = "Processing", S;
+            var P
+        })(), k = (() => {
+            return (P = k || (k = {}))[P.AscID = 0] = "AscID", P[P.DescID = 1] = "DescID", P[P.AscQuality = 2] = "AscQuality", P[P.DescQuality = 3] = "DescQuality", P[P.AscMana = 4] = "AscMana", P[P.DescMana = 5] = "DescMana", P[P.AscScarcity = 6] = "AscScarcity", P[P.AscHealth = 7] = "AscHealth", P[P.DescHealth = 8] = "DescHealth", P[P.AscAttack = 9] = "AscAttack", P[P.DescAttack = 10] = "DescAttack", P[P.AscTribe = 11] = "AscTribe", P[P.DescTribe = 12] = "DescTribe", P[P.AscRarity = 13] = "AscRarity", P[P.DescRarity = 14] = "DescRarity", P[P.AscType = 15] = "AscType", P[P.DescType = 16] = "DescType", P[P.AscGod = 17] = "AscGod", P[P.DescGod = 18] = "DescGod", P[P.AscSet = 19] = "AscSet", P[P.DescSet = 20] = "DescSet", k;
+            var P
         })()
-    },
-    28510: (se, R, o) => {
+    }, 28510: (se, U, o) => {
         "use strict";
-        o.d(R, {mX: () => y.mX, Qz: () => c.Q, Zd: () => e});
-        var c = o(55943), i = o(5e3), y = o(46688);
+        o.d(U, {mX: () => y.mX, Qz: () => d.Q, Zd: () => e});
+        var d = o(55943), i = o(5e3), y = o(46688);
         let e = (() => {
             class m {
             }
 
             return m.\u0275fac = function (g) {
                 return new (g || m)
-            }, m.\u0275mod = i.oAB({type: m}), m.\u0275inj = i.cJS({providers: [c.Q]}), m
+            }, m.\u0275mod = i.oAB({type: m}), m.\u0275inj = i.cJS({providers: [d.Q]}), m
         })()
-    },
-    46688: (se, R, o) => {
+    }, 46688: (se, U, o) => {
         "use strict";
-        o.d(R, {m3: () => c, mX: () => i, x0: () => y});
+        o.d(U, {m3: () => d, mX: () => i, x0: () => y});
 
-        class c {
+        class d {
             constructor(m, p, g) {
                 this.nodes = m, this.viewRef = p, this.componentRef = g
             }
@@ -17117,40 +17057,39 @@
                 this.contentRef && this.contentRef.viewRef && this.contentRef.viewRef.destroy(), this.windowComponentRef = null, this.backdropComponentRef = null, this.contentRef = null
             }
         }
-    },
-    55943: (se, R, o) => {
+    }, 55943: (se, U, o) => {
         "use strict";
-        o.d(R, {Q: () => Be});
-        var c = o(5e3), i = o(69808), y = o(8929), e = o(23753), m = o(7625), p = o(24850), g = o(92198), r = o(87168),
+        o.d(U, {Q: () => Be});
+        var d = o(5e3), i = o(69808), y = o(8929), e = o(23753), m = o(7625), p = o(24850), g = o(92198), r = o(87168),
             t = (() => {
-                return (H = t || (t = {}))[H.Tab = 9] = "Tab", H[H.Enter = 13] = "Enter", H[H.Escape = 27] = "Escape", H[H.Space = 32] = "Space", H[H.PageUp = 33] = "PageUp", H[H.PageDown = 34] = "PageDown", H[H.End = 35] = "End", H[H.Home = 36] = "Home", H[H.ArrowLeft = 37] = "ArrowLeft", H[H.ArrowUp = 38] = "ArrowUp", H[H.ArrowRight = 39] = "ArrowRight", H[H.ArrowDown = 40] = "ArrowDown", t;
-                var H
+                return (W = t || (t = {}))[W.Tab = 9] = "Tab", W[W.Enter = 13] = "Enter", W[W.Escape = 27] = "Escape", W[W.Space = 32] = "Space", W[W.PageUp = 33] = "PageUp", W[W.PageDown = 34] = "PageDown", W[W.End = 35] = "End", W[W.Home = 36] = "Home", W[W.ArrowLeft = 37] = "ArrowLeft", W[W.ArrowUp = 38] = "ArrowUp", W[W.ArrowRight = 39] = "ArrowRight", W[W.ArrowDown = 40] = "ArrowDown", t;
+                var W
             })();
         const n = ["a[href]", "button:not([disabled])", 'input:not([disabled]):not([type="hidden"])', "select:not([disabled])", "textarea:not([disabled])", "[contenteditable]", '[tabindex]:not([tabindex="-1"])'].join(", ");
 
-        function v(H) {
-            const he = Array.from(H.querySelectorAll(n)).filter(Q => -1 !== Q.tabIndex);
+        function _(W) {
+            const he = Array.from(W.querySelectorAll(n)).filter(Q => -1 !== Q.tabIndex);
             return [he[0], he[he.length - 1]]
         }
 
-        var P = o(46688);
+        var k = o(46688);
 
-        function T(H) {
-            return null != H
+        function $(W) {
+            return null != W
         }
 
-        "undefined" != typeof Element && !Element.prototype.closest && (Element.prototype.matches || (Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector), Element.prototype.closest = function (H) {
+        "undefined" != typeof Element && !Element.prototype.closest && (Element.prototype.matches || (Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector), Element.prototype.closest = function (W) {
             let he = this;
             if (!document.documentElement.contains(he)) return null;
             do {
-                if (he.matches(H)) return he;
+                if (he.matches(W)) return he;
                 he = he.parentElement || he.parentNode
             } while (null !== he && 1 === he.nodeType);
             return null
         });
-        var ee = o(73307);
+        var q = o(73307);
         let ce = (() => {
-            class H {
+            class W {
                 constructor(Q) {
                     this._environment = Q
                 }
@@ -17160,14 +17099,14 @@
                 }
             }
 
-            return H.\u0275fac = function (Q) {
-                return new (Q || H)(c.Y36(ee.Ho))
-            }, H.\u0275cmp = c.Xpm({
-                type: H,
+            return W.\u0275fac = function (Q) {
+                return new (Q || W)(d.Y36(q.Ho))
+            }, W.\u0275cmp = d.Xpm({
+                type: W,
                 selectors: [["cerberus-modal-backdrop"]],
                 hostVars: 2,
                 hostBindings: function (Q, te) {
-                    2 & Q && c.Tol("cerberusModal__backdrop" + (te.backdropClass ? " " + te.backdropClass : ""))
+                    2 & Q && d.Tol("cerberusModal__backdrop" + (te.backdropClass ? " " + te.backdropClass : ""))
                 },
                 inputs: {backdropClass: "backdropClass"},
                 decls: 0,
@@ -17175,17 +17114,17 @@
                 template: function (Q, te) {
                 },
                 encapsulation: 2
-            }), H
+            }), W
         })();
-        var de = o(2994), fe = o(87545), N = o(72986), X = (() => {
-            return (H = X || (X = {}))[H.BACKDROP_CLICK = 0] = "BACKDROP_CLICK", H[H.ESC = 1] = "ESC", X;
-            var H
+        var de = o(2994), Ce = o(87545), z = o(72986), J = (() => {
+            return (W = J || (J = {}))[W.BACKDROP_CLICK = 0] = "BACKDROP_CLICK", W[W.ESC = 1] = "ESC", J;
+            var W
         })();
         const ae = ["dialog"], Y = ["*"];
-        let ye = (() => {
-            class H {
-                constructor(Q, te, ue, pe) {
-                    this.environment = Q, this.document = te, this.elRef = ue, this.zone = pe, this.closed$ = new y.xQ, this.backdrop = !0, this.keyboard = !0, this.defaultStylings = !0, this.dismissEvent = new c.vpe
+        let xe = (() => {
+            class W {
+                constructor(Q, te, ue, ge) {
+                    this.environment = Q, this.document = te, this.elRef = ue, this.zone = ge, this.closed$ = new y.xQ, this.backdrop = !0, this.keyboard = !0, this.defaultStylings = !0, this.dismissEvent = new d.vpe
                 }
 
                 dismiss(Q) {
@@ -17200,16 +17139,16 @@
                     const {nativeElement: Q} = this.elRef;
                     if (this.zone.runOutsideAngular(() => {
                         (0, e.R)(Q, "keydown").pipe((0, m.R)(this.closed$), (0, g.h)(ue => ue.which === t.Escape && this.keyboard)).subscribe(ue => requestAnimationFrame(() => {
-                            ue.defaultPrevented || this.zone.run(() => this.dismiss(X.ESC))
+                            ue.defaultPrevented || this.zone.run(() => this.dismiss(J.ESC))
                         }));
                         let te = !1;
-                        (0, e.R)(this._dialogEl.nativeElement, "mousedown").pipe((0, m.R)(this.closed$), (0, de.b)(() => te = !1), (0, fe.w)(() => (0, e.R)(Q, "mouseup").pipe((0, m.R)(this.closed$), (0, N.q)(1))), (0, g.h)(({target: ue}) => Q === ue)).subscribe(() => {
+                        (0, e.R)(this._dialogEl.nativeElement, "mousedown").pipe((0, m.R)(this.closed$), (0, de.b)(() => te = !1), (0, Ce.w)(() => (0, e.R)(Q, "mouseup").pipe((0, m.R)(this.closed$), (0, z.q)(1))), (0, g.h)(({target: ue}) => Q === ue)).subscribe(() => {
                             te = !0
                         }), (0, e.R)(Q, "click").pipe((0, m.R)(this.closed$)).subscribe(({target: ue}) => {
-                            !0 === this.backdrop && Q === ue && !te && this.zone.run(() => this.dismiss(X.BACKDROP_CLICK)), te = !1
+                            !0 === this.backdrop && Q === ue && !te && this.zone.run(() => this.dismiss(J.BACKDROP_CLICK)), te = !1
                         })
                     }), !Q.contains(document.activeElement)) {
-                        const te = Q.querySelector("[ngbAutofocus]"), ue = v(Q)[0];
+                        const te = Q.querySelector("[ngbAutofocus]"), ue = _(Q)[0];
                         (te || ue || Q).focus()
                     }
                 }
@@ -17223,21 +17162,21 @@
                 }
             }
 
-            return H.\u0275fac = function (Q) {
-                return new (Q || H)(c.Y36(ee.Ho), c.Y36(i.K0), c.Y36(c.SBq), c.Y36(c.R0b))
-            }, H.\u0275cmp = c.Xpm({
-                type: H,
+            return W.\u0275fac = function (Q) {
+                return new (Q || W)(d.Y36(q.Ho), d.Y36(i.K0), d.Y36(d.SBq), d.Y36(d.R0b))
+            }, W.\u0275cmp = d.Xpm({
+                type: W,
                 selectors: [["cerberus-modal-window"]],
                 viewQuery: function (Q, te) {
-                    if (1 & Q && c.Gf(ae, 7), 2 & Q) {
+                    if (1 & Q && d.Gf(ae, 7), 2 & Q) {
                         let ue;
-                        c.iGM(ue = c.CRH()) && (te._dialogEl = ue.first)
+                        d.iGM(ue = d.CRH()) && (te._dialogEl = ue.first)
                     }
                 },
                 hostAttrs: ["role", "dialog", "tabindex", "-1"],
                 hostVars: 4,
                 hostBindings: function (Q, te) {
-                    2 & Q && (c.uIk("aria-modal", !0)("aria-labelledby", te.ariaLabelledBy), c.Tol("cerberusModal" + (te.windowClass ? " " + te.windowClass : "")))
+                    2 & Q && (d.uIk("aria-modal", !0)("aria-labelledby", te.ariaLabelledBy), d.Tol("cerberusModal" + (te.windowClass ? " " + te.windowClass : "")))
                 },
                 inputs: {
                     ariaLabelledBy: "ariaLabelledBy",
@@ -17255,16 +17194,16 @@
                 vars: 4,
                 consts: [["role", "document"], ["dialog", ""]],
                 template: function (Q, te) {
-                    1 & Q && (c.F$t(), c.TgZ(0, "div", 0, 1)(2, "div"), c.Hsn(3), c.qZA()()), 2 & Q && (c.Tol("cerberusModal__dialog" + (te.size ? " cerberus-modal-" + te.size : "") + (te.defaultStylings ? " cerberusModal__dialog--defaultStylings" : "") + (te.centered ? " cerberusModal__dialog--centered" : "") + (te.scrollable ? " cerberusModal__dialog--scrollable" : "") + (te.modalEnviornment ? " cerberusModal__dialog--" + te.modalEnviornment : "")), c.xp6(2), c.Tol("cerberusModal__content" + (te.defaultStylings ? " cerberusModal__content--defaultStylings" : "")))
+                    1 & Q && (d.F$t(), d.TgZ(0, "div", 0, 1)(2, "div"), d.Hsn(3), d.qZA()()), 2 & Q && (d.Tol("cerberusModal__dialog" + (te.size ? " cerberus-modal-" + te.size : "") + (te.defaultStylings ? " cerberusModal__dialog--defaultStylings" : "") + (te.centered ? " cerberusModal__dialog--centered" : "") + (te.scrollable ? " cerberusModal__dialog--scrollable" : "") + (te.modalEnviornment ? " cerberusModal__dialog--" + te.modalEnviornment : "")), d.xp6(2), d.Tol("cerberusModal__content" + (te.defaultStylings ? " cerberusModal__content--defaultStylings" : "")))
                 },
                 styles: ['.cerberusModal__open{overflow:hidden;height:100vh;width:100vw;user-select:none;pointer-events:none}.cerberusModal__open .cerberusModal{overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;user-select:auto;pointer-events:auto}.cerberusModal{position:fixed;top:0;left:0;z-index:22;width:100%;height:100%;overflow:hidden;outline:0;display:flex;justify-content:center;align-items:flex-start}.cerberusModal__dialog{position:relative;width:auto;pointer-events:none;justify-content:center;display:flex}.cerberusModal__dialog--scrollable{display:flex;max-height:calc(100% - 16px)}.cerberusModal__dialog--scrollable .cerberusModal__content{max-height:calc(100vh - 16px);overflow:hidden}.cerberusModal__dialog--scrollable .cerberusModal__header .cerberusModal__footer{flex-shrink:0}.cerberusModal__dialog--scrollable .cerberusModal__body{overflow-y:auto}.cerberusModal__dialog--defaultStylings{margin:8px}.cerberusModal__dialog--centered{display:flex;align-items:center;min-height:calc(100% - 16px);align-self:center}.cerberusModal__dialog--centered:before{display:block;height:calc(100vh - 16px);height:min-content;content:""}.cerberusModal__dialog--centered.cerberusModal__dialog--scrollable{flex-direction:column;justify-content:center;height:100%}.cerberusModal__dialog--centered.cerberusModal__dialog--scrollable .cerberusModal__content{max-height:none}.cerberusModal__dialog--centered.cerberusModal__dialog--scrollable:before{content:none}.cerberusModal__content{position:relative;flex-direction:column;display:flex;width:100%;pointer-events:auto;background-clip:padding-box;outline:0}.cerberusModal__content--defaultStylings{border:2px solid white;border:1px solid rgba(0,0,0,.2);background-color:#fff}.cerberusModal__backdrop{position:fixed;top:0;left:0;z-index:22;width:100vw;height:100vh;background-color:#000;opacity:.5}.cerberusModal__header{display:flex;align-items:flex-start;justify-content:space-between;padding:16px;border-bottom:1px solid #dee2e6}.cerberusModal__header .close{padding:16px;margin:-16px -16px -16px auto}.cerberusModal__title{margin-bottom:0;line-height:1.5}.cerberusModal__body{position:relative;flex:1 1 auto;padding:16px}.cerberusModal__footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;padding:12px;border-top:1px solid #dee2e6}.cerberusModal__footer>*{margin:4px}.cerberusModal__scrollbarMeasure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}\n', "cerberus-modal-window .component-host-scrollable{display:flex;flex-direction:column;overflow:hidden}.cerberusModal__dialog--defaultStylings.cerberusModal__dialog--website{top:96px}.cerberusModal__dialog--defaultStylings.cerberusModal__dialog--desktop{top:calc(var(--vh) * 9)}\n"],
                 encapsulation: 2
-            }), H
+            }), W
         })();
         const V = () => {
         };
         let le = (() => {
-            class H {
+            class W {
                 constructor(Q) {
                     this._document = Q
                 }
@@ -17276,8 +17215,8 @@
 
                 _adjustBody(Q) {
                     const te = this._document.body, ue = te.style.paddingRight,
-                        pe = parseFloat(window.getComputedStyle(te)["padding-right"]);
-                    return te.style["padding-right"] = `${pe + Q}px`, () => te.style["padding-right"] = ue
+                        ge = parseFloat(window.getComputedStyle(te)["padding-right"]);
+                    return te.style["padding-right"] = `${ge + Q}px`, () => te.style["padding-right"] = ue
                 }
 
                 _isPresent(Q) {
@@ -17295,43 +17234,43 @@
                 }
             }
 
-            return H.\u0275fac = function (Q) {
-                return new (Q || H)(c.LFG(i.K0))
-            }, H.\u0275prov = c.Yz7({token: H, factory: H.\u0275fac, providedIn: "root"}), H
-        })(), Ce = (() => {
-            class H {
-                constructor(Q, te, ue, pe, Se, Ae) {
-                    this.applicationRef = Q, this.injector = te, this.document = ue, this.scrollBar = pe, this.rendererFactory = Se, this.ngZone = Ae, this.activeWindowComponentHasChanged = new y.xQ, this.ariaHiddenValues = new Map, this.backdropAttributes = ["backdropClass"], this.modalRefs = [], this.windowAttributes = ["ariaLabelledBy", "backdrop", "centered", "keyboard", "scrollable", "size", "windowClass", "defaultStylings"], this.windowComponents = [], this.activeWindowComponentHasChanged.subscribe(() => {
+            return W.\u0275fac = function (Q) {
+                return new (Q || W)(d.LFG(i.K0))
+            }, W.\u0275prov = d.Yz7({token: W, factory: W.\u0275fac, providedIn: "root"}), W
+        })(), ye = (() => {
+            class W {
+                constructor(Q, te, ue, ge, _e, He) {
+                    this.applicationRef = Q, this.injector = te, this.document = ue, this.scrollBar = ge, this.rendererFactory = _e, this.ngZone = He, this.activeWindowComponentHasChanged = new y.xQ, this.ariaHiddenValues = new Map, this.backdropAttributes = ["backdropClass"], this.modalRefs = [], this.windowAttributes = ["ariaLabelledBy", "backdrop", "centered", "keyboard", "scrollable", "size", "windowClass", "defaultStylings"], this.windowComponents = [], this.activeWindowComponentHasChanged.subscribe(() => {
                         if (this.windowComponents.length) {
-                            const je = this.windowComponents[this.windowComponents.length - 1];
-                            ((H, he, Q, te = !1) => {
+                            const Ye = this.windowComponents[this.windowComponents.length - 1];
+                            ((W, he, Q, te = !1) => {
                                 this.ngZone.runOutsideAngular(() => {
-                                    const ue = (0, e.R)(he, "focusin").pipe((0, m.R)(Q), (0, p.U)(pe => pe.target));
-                                    (0, e.R)(he, "keydown").pipe((0, m.R)(Q), (0, g.h)(pe => pe.which === t.Tab), (0, r.M)(ue)).subscribe(([pe, Se]) => {
-                                        const [Ae, je] = v(he);
-                                        (Se === Ae || Se === he) && pe.shiftKey && (je.focus(), pe.preventDefault()), Se === je && !pe.shiftKey && (Ae.focus(), pe.preventDefault())
-                                    }), te && (0, e.R)(he, "click").pipe((0, m.R)(Q), (0, r.M)(ue), (0, p.U)(pe => pe[1])).subscribe(pe => pe.focus())
+                                    const ue = (0, e.R)(he, "focusin").pipe((0, m.R)(Q), (0, p.U)(ge => ge.target));
+                                    (0, e.R)(he, "keydown").pipe((0, m.R)(Q), (0, g.h)(ge => ge.which === t.Tab), (0, r.M)(ue)).subscribe(([ge, _e]) => {
+                                        const [He, Ye] = _(he);
+                                        (_e === He || _e === he) && ge.shiftKey && (Ye.focus(), ge.preventDefault()), _e === Ye && !ge.shiftKey && (He.focus(), ge.preventDefault())
+                                    }), te && (0, e.R)(he, "click").pipe((0, m.R)(Q), (0, r.M)(ue), (0, p.U)(ge => ge[1])).subscribe(ge => ge.focus())
                                 })
-                            })(0, je.location.nativeElement, this.activeWindowComponentHasChanged), this.revertAriaHidden(), this.setAriaHidden(je.location.nativeElement)
+                            })(0, Ye.location.nativeElement, this.activeWindowComponentHasChanged), this.revertAriaHidden(), this.setAriaHidden(Ye.location.nativeElement)
                         }
                     })
                 }
 
-                open(Q, te, ue, pe) {
-                    const Se = pe.container instanceof HTMLElement ? pe.container : T(pe.container) ? this.document.querySelector(pe.container) : this.document.body,
-                        Ae = this.rendererFactory.createRenderer(null, null), je = this.scrollBar.compensate(),
-                        ot = () => {
-                            this.modalRefs.length || (Ae.removeClass(this.document.querySelector("html"), "cerberusModal__open"), this.revertAriaHidden())
+                open(Q, te, ue, ge) {
+                    const _e = ge.container instanceof HTMLElement ? ge.container : $(ge.container) ? this.document.querySelector(ge.container) : this.document.body,
+                        He = this.rendererFactory.createRenderer(null, null), Ye = this.scrollBar.compensate(),
+                        bt = () => {
+                            this.modalRefs.length || (He.removeClass(this.document.querySelector("html"), "cerberusModal__open"), this.revertAriaHidden())
                         };
-                    if (!Se) throw new Error(`The specified modal container "${pe.container || "body"}" was not found in the DOM.`);
-                    const Ct = new P.mX, lt = this.getContentRef(Q, pe.injector || te, ue, Ct, pe);
-                    let we = !1 !== pe.backdrop ? this.attachBackdrop(Q, Se) : null,
-                        He = this.attachWindowComponent(Q, Se, lt), $ = new P.x0(He, lt, we, pe.beforeDismiss);
-                    return this.registerModalRef($), this.registerWindowComponent(He), $.result.then(je, je), $.result.then(ot, ot), Ct.close = J => {
-                        $.close(J)
-                    }, Ct.dismiss = J => {
-                        $.dismiss(J)
-                    }, this.applyWindowOptions(He.instance, pe), 1 === this.modalRefs.length && Ae.addClass(this.document.querySelector("html"), "cerberusModal__open"), we && we.instance && this.applyBackdropOptions(we.instance, pe), $
+                    if (!_e) throw new Error(`The specified modal container "${ge.container || "body"}" was not found in the DOM.`);
+                    const Mt = new k.mX, nt = this.getContentRef(Q, ge.injector || te, ue, Mt, ge);
+                    let we = !1 !== ge.backdrop ? this.attachBackdrop(Q, _e) : null,
+                        ke = this.attachWindowComponent(Q, _e, nt), I = new k.x0(ke, nt, we, ge.beforeDismiss);
+                    return this.registerModalRef(I), this.registerWindowComponent(ke), I.result.then(Ye, Ye), I.result.then(bt, bt), Mt.close = X => {
+                        I.close(X)
+                    }, Mt.dismiss = X => {
+                        I.dismiss(X)
+                    }, this.applyWindowOptions(ke.instance, ge), 1 === this.modalRefs.length && He.addClass(this.document.querySelector("html"), "cerberusModal__open"), we && we.instance && this.applyBackdropOptions(we.instance, ge), I
                 }
 
                 dismissAll(Q) {
@@ -17343,54 +17282,54 @@
                 }
 
                 attachBackdrop(Q, te) {
-                    let pe = Q.resolveComponentFactory(ce).create(this.injector);
-                    return this.applicationRef.attachView(pe.hostView), te.appendChild(pe.location.nativeElement), pe
+                    let ge = Q.resolveComponentFactory(ce).create(this.injector);
+                    return this.applicationRef.attachView(ge.hostView), te.appendChild(ge.location.nativeElement), ge
                 }
 
                 attachWindowComponent(Q, te, ue) {
-                    let Se = Q.resolveComponentFactory(ye).create(this.injector, ue.nodes);
-                    return this.applicationRef.attachView(Se.hostView), te.appendChild(Se.location.nativeElement), Se
+                    let _e = Q.resolveComponentFactory(xe).create(this.injector, ue.nodes);
+                    return this.applicationRef.attachView(_e.hostView), te.appendChild(_e.location.nativeElement), _e
                 }
 
                 applyWindowOptions(Q, te) {
                     this.windowAttributes.forEach(ue => {
-                        T(te[ue]) && (Q[ue] = te[ue])
+                        $(te[ue]) && (Q[ue] = te[ue])
                     })
                 }
 
                 applyBackdropOptions(Q, te) {
                     this.backdropAttributes.forEach(ue => {
-                        T(te[ue]) && (Q[ue] = te[ue])
+                        $(te[ue]) && (Q[ue] = te[ue])
                     })
                 }
 
-                getContentRef(Q, te, ue, pe, Se) {
-                    return ue ? ue instanceof c.Rgc ? this.createFromTemplateRef(ue, pe) : function O(H) {
-                        return "string" == typeof H
-                    }(ue) ? this.createFromString(ue) : this.createFromComponent(Q, te, ue, pe, Se) : new P.m3([])
+                getContentRef(Q, te, ue, ge, _e) {
+                    return ue ? ue instanceof d.Rgc ? this.createFromTemplateRef(ue, ge) : function O(W) {
+                        return "string" == typeof W
+                    }(ue) ? this.createFromString(ue) : this.createFromComponent(Q, te, ue, ge, _e) : new k.m3([])
                 }
 
                 createFromTemplateRef(Q, te) {
-                    const pe = Q.createEmbeddedView({
-                        $implicit: te, close(Se) {
-                            te.close(Se)
-                        }, dismiss(Se) {
-                            te.dismiss(Se)
+                    const ge = Q.createEmbeddedView({
+                        $implicit: te, close(_e) {
+                            te.close(_e)
+                        }, dismiss(_e) {
+                            te.dismiss(_e)
                         }
                     });
-                    return this.applicationRef.attachView(pe), new P.m3([pe.rootNodes], pe)
+                    return this.applicationRef.attachView(ge), new k.m3([ge.rootNodes], ge)
                 }
 
                 createFromString(Q) {
                     const te = this.document.createTextNode(`${Q}`);
-                    return new P.m3([[te]])
+                    return new k.m3([[te]])
                 }
 
-                createFromComponent(Q, te, ue, pe, Se) {
-                    const Ae = Q.resolveComponentFactory(ue),
-                        je = c.zs3.create({providers: [{provide: P.mX, useValue: pe}], parent: te}), ot = Ae.create(je),
-                        Ct = ot.location.nativeElement;
-                    return Se.scrollable && Ct.classList.add("component-host-scrollable"), this.applicationRef.attachView(ot.hostView), new P.m3([[Ct]], ot.hostView, ot)
+                createFromComponent(Q, te, ue, ge, _e) {
+                    const He = Q.resolveComponentFactory(ue),
+                        Ye = d.zs3.create({providers: [{provide: k.mX, useValue: ge}], parent: te}), bt = He.create(Ye),
+                        Mt = bt.location.nativeElement;
+                    return _e.scrollable && Mt.classList.add("component-host-scrollable"), this.applicationRef.attachView(bt.hostView), new k.m3([[Mt]], bt.hostView, bt)
                 }
 
                 setAriaHidden(Q) {
@@ -17422,23 +17361,23 @@
                 }
             }
 
-            return H.\u0275fac = function (Q) {
-                return new (Q || H)(c.LFG(c.z2F), c.LFG(c.zs3), c.LFG(i.K0), c.LFG(le), c.LFG(c.FYo), c.LFG(c.R0b))
-            }, H.\u0275prov = c.Yz7({token: H, factory: H.\u0275fac, providedIn: "root"}), H
-        })(), Te = (() => {
-            class H {
+            return W.\u0275fac = function (Q) {
+                return new (Q || W)(d.LFG(d.z2F), d.LFG(d.zs3), d.LFG(i.K0), d.LFG(le), d.LFG(d.FYo), d.LFG(d.R0b))
+            }, W.\u0275prov = d.Yz7({token: W, factory: W.\u0275fac, providedIn: "root"}), W
+        })(), Ae = (() => {
+            class W {
                 constructor() {
                     this.backdrop = !0, this.keyboard = !0
                 }
             }
 
-            return H.\u0275fac = function (Q) {
-                return new (Q || H)
-            }, H.\u0275prov = c.Yz7({token: H, factory: H.\u0275fac, providedIn: "root"}), H
+            return W.\u0275fac = function (Q) {
+                return new (Q || W)
+            }, W.\u0275prov = d.Yz7({token: W, factory: W.\u0275fac, providedIn: "root"}), W
         })(), Be = (() => {
-            class H {
-                constructor(Q, te, ue, pe) {
-                    this.moduleCFR = Q, this.injector = te, this.modalStack = ue, this.config = pe
+            class W {
+                constructor(Q, te, ue, ge) {
+                    this.moduleCFR = Q, this.injector = te, this.modalStack = ue, this.config = ge
                 }
 
                 open(Q, te = {}) {
@@ -17455,20 +17394,19 @@
                 }
             }
 
-            return H.\u0275fac = function (Q) {
-                return new (Q || H)(c.LFG(c._Vd), c.LFG(c.zs3), c.LFG(Ce), c.LFG(Te))
-            }, H.\u0275prov = c.Yz7({token: H, factory: H.\u0275fac, providedIn: "root"}), H
+            return W.\u0275fac = function (Q) {
+                return new (Q || W)(d.LFG(d._Vd), d.LFG(d.zs3), d.LFG(ye), d.LFG(Ae))
+            }, W.\u0275prov = d.Yz7({token: W, factory: W.\u0275fac, providedIn: "root"}), W
         })()
-    },
-    51395: (se, R, o) => {
+    }, 51395: (se, U, o) => {
         "use strict";
-        o.d(R, {W: () => ce, F: () => I});
-        var c = o(73307), i = o(591), y = o(21086), e = o(36053), m = o(72986), p = o(24850), g = o(2994), r = o(87545),
-            t = o(92198), n = o(61709), v = o(27221), k = o(5e3), P = o(55778);
-        let I = (() => {
+        o.d(U, {W: () => ce, F: () => L});
+        var d = o(73307), i = o(591), y = o(21086), e = o(36053), m = o(72986), p = o(24850), g = o(2994), r = o(87545),
+            t = o(92198), n = o(61709), _ = o(27221), S = o(5e3), k = o(55778);
+        let L = (() => {
             class de {
-                constructor(N, X, ae, Y, ye, V) {
-                    this.authService = N, this.gameApi = X, this.guApi = ae, this.ethService = Y, this.cardsService = ye, this.filterService = V, this._unopenedPacks$ = new i.X([]), this._currentRaffleTicketTotal$ = new i.X(0), this.dataStore = {
+                constructor(z, J, ae, Y, xe, V) {
+                    this.authService = z, this.gameApi = J, this.guApi = ae, this.ethService = Y, this.cardsService = xe, this.filterService = V, this._unopenedPacks$ = new i.X([]), this._currentRaffleTicketTotal$ = new i.X(0), this.dataStore = {
                         unopenedPacks: [],
                         currentRaffleTicketTotal: 0
                     }
@@ -17487,92 +17425,92 @@
                 }
 
                 fetchUnopenedPacksById() {
-                    const N = this.authService.getUserId();
-                    return N ? this.gameApi.get(`/user/${N}/allpacks`).pipe((0, m.q)(1), (0, p.U)(X => this.formatPacks(X, !0)), (0, p.U)(X => this.fixGodAlignments(X)), (0, g.b)(X => {
-                        this.dataStore.unopenedPacks = X, this._unopenedPacks$.next([...this.dataStore.unopenedPacks])
+                    const z = this.authService.getUserId();
+                    return z ? this.gameApi.get(`/user/${z}/allpacks`).pipe((0, m.q)(1), (0, p.U)(J => this.formatPacks(J, !0)), (0, p.U)(J => this.fixGodAlignments(J)), (0, g.b)(J => {
+                        this.dataStore.unopenedPacks = J, this._unopenedPacks$.next([...this.dataStore.unopenedPacks])
                     })) : (0, y.of)([])
                 }
 
                 fetchUnopenedPacksByAddress() {
-                    return this.ethService.getAccount().pipe((0, r.w)(N => this.guApi.get(`/user/${N}/allpacks`)), (0, m.q)(1), (0, p.U)(N => this.formatPacks(N, !1)), (0, g.b)(N => {
-                        this.dataStore.unopenedPacks = N, this._unopenedPacks$.next([...this.dataStore.unopenedPacks])
+                    return this.ethService.getAccount().pipe((0, r.w)(z => this.guApi.get(`/user/${z}/allpacks`)), (0, m.q)(1), (0, p.U)(z => this.formatPacks(z, !1)), (0, g.b)(z => {
+                        this.dataStore.unopenedPacks = z, this._unopenedPacks$.next([...this.dataStore.unopenedPacks])
                     }))
                 }
 
-                fetchCurrentTotalRaffleTickets({userId: N, wallet: X}) {
-                    return N || X ? this.gameApi.get(`/user/${N || X}/tickets`).pipe((0, m.q)(1)).subscribe(ae => {
+                fetchCurrentTotalRaffleTickets({userId: z, wallet: J}) {
+                    return z || J ? this.gameApi.get(`/user/${z || J}/tickets`).pipe((0, m.q)(1)).subscribe(ae => {
                         this.dataStore.currentRaffleTicketTotal = ae, this._currentRaffleTicketTotal$.next(ae)
                     }) : console.error("no wallet or userId supplied")
                 }
 
-                formatPacks(N, X = !1) {
-                    return N.map(ae => Object.assign(Object.assign({}, ae), {
+                formatPacks(z, J = !1) {
+                    return z.map(ae => Object.assign(Object.assign({}, ae), {
                         rarity: this.updateRarity(ae),
                         raffleTickets: this.updatePackRaffleTickets(ae),
-                        requiresAuthentication: X
+                        requiresAuthentication: J
                     }))
                 }
 
-                updateScarcityAndRarity$(N) {
-                    return (0, e.aj)([this.cardsService.protoCards$, this.cardsService.qualityCounts$]).pipe((0, t.h)(([X, ae]) => X && X.size > 0 && ae && ae.size > 0), (0, m.q)(1), (0, p.U)(([X, ae]) => N.map(Y => Object.assign(Object.assign({}, Y), {cards: this.updateScarcityAndRarity(Y.cards, X, ae)}))))
+                updateScarcityAndRarity$(z) {
+                    return (0, e.aj)([this.cardsService.protoCards$, this.cardsService.qualityCounts$]).pipe((0, t.h)(([J, ae]) => J && J.size > 0 && ae && ae.size > 0), (0, m.q)(1), (0, p.U)(([J, ae]) => z.map(Y => Object.assign(Object.assign({}, Y), {cards: this.updateScarcityAndRarity(Y.cards, J, ae)}))))
                 }
 
-                fixGodAlignments(N) {
-                    return N.map(X => Object.assign(Object.assign({}, X), {god: "all" === X.god || "core" === X.god ? "neutral" : X.god}))
+                fixGodAlignments(z) {
+                    return z.map(J => Object.assign(Object.assign({}, J), {god: "all" === J.god || "core" === J.god ? "neutral" : J.god}))
                 }
 
-                updatePackRaffleTickets(N) {
-                    if (N && N.extra) {
-                        const X = N.extra.find(ae => "tickets" === ae.name);
-                        return X ? X.value : void 0
+                updatePackRaffleTickets(z) {
+                    if (z && z.extra) {
+                        const J = z.extra.find(ae => "tickets" === ae.name);
+                        return J ? J.value : void 0
                     }
                 }
 
-                updateRarity(N) {
-                    return "shiny" === N.rarity ? "shiny-legendary" : N.rarity
+                updateRarity(z) {
+                    return "shiny" === z.rarity ? "shiny-legendary" : z.rarity
                 }
 
-                updateScarcityAndRarity(N, X, ae) {
+                updateScarcityAndRarity(z, J, ae) {
                     const Y = ["epic", "legendary", "mythic"];
-                    return N.map(ye => {
-                        const V = X.get(ye.proto);
-                        return !V || (ye.rarity = V.rarity, "core" === V.set) || ("mythic" === ye.rarity ? ye.scarcity = 1 : (Y.includes(ye.rarity) || ye.quality < 5) && (ye.scarcity = this.filterService.calcScarcity(ye.proto, ye.quality, ae))), ye
+                    return z.map(xe => {
+                        const V = J.get(xe.proto);
+                        return !V || (xe.rarity = V.rarity, "core" === V.set) || ("mythic" === xe.rarity ? xe.scarcity = 1 : (Y.includes(xe.rarity) || xe.quality < 5) && (xe.scarcity = this.filterService.calcScarcity(xe.proto, xe.quality, ae))), xe
                     })
                 }
 
-                openPackAuthenticated$(N, X = !0) {
+                openPackAuthenticated$(z, J = !0) {
                     const ae = this.authService.getUserId();
-                    return this.authService.fetchSession().pipe((0, m.q)(1), (0, n.VS)(Y => this.gameApi.put(`/user/${ae}/allpacks?session=${Y}`, N)), (0, g.b)(Y => {
-                        this.dataStore.unopenedPacks = this.dataStore.unopenedPacks.filter(V => V.pack_id !== N.pack_id), this._unopenedPacks$.next([...this.dataStore.unopenedPacks]);
-                        const ye = this.packToInventoryCardsMap(N);
-                        this.cardsService.addCardsToInventory(ye)
-                    }), (0, v.K)(Y => 401 === Y.status && X ? this.authService.refreshToken().pipe((0, n.VS)(ye => this.openPackAuthenticated$(N, !1))) : (0, y.of)(Y)))
+                    return this.authService.fetchSession().pipe((0, m.q)(1), (0, n.VS)(Y => this.gameApi.put(`/user/${ae}/allpacks?session=${Y}`, z)), (0, g.b)(Y => {
+                        this.dataStore.unopenedPacks = this.dataStore.unopenedPacks.filter(V => V.pack_id !== z.pack_id), this._unopenedPacks$.next([...this.dataStore.unopenedPacks]);
+                        const xe = this.packToInventoryCardsMap(z);
+                        this.cardsService.addCardsToInventory(xe)
+                    }), (0, _.K)(Y => 401 === Y.status && J ? this.authService.refreshToken().pipe((0, n.VS)(xe => this.openPackAuthenticated$(z, !1))) : (0, y.of)(Y)))
                 }
 
-                dummyOpenPack(N) {
-                    return this.dataStore.unopenedPacks = this.dataStore.unopenedPacks.filter(X => X.pack_id !== N.pack_id), this._unopenedPacks$.next([...this.dataStore.unopenedPacks]), (0, y.of)(!0)
+                dummyOpenPack(z) {
+                    return this.dataStore.unopenedPacks = this.dataStore.unopenedPacks.filter(J => J.pack_id !== z.pack_id), this._unopenedPacks$.next([...this.dataStore.unopenedPacks]), (0, y.of)(!0)
                 }
 
-                openPackUnauthenticated$(N) {
-                    return this.ethService.getAccount().pipe((0, m.q)(1), (0, r.w)(X => this.gameApi.put(`/user/${X}/allpacks`, N)), (0, g.b)(X => {
-                        this.dataStore.unopenedPacks = this.dataStore.unopenedPacks.filter(ae => ae.pack_id !== N.pack_id), this._unopenedPacks$.next([...this.dataStore.unopenedPacks])
+                openPackUnauthenticated$(z) {
+                    return this.ethService.getAccount().pipe((0, m.q)(1), (0, r.w)(J => this.gameApi.put(`/user/${J}/allpacks`, z)), (0, g.b)(J => {
+                        this.dataStore.unopenedPacks = this.dataStore.unopenedPacks.filter(ae => ae.pack_id !== z.pack_id), this._unopenedPacks$.next([...this.dataStore.unopenedPacks])
                     }))
                 }
 
-                openPack$(N) {
-                    return N.requiresAuthentication ? this.openPackAuthenticated$(N) : this.openPackUnauthenticated$(N)
+                openPack$(z) {
+                    return z.requiresAuthentication ? this.openPackAuthenticated$(z) : this.openPackUnauthenticated$(z)
                 }
 
-                packToInventoryCardsMap(N) {
-                    const X = {};
-                    return N.cards.forEach(ae => {
+                packToInventoryCardsMap(z) {
+                    const J = {};
+                    return z.cards.forEach(ae => {
                         const Y = {q: ae.quality, id: ae.id};
-                        X[ae.proto] ? X[ae.proto].push(Y) : X[ae.proto] = [Y]
-                    }), X
+                        J[ae.proto] ? J[ae.proto].push(Y) : J[ae.proto] = [Y]
+                    }), J
                 }
 
-                generateRandomDummyPacks(N) {
-                    return Array.from({length: N}, (X, ae) => ({
+                generateRandomDummyPacks(z) {
+                    return Array.from({length: z}, (J, ae) => ({
                         cards: this.generateRandomDummyCards(5),
                         god: this.chooseRandomGod(),
                         set: "core",
@@ -17583,8 +17521,8 @@
                     }))
                 }
 
-                generateRandomDummyCards(N) {
-                    return Array.from({length: N}, (X, ae) => ({
+                generateRandomDummyCards(z) {
+                    return Array.from({length: z}, (J, ae) => ({
                         proto: this.generateCardProto(),
                         id: ae + 1,
                         rarity: this.chooseRandomCardRarity(),
@@ -17594,39 +17532,39 @@
                 }
 
                 chooseRandomPackRarity() {
-                    const N = ["rare", "legendary"];
-                    return N[Math.ceil(Math.random() * N.length - 1)]
+                    const z = ["rare", "legendary"];
+                    return z[Math.ceil(Math.random() * z.length - 1)]
                 }
 
                 chooseRandomCardRarity() {
-                    const N = ["common", "rare", "epic", "legendary"];
-                    return N[Math.ceil(Math.random() * N.length - 1)]
+                    const z = ["common", "rare", "epic", "legendary"];
+                    return z[Math.ceil(Math.random() * z.length - 1)]
                 }
 
                 chooseRandomGod() {
-                    const N = ["nature", "death", "nature", "war", "neutral", "deception", "light", "magic"];
-                    return N[Math.ceil(Math.random() * N.length - 1)]
+                    const z = ["nature", "death", "nature", "war", "neutral", "deception", "light", "magic"];
+                    return z[Math.ceil(Math.random() * z.length - 1)]
                 }
 
                 generateCardProto() {
-                    const N = Math.ceil(384 * Math.random());
-                    return [382, 383, 384, 378, 379].includes(N) ? this.generateCardProto() : N
+                    const z = Math.ceil(384 * Math.random());
+                    return [382, 383, 384, 378, 379].includes(z) ? this.generateCardProto() : z
                 }
             }
 
-            return de.\u0275fac = function (N) {
-                return new (N || de)(k.LFG(c.mI), k.LFG(P.Ft), k.LFG(P.Ho), k.LFG(c.ux), k.LFG(P.dK), k.LFG(P.iZ))
-            }, de.\u0275prov = k.Yz7({token: de, factory: de.\u0275fac, providedIn: "root"}), de
+            return de.\u0275fac = function (z) {
+                return new (z || de)(S.LFG(d.mI), S.LFG(k.Ft), S.LFG(k.Ho), S.LFG(d.ux), S.LFG(k.dK), S.LFG(k.iZ))
+            }, de.\u0275prov = S.Yz7({token: de, factory: de.\u0275fac, providedIn: "root"}), de
         })();
-        var A = o(40886), f = (() => {
-            return (de = f || (f = {}))[de.RARE_GENESIS = 0] = "RARE_GENESIS", de[de.RARE_TRIAL = 1] = "RARE_TRIAL", de[de.LEGENDARY_GENESIS = 2] = "LEGENDARY_GENESIS", de[de.LEGENDARY_TRIAL = 3] = "LEGENDARY_TRIAL", f;
+        var D = o(40886), v = (() => {
+            return (de = v || (v = {}))[de.RARE_GENESIS = 0] = "RARE_GENESIS", de[de.RARE_TRIAL = 1] = "RARE_TRIAL", de[de.LEGENDARY_GENESIS = 2] = "LEGENDARY_GENESIS", de[de.LEGENDARY_TRIAL = 3] = "LEGENDARY_TRIAL", v;
             var de
-        })(), O = o(52909), S = o(18499), b = o(13989), T = o(45425), s = o(5254), C = o(61737), w = o(77518);
-        const B = o(45861), ee = o(92916);
+        })(), O = o(52909), P = o(18499), C = o(13989), $ = o(45425), s = o(5254), b = o(61737), w = o(77518);
+        const B = o(45861), q = o(92916);
         let ce = (() => {
             class de {
-                constructor(N, X) {
-                    if (this.environment = N, this.ethService = X, this._chests$ = new i.X([]), console.log("ChestService->constructor()"), "desktop" !== this.environment.clientType) {
+                constructor(z, J) {
+                    if (this.environment = z, this.ethService = J, this._chests$ = new i.X([]), console.log("ChestService->constructor()"), "desktop" !== this.environment.clientType) {
                         try {
                             this.setupGenesis()
                         } catch (ae) {
@@ -17646,34 +17584,34 @@
                 }
 
                 setupGenesis() {
-                    this.RareGenesis = this.ethService.artifactsToContract(B, "0xEE85966b4974d3C6F71A2779cC3B6F53aFbc2B68"), this.LegendaryGenesis = this.ethService.artifactsToContract(B, "0x20D4Cec36528e1C4563c1BFbE3De06aBa70b22B4"), this.Vault = this.ethService.artifactsToContract(ee, ee.networks[1]), this.VaultInfura = this.ethService.infuraContract(ee, ee.networks[1]), this.LegendaryGenesisInfura = this.ethService.infuraContract(B, "0x20D4Cec36528e1C4563c1BFbE3De06aBa70b22B4")
+                    this.RareGenesis = this.ethService.artifactsToContract(B, "0xEE85966b4974d3C6F71A2779cC3B6F53aFbc2B68"), this.LegendaryGenesis = this.ethService.artifactsToContract(B, "0x20D4Cec36528e1C4563c1BFbE3De06aBa70b22B4"), this.Vault = this.ethService.artifactsToContract(q, q.networks[1]), this.VaultInfura = this.ethService.infuraContract(q, q.networks[1]), this.LegendaryGenesisInfura = this.ethService.infuraContract(B, "0x20D4Cec36528e1C4563c1BFbE3De06aBa70b22B4")
                 }
 
                 setupTrial() {
-                    const N = this.environment.production ? w.np.Production : w.np.Staging,
-                        X = this.environment.production ? "https://eth-mainnet.alchemyapi.io/v2/ICJe8nw_i-gl_3E6V6I942RRJ3PMs5vB" : "https://eth-ropsten.alchemyapi.io/v2/ICJe8nw_i-gl_3E6V6I942RRJ3PMs5vB",
-                        ae = this.environment.production ? A.t : A.Y, Y = (0, S.getGodsUnchainedAddresses)(ae, N),
-                        V = ((0, S.getGodsUnchainedAddresses)(ae, N), (0, S.getGodsUnchainedAddresses)(ae, N).seasonOne.capAddress);
+                    const z = this.environment.production ? w.np.Production : w.np.Staging,
+                        J = this.environment.production ? "https://eth-mainnet.alchemyapi.io/v2/ICJe8nw_i-gl_3E6V6I942RRJ3PMs5vB" : "https://eth-ropsten.alchemyapi.io/v2/ICJe8nw_i-gl_3E6V6I942RRJ3PMs5vB",
+                        ae = this.environment.production ? D.t : D.Y, Y = (0, P.getGodsUnchainedAddresses)(ae, z),
+                        V = ((0, P.getGodsUnchainedAddresses)(ae, z), (0, P.getGodsUnchainedAddresses)(ae, z).seasonOne.capAddress);
                     if (window.ethereum) {
-                        const Ce = new b.Qg(window.ethereum).getSigner();
-                        console.log("ChestService->setup() signer", Ce), this.RareTrial = S.Chest.at(Ce, Y.seasonOne.rareChestAddress), console.log("ChestService->setup() RareTrial", this.RareTrial), this.LegendaryTrial = S.Chest.at(Ce, Y.seasonOne.legendaryChestAddress), console.log("ChestService->setup() LegendaryTrial", this.LegendaryTrial), this.S1Cap = S.S1Cap.at(Ce, V), console.log("ChestService->setup() S1Cap", this.S1Cap)
+                        const ye = new C.Qg(window.ethereum).getSigner();
+                        console.log("ChestService->setup() signer", ye), this.RareTrial = P.Chest.at(ye, Y.seasonOne.rareChestAddress), console.log("ChestService->setup() RareTrial", this.RareTrial), this.LegendaryTrial = P.Chest.at(ye, Y.seasonOne.legendaryChestAddress), console.log("ChestService->setup() LegendaryTrial", this.LegendaryTrial), this.S1Cap = P.S1Cap.at(ye, V), console.log("ChestService->setup() S1Cap", this.S1Cap)
                     }
-                    const le = new b.r6(X, ae);
-                    this.RareTrialAlchemy = S.Chest.at(le, Y.seasonOne.rareChestAddress), this.LegendaryTrialAlchemy = S.Chest.at(le, Y.seasonOne.legendaryChestAddress), this.S1CapAlchemy = S.S1Cap.at(le, V)
+                    const le = new C.r6(J, ae);
+                    this.RareTrialAlchemy = P.Chest.at(le, Y.seasonOne.rareChestAddress), this.LegendaryTrialAlchemy = P.Chest.at(le, Y.seasonOne.legendaryChestAddress), this.S1CapAlchemy = P.S1Cap.at(le, V)
                 }
 
                 s1CapCap() {
-                    return (0, s.D)(this.S1Cap.cap()).pipe((0, v.K)(N => (0, s.D)(this.S1CapAlchemy.cap())))
+                    return (0, s.D)(this.S1Cap.cap()).pipe((0, _.K)(z => (0, s.D)(this.S1CapAlchemy.cap())))
                 }
 
                 s1CapCurrent() {
-                    return (0, s.D)(this.S1Cap.current()).pipe((0, v.K)(N => (0, s.D)(this.S1CapAlchemy.current())))
+                    return (0, s.D)(this.S1Cap.current()).pipe((0, _.K)(z => (0, s.D)(this.S1CapAlchemy.current())))
                 }
 
                 s1CapProgressPercentage() {
-                    return (0, e.aj)([this.s1CapCurrent(), this.s1CapCap()]).pipe((0, m.q)(1), (0, p.U)(([N, X]) => {
+                    return (0, e.aj)([this.s1CapCurrent(), this.s1CapCap()]).pipe((0, m.q)(1), (0, p.U)(([z, J]) => {
                         try {
-                            const ae = N.toNumber(), Y = X.toNumber();
+                            const ae = z.toNumber(), Y = J.toNumber();
                             return (Y - ae) / Y * 100
                         } catch (ae) {
                             return 100
@@ -17681,159 +17619,158 @@
                     }))
                 }
 
-                soldTrial(N) {
-                    return (0, s.D)(this.getContractTrial(N).sold()).pipe((0, v.K)(X => (0, s.D)(this.getContractTrialAlchemy(N).sold())))
+                soldTrial(z) {
+                    return (0, s.D)(this.getContractTrial(z).sold()).pipe((0, _.K)(J => (0, s.D)(this.getContractTrialAlchemy(z).sold())))
                 }
 
-                capTrial(N) {
-                    return (0, s.D)(this.getContractTrial(N).productCap()).pipe((0, v.K)(X => (0, s.D)(this.getContractTrialAlchemy(N).productCap())))
+                capTrial(z) {
+                    return (0, s.D)(this.getContractTrial(z).productCap()).pipe((0, _.K)(J => (0, s.D)(this.getContractTrialAlchemy(z).productCap())))
                 }
 
-                balanceOfTrial(N, X) {
-                    const ae = this.getContractTrial(N);
-                    return (0, e.aj)([ae.balanceOf(X), (0, s.D)(ae.decimals())]).pipe((0, p.U)(([Y, ye]) => {
-                        const V = new T.ethers.utils.BigNumber(10).pow(ye);
+                balanceOfTrial(z, J) {
+                    const ae = this.getContractTrial(z);
+                    return (0, e.aj)([ae.balanceOf(J), (0, s.D)(ae.decimals())]).pipe((0, p.U)(([Y, xe]) => {
+                        const V = new $.ethers.utils.BigNumber(10).pow(xe);
                         return Y.div(V)
                     }))
                 }
 
-                getContractTrial(N) {
-                    switch (N) {
-                        case f.RARE_TRIAL:
+                getContractTrial(z) {
+                    switch (z) {
+                        case v.RARE_TRIAL:
                             return this.RareTrial;
-                        case f.LEGENDARY_TRIAL:
+                        case v.LEGENDARY_TRIAL:
                             return this.LegendaryTrial
                     }
                 }
 
-                getContractTrialAlchemy(N) {
-                    switch (N) {
-                        case f.RARE_TRIAL:
+                getContractTrialAlchemy(z) {
+                    switch (z) {
+                        case v.RARE_TRIAL:
                             return this.RareTrialAlchemy;
-                        case f.LEGENDARY_TRIAL:
+                        case v.LEGENDARY_TRIAL:
                             return this.LegendaryTrialAlchemy
                     }
                 }
 
                 fetchChests() {
-                    this.ethService.getAccount().pipe((0, m.q)(1), (0, n.VS)(N => (0, e.aj)([this.balanceOf(f.RARE_GENESIS, N), this.balanceOf(f.LEGENDARY_GENESIS, N), this.balanceOfTrial(f.RARE_TRIAL, N), this.balanceOfTrial(f.LEGENDARY_TRIAL, N)]))).subscribe(([N, X, ae, Y]) => {
-                        console.log("fetched Num Bundles rare leg", N, X), this.dataStore.chests = this.chestData(N.toNumber(), X.toNumber(), Math.floor(ae.toNumber()), Math.floor(Y.toNumber())), this._chests$.next([...this.dataStore.chests])
+                    this.ethService.getAccount().pipe((0, m.q)(1), (0, n.VS)(z => (0, e.aj)([this.balanceOf(v.RARE_GENESIS, z), this.balanceOf(v.LEGENDARY_GENESIS, z), this.balanceOfTrial(v.RARE_TRIAL, z), this.balanceOfTrial(v.LEGENDARY_TRIAL, z)]))).subscribe(([z, J, ae, Y]) => {
+                        console.log("fetched Num Bundles rare leg", z, J), this.dataStore.chests = this.chestData(z.toNumber(), J.toNumber(), Math.floor(ae.toNumber()), Math.floor(Y.toNumber())), this._chests$.next([...this.dataStore.chests])
                     })
                 }
 
-                percentageSold(N) {
-                    return (0, e.aj)([this.soldTrial(N), this.capTrial(N)]).pipe((0, p.U)(([X, ae]) => this.progressPercentage(X, ae)))
+                percentageSold(z) {
+                    return (0, e.aj)([this.soldTrial(z), this.capTrial(z)]).pipe((0, p.U)(([J, ae]) => this.progressPercentage(J, ae)))
                 }
 
-                progressPercentage(N, X) {
+                progressPercentage(z, J) {
                     try {
-                        const ae = N.toNumber(), Y = X.toNumber();
+                        const ae = z.toNumber(), Y = J.toNumber();
                         return (Y - ae) / Y * 100
                     } catch (ae) {
                         return 100
                     }
                 }
 
-                balanceOf(N, X) {
-                    return this.getContract(N).pipe((0, n.VS)(ae => ae.balanceOf(X)), (0, p.U)(ae => ae), (0, g.b)(ae => {
-                        console.log("ChestService->balanceOf() BALANCE", N, ae)
-                    }), (0, v.K)(ae => (console.log("error getting balanceOf ", N, ae), (0, y.of)(O.O$.from(0)))))
+                balanceOf(z, J) {
+                    return this.getContract(z).pipe((0, n.VS)(ae => ae.balanceOf(J)), (0, p.U)(ae => ae), (0, g.b)(ae => {
+                        console.log("ChestService->balanceOf() BALANCE", z, ae)
+                    }), (0, _.K)(ae => (console.log("error getting balanceOf ", z, ae), (0, y.of)(O.O$.from(0)))))
                 }
 
-                open(N, X) {
-                    return this.getContract(N).pipe((0, n.VS)(ae => ae.open(X)), (0, g.b)(ae => {
-                        this.dataStore.chests.find(ye => ye.type === N).amount -= X, this._chests$.next([...this.dataStore.chests])
+                open(z, J) {
+                    return this.getContract(z).pipe((0, n.VS)(ae => ae.open(J)), (0, g.b)(ae => {
+                        this.dataStore.chests.find(xe => xe.type === z).amount -= J, this._chests$.next([...this.dataStore.chests])
                     }))
                 }
 
-                cap(N) {
-                    return this.getContract(N).pipe((0, n.VS)(X => X.productCap()), (0, p.U)(X => X))
+                cap(z) {
+                    return this.getContract(z).pipe((0, n.VS)(J => J.productCap()), (0, p.U)(J => J))
                 }
 
-                sold(N) {
-                    return this.getContract(N).pipe((0, n.VS)(X => X.sold()), (0, p.U)(X => X), (0, v.K)(X => this.soldInfura(N)))
+                sold(z) {
+                    return this.getContract(z).pipe((0, n.VS)(J => J.sold()), (0, p.U)(J => J), (0, _.K)(J => this.soldInfura(z)))
                 }
 
-                soldInfura(N) {
-                    return this.getContractInfura(N).pipe((0, n.VS)(X => X.sold()), (0, p.U)(X => X))
+                soldInfura(z) {
+                    return this.getContractInfura(z).pipe((0, n.VS)(J => J.sold()), (0, p.U)(J => J))
                 }
 
                 vaultBalance() {
-                    return (0, s.D)(this.Vault.deployed()).pipe((0, n.VS)(N => N.total()), (0, p.U)(N => N), (0, v.K)(N => this.vaultBalanceInfura()))
+                    return (0, s.D)(this.Vault.deployed()).pipe((0, n.VS)(z => z.total()), (0, p.U)(z => z), (0, _.K)(z => this.vaultBalanceInfura()))
                 }
 
                 vaultBalanceInfura() {
-                    return (0, s.D)(this.VaultInfura.deployed()).pipe((0, n.VS)(N => N.total()), (0, p.U)(N => N))
+                    return (0, s.D)(this.VaultInfura.deployed()).pipe((0, n.VS)(z => z.total()), (0, p.U)(z => z))
                 }
 
                 vaultCap() {
                     return (0, y.of)(O.O$.from("33333000000000000000000"))
                 }
 
-                getContract(N) {
-                    switch (N) {
-                        case f.RARE_GENESIS:
+                getContract(z) {
+                    switch (z) {
+                        case v.RARE_GENESIS:
                             return (0, s.D)(this.RareGenesis.deployed());
-                        case f.LEGENDARY_GENESIS:
+                        case v.LEGENDARY_GENESIS:
                             return (0, s.D)(this.LegendaryGenesis.deployed());
-                        case f.RARE_TRIAL:
+                        case v.RARE_TRIAL:
                             return (0, y.of)(this.RareTrial);
-                        case f.LEGENDARY_TRIAL:
+                        case v.LEGENDARY_TRIAL:
                             return (0, y.of)(this.LegendaryTrial)
                     }
-                    return (0, C._)("invalid bundle pack type")
+                    return (0, b._)("invalid bundle pack type")
                 }
 
-                getContractInfura(N) {
-                    return N === f.LEGENDARY_GENESIS ? (0, s.D)(this.LegendaryGenesisInfura.deployed()) : (0, C._)("invalid bundle pack type")
+                getContractInfura(z) {
+                    return z === v.LEGENDARY_GENESIS ? (0, s.D)(this.LegendaryGenesisInfura.deployed()) : (0, b._)("invalid bundle pack type")
                 }
 
-                chestData(N = 0, X = 0, ae = 0, Y = 0) {
+                chestData(z = 0, J = 0, ae = 0, Y = 0) {
                     return [{
-                        type: f.RARE_GENESIS,
+                        type: v.RARE_GENESIS,
                         set: "genesis",
                         rarity: "rare",
-                        amount: N
-                    }, {type: f.LEGENDARY_GENESIS, set: "genesis", rarity: "legendary", amount: X}, {
-                        type: f.RARE_TRIAL,
+                        amount: z
+                    }, {type: v.LEGENDARY_GENESIS, set: "genesis", rarity: "legendary", amount: J}, {
+                        type: v.RARE_TRIAL,
                         set: "trial",
                         rarity: "rare",
                         amount: ae
-                    }, {type: f.LEGENDARY_TRIAL, set: "trial", rarity: "legendary", amount: Y}]
+                    }, {type: v.LEGENDARY_TRIAL, set: "trial", rarity: "legendary", amount: Y}]
                 }
             }
 
-            return de.\u0275fac = function (N) {
-                return new (N || de)(k.LFG(c.Ho), k.LFG(c.ux))
-            }, de.\u0275prov = k.Yz7({token: de, factory: de.\u0275fac, providedIn: "root"}), de
+            return de.\u0275fac = function (z) {
+                return new (z || de)(S.LFG(d.Ho), S.LFG(d.ux))
+            }, de.\u0275prov = S.Yz7({token: de, factory: de.\u0275fac, providedIn: "root"}), de
         })()
-    },
-    55778: (se, R, o) => {
+    }, 55778: (se, U, o) => {
         "use strict";
-        o.d(R, {
+        o.d(U, {
             jt: () => de,
             yD: () => Y,
             QF: () => Q,
-            f1: () => Ct,
-            dK: () => lt.d,
-            tX: () => we,
-            ai: () => je.a,
-            iZ: () => $,
-            vU: () => je.v,
-            TJ: () => Oe,
-            pH: () => ht,
-            Ho: () => Ze,
-            Of: () => ye,
-            Ft: () => ne.F,
+            f1: () => Ye,
+            dK: () => bt.d,
+            tX: () => Mt,
+            ai: () => nt.a,
+            iZ: () => ke,
+            vU: () => nt.v,
+            TJ: () => ne,
+            pH: () => $e,
+            Ho: () => pt,
+            Of: () => xe,
+            Ft: () => X.F,
             n2: () => he,
-            _q: () => nt._,
-            LE: () => ot.L,
-            fY: () => Xe.f,
-            C_: () => Rt,
-            xd: () => Ge,
-            $c: () => It,
-            cM: () => re,
-            $: () => yt.$
+            _q: () => yt._,
+            LE: () => He.L,
+            fY: () => rt.f,
+            C_: () => Ie,
+            xd: () => Se,
+            $c: () => Ee,
+            cM: () => ee,
+            $: () => Ne.$
         }), o(52408);
         var i = o(21086), y = o(52886), e = o(77518);
         const p = {
@@ -17884,11 +17821,11 @@
             imx_tx_id: 125,
             status: e.Og.COMPLETED
         }), Object.assign(Object.assign({}, p), {imx_tx_id: 0, status: e.Og.CARDS_DELETED});
-        var O = o(85111), S = o(69808), b = o(5e3), T = o(73307), C = o(60870);
+        var O = o(85111), P = o(69808), C = o(5e3), $ = o(73307), b = o(60870);
         let de = (() => {
-            class W {
-                constructor(d, _, U, ie) {
-                    this.deviceDetectorService = d, this.environment = _, this.authService = U, this.storage = ie, this.brand = "godsunchained", this.appVersion = "0.13.3", this.initAnalyticsProperties(), this.initDeviceProperties(), this.initSessionProperties(), this.initUserProperties()
+            class N {
+                constructor(l, f, R, ie) {
+                    this.deviceDetectorService = l, this.environment = f, this.authService = R, this.storage = ie, this.brand = "godsunchained", this.appVersion = "0.13.3", this.initAnalyticsProperties(), this.initDeviceProperties(), this.initSessionProperties(), this.initUserProperties()
                 }
 
                 initAnalyticsProperties() {
@@ -17896,13 +17833,13 @@
                 }
 
                 initDeviceProperties() {
-                    const _ = this.getDeviceId();
+                    const f = this.getDeviceId();
                     this.deviceProperties = {
-                        device_id: _ && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(_) ? _ : o(66926)(),
+                        device_id: f && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(f) ? f : o(66926)(),
                         os_name: this.deviceDetectorService.os,
                         os_version: this.deviceDetectorService.os_version,
                         app_platform: window.navigator.platform
-                    }, this.storage.set(["device_id"], _)
+                    }, this.storage.set(["device_id"], f)
                 }
 
                 getDeviceId() {
@@ -17914,8 +17851,8 @@
                 }
 
                 initUserProperties() {
-                    this.userId = this.authService.getUserId(), this.isUserSignedIn = !!this.userId, this.authService.account$.subscribe(d => {
-                        this.isUserSignedIn = !!d, this.userId = this.isUserSignedIn ? `${this.authService.getUserId()}` : ""
+                    this.userId = this.authService.getUserId(), this.isUserSignedIn = !!this.userId, this.authService.account$.subscribe(l => {
+                        this.isUserSignedIn = !!l, this.userId = this.isUserSignedIn ? `${this.authService.getUserId()}` : ""
                     })
                 }
 
@@ -17923,30 +17860,30 @@
                     return "website" === this.environment.clientType ? "web" : "client"
                 }
 
-                sendEvent(d) {
+                sendEvent(l) {
                     try {
-                        window.akuma(d)
-                    } catch (_) {
-                        console.error(_)
+                        window.akuma(l)
+                    } catch (f) {
+                        console.error(f)
                     }
                 }
 
-                postScreenEvent(d, _, U, ie, ke, Ve) {
-                    const it = this.buildEvent("Screen", `${d}${_}${U}_${ie}`, this.isUserSignedIn ? `${this.userId}` : `${Ve}`, ke);
-                    this.sendEvent(it)
+                postScreenEvent(l, f, R, ie, Oe, Ze) {
+                    const ht = this.buildEvent("Screen", `${l}${f}${R}_${ie}`, this.isUserSignedIn ? `${this.userId}` : `${Ze}`, Oe);
+                    this.sendEvent(ht)
                 }
 
-                postControlEvent(d, _, U, ie, ke, Ve, ct, mt) {
-                    const ls = this.buildEvent("Control", `${d}${_}${U}_${ie}${ke}_${Ve}`, this.isUserSignedIn ? `${this.userId}` : `${mt}`, ct);
-                    this.sendEvent(ls)
+                postControlEvent(l, f, R, ie, Oe, Ze, ct, gt) {
+                    const Jt = this.buildEvent("Control", `${l}${f}${R}_${ie}${Oe}_${Ze}`, this.isUserSignedIn ? `${this.userId}` : `${gt}`, ct);
+                    this.sendEvent(Jt)
                 }
 
-                postFlowEvent(d, _, U, ie) {
-                    const ct = this.buildEvent("Flow", `_${d}_${_}`, this.isUserSignedIn ? `${this.userId}` : `${ie}`, U);
+                postFlowEvent(l, f, R, ie) {
+                    const ct = this.buildEvent("Flow", `_${l}_${f}`, this.isUserSignedIn ? `${this.userId}` : `${ie}`, R);
                     this.sendEvent(ct)
                 }
 
-                buildEvent(d, _, U, ie) {
+                buildEvent(l, f, R, ie) {
                     return {
                         appBrand: this.brand,
                         appName: this.appName,
@@ -17954,33 +17891,33 @@
                         appVersion: this.appVersion,
                         deviceProperties: this.deviceProperties,
                         eventProperties: ie,
-                        eventName: _,
-                        eventType: d,
+                        eventName: f,
+                        eventType: l,
                         sessionProperties: this.sessionProperties,
-                        userId: U,
+                        userId: R,
                         userProperties: this.userProperties,
                         realm: this.branch
                     }
                 }
 
-                postEvent(d, _, U, ie) {
-                    const Ve = this.buildEvent(d, _, this.isUserSignedIn ? `${this.userId}` : `${ie}`, U);
-                    this.sendEvent(Ve)
+                postEvent(l, f, R, ie) {
+                    const Ze = this.buildEvent(l, f, this.isUserSignedIn ? `${this.userId}` : `${ie}`, R);
+                    this.sendEvent(Ze)
                 }
             }
 
-            return W.\u0275fac = function (d) {
-                return new (d || W)(b.LFG(C.x0), b.LFG(T.Ho), b.LFG(T.mI), b.LFG(T.qy))
-            }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
+            return N.\u0275fac = function (l) {
+                return new (l || N)(C.LFG(b.x0), C.LFG($.Ho), C.LFG($.mI), C.LFG($.qy))
+            }, N.\u0275prov = C.Yz7({token: N, factory: N.\u0275fac}), N
         })();
-        var fe = o(40520), N = o(59633);
-        const X = "website";
+        var Ce = o(40520), z = o(59633);
+        const J = "website";
         let Y = (() => {
-            class W {
-                constructor(d, _, U, ie) {
-                    this.deviceDetectorService = d, this.httpClient = _, this.environment = U, this.storage = ie, this.headers = new fe.WM({"X-Chaff": this.environment.production ? "" : "test"});
-                    const ke = this.getDeviceId();
-                    this.brand = "gods_unchained", this.device_id = ke && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(ke) ? ke : o(66926)(), this.event_id = 0, this.native = this.environment.clientType !== X, this.platform = window.navigator.platform, this.producer = this.deviceDetectorService.isDesktop() ? "desktop" : "mobile", this.os_name = this.deviceDetectorService.os, this.os_version = this.deviceDetectorService.os_version, this.service = this.environment.clientType === X ? X : "launcher", this.session_id = this.generateSessionId(), this.storage.set(["device_id"], this.device_id)
+            class N {
+                constructor(l, f, R, ie) {
+                    this.deviceDetectorService = l, this.httpClient = f, this.environment = R, this.storage = ie, this.headers = new Ce.WM({"X-Chaff": this.environment.production ? "" : "test"});
+                    const Oe = this.getDeviceId();
+                    this.brand = "gods_unchained", this.device_id = Oe && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(Oe) ? Oe : o(66926)(), this.event_id = 0, this.native = this.environment.clientType !== J, this.platform = window.navigator.platform, this.producer = this.deviceDetectorService.isDesktop() ? "desktop" : "mobile", this.os_name = this.deviceDetectorService.os, this.os_version = this.deviceDetectorService.os_version, this.service = this.environment.clientType === J ? J : "launcher", this.session_id = this.generateSessionId(), this.storage.set(["device_id"], this.device_id)
                 }
 
                 generateSessionId() {
@@ -18006,12 +17943,12 @@
                     return this.storage.get(["device_id"])
                 }
 
-                postEvent(d, _) {
-                    const ie = new N.Event({
+                postEvent(l, f) {
+                    const ie = new z.Event({
                         brand: this.brand,
                         device_id: this.device_id,
                         event_id: this.event_id = this.event_id + 1,
-                        event_properties: d,
+                        event_properties: l,
                         native: this.native,
                         os_name: this.os_name,
                         os_version: this.os_version,
@@ -18020,116 +17957,116 @@
                         service: this.service,
                         session_id: this.session_id,
                         user_id: parseInt(this.getUserId(), 10),
-                        user_properties: _
+                        user_properties: f
                     }).toObject();
                     return Object.assign(ie.event_properties, this.getUTM()), this.httpClient.post(this.environment.analyticsHost, JSON.stringify(ie), {headers: this.headers}).toPromise()
                 }
             }
 
-            return W.\u0275fac = function (d) {
-                return new (d || W)(b.LFG(C.x0), b.LFG(fe.eN), b.LFG(T.Ho), b.LFG(T.qy))
-            }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac, providedIn: "root"}), W
-        })(), ye = (() => {
-            class W {
+            return N.\u0275fac = function (l) {
+                return new (l || N)(C.LFG(b.x0), C.LFG(Ce.eN), C.LFG($.Ho), C.LFG($.qy))
+            }, N.\u0275prov = C.Yz7({token: N, factory: N.\u0275fac, providedIn: "root"}), N
+        })(), xe = (() => {
+            class N {
                 constructor() {
                 }
 
-                setCurrentProvider(d) {
+                setCurrentProvider(l) {
                     try {
-                        ga("set", "dimension1", d)
-                    } catch (_) {
-                        console.log(_)
+                        ga("set", "dimension1", l)
+                    } catch (f) {
+                        console.log(f)
                     }
                 }
 
-                setAccount(d) {
+                setAccount(l) {
                     try {
-                        ga("set", "dimension2", d)
-                    } catch (_) {
-                        console.log(_)
+                        ga("set", "dimension2", l)
+                    } catch (f) {
+                        console.log(f)
                     }
                 }
 
-                setReferrer(d) {
+                setReferrer(l) {
                     try {
-                        ga("set", "dimension3", d)
-                    } catch (_) {
-                        console.log(_)
+                        ga("set", "dimension3", l)
+                    } catch (f) {
+                        console.log(f)
                     }
                 }
 
-                setClientId(d) {
+                setClientId(l) {
                     try {
-                        ga("set", "dimension4", d)
-                    } catch (_) {
-                        console.log(_)
+                        ga("set", "dimension4", l)
+                    } catch (f) {
+                        console.log(f)
                     }
                 }
 
-                setSessionId(d) {
+                setSessionId(l) {
                     try {
-                        ga("set", "dimension5", d)
-                    } catch (_) {
-                        console.log(_)
+                        ga("set", "dimension5", l)
+                    } catch (f) {
+                        console.log(f)
                     }
                 }
 
-                setUserId(d) {
+                setUserId(l) {
                     try {
-                        ga("set", "dimension6", d)
-                    } catch (_) {
-                        console.log(_)
+                        ga("set", "dimension6", l)
+                    } catch (f) {
+                        console.log(f)
                     }
                 }
 
-                setHitTimestamp(d) {
+                setHitTimestamp(l) {
                     try {
-                        ga("set", "dimension7", d)
-                    } catch (_) {
-                        console.log(_)
+                        ga("set", "dimension7", l)
+                    } catch (f) {
+                        console.log(f)
                     }
                 }
 
-                setAbVersion(d) {
+                setAbVersion(l) {
                     try {
-                        ga("set", "dimension8", d)
-                    } catch (_) {
-                        console.log(_)
+                        ga("set", "dimension8", l)
+                    } catch (f) {
+                        console.log(f)
                     }
                 }
 
-                triggerOutboundLinkEvent(d, _) {
+                triggerOutboundLinkEvent(l, f) {
                     try {
-                        let U = "";
-                        U = U.split("?")[0], ga("send", "event", "Outbound Link", "click", U, d)
-                    } catch (U) {
-                        console.log("could not track ga", U)
+                        let R = "";
+                        R = R.split("?")[0], ga("send", "event", "Outbound Link", "click", R, l)
+                    } catch (R) {
+                        console.log("could not track ga", R)
                     }
                 }
 
-                triggerButtonClickEvent(d, _) {
+                triggerButtonClickEvent(l, f) {
                     try {
-                        let U = "";
-                        U = U.split("?")[0], ga("send", "event", "Button", "click", U, d)
-                    } catch (U) {
-                        console.log("could not track ga", U)
+                        let R = "";
+                        R = R.split("?")[0], ga("send", "event", "Button", "click", R, l)
+                    } catch (R) {
+                        console.log("could not track ga", R)
                     }
                 }
 
-                triggerPageDeferLoadEvent(d, _) {
+                triggerPageDeferLoadEvent(l, f) {
                     try {
-                        let U = "";
-                        U = U.split("?")[0], ga("send", "event", "Page", "defer load", U, d)
-                    } catch (U) {
-                        console.log("could not track ga", U)
+                        let R = "";
+                        R = R.split("?")[0], ga("send", "event", "Page", "defer load", R, l)
+                    } catch (R) {
+                        console.log("could not track ga", R)
                     }
                 }
 
-                sendEvent(d, _, U, ie, ke) {
+                sendEvent(l, f, R, ie, Oe) {
                     try {
-                        console.log(`GA Event: send, event, ${d}, ${_}, ${U}, ${ie}, ${ke}`), ga("send", "event", d, _, U, ie, ke)
-                    } catch (Ve) {
-                        console.log("Error tracking GA", Ve)
+                        console.log(`GA Event: send, event, ${l}, ${f}, ${R}, ${ie}, ${Oe}`), ga("send", "event", l, f, R, ie, Oe)
+                    } catch (Ze) {
+                        console.log("Error tracking GA", Ze)
                     }
                 }
 
@@ -18137,88 +18074,88 @@
                     this.sendEvent("buy", "pack", "banned_country")
                 }
 
-                buyPackType(d) {
-                    this.sendEvent("buy", "pack_type", d)
+                buyPackType(l) {
+                    this.sendEvent("buy", "pack_type", l)
                 }
 
-                buyPackTypeNumber(d, _, U) {
-                    this.sendEvent("buy", `${d}_number`, _, U)
+                buyPackTypeNumber(l, f, R) {
+                    this.sendEvent("buy", `${l}_number`, f, R)
                 }
 
-                buyPurchase(d, _) {
-                    this.sendEvent("buy", "purchase", d, _)
+                buyPurchase(l, f) {
+                    this.sendEvent("buy", "purchase", l, f)
                 }
 
-                buyConfirmation(d, _) {
-                    this.sendEvent("buy", "confirmation", d, _)
+                buyConfirmation(l, f) {
+                    this.sendEvent("buy", "confirmation", l, f)
                 }
 
-                buyStatus(d) {
-                    this.sendEvent("buy", "status", d)
+                buyStatus(l) {
+                    this.sendEvent("buy", "status", l)
                 }
 
                 templeOpenPacks() {
                     this.sendEvent("temple", "open_packs")
                 }
 
-                templePurchase(d, _) {
-                    this.sendEvent("temple", "purchase", d, _)
+                templePurchase(l, f) {
+                    this.sendEvent("temple", "purchase", l, f)
                 }
 
                 templeShareDiscord() {
                     this.sendEvent("temple", "share", "discord")
                 }
 
-                inventoryInventoryType(d) {
-                    this.sendEvent("inventory", "inventory_type", d)
+                inventoryInventoryType(l) {
+                    this.sendEvent("inventory", "inventory_type", l)
                 }
 
-                inventory(d, _, U) {
-                    this.sendEvent("inventory", d, _, U)
+                inventory(l, f, R) {
+                    this.sendEvent("inventory", l, f, R)
                 }
 
                 inventorySearchStart() {
                     this.sendEvent("inventory", "search_start")
                 }
 
-                inventorySearchEnd(d, _) {
-                    this.sendEvent("inventory", "search_end", d, _)
+                inventorySearchEnd(l, f) {
+                    this.sendEvent("inventory", "search_end", l, f)
                 }
 
-                inventoryPageUp(d, _) {
-                    this.sendEvent("inventory", "page_up", d, _)
+                inventoryPageUp(l, f) {
+                    this.sendEvent("inventory", "page_up", l, f)
                 }
 
-                inventoryPageDown(d, _) {
-                    this.sendEvent("inventory", "page_down", d, _)
+                inventoryPageDown(l, f) {
+                    this.sendEvent("inventory", "page_down", l, f)
                 }
 
-                inventoryPageSelect(d, _) {
-                    this.sendEvent("inventory", "page_select", d, _)
+                inventoryPageSelect(l, f) {
+                    this.sendEvent("inventory", "page_select", l, f)
                 }
 
-                inventoryViewCard(d, _) {
-                    this.sendEvent("inventory", "view_card", d + "", _)
+                inventoryViewCard(l, f) {
+                    this.sendEvent("inventory", "view_card", l + "", f)
                 }
 
-                inventoryViewCollectable(d, _) {
-                    this.sendEvent("inventory", "view_collectable", d, _)
+                inventoryViewCollectable(l, f) {
+                    this.sendEvent("inventory", "view_collectable", l, f)
                 }
 
-                navigateHeader(d) {
-                    this.sendEvent("navigate", "header", d)
+                navigateHeader(l) {
+                    this.sendEvent("navigate", "header", l)
                 }
 
-                navigate(d, _) {
-                    this.sendEvent("navigate", d, _)
+                navigate(l, f) {
+                    this.sendEvent("navigate", l, f)
                 }
 
-                outbound(d, _) {
-                    this.sendEvent("outbound", d, _)
+                outbound(l, f) {
+                    this.sendEvent("outbound", l, f)
                 }
 
-                navigateExit(d) {
-                    this.sendEvent("navigate", "exit", d)
+                navigateExit(l) {
+                    this.sendEvent("navigate", "exit", l)
                 }
 
                 helpOpenHelp() {
@@ -18233,148 +18170,148 @@
                     this.sendEvent("help", "search_start")
                 }
 
-                helpSearchEnd(d) {
-                    this.sendEvent("help", "search_end", d)
+                helpSearchEnd(l) {
+                    this.sendEvent("help", "search_end", l)
                 }
 
-                helpSelectFaq(d) {
-                    this.sendEvent("help", "select_faq", d)
+                helpSelectFaq(l) {
+                    this.sendEvent("help", "select_faq", l)
                 }
 
                 cryptokittiesPurchaseRareRandom() {
                     this.sendEvent("cryptokitties", "purchase", "rare_random")
                 }
 
-                cryptokittiesPurchaseRare(d) {
-                    this.sendEvent("cryptokitties", "purchase", "rare", d)
+                cryptokittiesPurchaseRare(l) {
+                    this.sendEvent("cryptokitties", "purchase", "rare", l)
                 }
 
-                cryptokittiesInventoryType(d) {
-                    this.sendEvent("cryptokitties", "inventory_type", d)
+                cryptokittiesInventoryType(l) {
+                    this.sendEvent("cryptokitties", "inventory_type", l)
                 }
 
                 cryptokittiesSearchStartStart() {
                     this.sendEvent("cryptokitties", "search_start", "start")
                 }
 
-                cryptokittiesSearchEnd(d) {
-                    this.sendEvent("cryptokitties", "search_end", d)
+                cryptokittiesSearchEnd(l) {
+                    this.sendEvent("cryptokitties", "search_end", l)
                 }
 
-                cryptokittiesPageUp(d) {
-                    this.sendEvent("cryptokitties", "page_up", d)
+                cryptokittiesPageUp(l) {
+                    this.sendEvent("cryptokitties", "page_up", l)
                 }
 
-                cryptokittiesPageDown(d) {
-                    this.sendEvent("cryptokitties", "page_down", d)
+                cryptokittiesPageDown(l) {
+                    this.sendEvent("cryptokitties", "page_down", l)
                 }
 
-                cryptokittiesPageSelect(d) {
-                    this.sendEvent("cryptokitties", "page_select", d)
+                cryptokittiesPageSelect(l) {
+                    this.sendEvent("cryptokitties", "page_select", l)
                 }
 
-                cryptokittiesSelect(d) {
-                    this.sendEvent("cryptokitties", "select", d)
+                cryptokittiesSelect(l) {
+                    this.sendEvent("cryptokitties", "select", l)
                 }
 
-                cryptokittiesDeselect(d) {
-                    this.sendEvent("etherbots", "deselect", d)
+                cryptokittiesDeselect(l) {
+                    this.sendEvent("etherbots", "deselect", l)
                 }
 
                 etherbotsPurchaseRareRandom() {
                     this.sendEvent("etherbots", "purchase", "rare_random")
                 }
 
-                etherbotsPurchaseRare(d) {
-                    this.sendEvent("etherbots", "purchase", "rare", d)
+                etherbotsPurchaseRare(l) {
+                    this.sendEvent("etherbots", "purchase", "rare", l)
                 }
 
-                etherbotsInventoryType(d) {
-                    this.sendEvent("etherbots", "inventory_type", d)
+                etherbotsInventoryType(l) {
+                    this.sendEvent("etherbots", "inventory_type", l)
                 }
 
                 etherbotsSearchStartStart() {
                     this.sendEvent("etherbots", "search_start", "start")
                 }
 
-                etherbotsSearchEnd(d) {
-                    this.sendEvent("etherbots", "search_end", d)
+                etherbotsSearchEnd(l) {
+                    this.sendEvent("etherbots", "search_end", l)
                 }
 
-                etherbotsPageUp(d) {
-                    this.sendEvent("etherbots", "page_up", d)
+                etherbotsPageUp(l) {
+                    this.sendEvent("etherbots", "page_up", l)
                 }
 
-                etherbotsPageDown(d) {
-                    this.sendEvent("etherbots", "page_down", d)
+                etherbotsPageDown(l) {
+                    this.sendEvent("etherbots", "page_down", l)
                 }
 
-                etherbotsPageSelect(d) {
-                    this.sendEvent("etherbots", "page_select", d)
+                etherbotsPageSelect(l) {
+                    this.sendEvent("etherbots", "page_select", l)
                 }
 
-                etherbotsSelect(d) {
-                    this.sendEvent("etherbots", "select", d)
+                etherbotsSelect(l) {
+                    this.sendEvent("etherbots", "select", l)
                 }
 
-                etherbotsDeselect(d) {
-                    this.sendEvent("etherbots", "deselect", d)
+                etherbotsDeselect(l) {
+                    this.sendEvent("etherbots", "deselect", l)
                 }
 
-                inventoryViewStatue(d) {
-                    this.sendEvent("inventory", "view_statue", d)
+                inventoryViewStatue(l) {
+                    this.sendEvent("inventory", "view_statue", l)
                 }
 
-                walletConnect(d, _) {
-                    this.sendEvent("wallet", "connect", d, _)
+                walletConnect(l, f) {
+                    this.sendEvent("wallet", "connect", l, f)
                 }
 
-                videoPlay(d) {
-                    this.sendEvent("video", "play", d)
+                videoPlay(l) {
+                    this.sendEvent("video", "play", l)
                 }
 
-                videoPause(d, _) {
-                    this.sendEvent("video", "pause", d, _)
+                videoPause(l, f) {
+                    this.sendEvent("video", "pause", l, f)
                 }
 
-                videoComplete25(d) {
-                    this.sendEvent("video", "complete_25", d)
+                videoComplete25(l) {
+                    this.sendEvent("video", "complete_25", l)
                 }
 
-                videoComplete50(d) {
-                    this.sendEvent("video", "complete_50", d)
+                videoComplete50(l) {
+                    this.sendEvent("video", "complete_50", l)
                 }
 
-                videoComplete75(d) {
-                    this.sendEvent("video", "complete_75", d)
+                videoComplete75(l) {
+                    this.sendEvent("video", "complete_75", l)
                 }
 
-                videoComplete100(d) {
-                    this.sendEvent("video", "complete_100", d)
+                videoComplete100(l) {
+                    this.sendEvent("video", "complete_100", l)
                 }
 
-                videoWatchLater(d) {
-                    this.sendEvent("video", "watch_later", d)
+                videoWatchLater(l) {
+                    this.sendEvent("video", "watch_later", l)
                 }
 
-                videoShare(d, _) {
-                    this.sendEvent("video", `share_${d}`, _)
+                videoShare(l, f) {
+                    this.sendEvent("video", `share_${l}`, f)
                 }
 
-                apolloRegisterBegin(d) {
-                    this.sendEvent("apollo_register", `${d}_onboard`)
+                apolloRegisterBegin(l) {
+                    this.sendEvent("apollo_register", `${l}_onboard`)
                 }
 
-                apolloRegisterFieldStart(d) {
-                    this.sendEvent("apollo_register", `${d}_start`)
+                apolloRegisterFieldStart(l) {
+                    this.sendEvent("apollo_register", `${l}_start`)
                 }
 
-                apolloRegisterFieldComplete(d, _) {
-                    this.sendEvent("apollo_register", `${d}_complete`, void 0, _)
+                apolloRegisterFieldComplete(l, f) {
+                    this.sendEvent("apollo_register", `${l}_complete`, void 0, f)
                 }
 
-                apolloRegisterStagesTime(d, _) {
-                    this.sendEvent("apollo_register", `${d}_time`, void 0, _)
+                apolloRegisterStagesTime(l, f) {
+                    this.sendEvent("apollo_register", `${l}_time`, void 0, f)
                 }
 
                 apolloRegisterComplete() {
@@ -18386,1027 +18323,955 @@
                 }
             }
 
-            return W.\u0275fac = function (d) {
-                return new (d || W)
-            }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
+            return N.\u0275fac = function (l) {
+                return new (l || N)
+            }, N.\u0275prov = C.Yz7({token: N, factory: N.\u0275fac}), N
         })(), V = (() => {
-            class W {
-                constructor(d) {
-                    this.window = d
+            class N {
+                constructor(l) {
+                    this.window = l
                 }
 
-                canActivate(d, _) {
-                    return d.data.externalUrl ? this.window.location.href = d.data.externalUrl : console.warn("*** externalUrl param not provided inside data for redirection"), !1
+                canActivate(l, f) {
+                    return l.data.externalUrl ? this.window.location.href = l.data.externalUrl : console.warn("*** externalUrl param not provided inside data for redirection"), !1
                 }
             }
 
-            return W.\u0275fac = function (d) {
-                return new (d || W)(b.LFG(Window))
-            }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
+            return N.\u0275fac = function (l) {
+                return new (l || N)(C.LFG(Window))
+            }, N.\u0275prov = C.Yz7({token: N, factory: N.\u0275fac}), N
         })();
-        var le = o(61737), Ce = o(27221);
-        let Te = (() => {
-            class W {
+        var le = o(61737), ye = o(27221);
+        let Ae = (() => {
+            class N {
                 constructor() {
                 }
 
-                autoRetryApiOnFail(d, _ = 1) {
-                    return d.pipe((0, Ce.K)(U => _ > 0 && U.status >= 400 && U.status < 600 ? this.autoRetryApiOnFail(d, _ - 1) : (0, le._)(U)))
+                autoRetryApiOnFail(l, f = 1) {
+                    return l.pipe((0, ye.K)(R => f > 0 && R.status >= 400 && R.status < 600 ? this.autoRetryApiOnFail(l, f - 1) : (0, le._)(R)))
                 }
             }
 
-            return W.\u0275fac = function (d) {
-                return new (d || W)
-            }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
+            return N.\u0275fac = function (l) {
+                return new (l || N)
+            }, N.\u0275prov = C.Yz7({token: N, factory: N.\u0275fac}), N
         })();
-        var Be = o(46461), H = o(591);
+        var Be = o(46461), W = o(591);
         let he = (() => {
-            class W {
+            class N {
                 constructor() {
                     this._storage = window.localStorage
                 }
 
-                set(d, _) {
-                    return this._storage.setItem(d.join("."), _)
+                set(l, f) {
+                    return this._storage.setItem(l.join("."), f)
                 }
 
-                get(d) {
-                    return this._storage.getItem(d.join("."))
+                get(l) {
+                    return this._storage.getItem(l.join("."))
                 }
 
-                delete(d) {
-                    return this._storage.removeItem(d.join("."))
+                delete(l) {
+                    return this._storage.removeItem(l.join("."))
                 }
             }
 
-            return W.\u0275fac = function (d) {
-                return new (d || W)
-            }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
+            return N.\u0275fac = function (l) {
+                return new (l || N)
+            }, N.\u0275prov = C.Yz7({token: N, factory: N.\u0275fac}), N
         })(), Q = (() => {
-            class W {
-                constructor(d) {
-                    this.storage = d, this.arenaCancel = this.loadHowl("desktop/Launcher_Arena_Cancel.ogg"), this.arenaClickStart = this.loadHowl("desktop/Launcher_Arena_Click_Start.ogg"), this.arenaCycleMode = this.loadHowl("desktop/Launcher_Arena_CycleMode.ogg"), this.arenaHoverStart = this.loadHowl("desktop/Launcher_Arena_Hover_Start.ogg"), this.returnToLauncher = this.loadHowl("desktop/Launcher_Return.ogg"), this.loginToLauncher = this.loadHowl("desktop/Launcher_Login.ogg"), this.clickItemV1 = this.loadHowl("desktop/Launcher_Click_Item_V1.ogg"), this.clickItemV2 = this.loadHowl("desktop/Launcher_Click_Item_V2.ogg"), this.clickMediumV1 = this.loadHowl("desktop/Launcher_Click_Medium_V1.ogg"), this.clickMediumV2 = this.loadHowl("desktop/Launcher_Click_Medium_V2.ogg"), this.clickTinyV1 = this.loadHowl("desktop/Launcher_Click_Tiny_V1.ogg"), this.clickTinyV2 = this.loadHowl("desktop/Launcher_Click_Tiny_V2.ogg"), this.hoverHex = this.loadHowl("desktop/Launcher_Hover_Hexagon.ogg"), this.hoverItem = this.loadHowl("desktop/Launcher_Hover_Item.ogg"), this.transitionWorkshop = this.loadHowl("desktop/Launcher_Transition_Workshop.ogg"), this.workshopCustomize = this.loadHowl("desktop/Launcher_Workshop_Customize.ogg"), this.workshopDelete = this.loadHowl("desktop/Launcher_Workshop_Delete.ogg"), this.forgeAmbience = this.loadHowl("desktop/Launcher_Forge_Ambience.ogg", {loop: !0}), this.forgeHeatingUp = this.loadHowl("desktop/Launcher_Forge_HeatingUp.ogg"), this.forgeSelectCard = this.loadHowl("desktop/Launcher_Forge_SelectCard.ogg"), this.ForgeFuseAnvil1 = this.loadHowl("desktop/Launcher_Forge_Fuse_Anvil_1.ogg"), this.ForgeFuseAnvil2 = this.loadHowl("desktop/Launcher_Forge_Fuse_Anvil_2.ogg"), this.ForgeFuseAnvil3 = this.loadHowl("desktop/Launcher_Forge_Fuse_Anvil_3.ogg"), this.ForgeFuseAnvil4 = this.loadHowl("desktop/Launcher_Forge_Fuse_Anvil_4.ogg"), this.ForgeFuseAnvil5 = this.loadHowl("desktop/Launcher_Forge_Fuse_Anvil_5.ogg"), this.ForgeFuseShimmer = this.loadHowl("desktop/Launcher_Forge_Fuse_Shimmer.ogg"), this.ForgeFuseContinue = this.loadHowl("desktop/Launcher_Forge_Fuse_Continue.ogg"), this._currentVolume$ = new H.X(null), this.setInitialVolume()
+            class N {
+                constructor(l) {
+                    this.storage = l, this.arenaCancel = this.loadHowl("desktop/Launcher_Arena_Cancel.ogg"), this.arenaClickStart = this.loadHowl("desktop/Launcher_Arena_Click_Start.ogg"), this.arenaCycleMode = this.loadHowl("desktop/Launcher_Arena_CycleMode.ogg"), this.arenaHoverStart = this.loadHowl("desktop/Launcher_Arena_Hover_Start.ogg"), this.returnToLauncher = this.loadHowl("desktop/Launcher_Return.ogg"), this.loginToLauncher = this.loadHowl("desktop/Launcher_Login.ogg"), this.clickItemV1 = this.loadHowl("desktop/Launcher_Click_Item_V1.ogg"), this.clickItemV2 = this.loadHowl("desktop/Launcher_Click_Item_V2.ogg"), this.clickMediumV1 = this.loadHowl("desktop/Launcher_Click_Medium_V1.ogg"), this.clickMediumV2 = this.loadHowl("desktop/Launcher_Click_Medium_V2.ogg"), this.clickTinyV1 = this.loadHowl("desktop/Launcher_Click_Tiny_V1.ogg"), this.clickTinyV2 = this.loadHowl("desktop/Launcher_Click_Tiny_V2.ogg"), this.hoverHex = this.loadHowl("desktop/Launcher_Hover_Hexagon.ogg"), this.hoverItem = this.loadHowl("desktop/Launcher_Hover_Item.ogg"), this.transitionWorkshop = this.loadHowl("desktop/Launcher_Transition_Workshop.ogg"), this.workshopCustomize = this.loadHowl("desktop/Launcher_Workshop_Customize.ogg"), this.workshopDelete = this.loadHowl("desktop/Launcher_Workshop_Delete.ogg"), this.forgeAmbience = this.loadHowl("desktop/Launcher_Forge_Ambience.ogg", {loop: !0}), this.forgeHeatingUp = this.loadHowl("desktop/Launcher_Forge_HeatingUp.ogg"), this.forgeSelectCard = this.loadHowl("desktop/Launcher_Forge_SelectCard.ogg"), this.ForgeFuseAnvil1 = this.loadHowl("desktop/Launcher_Forge_Fuse_Anvil_1.ogg"), this.ForgeFuseAnvil2 = this.loadHowl("desktop/Launcher_Forge_Fuse_Anvil_2.ogg"), this.ForgeFuseAnvil3 = this.loadHowl("desktop/Launcher_Forge_Fuse_Anvil_3.ogg"), this.ForgeFuseAnvil4 = this.loadHowl("desktop/Launcher_Forge_Fuse_Anvil_4.ogg"), this.ForgeFuseAnvil5 = this.loadHowl("desktop/Launcher_Forge_Fuse_Anvil_5.ogg"), this.ForgeFuseShimmer = this.loadHowl("desktop/Launcher_Forge_Fuse_Shimmer.ogg"), this.ForgeFuseContinue = this.loadHowl("desktop/Launcher_Forge_Fuse_Continue.ogg"), this._currentVolume$ = new W.X(null), this.setInitialVolume()
                 }
 
                 get currentVolume$() {
                     return this._currentVolume$.asObservable()
                 }
 
-                setGlobalVolume(d) {
-                    Be.Howler.volume(d), this._currentVolume$.next(d), this.storage.set(["gu-audioVolume"], d)
+                setGlobalVolume(l) {
+                    Be.Howler.volume(l), this._currentVolume$.next(l), this.storage.set(["gu-audioVolume"], l)
                 }
 
                 setInitialVolume() {
                     this.initialVolume = parseFloat(this.storage.get(["gu-audioVolume"])), isNaN(this.initialVolume) && (this.initialVolume = .9), this.setGlobalVolume(this.initialVolume)
                 }
 
-                loadHowl(d, _) {
-                    return _ || (_ = {}), _.src = `/assets/audio/${d}`, new Be.Howl(_)
+                loadHowl(l, f) {
+                    return f || (f = {}), f.src = `/assets/audio/${l}`, new Be.Howl(f)
                 }
             }
 
-            return W.\u0275fac = function (d) {
-                return new (d || W)(b.LFG(he))
-            }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
+            return N.\u0275fac = function (l) {
+                return new (l || N)(C.LFG(he))
+            }, N.\u0275prov = C.Yz7({token: N, factory: N.\u0275fac}), N
         })();
-        var te = o(8929), ue = o(87168), pe = o(24850), Se = o(7625), Ae = o(87545), je = o(1025), ot = o(77535);
-        let Ct = (() => {
-            class W {
-                constructor(d, _, U) {
-                    this.http = d, this.destroyed$ = new te.xQ, this.apolloEndpoint$ = _.loadConfigurations().pipe((0, ue.M)(U.get(je.v.newEnvironmentAuthLegacyApi)), (0, pe.U)(([ie, ke]) => ke ? ie.legacyAuthHost : ie.authHost), (0, Se.R)(this.destroyed$))
+        var te = o(8929), ue = o(24850), ge = o(7625), _e = o(87545), He = o(77535);
+        let Ye = (() => {
+            class N {
+                constructor(l, f) {
+                    this.http = l, this.destroyed$ = new te.xQ, this.apolloEndpoint$ = f.loadConfigurations().pipe((0, ue.U)(R => R.legacyAuthHost), (0, ge.R)(this.destroyed$))
                 }
 
-                get(d, _, U) {
-                    return this.apolloEndpoint$.pipe((0, Ae.w)(ie => this.http.get(ie + d, {headers: U, params: _})))
+                get(l, f, R) {
+                    return this.apolloEndpoint$.pipe((0, _e.w)(ie => this.http.get(ie + l, {headers: R, params: f})))
                 }
 
-                put(d, _, U, ie) {
-                    return this.apolloEndpoint$.pipe((0, Ae.w)(ke => this.http.put(ke + d, _, {
+                put(l, f, R, ie) {
+                    return this.apolloEndpoint$.pipe((0, _e.w)(Oe => this.http.put(Oe + l, f, {
                         headers: ie,
-                        params: U
+                        params: R
                     })))
                 }
 
-                post(d, _, U) {
-                    return this.apolloEndpoint$.pipe((0, Ae.w)(ie => this.http.post(ie + d, _, {headers: U})))
+                post(l, f, R) {
+                    return this.apolloEndpoint$.pipe((0, _e.w)(ie => this.http.post(ie + l, f, {headers: R})))
                 }
 
-                delete(d) {
-                    return this.apolloEndpoint$.pipe((0, Ae.w)(_ => this.http.delete(_ + d)))
+                delete(l) {
+                    return this.apolloEndpoint$.pipe((0, _e.w)(f => this.http.delete(f + l)))
                 }
             }
 
-            return W.\u0275fac = function (d) {
-                return new (d || W)(b.LFG(fe.eN), b.LFG(ot.L), b.LFG(je.a))
-            }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
+            return N.\u0275fac = function (l) {
+                return new (l || N)(C.LFG(Ce.eN), C.LFG(He.L))
+            }, N.\u0275prov = C.Yz7({token: N, factory: N.\u0275fac}), N
         })();
-        var lt = o(69439);
-        let we = (() => {
-            class W {
+        var bt = o(69439);
+        let Mt = (() => {
+            class N {
                 constructor() {
                 }
 
-                copyText(d) {
-                    const _ = document.createElement("input");
-                    document.body.appendChild(_), _.value = d, _.select(), document.execCommand("copy"), document.body.removeChild(_)
+                copyText(l) {
+                    const f = document.createElement("input");
+                    document.body.appendChild(f), f.value = l, f.select(), document.execCommand("copy"), document.body.removeChild(f)
                 }
             }
 
-            return W.\u0275fac = function (d) {
-                return new (d || W)
-            }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac, providedIn: "root"}), W
+            return N.\u0275fac = function (l) {
+                return new (l || N)
+            }, N.\u0275prov = C.Yz7({token: N, factory: N.\u0275fac, providedIn: "root"}), N
         })();
-        var He = o(61709);
+        var nt = o(1025), we = o(61709);
 
-        class ${constructor(z){this.cardsService=z,this.typeOrder=["spell","creature","weapon"],this.godOrder=["death","deception","light","magic","nature","war","neutral"],this.rarityOrder=["legendary","epic","rare","common","mythic"]}
-        static
-
-        displayable(...z)
-        {
-            return z.map(d => {
-                const _ = "All" === d ? "" : d.toLowerCase();
-                return {display: d, value: _}
-            })
-        }
-        static
-        enumerated(...z)
-        {
-            return z.map((d, _) => ({display: d, value: _ - 1}))
-        }
-        static
-        standardProtoFilters(z, d, _)
-        {
-            return {mana: -1, rarity: "", tribe: "", god: "", name: "", sort: d, ownership: z, type: "", set: _}
-        }
-        static
-        standardCardFilters(z, d, _, U = "")
-        {
-            return {
-                mana: -1,
-                rarity: "",
-                tribe: "",
-                god: U,
-                name: "",
-                sort: d,
-                ownership: z,
-                type: "",
-                set: _,
-                quality: ""
-            }
-        }
-        calcScarcity(z, d, _)
-        {
-            let U = 1;
-            try {
-                const ie = _.get(z)[d];
-                U = void 0 === ie ? 1 : Number(ie)
-            } catch (ie) {
-            }
-            return U
-        }
-        getSort(z, d)
-        {
-            switch (z) {
-                case y.PE.AscID:
-                    return (_, U) => _.proto - U.proto;
-                case y.PE.DescID:
-                    return (_, U) => U.proto - _.proto;
-                case y.PE.AscQuality:
-                    return (_, U) => _.quality - U.quality;
-                case y.PE.DescQuality:
-                    return (_, U) => U.quality - _.quality;
-                case y.PE.AscMana:
-                    return (_, U) => Number(_.protoCard.mana) - Number(U.protoCard.mana);
-                case y.PE.DescMana:
-                    return (_, U) => Number(U.protoCard.mana) - Number(_.protoCard.mana);
-                case y.PE.AscHealth:
-                    return (_, U) => Number(_.protoCard.health) - Number(U.protoCard.health);
-                case y.PE.DescHealth:
-                    return (_, U) => Number(U.protoCard.health) - Number(_.protoCard.health);
-                case y.PE.AscAttack:
-                    return (_, U) => Number(_.protoCard.attack) - Number(U.protoCard.attack);
-                case y.PE.DescAttack:
-                    return (_, U) => Number(U.protoCard.attack) - Number(_.protoCard.attack);
-                case y.PE.AscTribe:
-                    return (_, U) => _.protoCard.tribe < U.protoCard.tribe ? -1 : 1;
-                case y.PE.DescTribe:
-                    return (_, U) => _.protoCard.tribe > U.protoCard.tribe ? -1 : 1;
-                case y.PE.AscRarity:
-                    return (_, U) => this.getRarityId(_.rarity) < this.getRarityId(U.rarity) ? -1 : 1;
-                case y.PE.DescRarity:
-                    return (_, U) => this.getRarityId(_.rarity) > this.getRarityId(U.rarity) ? -1 : 1;
-                case y.PE.AscScarcity:
-                    return (_, U) => {
-                        if (!d) throw new Error("qualityCounts required for scarcity search");
-                        const Ve = this.calcScarcity(_.proto, _.quality, d) - this.calcScarcity(U.proto, U.quality, d);
-                        return 0 === Ve ? U.quality - _.quality : Ve
-                    }
-            }
-            return (_, U) => 0
-        }
-        sortLegacy(z, d, _)
-        {
-            return z ? z.sort(this.getSort(d, _)) : []
-        }
-        sort(z, d, _)
-        {
-            return z ? z.sort(this.tiebreak(this.getSort(d, _))) : []
-        }
-        tiebreak(z)
-        {
-            return (d, _) => {
-                const U = z(d, _);
-                return 0 === U ? this.tiebreakProtoType(d.protoCard, _.protoCard) : U
-            }
-        }
-        getSortProtos(z, d)
-        {
-            switch (z) {
-                case y.PE.AscID:
-                    return (_, U) => _.proto - U.proto;
-                case y.PE.DescID:
-                    return (_, U) => U.proto - _.proto;
-                case y.PE.AscQuality:
-                    return (_, U) => _.quality - U.quality;
-                case y.PE.DescQuality:
-                    return (_, U) => U.quality - _.quality;
-                case y.PE.AscMana:
-                    return (_, U) => Number(_.mana) - Number(U.mana);
-                case y.PE.DescMana:
-                    return (_, U) => Number(U.mana) - Number(_.mana);
-                case y.PE.AscHealth:
-                    return (_, U) => Number(_.health) - Number(U.health);
-                case y.PE.DescHealth:
-                    return (_, U) => Number(U.health) - Number(_.health);
-                case y.PE.AscAttack:
-                    return (_, U) => Number(_.attack) - Number(U.attack);
-                case y.PE.DescAttack:
-                    return (_, U) => Number(U.attack) - Number(_.attack);
-                case y.PE.AscTribe:
-                    return (_, U) => _.tribe < U.tribe ? -1 : 1;
-                case y.PE.DescTribe:
-                    return (_, U) => _.tribe > U.tribe ? -1 : 1;
-                case y.PE.AscRarity:
-                    return (_, U) => this.getRarityId(_.rarity) < this.getRarityId(U.rarity) ? -1 : 1;
-                case y.PE.DescRarity:
-                    return (_, U) => this.getRarityId(_.rarity) > this.getRarityId(U.rarity) ? -1 : 1;
-                case y.PE.AscType:
-                    return (_, U) => _.type < U.type ? -1 : 1;
-                case y.PE.DescType:
-                    return (_, U) => _.type > U.type ? -1 : 1;
-                case y.PE.AscGod:
-                    return (_, U) => _.god < U.god ? -1 : 1;
-                case y.PE.DescGod:
-                    return (_, U) => _.god > U.god ? -1 : 1;
-                case y.PE.AscSet:
-                    return (_, U) => _.set < U.set ? -1 : 1;
-                case y.PE.DescSet:
-                    return (_, U) => _.set > U.set ? -1 : 1
-            }
-            return (_, U) => 0
-        }
-        sortProtos(z, d, _)
-        {
-            return z ? z.sort(this.tiebreakProto(this.getSortProtos(d, _))) : []
-        }
-        tiebreakProto(z)
-        {
-            return (d, _) => {
-                const U = z(d, _);
-                return 0 === U ? this.tiebreakProtoType(d, _) : U
-            }
-        }
-        tiebreakProtoType(z, d)
-        {
-            const _ = this.typeOrder.indexOf(z.type) - this.typeOrder.indexOf(d.type);
-            return 0 === _ ? this.tiebreakProtoGod(z, d) : _
-        }
-        tiebreakProtoGod(z, d)
-        {
-            const _ = this.godOrder.indexOf(z.god) - this.godOrder.indexOf(d.god);
-            return 0 === _ ? this.tiebreakProtoRarity(z, d) : _
-        }
-        tiebreakProtoRarity(z, d)
-        {
-            const _ = this.rarityOrder.indexOf(z.rarity) - this.rarityOrder.indexOf(d.rarity);
-            return 0 === _ ? this.tiebreakProtoHealth(z, d) : _
-        }
-        tiebreakProtoHealth(z, d)
-        {
-            const _ = Number(z.health) - Number(d.health);
-            return 0 === _ ? this.tiebreakProtoAttack(z, d) : _
-        }
-        tiebreakProtoAttack(z, d)
-        {
-            const _ = Number(z.attack) - Number(d.attack);
-            return 0 === _ ? this.tiebreakProtoName(z, d) : _
-        }
-        tiebreakProtoName(z, d)
-        {
-            return z.name < d.name ? -1 : 1
-        }
-        filter(z, d)
-        {
-            return z ? z.filter(_ => this.matches(d, _)) : []
-        }
-        matches(z, d)
-        {
-            if (null == z) return !0;
-            if (null == d || "" !== z.rarity && z.rarity !== d.rarity || "" !== z.set && z.set !== d.set || "" !== z.god && z.god !== d.god || "" !== z.tribe && ("none" === z.tribe && d.tribe || "none" !== z.tribe && z.tribe !== d.tribe)) return !1;
-            if (-1 != +z.mana) if (10 == +z.mana) {
-                if (d.mana < 10) return !1
-            } else if (+z.mana !== d.mana) return !1;
-            if (z.name.length > 0) {
-                const _ = z.name.toLowerCase().trim();
-                if (-1 === d.name.toLowerCase().indexOf(_)) return !1
-            }
-            return !0
-        }
-        isMythic(z)
-        {
-            return 378 === z || 379 === z || 383 === z
-        }
-        getRarityId(z)
-        {
-            switch (z) {
-                case"common":
-                default:
-                    return 0;
-                case"rare":
-                    return 1;
-                case"epic":
-                    return 2;
-                case"legendary":
-                    return 3;
-                case"mythic":
-                    return 4
-            }
-        }
-        cardsMatch(z, d, _)
-        {
-            return null == z || !(this.filterQualities(_.qualities, z.quality) || +z.ownership === y.nE.Owned && !_.owned || +z.ownership === y.nE.Unowned && _.owned || +z.ownership === y.nE.Processing && "escrow" !== _.status || !this.matches(z, d))
-        }
-        filterCards(z, d)
-        {
-            return null == z ? (0, i.of)(null) : this.cardsService.protoCards$.pipe((0, He.VS)(_ => {
-                const U = z.filter(ie => this.cardsMatch(d, _.get(ie.proto), ie));
-                return (0, i.of)(U)
-            }))
-        }
-        filterQualities(z, d)
-        {
-            const _ = this.getQualityByName(d);
-            return -1 !== _ && 0 === z[_]
-        }
-        getQualityByName(z)
-        {
-            switch (z.toLowerCase()) {
-                case"plain":
-                    return y.nJ.PLAIN;
-                case"meteorite":
-                    return y.nJ.METEORITE;
-                case"shadow":
-                    return y.nJ.SHADOW;
-                case"gold":
-                    return y.nJ.GOLD;
-                case"diamond":
-                    return y.nJ.DIAMOND;
-                default:
-                    return -1
-            }
-        }
-    }
-    $
-    .rarityOptions = $.displayable("All", "Common", "Rare", "Epic", "Legendary", "Mythic"),
-    $
-    .qualityOptions = $.displayable("All", "Plain", "Meteorite", "Shadow", "Gold", "Diamond"),
-    $
-    .godOptions = $.displayable("All", "Neutral", "Nature", "War", "Death", "Light", "Magic", "Deception"),
-    $
-    .manaOptions = $.enumerated("All", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10+"),
-    $
-    .tribeOptions = $.displayable("All", "None", "Viking", "Amazon", "Anubian", "Aether", "Nether", "Atlantean", "Olympian", "Dragon", "Guild", "Mystic", "Structure", "Wild"),
-    $
-    .ownershipOptions = $.enumerated("All", "Owned", "Not Owned", "Processing"),
-    $
-    .setOptions = $.displayable("All", "Genesis", "Core", "Etherbots", "Promo", "Mythic", "Trial", "Welcome", "Order"),
-    $
-    .defaultFilters = [{name: "Ownership", options: $.ownershipOptions}, {
-        name: "Quality",
-        options: $.qualityOptions
-    }, {name: "Rarity", options: $.rarityOptions}, {name: "Tribe", options: $.tribeOptions}, {
-        name: "Mana",
-        options: $.manaOptions
-    }, {name: "God", options: $.godOptions}, {name: "Set", options: $.setOptions}],
-    $
-    .\u0275fac = function (z) {
-        return new (z || $)(b.LFG(lt.d))
-    },
-    $
-    .\u0275prov = b.Yz7({token: $, factory: $.\u0275fac, providedIn: "root"});
-    var J = o(72986),
-    ne = o(43834);
-    let Oe = (() => {
-        class W {
-            constructor(d, _) {
-                this.gameApi = d, this.authService = _, this.unsubscribe = new te.xQ, this.dataStore = {fluxInfo: null}, this._fluxInfo$ = new H.X(null)
+        class ke {
+            constructor(H) {
+                this.cardsService = H, this.typeOrder = ["spell", "creature", "weapon"], this.godOrder = ["death", "deception", "light", "magic", "nature", "war", "neutral"], this.rarityOrder = ["legendary", "epic", "rare", "common", "mythic"]
             }
 
-            ngOnDestroy() {
-                this.unsubscribe.next(), this.unsubscribe.complete()
-            }
-
-            get fluxInfo$() {
-                return this._fluxInfo$.asObservable()
-            }
-
-            fetchFluxInfo() {
-                const d = this.authService.getUserId();
-                d ? this.gameApi.get(`/user/${d}/flux`).pipe((0, J.q)(1)).subscribe(_ => {
-                    this.emitFluxInfo(_)
-                }, _ => {
-                    this.emitFluxInfo()
-                }) : this.emitFluxInfo()
-            }
-
-            emitFluxInfo(d = {flux_available: 0, flux_spent: 0, locked: !1}) {
-                this.dataStore.fluxInfo = d, this._fluxInfo$.next(Object.assign({}, this.dataStore.fluxInfo))
-            }
-        }
-
-        return W.\u0275fac = function (d) {
-            return new (d || W)(b.LFG(ne.F), b.LFG(T.mI))
-        }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
-    })(),
-    ht = (() => {
-        class W {
-            constructor(d, _) {
-                this.moduleConfigService = d, this.http = _, this.moduleConfig$ = this.moduleConfigService.loadConfigurations()
-            }
-
-            getFusingRequest(d) {
-                return this.moduleConfig$.pipe((0, Ae.w)(({fusingHost: _}) => this.http.get(`${_}/forge`, {params: {request_id: d}})))
-            }
-
-            getFusingLatestsRequests(d) {
-                return this.moduleConfig$.pipe((0, Ae.w)(({fusingHost: _}) => this.http.get(`${_}/forge/latest`, {params: {user_id: d}})))
-            }
-
-            fusingValidator(d) {
-                return this.moduleConfig$.pipe((0, Ae.w)(({fusingHost: _}) => this.http.post(`${_}/forge/validation`, d)))
-            }
-
-            fusingInitiator(d) {
-                return this.moduleConfig$.pipe((0, Ae.w)(({fusingHost: _}) => this.http.post(`${_}/forge`, d)))
-            }
-
-            fusingTokensPaid(d) {
-                return this.moduleConfig$.pipe((0, Ae.w)(({fusingHost: _}) => this.http.post(`${_}/forge/paid`, d)))
-            }
-        }
-
-        return W.\u0275fac = function (d) {
-            return new (d || W)(b.LFG(ot.L), b.LFG(fe.eN))
-        }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
-    })(),
-    Ze = (() => {
-        class W {
-            constructor(d, _) {
-                this.http = d, this.moduleConfigService = _, this.moduleConfig$ = this.moduleConfigService.loadConfigurations()
-            }
-
-            get(d, _) {
-                return this.moduleConfig$.pipe((0, Ae.w)(U => this.http.get(`${U.guHost}${d}`, _)))
-            }
-
-            put(d, _) {
-                return this.moduleConfig$.pipe((0, Ae.w)(U => this.http.put(`${U.guHost}${d}`, _)))
-            }
-
-            post(d, _) {
-                return this.moduleConfig$.pipe((0, Ae.w)(U => this.http.post(`${U.guHost}${d}`, _)))
-            }
-
-            delete(d) {
-                return this.moduleConfig$.pipe((0, Ae.w)(_ => this.http.delete(`${_.guHost}${d}`)))
-            }
-        }
-
-        return W.\u0275fac = function (d) {
-            return new (d || W)(b.LFG(fe.eN), b.LFG(ot.L))
-        }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
-    })();
-    var yt = o(90868);
-    let xt = (() => {
-        class W {
-            constructor(d, _, U) {
-                this.httpClient = d, this.moduleConfigService = _, this.tokenRefreshService = U
-            }
-
-            get(d, _, U) {
-                return this.moduleConfigService.loadConfigurations().pipe((0, Ae.w)(ie => this.tokenRefreshService.autoRefreshToken(this.httpClient.get(`${ie.guAuthHost}${d}`, {
-                    headers: U,
-                    params: _
-                }))))
-            }
-
-            put(d, _, U, ie) {
-                return this.moduleConfigService.loadConfigurations().pipe((0, Ae.w)(ke => this.tokenRefreshService.autoRefreshToken(this.httpClient.put(`${ke.guAuthHost}${d}`, _, {
-                    headers: ie,
-                    params: U
-                }))))
-            }
-
-            post(d, _, U) {
-                return this.moduleConfigService.loadConfigurations().pipe((0, Ae.w)(ie => this.tokenRefreshService.autoRefreshToken(this.httpClient.post(`${ie.guAuthHost}${d}`, _, {headers: U}))))
-            }
-
-            delete(d) {
-                return this.moduleConfigService.loadConfigurations().pipe((0, Ae.w)(_ => this.tokenRefreshService.autoRefreshToken(this.httpClient.delete(`${_.guAuthHost}${d}`))))
-            }
-        }
-
-        return W.\u0275fac = function (d) {
-            return new (d || W)(b.LFG(fe.eN), b.LFG(ot.L), b.LFG(yt.$))
-        }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac, providedIn: "root"}), W
-    })(),
-    kt = (() => {
-        class W {
-            constructor(d, _, U) {
-                this.http = d, this.dds = _, this.authService = U, this._downloadUrl$ = new H.X(null)
-            }
-
-            get downloadUrl$() {
-                return this._downloadUrl$.asObservable()
-            }
-
-            fetchLauncherURL() {
-                return this.fetchLauncherURLAsync().pipe((0, J.q)(1)).subscribe(d => {
-                    this.downloadUrl = d, this._downloadUrl$.next(d)
+            static displayable(...H) {
+                return H.map(l => {
+                    const f = "All" === l ? "" : l.toLowerCase();
+                    return {display: l, value: f}
                 })
             }
 
-            fetchLauncherURLAsync() {
-                const d = this.dds.getDeviceInfo(), _ = this.authService.getUserId();
-                return "mac" !== d.os.toLowerCase() && "windows" !== d.os.toLowerCase() ? (0, le._)("linux") : this.http.get(`https://util.apollo.gg/launcher?os=${d.os}&user_id=${_}`)
-            }
-        }
-
-        return W.\u0275fac = function (d) {
-            return new (d || W)(b.LFG(fe.eN), b.LFG(C.x0), b.LFG(T.mI))
-        }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
-    })();
-    var nt = o(29840),
-    Xe = o(78812);
-    let Rt = (() => {
-        class W {
-            constructor(d) {
-                this.authHost = d
+            static enumerated(...H) {
+                return H.map((l, f) => ({display: l, value: f - 1}))
             }
 
-            getUserReferralsStatus(d) {
-                return this.authHost.get(`/campaign/${d}/referral`)
+            static standardProtoFilters(H, l, f) {
+                return {mana: -1, rarity: "", tribe: "", god: "", name: "", sort: l, ownership: H, type: "", set: f}
             }
 
-            getReferralCode(d) {
-                return this.authHost.get(`/account/${d}/code/referral`)
+            static standardCardFilters(H, l, f, R = "") {
+                return {
+                    mana: -1,
+                    rarity: "",
+                    tribe: "",
+                    god: R,
+                    name: "",
+                    sort: l,
+                    ownership: H,
+                    type: "",
+                    set: f,
+                    quality: ""
+                }
             }
 
-            createReferralCode(d) {
-                return this.authHost.post(`/account/${d}/code/referral`, {}).pipe((0, Ae.w)(_ => this.getReferralCode(d)), (0, Ce.K)(_ => {
-                    if ("already created" === _.error.error) return this.getReferralCode(d)
+            calcScarcity(H, l, f) {
+                let R = 1;
+                try {
+                    const ie = f.get(H)[l];
+                    R = void 0 === ie ? 1 : Number(ie)
+                } catch (ie) {
+                }
+                return R
+            }
+
+            getSort(H, l) {
+                switch (H) {
+                    case y.PE.AscID:
+                        return (f, R) => f.proto - R.proto;
+                    case y.PE.DescID:
+                        return (f, R) => R.proto - f.proto;
+                    case y.PE.AscQuality:
+                        return (f, R) => f.quality - R.quality;
+                    case y.PE.DescQuality:
+                        return (f, R) => R.quality - f.quality;
+                    case y.PE.AscMana:
+                        return (f, R) => Number(f.protoCard.mana) - Number(R.protoCard.mana);
+                    case y.PE.DescMana:
+                        return (f, R) => Number(R.protoCard.mana) - Number(f.protoCard.mana);
+                    case y.PE.AscHealth:
+                        return (f, R) => Number(f.protoCard.health) - Number(R.protoCard.health);
+                    case y.PE.DescHealth:
+                        return (f, R) => Number(R.protoCard.health) - Number(f.protoCard.health);
+                    case y.PE.AscAttack:
+                        return (f, R) => Number(f.protoCard.attack) - Number(R.protoCard.attack);
+                    case y.PE.DescAttack:
+                        return (f, R) => Number(R.protoCard.attack) - Number(f.protoCard.attack);
+                    case y.PE.AscTribe:
+                        return (f, R) => f.protoCard.tribe < R.protoCard.tribe ? -1 : 1;
+                    case y.PE.DescTribe:
+                        return (f, R) => f.protoCard.tribe > R.protoCard.tribe ? -1 : 1;
+                    case y.PE.AscRarity:
+                        return (f, R) => this.getRarityId(f.rarity) < this.getRarityId(R.rarity) ? -1 : 1;
+                    case y.PE.DescRarity:
+                        return (f, R) => this.getRarityId(f.rarity) > this.getRarityId(R.rarity) ? -1 : 1;
+                    case y.PE.AscScarcity:
+                        return (f, R) => {
+                            if (!l) throw new Error("qualityCounts required for scarcity search");
+                            const Ze = this.calcScarcity(f.proto, f.quality, l) - this.calcScarcity(R.proto, R.quality, l);
+                            return 0 === Ze ? R.quality - f.quality : Ze
+                        }
+                }
+                return (f, R) => 0
+            }
+
+            sortLegacy(H, l, f) {
+                return H ? H.sort(this.getSort(l, f)) : []
+            }
+
+            sort(H, l, f) {
+                return H ? H.sort(this.tiebreak(this.getSort(l, f))) : []
+            }
+
+            tiebreak(H) {
+                return (l, f) => {
+                    const R = H(l, f);
+                    return 0 === R ? this.tiebreakProtoType(l.protoCard, f.protoCard) : R
+                }
+            }
+
+            getSortProtos(H, l) {
+                switch (H) {
+                    case y.PE.AscID:
+                        return (f, R) => f.proto - R.proto;
+                    case y.PE.DescID:
+                        return (f, R) => R.proto - f.proto;
+                    case y.PE.AscQuality:
+                        return (f, R) => f.quality - R.quality;
+                    case y.PE.DescQuality:
+                        return (f, R) => R.quality - f.quality;
+                    case y.PE.AscMana:
+                        return (f, R) => Number(f.mana) - Number(R.mana);
+                    case y.PE.DescMana:
+                        return (f, R) => Number(R.mana) - Number(f.mana);
+                    case y.PE.AscHealth:
+                        return (f, R) => Number(f.health) - Number(R.health);
+                    case y.PE.DescHealth:
+                        return (f, R) => Number(R.health) - Number(f.health);
+                    case y.PE.AscAttack:
+                        return (f, R) => Number(f.attack) - Number(R.attack);
+                    case y.PE.DescAttack:
+                        return (f, R) => Number(R.attack) - Number(f.attack);
+                    case y.PE.AscTribe:
+                        return (f, R) => f.tribe < R.tribe ? -1 : 1;
+                    case y.PE.DescTribe:
+                        return (f, R) => f.tribe > R.tribe ? -1 : 1;
+                    case y.PE.AscRarity:
+                        return (f, R) => this.getRarityId(f.rarity) < this.getRarityId(R.rarity) ? -1 : 1;
+                    case y.PE.DescRarity:
+                        return (f, R) => this.getRarityId(f.rarity) > this.getRarityId(R.rarity) ? -1 : 1;
+                    case y.PE.AscType:
+                        return (f, R) => f.type < R.type ? -1 : 1;
+                    case y.PE.DescType:
+                        return (f, R) => f.type > R.type ? -1 : 1;
+                    case y.PE.AscGod:
+                        return (f, R) => f.god < R.god ? -1 : 1;
+                    case y.PE.DescGod:
+                        return (f, R) => f.god > R.god ? -1 : 1;
+                    case y.PE.AscSet:
+                        return (f, R) => f.set < R.set ? -1 : 1;
+                    case y.PE.DescSet:
+                        return (f, R) => f.set > R.set ? -1 : 1
+                }
+                return (f, R) => 0
+            }
+
+            sortProtos(H, l, f) {
+                return H ? H.sort(this.tiebreakProto(this.getSortProtos(l, f))) : []
+            }
+
+            tiebreakProto(H) {
+                return (l, f) => {
+                    const R = H(l, f);
+                    return 0 === R ? this.tiebreakProtoType(l, f) : R
+                }
+            }
+
+            tiebreakProtoType(H, l) {
+                const f = this.typeOrder.indexOf(H.type) - this.typeOrder.indexOf(l.type);
+                return 0 === f ? this.tiebreakProtoGod(H, l) : f
+            }
+
+            tiebreakProtoGod(H, l) {
+                const f = this.godOrder.indexOf(H.god) - this.godOrder.indexOf(l.god);
+                return 0 === f ? this.tiebreakProtoRarity(H, l) : f
+            }
+
+            tiebreakProtoRarity(H, l) {
+                const f = this.rarityOrder.indexOf(H.rarity) - this.rarityOrder.indexOf(l.rarity);
+                return 0 === f ? this.tiebreakProtoHealth(H, l) : f
+            }
+
+            tiebreakProtoHealth(H, l) {
+                const f = Number(H.health) - Number(l.health);
+                return 0 === f ? this.tiebreakProtoAttack(H, l) : f
+            }
+
+            tiebreakProtoAttack(H, l) {
+                const f = Number(H.attack) - Number(l.attack);
+                return 0 === f ? this.tiebreakProtoName(H, l) : f
+            }
+
+            tiebreakProtoName(H, l) {
+                return H.name < l.name ? -1 : 1
+            }
+
+            filter(H, l) {
+                return H ? H.filter(f => this.matches(l, f)) : []
+            }
+
+            matches(H, l) {
+                if (null == H) return !0;
+                if (null == l || "" !== H.rarity && H.rarity !== l.rarity || "" !== H.set && H.set !== l.set || "" !== H.god && H.god !== l.god || "" !== H.tribe && ("none" === H.tribe && l.tribe || "none" !== H.tribe && H.tribe !== l.tribe)) return !1;
+                if (-1 != +H.mana) if (10 == +H.mana) {
+                    if (l.mana < 10) return !1
+                } else if (+H.mana !== l.mana) return !1;
+                if (H.name.length > 0) {
+                    const f = H.name.toLowerCase().trim();
+                    if (-1 === l.name.toLowerCase().indexOf(f)) return !1
+                }
+                return !0
+            }
+
+            isMythic(H) {
+                return 378 === H || 379 === H || 383 === H
+            }
+
+            getRarityId(H) {
+                switch (H) {
+                    case"common":
+                    default:
+                        return 0;
+                    case"rare":
+                        return 1;
+                    case"epic":
+                        return 2;
+                    case"legendary":
+                        return 3;
+                    case"mythic":
+                        return 4
+                }
+            }
+
+            cardsMatch(H, l, f) {
+                return null == H || !(this.filterQualities(f.qualities, H.quality) || +H.ownership === y.nE.Owned && !f.owned || +H.ownership === y.nE.Unowned && f.owned || +H.ownership === y.nE.Processing && "escrow" !== f.status || !this.matches(H, l))
+            }
+
+            filterCards(H, l) {
+                return null == H ? (0, i.of)(null) : this.cardsService.protoCards$.pipe((0, we.VS)(f => {
+                    const R = H.filter(ie => this.cardsMatch(l, f.get(ie.proto), ie));
+                    return (0, i.of)(R)
                 }))
             }
 
-            updatePayoutAddress(d, _) {
-                return this.authHost.put(`/account/${d}/code/referral`, {referral_payout_address: _})
+            filterQualities(H, l) {
+                const f = this.getQualityByName(l);
+                return -1 !== f && 0 === H[f]
+            }
+
+            getQualityByName(H) {
+                switch (H.toLowerCase()) {
+                    case"plain":
+                        return y.nJ.PLAIN;
+                    case"meteorite":
+                        return y.nJ.METEORITE;
+                    case"shadow":
+                        return y.nJ.SHADOW;
+                    case"gold":
+                        return y.nJ.GOLD;
+                    case"diamond":
+                        return y.nJ.DIAMOND;
+                    default:
+                        return -1
+                }
             }
         }
 
-        return W.\u0275fac = function (d) {
-            return new (d || W)(b.LFG(Ct))
-        }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac, providedIn: "root"}), W
-    })();
-    var Ee = o(19444);
-    let It = (() => {
-        class W {
-            constructor(d, _, U) {
-                this.environment = d, this.authService = _, this.moduleConfigService = U, this.RETRY_SECONDS = 4e3, this.PING_PONG_INTERVAL_DURATION = 6e3, this.MAX_UNANSWERED_PING_COUNT = 2, this.unsubscribe = new te.xQ, this.connections = {}, this._connectionEstablished$ = new te.xQ, this.moduleConfigService.loadConfigurations().subscribe(ie => {
-                    this.socketEndpoints = {
-                        marketplaceCart: ke => `${ie.marketplaceSocketBaseURL}/${ke}/socket`,
-                        chatAndFriends: ke => `${ie.chatAndFriendsSocketBaseUrl}/${ke}/chat`,
-                        forge: ke => `${ie.marketplaceSocketBaseURL}/${ke}/socket`
-                    }
-                })
+        ke.rarityOptions = ke.displayable("All", "Common", "Rare", "Epic", "Legendary", "Mythic"), ke.qualityOptions = ke.displayable("All", "Plain", "Meteorite", "Shadow", "Gold", "Diamond"), ke.godOptions = ke.displayable("All", "Neutral", "Nature", "War", "Death", "Light", "Magic", "Deception"), ke.manaOptions = ke.enumerated("All", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10+"), ke.tribeOptions = ke.displayable("All", "None", "Viking", "Amazon", "Anubian", "Aether", "Nether", "Atlantean", "Olympian", "Dragon", "Guild", "Mystic", "Structure", "Wild"), ke.ownershipOptions = ke.enumerated("All", "Owned", "Not Owned", "Processing"), ke.setOptions = ke.displayable("All", "Genesis", "Core", "Etherbots", "Promo", "Mythic", "Trial", "Welcome", "Order"), ke.defaultFilters = [{
+            name: "Ownership",
+            options: ke.ownershipOptions
+        }, {name: "Quality", options: ke.qualityOptions}, {name: "Rarity", options: ke.rarityOptions}, {
+            name: "Tribe",
+            options: ke.tribeOptions
+        }, {name: "Mana", options: ke.manaOptions}, {name: "God", options: ke.godOptions}, {
+            name: "Set",
+            options: ke.setOptions
+        }], ke.\u0275fac = function (H) {
+            return new (H || ke)(C.LFG(bt.d))
+        }, ke.\u0275prov = C.Yz7({token: ke, factory: ke.\u0275fac, providedIn: "root"});
+        var I = o(72986), X = o(43834);
+        let ne = (() => {
+            class N {
+                constructor(l, f) {
+                    this.gameApi = l, this.authService = f, this.unsubscribe = new te.xQ, this.dataStore = {fluxInfo: null}, this._fluxInfo$ = new W.X(null)
+                }
+
+                ngOnDestroy() {
+                    this.unsubscribe.next(), this.unsubscribe.complete()
+                }
+
+                get fluxInfo$() {
+                    return this._fluxInfo$.asObservable()
+                }
+
+                fetchFluxInfo() {
+                    const l = this.authService.getUserId();
+                    l ? this.gameApi.get(`/user/${l}/flux`).pipe((0, I.q)(1)).subscribe(f => {
+                        this.emitFluxInfo(f)
+                    }, f => {
+                        this.emitFluxInfo()
+                    }) : this.emitFluxInfo()
+                }
+
+                emitFluxInfo(l = {flux_available: 0, flux_spent: 0, locked: !1}) {
+                    this.dataStore.fluxInfo = l, this._fluxInfo$.next(Object.assign({}, this.dataStore.fluxInfo))
+                }
             }
 
-            get connectionEstablished$() {
-                return this._connectionEstablished$.asObservable()
+            return N.\u0275fac = function (l) {
+                return new (l || N)(C.LFG(X.F), C.LFG($.mI))
+            }, N.\u0275prov = C.Yz7({token: N, factory: N.\u0275fac}), N
+        })(), $e = (() => {
+            class N {
+                constructor(l, f) {
+                    this.moduleConfigService = l, this.http = f, this.moduleConfig$ = this.moduleConfigService.loadConfigurations()
+                }
+
+                getFusingRequest(l) {
+                    return this.moduleConfig$.pipe((0, _e.w)(({fusingHost: f}) => this.http.get(`${f}/forge`, {params: {request_id: l}})))
+                }
+
+                getFusingLatestsRequests(l) {
+                    return this.moduleConfig$.pipe((0, _e.w)(({fusingHost: f}) => this.http.get(`${f}/forge/latest`, {params: {user_id: l}})))
+                }
+
+                fusingValidator(l) {
+                    return this.moduleConfig$.pipe((0, _e.w)(({fusingHost: f}) => this.http.post(`${f}/forge/validation`, l)))
+                }
+
+                fusingInitiator(l) {
+                    return this.moduleConfig$.pipe((0, _e.w)(({fusingHost: f}) => this.http.post(`${f}/forge`, l)))
+                }
+
+                fusingTokensPaid(l) {
+                    return this.moduleConfig$.pipe((0, _e.w)(({fusingHost: f}) => this.http.post(`${f}/forge/paid`, l)))
+                }
             }
 
-            connect({socketName: d, url: _}) {
-                return new Promise((U, ie) => {
-                    console.log("SOCKET CONNECTING: ", d), this.connections[d] = this.createConnection(_), this.connectListeners(d, U, ie)
-                })
+            return N.\u0275fac = function (l) {
+                return new (l || N)(C.LFG(He.L), C.LFG(Ce.eN))
+            }, N.\u0275prov = C.Yz7({token: N, factory: N.\u0275fac}), N
+        })(), pt = (() => {
+            class N {
+                constructor(l, f) {
+                    this.http = l, this.moduleConfigService = f, this.moduleConfig$ = this.moduleConfigService.loadConfigurations()
+                }
+
+                get(l, f) {
+                    return this.moduleConfig$.pipe((0, _e.w)(R => this.http.get(`${R.guHost}${l}`, f)))
+                }
+
+                put(l, f) {
+                    return this.moduleConfig$.pipe((0, _e.w)(R => this.http.put(`${R.guHost}${l}`, f)))
+                }
+
+                post(l, f) {
+                    return this.moduleConfig$.pipe((0, _e.w)(R => this.http.post(`${R.guHost}${l}`, f)))
+                }
+
+                delete(l) {
+                    return this.moduleConfig$.pipe((0, _e.w)(f => this.http.delete(`${f.guHost}${l}`)))
+                }
             }
 
-            getOpenedConnection(d) {
-                if (this.connections[d] && this.connections[d].isAlive) return this.connections[d]
+            return N.\u0275fac = function (l) {
+                return new (l || N)(C.LFG(Ce.eN), C.LFG(He.L))
+            }, N.\u0275prov = C.Yz7({token: N, factory: N.\u0275fac}), N
+        })();
+        var Ne = o(90868);
+        let Ot = (() => {
+            class N {
+                constructor(l, f, R) {
+                    this.httpClient = l, this.moduleConfigService = f, this.tokenRefreshService = R
+                }
+
+                get(l, f, R) {
+                    return this.moduleConfigService.loadConfigurations().pipe((0, _e.w)(ie => this.tokenRefreshService.autoRefreshToken(this.httpClient.get(`${ie.guAuthHost}${l}`, {
+                        headers: R,
+                        params: f
+                    }))))
+                }
+
+                put(l, f, R, ie) {
+                    return this.moduleConfigService.loadConfigurations().pipe((0, _e.w)(Oe => this.tokenRefreshService.autoRefreshToken(this.httpClient.put(`${Oe.guAuthHost}${l}`, f, {
+                        headers: ie,
+                        params: R
+                    }))))
+                }
+
+                post(l, f, R) {
+                    return this.moduleConfigService.loadConfigurations().pipe((0, _e.w)(ie => this.tokenRefreshService.autoRefreshToken(this.httpClient.post(`${ie.guAuthHost}${l}`, f, {headers: R}))))
+                }
+
+                delete(l) {
+                    return this.moduleConfigService.loadConfigurations().pipe((0, _e.w)(f => this.tokenRefreshService.autoRefreshToken(this.httpClient.delete(`${f.guAuthHost}${l}`))))
+                }
             }
 
-            ngOnDestroy() {
-                this.disconnectAllSockets(), this.unsubscribe.next(), this.unsubscribe.complete()
+            return N.\u0275fac = function (l) {
+                return new (l || N)(C.LFG(Ce.eN), C.LFG(He.L), C.LFG(Ne.$))
+            }, N.\u0275prov = C.Yz7({token: N, factory: N.\u0275fac, providedIn: "root"}), N
+        })(), Ct = (() => {
+            class N {
+                constructor(l, f, R) {
+                    this.http = l, this.dds = f, this.authService = R, this._downloadUrl$ = new W.X(null)
+                }
+
+                get downloadUrl$() {
+                    return this._downloadUrl$.asObservable()
+                }
+
+                fetchLauncherURL() {
+                    return this.fetchLauncherURLAsync().pipe((0, I.q)(1)).subscribe(l => {
+                        this.downloadUrl = l, this._downloadUrl$.next(l)
+                    })
+                }
+
+                fetchLauncherURLAsync() {
+                    const l = this.dds.getDeviceInfo(), f = this.authService.getUserId();
+                    return "mac" !== l.os.toLowerCase() && "windows" !== l.os.toLowerCase() ? (0, le._)("linux") : this.http.get(`https://util.apollo.gg/launcher?os=${l.os}&user_id=${f}`)
+                }
             }
 
-            onConnect(d, _) {
-                console.log("SOCKET CONNECTED:", _), this.connections[_].isAlive = !0, this.checkToStartPingPongInterval(), this.killReconnectTimer(_)
+            return N.\u0275fac = function (l) {
+                return new (l || N)(C.LFG(Ce.eN), C.LFG(b.x0), C.LFG($.mI))
+            }, N.\u0275prov = C.Yz7({token: N, factory: N.\u0275fac}), N
+        })();
+        var yt = o(29840), rt = o(78812);
+        let Ie = (() => {
+            class N {
+                constructor(l) {
+                    this.authHost = l
+                }
+
+                getUserReferralsStatus(l) {
+                    return this.authHost.get(`/campaign/${l}/referral`)
+                }
+
+                getReferralCode(l) {
+                    return this.authHost.get(`/account/${l}/code/referral`)
+                }
+
+                createReferralCode(l) {
+                    return this.authHost.post(`/account/${l}/code/referral`, {}).pipe((0, _e.w)(f => this.getReferralCode(l)), (0, ye.K)(f => {
+                        if ("already created" === f.error.error) return this.getReferralCode(l)
+                    }))
+                }
+
+                updatePayoutAddress(l, f) {
+                    return this.authHost.put(`/account/${l}/code/referral`, {referral_payout_address: f})
+                }
             }
 
-            onClose(d, _) {
-                console.log("SOCKET CLOSED:", _, d), this.connections[_].isAlive = !1, d.wasClean || this.reconnectSocket(_)
-            }
+            return N.\u0275fac = function (l) {
+                return new (l || N)(C.LFG(Ye))
+            }, N.\u0275prov = C.Yz7({token: N, factory: N.\u0275fac, providedIn: "root"}), N
+        })();
+        var Rt = o(19444);
+        let Ee = (() => {
+            class N {
+                constructor(l, f, R) {
+                    this.environment = l, this.authService = f, this.moduleConfigService = R, this.RETRY_SECONDS = 4e3, this.PING_PONG_INTERVAL_DURATION = 6e3, this.MAX_UNANSWERED_PING_COUNT = 2, this.unsubscribe = new te.xQ, this.connections = {}, this._connectionEstablished$ = new te.xQ, this.moduleConfigService.loadConfigurations().subscribe(ie => {
+                        this.socketEndpoints = {
+                            marketplaceCart: Oe => `${ie.marketplaceSocketBaseURL}/${Oe}/socket`,
+                            chatAndFriends: Oe => `${ie.chatAndFriendsSocketBaseUrl}/${Oe}/chat`,
+                            forge: Oe => `${ie.marketplaceSocketBaseURL}/${Oe}/socket`
+                        }
+                    })
+                }
 
-            onError(d, _) {
-                console.log("SOCKET ERRORED:", _, d), this.connections[_].isAlive = !1, console.log("tokenIsExpired: ", this.authService.tokenIsExpired()), this.authService.tokenIsExpired() ? this.authService.refreshToken().pipe((0, J.q)(1)).subscribe(() => this.reconnectSocket(_)) : this.reconnectSocket(_)
-            }
+                get connectionEstablished$() {
+                    return this._connectionEstablished$.asObservable()
+                }
 
-            onMessage(d, _) {
-                const U = JSON.parse(d.data);
-                console.log("socket onMessage!", _, U), "HEARTBEAT_PONG" === U.text ? this.onPongMessage(_, U) : this.connections[_].messages.next(U)
-            }
+                connect({socketName: l, url: f}) {
+                    return new Promise((R, ie) => {
+                        console.log("SOCKET CONNECTING: ", l), this.connections[l] = this.createConnection(f), this.connectListeners(l, R, ie)
+                    })
+                }
 
-            connectListeners(d, _, U) {
-                const ie = this.connections[d];
-                ie.eventHandlers.open = ke => {
-                    this.onConnect(ke, d), _ && _(ie.messages)
-                }, ie.eventHandlers.error = ke => {
-                    this.onError(ke, d), U && U(ie.messages)
-                }, ie.eventHandlers.close = ke => {
-                    this.onClose(ke, d)
-                }, ie.eventHandlers.message = ke => {
-                    this.onMessage(ke, d)
-                }, ie.socket.addEventListener("open", ie.eventHandlers.open), ie.socket.addEventListener("close", ie.eventHandlers.close), ie.socket.addEventListener("error", ie.eventHandlers.error), ie.socket.addEventListener("message", ie.eventHandlers.message)
-            }
+                getOpenedConnection(l) {
+                    if (this.connections[l] && this.connections[l].isAlive) return this.connections[l]
+                }
 
-            disconnectListeners(d) {
-                const _ = this.connections[d];
-                _.socket.removeEventListener("open", _.eventHandlers.open), _.socket.removeEventListener("close", _.eventHandlers.close), _.socket.removeEventListener("error", _.eventHandlers.error), _.socket.removeEventListener("message", _.eventHandlers.message)
-            }
+                ngOnDestroy() {
+                    this.disconnectAllSockets(), this.unsubscribe.next(), this.unsubscribe.complete()
+                }
 
-            checkToStartPingPongInterval() {
-                this.pingPongInterval || (this.pingPongInterval = window.setInterval(() => {
-                    console.log("PING PONG INTERVAL FIRING"), Object.keys(this.connections).forEach(d => this.checkPingList(d))
-                }, this.PING_PONG_INTERVAL_DURATION))
-            }
+                onConnect(l, f) {
+                    console.log("SOCKET CONNECTED:", f), this.connections[f].isAlive = !0, this.checkToStartPingPongInterval(), this.killReconnectTimer(f)
+                }
 
-            killPingPongInterval() {
-                clearInterval(this.pingPongInterval), this.pingPongInterval = null
-            }
+                onClose(l, f) {
+                    console.log("SOCKET CLOSED:", f, l), this.connections[f].isAlive = !1, l.wasClean || this.reconnectSocket(f)
+                }
 
-            killReconnectTimer(d) {
-                clearTimeout(this.connections[d].reconnectTimer), this.connections[d].reconnectTimer = null
-            }
+                onError(l, f) {
+                    console.log("SOCKET ERRORED:", f, l), this.connections[f].isAlive = !1, console.log("tokenIsExpired: ", this.authService.tokenIsExpired()), this.authService.tokenIsExpired() ? this.authService.refreshToken().pipe((0, I.q)(1)).subscribe(() => this.reconnectSocket(f)) : this.reconnectSocket(f)
+                }
 
-            killAllReconnectTimers() {
-                Object.keys(this.connections).forEach(d => this.killReconnectTimer(d))
-            }
+                onMessage(l, f) {
+                    const R = JSON.parse(l.data);
+                    console.log("socket onMessage!", f, R), "HEARTBEAT_PONG" === R.text ? this.onPongMessage(f, R) : this.connections[f].messages.next(R)
+                }
 
-            checkToKillPingPongInterval() {
-                0 === Object.keys(this.connections).length ? this.killPingPongInterval() : Object.keys(this.connections).find(_ => this.connections[_].isAlive) || this.killPingPongInterval()
-            }
+                connectListeners(l, f, R) {
+                    const ie = this.connections[l];
+                    ie.eventHandlers.open = Oe => {
+                        this.onConnect(Oe, l), f && f(ie.messages)
+                    }, ie.eventHandlers.error = Oe => {
+                        this.onError(Oe, l), R && R(ie.messages)
+                    }, ie.eventHandlers.close = Oe => {
+                        this.onClose(Oe, l)
+                    }, ie.eventHandlers.message = Oe => {
+                        this.onMessage(Oe, l)
+                    }, ie.socket.addEventListener("open", ie.eventHandlers.open), ie.socket.addEventListener("close", ie.eventHandlers.close), ie.socket.addEventListener("error", ie.eventHandlers.error), ie.socket.addEventListener("message", ie.eventHandlers.message)
+                }
 
-            createConnection(d) {
-                const _ = "desktop" === this.environment.clientType ? window.bridge.authAccess : this.authService.getAuthToken().access;
-                return {
-                    url: d,
-                    messages: new te.xQ,
-                    socket: new WebSocket(`${d}?token=${_}`),
-                    pingList: [],
-                    isAlive: !1,
-                    reconnectTimer: null,
-                    disconnectPromise: null,
-                    eventHandlers: {
-                        open: () => {
-                        }, close: () => {
-                        }, error: () => {
-                        }, message: () => {
+                disconnectListeners(l) {
+                    const f = this.connections[l];
+                    f.socket.removeEventListener("open", f.eventHandlers.open), f.socket.removeEventListener("close", f.eventHandlers.close), f.socket.removeEventListener("error", f.eventHandlers.error), f.socket.removeEventListener("message", f.eventHandlers.message)
+                }
+
+                checkToStartPingPongInterval() {
+                    this.pingPongInterval || (this.pingPongInterval = window.setInterval(() => {
+                        console.log("PING PONG INTERVAL FIRING"), Object.keys(this.connections).forEach(l => this.checkPingList(l))
+                    }, this.PING_PONG_INTERVAL_DURATION))
+                }
+
+                killPingPongInterval() {
+                    clearInterval(this.pingPongInterval), this.pingPongInterval = null
+                }
+
+                killReconnectTimer(l) {
+                    clearTimeout(this.connections[l].reconnectTimer), this.connections[l].reconnectTimer = null
+                }
+
+                killAllReconnectTimers() {
+                    Object.keys(this.connections).forEach(l => this.killReconnectTimer(l))
+                }
+
+                checkToKillPingPongInterval() {
+                    0 === Object.keys(this.connections).length ? this.killPingPongInterval() : Object.keys(this.connections).find(f => this.connections[f].isAlive) || this.killPingPongInterval()
+                }
+
+                createConnection(l) {
+                    const f = "desktop" === this.environment.clientType ? window.bridge.authAccess : this.authService.getAuthToken().access;
+                    return {
+                        url: l,
+                        messages: new te.xQ,
+                        socket: new WebSocket(`${l}?token=${f}`),
+                        pingList: [],
+                        isAlive: !1,
+                        reconnectTimer: null,
+                        disconnectPromise: null,
+                        eventHandlers: {
+                            open: () => {
+                            }, close: () => {
+                            }, error: () => {
+                            }, message: () => {
+                            }
                         }
                     }
                 }
-            }
 
-            reconnectSocket(d) {
-                const _ = this.connections[d], U = () => {
-                    const ie = this.createConnection(_.url);
-                    this.connections[d].isAlive = ie.isAlive, this.connections[d].pingList = ie.pingList, this.connections[d].socket = ie.socket, this.connections[d].url = ie.url, this.connections[d].eventHandlers = ie.eventHandlers, this.connectListeners(d)
-                };
-                switch (this.killReconnectTimer(d), this.checkToKillPingPongInterval(), _.socket.readyState) {
-                    case WebSocket.CONNECTING:
-                    case WebSocket.CLOSING:
-                        console.log("SKIPPING RECONNECT TIMER:", d, "connection ready state:", _.socket.readyState);
-                        break;
-                    case WebSocket.OPEN:
-                        _.disconnectPromise = this.disconnect({
-                            socketName: d,
-                            cleanup: !1
-                        }), _.reconnectTimer = window.setTimeout(() => {
-                            _.disconnectPromise.then(() => {
-                                console.log("SOCKET DISCONNECTED, NOW RECONNECTING SOCKET"), U()
-                            })
-                        }, this.RETRY_SECONDS);
-                        break;
-                    case WebSocket.CLOSED:
-                        _.reconnectTimer = window.setTimeout(() => {
-                            U()
-                        }, this.RETRY_SECONDS)
+                reconnectSocket(l) {
+                    const f = this.connections[l], R = () => {
+                        const ie = this.createConnection(f.url);
+                        this.connections[l].isAlive = ie.isAlive, this.connections[l].pingList = ie.pingList, this.connections[l].socket = ie.socket, this.connections[l].url = ie.url, this.connections[l].eventHandlers = ie.eventHandlers, this.connectListeners(l)
+                    };
+                    switch (this.killReconnectTimer(l), this.checkToKillPingPongInterval(), f.socket.readyState) {
+                        case WebSocket.CONNECTING:
+                        case WebSocket.CLOSING:
+                            console.log("SKIPPING RECONNECT TIMER:", l, "connection ready state:", f.socket.readyState);
+                            break;
+                        case WebSocket.OPEN:
+                            f.disconnectPromise = this.disconnect({
+                                socketName: l,
+                                cleanup: !1
+                            }), f.reconnectTimer = window.setTimeout(() => {
+                                f.disconnectPromise.then(() => {
+                                    console.log("SOCKET DISCONNECTED, NOW RECONNECTING SOCKET"), R()
+                                })
+                            }, this.RETRY_SECONDS);
+                            break;
+                        case WebSocket.CLOSED:
+                            f.reconnectTimer = window.setTimeout(() => {
+                                R()
+                            }, this.RETRY_SECONDS)
+                    }
+                }
+
+                sendMessage(l, f) {
+                    this.connections[l] && this.connections[l].socket.send(JSON.stringify(f))
+                }
+
+                sendPing(l) {
+                    console.log("SOCKET PING:", l);
+                    const f = {text: "HEARTBEAT_PING", user_id: this.authService.getUserId(), msg_id: (0, Rt.v4)()};
+                    this.connections[l].pingList.push(f), this.sendMessage(l, f)
+                }
+
+                onPongMessage(l, f) {
+                    console.log("SOCKET PONG:", l);
+                    const R = this.connections[l], ie = R.pingList.findIndex(Oe => Oe.msg_id === f.msg_id);
+                    -1 !== ie && R.pingList.splice(ie, 1)
+                }
+
+                checkPingList(l) {
+                    this.connections[l].pingList.length >= this.MAX_UNANSWERED_PING_COUNT ? this.reconnectSocket(l) : this.sendPing(l)
+                }
+
+                disconnect({socketName: l, cleanup: f = !0}) {
+                    const R = this.connections[l], ie = () => {
+                        R && this.disconnectListeners(l), f && delete this.connections[l]
+                    };
+                    return new Promise(Oe => {
+                        if (!R) return this.checkToKillPingPongInterval(), ie(), Oe();
+                        this.killReconnectTimer(l), R.isAlive ? (R.socket.addEventListener("close", () => {
+                            ie(), this.checkToKillPingPongInterval(), Oe()
+                        }), R.socket.close()) : (console.log("SOCKET IS IN A TRANSITION STATE, BUT TRY AND CLOSE ANYWAY"), R.socket && R.socket.close(), ie(), Oe())
+                    })
+                }
+
+                disconnectAllSockets() {
+                    return this.killAllReconnectTimers(), Promise.all(Object.keys(this.connections).map(l => this.disconnect({socketName: l})))
                 }
             }
 
-            sendMessage(d, _) {
-                this.connections[d] && this.connections[d].socket.send(JSON.stringify(_))
+            return N.\u0275fac = function (l) {
+                return new (l || N)(C.LFG($.Ho), C.LFG($.mI), C.LFG(He.L))
+            }, N.\u0275prov = C.Yz7({token: N, factory: N.\u0275fac, providedIn: "root"}), N
+        })();
+        var It = o(2994);
+        let ee = (() => {
+            class N {
+                constructor(l, f, R, ie) {
+                    this.gameApiService = l, this.authService = f, this.cardsService = R, this.environment = ie, this.storeItems = [], this.dataStore = {userStarsTotal: 0}, this._userStarTotal$ = new W.X(0), console.log("@cerberus/StarService constructor")
+                }
+
+                get userStarTotal$() {
+                    return this._userStarTotal$.asObservable()
+                }
+
+                fetchUserStarsRewards(l) {
+                    return this.gameApiService.get(`/game/${l}/rewards/${this.authService.getUserId()}`)
+                }
+
+                fetchUserStarsTotal() {
+                    const l = this.authService.getUserId();
+                    !l || this.gameApiService.get(`/user/${l}/stars`).pipe((0, I.q)(1)).subscribe(f => {
+                        this.dataStore.userStarsTotal = f, this._userStarTotal$.next(this.dataStore.userStarsTotal)
+                    }, f => {
+                        this.dataStore.userStarsTotal = 0, this._userStarTotal$.next(this.dataStore.userStarsTotal)
+                    })
+                }
+
+                purchaseItem$(l, f, R = !0) {
+                    return this.authService.fetchSession().pipe((0, I.q)(1), (0, we.VS)(ie => this.gameApiService.post(`/user/${this.authService.getUserId()}/shop?session=${ie}`, {asset_group: l})), (0, ye.K)(ie => 401 === ie.status && R ? this.authService.refreshToken().pipe((0, we.VS)(Oe => this.purchaseItem$(l, f, !1))) : (0, i.of)(ie)), (0, It.b)(ie => {
+                        (!ie || !ie.error) && this.handlePurchaseSuccess()
+                    }))
+                }
+
+                handlePurchaseSuccess() {
+                    this.fetchUserStarsTotal(), "desktop" === this.environment.clientType && this.cardsService.fetchInventory()
+                }
+
+                addEpochTimestamp(l) {
+                    return Object.assign(Object.assign({}, l), {
+                        start_timestamp_epoch: new Date(l.start_timestamp).getTime(),
+                        end_timestamp_epoch: new Date(l.end_timestamp).getTime()
+                    })
+                }
+
+                getScreenOrder(l) {
+                    const R = this.storeItems.filter(ie => this.isCurrentItem(ie)).indexOf(l);
+                    return Object.assign(Object.assign({}, l), {screen_order: R})
+                }
+
+                isCurrentItem(l) {
+                    const f = (new Date).getTime();
+                    return l.end_timestamp_epoch > f && l.start_timestamp_epoch < f
+                }
+
+                fetchStarStoreItems$() {
+                    return this.gameApiService.get(`/user/${this.authService.getUserId()}/shop`).pipe((0, I.q)(1), (0, ue.U)(l => l.map(f => this.addEpochTimestamp(f))), (0, It.b)(l => this.storeItems = l))
+                }
             }
 
-            sendPing(d) {
-                console.log("SOCKET PING:", d);
-                const _ = {text: "HEARTBEAT_PING", user_id: this.authService.getUserId(), msg_id: (0, Ee.v4)()};
-                this.connections[d].pingList.push(_), this.sendMessage(d, _)
+            return N.\u0275fac = function (l) {
+                return new (l || N)(C.LFG(X.F), C.LFG($.mI), C.LFG(bt.d), C.LFG($.Ho))
+            }, N.\u0275prov = C.Yz7({token: N, factory: N.\u0275fac}), N
+        })();
+        const re = (N, H) => () => Promise.all([N.loadConfigurations().toPromise(), H.waitUntilReady()]);
+        let Se = (() => {
+            class N {
             }
 
-            onPongMessage(d, _) {
-                console.log("SOCKET PONG:", d);
-                const U = this.connections[d], ie = U.pingList.findIndex(ke => ke.msg_id === _.msg_id);
-                -1 !== ie && U.pingList.splice(ie, 1)
+            return N.\u0275fac = function (l) {
+                return new (l || N)
+            }, N.\u0275mod = C.oAB({type: N}), N.\u0275inj = C.cJS({
+                providers: [He.L, {
+                    provide: $.Hd,
+                    deps: [$.Ho],
+                    useFactory: H => (0, O.j2)(H.launchDarklyKey, {anonymous: !0, key: "anonymous"})
+                }, {
+                    provide: C.ip1,
+                    useFactory: re,
+                    multi: !0,
+                    deps: [He.L, $.Hd]
+                }, de, Ae, Ye, nt.a, ne, $e, xe, pt, Ot, Ct, he, yt._, Ee, ee, Ne.$, V], imports: [[P.ez]]
+            }), N
+        })()
+    }, 69439: (se, U, o) => {
+        "use strict";
+        o.d(U, {d: () => C});
+        var d = o(8929), i = o(591), y = o(36053), e = o(7625), m = o(92198), p = o(75613), g = o(24850), r = o(87545),
+            t = o(72986), n = o(2994), _ = o(27221), S = o(73307), k = o(52886), L = o(1025), D = o(5e3), v = o(43834),
+            O = o(29840), P = o(90868);
+        let C = (() => {
+            class ${constructor(b,w,B,q,ce,de){this.environment=b,this.authService=w,this.gameApiService=B,this.marketplaceApiService=q,this.tokenRefreshService=ce,this.featureFlagsService=de,this.unsubscribe=new d.xQ,this.dataStore={protoCards:new Map,inventory:{}
+        ,
+            inventoryCards:[], qualityCounts
+        :
+            new Map, newInventoryCardCount
+        :
+            0
+        }, this._protoCards = new i.X(new Map), this._inventory = new i.X({}), this._qualityCounts = new i.X(new Map), this._inventoryCards = new i.X([]), this._newInventoryCardCount = new i.X(0), this.watchForLogout()
+    }watchForLogout() {
+        "desktop" === this.environment.clientType && this.authService.account$.pipe((0, e.R)(this.unsubscribe), (0, m.h)(b => null === b)).subscribe(b => {
+            this.dataStore.inventory = {}, this._inventory.next(Object.assign({}, this.dataStore).inventory), this.dataStore.qualityCounts = new Map, this._qualityCounts.next(Object.assign({}, this.dataStore).qualityCounts), this.dataStore.inventoryCards = [], this._inventoryCards.next(Object.assign({}, this.dataStore).inventoryCards), this.dataStore.newInventoryCardCount = 0, this._newInventoryCardCount.next(Object.assign({}, this.dataStore).newInventoryCardCount)
+        })
+    }get protoCards$() {
+        return this._protoCards.asObservable()
+    }get inventory$() {
+        return this._inventory.asObservable()
+    }get qualityCounts$() {
+        return this._qualityCounts.asObservable()
+    }get inventoryCards$() {
+        return this._inventoryCards.asObservable()
+    }get newInventoryCardCount$() {
+        return this._newInventoryCardCount.asObservable()
+    }getProtoCard(b) {
+        return this.protoCards$.pipe((0, p.sE)(w => w.has(b)), (0, g.U)(w => w.get(b)))
+    }fetchProtoCardsApi() {
+        const b = this.authService.getUserId();
+        return this.authService.fetchSession().pipe((0, r.w)(w => this.gameApiService.get(`/user/${b || 1}/proto?format=flat${w ? `&session=${w}` : ""}`)), (0, t.q)(1), (0, g.U)(w => this.dictionaryToMap(w)), (0, g.U)(w => (w.forEach((B, q) => {
+            B.proto = q
+        }), w)))
+    }getProtoCards$() {
+        return this.tokenRefreshService.autoRefreshToken(this.fetchProtoCardsApi())
+    }fetchProtoCards() {
+        this.getProtoCards$().subscribe(b => {
+            this.handleProtoCardsSuccess(b)
+        })
+    }handleProtoCardsSuccess(b) {
+        this.dataStore.protoCards = b, this._protoCards.next(Object.assign({}, this.dataStore).protoCards)
+    }fetchInventory() {
+        const b = this.authService.getUserId();
+        return this.fetchInventoryCardsMap(b).pipe((0, t.q)(1), (0, n.b)(w => {
+            this.dataStore.inventory = w, this._inventory.next(Object.assign({}, this.dataStore).inventory)
+        })).subscribe()
+    }addCardsToInventory(b) {
+        let w = 0;
+        Object.entries(b).forEach(([B, q]) => {
+            if (this.dataStore.inventory[B]) {
+                const ce = q.filter(de => !this.dataStore.inventory[B].some(Ce => Ce.id === de.id));
+                this.dataStore.inventory[B] = [...this.dataStore.inventory[B], ...ce], w += ce.length
+            } else this.dataStore.inventory[B] = q, w += q.length
+        }), this._inventory.next(Object.assign({}, this.dataStore.inventory)), this.dataStore.newInventoryCardCount = w, this._newInventoryCardCount.next(w)
+    }fetchQualityCount() {
+        return this.gameApiService.get("/quality_count").pipe((0, t.q)(1), (0, n.b)(b => {
+            this.dataStore.qualityCounts = this.dictionaryToMap(b), this._qualityCounts.next(Object.assign({}, this.dataStore).qualityCounts)
+        }), (0, _.K)(b => b)).subscribe()
+    }loadInventoryCards() {
+        return (0, y.aj)([this.protoCards$, this.inventory$]).pipe((0, n.b)(([b, w]) => {
+            this.dataStore.inventoryCards = this.convertToCards(b, w), this._inventoryCards.next(Object.assign({}, this.dataStore).inventoryCards)
+        }))
+    }convertToCards(b, w) {
+        const B = [];
+        return b.forEach((q, ce) => {
+            if (w[ce]) for (const de of w[ce]) {
+                const Ce = new k.Zb(de.id, ce, de.q, q, de.status);
+                B.push(Ce)
             }
-
-            checkPingList(d) {
-                this.connections[d].pingList.length >= this.MAX_UNANSWERED_PING_COUNT ? this.reconnectSocket(d) : this.sendPing(d)
-            }
-
-            disconnect({socketName: d, cleanup: _ = !0}) {
-                const U = this.connections[d], ie = () => {
-                    U && this.disconnectListeners(d), _ && delete this.connections[d]
-                };
-                return new Promise(ke => {
-                    if (!U) return this.checkToKillPingPongInterval(), ie(), ke();
-                    this.killReconnectTimer(d), U.isAlive ? (U.socket.addEventListener("close", () => {
-                        ie(), this.checkToKillPingPongInterval(), ke()
-                    }), U.socket.close()) : (console.log("SOCKET IS IN A TRANSITION STATE, BUT TRY AND CLOSE ANYWAY"), U.socket && U.socket.close(), ie(), ke())
-                })
-            }
-
-            disconnectAllSockets() {
-                return this.killAllReconnectTimers(), Promise.all(Object.keys(this.connections).map(d => this.disconnect({socketName: d})))
-            }
-        }
-
-        return W.\u0275fac = function (d) {
-            return new (d || W)(b.LFG(T.Ho), b.LFG(T.mI), b.LFG(ot.L))
-        }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac, providedIn: "root"}), W
-    })();
-    var q = o(2994);
-    let re = (() => {
-        class W {
-            constructor(d, _, U, ie) {
-                this.gameApiService = d, this.authService = _, this.cardsService = U, this.environment = ie, this.storeItems = [], this.dataStore = {userStarsTotal: 0}, this._userStarTotal$ = new H.X(0), console.log("@cerberus/StarService constructor")
-            }
-
-            get userStarTotal$() {
-                return this._userStarTotal$.asObservable()
-            }
-
-            fetchUserStarsRewards(d) {
-                return this.gameApiService.get(`/game/${d}/rewards/${this.authService.getUserId()}`)
-            }
-
-            fetchUserStarsTotal() {
-                const d = this.authService.getUserId();
-                !d || this.gameApiService.get(`/user/${d}/stars`).pipe((0, J.q)(1)).subscribe(_ => {
-                    this.dataStore.userStarsTotal = _, this._userStarTotal$.next(this.dataStore.userStarsTotal)
-                }, _ => {
-                    this.dataStore.userStarsTotal = 0, this._userStarTotal$.next(this.dataStore.userStarsTotal)
-                })
-            }
-
-            purchaseItem$(d, _, U = !0) {
-                return this.authService.fetchSession().pipe((0, J.q)(1), (0, He.VS)(ie => this.gameApiService.post(`/user/${this.authService.getUserId()}/shop?session=${ie}`, {asset_group: d})), (0, Ce.K)(ie => 401 === ie.status && U ? this.authService.refreshToken().pipe((0, He.VS)(ke => this.purchaseItem$(d, _, !1))) : (0, i.of)(ie)), (0, q.b)(ie => {
-                    (!ie || !ie.error) && this.handlePurchaseSuccess()
-                }))
-            }
-
-            handlePurchaseSuccess() {
-                this.fetchUserStarsTotal(), "desktop" === this.environment.clientType && this.cardsService.fetchInventory()
-            }
-
-            addEpochTimestamp(d) {
-                return Object.assign(Object.assign({}, d), {
-                    start_timestamp_epoch: new Date(d.start_timestamp).getTime(),
-                    end_timestamp_epoch: new Date(d.end_timestamp).getTime()
-                })
-            }
-
-            getScreenOrder(d) {
-                const U = this.storeItems.filter(ie => this.isCurrentItem(ie)).indexOf(d);
-                return Object.assign(Object.assign({}, d), {screen_order: U})
-            }
-
-            isCurrentItem(d) {
-                const _ = (new Date).getTime();
-                return d.end_timestamp_epoch > _ && d.start_timestamp_epoch < _
-            }
-
-            fetchStarStoreItems$() {
-                return this.gameApiService.get(`/user/${this.authService.getUserId()}/shop`).pipe((0, J.q)(1), (0, pe.U)(d => d.map(_ => this.addEpochTimestamp(_))), (0, q.b)(d => this.storeItems = d))
-            }
-        }
-
-        return W.\u0275fac = function (d) {
-            return new (d || W)(b.LFG(ne.F), b.LFG(T.mI), b.LFG(lt.d), b.LFG(T.Ho))
-        }, W.\u0275prov = b.Yz7({token: W, factory: W.\u0275fac}), W
-    })();
-    const xe = (W, z) => () => Promise.all([W.loadConfigurations().toPromise(), z.waitUntilReady()]);
-    let Ge = (() => {
-        class W {
-        }
-
-        return W.\u0275fac = function (d) {
-            return new (d || W)
-        }, W.\u0275mod = b.oAB({type: W}), W.\u0275inj = b.cJS({
-            providers: [ot.L, {
-                provide: T.Hd,
-                deps: [T.Ho],
-                useFactory: z => (0, O.j2)(z.launchDarklyKey, {anonymous: !0, key: "anonymous"})
-            }, {
-                provide: b.ip1,
-                useFactory: xe,
-                multi: !0,
-                deps: [ot.L, T.Hd]
-            }, de, Te, Ct, je.a, Oe, ht, ye, Ze, xt, kt, he, nt._, It, re, yt.$, V], imports: [[S.ez]]
-        }), W
-    })()
-}, 69439
+        }), B
+    }forgeUpdate(b, w, B) {
+        this.forgeRemoveIds(b, w), this._inventory.next(Object.assign({}, this.dataStore.inventory)), this.dataStore.newInventoryCardCount = 1, this._newInventoryCardCount.next(1)
+    }forgeRemoveIds(b, w) {
+        this.dataStore.inventory[w] = this.dataStore.inventory[w].filter(B => !b.some(q => B.id === q))
+    }setNewInventoryCardCount(b) {
+        this.dataStore.newInventoryCardCount = b, this._newInventoryCardCount.next(b)
+    }dictionaryToMap(b) {
+        return Object.entries(b).map(([w, B]) => ({
+            key: w,
+            val: B
+        })).reduce((w, B) => w.set(Number(B.key), B.val), new Map)
+    }fetchInventoryCardsMapV2(b, w) {
+        const B = w ? `&owner=${w}` : "";
+        return this.marketplaceApiService.get(`/v2/asset?type=card${B}${B ? "" : `&user_id=${b}`}`)
+    }inventoryCardsMapV2ToV1(b) {
+        const w = {};
+        return Object.entries(b.protos).forEach(([B, q]) => {
+            const ce = q.assets.map(de => ({id: de.id, q: de.properties.quality, status: de.minting_status}));
+            w[B] = ce
+        }), w
+    }fetchInventoryCardsMap(b) {
+        return this.gameApiService.get(`/user/${b}/card?caller=${"desktop" === this.environment.clientType ? "client" : "website"}`)
+    }checkToRefreshInventory() {
+        this.featureFlagsService.get(L.v.refetchInventoryEnabled).pipe((0, t.q)(1)).subscribe(b => {
+            b && this.fetchInventory()
+        })
+    }
+}
+return $.\u0275fac = function (b) {
+    return new (b || $)(D.LFG(S.Ho), D.LFG(S.mI), D.LFG(v.F), D.LFG(O._), D.LFG(P.$), D.LFG(L.a))
+}, $.\u0275prov = D.Yz7({token: $, factory: $.\u0275fac, providedIn: "root"}), $
+})
+()
+},
+1025
 :
-(se, R, o) => {
+(se, U, o) => {
     "use strict";
-    o.d(R, {d: () => b});
-    var c = o(8929), i = o(591), y = o(36053), e = o(7625), m = o(92198), p = o(75613), g = o(24850), r = o(87545),
-        t = o(72986), n = o(2994), v = o(27221), k = o(73307), P = o(52886), I = o(1025), A = o(5e3), f = o(43834),
-        O = o(29840), S = o(90868);
-    let b = (() => {
-        class T {
-            constructor(C, w, B, ee, ce, de) {
-                this.environment = C, this.authService = w, this.gameApiService = B, this.marketplaceApiService = ee, this.tokenRefreshService = ce, this.featureFlagsService = de, this.unsubscribe = new c.xQ, this.dataStore = {
-                    protoCards: new Map,
-                    inventory: {},
-                    inventoryCards: [],
-                    qualityCounts: new Map,
-                    newInventoryCardCount: 0
-                }, this._protoCards = new i.X(new Map), this._inventory = new i.X({}), this._qualityCounts = new i.X(new Map), this._inventoryCards = new i.X([]), this._newInventoryCardCount = new i.X(0), this.watchForLogout()
-            }
-
-            watchForLogout() {
-                "desktop" === this.environment.clientType && this.authService.account$.pipe((0, e.R)(this.unsubscribe), (0, m.h)(C => null === C)).subscribe(C => {
-                    this.dataStore.inventory = {}, this._inventory.next(Object.assign({}, this.dataStore).inventory), this.dataStore.qualityCounts = new Map, this._qualityCounts.next(Object.assign({}, this.dataStore).qualityCounts), this.dataStore.inventoryCards = [], this._inventoryCards.next(Object.assign({}, this.dataStore).inventoryCards), this.dataStore.newInventoryCardCount = 0, this._newInventoryCardCount.next(Object.assign({}, this.dataStore).newInventoryCardCount)
-                })
-            }
-
-            get protoCards$() {
-                return this._protoCards.asObservable()
-            }
-
-            get inventory$() {
-                return this._inventory.asObservable()
-            }
-
-            get qualityCounts$() {
-                return this._qualityCounts.asObservable()
-            }
-
-            get inventoryCards$() {
-                return this._inventoryCards.asObservable()
-            }
-
-            get newInventoryCardCount$() {
-                return this._newInventoryCardCount.asObservable()
-            }
-
-            getProtoCard(C) {
-                return this.protoCards$.pipe((0, p.sE)(w => w.has(C)), (0, g.U)(w => w.get(C)))
-            }
-
-            fetchProtoCardsApi() {
-                const C = this.authService.getUserId();
-                return this.authService.fetchSession().pipe((0, r.w)(w => this.gameApiService.get(`/user/${C || 1}/proto?format=flat${w ? `&session=${w}` : ""}`)), (0, t.q)(1), (0, g.U)(w => this.dictionaryToMap(w)), (0, g.U)(w => (w.forEach((B, ee) => {
-                    B.proto = ee
-                }), w)))
-            }
-
-            getProtoCards$() {
-                return this.tokenRefreshService.autoRefreshToken(this.fetchProtoCardsApi())
-            }
-
-            fetchProtoCards() {
-                this.getProtoCards$().subscribe(C => {
-                    this.handleProtoCardsSuccess(C)
-                })
-            }
-
-            handleProtoCardsSuccess(C) {
-                this.dataStore.protoCards = C, this._protoCards.next(Object.assign({}, this.dataStore).protoCards)
-            }
-
-            fetchInventory() {
-                const C = this.authService.getUserId();
-                return this.fetchInventoryCardsMap(C).pipe((0, t.q)(1), (0, n.b)(w => {
-                    this.dataStore.inventory = w, this._inventory.next(Object.assign({}, this.dataStore).inventory)
-                })).subscribe()
-            }
-
-            addCardsToInventory(C) {
-                let w = 0;
-                Object.entries(C).forEach(([B, ee]) => {
-                    if (this.dataStore.inventory[B]) {
-                        const ce = ee.filter(de => !this.dataStore.inventory[B].some(fe => fe.id === de.id));
-                        this.dataStore.inventory[B] = [...this.dataStore.inventory[B], ...ce], w += ce.length
-                    } else this.dataStore.inventory[B] = ee, w += ee.length
-                }), this._inventory.next(Object.assign({}, this.dataStore.inventory)), this.dataStore.newInventoryCardCount = w, this._newInventoryCardCount.next(w)
-            }
-
-            fetchQualityCount() {
-                return this.gameApiService.get("/quality_count").pipe((0, t.q)(1), (0, n.b)(C => {
-                    this.dataStore.qualityCounts = this.dictionaryToMap(C), this._qualityCounts.next(Object.assign({}, this.dataStore).qualityCounts)
-                }), (0, v.K)(C => C)).subscribe()
-            }
-
-            loadInventoryCards() {
-                return (0, y.aj)([this.protoCards$, this.inventory$]).pipe((0, n.b)(([C, w]) => {
-                    this.dataStore.inventoryCards = this.convertToCards(C, w), this._inventoryCards.next(Object.assign({}, this.dataStore).inventoryCards)
-                }))
-            }
-
-            convertToCards(C, w) {
-                const B = [];
-                return C.forEach((ee, ce) => {
-                    if (w[ce]) for (const de of w[ce]) {
-                        const fe = new P.Zb(de.id, ce, de.q, ee, de.status);
-                        B.push(fe)
-                    }
-                }), B
-            }
-
-            forgeUpdate(C, w, B) {
-                this.forgeRemoveIds(C, w), this._inventory.next(Object.assign({}, this.dataStore.inventory)), this.dataStore.newInventoryCardCount = 1, this._newInventoryCardCount.next(1)
-            }
-
-            forgeRemoveIds(C, w) {
-                this.dataStore.inventory[w] = this.dataStore.inventory[w].filter(B => !C.some(ee => B.id === ee))
-            }
-
-            setNewInventoryCardCount(C) {
-                this.dataStore.newInventoryCardCount = C, this._newInventoryCardCount.next(C)
-            }
-
-            dictionaryToMap(C) {
-                return Object.entries(C).map(([w, B]) => ({
-                    key: w,
-                    val: B
-                })).reduce((w, B) => w.set(Number(B.key), B.val), new Map)
-            }
-
-            fetchInventoryCardsMapV2(C, w) {
-                const B = w ? `&owner=${w}` : "";
-                return this.marketplaceApiService.get(`/v2/asset?type=card${B}${B ? "" : `&user_id=${C}`}`)
-            }
-
-            inventoryCardsMapV2ToV1(C) {
-                const w = {};
-                return Object.entries(C.protos).forEach(([B, ee]) => {
-                    const ce = ee.assets.map(de => ({id: de.id, q: de.properties.quality, status: de.minting_status}));
-                    w[B] = ce
-                }), w
-            }
-
-            fetchInventoryCardsMap(C) {
-                return this.gameApiService.get(`/user/${C}/card?caller=${"desktop" === this.environment.clientType ? "client" : "website"}`)
-            }
-
-            checkToRefreshInventory() {
-                this.featureFlagsService.get(I.v.refetchInventoryEnabled).pipe((0, t.q)(1)).subscribe(C => {
-                    C && this.fetchInventory()
-                })
-            }
-        }
-
-        return T.\u0275fac = function (C) {
-            return new (C || T)(A.LFG(k.Ho), A.LFG(k.mI), A.LFG(f.F), A.LFG(O._), A.LFG(S.$), A.LFG(I.a))
-        }, T.\u0275prov = A.Yz7({token: T, factory: T.\u0275fac, providedIn: "root"}), T
-    })()
-}, 1025
-:
-(se, R, o) => {
-    "use strict";
-    o.d(R, {v: () => g, a: () => t});
-    var c = o(36053), i = o(21086), y = o(591), e = o(87545), m = o(73307), p = o(5e3), g = (() => {
-        return (n = g || (g = {})).buyPagePaused = "buy-page-paused", n.claimAirdropButtonEnabled = "temp-claim-airdrop-button-enabled", n.claimAirdropEnabled = "temp-claim-airdrop-enabled", n.claimFluxEnabled = "temp-claim-flux-enabled", n.coinbasePaused = "temp-coinbase-paused", n.controllableBannerData = "controllable-banner-data", n.deckCodesEnabled = "temp-deck-codes-enabled", n.defaultWalletEnabled = "temp-default-wallet-enabled", n.forgeEnabled = "temp-forge-enabled", n.fusingNextStepEnabled = "temp-fusing-next-step-enabled", n.godsTokenBlocked = "gods-token-blocked", n.outageBannerEnabled = "temp-outage-banner-enabled", n.rankedWeekendCancelledBannerEnabled = "temp-ranked-weekend-cancelled-banner-enabled", n.referralsEnabled = "temp-referrals-enabled", n.refetchInventoryEnabled = "refetch-inventory-enabled", n.showControllableBanner = "show-controllable-banner", n.spgpEnabled = "temp-spgp-enabled", n.spgpPaused = "temp-spgp-paused", n.stakingEnabled = "temp-staking-enabled", n.tokenEnabled = "temp-token-enabled", n.x2BuyPageEnabled = "temp-x-2-buy-page-enabled", n.newEnvironmentMarketplaceLegacyApi = "temp-new-env-marketplace-legacy-api-enabled", n.newEnvironmentGameLegacyApi = "temp-new-env-game-legacy-api-enabled", n.newEnvironmentAuthLegacyApi = "temp-new-env-auth-legacy-api-enabled", n.noWalletWarningRankedGame = "temp-no-wallet-warning-ranked-game", n.playToEarnEnabled = "temp-play-to-earn-enabled", n.buyPageRevampEnabled = "buy-page-revamp-enabled", n.weekendRankedEnabled = "temp-weekend-ranked-claim-enabled", n.imxIframeModalEnabled = "imx-iframe-modal-enabled", g;
+    o.d(U, {v: () => g, a: () => t});
+    var d = o(36053), i = o(21086), y = o(591), e = o(87545), m = o(73307), p = o(5e3), g = (() => {
+        return (n = g || (g = {})).buyPagePaused = "buy-page-paused", n.claimAirdropButtonEnabled = "temp-claim-airdrop-button-enabled", n.claimAirdropEnabled = "temp-claim-airdrop-enabled", n.claimFluxEnabled = "temp-claim-flux-enabled", n.coinbasePaused = "temp-coinbase-paused", n.controllableBannerData = "controllable-banner-data", n.deckCodesEnabled = "temp-deck-codes-enabled", n.defaultWalletEnabled = "temp-default-wallet-enabled", n.forgeEnabled = "temp-forge-enabled", n.fusingNextStepEnabled = "temp-fusing-next-step-enabled", n.godsTokenBlocked = "gods-token-blocked", n.outageBannerEnabled = "temp-outage-banner-enabled", n.rankedWeekendCancelledBannerEnabled = "temp-ranked-weekend-cancelled-banner-enabled", n.referralsEnabled = "temp-referrals-enabled", n.refetchInventoryEnabled = "refetch-inventory-enabled", n.showControllableBanner = "show-controllable-banner", n.spgpEnabled = "temp-spgp-enabled", n.spgpPaused = "temp-spgp-paused", n.stakingEnabled = "temp-staking-enabled", n.tokenEnabled = "temp-token-enabled", n.x2BuyPageEnabled = "temp-x-2-buy-page-enabled", n.noWalletWarningRankedGame = "temp-no-wallet-warning-ranked-game", n.playToEarnEnabled = "temp-play-to-earn-enabled", n.buyPageRevampEnabled = "buy-page-revamp-enabled", n.weekendRankedEnabled = "temp-weekend-ranked-claim-enabled", n.imxIframeModalEnabled = "imx-iframe-modal-enabled", g;
         var n
     })();
     const r = Object.seal({
@@ -19430,9 +19295,6 @@
         [g.stakingEnabled]: !1,
         [g.tokenEnabled]: !1,
         [g.x2BuyPageEnabled]: !1,
-        [g.newEnvironmentMarketplaceLegacyApi]: !1,
-        [g.newEnvironmentGameLegacyApi]: !1,
-        [g.newEnvironmentAuthLegacyApi]: !1,
         [g.noWalletWarningRankedGame]: !1,
         [g.playToEarnEnabled]: !1,
         [g.buyPageRevampEnabled]: !1,
@@ -19441,137 +19303,135 @@
     });
     let t = (() => {
         class n {
-            constructor(k, P) {
-                this.ldClient = k, this.environment = P, this.flags = {}, this.flagChange = {}, this.flags = Object.assign({}, r), this.ldClient.on("change", I => {
-                    for (const A in I) this.set(A, I[A].current)
+            constructor(S, k) {
+                this.ldClient = S, this.environment = k, this.flags = {}, this.flagChange = {}, this.flags = Object.assign({}, r), this.ldClient.on("change", L => {
+                    for (const D in L) this.set(D, L[D].current)
                 }), this.ldClient.waitUntilReady().then(() => {
-                    const I = this.ldClient.allFlags();
-                    for (const A in I) this.set(A, I[A])
+                    const L = this.ldClient.allFlags();
+                    for (const D in L) this.set(D, L[D])
                 })
             }
 
-            getMany(k) {
-                const P = [];
-                return k.forEach(I => {
-                    P.push(this.get(I))
-                }), (0, c.aj)(P).pipe((0, e.w)(I => {
-                    const A = {};
-                    return k.forEach((f, O) => {
-                        A[f] = I[O]
-                    }), (0, i.of)(A)
+            getMany(S) {
+                const k = [];
+                return S.forEach(L => {
+                    k.push(this.get(L))
+                }), (0, d.aj)(k).pipe((0, e.w)(L => {
+                    const D = {};
+                    return S.forEach((v, O) => {
+                        D[v] = L[O]
+                    }), (0, i.of)(D)
                 }))
             }
 
-            get(k) {
-                return this.flagChange[k] = this.flagChange[k] || new y.X(this.flags[k]), this.flagChange[k].asObservable()
+            get(S) {
+                return this.flagChange[S] = this.flagChange[S] || new y.X(this.flags[S]), this.flagChange[S].asObservable()
             }
 
-            setContext(k) {
+            setContext(S) {
                 this.ldClient.identify({
-                    key: !0 === k.anonymous ? "anonymous" : k.userID,
-                    email: k.email,
-                    name: k.name,
-                    anonymous: k.anonymous,
-                    country: k.country,
+                    key: !0 === S.anonymous ? "anonymous" : S.userID,
+                    email: S.email,
+                    name: S.name,
+                    anonymous: S.anonymous,
+                    country: S.country,
                     custom: {clientType: this.environment.clientType}
                 })
             }
 
-            set(k, P) {
-                this.flags[k] = P, this.flagChange[k] && this.flagChange[k].next(P)
+            set(S, k) {
+                this.flags[S] = k, this.flagChange[S] && this.flagChange[S].next(k)
             }
         }
 
-        return n.\u0275fac = function (k) {
-            return new (k || n)(p.LFG(m.Hd), p.LFG(m.Ho))
+        return n.\u0275fac = function (S) {
+            return new (S || n)(p.LFG(m.Hd), p.LFG(m.Ho))
         }, n.\u0275prov = p.Yz7({token: n, factory: n.\u0275fac}), n
     })()
 }, 43834
 :
-(se, R, o) => {
+(se, U, o) => {
     "use strict";
-    o.d(R, {F: () => n});
-    var c = o(8929), i = o(87168), y = o(24850), e = o(7625), m = o(87545), p = o(1025), g = o(5e3), r = o(40520),
-        t = o(77535);
-    let n = (() => {
-        class v {
-            constructor(P, I, A) {
-                this.http = P, this.moduleConfigService = I, this.featureFlagService = A, this.destroyed$ = new c.xQ, this.gameEndpoint$ = this.moduleConfigService.loadConfigurations().pipe((0, i.M)(this.featureFlagService.get(p.v.newEnvironmentGameLegacyApi)), (0, y.U)(([f, O]) => O ? f.legacyGameHost : f.gameHost), (0, e.R)(this.destroyed$))
+    o.d(U, {F: () => r});
+    var d = o(8929), i = o(24850), y = o(7625), e = o(87545), m = o(5e3), p = o(40520), g = o(77535);
+    let r = (() => {
+        class t {
+            constructor(_, S) {
+                this.http = _, this.moduleConfigService = S, this.destroyed$ = new d.xQ, this.gameEndpoint$ = this.moduleConfigService.loadConfigurations().pipe((0, i.U)(k => k.legacyGameHost), (0, y.R)(this.destroyed$))
             }
 
             ngOnDestroy() {
                 this.destroyed$.next(), this.destroyed$.complete()
             }
 
-            get(P, I) {
-                return this.gameEndpoint$.pipe((0, m.w)(A => this.http.get(A + P, I)))
+            get(_, S) {
+                return this.gameEndpoint$.pipe((0, e.w)(k => this.http.get(k + _, S)))
             }
 
-            put(P, I) {
-                return this.gameEndpoint$.pipe((0, m.w)(A => this.http.put(A + P, I)))
+            put(_, S) {
+                return this.gameEndpoint$.pipe((0, e.w)(k => this.http.put(k + _, S)))
             }
 
-            post(P, I) {
-                return this.gameEndpoint$.pipe((0, m.w)(A => this.http.post(A + P, I)))
+            post(_, S) {
+                return this.gameEndpoint$.pipe((0, e.w)(k => this.http.post(k + _, S)))
             }
 
-            delete(P) {
-                return this.gameEndpoint$.pipe((0, m.w)(I => this.http.delete(I + P)))
+            delete(_) {
+                return this.gameEndpoint$.pipe((0, e.w)(S => this.http.delete(S + _)))
             }
         }
 
-        return v.\u0275fac = function (P) {
-            return new (P || v)(g.LFG(r.eN), g.LFG(t.L), g.LFG(p.a))
-        }, v.\u0275prov = g.Yz7({token: v, factory: v.\u0275fac, providedIn: "root"}), v
+        return t.\u0275fac = function (_) {
+            return new (_ || t)(m.LFG(p.eN), m.LFG(g.L))
+        }, t.\u0275prov = m.Yz7({token: t, factory: t.\u0275fac, providedIn: "root"}), t
     })()
 }, 29840
 :
-(se, R, o) => {
+(se, U, o) => {
     "use strict";
-    o.d(R, {_: () => n});
-    var c = o(8929), i = o(87168), y = o(24850), e = o(7625), m = o(87545), p = o(1025), g = o(5e3), r = o(40520),
-        t = o(77535);
-    let n = (() => {
-        class v {
-            constructor(P, I, A) {
-                this.http = P, this.moduleConfigService = I, this.featureFlagService = A, this.destroyed$ = new c.xQ, this.marketplaceEndpoint$ = this.moduleConfigService.loadConfigurations().pipe((0, i.M)(this.featureFlagService.get(p.v.newEnvironmentMarketplaceLegacyApi)), (0, y.U)(([f, O]) => O ? f.legacyMarketplaceHost : f.marketplaceHost), (0, e.R)(this.destroyed$))
+    o.d(U, {_: () => r});
+    var d = o(8929), i = o(24850), y = o(7625), e = o(87545), m = o(5e3), p = o(40520), g = o(77535);
+    let r = (() => {
+        class t {
+            constructor(_, S) {
+                this.http = _, this.moduleConfigService = S, this.destroyed$ = new d.xQ, this.marketplaceEndpoint$ = this.moduleConfigService.loadConfigurations().pipe((0, i.U)(k => k.legacyMarketplaceHost), (0, y.R)(this.destroyed$))
             }
 
             ngOnDestroy() {
                 this.destroyed$.next(), this.destroyed$.complete()
             }
 
-            get(P, I) {
-                return this.marketplaceEndpoint$.pipe((0, m.w)(A => this.http.get(`${A}${P}`, I)))
+            get(_, S) {
+                return this.marketplaceEndpoint$.pipe((0, e.w)(k => this.http.get(`${k}${_}`, S)))
             }
 
-            put(P, I) {
-                return this.marketplaceEndpoint$.pipe((0, m.w)(A => this.http.put(`${A}${P}`, I)))
+            put(_, S) {
+                return this.marketplaceEndpoint$.pipe((0, e.w)(k => this.http.put(`${k}${_}`, S)))
             }
 
-            post(P, I) {
-                return this.marketplaceEndpoint$.pipe((0, m.w)(A => this.http.post(`${A}${P}`, I)))
+            post(_, S) {
+                return this.marketplaceEndpoint$.pipe((0, e.w)(k => this.http.post(`${k}${_}`, S)))
             }
 
-            delete(P) {
-                return this.marketplaceEndpoint$.pipe((0, m.w)(I => this.http.delete(`${I}${P}`)))
+            delete(_) {
+                return this.marketplaceEndpoint$.pipe((0, e.w)(S => this.http.delete(`${S}${_}`)))
             }
         }
 
-        return v.\u0275fac = function (P) {
-            return new (P || v)(g.LFG(r.eN), g.LFG(t.L), g.LFG(p.a))
-        }, v.\u0275prov = g.Yz7({token: v, factory: v.\u0275fac}), v
+        return t.\u0275fac = function (_) {
+            return new (_ || t)(m.LFG(p.eN), m.LFG(g.L))
+        }, t.\u0275prov = m.Yz7({token: t, factory: t.\u0275fac}), t
     })()
 }, 77535
 :
-(se, R, o) => {
+(se, U, o) => {
     "use strict";
-    o.d(R, {L: () => p});
-    var c = o(2994), i = o(5154), y = o(73307), e = o(5e3), m = o(40520);
+    o.d(U, {L: () => p});
+    var d = o(2994), i = o(5154), y = o(73307), e = o(5e3), m = o(40520);
     let p = (() => {
         class g {
-            constructor(t, n, v) {
-                this.http = t, this.environment = n, this.storageService = v, this.configURL = this.environment.appConfig, "desktop" === this.environment.clientType && this.useDevApis() && (this.configURL = this.environment.appConfigDev)
+            constructor(t, n, _) {
+                this.http = t, this.environment = n, this.storageService = _, this.configURL = this.environment.appConfig, "desktop" === this.environment.clientType && this.useDevApis() && (this.configURL = this.environment.appConfigDev)
             }
 
             useDevApis() {
@@ -19580,7 +19440,7 @@
             }
 
             loadConfigurations() {
-                return this.configuration$ || (this.configuration$ = this.http.get(`${this.configURL}`, {headers: {"cache-control": ["no-cache", "no-store"]}}).pipe((0, c.b)(t => this.configData = t), (0, i.d)(1))), this.configuration$
+                return this.configuration$ || (this.configuration$ = this.http.get(`${this.configURL}`, {headers: {"cache-control": ["no-cache", "no-store"]}}).pipe((0, d.b)(t => this.configData = t), (0, i.d)(1))), this.configuration$
             }
 
             getConfig() {
@@ -19594,10 +19454,10 @@
     })()
 }, 78812
 :
-(se, R, o) => {
+(se, U, o) => {
     "use strict";
-    o.d(R, {f: () => m});
-    var c = o(8929), i = o(591), y = o(49219), e = o(5e3);
+    o.d(U, {f: () => m});
+    var d = o(8929), i = o(591), y = o(49219), e = o(5e3);
     let m = (() => {
         class p {
             constructor() {
@@ -19607,7 +19467,7 @@
                     userEthAccount: null,
                     activeHeaderAlertBar: null,
                     headerAreaHeight: y.standardHeaderHeight
-                }, this.unsubscribe = new c.xQ, this._navigationItems$ = new i.X(null), this._userMenuItems$ = new i.X(null), this._activeHeaderAlertBar$ = new i.X(null)
+                }, this.unsubscribe = new d.xQ, this._navigationItems$ = new i.X(null), this._userMenuItems$ = new i.X(null), this._activeHeaderAlertBar$ = new i.X(null)
             }
 
             get navigationItems$() {
@@ -19679,30 +19539,30 @@
     })()
 }, 90868
 :
-(se, R, o) => {
+(se, U, o) => {
     "use strict";
-    o.d(R, {$: () => g});
-    var c = o(73307), i = o(61737), y = o(27221), e = o(72986), m = o(61709), p = o(5e3);
+    o.d(U, {$: () => g});
+    var d = o(73307), i = o(61737), y = o(27221), e = o(72986), m = o(61709), p = o(5e3);
     let g = (() => {
         class r {
             constructor(n) {
                 this.authService = n
             }
 
-            autoRefreshToken(n, v = 1) {
-                return n.pipe((0, y.K)(k => 401 === k.status && v > 0 ? this.authService.refreshToken().pipe((0, e.q)(1), (0, m.zg)(() => this.autoRefreshToken(n, v - 1))) : (0, i._)(k)))
+            autoRefreshToken(n, _ = 1) {
+                return n.pipe((0, y.K)(S => 401 === S.status && _ > 0 ? this.authService.refreshToken().pipe((0, e.q)(1), (0, m.zg)(() => this.autoRefreshToken(n, _ - 1))) : (0, i._)(S)))
             }
         }
 
         return r.\u0275fac = function (n) {
-            return new (n || r)(p.LFG(c.mI))
+            return new (n || r)(p.LFG(d.mI))
         }, r.\u0275prov = p.Yz7({token: r, factory: r.\u0275fac}), r
     })()
 }, 77518
 :
-(se, R, o) => {
+(se, U, o) => {
     "use strict";
-    o.d(R, {np: () => p, Og: () => e, oS: () => m, PW: () => y});
+    o.d(U, {np: () => p, Og: () => e, oS: () => m, PW: () => y});
     const y = ["diamond", "gold", "shadow", "meteorite", "plain"];
     var e = (() => {
         return (g = e || (e = {})).INITIATED = "initiated", g.FLUX_PAID = "flux_paid", g.CARDS_DELETED = "cards_deleted", g.TOKENS_PAID = "tokens_paid", g.VALIDATING_PAYMENT = "validating_payment", g.COMPLETED = "completed", e;
@@ -19722,35 +19582,35 @@
     })()
 }, 98590
 :
-(se, R, o) => {
+(se, U, o) => {
     "use strict";
-    o.d(R, {I: () => r});
-    var c = o(67876), i = o(5e3), y = o(28510), e = o(69808), m = o(87745);
+    o.d(U, {I: () => r});
+    var d = o(67876), i = o(5e3), y = o(28510), e = o(69808), m = o(87745);
 
     function p(t, n) {
         if (1 & t && (i.TgZ(0, "gu-vertical-space", 7), i._UZ(1, "gu-icon", 8), i.qZA()), 2 & t) {
-            const v = i.oxw();
-            i.xp6(1), i.Q6J("fillColor", v.iconFillColor)("iconLigature", v.iconLigature)
+            const _ = i.oxw();
+            i.xp6(1), i.Q6J("fillColor", _.iconFillColor)("iconLigature", _.iconLigature)
         }
     }
 
     function g(t, n) {
         if (1 & t) {
-            const v = i.EpF();
+            const _ = i.EpF();
             i.ynx(0), i.TgZ(1, "gu-secondary-hex-button", 9), i.NdJ("click", function () {
-                return i.CHM(v), i.oxw().ctaClick()
+                return i.CHM(_), i.oxw().ctaClick()
             }), i.qZA(), i.BQk()
         }
         if (2 & t) {
-            const v = i.oxw();
-            i.xp6(1), i.Q6J("text", v.ctaText)
+            const _ = i.oxw();
+            i.xp6(1), i.Q6J("text", _.ctaText)
         }
     }
 
     let r = (() => {
         class t {
-            constructor(v) {
-                this.activeModal = v, this.onCtaClick = c.Z
+            constructor(_) {
+                this.activeModal = _, this.onCtaClick = d.Z
             }
 
             ctaClick() {
@@ -19758,8 +19618,8 @@
             }
         }
 
-        return t.\u0275fac = function (v) {
-            return new (v || t)(i.Y36(y.mX))
+        return t.\u0275fac = function (_) {
+            return new (_ || t)(i.Y36(y.mX))
         }, t.\u0275cmp = i.Xpm({
             type: t,
             selectors: [["cerberus-alert-modal"]],
@@ -19774,8 +19634,8 @@
             decls: 10,
             vars: 7,
             consts: [["goldBorder", "top"], ["top", "4x-large", 4, "ngIf"], ["top", "large"], ["align", "center", "kind", "large", "fontWeight", "bold", "fillColor", "colors.light.100", 1, "heading"], ["align", "center", "kind", "large", "fillColor", "colors.light.100", 1, "text", 3, "innerHTML"], ["top", "2x-large", "bottom", "4x-large"], [4, "ngIf"], ["top", "4x-large"], [1, "alertIcon", 3, "fillColor", "iconLigature"], ["size", "large", 1, "cta", 3, "text", "click"]],
-            template: function (v, k) {
-                1 & v && (i._UZ(0, "gu-modal-background", 0), i.YNc(1, p, 2, 2, "gu-vertical-space", 1), i.TgZ(2, "gu-vertical-space", 2)(3, "gu-paragraph-text", 3), i._uU(4), i.qZA()(), i.TgZ(5, "gu-vertical-space", 2), i._UZ(6, "gu-paragraph-text", 4), i.ALo(7, "safe"), i.qZA(), i.TgZ(8, "gu-vertical-space", 5), i.YNc(9, g, 2, 1, "ng-container", 6), i.qZA()), 2 & v && (i.xp6(1), i.Q6J("ngIf", k.iconLigature), i.xp6(3), i.hij(" ", k.title, " "), i.xp6(2), i.Q6J("innerHTML", i.xi3(7, 4, k.text, "html"), i.oJD), i.xp6(3), i.Q6J("ngIf", k.ctaText))
+            template: function (_, S) {
+                1 & _ && (i._UZ(0, "gu-modal-background", 0), i.YNc(1, p, 2, 2, "gu-vertical-space", 1), i.TgZ(2, "gu-vertical-space", 2)(3, "gu-paragraph-text", 3), i._uU(4), i.qZA()(), i.TgZ(5, "gu-vertical-space", 2), i._UZ(6, "gu-paragraph-text", 4), i.ALo(7, "safe"), i.qZA(), i.TgZ(8, "gu-vertical-space", 5), i.YNc(9, g, 2, 1, "ng-container", 6), i.qZA()), 2 & _ && (i.xp6(1), i.Q6J("ngIf", S.iconLigature), i.xp6(3), i.hij(" ", S.title, " "), i.xp6(2), i.Q6J("innerHTML", i.xi3(7, 4, S.text, "html"), i.oJD), i.xp6(3), i.Q6J("ngIf", S.ctaText))
             },
             directives: [e.O5],
             pipes: [m.y],
@@ -19784,28 +19644,28 @@
     })()
 }, 53161
 :
-(se, R, o) => {
+(se, U, o) => {
     "use strict";
-    o.d(R, {j: () => i});
-    var c = o(5e3);
+    o.d(U, {j: () => i});
+    var d = o(5e3);
     let i = (() => {
         class y {
         }
 
         return y.\u0275fac = function (m) {
             return new (m || y)
-        }, y.\u0275mod = c.oAB({type: y}), y.\u0275inj = c.cJS({}), y
+        }, y.\u0275mod = d.oAB({type: y}), y.\u0275inj = d.cJS({}), y
     })()
 }, 39765
 :
-(se, R, o) => {
+(se, U, o) => {
     "use strict";
-    o.d(R, {w: () => p});
-    var c = o(8929), i = o(7625), y = o(24850), e = o(73307), m = o(5e3);
+    o.d(U, {w: () => p});
+    var d = o(8929), i = o(7625), y = o(24850), e = o(73307), m = o(5e3);
     let p = (() => {
         class g {
-            constructor(t, n, v) {
-                this.templateRef = t, this.viewContainer = n, this.featureFlagsService = v, this.unsubscribe = new c.xQ
+            constructor(t, n, _) {
+                this.templateRef = t, this.viewContainer = n, this.featureFlagsService = _, this.unsubscribe = new d.xQ
             }
 
             set featureFlagIf(t) {
@@ -19829,9 +19689,9 @@
     })()
 }, 37371
 :
-(se, R, o) => {
+(se, U, o) => {
     "use strict";
-    o.d(R, {M: () => b}), o(89534);
+    o.d(U, {M: () => C}), o(89534);
     var i = o(70655), y = o(32830), e = o(56418), m = o(38872), p = o(86041), g = o(80102), r = o(26532), t = o(65281);
     let n = class extends y.oi {
         constructor() {
@@ -19902,9 +19762,9 @@
         }
 
         notifyState(s) {
-            const C = {modal: this, closed: this.promise};
-            "modalOpened" === s && (C.close = () => this.close()), this.dispatchEvent(new CustomEvent(s, {
-                detail: C,
+            const b = {modal: this, closed: this.promise};
+            "modalOpened" === s && (b.close = () => this.close()), this.dispatchEvent(new CustomEvent(s, {
+                detail: b,
                 bubbles: !0,
                 composed: !1
             }))
@@ -19972,78 +19832,79 @@
         }
     };
     (0, i.gn)([(0, e.C)()], n.prototype, "type", void 0), (0, i.gn)([(0, m.I)(".modal-dialog__panel")], n.prototype, "panel", void 0), n = (0, i.gn)([(0, p.M)("gu-modal-dialog")], n), o(51256), o(11015);
-    var P = o(5e3), I = o(28510), A = o(69808), f = o(87745);
+    var k = o(5e3), L = o(28510), D = o(69808), v = o(87745);
 
-    function O(T, s) {
-        if (1 & T) {
-            const C = P.EpF();
-            P.TgZ(0, "gu-hex-button", 8), P.NdJ("click", function () {
-                P.CHM(C);
-                const B = P.oxw();
+    function O($, s) {
+        if (1 & $) {
+            const b = k.EpF();
+            k.TgZ(0, "gu-hex-button", 8), k.NdJ("click", function () {
+                k.CHM(b);
+                const B = k.oxw();
                 return B.buttonClick(B.secondaryButton)
-            }), P._uU(1), P.qZA()
+            }), k._uU(1), k.qZA()
         }
-        if (2 & T) {
-            const C = P.oxw();
-            P.xp6(1), P.hij(" ", C.secondaryButton.text, " ")
+        if (2 & $) {
+            const b = k.oxw();
+            k.xp6(1), k.hij(" ", b.secondaryButton.text, " ")
         }
     }
 
-    function S(T, s) {
-        if (1 & T) {
-            const C = P.EpF();
-            P.TgZ(0, "gu-hex-button", 9), P.NdJ("click", function () {
-                P.CHM(C);
-                const B = P.oxw();
+    function P($, s) {
+        if (1 & $) {
+            const b = k.EpF();
+            k.TgZ(0, "gu-hex-button", 9), k.NdJ("click", function () {
+                k.CHM(b);
+                const B = k.oxw();
                 return B.buttonClick(B.primaryButton)
-            }), P.ALo(1, "safe"), P.qZA()
+            }), k.ALo(1, "safe"), k.qZA()
         }
-        if (2 & T) {
-            const C = P.oxw();
-            P.Q6J("innerHTML", P.xi3(1, 1, C.primaryButton.text, "html"), P.oJD)
+        if (2 & $) {
+            const b = k.oxw();
+            k.Q6J("innerHTML", k.xi3(1, 1, b.primaryButton.text, "html"), k.oJD)
         }
     }
 
-    let b = (() => {
-        class T {
-            constructor(C) {
-                this.activeModal = C
-            }
+    let C = (() => {
+        class ${constructor(b){this.activeModal=b}
+        buttonClick
 
-            buttonClick(C) {
-                C.onClick && "function" == typeof C.onClick && C.onClick(), C.closeOnClick && this.activeModal.close()
-            }
+        (b)
+        {
+            b.onClick && "function" == typeof b.onClick && b.onClick(), b.closeOnClick && this.activeModal.close()
         }
-
-        return T.\u0275fac = function (C) {
-            return new (C || T)(P.Y36(I.mX))
-        }, T.\u0275cmp = P.Xpm({
-            type: T,
-            selectors: [["cerberus-modal-dialog-control"]],
-            inputs: {
-                title: "title",
-                content: "content",
-                type: "type",
-                secondaryButton: "secondaryButton",
-                primaryButton: "primaryButton"
-            },
-            decls: 10,
-            vars: 8,
-            consts: [[3, "type"], [1, "modalDialogContent"], ["data-test-id", "modal-dialog-control-title", "kind", "large", "fontWeight", "bold", "fillColor", "colors.light.100", "align", "center"], ["top", "small", "bottom", "x-large"], ["data-test-id", "modal-dialog-control-content", "fillColor", "colors.light.100", "align", "center", 3, "innerHTML"], [1, "modalDialogContent__buttons"], ["type", "secondary", "size", "large", "data-test-id", "modal-dialog-control-secondary-button", 3, "click", 4, "ngIf"], ["type", "primary", "size", "large", "data-test-id", "modal-dialog-control-primary-button", 3, "innerHTML", "click", 4, "ngIf"], ["type", "secondary", "size", "large", "data-test-id", "modal-dialog-control-secondary-button", 3, "click"], ["type", "primary", "size", "large", "data-test-id", "modal-dialog-control-primary-button", 3, "innerHTML", "click"]],
-            template: function (C, w) {
-                1 & C && (P.TgZ(0, "gu-modal-dialog", 0)(1, "div", 1)(2, "gu-paragraph-text", 2), P._uU(3), P.qZA(), P.TgZ(4, "gu-vertical-space", 3), P._UZ(5, "gu-paragraph-text", 4), P.ALo(6, "safe"), P.qZA(), P.TgZ(7, "gu-vertical-space", 5), P.YNc(8, O, 2, 1, "gu-hex-button", 6), P.YNc(9, S, 2, 4, "gu-hex-button", 7), P.qZA()()()), 2 & C && (P.Q6J("type", w.type), P.xp6(3), P.Oqu(w.title), P.xp6(2), P.Q6J("innerHTML", P.xi3(6, 5, w.content, "html"), P.oJD), P.xp6(3), P.Q6J("ngIf", w.secondaryButton), P.xp6(1), P.Q6J("ngIf", w.primaryButton))
-            },
-            directives: [A.O5],
-            pipes: [f.y],
-            styles: [".modalDialogContent[_ngcontent-%COMP%]{position:relative;display:flex;flex-direction:column;padding:0 8px;align-items:center;max-width:100vw}.modalDialogContent[_ngcontent-%COMP%] > *[_ngcontent-%COMP%]{position:relative}.modalDialogContent__buttons[_ngcontent-%COMP%]{display:flex;width:100%;justify-content:center}.modalDialogContent__buttons[_ngcontent-%COMP%]   gu-hex-button[_ngcontent-%COMP%]{max-width:50%;flex:1 1 0px}.modalDialogContent__buttons[_ngcontent-%COMP%]   gu-hex-button[_ngcontent-%COMP%]:not(:last-child){margin-right:16px}"]
-        }), T
-    })()
-}, 87745
+    }
+    return $.\u0275fac = function (b) {
+        return new (b || $)(k.Y36(L.mX))
+    }, $.\u0275cmp = k.Xpm({
+        type: $,
+        selectors: [["cerberus-modal-dialog-control"]],
+        inputs: {
+            title: "title",
+            content: "content",
+            type: "type",
+            secondaryButton: "secondaryButton",
+            primaryButton: "primaryButton"
+        },
+        decls: 10,
+        vars: 8,
+        consts: [[3, "type"], [1, "modalDialogContent"], ["data-test-id", "modal-dialog-control-title", "kind", "large", "fontWeight", "bold", "fillColor", "colors.light.100", "align", "center"], ["top", "small", "bottom", "x-large"], ["data-test-id", "modal-dialog-control-content", "fillColor", "colors.light.100", "align", "center", 3, "innerHTML"], [1, "modalDialogContent__buttons"], ["type", "secondary", "size", "large", "data-test-id", "modal-dialog-control-secondary-button", 3, "click", 4, "ngIf"], ["type", "primary", "size", "large", "data-test-id", "modal-dialog-control-primary-button", 3, "innerHTML", "click", 4, "ngIf"], ["type", "secondary", "size", "large", "data-test-id", "modal-dialog-control-secondary-button", 3, "click"], ["type", "primary", "size", "large", "data-test-id", "modal-dialog-control-primary-button", 3, "innerHTML", "click"]],
+        template: function (b, w) {
+            1 & b && (k.TgZ(0, "gu-modal-dialog", 0)(1, "div", 1)(2, "gu-paragraph-text", 2), k._uU(3), k.qZA(), k.TgZ(4, "gu-vertical-space", 3), k._UZ(5, "gu-paragraph-text", 4), k.ALo(6, "safe"), k.qZA(), k.TgZ(7, "gu-vertical-space", 5), k.YNc(8, O, 2, 1, "gu-hex-button", 6), k.YNc(9, P, 2, 4, "gu-hex-button", 7), k.qZA()()()), 2 & b && (k.Q6J("type", w.type), k.xp6(3), k.Oqu(w.title), k.xp6(2), k.Q6J("innerHTML", k.xi3(6, 5, w.content, "html"), k.oJD), k.xp6(3), k.Q6J("ngIf", w.secondaryButton), k.xp6(1), k.Q6J("ngIf", w.primaryButton))
+        },
+        directives: [D.O5],
+        pipes: [v.y],
+        styles: [".modalDialogContent[_ngcontent-%COMP%]{position:relative;display:flex;flex-direction:column;padding:0 8px;align-items:center;max-width:100vw}.modalDialogContent[_ngcontent-%COMP%] > *[_ngcontent-%COMP%]{position:relative}.modalDialogContent__buttons[_ngcontent-%COMP%]{display:flex;width:100%;justify-content:center}.modalDialogContent__buttons[_ngcontent-%COMP%]   gu-hex-button[_ngcontent-%COMP%]{max-width:50%;flex:1 1 0px}.modalDialogContent__buttons[_ngcontent-%COMP%]   gu-hex-button[_ngcontent-%COMP%]:not(:last-child){margin-right:16px}"]
+    }), $
+}
+)
+()
+},
+87745
 :
-(se, R, o) => {
+(se, U, o) => {
     "use strict";
-    o.d(R, {y: () => y});
-    var c = o(5e3), i = o(22313);
+    o.d(U, {y: () => y});
+    var d = o(5e3), i = o(22313);
     let y = (() => {
         class e {
             constructor(p) {
@@ -20069,15 +19930,15 @@
         }
 
         return e.\u0275fac = function (p) {
-            return new (p || e)(c.Y36(i.H7, 16))
-        }, e.\u0275pipe = c.Yjl({name: "safe", type: e, pure: !0}), e
+            return new (p || e)(d.Y36(i.H7, 16))
+        }, e.\u0275pipe = d.Yjl({name: "safe", type: e, pure: !0}), e
     })()
 }, 17268
 :
-(se, R, o) => {
+(se, U, o) => {
     "use strict";
-    o.d(R, {K: () => m});
-    var c = o(5e3), i = o(69808);
+    o.d(U, {K: () => m});
+    var d = o(5e3), i = o(69808);
     const y = function (p, g, r, t, n) {
         return {
             "tooltipBubble--top": p,
@@ -20103,12 +19964,12 @@
 
         return p.\u0275fac = function (r) {
             return new (r || p)
-        }, p.\u0275cmp = c.Xpm({
+        }, p.\u0275cmp = d.Xpm({
             type: p,
             selectors: [["app-tooltip"]],
             hostVars: 2,
             hostBindings: function (r, t) {
-                2 & r && c.ekj("openTooltip", t.getClass)
+                2 & r && d.ekj("openTooltip", t.getClass)
             },
             inputs: {title: "title", position: "position", size: "size", autoClose: "autoClose"},
             ngContentSelectors: e,
@@ -20116,7 +19977,7 @@
             vars: 9,
             consts: [["fillColor", "colors.gunmetal.300", 1, "tooltipBubble", 3, "kind", "ngClass", "innerHTML"], ["tooltipBubble", ""]],
             template: function (r, t) {
-                1 & r && (c.F$t(), c.Hsn(0), c._UZ(1, "gu-paragraph-text", 0, 1)), 2 & r && (c.xp6(1), c.Q6J("kind", "large" === t.size ? "small" : "x-small")("ngClass", c.qbA(3, y, "top" === t.position, "left" === t.position, "right" === t.position, "bottom" === t.position, "large" === t.size))("innerHTML", t.title, c.oJD))
+                1 & r && (d.F$t(), d.Hsn(0), d._UZ(1, "gu-paragraph-text", 0, 1)), 2 & r && (d.xp6(1), d.Q6J("kind", "large" === t.size ? "small" : "x-small")("ngClass", d.qbA(3, y, "top" === t.position, "left" === t.position, "right" === t.position, "bottom" === t.position, "large" === t.size))("innerHTML", t.title, d.oJD))
             },
             directives: [i.mk],
             styles: ['.tooltipBubble[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes upAndDown2{0%{transform:translateY(-2%)}50%{transform:translateY(2%)}to{transform:translateY(-2%)}}@keyframes shine2{0%{filter:brightness(.96) hue-rotate(0deg)}50%{filter:brightness(1.12) hue-rotate(-10deg)}to{filter:brightness(.96) hue-rotate(0deg)}}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}[_nghost-%COMP%]{display:block;position:relative}[_nghost-%COMP%]:hover   .tooltipBubble[_ngcontent-%COMP%]{opacity:1}[_nghost-%COMP%]:hover   .tooltipBubble.tooltipBubble--top[_ngcontent-%COMP%]{transform:translate(-50%,calc(-100% + (calc(var(--vh) * 1.7) * .5)))}[_nghost-%COMP%]:hover   .tooltipBubble.tooltipBubble--bottom[_ngcontent-%COMP%]{transform:translate(-50%,calc(100% - (calc(var(--vh) * 1.7) * .5)))}[_nghost-%COMP%]:hover   .tooltipBubble.tooltipBubble--left[_ngcontent-%COMP%]{transform:translate(calc(-100% - (calc(var(--vw) * .5) * .5) * .5),-50%)}[_nghost-%COMP%]:hover   .tooltipBubble.tooltipBubble--right[_ngcontent-%COMP%]{transform:translate(calc(0% + (calc(var(--vw) * .5) * .5) * .5),-50%)}.openTooltip[_nghost-%COMP%]   .tooltipBubble[_ngcontent-%COMP%]{opacity:1}.openTooltip[_nghost-%COMP%]   .tooltipBubble.tooltipBubble--top[_ngcontent-%COMP%]{transform:translate(-50%,calc(-100% + (calc(var(--vh) * 1.7) * .5)))}.openTooltip[_nghost-%COMP%]   .tooltipBubble.tooltipBubble--bottom[_ngcontent-%COMP%]{transform:translate(-50%,calc(100% - (calc(var(--vh) * 1.7) * .5)))}.openTooltip[_nghost-%COMP%]   .tooltipBubble.tooltipBubble--left[_ngcontent-%COMP%]{transform:translate(calc(-100% - (calc(var(--vw) * .5) * .5) * .5),-50%)}.openTooltip[_nghost-%COMP%]   .tooltipBubble.tooltipBubble--right[_ngcontent-%COMP%]{transform:translate(calc(0% + (calc(var(--vw) * .5) * .5) * .5),-50%)}.tooltipBubble[_ngcontent-%COMP%]{z-index:1;text-transform:capitalize;padding:calc(var(--vh) * 1.3);padding-top:calc(var(--vh) * .8);padding-bottom:calc(var(--vh) * .8);font-weight:600;user-select:none;pointer-events:none;position:absolute;background:#0f1b27;border:calc(var(--vh) * .15) solid #3d5a74;color:#92abc2;white-space:nowrap;border-radius:calc(var(--vh) * .4);opacity:0;left:50%;text-align:center}.tooltipBubble[_ngcontent-%COMP%]:before{content:"";position:absolute;left:50%;border:calc(var(--vh) * .7) solid transparent;transform:translate(-50%)}.tooltipBubble--large[_ngcontent-%COMP%]{font-weight:400;font-size:16px;padding:16px;text-transform:none}.tooltipBubble--top[_ngcontent-%COMP%]{top:0;transform:translate(-50%,-100%);margin-top:calc(calc(var(--vh) * 1.7) * -1)}.tooltipBubble--top[_ngcontent-%COMP%]:before{border-top-color:#3d5a74;bottom:calc(calc(calc(var(--vh) * .7) * -2) - calc(var(--vh) * .15))}.tooltipBubble--bottom[_ngcontent-%COMP%]{bottom:0;transform:translate(-50%,100%);margin-top:calc(var(--vh) * 1.7)}.tooltipBubble--bottom[_ngcontent-%COMP%]:before{border-bottom-color:#3d5a74;top:calc(calc(calc(var(--vh) * .7) * -2) - calc(var(--vh) * .15))}.tooltipBubble--left[_ngcontent-%COMP%]{left:0;top:50%}.tooltipBubble--left[_ngcontent-%COMP%]:before{left:100%;transform:translateY(50%);border-left-color:#3d5a74;right:calc(calc(calc(var(--vh) * .7) * -2) - calc(var(--vh) * .15));bottom:50%}.tooltipBubble--right[_ngcontent-%COMP%]{margin-left:10px;top:50%}.tooltipBubble--right[_ngcontent-%COMP%]:before{right:100%;transform:translateY(50%);border-right-color:#3d5a74;left:calc(calc(calc(var(--vh) * .7) * -2) - calc(var(--vh) * .15));bottom:50%}']
@@ -20124,10 +19985,10 @@
     })()
 }, 25774
 :
-(se, R, o) => {
+(se, U, o) => {
     "use strict";
-    o.d(R, {O: () => p});
-    var c = o(73307), i = o(5e3), y = o(69808);
+    o.d(U, {O: () => p});
+    var d = o(73307), i = o(5e3), y = o(69808);
 
     function e(g, r) {
         if (1 & g) {
@@ -20167,7 +20028,7 @@
         }
 
         return g.\u0275fac = function (t) {
-            return new (t || g)(i.Y36(c.qy))
+            return new (t || g)(i.Y36(d.qy))
         }, g.\u0275cmp = i.Xpm({
             type: g,
             selectors: [["cerberus-announce-banner-control"]],
@@ -20185,14 +20046,14 @@
     })()
 }, 97993
 :
-(se, R, o) => {
+(se, U, o) => {
     "use strict";
-    o.d(R, {i: () => p});
-    var c = o(8929), i = o(7625), y = o(55778), e = o(73307), m = o(5e3);
+    o.d(U, {i: () => p});
+    var d = o(8929), i = o(7625), y = o(55778), e = o(73307), m = o(5e3);
     let p = (() => {
         class g {
             constructor(t) {
-                this.featureFlagsService = t, this.text = "", this.unsubscribe = new c.xQ
+                this.featureFlagsService = t, this.text = "", this.unsubscribe = new d.xQ
             }
 
             ngOnInit() {
@@ -20226,100 +20087,100 @@
     })()
 }, 66773
 :
-(se, R, o) => {
+(se, U, o) => {
     "use strict";
-    o.d(R, {
+    o.d(U, {
         ic: () => p,
         am: () => bo,
-        q6: () => X,
-        sZ: () => Se,
+        q6: () => J,
+        sZ: () => _e,
         el: () => Ss,
         gn: () => po,
         kM: () => Ds,
-        MZ: () => ks.M,
+        MZ: () => Ps.M,
         W2: () => m
     });
-    var c = o(69808), i = o(93075), y = o(53161), e = o(5e3);
+    var d = o(69808), i = o(93075), y = o(53161), e = o(5e3);
     let m = (() => {
         class x {
         }
 
         return x.\u0275fac = function (u) {
             return new (u || x)
-        }, x.\u0275mod = e.oAB({type: x}), x.\u0275inj = e.cJS({imports: [[c.ez, i.u5, y.j]]}), x
+        }, x.\u0275mod = e.oAB({type: x}), x.\u0275inj = e.cJS({imports: [[d.ez, i.u5, y.j]]}), x
     })(), p = (() => {
         class x {
         }
 
         return x.\u0275fac = function (u) {
             return new (u || x)
-        }, x.\u0275mod = e.oAB({type: x}), x.\u0275inj = e.cJS({imports: [[c.ez]]}), x
+        }, x.\u0275mod = e.oAB({type: x}), x.\u0275inj = e.cJS({imports: [[d.ez]]}), x
     })();
     const g = ["2x-small", "x-small", "small", "medium", "large", "x-large", "2x-large", "3x-large", "4x-large", "5x-large", "6x-large", "7x-large", "8x-large", "9x-large"];
     var r = o(65281), t = o(69181);
-    const n = ["video"], v = ["carousel"], k = ["testParagraph"], P = function (x) {
+    const n = ["video"], _ = ["carousel"], S = ["testParagraph"], k = function (x) {
         return {height: x}
     };
 
-    function I(x, Z) {
+    function L(x, Z) {
         if (1 & x && (e.TgZ(0, "div", 71), e._uU(1), e.qZA()), 2 & x) {
-            const u = Z.$implicit, D = Z.index;
-            e.Q6J("ngStyle", e.VKq(3, P, u.randomHeight + "px")), e.xp6(1), e.AsE(" ", u.title, " ---- index: ", D + 1, " ")
+            const u = Z.$implicit, T = Z.index;
+            e.Q6J("ngStyle", e.VKq(3, k, u.randomHeight + "px")), e.xp6(1), e.AsE(" ", u.title, " ---- index: ", T + 1, " ")
         }
     }
 
-    function A(x, Z) {
+    function D(x, Z) {
         if (1 & x && (e.TgZ(0, "div", 71), e._uU(1), e.qZA()), 2 & x) {
             const u = Z.$implicit;
-            e.Q6J("ngStyle", e.VKq(2, P, u.randomHeight + "px")), e.xp6(1), e.hij(" ", u.title, " ")
+            e.Q6J("ngStyle", e.VKq(2, k, u.randomHeight + "px")), e.xp6(1), e.hij(" ", u.title, " ")
         }
     }
 
-    function f(x, Z) {
+    function v(x, Z) {
         if (1 & x && (e.TgZ(0, "div", 71), e._uU(1), e.qZA()), 2 & x) {
             const u = Z.$implicit;
-            e.Q6J("ngStyle", e.VKq(2, P, u.randomHeight + "px")), e.xp6(1), e.hij(" ", u.title, " ")
+            e.Q6J("ngStyle", e.VKq(2, k, u.randomHeight + "px")), e.xp6(1), e.hij(" ", u.title, " ")
         }
     }
 
     function O(x, Z) {
         if (1 & x && (e.TgZ(0, "div", 71), e._uU(1), e.qZA()), 2 & x) {
             const u = Z.$implicit;
-            e.Q6J("ngStyle", e.VKq(2, P, u.randomHeight + "px")), e.xp6(1), e.hij(" ", u.title, " ")
+            e.Q6J("ngStyle", e.VKq(2, k, u.randomHeight + "px")), e.xp6(1), e.hij(" ", u.title, " ")
         }
     }
 
-    function S(x, Z) {
+    function P(x, Z) {
         if (1 & x && (e.TgZ(0, "div", 71), e._uU(1), e.qZA()), 2 & x) {
             const u = Z.$implicit;
-            e.Q6J("ngStyle", e.VKq(2, P, u.randomHeight + "px")), e.xp6(1), e.hij(" ", u.title, " ")
+            e.Q6J("ngStyle", e.VKq(2, k, u.randomHeight + "px")), e.xp6(1), e.hij(" ", u.title, " ")
         }
     }
 
-    const b = function () {
+    const C = function () {
         return {breakpoint: "small", bothSize: "3x-large"}
-    }, T = function (x) {
+    }, $ = function (x) {
         return [x]
     }, s = function () {
         return {minWidth: "x-small", slidesPerView: 1.5, spaceBetween: 10}
-    }, C = function () {
+    }, b = function () {
         return {minWidth: "medium", slidesPerView: 3.5, spaceBetween: 20}
     }, w = function () {
         return {minWidth: "small", slidesPerView: 2.5, spaceBetween: 10}
     }, B = function (x, Z, u) {
         return [x, Z, u]
-    }, ee = function () {
+    }, q = function () {
         return {name: "moo cow", id: "moo"}
     }, ce = function () {
         return {name: "woof dog", id: "woof"}
     }, de = function (x, Z) {
         return [x, Z]
-    }, fe = function () {
+    }, Ce = function () {
         return {breakpoint: "small", size: "x-large"}
-    }, N = function () {
+    }, z = function () {
         return {breakpoint: "medium", size: "2x-large"}
     };
-    let X = (() => {
+    let J = (() => {
         class x {
             constructor() {
                 this.socialMediaAccounts = t.$, this.onetwo = "holy smokes, batman", this.spacing = g[3], this.colors = Object.assign({}, r.colors), this.slides = [{
@@ -20339,10 +20200,10 @@
 
             ngOnInit() {
                 this.int = window.setInterval(() => {
-                    const D = Math.random();
-                    this.moo = `${D}`;
-                    const K = Math.abs(Math.floor(D * g.length - 1));
-                    this.spacing = g[K], this.testParagraph.nativeElement.text = `${D}`, this.testParagraph.nativeElement.bool = !this.testParagraph.nativeElement.bool
+                    const T = Math.random();
+                    this.moo = `${T}`;
+                    const K = Math.abs(Math.floor(T * g.length - 1));
+                    this.spacing = g[K], this.testParagraph.nativeElement.text = `${T}`, this.testParagraph.nativeElement.bool = !this.testParagraph.nativeElement.bool
                 }, 2e3);
                 const u = this.video.nativeElement;
                 u.currentTime = 4.5, setTimeout(() => {
@@ -20376,61 +20237,61 @@
         }, x.\u0275cmp = e.Xpm({
             type: x,
             selectors: [["cerberus-demo-sheet"]],
-            viewQuery: function (u, D) {
-                if (1 & u && (e.Gf(n, 7), e.Gf(v, 7), e.Gf(k, 7)), 2 & u) {
+            viewQuery: function (u, T) {
+                if (1 & u && (e.Gf(n, 7), e.Gf(_, 7), e.Gf(S, 7)), 2 & u) {
                     let K;
-                    e.iGM(K = e.CRH()) && (D.video = K.first), e.iGM(K = e.CRH()) && (D.carousel = K.first), e.iGM(K = e.CRH()) && (D.testParagraph = K.first)
+                    e.iGM(K = e.CRH()) && (T.video = K.first), e.iGM(K = e.CRH()) && (T.carousel = K.first), e.iGM(K = e.CRH()) && (T.testParagraph = K.first)
                 }
             },
             decls: 126,
             vars: 43,
             consts: [[2, "display", "flex", "flex-direction", "column", "align-items", "center", "padding", "30px 30px 100px", "height", "100%", "background", "#bbbbbb"], ["simpleTextKind", "large", 3, "simpleTextDisplay"], ["src", "/assets/videos/stars-opens.mp4", "muted", "", "playsinline", "", "preload", "auto", 1, "video"], ["video", ""], ["text", "moo cow"], ["testParagraph", ""], ["furColor", "red", "bodyColor", "gold", "gemColor", "yellowgreen"], ["icon", "marketplace_cart"], ["href", "https://google.com", "kind", "tag"], ["href", "https://google.com", "kind", "help"], ["href", "https://google.com", "kind", "small"], ["href", "https://google.com", "icon", "set_core", "backgroundFillColor", "colors.gunmetal.700", "borderColor", "colors.apocyan.300", "fillColor", "colors.white"], ["href", "https://google.com", "icon", "marketplace_cart", "backgroundFillColor", "colors.gunmetal.700", "borderColor", "colors.apocyan.300", "leftIconPosition", ""], ["href", "https://google.com", "icon", "set_core", "backgroundFillColor", "colors.gunmetal.700", "borderColor", "colors.apocyan.300", "verticalLayout", ""], ["text", "Special Button", "enableSounds", "", "icon", "set_core"], ["text", "Special alt Button", "enableSounds", "", "invertColoring", "", "leftIconPosition", "", "icon", "tribe_dragon"], ["top", "large", 3, "responsiveSize"], ["text", "This is a text link"], ["both", "x-large"], ["size", "large", "text", "large primary button"], ["text", "primary button", "enableSounds", "", "icon", "set_core"], ["text", "secondary button", "enableSounds", ""], ["text", "subtle button"], [2, "display", "block", "overflow", "auto", "padding", "30px 30px 100px", "height", "100%", "background", "#ccc"], ["progress", "50"], ["bottom", "5x-large", "top", "3x-large"], [2, "color", "black", 3, "click"], ["both", "large"], ["text", "GOTO pane 4", "size", "large", 3, "click"], ["spaceBetween", "20", "slidesPerView", "2.2", "data-carousel-kind", "multi slide carousel with an uneven number of slides per screen", 1, "carousel", 3, "onSlideChange"], ["carousel", ""], ["class", "carousel__slide", 3, "ngStyle", 4, "ngFor", "ngForOf"], ["spaceBetween", "0", "slidesPerView", "1", "data-carousel-kind", "multi slide carousel with responsive slidesPerView", 1, "carousel", 3, "responsiveBreakpoints", "onSlideChange"], ["bottom", "large"], ["spaceBetween", "10", "centeredSlides", "true", "slidesPerView", "3", "data-carousel-kind", "multi slide carousel with centered slides", 1, "carousel", 3, "onSlideChange"], ["spaceBetween", "30", "slidesPerView", "3", "data-carousel-kind", "simple multi slide carousel", 1, "carousel", 3, "onSlideChange"], ["spaceBetween", "0", "slidesPerView", "1", "data-carousel-kind", "single slide carousel", 1, "carousel", 3, "onSlideChange"], [1, "useJsVars"], ["bottom", "2x-large"], [3, "fillColor"], ["labelText", "moo cow", 3, "checked", "onCheck"], ["labelText", "large moo cow", "labelPlacement", "right", "size", "large", 3, "checked", "onCheck"], ["top", "small"], ["placeholderText", "select something", 3, "items", "onSelect"], ["top", "6x-large"], ["iconLigature", "social_telegram", 1, "customGradient"], ["top", "medium"], ["kind", "help", "fillColor", "colors.gunmetal.300"], ["both", "4x-large"], ["iconLigature", "social_telegram", "fillColor", "colors.gold.300", 2, "font-size", "100px"], ["iconLigature", "friends_helmet", "fillGradient", "gradients.god.magic", "fillGradientTarget", "top right", 2, "font-size", "100px"], ["fillColor", "colors.dark.700"], ["bottom", "3x-large"], [3, "disabled"], [3, "loading"], ["size", "large", "href", "https://google.com"], ["size", "large", "align", "left", "fillGradient", "gradients.god.nature", "fillGradientTarget", "bottom"], ["top", "x-large"], ["size", "large", "fillColor", "colors.light.100", 1, "bannerHeadings__largeHeading", 3, "responsiveBreakpoints"], ["bottom", "medium", 3, "top"], ["size", "small", "align", "center"], ["bottom", "6x-large", 3, "top"], ["size", "x-small", "align", "right"], ["align", "left", "kind", "tag"], ["align", "left", "kind", "tag", "text", "simple text can also be fed input text like so... (this text is 100% untouchable from the external global styles)"], ["align", "left", "kind", "help", "fillGradient", "gradients.apocyan.simple", 1, "customSimpleText"], ["top", "2x-large", "bottom", "medium"], ["kind", "large"], ["kind", "help", "align", "right"], [3, "accounts"], ["kind", "tag"], [1, "carousel__slide", 3, "ngStyle"]],
-            template: function (u, D) {
+            template: function (u, T) {
                 1 & u && (e.TgZ(0, "div", 0), e._UZ(1, "gu-countdown-timer")(2, "gu-countdown-timer", 1)(3, "video", 2, 3)(5, "gu-paragraph-text", 4, 5)(7, "gu-regular-crypto-kitty", 6), e.qZA(), e.TgZ(8, "div", 0)(9, "gu-plain-square-button", 7), e._uU(10, " plain square button "), e.qZA(), e.TgZ(11, "gu-simple-text-button", 8), e._uU(12, " simple text button "), e.qZA(), e.TgZ(13, "gu-simple-text-button", 9), e._uU(14, " simple text button "), e.qZA(), e.TgZ(15, "gu-simple-text-button", 10), e._uU(16, " simple text button "), e.qZA(), e.TgZ(17, "gu-plain-square-button", 11), e._uU(18, " plain square "), e.qZA(), e.TgZ(19, "gu-plain-square-button", 12), e._uU(20, " Cart "), e.qZA(), e.TgZ(21, "gu-plain-square-button", 13), e._uU(22, " plain square vertical "), e.qZA(), e._UZ(23, "gu-special-hex-button", 14)(24, "gu-special-hex-button", 15), e.TgZ(25, "gu-vertical-space", 16)(26, "gu-paragraph-text"), e._uU(27, "Arcu bibendum at varius vel. Nec feugiat nisl pretium fusce id velit ut tortor. Vel eros donec ac odio. "), e._UZ(28, "gu-simple-text-button", 17), e.qZA()(), e.TgZ(29, "gu-vertical-space", 18), e._UZ(30, "gu-primary-hex-button", 19), e.qZA(), e._UZ(31, "gu-primary-hex-button", 20), e.TgZ(32, "gu-vertical-space", 18), e._UZ(33, "gu-secondary-hex-button", 21), e.qZA(), e._UZ(34, "gu-subtle-hex-button", 22), e.qZA(), e.TgZ(35, "div", 23), e._UZ(36, "gu-hex-progress-bar", 24), e.TgZ(37, "gu-vertical-space", 25)(38, "button", 26), e.NdJ("click", function () {
-                    return D.gotoPane(1)
+                    return T.gotoPane(1)
                 }), e._uU(39, "goto pane 2"), e.qZA(), e.TgZ(40, "gu-vertical-space", 27)(41, "gu-primary-hex-button", 28), e.NdJ("click", function () {
-                    return D.gotoPane(3)
-                }), e.qZA()(), e.TgZ(42, "gu-carousel", 29, 30), e.NdJ("onSlideChange", function (_e) {
-                    return D.onCurrentPaneChange(_e)
-                }), e.YNc(44, I, 2, 5, "div", 31), e.qZA(), e.TgZ(45, "gu-vertical-space", 27)(46, "gu-carousel", 32), e.NdJ("onSlideChange", function (_e) {
-                    return D.onCurrentPaneChange(_e)
-                }), e.YNc(47, A, 2, 4, "div", 31), e.qZA()(), e.TgZ(48, "gu-vertical-space", 33)(49, "gu-carousel", 34), e.NdJ("onSlideChange", function (_e) {
-                    return D.onCurrentPaneChange(_e)
-                }), e.YNc(50, f, 2, 4, "div", 31), e.qZA()(), e.TgZ(51, "gu-carousel", 35), e.NdJ("onSlideChange", function (_e) {
-                    return D.onCurrentPaneChange(_e)
-                }), e.YNc(52, O, 2, 4, "div", 31), e.qZA(), e.TgZ(53, "gu-vertical-space", 27)(54, "gu-carousel", 36), e.NdJ("onSlideChange", function (_e) {
-                    return D.onCurrentPaneChange(_e)
-                }), e.YNc(55, S, 2, 4, "div", 31), e.qZA()()(), e.TgZ(56, "gu-vertical-space", 33)(57, "div", 37), e._uU(58, " this text is styled thru plain old angular sass, using a color var from our new variables system "), e.qZA()(), e.TgZ(59, "gu-vertical-space", 38)(60, "gu-paragraph-text", 39), e._uU(61), e.qZA()(), e.TgZ(62, "gu-vertical-space", 33)(63, "gu-checkbox-input", 40), e.NdJ("onCheck", function (_e) {
-                    return D.onMoo(_e)
-                }), e.qZA(), e.TgZ(64, "gu-checkbox-input", 41), e.NdJ("onCheck", function (_e) {
-                    return D.onCheck(_e)
-                }), e.qZA()(), e.TgZ(65, "gu-vertical-space", 42)(66, "gu-dropdown", 43), e.NdJ("onSelect", function (_e) {
-                    return D.onDropdownSelect(_e)
-                }), e.qZA()(), e.TgZ(67, "gu-vertical-space", 44), e._UZ(68, "gu-icon", 45), e.TgZ(69, "gu-vertical-space", 46)(70, "gu-simple-text", 47), e._uU(71), e.qZA()()(), e.TgZ(72, "gu-vertical-space", 48), e._UZ(73, "gu-icon", 49)(74, "gu-icon", 50), e.TgZ(75, "gu-vertical-space", 46)(76, "gu-simple-text", 51), e._uU(77, " ^ this is an icon - with a gradient fill input, and this text has a color fill input "), e.qZA()()(), e.TgZ(78, "gu-vertical-space", 52)(79, "gu-primary-hex-button", 53), e._uU(80, "disabled button"), e.qZA(), e.TgZ(81, "gu-primary-hex-button", 54), e._uU(82, "loading button"), e.qZA(), e.TgZ(83, "gu-vertical-space", 46)(84, "gu-primary-hex-button", 55), e._uU(85, " moo cow "), e.qZA()()(),e.TgZ(86, "gu-heading-text", 56)(87, "h1"),e._uU(88, 'this is a "large" left aligned heading'),e.qZA()(),e.TgZ(89, "gu-vertical-space", 57)(90, "gu-heading-text", 58),e._uU(91, " This heading has responsively set font-size "),e.qZA()(),e.TgZ(92, "gu-vertical-space", 59)(93, "gu-heading-text", 60)(94, "h3"),e._uU(95),e.qZA()()(),e.TgZ(96, "gu-vertical-space", 61)(97, "gu-heading-text", 62)(98, "h6"),e._uU(99, 'this is an "x-small" right aligned heading'),e.qZA()()(),e.TgZ(100, "gu-vertical-space", 33)(101, "gu-simple-text", 63),e._uU(102, ' this is the simple-text "tag" kind ... '),e.qZA()(),e._UZ(103, "gu-simple-text", 64),e.TgZ(104, "gu-simple-text", 65),e._uU(105, ' this is the simple-text "help" kind ... (note how simple-text displays as an inline element, not block) '),e.qZA(),e.TgZ(106, "gu-vertical-space", 66)(107, "gu-paragraph-text", 67),e._uU(108, ' this is "paragraph-text", kind: "large". note how it has line height, passes it\'s sizing down to "simple-text", and is '),e.TgZ(109, "em"),e._uU(110, "block level"),e.qZA(),e._uU(111, " - just like "),e.TgZ(112, "strong"),e._uU(113, "regular paragraphs!"),e.qZA(),e._UZ(114, "br"),e._uU(115),e.qZA()(),e.TgZ(116, "gu-vertical-space", 59)(117, "gu-paragraph-text", 68),e._uU(118, ' this is the "help" kind of paragraph-text '),e._UZ(119, "br"),e._uU(120, " Bibendum est ultricies integer quis auctor elit sed. Iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et. Donec massa sapien faucibus et. Felis imperdiet proin fermentum leo vel orci porta non. Augue neque gravida in fermentum et sollicitudin ac orci. Ac tincidunt vitae semper quis. "),e.qZA()(),e._UZ(121, "gu-social-buttons-row", 69),e.TgZ(122, "gu-paragraph-text", 70),e._uU(123, ' this is the "tag" kind of paragraph-text '),e._UZ(124, "br"),e._uU(125, " Arcu bibendum at varius vel. Nec feugiat nisl pretium fusce id velit ut tortor. Vel eros donec ac odio. Ante metus dictum at tempor commodo ullamcorper a. Hendrerit gravida rutrum quisque non tellus orci ac auctor augue. Non curabitur gravida arcu ac. "),e.qZA()()), 2 & u && (e.xp6(2), e.Q6J("simpleTextDisplay", !0), e.xp6(23), e.Q6J("responsiveSize", e.VKq(24, T, e.DdM(23, b))), e.xp6(19), e.Q6J("ngForOf", D.slides), e.xp6(2), e.Q6J("responsiveBreakpoints", e.kEZ(29, B, e.DdM(26, s), e.DdM(27, C), e.DdM(28, w))), e.xp6(1), e.Q6J("ngForOf", D.slides), e.xp6(3), e.Q6J("ngForOf", D.slides), e.xp6(2), e.Q6J("ngForOf", D.slides), e.xp6(3), e.Q6J("ngForOf", D.slides), e.xp6(5), e.s9C("fillColor", D.colors.dark[500]), e.xp6(1), e.hij(" this text is styled using direct variable input from an angular scope variable: ", D.colors.dark[500], " (colors.dark[500]) "), e.xp6(2), e.Q6J("checked", !0), e.xp6(1), e.Q6J("checked", !1), e.xp6(2), e.Q6J("items", e.WLB(35, de, e.DdM(33, ee), e.DdM(34, ce))), e.xp6(5), e.hij(" ^ this is an icon - with a custom scss gradient as text-fill ", D.onetwo, " (this text is colored as gunmetal[300]) "), e.xp6(8), e.Q6J("disabled", !0), e.xp6(2), e.s9C("loading", !0), e.xp6(9), e.Q6J("responsiveBreakpoints", e.WLB(40, de, e.DdM(38, fe), e.DdM(39, N))), e.xp6(2), e.s9C("top", D.spacing), e.xp6(3), e.hij('this is a "small" center aligned heading > spacing: ', D.spacing, ""), e.xp6(1), e.s9C("top", D.spacing), e.xp6(19), e.hij(" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut eu sem integer vitae justo. Amet porttitor ", D.moo, " eget dolor morbi non arcu risus quis varius. Est velit egestas dui id ornare arcu odio ut. Integer quis auctor elit sed vulputate mi sit. Dui ut ornare lectus sit amet est placerat. Cras sed felis eget velit aliquet sagittis. "), e.xp6(1), e.s9C("top", D.spacing), e.xp6(5), e.Q6J("accounts", D.socialMediaAccounts))
+                    return T.gotoPane(3)
+                }), e.qZA()(), e.TgZ(42, "gu-carousel", 29, 30), e.NdJ("onSlideChange", function (fe) {
+                    return T.onCurrentPaneChange(fe)
+                }), e.YNc(44, L, 2, 5, "div", 31), e.qZA(), e.TgZ(45, "gu-vertical-space", 27)(46, "gu-carousel", 32), e.NdJ("onSlideChange", function (fe) {
+                    return T.onCurrentPaneChange(fe)
+                }), e.YNc(47, D, 2, 4, "div", 31), e.qZA()(), e.TgZ(48, "gu-vertical-space", 33)(49, "gu-carousel", 34), e.NdJ("onSlideChange", function (fe) {
+                    return T.onCurrentPaneChange(fe)
+                }), e.YNc(50, v, 2, 4, "div", 31), e.qZA()(), e.TgZ(51, "gu-carousel", 35), e.NdJ("onSlideChange", function (fe) {
+                    return T.onCurrentPaneChange(fe)
+                }), e.YNc(52, O, 2, 4, "div", 31), e.qZA(), e.TgZ(53, "gu-vertical-space", 27)(54, "gu-carousel", 36), e.NdJ("onSlideChange", function (fe) {
+                    return T.onCurrentPaneChange(fe)
+                }), e.YNc(55, P, 2, 4, "div", 31), e.qZA()()(), e.TgZ(56, "gu-vertical-space", 33)(57, "div", 37), e._uU(58, " this text is styled thru plain old angular sass, using a color var from our new variables system "), e.qZA()(), e.TgZ(59, "gu-vertical-space", 38)(60, "gu-paragraph-text", 39), e._uU(61), e.qZA()(), e.TgZ(62, "gu-vertical-space", 33)(63, "gu-checkbox-input", 40), e.NdJ("onCheck", function (fe) {
+                    return T.onMoo(fe)
+                }), e.qZA(), e.TgZ(64, "gu-checkbox-input", 41), e.NdJ("onCheck", function (fe) {
+                    return T.onCheck(fe)
+                }), e.qZA()(), e.TgZ(65, "gu-vertical-space", 42)(66, "gu-dropdown", 43), e.NdJ("onSelect", function (fe) {
+                    return T.onDropdownSelect(fe)
+                }), e.qZA()(), e.TgZ(67, "gu-vertical-space", 44), e._UZ(68, "gu-icon", 45), e.TgZ(69, "gu-vertical-space", 46)(70, "gu-simple-text", 47), e._uU(71), e.qZA()()(), e.TgZ(72, "gu-vertical-space", 48), e._UZ(73, "gu-icon", 49)(74, "gu-icon", 50), e.TgZ(75, "gu-vertical-space", 46)(76, "gu-simple-text", 51), e._uU(77, " ^ this is an icon - with a gradient fill input, and this text has a color fill input "), e.qZA()()(), e.TgZ(78, "gu-vertical-space", 52)(79, "gu-primary-hex-button", 53), e._uU(80, "disabled button"), e.qZA(), e.TgZ(81, "gu-primary-hex-button", 54), e._uU(82, "loading button"), e.qZA(), e.TgZ(83, "gu-vertical-space", 46)(84, "gu-primary-hex-button", 55), e._uU(85, " moo cow "), e.qZA()()(),e.TgZ(86, "gu-heading-text", 56)(87, "h1"),e._uU(88, 'this is a "large" left aligned heading'),e.qZA()(),e.TgZ(89, "gu-vertical-space", 57)(90, "gu-heading-text", 58),e._uU(91, " This heading has responsively set font-size "),e.qZA()(),e.TgZ(92, "gu-vertical-space", 59)(93, "gu-heading-text", 60)(94, "h3"),e._uU(95),e.qZA()()(),e.TgZ(96, "gu-vertical-space", 61)(97, "gu-heading-text", 62)(98, "h6"),e._uU(99, 'this is an "x-small" right aligned heading'),e.qZA()()(),e.TgZ(100, "gu-vertical-space", 33)(101, "gu-simple-text", 63),e._uU(102, ' this is the simple-text "tag" kind ... '),e.qZA()(),e._UZ(103, "gu-simple-text", 64),e.TgZ(104, "gu-simple-text", 65),e._uU(105, ' this is the simple-text "help" kind ... (note how simple-text displays as an inline element, not block) '),e.qZA(),e.TgZ(106, "gu-vertical-space", 66)(107, "gu-paragraph-text", 67),e._uU(108, ' this is "paragraph-text", kind: "large". note how it has line height, passes it\'s sizing down to "simple-text", and is '),e.TgZ(109, "em"),e._uU(110, "block level"),e.qZA(),e._uU(111, " - just like "),e.TgZ(112, "strong"),e._uU(113, "regular paragraphs!"),e.qZA(),e._UZ(114, "br"),e._uU(115),e.qZA()(),e.TgZ(116, "gu-vertical-space", 59)(117, "gu-paragraph-text", 68),e._uU(118, ' this is the "help" kind of paragraph-text '),e._UZ(119, "br"),e._uU(120, " Bibendum est ultricies integer quis auctor elit sed. Iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et. Donec massa sapien faucibus et. Felis imperdiet proin fermentum leo vel orci porta non. Augue neque gravida in fermentum et sollicitudin ac orci. Ac tincidunt vitae semper quis. "),e.qZA()(),e._UZ(121, "gu-social-buttons-row", 69),e.TgZ(122, "gu-paragraph-text", 70),e._uU(123, ' this is the "tag" kind of paragraph-text '),e._UZ(124, "br"),e._uU(125, " Arcu bibendum at varius vel. Nec feugiat nisl pretium fusce id velit ut tortor. Vel eros donec ac odio. Ante metus dictum at tempor commodo ullamcorper a. Hendrerit gravida rutrum quisque non tellus orci ac auctor augue. Non curabitur gravida arcu ac. "),e.qZA()()), 2 & u && (e.xp6(2), e.Q6J("simpleTextDisplay", !0), e.xp6(23), e.Q6J("responsiveSize", e.VKq(24, $, e.DdM(23, C))), e.xp6(19), e.Q6J("ngForOf", T.slides), e.xp6(2), e.Q6J("responsiveBreakpoints", e.kEZ(29, B, e.DdM(26, s), e.DdM(27, b), e.DdM(28, w))), e.xp6(1), e.Q6J("ngForOf", T.slides), e.xp6(3), e.Q6J("ngForOf", T.slides), e.xp6(2), e.Q6J("ngForOf", T.slides), e.xp6(3), e.Q6J("ngForOf", T.slides), e.xp6(5), e.s9C("fillColor", T.colors.dark[500]), e.xp6(1), e.hij(" this text is styled using direct variable input from an angular scope variable: ", T.colors.dark[500], " (colors.dark[500]) "), e.xp6(2), e.Q6J("checked", !0), e.xp6(1), e.Q6J("checked", !1), e.xp6(2), e.Q6J("items", e.WLB(35, de, e.DdM(33, q), e.DdM(34, ce))), e.xp6(5), e.hij(" ^ this is an icon - with a custom scss gradient as text-fill ", T.onetwo, " (this text is colored as gunmetal[300]) "), e.xp6(8), e.Q6J("disabled", !0), e.xp6(2), e.s9C("loading", !0), e.xp6(9), e.Q6J("responsiveBreakpoints", e.WLB(40, de, e.DdM(38, Ce), e.DdM(39, z))), e.xp6(2), e.s9C("top", T.spacing), e.xp6(3), e.hij('this is a "small" center aligned heading > spacing: ', T.spacing, ""), e.xp6(1), e.s9C("top", T.spacing), e.xp6(19), e.hij(" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut eu sem integer vitae justo. Amet porttitor ", T.moo, " eget dolor morbi non arcu risus quis varius. Est velit egestas dui id ornare arcu odio ut. Integer quis auctor elit sed vulputate mi sit. Dui ut ornare lectus sit amet est placerat. Cras sed felis eget velit aliquet sagittis. "), e.xp6(1), e.s9C("top", T.spacing), e.xp6(5), e.Q6J("accounts", T.socialMediaAccounts))
             },
-            directives: [c.sg, c.PC],
+            directives: [d.sg, d.PC],
             styles: ["[_nghost-%COMP%]{display:block}.useJsVars[_ngcontent-%COMP%]{color:#affaed}.customGradient[_ngcontent-%COMP%]{font-size:200px;background:linear-gradient(to bottom,#9DE764 0%,#5AC33F 50%,#4C772F 100%)}.customSimpleText[_ngcontent-%COMP%]{border:2px dotted gold;margin-left:8px;padding:16px}.carousel[_ngcontent-%COMP%]{box-shadow:inset 0 0 0 2px #0003}.carousel[_ngcontent-%COMP%]:before{content:attr(data-carousel-kind);position:absolute;z-index:1;bottom:0px;left:3px;color:#0000004d}.carousel__slide[_ngcontent-%COMP%]{background:yellowgreen;box-shadow:inset 0 0 0 3px gold}.carousel__slide[_ngcontent-%COMP%]:first-child{background:rebeccapurple}.carousel__slide[_ngcontent-%COMP%]:last-child{background:dodgerblue}.video[_ngcontent-%COMP%]{width:60%;margin:0 auto;opacity:0}"]
         }), x
     })(), ae = {numbers: {randomNumber: 0}, text: {randomText: "moo"}};
     setInterval(() => {
         ae = Object.assign(Object.assign({}, ae), {numbers: {randomNumber: Math.random()}})
     }, 400);
-    var ye = o(73307), V = o(94057);
-    const le = ["carousel"], Ce = function (x) {
+    var xe = o(73307), V = o(94057);
+    const le = ["carousel"], ye = function (x) {
         return {"championButtons__button--active": x}
     };
 
-    function Te(x, Z) {
+    function Ae(x, Z) {
         if (1 & x) {
             const u = e.EpF();
             e.TgZ(0, "div", 14), e.NdJ("click", function () {
-                const _e = e.CHM(u).index;
-                return e.oxw().gotoChampionSlide(_e)
+                const fe = e.CHM(u).index;
+                return e.oxw().gotoChampionSlide(fe)
             }), e.TgZ(1, "picture"), e._UZ(2, "source", 15)(3, "source", 16)(4, "img", 17), e.qZA()()
         }
         if (2 & x) {
-            const u = Z.$implicit, D = Z.index, K = e.oxw();
-            e.Q6J("ngClass", e.VKq(13, Ce, K.activeChampionIndex === D)), e.xp6(1), e.Gre("championButtons__button__picture championButtons__button__picture--", u.name, ""), e.xp6(1), e.FAE("srcset", "\n          //images.godsunchained.com/art2/250/", u.protoId, ".webp 250w,\n          //images.godsunchained.com/art2/375/", u.protoId, ".webp 375w,\n          //images.godsunchained.com/art2/500/", u.protoId, ".webp 500w,\n          //images.godsunchained.com/art2/720/", u.protoId, ".webp 720w\n        ", e.LSH), e.xp6(1), e.FAE("srcset", "\n          //images.godsunchained.com/art2/250/", u.protoId, ".jpg 250w,\n          //images.godsunchained.com/art2/375/", u.protoId, ".jpg 375w,\n          //images.godsunchained.com/art2/500/", u.protoId, ".jpg 500w,\n          //images.godsunchained.com/art2/720/", u.protoId, ".jpg 720w\n        ", e.LSH), e.xp6(1), e.MGl("src", "//images.godsunchained.com/art2/500/", u.protoId, ".jpg", e.LSH)
+            const u = Z.$implicit, T = Z.index, K = e.oxw();
+            e.Q6J("ngClass", e.VKq(13, ye, K.activeChampionIndex === T)), e.xp6(1), e.Gre("championButtons__button__picture championButtons__button__picture--", u.name, ""), e.xp6(1), e.FAE("srcset", "\n          //images.godsunchained.com/art2/250/", u.protoId, ".webp 250w,\n          //images.godsunchained.com/art2/375/", u.protoId, ".webp 375w,\n          //images.godsunchained.com/art2/500/", u.protoId, ".webp 500w,\n          //images.godsunchained.com/art2/720/", u.protoId, ".webp 720w\n        ", e.LSH), e.xp6(1), e.FAE("srcset", "\n          //images.godsunchained.com/art2/250/", u.protoId, ".jpg 250w,\n          //images.godsunchained.com/art2/375/", u.protoId, ".jpg 375w,\n          //images.godsunchained.com/art2/500/", u.protoId, ".jpg 500w,\n          //images.godsunchained.com/art2/720/", u.protoId, ".jpg 720w\n        ", e.LSH), e.xp6(1), e.MGl("src", "//images.godsunchained.com/art2/500/", u.protoId, ".jpg", e.LSH)
         }
     }
 
@@ -20441,7 +20302,7 @@
         }
     }
 
-    let H = (() => {
+    let W = (() => {
         class x {
             constructor() {
                 this.activeChampionIndex = 0, this.champions = V.zy.Y, this.routes = V.CF.J
@@ -20464,21 +20325,21 @@
         }, x.\u0275cmp = e.Xpm({
             type: x,
             selectors: [["cerberus-season1-champion-section"]],
-            viewQuery: function (u, D) {
+            viewQuery: function (u, T) {
                 if (1 & u && e.Gf(le, 7), 2 & u) {
                     let K;
-                    e.iGM(K = e.CRH()) && (D.carousel = K.first)
+                    e.iGM(K = e.CRH()) && (T.carousel = K.first)
                 }
             },
             decls: 18,
             vars: 4,
             consts: [["size", "large", "fillGradient", "gradients.gold.simple", "align", "center", 1, "heading"], [1, "championButtons"], ["class", "championButtons__button", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], [1, "championCarouselWrapper"], [1, "championCarousel", 3, "onSlideChange"], ["carousel", ""], ["class", "championCarousel__championSlide", 4, "ngFor", "ngForOf"], [1, "sideBarImage", "sideBarImage--left"], ["srcset", "/assets/images/expansion-1/carousel-sidebar.webp", "type", "image/webp"], ["srcset", "/assets/images/expansion-1/carousel-sidebar.png", "type", "image/png"], ["src", "/assets/images/expansion-1/carousel-sidebar.png", "alt", "", 1, "sideBarImage__img"], [1, "sideBarImage", "sideBarImage--right"], ["both", "x-large", 1, "ctaButtonRow"], ["text", "Buy Packs", "size", "large", 3, "disabled", "href"], [1, "championButtons__button", 3, "ngClass", "click"], ["sizes", "20vw", "type", "image/webp", 3, "srcset"], ["sizes", "20vw", "type", "image/jpg", 3, "srcset"], ["alt", "", 1, "championButtons__button__picture__img", 3, "src"], [1, "championCarousel__championSlide"], [1, "championCarousel__championSlide__imgWrapper"], ["sizes", "75vw", "type", "image/webp", 3, "srcset"], ["sizes", "75vw", "type", "image/jpg", 3, "srcset"], ["alt", "", 1, "championCarousel__championSlide__imgWrapper__img", 3, "src"], ["both", "x-large"], ["size", "x-small", "fillColor", "colors.light.100", "align", "center"], ["fillColor", "colors.light.100", "align", "center", "kind", "large", 1, "championCarousel__championSlide__description"], ["top", "large", "bottom", "3x-large", 1, "readMoreLink"], ["kind", "tag", "target", "_blank", "fillColor", "colors.apocyan.300", "align", "center", 3, "href"], ["align", "center", "kind", "large"]],
-            template: function (u, D) {
-                1 & u && (e.TgZ(0, "gu-heading-text", 0), e._uU(1, " Meet your champions\n"), e.qZA(), e.TgZ(2, "div", 1), e.YNc(3, Te, 5, 15, "div", 2), e.qZA(), e.TgZ(4, "div", 3)(5, "gu-carousel", 4, 5), e.NdJ("onSlideChange", function (_e) {
-                    return D.onChampionCarouselUpdate(_e)
-                }), e.YNc(7, Be, 15, 19, "div", 6), e.qZA(), e.TgZ(8, "picture", 7), e._UZ(9, "source", 8)(10, "source", 9)(11, "img", 10), e.qZA(), e.TgZ(12, "picture", 11), e._UZ(13, "source", 8)(14, "source", 9)(15, "img", 10), e.qZA()(), e.TgZ(16, "gu-vertical-space", 12), e._UZ(17, "gu-primary-hex-button", 13), e.qZA()), 2 & u && (e.xp6(3), e.Q6J("ngForOf", D.champions), e.xp6(4), e.Q6J("ngForOf", D.champions), e.xp6(10), e.Q6J("disabled", !0)("href", D.routes.buyPacks.path))
+            template: function (u, T) {
+                1 & u && (e.TgZ(0, "gu-heading-text", 0), e._uU(1, " Meet your champions\n"), e.qZA(), e.TgZ(2, "div", 1), e.YNc(3, Ae, 5, 15, "div", 2), e.qZA(), e.TgZ(4, "div", 3)(5, "gu-carousel", 4, 5), e.NdJ("onSlideChange", function (fe) {
+                    return T.onChampionCarouselUpdate(fe)
+                }), e.YNc(7, Be, 15, 19, "div", 6), e.qZA(), e.TgZ(8, "picture", 7), e._UZ(9, "source", 8)(10, "source", 9)(11, "img", 10), e.qZA(), e.TgZ(12, "picture", 11), e._UZ(13, "source", 8)(14, "source", 9)(15, "img", 10), e.qZA()(), e.TgZ(16, "gu-vertical-space", 12), e._UZ(17, "gu-primary-hex-button", 13), e.qZA()), 2 & u && (e.xp6(3), e.Q6J("ngForOf", T.champions), e.xp6(4), e.Q6J("ngForOf", T.champions), e.xp6(10), e.Q6J("disabled", !0)("href", T.routes.buyPacks.path))
             },
-            directives: [c.sg, c.mk],
+            directives: [d.sg, d.mk],
             styles: ['@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes upAndDown2{0%{transform:translateY(-2%)}50%{transform:translateY(2%)}to{transform:translateY(-2%)}}@keyframes shine2{0%{filter:brightness(.96) hue-rotate(0deg)}50%{filter:brightness(1.12) hue-rotate(-10deg)}to{filter:brightness(.96) hue-rotate(0deg)}}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}[_nghost-%COMP%]{position:relative;padding:80px 0;display:flex;flex-direction:column;background:url(/assets/images/expansion-1/Lysander_LC_BG.jpg);background-size:cover;background-position:center}[_nghost-%COMP%]:before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(to bottom,#0A0A0A 0%,rgba(10,10,10,.8) 50%)}[_nghost-%COMP%]:after{content:"";position:absolute;left:0;right:0;bottom:0;height:12px;background:radial-gradient(47.52% 50% at 50% 50%,#C6A052 0%,rgba(198,160,82,0) 100%)}.heading[_ngcontent-%COMP%]{position:relative;padding:0 20px}.championButtons[_ngcontent-%COMP%]{margin:20px auto 48px;padding:0 28px;display:grid;grid-template-columns:repeat(3,1fr);grid-column-gap:28px;grid-row-gap:28px;max-width:"768px";width:100%}@media screen and (min-width: 512px){.championButtons[_ngcontent-%COMP%]{grid-template-columns:repeat(6,1fr)}}.championButtons__button[_ngcontent-%COMP%]{border-radius:50%;width:100%;padding-bottom:100%;transition:box-shadow .25s ease-in-out;position:relative;overflow:hidden;cursor:pointer}.championButtons__button__picture[_ngcontent-%COMP%]{position:absolute;top:0;left:0;width:100%;height:100%}.championButtons__button__picture__img[_ngcontent-%COMP%]{height:300%;width:300%;object-fit:cover;position:absolute;top:0;left:50%;transform:translate(-50%,-10%)}.championButtons__button__picture--lysander[_ngcontent-%COMP%]   .championButtons__button__picture__img[_ngcontent-%COMP%]{transform:translate(-50%,-9%)}.championButtons__button__picture--neferu[_ngcontent-%COMP%]   .championButtons__button__picture__img[_ngcontent-%COMP%]{transform:translate(-45%,-14%)}.championButtons__button__picture--valka[_ngcontent-%COMP%]   .championButtons__button__picture__img[_ngcontent-%COMP%]{transform:translate(-52%,-6.5%)}.championButtons__button__picture--pallas[_ngcontent-%COMP%]   .championButtons__button__picture__img[_ngcontent-%COMP%]{transform:translate(-54%,-7%)}.championButtons__button__picture--selena[_ngcontent-%COMP%]   .championButtons__button__picture__img[_ngcontent-%COMP%]{transform:translate(-50%,-8%)}.championButtons__button--active[_ngcontent-%COMP%]{box-shadow:0 0 20px #f7ea9b}.championCarouselWrapper[_ngcontent-%COMP%]{margin:0 auto;width:85%;max-width:1000px;position:relative}@media screen and (min-width: 768px){.championCarouselWrapper[_ngcontent-%COMP%]{width:65%}}.sideBarImage[_ngcontent-%COMP%]{display:none;position:absolute;top:-3%;left:-6.25%;width:12.5%;user-select:none;pointer-events:none}.sideBarImage--right[_ngcontent-%COMP%]{left:auto;right:-6.25%;transform:rotateY(180deg)}.sideBarImage__img[_ngcontent-%COMP%]{display:block;width:100%}.championCarousel[_ngcontent-%COMP%]{width:100%;margin:auto;overflow:hidden}.championCarousel__championSlide[_ngcontent-%COMP%]{display:flex;flex-direction:column;width:100%;position:relative}.championCarousel__championSlide__imgWrapper[_ngcontent-%COMP%]{width:100%;padding-bottom:50%;position:relative;overflow:hidden}@media screen and (min-width: 512px){.sideBarImage[_ngcontent-%COMP%]{display:block}.championCarousel[_ngcontent-%COMP%]{border-radius:4vw 4vw 0 0}.championCarousel__championSlide__imgWrapper[_ngcontent-%COMP%]{border-radius:0 0 4vw 4vw}}.championCarousel__championSlide__imgWrapper__img[_ngcontent-%COMP%]{position:absolute;top:0;left:0;height:100%;width:100%;object-fit:cover;object-position:center 20%}.championCarousel__championSlide__description[_ngcontent-%COMP%]{width:75%;margin:0 auto}.ctaButtonRow[_ngcontent-%COMP%]{display:flex;justify-content:center}.readMoreLink[_ngcontent-%COMP%]{text-align:center;display:flex;justify-content:center}.readMoreLink__text[_ngcontent-%COMP%]{padding-bottom:4px;border-bottom:2px solid #8BE1E0}.bottomContent[_ngcontent-%COMP%]{position:relative}']
         }), x
     })();
@@ -20487,7 +20348,7 @@
     const te = ["emailInput"], ue = function () {
         return ["email"]
     };
-    let pe = (() => {
+    let ge = (() => {
         class x {
             constructor(u) {
                 this.authHostService = u, this.emailValue = {value: "", valid: !1}, this.disableSubmitButton = !1
@@ -20518,35 +20379,35 @@
         }
 
         return x.\u0275fac = function (u) {
-            return new (u || x)(e.Y36(ye.LI))
+            return new (u || x)(e.Y36(xe.LI))
         }, x.\u0275cmp = e.Xpm({
             type: x,
             selectors: [["cerberus-newsletter-signup-form"]],
-            viewQuery: function (u, D) {
+            viewQuery: function (u, T) {
                 if (1 & u && e.Gf(te, 5), 2 & u) {
                     let K;
-                    e.iGM(K = e.CRH()) && (D.inputElement = K.first)
+                    e.iGM(K = e.CRH()) && (T.inputElement = K.first)
                 }
             },
             inputs: {emailValue: "emailValue", disableSubmitButton: "disableSubmitButton"},
             decls: 7,
             vars: 4,
             consts: [["fillColor", "colors.light[100]", "align", "center", "size", "x-small"], [3, "submit"], ["errorHelpText", "Please enter a valid email", "placeholderText", "Enter your email here", 1, "textInput", 3, "validateToPattern", "onValueChange"], ["emailInput", ""], ["size", "large", 3, "disabled", "horizontalStretch", "click"]],
-            template: function (u, D) {
+            template: function (u, T) {
                 1 & u && (e.TgZ(0, "gu-heading-text", 0), e._uU(1, " signup for our newsletter!\n"), e.qZA(), e.TgZ(2, "gu-form-context", 1), e.NdJ("submit", function () {
-                    return D.submitEmail()
-                }), e.TgZ(3, "gu-text-input", 2, 3), e.NdJ("onValueChange", function (_e) {
-                    return D.onValueChange(_e)
+                    return T.submitEmail()
+                }), e.TgZ(3, "gu-text-input", 2, 3), e.NdJ("onValueChange", function (fe) {
+                    return T.onValueChange(fe)
                 }), e.qZA(), e.TgZ(5, "gu-primary-hex-button", 4), e.NdJ("click", function () {
-                    return D.submitEmail()
-                }), e._uU(6, " submit "), e.qZA()()), 2 & u && (e.xp6(3), e.Q6J("validateToPattern", e.DdM(3, ue)), e.xp6(2), e.Q6J("disabled", D.disableSubmitButton || !D.emailValue.valid)("horizontalStretch", !1))
+                    return T.submitEmail()
+                }), e._uU(6, " submit "), e.qZA()()), 2 & u && (e.xp6(3), e.Q6J("validateToPattern", e.DdM(3, ue)), e.xp6(2), e.Q6J("disabled", T.disableSubmitButton || !T.emailValue.valid)("horizontalStretch", !1))
             },
             styles: ["[_nghost-%COMP%]{display:flex;flex-direction:column;box-sizing:border-box}", ".textInput[_ngcontent-%COMP%] {\n      margin: 16px 0 24px;\n    }\n\n    .textInput[_ngcontent-%COMP%]   .helpText[_ngcontent-%COMP%], .textInput[_ngcontent-%COMP%]   .inputArea__input[_ngcontent-%COMP%], .textInput[_ngcontent-%COMP%]   .inputArea__input[_ngcontent-%COMP%]::placeholder {\n      text-align: center;\n    }\n\n    gu-primary-hex-button[_ngcontent-%COMP%] {\n      min-width: 170px;\n    }"]
         }), x
-    })(), Se = (() => {
+    })(), _e = (() => {
         class x {
-            constructor(u, D) {
-                this.authService = u, this.authHostService = D
+            constructor(u, T) {
+                this.authService = u, this.authHostService = T
             }
 
             get isLoggedIn() {
@@ -20558,30 +20419,30 @@
         }
 
         return x.\u0275fac = function (u) {
-            return new (u || x)(e.Y36(ye.mI), e.Y36(ye.LI))
+            return new (u || x)(e.Y36(xe.mI), e.Y36(xe.LI))
         }, x.\u0275cmp = e.Xpm({
             type: x,
             selectors: [["cerberus-lore-route"]],
             decls: 33,
             vars: 0,
             consts: [[1, "headerStrip"], ["top", "4x-large"], ["fillColor", "colors.light.100", "align", "center", "size", "x-large"], ["bottom", "4x-large", "top", "large", 1, "headerStrip__bodyCopy"], ["fillColor", "colors.light.100", "align", "center", "kind", "large"], [1, "bandedStrip"], ["both", "x-large"], ["fillGradient", "gradients.gold.simple", "align", "center", "size", "small"], ["top", "medium"], ["kind", "help", "align", "center"], ["both", "medium"], ["src", "/assets/images/weird-spacer-thing.svg", 1, "weirdSpacingImage"], ["kind", "tag", "align", "center"], ["top", "4x-large", "bottom", "2x-large", 1, "loreIntroText"], ["kind", "large"], ["top", "large"], ["href", "https://blog.godsunchained.com/2020/01/24/chapter-1-citadel-of-the-gods/", 1, "readMoreLink"], ["kind", "tag", "fillColor", "colors.apocyan.300", "align", "center", 1, "readMoreLink__text"], ["top", "6x-large"], ["size", "x-small", "align", "center", 1, "mysteryHeading"], ["top", "2x-large", 1, "ctaButtonRow"], ["text", "Visit blog", "href", "https://blog.godsunchained.com/"], ["both", "6x-large"], [1, "newsLetterSignUp"]],
-            template: function (u, D) {
+            template: function (u, T) {
                 1 & u && (e.TgZ(0, "header", 0)(1, "gu-vertical-space", 1)(2, "gu-heading-text", 2), e._uU(3, " LORE "), e.qZA()(), e.TgZ(4, "gu-vertical-space", 3)(5, "gu-paragraph-text", 4), e._uU(6, " Come, mortal! Settle in and be regaled by tales that traverse the Nine Realms, recount the deeds of the champions of Eucos, and whisper of the gods themselves. "), e.qZA()()(), e.TgZ(7, "div", 5)(8, "gu-vertical-space", 6)(9, "gu-heading-text", 7), e._uU(10, " Citadel of the gods "), e.qZA(), e.TgZ(11, "gu-vertical-space", 8)(12, "gu-paragraph-text", 9), e._uU(13, " Welcome to the trial "), e.qZA()(), e.TgZ(14, "gu-vertical-space", 10), e._UZ(15, "img", 11), e.qZA(), e.TgZ(16, "gu-paragraph-text", 12), e._uU(17, " by kelly digges "), e.qZA()()(), e.TgZ(18, "gu-vertical-space", 13)(19, "gu-paragraph-text", 14), e._uU(20, " You've seen the statues of the gods in temples, of course. Incorruptible Thaeriel, Vengeful Auros, Gentle Aeona. To mortal worshipers, the statues are the gods: terrible and beautiful. But the reality is they are the pale shadow of a blazing truth. This is the story of one fateful meeting, and a divine contest that would alter the course of the Nine Relams for aeons to come. "), e.qZA(), e.TgZ(21, "gu-vertical-space", 15)(22, "a", 16)(23, "gu-simple-text", 17), e._uU(24, " Read more "), e.qZA()()()(), e._UZ(25, "cerberus-season1-champion-section"), e.TgZ(26, "gu-vertical-space", 18)(27, "gu-heading-text", 19), e._uU(28, " FOR MORE GODS UNCHAINED CONTENT & UPDATES "), e.qZA(), e.TgZ(29, "gu-vertical-space", 20), e._UZ(30, "gu-primary-hex-button", 21), e.qZA()(), e.TgZ(31, "gu-vertical-space", 22), e._UZ(32, "cerberus-newsletter-signup-form", 23), e.qZA())
             },
-            directives: [H, pe],
+            directives: [W, ge],
             styles: ["@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes upAndDown2{0%{transform:translateY(-2%)}50%{transform:translateY(2%)}to{transform:translateY(-2%)}}@keyframes shine2{0%{filter:brightness(.96) hue-rotate(0deg)}50%{filter:brightness(1.12) hue-rotate(-10deg)}to{filter:brightness(.96) hue-rotate(0deg)}}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}[_nghost-%COMP%]{display:block}.headerStrip[_ngcontent-%COMP%]{background:url(/assets/images/colour-palace-background2.jpg);background-size:cover;background-position:center;display:flex;flex-direction:column}.headerStrip__bodyCopy[_ngcontent-%COMP%]{max-width:800px;width:80%;margin-left:auto;margin-right:auto}.bandedStrip[_ngcontent-%COMP%]{background:#0F1B27;display:flex;flex-direction:column}.weirdSpacingImage[_ngcontent-%COMP%]{display:block;width:148px;margin-left:auto;margin-right:auto}.loreIntroText[_ngcontent-%COMP%]{width:80%;max-width:800px;margin-left:auto;margin-right:auto}.readMoreLink[_ngcontent-%COMP%]{display:inline-flex;justify-content:flex-start}.readMoreLink__text[_ngcontent-%COMP%]{padding-bottom:4px;border-bottom:2px solid #8BE1E0}.ctaButtonRow[_ngcontent-%COMP%]{display:flex;justify-content:center}.mysteryHeading[_ngcontent-%COMP%]{max-width:500px;padding:0 20px;margin-left:auto;margin-right:auto}.signupForm[_ngcontent-%COMP%]{width:85%;max-width:450px;display:flex;flex-direction:column;margin-left:auto;margin-right:auto}.signupForm__emailInput[_ngcontent-%COMP%]{background:#0F1B27;color:#7192b0;border:1px solid #527493;text-align:center;padding:12px 20px;width:100%}.signupForm__emailInput[_ngcontent-%COMP%]::placeholder{font-size:14px;font-style:italic;color:#f6f6f6b3}.signupForm__emailInput[_ngcontent-%COMP%]:-ms-input-placeholder{font-size:14px;font-style:italic;color:#f6f6f6b3}.signupForm__emailInput[_ngcontent-%COMP%]:-moz-placeholder{font-size:14px;font-style:italic;color:#f6f6f6b3}.newsLetterSignUp[_ngcontent-%COMP%]{max-width:530px;width:85%;margin-left:auto;margin-right:auto}"]
         }), x
     })();
-    var lt = o(39029), we = o(69039), He = o(5284), $ = o(12052), J = o(32830), ne = o(98539), Oe = o(97223),
-        ht = o(19444);
-    const Ze = "FLIP_A_CARD", yt = "TOGGLE_OPEN_PACK_VIDEO_VISIBILITY", xt = "TOGGLE_OPEN_PACK_CARDS",
-        kt = "SET_OPEN_PACK_VIDEO_ID", Xe = "RESET_TEMPLE", ut = "SET_CURRENT_UNOPENED_PACKS",
-        Fe = "TOGGLE_PACK_VISIBILITY", rt = "TOGGLE_RAFFLE_TICKETS", Ie = "SET_CURRENT_OPEN_CHEST",
+    var nt = o(39029), we = o(69039), ke = o(5284), I = o(12052), X = o(32830), ne = o(98539), $e = o(97223),
+        pt = o(19444);
+    const Ne = "FLIP_A_CARD", Ot = "TOGGLE_OPEN_PACK_VIDEO_VISIBILITY", Ct = "TOGGLE_OPEN_PACK_CARDS",
+        yt = "SET_OPEN_PACK_VIDEO_ID", qe = "RESET_TEMPLE", lt = "SET_CURRENT_UNOPENED_PACKS",
+        Ge = "TOGGLE_PACK_VISIBILITY", st = "TOGGLE_RAFFLE_TICKETS", Ie = "SET_CURRENT_OPEN_CHEST",
         Rt = "SET_OPEN_CHEST_VIDEO_ID", Ee = "TOGGLE_OPEN_CHEST_VIDEO_FINISHED", It = "PARTIAL_RESET_TEMPLE",
-        q = "TOGGLE_OPEN_PACK_VIDEO_LOADING", re = "TOGGLE_OPEN_PACK_VIDEO_PLAYING",
-        xe = "TOGGLE_OPEN_CHEST_VIDEO_PLAYING", ke = x => ({type: ut, payload: x}), it = x => ({type: Rt, payload: x}),
-        Jt = x => ({type: Ee, payload: x}), ls = x => ({type: q, payload: x}), ss = x => ({type: xe, payload: x}),
-        Bt = x => ({type: re, payload: x}), _t = {
+        ee = "TOGGLE_OPEN_PACK_VIDEO_LOADING", re = "TOGGLE_OPEN_PACK_VIDEO_PLAYING",
+        Se = "TOGGLE_OPEN_CHEST_VIDEO_PLAYING", Ze = x => ({type: lt, payload: x}), it = x => ({type: Rt, payload: x}),
+        Jt = x => ({type: Ee, payload: x}), ws = x => ({type: ee, payload: x}), ss = x => ({type: Se, payload: x}),
+        Bt = x => ({type: re, payload: x}), mt = {
             flippedCards: {},
             openPackVideoId: "",
             openChestVideoId: "",
@@ -20596,24 +20457,24 @@
             currentOpenPack: {},
             currentOpenChest: {},
             raffleTicketsDisplayVisible: !1
-        }, Qe = (0, Oe.MT)((x = _t, {type: Z, payload: u}) => {
+        }, Ve = (0, $e.MT)((x = mt, {type: Z, payload: u}) => {
             switch (Z) {
-                case kt:
-                    return Object.assign(Object.assign({}, x), {openPackVideoId: u});
-                case xt:
-                    return Object.assign(Object.assign({}, x), {firstPackCardsVisible: "boolean" == typeof u ? u : !x.firstPackCardsVisible});
                 case yt:
+                    return Object.assign(Object.assign({}, x), {openPackVideoId: u});
+                case Ct:
+                    return Object.assign(Object.assign({}, x), {firstPackCardsVisible: "boolean" == typeof u ? u : !x.firstPackCardsVisible});
+                case Ot:
                     return Object.assign(Object.assign({}, x), {openPackVideoVisible: "boolean" == typeof u ? u : !x.openPackVideoVisible});
-                case Ze:
+                case Ne:
                     return Object.assign(Object.assign({}, x), {flippedCards: Object.assign(Object.assign({}, x.flippedCards), {[u]: !x.flippedCards[u]})});
-                case Fe:
+                case Ge:
                     return Object.assign(Object.assign({}, x), {packImageVisible: "boolean" == typeof u ? u : !x.packImageVisible});
-                case ut:
+                case lt:
                     return Object.assign(Object.assign({}, x), {
                         currentUnOpenedPacks: u,
-                        currentOpenPack: Object.assign(Object.assign({}, u[0]), {id: (0, ht.v4)()})
+                        currentOpenPack: Object.assign(Object.assign({}, u[0]), {id: (0, pt.v4)()})
                     });
-                case rt:
+                case st:
                     return Object.assign(Object.assign({}, x), {raffleTicketsDisplayVisible: !x.raffleTicketsDisplayVisible});
                 case Ie:
                     return Object.assign(Object.assign({}, x), {currentOpenChest: u});
@@ -20621,20 +20482,20 @@
                     return Object.assign(Object.assign({}, x), {openChestVideoId: u, openChestVideoComplete: !1});
                 case Ee:
                     return Object.assign(Object.assign({}, x), {openChestVideoComplete: "boolean" == typeof u ? u : !x.openChestVideoComplete});
-                case xe:
+                case Se:
                     return Object.assign(Object.assign({}, x), {openChestVideoPlaying: "boolean" == typeof u ? u : !x.openChestVideoPlaying});
-                case q:
+                case ee:
                     return Object.assign(Object.assign({}, x), {openPackVideoLoading: "boolean" == typeof u ? u : !x.openPackVideoLoading});
                 case re:
                     return Object.assign(Object.assign({}, x), {openPackVideoPlaying: "boolean" == typeof u ? u : !x.openPackVideoPlaying});
                 case It:
-                    return Object.assign(Object.assign({}, _t), {packImageVisible: !0});
-                case Xe:
-                    return Object.assign({}, _t);
+                    return Object.assign(Object.assign({}, mt), {packImageVisible: !0});
+                case qe:
+                    return Object.assign({}, mt);
                 default:
                     return x
             }
-        }, _t), Ht = {
+        }, mt), Ht = {
             "pack-open-videos-4k order--neutral--shiny-legendary": "548697244",
             "pack-open-videos-4k order--neutral--legendary": "548697153",
             "pack-open-videos-4k order--neutral--epic": "548697068",
@@ -20694,9 +20555,9 @@
             "chest-videos-open genesis--neutral--rare": "405676790",
             "chest-videos-open genesis--neutral--legendary": "405676766"
         };
-    var Xt = o(80102), ge = o(26532), wt = o(61462);
-    const jt = J.iv`
-  ${(0, ge.asCssProp)((0, ge.setBoxSizing)())}
+    var Xt = o(80102), pe = o(26532), Pt = o(61462);
+    const jt = X.iv`
+  ${(0, pe.asCssProp)((0, pe.setBoxSizing)())}
 
   :host {
     height: 100%;
@@ -20704,11 +20565,11 @@
     position: absolute;
     top: 0;
     left: 0;
-    ${(0, ge.asCssProp)((0, wt.userSelect)("none"))};
+    ${(0, pe.asCssProp)((0, Pt.userSelect)("none"))};
   }
 
   :host(.visible) {
-    ${(0, ge.asCssProp)((0, wt.userSelect)("auto"))};
+    ${(0, pe.asCssProp)((0, Pt.userSelect)("auto"))};
   }
 
   gu-controllable-vimeo-embed {
@@ -20717,7 +20578,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    ${(0, ge.asCssProp)(r.uifx.userSelect("none"))};
+    ${(0, pe.asCssProp)(r.uifx.userSelect("none"))};
   }
 
   @keyframes fadeAndSlideUp {
@@ -20734,11 +20595,11 @@
   .chestOpenVideo {
     background: linear-gradient(
       to bottom,
-      ${(0, ge.asCssProp)(r.colors.gunmetal[500])} 0%,
-      ${(0, ge.asCssProp)(r.colors.gunmetal[700])} 100%
+      ${(0, pe.asCssProp)(r.colors.gunmetal[500])} 0%,
+      ${(0, pe.asCssProp)(r.colors.gunmetal[700])} 100%
     );
     animation: fadeAndSlideUp 0.5s ease-in-out;
-    ${(0, ge.asCssProp)(r.uifx.userSelect("auto"))};
+    ${(0, pe.asCssProp)(r.uifx.userSelect("auto"))};
     z-index: 2;
   }
 
@@ -20764,30 +20625,30 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background: ${(0, ge.asCssProp)(r.colors.dark[900])};
+    background: ${(0, pe.asCssProp)(r.colors.dark[900])};
     cursor: pointer;
     opacity: 0;
-    border: 1px solid ${(0, ge.asCssProp)(r.colors.dark[500])};
-    ${(0, ge.asCssProp)(r.animation.slowTransition("opacity"))};
+    border: 1px solid ${(0, pe.asCssProp)(r.colors.dark[500])};
+    ${(0, pe.asCssProp)(r.animation.slowTransition("opacity"))};
   }
 
   .unOpenedChestsListing__chest:active {
-    border: 1px solid ${(0, ge.asCssProp)(r.colors.light[100])} !important;
-    background: ${(0, ge.asCssProp)(r.colors.light[100])} !important;
+    border: 1px solid ${(0, pe.asCssProp)(r.colors.light[100])} !important;
+    background: ${(0, pe.asCssProp)(r.colors.light[100])} !important;
   }
 
   .unOpenedChestsListing__chest:active .unOpenedChestsListing__chest__openNowText {
-    ${(0, ge.asCssProp)(r.gradients.textFill(r.colors.dark[900]))};
+    ${(0, pe.asCssProp)(r.gradients.textFill(r.colors.dark[900]))};
   }
 
   .unOpenedChestsListing__chest:active .unOpenedChestsListing__chest__count {
-    color: ${(0, ge.asCssProp)(r.colors.dark[900])};
-    border-color: ${(0, ge.asCssProp)(r.colors.dark[900])};
+    color: ${(0, pe.asCssProp)(r.colors.dark[900])};
+    border-color: ${(0, pe.asCssProp)(r.colors.dark[900])};
   }
 
   .unOpenedChestsListing__chest:hover {
-    border: 1px solid ${(0, ge.asCssProp)(r.colors.gunmetal[700])};
-    background: ${(0, ge.asCssProp)(r.colors.gunmetal[700])};
+    border: 1px solid ${(0, pe.asCssProp)(r.colors.gunmetal[700])};
+    background: ${(0, pe.asCssProp)(r.colors.gunmetal[700])};
   }
 
   .unOpenedChestsListing__chest:nth-child(1) {
@@ -20834,35 +20695,35 @@
   .unOpenedChestsListing__chest__count {
     margin: 0 calc(var(--cw) * 1);
     padding: calc(var(--ch) * 0.6) calc(var(--cw) * 0.6);
-    border: 1px solid ${(0, ge.asCssProp)(r.colors.gold[500])};
+    border: 1px solid ${(0, pe.asCssProp)(r.colors.gold[500])};
   }
 
   .chestsCta {
     position: absolute;
     left: 8%;
     bottom: 7%;
-    min-width: ${(0, ge.asCssProp)((0, Xt.gridUnits)(50))};
+    min-width: ${(0, pe.asCssProp)((0, Xt.gridUnits)(50))};
     opacity: 0;
-    ${(0, ge.asCssProp)(r.uifx.userSelect("none"))};
-    ${(0, ge.asCssProp)(r.animation.slowTransition("opacity"))};
+    ${(0, pe.asCssProp)(r.uifx.userSelect("none"))};
+    ${(0, pe.asCssProp)(r.animation.slowTransition("opacity"))};
   }
 
   .chestsCta--visible {
-    ${(0, ge.asCssProp)(r.uifx.userSelect("auto"))};
+    ${(0, pe.asCssProp)(r.uifx.userSelect("auto"))};
     opacity: 1;
     z-index: 2;
   }
 `;
-    customElements.define("gu-temple-chest-layer", (0, lt.x1)({
+    customElements.define("gu-temple-chest-layer", (0, nt.x1)({
         renderer: function to({unOpenedChests: x = [], volume: Z}) {
-            const u = (0, $.sO)(null), D = (0, lt.I0)(Qe), {
+            const u = (0, I.sO)(null), T = (0, nt.I0)(Ve), {
                 currentOpenChest: K,
-                openChestVideoId: _e,
-                openChestVideoPlaying: tt,
-                openChestVideoComplete: at,
-                openPackVideoVisible: vt
-            } = (0, lt.v9)({
-                store: Qe,
+                openChestVideoId: fe,
+                openChestVideoPlaying: et,
+                openChestVideoComplete: ot,
+                openPackVideoVisible: ft
+            } = (0, nt.v9)({
+                store: Ve,
                 selector: Pe => ({
                     openChestVideoPlaying: Pe.openChestVideoPlaying,
                     openPackVideoVisible: Pe.openPackVideoVisible,
@@ -20871,22 +20732,22 @@
                     openChestVideoComplete: Pe.openChestVideoComplete
                 })
             });
-            (0, $.d4)(() => {
-                if (this.isIos = He.I5.isIos(), !K.set) return;
+            (0, I.d4)(() => {
+                if (this.isIos = ke.I5.isIos(), !K.set) return;
                 let Pe = Ht[`chest-videos-open ${K.set}--neutral--${K.rarity}`];
-                Pe || (Pe = Ht["chest-videos-open order--neutral--rare"]), D(it(Pe))
-            }, [K]), (0, $.d4)(() => {
-                vt ? this.classList.remove("visible") : this.classList.add("visible")
-            }, [vt]);
-            return J.dy`
-    ${_e ? J.dy`
+                Pe || (Pe = Ht["chest-videos-open order--neutral--rare"]), T(it(Pe))
+            }, [K]), (0, I.d4)(() => {
+                ft ? this.classList.remove("visible") : this.classList.add("visible")
+            }, [ft]);
+            return X.dy`
+    ${fe ? X.dy`
           <gu-controllable-vimeo-embed
-            class=${(0, ne.$)({chestOpenVideo: !0, "chestOpenVideo--aboveAllLayers": tt})}
+            class=${(0, ne.$)({chestOpenVideo: !0, "chestOpenVideo--aboveAllLayers": et})}
             autoPlay
-            videoId=${_e}
+            videoId=${fe}
             pauseOnEndFrame
             @onVideoEnd=${() => {
-                D(Jt(!0)), D(ss(!1)), this.dispatchEvent(new CustomEvent("onChestOpened", {
+                T(Jt(!0)), T(ss(!1)), this.dispatchEvent(new CustomEvent("onChestOpened", {
                     detail: Object.assign({}, K),
                     bubbles: !0,
                     composed: !0
@@ -20897,21 +20758,21 @@
             .volume=${Z}
           ></gu-controllable-vimeo-embed>
         ` : null}
-    ${x.length ? J.dy`
+    ${x.length ? X.dy`
           <div
-            class=${(0, ne.$)({unOpenedChestsListing: !0, "unOpenedChestsListing--visible": !vt})}
+            class=${(0, ne.$)({unOpenedChestsListing: !0, "unOpenedChestsListing--visible": !ft})}
           >
-            ${x.reduce((Pe, Ne) => {
+            ${x.reduce((Pe, Fe) => {
                 let h;
                 return Pe.find((a, M) => {
-                    const F = Ne.set === a.set && Ne.rarity === a.rarity;
+                    const F = Fe.set === a.set && Fe.rarity === a.rarity;
                     return F && (h = M), F
-                }) ? Pe[h].quantityCount += 1 : Pe.push(Object.assign(Object.assign({}, Ne), {quantityCount: 1})), Pe
+                }) ? Pe[h].quantityCount += 1 : Pe.push(Object.assign(Object.assign({}, Fe), {quantityCount: 1})), Pe
             }, []).map(Pe => {
-                const Ne = `${Pe.set}--neutral--${Pe.rarity}`;
-                return J.dy`
+                const Fe = `${Pe.set}--neutral--${Pe.rarity}`;
+                return X.dy`
                   <div class="unOpenedChestsListing__chest" @click=${() => (Pe => {
-                    D(ss(!0)), Pe.rarity === K.rarity && Pe.set === K.set ? (D(Jt(!1)), u.current.playVideo(0)) : D((x => ({
+                    T(ss(!0)), Pe.rarity === K.rarity && Pe.set === K.set ? (T(Jt(!1)), u.current.playVideo(0)) : T((x => ({
                         type: Ie,
                         payload: x
                     }))(Pe))
@@ -20920,21 +20781,21 @@
                       <source
                         type="image/webp"
                         srcset="
-                          //images.godsunchained.com/transparent-chest-images--open/434/${Ne}.webp 434w,
-                          //images.godsunchained.com/transparent-chest-images--open/256/${Ne}.webp 256w,
-                          //images.godsunchained.com/transparent-chest-images--open/128/${Ne}.webp 128w
+                          //images.godsunchained.com/transparent-chest-images--open/434/${Fe}.webp 434w,
+                          //images.godsunchained.com/transparent-chest-images--open/256/${Fe}.webp 256w,
+                          //images.godsunchained.com/transparent-chest-images--open/128/${Fe}.webp 128w
                         "
                       />
                       <source
                         type="image/png"
                         srcset="
-                          //images.godsunchained.com/transparent-chest-images--open/434/${Ne}.png 434w,
-                          //images.godsunchained.com/transparent-chest-images--open/256/${Ne}.png 256w,
-                          //images.godsunchained.com/transparent-chest-images--open/128/${Ne}.png 128w
+                          //images.godsunchained.com/transparent-chest-images--open/434/${Fe}.png 434w,
+                          //images.godsunchained.com/transparent-chest-images--open/256/${Fe}.png 256w,
+                          //images.godsunchained.com/transparent-chest-images--open/128/${Fe}.png 128w
                         "
                       />
                       <img
-                        src="//images.godsunchained.com/transparent-chest-images--open/128/${Ne}.png"
+                        src="//images.godsunchained.com/transparent-chest-images--open/128/${Fe}.png"
                         alt="chest image"
                         class="unOpenedChestsListing__chest__picture__img"
                       />
@@ -20963,9 +20824,9 @@
 
     <gu-primary-hex-button
       size="large"
-      class=${(0, ne.$)({chestsCta: !0, "chestsCta--visible": at})}
+      class=${(0, ne.$)({chestsCta: !0, "chestsCta--visible": ot})}
       @click=${() => {
-                D(Jt(!1)), D(it(null))
+                T(Jt(!1)), T(it(null))
             }}
     >
       Back to Packs
@@ -20973,7 +20834,7 @@
   `
         }, props: {properties: {unOpenedChests: {type: Array}, volume: {type: Number}}, styles: jt}
     }));
-    const os = J.iv`
+    const os = X.iv`
   :host {
     position: absolute;
     top: 0;
@@ -20981,7 +20842,7 @@
     left: 0;
     right: 0;
     z-index: 1;
-    background: ${(0, ge.asCssProp)(r.colors.gunmetal[900])};
+    background: ${(0, pe.asCssProp)(r.colors.gunmetal[900])};
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20990,22 +20851,22 @@
   }
 
   .icon {
-    font-size: ${(0, ge.asCssProp)((0, Xt.gridUnits)(20))};
+    font-size: ${(0, pe.asCssProp)((0, Xt.gridUnits)(20))};
   }
 
   .text {
     max-width: 350px;
   }
 
-  @media screen and (min-width: ${(0, ge.asCssProp)(r.breakpoints.breakpointSizeMapping.small)}) {
+  @media screen and (min-width: ${(0, pe.asCssProp)(r.breakpoints.breakpointSizeMapping.small)}) {
     :host {
       display: none;
     }
   }
 `;
-    customElements.define("gu-temple-overlay-layer", (0, lt.x1)({
-        renderer: function ms() {
-            return J.dy`
+    customElements.define("gu-temple-overlay-layer", (0, nt.x1)({
+        renderer: function hs() {
+            return X.dy`
     <gu-icon iconLigature="alert_triangle" align="center" fillColor=${r.colors.god.war.secondary} class="icon"></gu-icon>
     <gu-vertical-space top="x-large">
       <gu-paragraph-text class="text" align="center" fillColor=${r.colors.light[100]}>
@@ -21015,30 +20876,30 @@
   `
         }, props: {properties: {message: {type: String}}, styles: os}
     }));
-    var qe = o(49749), cs = o(46461), Es = o(77518);
-    const et = "/assets/audio/temple", oo = {
-        diamond__common: `${et}/temple_reveal_diamond_common`,
-        diamond__rare: `${et}/temple_reveal_diamond_rare`,
-        diamond__epic: `${et}/temple_reveal_diamond_epic`,
-        diamond__legendary: `${et}/temple_reveal_diamond_legendary`,
-        gold__common: `${et}/temple_reveal_gold_common`,
-        gold__rare: `${et}/temple_reveal_gold_rare`,
-        gold__epic: `${et}/temple_reveal_gold_epic`,
-        gold__legendary: `${et}/temple_reveal_gold_legendary`,
-        shadow__common: `${et}/temple_reveal_shadow_common`,
-        shadow__rare: `${et}/temple_reveal_shadow_rare`,
-        shadow__epic: `${et}/temple_reveal_shadow_epic`,
-        shadow__legendary: `${et}/temple_reveal_shadow_legendary`,
-        meteorite__common: `${et}/temple_reveal_meteorite_common`,
-        meteorite__rare: `${et}/temple_reveal_meteorite_rare`,
-        meteorite__epic: `${et}/temple_reveal_meteorite_epic`,
-        meteorite__legendary: `${et}/temple_reveal_meteorite_legendary`,
-        plain__common: `${et}/temple_reveal_plain_common`,
-        plain__rare: `${et}/temple_reveal_plain_rare`,
-        plain__epic: `${et}/temple_reveal_plain_epic`,
-        plain__legendary: `${et}/temple_reveal_plain_legendary`
-    }, Ms = J.iv`
-  ${(0, ge.asCssProp)((0, ge.setBoxSizing)())}
+    var Je = o(49749), ls = o(46461), Es = o(77518);
+    const Xe = "/assets/audio/temple", oo = {
+        diamond__common: `${Xe}/temple_reveal_diamond_common`,
+        diamond__rare: `${Xe}/temple_reveal_diamond_rare`,
+        diamond__epic: `${Xe}/temple_reveal_diamond_epic`,
+        diamond__legendary: `${Xe}/temple_reveal_diamond_legendary`,
+        gold__common: `${Xe}/temple_reveal_gold_common`,
+        gold__rare: `${Xe}/temple_reveal_gold_rare`,
+        gold__epic: `${Xe}/temple_reveal_gold_epic`,
+        gold__legendary: `${Xe}/temple_reveal_gold_legendary`,
+        shadow__common: `${Xe}/temple_reveal_shadow_common`,
+        shadow__rare: `${Xe}/temple_reveal_shadow_rare`,
+        shadow__epic: `${Xe}/temple_reveal_shadow_epic`,
+        shadow__legendary: `${Xe}/temple_reveal_shadow_legendary`,
+        meteorite__common: `${Xe}/temple_reveal_meteorite_common`,
+        meteorite__rare: `${Xe}/temple_reveal_meteorite_rare`,
+        meteorite__epic: `${Xe}/temple_reveal_meteorite_epic`,
+        meteorite__legendary: `${Xe}/temple_reveal_meteorite_legendary`,
+        plain__common: `${Xe}/temple_reveal_plain_common`,
+        plain__rare: `${Xe}/temple_reveal_plain_rare`,
+        plain__epic: `${Xe}/temple_reveal_plain_epic`,
+        plain__legendary: `${Xe}/temple_reveal_plain_legendary`
+    }, Ms = X.iv`
+  ${(0, pe.asCssProp)((0, pe.setBoxSizing)())}
 
   :host {
     position: absolute;
@@ -21069,7 +20930,7 @@
     display: flex;
     position: relative;
     cursor: pointer;
-    ${(0, ge.asCssProp)(r.animation.slowTransition("height"))};
+    ${(0, pe.asCssProp)(r.animation.slowTransition("height"))};
     transition-property: height, transform;
   }
 
@@ -21079,7 +20940,7 @@
 
   .raffleTicketsArea__dropdown {
     position: absolute;
-    background: ${(0, ge.asCssProp)(r.gradients.gold.simple("bottom"))};
+    background: ${(0, pe.asCssProp)(r.gradients.gold.simple("bottom"))};
     padding: 3px;
     width: 68%;
     height: calc(var(--ch) * 17.3);
@@ -21087,8 +20948,8 @@
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
-    ${(0, ge.asCssProp)((0, ge.drawBottomHexShapePolygonMask)("calc(var(--ch) * 4)"))};
-    ${(0, ge.asCssProp)(r.animation.slowTransition("opacity"))};
+    ${(0, pe.asCssProp)((0, pe.drawBottomHexShapePolygonMask)("calc(var(--ch) * 4)"))};
+    ${(0, pe.asCssProp)(r.animation.slowTransition("opacity"))};
   }
 
   .raffleTicketsArea--opened .raffleTicketsArea__dropdown {
@@ -21098,8 +20959,8 @@
   .raffleTicketsArea__dropdown__inner {
     width: 100%;
     height: 100%;
-    background: ${(0, ge.asCssProp)(r.colors.gunmetal[900])};
-    ${(0, ge.asCssProp)((0, ge.drawBottomHexShapePolygonMask)("calc(var(--ch) * 3.9)"))};
+    background: ${(0, pe.asCssProp)(r.colors.gunmetal[900])};
+    ${(0, pe.asCssProp)((0, pe.drawBottomHexShapePolygonMask)("calc(var(--ch) * 3.9)"))};
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21116,7 +20977,7 @@
   Once we have done away with all global styles, this can be once again made into a
   standard heading text control */
   .raffleTicketsArea__dropdown__inner__value {
-    font-family: ${(0, ge.asCssProp)(r.typography.headingFont)};
+    font-family: ${(0, pe.asCssProp)(r.typography.headingFont)};
     font-size: calc(var(--cw) * 2.2);
     line-height: 1;
     margin: calc(var(--ch) * 0.5) 0 0 0;
@@ -21193,20 +21054,20 @@
   }
 
   .cardWrapper__frontFace__bloom--rare {
-    background: ${(0, ge.asCssProp)(r.colors.rarity.rare)};
-    box-shadow: 0 0 calc(var(--ch) * 3) calc(var(--ch) * 3) ${(0, ge.asCssProp)(r.colors.rarity.rare)};
+    background: ${(0, pe.asCssProp)(r.colors.rarity.rare)};
+    box-shadow: 0 0 calc(var(--ch) * 3) calc(var(--ch) * 3) ${(0, pe.asCssProp)(r.colors.rarity.rare)};
   }
   .cardWrapper__frontFace__bloom--epic {
-    background: ${(0, ge.asCssProp)(r.colors.rarity.epic)};
-    box-shadow: 0 0 calc(var(--ch) * 3) calc(var(--ch) * 3) ${(0, ge.asCssProp)(r.colors.rarity.epic)};
+    background: ${(0, pe.asCssProp)(r.colors.rarity.epic)};
+    box-shadow: 0 0 calc(var(--ch) * 3) calc(var(--ch) * 3) ${(0, pe.asCssProp)(r.colors.rarity.epic)};
   }
   .cardWrapper__frontFace__bloom--legendary {
-    background: ${(0, ge.asCssProp)(r.colors.rarity.legendary)};
-    box-shadow: 0 0 calc(var(--ch) * 3) calc(var(--ch) * 3) ${(0, ge.asCssProp)(r.colors.rarity.legendary)};
+    background: ${(0, pe.asCssProp)(r.colors.rarity.legendary)};
+    box-shadow: 0 0 calc(var(--ch) * 3) calc(var(--ch) * 3) ${(0, pe.asCssProp)(r.colors.rarity.legendary)};
   }
   .cardWrapper__frontFace__bloom--mythic {
-    background: ${(0, ge.asCssProp)(r.colors.rarity.mythic)};
-    box-shadow: 0 0 calc(var(--ch) * 3) calc(var(--ch) * 3) ${(0, ge.asCssProp)(r.colors.rarity.mythic)};
+    background: ${(0, pe.asCssProp)(r.colors.rarity.mythic)};
+    box-shadow: 0 0 calc(var(--ch) * 3) calc(var(--ch) * 3) ${(0, pe.asCssProp)(r.colors.rarity.mythic)};
   }
 
   .cardWrapper__frontFace__scarcity {
@@ -21231,16 +21092,16 @@
     height: 100%;
     object-fit: contain;
   }
-`, fs = x => Es.PW[x];
-    customElements.define("gu-temple-pack-card-listing", (0, lt.x1)({
+`, _s = x => Es.PW[x];
+    customElements.define("gu-temple-pack-card-listing", (0, nt.x1)({
         renderer: function no({}) {
-            const Z = (0, lt.I0)(Qe), [u, D] = (0, $.eJ)([]), {
+            const Z = (0, nt.I0)(Ve), [u, T] = (0, I.eJ)([]), {
                 currentOpenPack: K,
-                firstPackCardsVisible: _e,
-                raffleTicketsDisplayVisible: tt,
-                flippedCards: at
-            } = (0, lt.v9)({
-                store: Qe,
+                firstPackCardsVisible: fe,
+                raffleTicketsDisplayVisible: et,
+                flippedCards: ot
+            } = (0, nt.v9)({
+                store: Ve,
                 selector: Pe => ({
                     flippedCards: Pe.flippedCards,
                     raffleTicketsDisplayVisible: Pe.raffleTicketsDisplayVisible,
@@ -21248,38 +21109,37 @@
                     currentOpenPack: Pe.currentOpenPack
                 })
             });
-            (0, $.d4)(() => {
-                this.classList.add("visible")
-                qe.p8.to(this.shadowRoot.children, {
-                    duration: _e ? .3 : 0,
-                    opacity: _e ? 1 : 0,
-                    stagger: _e ? .15 : 0,
+            (0, I.d4)(() => {
+                fe ? this.classList.add("visible") : this.classList.remove("visible"), Je.p8.to(this.shadowRoot.children, {
+                    duration: fe ? .3 : 0,
+                    opacity: fe ? 1 : 0,
+                    stagger: fe ? .15 : 0,
                     onComplete: () => {
-                        _e || vt()
+                        fe || ft()
                     }
                 })
-            }, [_e]), (0, $.d4)(() => {
-                !K.cards || D([...K.cards.map(Pe => {
-                    const {quality: Ne, rarity: h} = Pe, L = oo[`${fs(Ne - 1)}__${h}`];
-                    return L ? new cs.Howl({src: [`${L}.ogg`, `${L}.mp3`]}) : {
+            }, [fe]), (0, I.d4)(() => {
+                !K.cards || T([...K.cards.map(Pe => {
+                    const {quality: Fe, rarity: h} = Pe, A = oo[`${_s(Fe - 1)}__${h}`];
+                    return A ? new ls.Howl({src: [`${A}.ogg`, `${A}.mp3`]}) : {
                         play: () => {
-                        }, id: `${fs(Ne)}__${h}`
+                        }, id: `${_s(Fe)}__${h}`
                     }
                 })])
-            }, [K]), (0, $.d4)(() => () => vt(), []);
-            const vt = () => {
-                qe.p8.set([this.shadowRoot.querySelectorAll(".cardWrapper"), this.shadowRoot.children], {clearProps: "all"})
-            }, dt = Pe => {
-                Z({type: Ze, payload: Pe});
-                const Ne = this.shadowRoot.querySelectorAll(".perspectiveWrapper")[Pe].querySelector(".cardWrapper"),
-                    h = Ne.querySelector(".cardWrapper__frontFace__bloom"), L = !!at[Pe];
-                L || u[Pe].play(), qe.p8.killTweensOf([h, Ne]), qe.p8.set([h], {clearProps: "all"});
-                const a = qe.p8.timeline({paused: !0}),
-                    M = qe.p8.timeline({repeat: -1, repeatDelay: 1, delay: 1, yoyo: !0, paused: !0});
+            }, [K]), (0, I.d4)(() => () => ft(), []);
+            const ft = () => {
+                Je.p8.set([this.shadowRoot.querySelectorAll(".cardWrapper"), this.shadowRoot.children], {clearProps: "all"})
+            }, at = Pe => {
+                Z({type: Ne, payload: Pe});
+                const Fe = this.shadowRoot.querySelectorAll(".perspectiveWrapper")[Pe].querySelector(".cardWrapper"),
+                    h = Fe.querySelector(".cardWrapper__frontFace__bloom"), A = !!ot[Pe];
+                A || u[Pe].play(), Je.p8.killTweensOf([h, Fe]), Je.p8.set([h], {clearProps: "all"});
+                const a = Je.p8.timeline({paused: !0}),
+                    M = Je.p8.timeline({repeat: -1, repeatDelay: 1, delay: 1, yoyo: !0, paused: !0});
                 M.to(h, {duration: 1.2, filter: "brightness(1.5)"}).to(h, {
                     duration: 1.2,
                     filter: "brightness(1)"
-                }), a.to(Ne, {duration: .4, rotateY: L ? 0 : 180, ease: "power2.inOut"}).to(h, {
+                }), a.to(Fe, {duration: .4, rotateY: A ? 0 : 180, ease: "power2.inOut"}).to(h, {
                     duration: .7,
                     opacity: 1,
                     scale: 1.04,
@@ -21291,10 +21151,10 @@
                     ease: "power2.inOut"
                 }).add(M.play(), "loopingBloom"), a.play()
             };
-            return J.dy`
-    ${K.raffleTickets ? J.dy`
+            return X.dy`
+    ${K.raffleTickets ? X.dy`
           <div
-            class=${(0, ne.$)({raffleTicketsArea: !0, "raffleTicketsArea--opened": tt})}
+            class=${(0, ne.$)({raffleTicketsArea: !0, "raffleTicketsArea--opened": et})}
           >
             <div
               class=${(0, ne.$)({raffleTicketsArea__dropdown: !0})}
@@ -21321,7 +21181,7 @@
                 <h3 class="raffleTicketsArea__dropdown__inner__value">${K.raffleTickets}</h3>
               </div>
             </div>
-            <picture class="raffleTicketsArea__ticketImage" @click=${() => Z({type: rt})}>
+            <picture class="raffleTicketsArea__ticketImage" @click=${() => Z({type: st})}>
               <source
                 srcset="
                   /assets/images/collectables-art/collectables-art--raffle-ticket@3x.webp 687w,
@@ -21346,9 +21206,9 @@
             </picture>
           </div>
         ` : null}
-    ${K.cards ? K.cards.map((Pe, Ne) => J.dy`
+    ${K.cards ? K.cards.map((Pe, Fe) => X.dy`
             <div class="perspectiveWrapper">
-              <div class=${(0, ne.$)({cardWrapper: !0})} @click=${() => dt(Ne)}>
+              <div class=${(0, ne.$)({cardWrapper: !0})} @click=${() => at(Fe)}>
                 <div class="cardWrapper__frontFace">
                   <i class="cardWrapper__frontFace__bloom cardWrapper__frontFace__bloom--${Pe.rarity}"></i>
                   <gu-card-picture
@@ -21390,9 +21250,9 @@
   `
         }, props: {properties: {volume: {type: Number}}, styles: Ms}
     }));
-    var Os = o(92436), Lo = o(71459), ro = o.n(Lo), vs = o(63082), ds = o.n(vs), bs = o(65171);
-    const $s = J.iv`
-  ${(0, ge.asCssProp)((0, ge.setBoxSizing)())}
+    var Os = o(92436), Lo = o(71459), ro = o.n(Lo), fs = o(63082), cs = o.n(fs), vs = o(65171);
+    const $s = X.iv`
+  ${(0, pe.asCssProp)((0, pe.setBoxSizing)())}
 
   :host {
     height: calc(100vh - var(--headerAreaHeight));
@@ -21440,11 +21300,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    ${(0, ge.asCssProp)(r.uifx.userSelect("none"))};
+    ${(0, pe.asCssProp)(r.uifx.userSelect("none"))};
   }
 
   .packOpenVideo {
-    ${(0, ge.asCssProp)(r.animation.standardTransition("opacity"))};
+    ${(0, pe.asCssProp)(r.animation.standardTransition("opacity"))};
   }
 
   .packOpenVideo--hidden {
@@ -21486,11 +21346,11 @@
     transform: rotate(-4deg);
     opacity: 0;
     cursor: pointer;
-    ${(0, ge.asCssProp)(r.animation.slowTransition("opacity"))};
+    ${(0, pe.asCssProp)(r.animation.slowTransition("opacity"))};
   }
 
   .draggablePack--touchable {
-    ${(0, ge.asCssProp)((0, wt.userSelect)("auto"))};
+    ${(0, pe.asCssProp)((0, Pt.userSelect)("auto"))};
   }
 
   .draggablePack--visible {
@@ -21506,7 +21366,7 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-    filter: drop-shadow(0 0 calc(var(--ch) * 5) rgba(${(0, ge.asCssProp)((0, bs.hexToCssRgbString)(r.colors.black))}, 0.6));
+    filter: drop-shadow(0 0 calc(var(--ch) * 5) rgba(${(0, pe.asCssProp)((0, vs.hexToCssRgbString)(r.colors.black))}, 0.6));
   }
 
   .helpText {
@@ -21546,8 +21406,8 @@
     opacity: 0;
     display: flex;
     position: relative;
-    ${(0, ge.asCssProp)((0, wt.userSelect)("none"))};
-    ${(0, ge.asCssProp)(r.animation.slowTransition("height"))};
+    ${(0, pe.asCssProp)((0, Pt.userSelect)("none"))};
+    ${(0, pe.asCssProp)(r.animation.slowTransition("height"))};
     transition-property: height, transform;
   }
 
@@ -21557,7 +21417,7 @@
 
   .unlockedPackItems__raffleTicketsArea__dropdown {
     position: absolute;
-    background: ${(0, ge.asCssProp)(r.gradients.gold.simple("bottom"))};
+    background: ${(0, pe.asCssProp)(r.gradients.gold.simple("bottom"))};
     padding: 3px;
     width: 68%;
     height: calc(var(--ch) * 17.3);
@@ -21565,8 +21425,8 @@
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
-    ${(0, ge.asCssProp)((0, ge.drawBottomHexShapePolygonMask)("calc(var(--ch) * 4)"))};
-    ${(0, ge.asCssProp)(r.animation.slowTransition("opacity"))};
+    ${(0, pe.asCssProp)((0, pe.drawBottomHexShapePolygonMask)("calc(var(--ch) * 4)"))};
+    ${(0, pe.asCssProp)(r.animation.slowTransition("opacity"))};
   }
 
   .unlockedPackItems__raffleTicketsArea--opened .unlockedPackItems__raffleTicketsArea__dropdown {
@@ -21576,8 +21436,8 @@
   .unlockedPackItems__raffleTicketsArea__dropdown__inner {
     width: 100%;
     height: 100%;
-    background: ${(0, ge.asCssProp)(r.colors.gunmetal[900])};
-    ${(0, ge.asCssProp)((0, ge.drawBottomHexShapePolygonMask)("calc(var(--ch) * 3.9)"))};
+    background: ${(0, pe.asCssProp)(r.colors.gunmetal[900])};
+    ${(0, pe.asCssProp)((0, pe.drawBottomHexShapePolygonMask)("calc(var(--ch) * 3.9)"))};
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21594,7 +21454,7 @@
   Once we have done away with all global styles, this can be once again made into a
   standard heading text control */
   .unlockedPackItems__raffleTicketsArea__dropdown__inner__value {
-    font-family: ${(0, ge.asCssProp)(r.typography.headingFont)};
+    font-family: ${(0, pe.asCssProp)(r.typography.headingFont)};
     font-size: calc(var(--cw) * 2.2);
     line-height: 1;
     margin: calc(var(--ch) * 0.5) 0 0 0;
@@ -21623,8 +21483,8 @@
   }
 
   .unlockedPackItems__cardWrapper {
-    ${(0, ge.asCssProp)((0, wt.userSelect)("none"))};
-    ${(0, ge.asCssProp)(r.animation.slowTransition("transform"))};
+    ${(0, pe.asCssProp)((0, Pt.userSelect)("none"))};
+    ${(0, pe.asCssProp)(r.animation.slowTransition("transform"))};
     transition-timing-function: ease-out;
     height: 100%;
     opacity: 0;
@@ -21661,7 +21521,7 @@
   .unlockedPackItems--visible .unlockedPackItems__raffleTicketsArea {
     opacity: 1;
     cursor: pointer;
-    ${(0, ge.asCssProp)((0, wt.userSelect)("auto"))};
+    ${(0, pe.asCssProp)((0, Pt.userSelect)("auto"))};
   }
 
   .unlockedPackItems__cardWrapper__frontFace,
@@ -21681,7 +21541,7 @@
   .unlockedPackItems__raffleTicketsArea,
   .unlockedPackItems__cardWrapper {
     opacity: 1;
-    ${(0, ge.asCssProp)((0, wt.userSelect)("auto"))};
+    ${(0, pe.asCssProp)((0, Pt.userSelect)("auto"))};
   }
   .unlockedPackItems__cardWrapper__frontFace,
   .unlockedPackItems__cardWrapper__rearFace {
@@ -21736,25 +21596,25 @@
   }
 
 `;
-    customElements.define("gu-temple-view-layer", (0, lt.x1)({
+    customElements.define("gu-temple-view-layer", (0, nt.x1)({
         renderer: function io({
                                   unOpenedPacks: x = [],
                                   unOpenedChests: Z = [],
                                   volume: u = .9,
-                                  headerAreaHeight: D = r.measurements.standardHeaderHeight
+                                  headerAreaHeight: T = r.measurements.standardHeaderHeight
                               }) {
-            const K = (0, $.sO)(null), _e = (0, $.sO)(null), tt = (0, $.sO)(null), at = (0, $.sO)(null),
-                vt = (0, $.sO)(null), dt = (0, $.sO)(null), Pe = (0, lt.I0)(Qe), {
-                    openPackVideoId: Ne,
+            const K = (0, I.sO)(null), fe = (0, I.sO)(null), et = (0, I.sO)(null), ot = (0, I.sO)(null),
+                ft = (0, I.sO)(null), at = (0, I.sO)(null), Pe = (0, nt.I0)(Ve), {
+                    openPackVideoId: Fe,
                     openPackVideoVisible: h,
-                    firstPackCardsVisible: L,
+                    firstPackCardsVisible: A,
                     flippedCards: a,
                     packImageVisible: M,
                     currentOpenPack: F,
                     openPackVideoLoading: me,
                     openPackVideoPlaying: Le
-                } = (0, lt.v9)({
-                    store: Qe,
+                } = (0, nt.v9)({
+                    store: Ve,
                     selector: We => ({
                         openPackVideoId: We.openPackVideoId,
                         openPackVideoVisible: We.openPackVideoVisible,
@@ -21766,37 +21626,37 @@
                         openPackVideoPlaying: We.openPackVideoPlaying
                     })
                 });
-            (0, $.d4)(() => {
-                this.style.setProperty("--headerAreaHeight", `${D}px`)
-            }, [D]), (0, $.d4)(() => {
+            (0, I.d4)(() => {
+                this.style.setProperty("--headerAreaHeight", `${T}px`)
+            }, [T]), (0, I.d4)(() => {
                 this.openPackVideoLoading = me
-            }, [me]), (0, $.d4)(() => (At.observe(vt.current), () => {
-                At.unobserve(vt.current), Ke(), hs()
+            }, [me]), (0, I.d4)(() => (At.observe(ft.current), () => {
+                At.unobserve(ft.current), je(), gs()
             }), []);
             const ze = () => {
-                Ke(), this.gestureControl = new (ro())(_e.current, {
+                je(), this.gestureControl = new (ro())(fe.current, {
                     sensitivity: 0,
                     passive: !1,
                     capture: !0,
                     startDirectionLoopCount: 1
-                }), this.gestureControl.on("pan.prestart", Pt), this.gestureControl.on("pan.start", gt), this.gestureControl.on("pan.all", Kt), this.gestureControl.on("pan.end", ve)
-            }, Ke = () => {
-                this.gestureControl && (this.gestureControl.removeListener("pan.prestart", Pt), this.gestureControl.removeListener("pan.start", gt), this.gestureControl.removeListener("pan.all", Kt), this.gestureControl.removeListener("pan.end", ve), this.gestureControl.destroy(), this.gestureControl = null)
+                }), this.gestureControl.on("pan.prestart", xt), this.gestureControl.on("pan.start", ut), this.gestureControl.on("pan.all", Kt), this.gestureControl.on("pan.end", ve)
+            }, je = () => {
+                this.gestureControl && (this.gestureControl.removeListener("pan.prestart", xt), this.gestureControl.removeListener("pan.start", ut), this.gestureControl.removeListener("pan.all", Kt), this.gestureControl.removeListener("pan.end", ve), this.gestureControl.destroy(), this.gestureControl = null)
             };
-            (0, $.d4)(() => {
-                if (!F.set) return void Ke();
+            (0, I.d4)(() => {
+                if (!F.set) return void je();
                 ze();
                 let We = Ht[`pack-open-videos-720p ${F.set}--${F.god}--${F.rarity}`];
-                We || (We = Ht["pack-open-videos-720p core--neutral--rare"]), Pe((x => ({type: kt, payload: x}))(We))
-            }, [F]), (0, $.d4)(() => {
-                !F.set && x.length && Pe(ke(x))
+                We || (We = Ht["pack-open-videos-720p core--neutral--rare"]), Pe((x => ({type: yt, payload: x}))(We))
+            }, [F]), (0, I.d4)(() => {
+                !F.set && x.length && Pe(Ze(x))
             }, [x]);
-            const Pt = We => {
+            const xt = We => {
                 We.sourceEvent.preventDefault()
-            }, gt = We => {
-                this.terminatedPan = !1, qe.p8.set(K.current, {x: 0, y: 0})
+            }, ut = We => {
+                this.terminatedPan = !1, Je.p8.set(K.current, {x: 0, y: 0})
             }, Kt = ({deltaX: We, deltaY: Xs, sourceEvent: Eo}) => {
-                if (be(), He.dz.checkOutOfBounds({
+                if (be(), ke.dz.checkOutOfBounds({
                     x: Eo.pageX,
                     y: Eo.pageY,
                     width: this.dimensions.width,
@@ -21805,46 +21665,46 @@
                     left: this.dimensions.left,
                     tolerance: 20
                 })) return this.terminatedPan = !0, ve({});
-                this.terminatedPan || qe.p8.set(K.current, {
+                this.terminatedPan || Je.p8.set(K.current, {
                     x: this.openPackVideoLoading ? .2 * We : We,
                     y: this.openPackVideoLoading ? .2 * Xs : Xs
                 })
             }, ve = We => {
-                qe.p8.to(K.current, this.draggablePackIsIntersecting && !this.openPackVideoLoading ? {
+                Je.p8.to(K.current, this.draggablePackIsIntersecting && !this.openPackVideoLoading ? {
                     rotation: -1,
                     x: 37.2 * this.dimensions.cw + "px",
                     y: -25 * this.dimensions.ch + "px",
                     onComplete: () => Wt(),
                     duration: .3
                 } : {duration: .3, x: 0, y: 0})
-            }, be = ds()(() => {
+            }, be = cs()(() => {
                 this.draggablePackIsIntersecting = function $t(x, Z) {
                     let u = !1;
                     return x && Z && (u = !(x.right < Z.left || x.left > Z.right || x.bottom < Z.top || x.top > Z.bottom)), u
                 }(K.current.getBoundingClientRect(), this.dragTargetRectangle)
             }, 50), At = new Os.do(We => {
                 We.forEach(Xs => Dt())
-            }), Dt = ds()(() => {
-                const We = vt.current.getBoundingClientRect();
+            }), Dt = cs()(() => {
+                const We = ft.current.getBoundingClientRect();
                 this.dimensions = {
-                    ch: .01 * vt.current.offsetHeight,
-                    cw: .01 * vt.current.offsetWidth,
+                    ch: .01 * ft.current.offsetHeight,
+                    cw: .01 * ft.current.offsetWidth,
                     width: We.width,
                     height: We.height,
                     top: We.top,
                     left: We.left
-                }, this.style.setProperty("--cw", `${this.dimensions.cw}px`), this.style.setProperty("--ch", `${this.dimensions.ch}px`), this.dragTargetRectangle = dt.current.getBoundingClientRect()
+                }, this.style.setProperty("--cw", `${this.dimensions.cw}px`), this.style.setProperty("--ch", `${this.dimensions.ch}px`), this.dragTargetRectangle = at.current.getBoundingClientRect()
             }, 500), Wt = () => {
                 Pe({
-                    type: yt,
+                    type: Ot,
                     payload: !0
                 }), this.dispatchEvent(new CustomEvent("onPackOpened", {detail: {pack: F}})), Pe(Bt(!0))
-            }, hs = () => {
-                console.log("RESET TEMPLE CODE"), Pe({type: Xe}), qe.p8.set(K.current, {clearProps: "all"})
-            }, ts = M, ws = !F.set || Object.keys(a).length === F.cards.length, as = ws && !x.length && M;
+            }, gs = () => {
+                console.log("RESET TEMPLE CODE"), Pe({type: qe}), Je.p8.set(K.current, {clearProps: "all"})
+            }, ts = M, ks = !F.set || Object.keys(a).length === F.cards.length, as = ks && !x.length && M;
             const fillColorMap = {common: '#bcbcbc', rare: '#26b1fb', epic: '#971ded', legendary: '#f9c123'};
-            return J.dy`
-    <div class="videoAspectRatio" ?domRef=${(0, we.Q)(vt)}>
+            return X.dy`
+    <div class="videoAspectRatio" ?domRef=${(0, we.Q)(ft)}>
       <img class="videoAspectRatio__img" alt="ratio image" src="/assets/images/ratio-images/16-x-9-ratio.png" />
       
       ${F && F.rarity ? J.dy`
@@ -21856,17 +21716,17 @@
       <div
         class=${(0, ne.$)({ctasArea: !0})}
       >
-        ${as ? J.dy`
+        ${as ? X.dy`
               <gu-primary-hex-button
                 size="large"
-                href=${`imtbl://${V.gv.routeContent().home.path}`}
+                href=${`imtbl://${V.gv.routeContent({}).home.path}`}
                 class="ctasArea__cta ctasArea__cta--buyPacksCta"
               >
                 Play to unlock
               </gu-primary-hex-button>
             ` : null}
         <!-- @NOTE: While a card sale is active, direct users toward buying packs, not playing the game
-          ${as ? J.dy`
+          ${as ? X.dy`
               <gu-primary-hex-button
                 size="large"
                 href=${`imtbl://${V.gv.routeContent({}).home.path}`}
@@ -21875,9 +21735,9 @@
                 Play to unlock
               </gu-primary-hex-button>
             ` : null} -->
-        ${x.length ? J.dy`
+        ${x.length ? X.dy`
               <gu-primary-hex-button size="large" @click=${() => {
-                qe.p8.set(K.current, {clearProps: "all"});
+                Je.p8.set(K.current, {clearProps: "all"});
                 Pe({type: It});
                 Wt();
                 Pe(Bt(!1));
@@ -21891,8 +21751,8 @@
             ` : null}
       </div>
 
-      ${M ? J.dy` <gu-temple-chest-layer .unOpenedChests=${Z} .volume=${u}></gu-temple-chest-layer> ` : null}
-      ${F.set ? J.dy`
+      ${M ? X.dy` <gu-temple-chest-layer .unOpenedChests=${Z} .volume=${u}></gu-temple-chest-layer> ` : null}
+      ${F.set ? X.dy`
             <gu-card-pack-picture
               type="temple"
               set=${F.set}
@@ -21907,7 +21767,7 @@
               ?domRef=${(0, we.Q)(K)}
               @click=${() => !!this.isIos && Wt()}
             ></gu-card-pack-picture>
-            ${L ? null : J.dy`<i class="draggablePackHitzone" ?domRef=${(0, we.Q)(_e)}></i>`}
+            ${A ? null : X.dy`<i class="draggablePackHitzone" ?domRef=${(0, we.Q)(fe)}></i>`}
           ` : null}
     </div>
   `
@@ -21921,11 +21781,11 @@
             }, styles: $s
         }
     }));
-    var As = o(4390), Cs = o(8929), Gt = o(7625), Yt = o(61709), us = o(24850), qt = o(11735), Zt = o(28510);
-    let ys = (() => {
+    var As = o(4390), bs = o(8929), Gt = o(7625), Yt = o(61709), ds = o(24850), qt = o(11735), Zt = o(28510);
+    let Cs = (() => {
         class x {
-            constructor(u, D, K) {
-                this.environment = u, this.router = D, this.modalService = K
+            constructor(u, T, K) {
+                this.environment = u, this.router = T, this.modalService = K
             }
 
             ngOnInit() {
@@ -21941,7 +21801,7 @@
         }
 
         return x.\u0275fac = function (u) {
-            return new (u || x)(e.Y36(ye.Ho), e.Y36(qt.F0), e.Y36(Zt.Qz))
+            return new (u || x)(e.Y36(xe.Ho), e.Y36(qt.F0), e.Y36(Zt.Qz))
         }, x.\u0275cmp = e.Xpm({
             type: x,
             selectors: [["cerberus-temple-chest-opened-modal"]],
@@ -21949,22 +21809,22 @@
             decls: 16,
             vars: 1,
             consts: [["bottom", "2x-large"], ["size", "small", "fillGradient", "gradients.gold.simple"], ["fillColor", "colors.light.100", "align", "center"], ["both", "2x-large"], ["kind", "tag", "target", "_blank", "fillColor", "colors.apocyan.300", 3, "href"], ["top", "2x-large"], ["size", "large", 3, "click"], ["iconLigature", "close_x", "fillColor", "colors.apocyan.300", 1, "xButton", 3, "click"]],
-            template: function (u, D) {
+            template: function (u, T) {
                 1 & u && (e.TgZ(0, "gu-vertical-space", 0)(1, "gu-heading-text", 1), e._uU(2, " Chest opened! "), e.qZA()(), e.TgZ(3, "gu-paragraph-text", 2), e._uU(4, " Opening a chest grants you 5 packs of the corresponding quality. Once you open a chest, the packs have to be created on the blockchain, and sent to you. "), e.TgZ(5, "strong"), e._uU(6, "This can take a few minutes to complete."), e.qZA()(), e.TgZ(7, "gu-vertical-space", 3)(8, "gu-simple-text-button", 4), e._uU(9, " you can check the status of your transaction here "), e.qZA()(), e.TgZ(10, "gu-paragraph-text", 2), e._uU(11, " When the transaction is complete, your new packs will show up in the temple.\n"), e.qZA(), e.TgZ(12, "gu-vertical-space", 5)(13, "gu-primary-hex-button", 6), e.NdJ("click", function () {
-                    return D.onBuyPacks()
+                    return T.onBuyPacks()
                 }), e._uU(14, " BUY "), e.qZA()(), e.TgZ(15, "gu-icon", 7), e.NdJ("click", function () {
-                    return D.closeModal()
-                }), e.qZA()), 2 & u && (e.xp6(8), e.s9C("href", D.transactionUrl))
+                    return T.closeModal()
+                }), e.qZA()), 2 & u && (e.xp6(8), e.s9C("href", T.transactionUrl))
             },
             styles: ["[_nghost-%COMP%]{display:flex;flex-direction:column;align-items:center;justify-content:center;background:#0F1B27;width:100%;min-width:60vh;max-width:75vw;min-height:40vh;padding:40px;text-align:center;position:relative;box-shadow:inset 0 0 0 2px #3d5a7480}.xButton[_ngcontent-%COMP%]{position:absolute;top:12px;right:12px;font-size:28px;cursor:pointer}.xButton[_ngcontent-%COMP%]:hover{color:#f6f6f6}"]
         }), x
     })();
-    var es = o(51395), Et = o(55778);
+    var es = o(51395), kt = o(55778);
     const Is = ["viewLayer"];
     let Ds = (() => {
         class x {
-            constructor(u, D, K, _e, tt, at, vt, dt, Pe) {
-                this.environment = u, this.packService = D, this.chestService = K, this.router = _e, this.ngZone = tt, this.ethService = at, this.modalService = vt, this.audioService = dt, this.navigationStateService = Pe, this.unopenedChests = [], this.unopenedPacks = [], this.unsubscribe = new Cs.xQ, this.volumeSetting = 1, this.currentWalletAddress = ""
+            constructor(u, T, K, fe, et, ot, ft, at, Pe) {
+                this.environment = u, this.packService = T, this.chestService = K, this.router = fe, this.ngZone = et, this.ethService = ot, this.modalService = ft, this.audioService = at, this.navigationStateService = Pe, this.unopenedChests = [], this.unopenedPacks = [], this.unsubscribe = new bs.xQ, this.volumeSetting = 1, this.currentWalletAddress = ""
             }
 
             ngOnInit() {
@@ -21988,21 +21848,21 @@
             }
 
             initChests() {
-                this.chestService.fetchChests(), this.chestService.chests$.pipe((0, Gt.R)(this.unsubscribe), (0, us.U)(u => this.formatChests(u))).subscribe(u => {
+                this.chestService.fetchChests(), this.chestService.chests$.pipe((0, Gt.R)(this.unsubscribe), (0, ds.U)(u => this.formatChests(u))).subscribe(u => {
                     this.unopenedChests = u, console.log("TempleRoute->initChests() chests", u)
                 })
             }
 
             formatChests(u) {
                 console.log("TempleRoute->formatChests() tps", u);
-                let D = [];
+                let T = [];
                 return u.forEach(K => {
-                    D = [...D, ...Array.from(Array(K.amount)).map(_e => ({rarity: K.rarity, set: K.set, type: K.type}))]
-                }), D
+                    T = [...T, ...Array.from(Array(K.amount)).map(fe => ({rarity: K.rarity, set: K.set, type: K.type}))]
+                }), T
             }
 
             onPackOpened(u) {
-                console.log("TempleRoute->onOpenPack() opening pack", u.detail.pack), this.packService.openPack$(u.detail.pack).pipe((0, he.q)(1)).subscribe(D => {
+                console.log("TempleRoute->onOpenPack() opening pack", u.detail.pack), this.packService.openPack$(u.detail.pack).pipe((0, he.q)(1)).subscribe(T => {
                     console.log("TempleRoute->onOpenPack() pack opened!!!", u.detail.pack)
                 })
             }
@@ -22022,7 +21882,7 @@
             }
 
             showChestOpenedModal(u) {
-                this.modalService.open(ys, {
+                this.modalService.open(Cs, {
                     defaultStylings: !1,
                     centered: !0,
                     scrollable: !1
@@ -22031,27 +21891,27 @@
         }
 
         return x.\u0275fac = function (u) {
-            return new (u || x)(e.Y36(ye.Ho), e.Y36(es.F), e.Y36(es.W), e.Y36(qt.F0), e.Y36(e.R0b), e.Y36(ye.ux), e.Y36(Zt.Qz), e.Y36(ye.pk), e.Y36(Et.fY))
+            return new (u || x)(e.Y36(xe.Ho), e.Y36(es.F), e.Y36(es.W), e.Y36(qt.F0), e.Y36(e.R0b), e.Y36(xe.ux), e.Y36(Zt.Qz), e.Y36(xe.pk), e.Y36(kt.fY))
         }, x.\u0275cmp = e.Xpm({
             type: x,
             selectors: [["cerberus-temple"]],
-            viewQuery: function (u, D) {
+            viewQuery: function (u, T) {
                 if (1 & u && e.Gf(Is, 7), 2 & u) {
                     let K;
-                    e.iGM(K = e.CRH()) && (D.viewLayerDom = K.first)
+                    e.iGM(K = e.CRH()) && (T.viewLayerDom = K.first)
                 }
             },
             decls: 4,
             vars: 4,
             consts: [[3, "headerAreaHeight", "unOpenedPacks", "unOpenedChests", "volume", "onPackOpened", "onChestOpened", "onBuyPacks"], ["viewLayer", ""]],
-            template: function (u, D) {
-                1 & u && (e.TgZ(0, "gu-temple-view-layer", 0, 1), e.NdJ("onPackOpened", function (_e) {
-                    return D.onPackOpened(_e)
-                })("onChestOpened", function (_e) {
-                    return D.onChestOpened(_e)
+            template: function (u, T) {
+                1 & u && (e.TgZ(0, "gu-temple-view-layer", 0, 1), e.NdJ("onPackOpened", function (fe) {
+                    return T.onPackOpened(fe)
+                })("onChestOpened", function (fe) {
+                    return T.onChestOpened(fe)
                 })("onBuyPacks", function () {
-                    return D.onBuyPacks()
-                }), e.qZA(), e.TgZ(2, "gu-temple-overlay-layer"), e._uU(3, " Your screen is too puny for such a mighty prize. Please expand your browser window or use a larger device such as a laptop or PC.\n"), e.qZA()), 2 & u && e.Q6J("headerAreaHeight", D.navigationStateService.dataStore.headerAreaHeight)("unOpenedPacks", D.unopenedPacks)("unOpenedChests", D.unopenedChests)("volume", D.volumeSetting)
+                    return T.onBuyPacks()
+                }), e.qZA(), e.TgZ(2, "gu-temple-overlay-layer"), e._uU(3, " Your screen is too puny for such a mighty prize. Please expand your browser window or use a larger device such as a laptop or PC.\n"), e.qZA()), 2 & u && e.Q6J("headerAreaHeight", T.navigationStateService.dataStore.headerAreaHeight)("unOpenedPacks", T.unopenedPacks)("unOpenedChests", T.unopenedChests)("volume", T.volumeSetting)
             },
             styles: ["[_nghost-%COMP%]{display:flex;flex-direction:column}"]
         }), x
@@ -22118,8 +21978,8 @@
 
     let Fs = (() => {
         class x {
-            constructor(u, D, K, _e, tt) {
-                this.activeModal = u, this.router = D, this.environment = K, this.akuma = _e, this.starsService = tt, this.stage = "confirm", this.awaitingPurchaseRes = !1, this.buyNowEvent$ = new e.vpe
+            constructor(u, T, K, fe, et) {
+                this.activeModal = u, this.router = T, this.environment = K, this.akuma = fe, this.starsService = et, this.stage = "confirm", this.awaitingPurchaseRes = !1, this.buyNowEvent$ = new e.vpe
             }
 
             ngOnInit() {
@@ -22171,7 +22031,7 @@
         }
 
         return x.\u0275fac = function (u) {
-            return new (u || x)(e.Y36(Zt.mX), e.Y36(qt.F0), e.Y36(ye.Ho), e.Y36(Et.jt), e.Y36(Et.cM))
+            return new (u || x)(e.Y36(Zt.mX), e.Y36(qt.F0), e.Y36(xe.Ho), e.Y36(kt.jt), e.Y36(kt.cM))
         }, x.\u0275cmp = e.Xpm({
             type: x,
             selectors: [["cerberus-star-store-buy-modal"]],
@@ -22179,20 +22039,20 @@
             outputs: {buyNowEvent$: "buyNowEvent$"},
             decls: 13,
             vars: 7,
-            consts: [["goldBorder", "top"], ["top", "2x-large", 1, "headerSection"], ["size", "small", "fillGradient", "gradients.gold.simple", "align", "center"], ["top", "small", "bottom", "large", 1, "descriptionSection"], ["kind", "small", "align", "center", "fillColor", "colors.light.100", 4, "ngIf"], ["kind", "small", "align", "center", "fillColor", "colors.light.100", 3, "innerHTML", 4, "ngIf"], ["class", "imageSection", 4, "ngIf"], ["top", "large", "bottom", "2x-large", 1, "ctaSection"], [4, "ngIf", "ngIfElse"], ["confirmSection", ""], ["kind", "small", "align", "center", "fillColor", "colors.light.100"], [1, "descriptionSection__price"], ["iconLigature", "collectable_stars", "fillGradientTarget", "top", "fillGradient", "#03A9F4", 1, "descriptionSection__icon"], ["kind", "small", "align", "center", "fillColor", "colors.light.100", 3, "innerHTML"], ["fillColor", "colors.gunmetal.300", 3, "click"], [1, "imageSection"], [1, "imageSection__picture"], ["type", "image/jpg", 3, "srcset"], [1, "imageSection__picture__img", 3, "src"], ["size", "large", "text", "OKAY", 1, "ctaSection__primary", 3, "click"], ["size", "large", "text", "BACK", 1, "ctaSection__secondary", 3, "click"], ["size", "large", "text", "BUY NOW", 1, "ctaSection__primary", 3, "disabled", "click"]],
-            template: function (u, D) {
+            consts: [["goldBorder", "top"], ["top", "2x-large", 1, "headerSection"], ["size", "small", "fillGradient", "gradients.gold.simple", "align", "center"], ["top", "small", "bottom", "large", 1, "descriptionSection"], ["kind", "small", "align", "center", "fillColor", "colors.light.100", 4, "ngIf"], ["kind", "small", "align", "center", "fillColor", "colors.light.100", 3, "innerHTML", 4, "ngIf"], ["class", "imageSection", 4, "ngIf"], ["top", "large", "bottom", "2x-large", 1, "ctaSection"], [4, "ngIf", "ngIfElse"], ["confirmSection", ""], ["kind", "small", "align", "center", "fillColor", "colors.light.100"], [1, "descriptionSection__price"], ["iconLigature", "collectable_stars", "fillGradientTarget", "top", "fillGradient", "gradients.apocyan.simple", 1, "descriptionSection__icon"], ["kind", "small", "align", "center", "fillColor", "colors.light.100", 3, "innerHTML"], ["fillColor", "colors.gunmetal.300", 3, "click"], [1, "imageSection"], [1, "imageSection__picture"], ["type", "image/jpg", 3, "srcset"], [1, "imageSection__picture__img", 3, "src"], ["size", "large", "text", "OKAY", 1, "ctaSection__primary", 3, "click"], ["size", "large", "text", "BACK", 1, "ctaSection__secondary", 3, "click"], ["size", "large", "text", "BUY NOW", 1, "ctaSection__primary", 3, "disabled", "click"]],
+            template: function (u, T) {
                 if (1 & u && (e._UZ(0, "gu-modal-background", 0), e.TgZ(1, "gu-vertical-space", 1)(2, "gu-heading-text", 2), e._uU(3), e.qZA()(), e.TgZ(4, "gu-vertical-space", 3), e.YNc(5, lo, 9, 2, "gu-paragraph-text", 4), e.YNc(6, Ls, 1, 1, "gu-paragraph-text", 5), e.YNc(7, Us, 9, 1, "gu-paragraph-text", 4), e.qZA(), e.YNc(8, Rs, 4, 2, "gu-vertical-space", 6), e.TgZ(9, "gu-vertical-space", 7), e.YNc(10, Bs, 2, 0, "ng-container", 8), e.YNc(11, Gs, 2, 1, "ng-template", null, 9, e.W1O), e.qZA()), 2 & u) {
                     const K = e.MAs(12);
-                    e.xp6(3), e.hij(" ", D.headingText, " "), e.xp6(2), e.Q6J("ngIf", "confirm" === D.stage), e.xp6(1), e.Q6J("ngIf", "failure" === D.stage), e.xp6(1), e.Q6J("ngIf", "success" === D.stage), e.xp6(1), e.Q6J("ngIf", "confirm" === D.stage), e.xp6(2), e.Q6J("ngIf", "confirm" !== D.stage)("ngIfElse", K)
+                    e.xp6(3), e.hij(" ", T.headingText, " "), e.xp6(2), e.Q6J("ngIf", "confirm" === T.stage), e.xp6(1), e.Q6J("ngIf", "failure" === T.stage), e.xp6(1), e.Q6J("ngIf", "success" === T.stage), e.xp6(1), e.Q6J("ngIf", "confirm" === T.stage), e.xp6(2), e.Q6J("ngIf", "confirm" !== T.stage)("ngIfElse", K)
                 }
             },
-            directives: [c.O5],
+            directives: [d.O5],
             styles: ["[_nghost-%COMP%]{position:relative;display:flex;flex-direction:column;padding:0 60px;align-items:center;max-width:100vw;width:520px}[_nghost-%COMP%] > *[_ngcontent-%COMP%]{position:relative}.descriptionSection__price[_ngcontent-%COMP%]{color:var(--gu-blue)}.descriptionSection__icon[_ngcontent-%COMP%]{display:inline-flex}.imageSection[_ngcontent-%COMP%]{display:flex;justify-content:center}.imageSection__picture__img[_ngcontent-%COMP%]{width:280px;max-width:70vw}.ctaSection[_ngcontent-%COMP%]{display:flex;justify-content:center;width:100%}.ctaSection[_ngcontent-%COMP%]   gu-primary-hex-button[_ngcontent-%COMP%]:nth-child(2){margin-left:20px}"]
         }), x
     })(), Ns = (() => {
         class x {
-            constructor(u, D) {
-                this.activeModal = u, this.akuma = D
+            constructor(u, T) {
+                this.activeModal = u, this.akuma = T
             }
 
             ngOnInit() {
@@ -22205,7 +22065,7 @@
         }
 
         return x.\u0275fac = function (u) {
-            return new (u || x)(e.Y36(Zt.mX), e.Y36(Et.jt))
+            return new (u || x)(e.Y36(Zt.mX), e.Y36(kt.jt))
         }, x.\u0275cmp = e.Xpm({
             type: x,
             selectors: [["cerberus-star-store-more-info-modal"]],
@@ -22213,10 +22073,10 @@
             decls: 12,
             vars: 4,
             consts: [["iconLigature", "close_x", "fillColor", "colors.apocyan.300", 1, "closeIcon", 3, "click"], ["top", "x-large", 1, "imageSection"], [1, "imageSection__picture"], ["type", "image/jpg", 3, "srcset"], [1, "imageSection__picture__img", 3, "src"], ["both", "large"], ["size", "x-small", "fillColor", "colors.light.100", "align", "center"], ["bottom", "x-large"], ["kind", "small", "align", "center", "fillColor", "colors.light.100"]],
-            template: function (u, D) {
+            template: function (u, T) {
                 1 & u && (e._UZ(0, "gu-modal-background"), e.TgZ(1, "gu-icon", 0), e.NdJ("click", function () {
-                    return D.exit()
-                }), e.qZA(), e.TgZ(2, "gu-vertical-space", 1)(3, "picture", 2), e._UZ(4, "source", 3)(5, "img", 4), e.qZA()(), e.TgZ(6, "gu-vertical-space", 5)(7, "gu-heading-text", 6), e._uU(8), e.qZA()(), e.TgZ(9, "gu-vertical-space", 7)(10, "gu-paragraph-text", 8), e._uU(11), e.qZA()()), 2 & u && (e.xp6(4), e.Q6J("srcset", D.imageUrl, e.LSH), e.xp6(1), e.Q6J("src", D.imageUrl, e.LSH), e.xp6(3), e.hij(" ", D.name, " "), e.xp6(3), e.hij(" ", D.description, " "))
+                    return T.exit()
+                }), e.qZA(), e.TgZ(2, "gu-vertical-space", 1)(3, "picture", 2), e._UZ(4, "source", 3)(5, "img", 4), e.qZA()(), e.TgZ(6, "gu-vertical-space", 5)(7, "gu-heading-text", 6), e._uU(8), e.qZA()(), e.TgZ(9, "gu-vertical-space", 7)(10, "gu-paragraph-text", 8), e._uU(11), e.qZA()()), 2 & u && (e.xp6(4), e.Q6J("srcset", T.imageUrl, e.LSH), e.xp6(1), e.Q6J("src", T.imageUrl, e.LSH), e.xp6(3), e.hij(" ", T.name, " "), e.xp6(3), e.hij(" ", T.description, " "))
             },
             styles: ["[_nghost-%COMP%]{position:relative;display:flex;flex-direction:column;padding:0 60px;align-items:center;max-width:100vw;width:520px}[_nghost-%COMP%] > *[_ngcontent-%COMP%]{position:relative}.imageSection[_ngcontent-%COMP%]{display:flex;justify-content:center}.imageSection__picture__img[_ngcontent-%COMP%]{max-width:100%}.closeIcon[_ngcontent-%COMP%]{position:absolute!important;top:0;right:0;margin:14px 16px;font-size:20px;cursor:pointer}"]
         }), x
@@ -22241,15 +22101,15 @@
         }
     }
 
-    function xs(x, Z) {
+    function ys(x, Z) {
         if (1 & x && (e.ynx(0), e.YNc(1, co, 1, 6, "gu-star-store-sale-item", 13), e.BQk()), 2 & x) {
-            const u = Z.$implicit, D = e.oxw(2);
-            e.xp6(1), e.Q6J("ngIf", D.isCurrentItem(u))
+            const u = Z.$implicit, T = e.oxw(2);
+            e.xp6(1), e.Q6J("ngIf", T.isCurrentItem(u))
         }
     }
 
     function uo(x, Z) {
-        if (1 & x && (e.ynx(0), e.TgZ(1, "div", 7)(2, "gu-vertical-space", 8)(3, "gu-heading-text", 9), e._uU(4, " Welcome to the Star Store "), e.qZA(), e.TgZ(5, "gu-paragraph-text", 10), e._uU(6, " Exchange your Stars for some awesome items. "), e._UZ(7, "br"), e._uU(8, " Availability and prices are subject to change. "), e.qZA()(), e.TgZ(9, "gu-vertical-space", 11), e.YNc(10, xs, 2, 1, "ng-container", 12), e.qZA()(), e.BQk()), 2 & x) {
+        if (1 & x && (e.ynx(0), e.TgZ(1, "div", 7)(2, "gu-vertical-space", 8)(3, "gu-heading-text", 9), e._uU(4, " Welcome to the Star Store "), e.qZA(), e.TgZ(5, "gu-paragraph-text", 10), e._uU(6, " Exchange your Stars for some awesome items. "), e._UZ(7, "br"), e._uU(8, " Availability and prices are subject to change. "), e.qZA()(), e.TgZ(9, "gu-vertical-space", 11), e.YNc(10, ys, 2, 1, "ng-container", 12), e.qZA()(), e.BQk()), 2 & x) {
             const u = e.oxw();
             e.xp6(10), e.Q6J("ngForOf", u.storeItems)
         }
@@ -22261,8 +22121,8 @@
 
     let po = (() => {
         class x {
-            constructor(u, D, K) {
-                this.modalService = u, this.starsService = D, this.akuma = K, this.storeItems = [], this.currentEpochTime = this.timeNowEpoch(), this.currentItemsToDisplay = !0, this.unsubscribe = new Cs.xQ
+            constructor(u, T, K) {
+                this.modalService = u, this.starsService = T, this.akuma = K, this.storeItems = [], this.currentEpochTime = this.timeNowEpoch(), this.currentItemsToDisplay = !0, this.unsubscribe = new bs.xQ
             }
 
             ngOnInit() {
@@ -22298,19 +22158,19 @@
             }
 
             scheduleRefresh(u) {
-                const D = Date.now(),
-                    K = u.reduce((tt, at) => tt.end_timestamp_epoch < at.end_timestamp_epoch ? tt : at);
+                const T = Date.now(),
+                    K = u.reduce((et, ot) => et.end_timestamp_epoch < ot.end_timestamp_epoch ? et : ot);
                 if (!K) return;
-                const _e = K.end_timestamp_epoch + 1e3 - D;
-                _e < 0 || (0, Tt.H)(_e).pipe((0, Gt.R)(this.unsubscribe), (0, he.q)(1)).subscribe(tt => {
+                const fe = K.end_timestamp_epoch + 1e3 - T;
+                fe < 0 || (0, Tt.H)(fe).pipe((0, Gt.R)(this.unsubscribe), (0, he.q)(1)).subscribe(et => {
                     this.initStoreItems()
                 })
             }
 
             logStarStoreOpened() {
                 const u = {};
-                this.storeItems.forEach((D, K) => {
-                    u[`item_${K + 1}`] = D
+                this.storeItems.forEach((T, K) => {
+                    u[`item_${K + 1}`] = T
                 }), this.akuma.postEvent("Screen", "starstoreHome_opened", u)
             }
 
@@ -22321,8 +22181,8 @@
             showBuyItem(u) {
                 this.logBuyButton(u), this.modalService.hasOpenModals() && this.modalService.dismissAll(), this.openedModal$ && this.openedModal$.unsubscribe();
                 const K = this.modalService.open(Fs, {defaultStylings: !1, centered: !0}).componentInstance;
-                K.storeItem = u, this.openedModal$ = K.buyNowEvent$.pipe((0, he.q)(1), (0, Yt.VS)(_e => (K.awaitingPurchaseRes = !0, this.handleBuyNow$(_e)))).subscribe(_e => {
-                    K.awaitingPurchaseRes = !1, K.setStage(_e ? "success" : "failure")
+                K.storeItem = u, this.openedModal$ = K.buyNowEvent$.pipe((0, he.q)(1), (0, Yt.VS)(fe => (K.awaitingPurchaseRes = !0, this.handleBuyNow$(fe)))).subscribe(fe => {
+                    K.awaitingPurchaseRes = !1, K.setStage(fe ? "success" : "failure")
                 })
             }
 
@@ -22333,25 +22193,25 @@
             }
 
             handleBuyNow$(u) {
-                return this.starsService.purchaseItem$(u.asset_group, u.value).pipe((0, he.q)(1), (0, us.U)(D => (console.log("StarStoreRoute->handleBuyNow$", D), !(D && D.error))))
+                return this.starsService.purchaseItem$(u.asset_group, u.value).pipe((0, he.q)(1), (0, ds.U)(T => (console.log("StarStoreRoute->handleBuyNow$", T), !(T && T.error))))
             }
         }
 
         return x.\u0275fac = function (u) {
-            return new (u || x)(e.Y36(Zt.Qz), e.Y36(Et.cM), e.Y36(Et.jt))
+            return new (u || x)(e.Y36(Zt.Qz), e.Y36(kt.cM), e.Y36(kt.jt))
         }, x.\u0275cmp = e.Xpm({
             type: x,
             selectors: [["cerberus-star-store-route"]],
             decls: 8,
             vars: 2,
             consts: [[1, "background"], [1, "background__picture"], ["srcset", "\n        /assets/images/misc-art/misc-art--star-store@1x.webp 2284w,\n        /assets/images/misc-art/misc-art--star-store@1x.webp 1714w,\n        /assets/images/misc-art/misc-art--star-store@1x.webp 1142w,\n        /assets/images/misc-art/misc-art--star-store@1x.webp  572w\n      ", "type", "image/webp"], ["srcset", "\n        /assets/images/misc-art/misc-art--star-store@1x.jpg 2284w,\n        /assets/images/misc-art/misc-art--star-store@1x.jpg 1714w,\n        /assets/images/misc-art/misc-art--star-store@1x.jpg 1142w,\n        /assets/images/misc-art/misc-art--star-store@1x.jpg  572w\n      ", "type", "image/jpg"], ["src", "/assets/images/misc-art/misc-art--star-store@1x.jpg", "alt", "", 1, "background__picture__img"], [4, "ngIf", "ngIfElse"], ["emptyStateSection", ""], [1, "storeSection"], ["top", "x-large", 1, "storeSection__header"], ["size", "large", "fillGradient", "gradients.gold.simple", "align", "center"], ["kind", "small", "align", "center", "fillColor", "colors.light.100"], ["top", "x-large", 1, "storeSection__specials"], [4, "ngFor", "ngForOf"], ["class", "storeSection__specials__item", 3, "price", "imageUrl", "name", "durationType", "endTimestamp", "title", "onBuyItem", "onMoreInfo", 4, "ngIf"], [1, "storeSection__specials__item", 3, "price", "imageUrl", "name", "durationType", "endTimestamp", "title", "onBuyItem", "onMoreInfo"], [1, "emptyStateSection"]],
-            template: function (u, D) {
+            template: function (u, T) {
                 if (1 & u && (e.TgZ(0, "div", 0)(1, "picture", 1), e._UZ(2, "source", 2)(3, "source", 3)(4, "img", 4), e.qZA()(), e.YNc(5, uo, 11, 1, "ng-container", 5), e.YNc(6, zs, 5, 0, "ng-template", null, 6, e.W1O)), 2 & u) {
                     const K = e.MAs(7);
-                    e.xp6(5), e.Q6J("ngIf", D.currentItemsToDisplay)("ngIfElse", K)
+                    e.xp6(5), e.Q6J("ngIf", T.currentItemsToDisplay)("ngIfElse", K)
                 }
             },
-            directives: [c.O5, c.sg],
+            directives: [d.O5, d.sg],
             styles: ["[_nghost-%COMP%]{display: flex;flex-flow: column nowrap;align-items: center}.background[_ngcontent-%COMP%], .background__picture[_ngcontent-%COMP%]{display: none;}.storeSection[_ngcontent-%COMP%]{position: relative;overflow-y: auto;width: 100%}.storeSection__header[_ngcontent-%COMP%]{padding: 0 8px}.storeSection__header[_ngcontent-%COMP%] gu-paragraph-text[_ngcontent-%COMP%]{max-width: 630px;margin: auto}.storeSection__specials[_ngcontent-%COMP%]{display: flex;flex-wrap: wrap;justify-content: center}.emptyStateSection[_ngcontent-%COMP%]{position: relative;margin: auto}"]
         }), x
     })();
@@ -22416,16 +22276,16 @@
             decls: 10,
             vars: 4,
             consts: [["goldBorder", "top"], ["top", "4x-large"], ["align", "center", "fillGradient", "gradients.gold.simple", "fillGradientTarget", "bottom", "size", "small"], ["top", "large"], ["align", "center", "kind", "small", "fillColor", "colors.light.100", 1, "text"], ["top", "2x-large", "bottom", "4x-large", 1, "ctaSection"], ["class", "ctaSection__button", "size", "large", 3, "text", "click", 4, "ngIf"], ["size", "large", 1, "ctaSection__button", 3, "text", "click"]],
-            template: function (u, D) {
-                1 & u && (e._UZ(0, "gu-modal-background", 0), e.TgZ(1, "gu-vertical-space", 1)(2, "gu-heading-text", 2), e._uU(3), e.qZA()(), e.TgZ(4, "gu-vertical-space", 3)(5, "gu-paragraph-text", 4), e._uU(6), e.qZA()(), e.TgZ(7, "gu-vertical-space", 5), e.YNc(8, fo, 1, 1, "gu-secondary-hex-button", 6), e.YNc(9, vo, 1, 1, "gu-primary-hex-button", 6), e.qZA()), 2 & u && (e.xp6(3), e.hij(" ", D.title, " "), e.xp6(3), e.hij(" ", D.text, " "), e.xp6(2), e.Q6J("ngIf", D.secondaryCtaText), e.xp6(1), e.Q6J("ngIf", D.primaryCtaText))
+            template: function (u, T) {
+                1 & u && (e._UZ(0, "gu-modal-background", 0), e.TgZ(1, "gu-vertical-space", 1)(2, "gu-heading-text", 2), e._uU(3), e.qZA()(), e.TgZ(4, "gu-vertical-space", 3)(5, "gu-paragraph-text", 4), e._uU(6), e.qZA()(), e.TgZ(7, "gu-vertical-space", 5), e.YNc(8, fo, 1, 1, "gu-secondary-hex-button", 6), e.YNc(9, vo, 1, 1, "gu-primary-hex-button", 6), e.qZA()), 2 & u && (e.xp6(3), e.hij(" ", T.title, " "), e.xp6(3), e.hij(" ", T.text, " "), e.xp6(2), e.Q6J("ngIf", T.secondaryCtaText), e.xp6(1), e.Q6J("ngIf", T.primaryCtaText))
             },
-            directives: [c.O5],
+            directives: [d.O5],
             styles: ["[_nghost-%COMP%]{position:relative;display:flex;flex-direction:column;padding:0 60px;align-items:center;max-width:100vw;width:640px}[_nghost-%COMP%] > *[_ngcontent-%COMP%]{position:relative}.alertIcon[_ngcontent-%COMP%]{font-size:80px}.heading[_ngcontent-%COMP%]{text-transform:uppercase}.ctaSection[_ngcontent-%COMP%]{display:flex;flex-flow:row nowrap}.ctaSection__button[_ngcontent-%COMP%]{min-width:200px}.ctaSection__button[_ngcontent-%COMP%]:nth-child(2){margin-left:16px}"]
         }), x
     })();
     var Ws = o(92198);
 
-    function Ye(x, Z) {
+    function Ke(x, Z) {
         1 & x && e._UZ(0, "gu-icon", 3)
     }
 
@@ -22450,10 +22310,10 @@
             decls: 3,
             vars: 5,
             consts: [[1, "check", 3, "ngClass"], [1, "check__box"], ["class", "checkmark", "iconLigature", "checkbox_tick", 4, "ngIf"], ["iconLigature", "checkbox_tick", 1, "checkmark"]],
-            template: function (u, D) {
-                1 & u && (e.TgZ(0, "div", 0)(1, "div", 1), e.YNc(2, Ye, 1, 0, "gu-icon", 2), e.qZA()()), 2 & u && (e.Q6J("ngClass", e.WLB(2, Co, D.finished, !D.finished)), e.xp6(2), e.Q6J("ngIf", D.finished))
+            template: function (u, T) {
+                1 & u && (e.TgZ(0, "div", 0)(1, "div", 1), e.YNc(2, Ke, 1, 0, "gu-icon", 2), e.qZA()()), 2 & u && (e.Q6J("ngClass", e.WLB(2, Co, T.finished, !T.finished)), e.xp6(2), e.Q6J("ngIf", T.finished))
             },
-            directives: [c.mk, c.O5],
+            directives: [d.mk, d.O5],
             styles: [".check__text[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22)}.check[_ngcontent-%COMP%]{display:flex;align-items:center;justify-content:center}.check__text[_ngcontent-%COMP%]{font-weight:700;line-height:28px;padding-left:10px}.check__complete[_ngcontent-%COMP%]{color:#50bcff;border-color:#50bcff}.check__unfinished[_ngcontent-%COMP%]{color:#7192b0;border-color:#7192b0}.check__box[_ngcontent-%COMP%]{height:20px;width:20px;background:#0F1B27;border:2px solid #8BE1E0;box-sizing:border-box}.checkmark[_ngcontent-%COMP%]{color:#50bcff;display:flex;font-weight:700}"]
         }), x
     })();
@@ -22470,20 +22330,20 @@
     }, Zs = function (x) {
         return [x]
     };
-    let Po = (() => {
+    let So = (() => {
         class x {
-            constructor(u, D, K, _e) {
-                this.activeModal = u, this.analyticsService = D, this.referralService = K, this.authService = _e, this.unsubscribe = new Cs.xQ
+            constructor(u, T, K, fe) {
+                this.activeModal = u, this.analyticsService = T, this.referralService = K, this.authService = fe, this.unsubscribe = new bs.xQ
             }
 
-            openLink(u, D) {
+            openLink(u, T) {
                 window.location.href = u
             }
 
             ngOnInit() {
                 this.isUserSignedIn = !!this.authService.getUserId(), this.authService.account$.pipe((0, Gt.R)(this.unsubscribe)).subscribe(u => {
-                    this.isUserSignedIn = !!u, this.userId = this.isUserSignedIn ? this.authService.getUserId() : 0, this.referralService.getUserReferralsStatus(this.userId).pipe((0, Gt.R)(this.unsubscribe)).subscribe(D => {
-                        console.log(D), this.userReferrals = D, this.totalAmount = this.userReferrals.reduce((K, _e) => K + _e.total_amt, 0)
+                    this.isUserSignedIn = !!u, this.userId = this.isUserSignedIn ? this.authService.getUserId() : 0, this.referralService.getUserReferralsStatus(this.userId).pipe((0, Gt.R)(this.unsubscribe)).subscribe(T => {
+                        console.log(T), this.userReferrals = T, this.totalAmount = this.userReferrals.reduce((K, fe) => K + fe.total_amt, 0)
                     })
                 })
             }
@@ -22498,7 +22358,7 @@
         }
 
         return x.\u0275fac = function (u) {
-            return new (u || x)(e.Y36(Zt.mX), e.Y36(Et.jt), e.Y36(Et.C_), e.Y36(ye.mI))
+            return new (u || x)(e.Y36(Zt.mX), e.Y36(kt.jt), e.Y36(kt.C_), e.Y36(xe.mI))
         }, x.\u0275cmp = e.Xpm({
             type: x,
             selectors: [["referrals-status"]],
@@ -22506,17 +22366,17 @@
             decls: 47,
             vars: 10,
             consts: [["iconLigature", "close_x", 1, "modal__closeButton", 3, "click"], [1, "referrals__modal__content"], ["top", "3x-large", "bottom", "medium"], ["align", "center", "size", "small", 3, "responsiveSize"], ["top", "large", "bottom", "large"], [1, "referrals_status_container"], [2, "width", "100%"], [4, "ngFor", "ngForOf"], [1, "divider__line"], ["top", "medium", "bottom", "medium"], [1, "earnings"], [1, "earnings__shine"], [1, "earnings__container"], [1, "earnings__text"], [1, "earnings__value"], [1, "earnings__subtext"], [1, "earnings__info"], ["fillColor", "colors.light.500", "kind", "x-small", "align", "center", 2, "max-width", "450px"], ["top", "2x-large", "bottom", "3x-large"], [1, "signInToBegin"], ["size", "large", 2, "padding", "0 20px", 3, "click"], [3, "finished"]],
-            template: function (u, D) {
+            template: function (u, T) {
                 1 & u && (e.TgZ(0, "gu-icon", 0), e.NdJ("click", function () {
-                    return D.onClose()
+                    return T.onClose()
                 }), e.qZA(), e.TgZ(1, "div", 1)(2, "gu-vertical-space", 2)(3, "gu-heading-text", 3), e._uU(4, " Referral Status"), e.qZA()(), e.TgZ(5, "gu-vertical-space", 4)(6, "div", 5)(7, "table", 6)(8, "tr")(9, "th"), e._uU(10, "User"), e.qZA(), e.TgZ(11, "th"), e._uU(12, "GU account"), e.qZA(), e.TgZ(13, "th"), e._uU(14, "Coinbase account"), e.qZA(), e.TgZ(15, "th"), e._uU(16, "Game played"), e.qZA(), e.TgZ(17, "th"), e._uU(18, "Reward Status"), e.qZA()(), e.YNc(19, xo, 11, 5, "tr", 7), e.qZA()()(), e._UZ(20, "div", 8), e.TgZ(21, "gu-vertical-space", 9)(22, "gu-heading-text", 3), e._uU(23, " Earnings"), e.qZA()(), e.TgZ(24, "gu-vertical-space", 9)(25, "div", 10), e._UZ(26, "div", 11), e.TgZ(27, "div", 12)(28, "div", 13)(29, "div", 14), e._uU(30), e.qZA(), e.TgZ(31, "div", 15), e._uU(32, " Worth of Eth "), e.qZA(), e.TgZ(33, "div", 16), e._uU(34, " Earned from Referrals "), e.qZA()()()()(), e.TgZ(35, "gu-vertical-space", 9)(36, "gu-paragraph-text", 17), e._uU(37, " Once a friend has completed the required steps, it will take a few days to verify everything. Your referral earnings will be payed out every 7 days "), e.qZA()(), e.TgZ(38, "gu-vertical-space", 9)(39, "gu-paragraph-text", 17)(40, "strong"), e._uU(41, "Need some help?"), e.qZA(), e._uU(42, " Reach out to us on social media! "), e.qZA()(), e.TgZ(43, "gu-vertical-space", 18)(44, "div", 19)(45, "gu-primary-hex-button", 20), e.NdJ("click", function () {
-                    return D.onClose()
-                }), e._uU(46, " Close Window "), e.qZA()()()()), 2 & u && (e.xp6(3), e.Q6J("responsiveSize", e.VKq(5, Zs, e.DdM(4, Hs))), e.xp6(16), e.Q6J("ngForOf", D.userReferrals), e.xp6(3), e.Q6J("responsiveSize", e.VKq(8, Zs, e.DdM(7, Hs))), e.xp6(8), e.hij(" $", D.totalAmount, " "))
+                    return T.onClose()
+                }), e._uU(46, " Close Window "), e.qZA()()()()), 2 & u && (e.xp6(3), e.Q6J("responsiveSize", e.VKq(5, Zs, e.DdM(4, Hs))), e.xp6(16), e.Q6J("ngForOf", T.userReferrals), e.xp6(3), e.Q6J("responsiveSize", e.VKq(8, Zs, e.DdM(7, Hs))), e.xp6(8), e.hij(" $", T.totalAmount, " "))
             },
-            directives: [c.sg, yo],
+            directives: [d.sg, yo],
             styles: ["[_nghost-%COMP%]{display:flex;flex-direction:column;max-width:840px;text-align:center}.modal__closeButton[_ngcontent-%COMP%]{position:absolute;top:20px;right:20px;z-index:1;font-size:calc(var(--vh) * 2);color:#8be1e0;cursor:pointer}.modal__closeButton[_ngcontent-%COMP%]:hover{color:#f6f6f6}.referrals__modal__content[_ngcontent-%COMP%]{background:#0F1B27;box-sizing:border-box;border:2px solid #3D5A74;display:flex;flex-direction:column;padding:0 50px;align-items:center}@media only screen and (max-width: 768px){.referrals__modal__content[_ngcontent-%COMP%]{padding:0 20px;overflow-y:auto}}table[_ngcontent-%COMP%], th[_ngcontent-%COMP%], td[_ngcontent-%COMP%]{border-left:2px solid #0A0A0A;border-right:2px solid #0A0A0A;border-collapse:collapse}th[_ngcontent-%COMP%], td[_ngcontent-%COMP%]{text-align:center}th[_ngcontent-%COMP%]{font-size:16px;font-weight:400;line-height:24px;background:#1D2F41;color:#f6f6f6;padding:20px}td[_ngcontent-%COMP%]{font-size:16px;font-weight:400;line-height:24px;padding:10px 5px;color:#464646}tr[_ngcontent-%COMP%]{background:#F6F6F6}tr[_ngcontent-%COMP%]:nth-child(odd){background-color:#d7d7d7}.divider__line[_ngcontent-%COMP%]{border:1px solid #1D2F41;margin:20px;width:100%}.earnings[_ngcontent-%COMP%]{display:flex;flex-direction:row}.earnings__container[_ngcontent-%COMP%]{background:linear-gradient(90deg,rgba(242,242,242,.1) .67%,rgba(255,255,255,.1) 51.76%,rgba(242,242,242,.1) 100%);border:1px solid #7f7f7f;box-sizing:border-box;font-family:Unchained;font-style:normal}.earnings__shine[_ngcontent-%COMP%]{background:linear-gradient(180deg,#fff2d8 0%,#ebc98b 50.34%,#c6a052 100%);width:8px;height:60px;box-sizing:border-box}.earnings__text[_ngcontent-%COMP%]{display:flex;flex-direction:row;justify-content:center;align-items:center;margin:10px}.earnings__value[_ngcontent-%COMP%]{font-weight:700;font-size:32px;line-height:38px;text-transform:uppercase;color:#f6f6f6;padding-right:5px}.earnings__subtext[_ngcontent-%COMP%]{font-weight:700;font-size:12px;line-height:20px;text-transform:uppercase;color:#b6b6b6;padding-right:2vw}.earnings__info[_ngcontent-%COMP%]{font-weight:400;font-size:16px;line-height:24px;color:#f6f6f6}.socialButton[_ngcontent-%COMP%]{cursor:pointer;font-size:35px;margin:0 5px}.referrals_status_container[_ngcontent-%COMP%]{width:100%}@media only screen and (max-width: 768px){.referrals_status_container[_ngcontent-%COMP%]{width:90vw;overflow-x:scroll}}"]
         }), x
-    })(), So = (() => {
+    })(), Po = (() => {
         class x {
         }
 
@@ -22534,15 +22394,15 @@
             decls: 13,
             vars: 4,
             consts: [[1, "taskId"], ["align", "center", "size", "x-small", "fillGradient", "gradients.gold.simple", 1, "taskId__number"], [1, "taskPicture"], ["srcset", "/assets/images/social-isolation/referrals/task_diamond.webp", "type", "image/webp"], ["src", "/assets/images/social-isolation/referrals/task_diamond.png", "alt", "GU_Task"], [1, "outerBox"], [1, "innerBox"], ["align", "center", "size", "x-small", 1, "taskTitle"], ["alt", "GU_Task", 1, "taskPicture__img", 3, "src"], ["align", "center", "fillColor", "colors.light.300", 1, "taskDescription", 3, "innerHTML"]],
-            template: function (u, D) {
-                1 & u && (e.TgZ(0, "div", 0)(1, "gu-heading-text", 1), e._uU(2), e.qZA(), e.TgZ(3, "picture", 2), e._UZ(4, "source", 3)(5, "img", 4), e.qZA()(), e.TgZ(6, "div", 5)(7, "div", 6)(8, "gu-heading-text", 7), e._uU(9), e.qZA(), e.TgZ(10, "picture", 2), e._UZ(11, "img", 8), e.qZA(), e._UZ(12, "gu-paragraph-text", 9), e.qZA()()), 2 & u && (e.xp6(2), e.hij(" ", D.taskId, " "), e.xp6(7), e.hij(" ", D.taskTitle, " "), e.xp6(2), e.Q6J("src", D.taskImage, e.LSH), e.xp6(1), e.Q6J("innerHTML", D.taskDescription, e.oJD))
+            template: function (u, T) {
+                1 & u && (e.TgZ(0, "div", 0)(1, "gu-heading-text", 1), e._uU(2), e.qZA(), e.TgZ(3, "picture", 2), e._UZ(4, "source", 3)(5, "img", 4), e.qZA()(), e.TgZ(6, "div", 5)(7, "div", 6)(8, "gu-heading-text", 7), e._uU(9), e.qZA(), e.TgZ(10, "picture", 2), e._UZ(11, "img", 8), e.qZA(), e._UZ(12, "gu-paragraph-text", 9), e.qZA()()), 2 & u && (e.xp6(2), e.hij(" ", T.taskId, " "), e.xp6(7), e.hij(" ", T.taskTitle, " "), e.xp6(2), e.Q6J("src", T.taskImage, e.LSH), e.xp6(1), e.Q6J("innerHTML", T.taskDescription, e.oJD))
             },
             styles: ["[_nghost-%COMP%]{background-color:#0f1b27;display:block;min-height:300px;position:relative;width:300px;border:2px solid #0F1B27;box-sizing:border-box;margin:20px}.outerBox[_ngcontent-%COMP%]{background:linear-gradient(90deg,#c6a052 2.93%,#ebc98b 25.01%,#fff2d8 50.44%,#ebc98b 74.21%,#c6a052 96.95%);box-shadow:0 2px 5px #0000004d;height:100%;width:100%;padding:2px}.innerBox[_ngcontent-%COMP%]{width:100%;height:100%;background:#0F1B27;display:flex;flex-direction:column}.taskId[_ngcontent-%COMP%]{position:absolute;left:50%;top:-32px;transform:translate(-50%)}.taskId__number[_ngcontent-%COMP%]{position:absolute;left:50%;transform:translate(-50%);top:25%}.taskTitle[_ngcontent-%COMP%]{padding:10px;margin-top:30px}.taskPicture__img[_ngcontent-%COMP%]{border-top:1px solid #979797;border-bottom:1px solid #979797;width:100%}.taskDescription[_ngcontent-%COMP%]{padding:8px 10px;font-size:15px}"]
         }), x
-    })(), ps = (() => {
+    })(), us = (() => {
         class x {
-            constructor(u, D) {
-                this.analyticsService = u, this.copyService = D
+            constructor(u, T) {
+                this.analyticsService = u, this.copyService = T
             }
 
             ngOnInit() {
@@ -22579,7 +22439,7 @@
         }
 
         return x.\u0275fac = function (u) {
-            return new (u || x)(e.Y36(Et.jt), e.Y36(Et.tX))
+            return new (u || x)(e.Y36(kt.jt), e.Y36(kt.tX))
         }, x.\u0275cmp = e.Xpm({
             type: x,
             selectors: [["share-button"]],
@@ -22587,10 +22447,10 @@
             decls: 4,
             vars: 2,
             consts: [[1, "shareButton", 3, "click"], [1, "shareButton__icon", 3, "iconLigature"], ["size", "2x-small", 1, "shareButton__shareText"]],
-            template: function (u, D) {
+            template: function (u, T) {
                 1 & u && (e.TgZ(0, "button", 0), e.NdJ("click", function () {
-                    return D.shareLink()
-                }), e._UZ(1, "gu-icon", 1), e.TgZ(2, "gu-heading-text", 2), e._uU(3), e.qZA()()), 2 & u && (e.xp6(1), e.Q6J("iconLigature", D.iconLigature), e.xp6(2), e.hij(" ", D.title, " "))
+                    return T.shareLink()
+                }), e._UZ(1, "gu-icon", 1), e.TgZ(2, "gu-heading-text", 2), e._uU(3), e.qZA()()), 2 & u && (e.xp6(1), e.Q6J("iconLigature", T.iconLigature), e.xp6(2), e.hij(" ", T.title, " "))
             },
             styles: ["[_nghost-%COMP%]{margin:10px 10px 10px 0}.shareButton[_ngcontent-%COMP%]{white-space:nowrap;padding:10px 15px;background:transparent;border:2px solid #8be1e0;display:flex;align-items:center;outline:none}.shareButton[_ngcontent-%COMP%]:hover{padding:12px 17px;color:#182531;border:none;background:linear-gradient(to bottom,#AFFAED 0%,#54BBCD 100%)}.shareButton[_ngcontent-%COMP%]:hover   .shareButton__shareText[_ngcontent-%COMP%]{-webkit-text-fill-color:#182531}.shareButton[_ngcontent-%COMP%]:hover   .shareButton__icon[_ngcontent-%COMP%]{-webkit-text-fill-color:black}@media only screen and (max-width: 768px){.shareButton[_ngcontent-%COMP%]{padding:10px}}.shareButton__icon[_ngcontent-%COMP%]{-webkit-text-fill-color:#8be1e0;font-size:calc(var(--vh) * 2.5);margin-right:calc(var(--vw) * .5);display:inline-flex;align-items:flex-start}.shareButton__icon[_ngcontent-%COMP%]:hover{-webkit-text-fill-color:black}@media only screen and (max-width: 768px){.shareButton__icon[_ngcontent-%COMP%]{margin-right:0}}.shareButton__shareText[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#affaed 0%,#8be1e0 50%,#54bbcd 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}@media only screen and (max-width: 768px){.shareButton__shareText[_ngcontent-%COMP%]{display:none}}"]
         }), x
@@ -22643,10 +22503,10 @@
             decls: 2,
             vars: 2,
             consts: [["class", "settings", 4, "ngIf"], [1, "settings"], ["name", "selectedWallet", "id", "sel1", 1, "settings__select", 3, "ngModel", "ngModelChange"], [3, "ngValue"], [3, "ngValue", 4, "ngFor", "ngForOf"], [1, "settings__label"], ["href", "https://www.godsunchained.com/?linkwallet=true", 1, "settings__cta"]],
-            template: function (u, D) {
-                1 & u && (e.YNc(0, js, 5, 3, "form", 0), e.YNc(1, ko, 5, 0, "div", 0)), 2 & u && (e.Q6J("ngIf", D.playerWallets && D.playerWallets.length > 0), e.xp6(1), e.Q6J("ngIf", !D.playerWallets || 0 === D.playerWallets.length))
+            template: function (u, T) {
+                1 & u && (e.YNc(0, js, 5, 3, "form", 0), e.YNc(1, ko, 5, 0, "div", 0)), 2 & u && (e.Q6J("ngIf", T.playerWallets && T.playerWallets.length > 0), e.xp6(1), e.Q6J("ngIf", !T.playerWallets || 0 === T.playerWallets.length))
             },
-            directives: [c.O5, i._Y, i.JL, i.F, i.EJ, i.JJ, i.On, i.YN, i.Kr, c.sg],
+            directives: [d.O5, i._Y, i.JL, i.F, i.EJ, i.JJ, i.On, i.YN, i.Kr, d.sg],
             styles: [".settings__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22)}.settings__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9)}.settings__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]{line-height:1.5}.settings__select[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}[_nghost-%COMP%]{display:block}.settings[_ngcontent-%COMP%]{display:flex;flex-flow:column nowrap;width:100%;margin:auto}.settings__label[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 3)}.settings__select[_ngcontent-%COMP%]{color:#fff;font-size:16px;line-height:24px;width:100%;display:flex;align-items:center;background:#0F1B27;border:1px solid #3D5A74;box-sizing:border-box;border-radius:2px;padding:7px;margin-top:calc(var(--vh) * .65)}.settings__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);margin-bottom:0;background:#182531;color:#f6f6f6;border:calc(var(--vh) * .15) solid #0f1b27;border-radius:calc(var(--vh) * .4)}.settings__select[_ngcontent-%COMP%] > option[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.settings__cta[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .65);color:#affaed}"]
         }), x
     })(), Qo = (() => {
@@ -22666,7 +22526,7 @@
             decls: 16,
             vars: 0,
             consts: [[1, "earnTogether__sideFigure"], [1, "earnTogether__figure"], ["srcset", "/assets/images/social-isolation/referrals/card_bg.webp", "type", "image/webp"], ["src", "/assets/images/social-isolation/referrals/card_bg.png", "alt", "", 1, "stackedCard__top"], [1, "stackedCard__lower", "stackedCard__lower__first"], [1, "stackedCard__lower", "stackedCard__lower__second"], [1, "earnTogether__cardContent"], ["top", "medium", "bottom", "large"], ["iconLigature", "friends_helmet", "fillGradient", "gradients.gold.simple", "fillGradientTarget", "bottom", 1, "earnTogether__icon"], [1, "rewardsBlock__text", "rewardsBlock__totalValue"], ["top", "large", "bottom", "medium"], ["src", "/assets/images/social-isolation/referrals/gu-divder-small.svg", 1, "tasks__divider"], ["fillColor", "colors.light.100", 2, "padding", "0 40px"]],
-            template: function (u, D) {
+            template: function (u, T) {
                 1 & u && (e.TgZ(0, "div", 0)(1, "figure", 1)(2, "picture"), e._UZ(3, "source", 2)(4, "img", 3), e.qZA(), e._UZ(5, "div", 4)(6, "div", 5), e.qZA(), e.TgZ(7, "div", 6)(8, "gu-vertical-space", 7), e._UZ(9, "gu-icon", 8), e.qZA(), e.TgZ(10, "div", 9), e._uU(11, " 10% "), e.qZA(), e.TgZ(12, "gu-vertical-space", 10), e._UZ(13, "img", 11), e.qZA(), e.TgZ(14, "gu-paragraph-text", 12), e._uU(15, " of referrals money spent added to your wallet "), e.qZA()()())
             },
             styles: ["[_nghost-%COMP%]{height:400px}.earnTogether__sideFigure[_ngcontent-%COMP%]{position:relative}.earnTogether__figure[_ngcontent-%COMP%]{min-width:300px}.earnTogether__cardContent[_ngcontent-%COMP%]{position:absolute;z-index:10;width:245px;height:360px;text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center;left:10%}.stackedCard__top[_ngcontent-%COMP%]{box-shadow:4px 4px 8px #0a0a0a;border:1px solid #464646;position:absolute;z-index:3}.stackedCard__lower[_ngcontent-%COMP%]{background:linear-gradient(360deg,#0f1b27 0%,#0f1b27 11.53%,#1d2f41 50.05%,#0f1b27 88.69%,#0f1b27 100%);box-shadow:4px 4px 8px #0a0a0a;border:1px solid #464646;box-sizing:border-box;position:absolute;height:360px;width:240px}.stackedCard__lower__first[_ngcontent-%COMP%]{left:30px;top:15px;z-index:2}.stackedCard__lower__second[_ngcontent-%COMP%]{left:25px;top:25px;z-index:1}.earnTogether__icon[_ngcontent-%COMP%]{font-size:90px}.rewardsBlock__text[_ngcontent-%COMP%]{font-family:Unchained;font-style:normal;font-weight:700;text-transform:uppercase}.rewardsBlock__totalValue[_ngcontent-%COMP%]{font-size:43px;line-height:30px;color:#f6f6f6}.rewardsBlock__totalValue__currency[_ngcontent-%COMP%]{font-size:24px;line-height:29px;text-align:center;color:#d7d7d7}.tasks__divider[_ngcontent-%COMP%]{width:100%}"]
@@ -22722,15 +22582,15 @@
 
     const Nt = function () {
         return {breakpoint: "small", size: "large"}
-    }, Mt = function (x) {
+    }, wt = function (x) {
         return [x]
-    }, gs = function () {
+    }, ps = function () {
         return {breakpoint: "small", size: "medium"}
     };
     let Ss = (() => {
         class x {
-            constructor(u, D, K, _e, tt, at) {
-                this.authService = u, this.cerberusModalService = D, this.router = K, this.analyticsService = _e, this.copyService = tt, this.referralService = at, this.selectedWallet = null, this.unsubscribe = new Cs.xQ, this.referralCopy = "If you're looking for the next game to play, Gods Unchained is a great game that you should check out. Sign up using with my referral code: "
+            constructor(u, T, K, fe, et, ot) {
+                this.authService = u, this.cerberusModalService = T, this.router = K, this.analyticsService = fe, this.copyService = et, this.referralService = ot, this.selectedWallet = null, this.unsubscribe = new bs.xQ, this.referralCopy = "If you're looking for the next game to play, Gods Unchained is a great game that you should check out. Sign up using with my referral code: "
             }
 
             ngOnDestroy() {
@@ -22738,8 +22598,8 @@
             }
 
             createReferralCode(u) {
-                this.referralService.createReferralCode(u).subscribe(D => {
-                    this.referralCode = D.code, this.selectedWallet = D.referral_payout_address, this.referralLink = D.result, this.shareCopy = `${this.referralCopy}${this.referralCode} on the website here `
+                this.referralService.createReferralCode(u).subscribe(T => {
+                    this.referralCode = T.code, this.selectedWallet = T.referral_payout_address, this.referralLink = T.result, this.shareCopy = `${this.referralCopy}${this.referralCode} on the website here `
                 })
             }
 
@@ -22758,20 +22618,20 @@
             }
 
             checkReferralsStatus() {
-                this.cerberusModalService.open(Po, {
+                this.cerberusModalService.open(So, {
                     centered: !0,
                     scrollable: !0
                 }).componentInstance.userId = this.userId
             }
 
             getWallets() {
-                this.authService.account$.pipe((0, Ws.h)(u => !!u), (0, us.U)(u => u.addresses)).subscribe(u => {
-                    this.playerWallets = u.filter(D => D.imx_linked).map(D => D.address)
+                this.authService.account$.pipe((0, Ws.h)(u => !!u), (0, ds.U)(u => u.addresses)).subscribe(u => {
+                    this.playerWallets = u.filter(T => T.imx_linked).map(T => T.address)
                 })
             }
 
             updateWallet(u) {
-                this.selectedWallet = u, this.referralService.updatePayoutAddress(this.userId, u).subscribe(D => console.log(D))
+                this.selectedWallet = u, this.referralService.updatePayoutAddress(this.userId, u).subscribe(T => console.log(T))
             }
 
             getTasks() {
@@ -22795,31 +22655,31 @@
         }
 
         return x.\u0275fac = function (u) {
-            return new (u || x)(e.Y36(ye.mI), e.Y36(Zt.Qz), e.Y36(qt.F0), e.Y36(Et.jt), e.Y36(Et.tX), e.Y36(Et.C_))
+            return new (u || x)(e.Y36(xe.mI), e.Y36(Zt.Qz), e.Y36(qt.F0), e.Y36(kt.jt), e.Y36(kt.tX), e.Y36(kt.C_))
         }, x.\u0275cmp = e.Xpm({
             type: x,
             selectors: [["cerberus-referrals-route"]],
             decls: 62,
             vars: 13,
             consts: [[1, "intro"], ["top", "5x-large"], ["align", "center", "fillColor", "colors.dark.900", "size", "small", 3, "responsiveSize"], ["top", "large"], ["align", "center", "fillColor", "colors.gunmetal.500", "size", "medium", 1, "subTitle"], ["top", "small"], ["align", "center", "fillColor", "colors.dark.700"], [1, "theMoreYouPurchase"], [1, "steps"], ["top", "2x-large"], [1, "referralSteps"], [4, "ngFor", "ngForOf"], ["class", "share", 4, "ngIf"], ["top", "medium", "bottom", "large"], ["class", "signInToBegin", 4, "ngIf"], [1, "rewards"], ["top", "large", "both", "medium"], ["src", "/assets/images/social-isolation/referrals/tasks_divider.svg", 1, "tasks__divider"], [1, "rewards__container"], [1, "cardBack__container"], ["align", "left", "fillColor", "colors.dark.900", "size", "x-small", 3, "responsiveSize"], ["top", "small", "bottom", "large"], ["align", "left", "fillColor", "colors.gunmetal.500", "fontWeight", "bold", "size", "5x-small"], ["fillColor", "colors.gunmetal.900", "kind", "4x-small"], ["fillColor", "colors.gunmetal.900"], ["top", "small", "bottom", "medium"], ["srcset", "/assets/images/misc-art/misc-art--wizard-with-key.webp", "type", "image/webp"], ["srcset", "/assets/images/misc-art/misc-art--wizard-with-key.jpg", "type", "image/jpg"], ["src", "/assets/images/misc-art/misc-art--wizard-with-key.jpg"], [1, "innerFooter"], [3, "taskId", "taskTitle", "taskDescription", "taskImage"], [1, "share"], [1, "share__figure"], ["srcset", "/assets/images/misc-art/x2_brand_visual.webp", "type", "image/webp"], ["src", "/assets/images/misc-art/x2_brand_visual.png", 1, "share__img"], [1, "share__content"], ["bottom", "medium"], [1, "share__socialMedia__title"], [1, "share__socialMedia__text"], [1, "share__socialMedia__text__Link"], [1, "share__socialMedia__buttons"], [3, "referralLink", "referralCopy"], [3, "referralLink", "referralCopy", "socialMedia"], ["top", "large", "bottom", "large", 2, "width", "100%"], [1, "share__socialMedia__divider__line"], ["top", "large", "bottom", "medium"], ["fillColor", "colors.light.100"], [3, "playerWallets", "selectedWallet", "walletSelected"], [1, "signInToBegin"], ["size", "large", 2, "padding", "0 25px", 3, "click"]],
-            template: function (u, D) {
-                1 & u && (e.TgZ(0, "div")(1, "section", 0)(2, "gu-vertical-space", 1)(3, "gu-heading-text", 2), e._uU(4, " Money Spent Is Money Earned "), e.qZA()(), e.TgZ(5, "gu-vertical-space", 3)(6, "gu-paragraph-text", 4), e._uU(7, " Mortals. Together. Strong. "), e.qZA()(), e.TgZ(8, "gu-vertical-space", 5)(9, "gu-paragraph-text", 6)(10, "div", 7), e._uU(11, " Put down your axe and extend a helping hand to your fellow mortal. By inviting friends who make purchases, you\u2019ll receive great rewards! "), e.qZA()()()(), e.TgZ(12, "section", 8)(13, "gu-vertical-space", 9)(14, "div", 10), e.YNc(15, Ks, 2, 4, "ng-container", 11), e.qZA()()(), e.YNc(16, Qs, 26, 13, "section", 12), e.TgZ(17, "section")(18, "gu-vertical-space", 13), e.YNc(19, wo, 3, 0, "div", 14), e.qZA()(), e.TgZ(20, "section", 15)(21, "gu-vertical-space", 16), e._UZ(22, "img", 17), e.qZA(), e.TgZ(23, "div", 18)(24, "div", 19), e._UZ(25, "referrals-card-back"), e.qZA(), e.TgZ(26, "div")(27, "gu-heading-text", 20), e._uU(28, " Earn Together "), e.qZA(), e.TgZ(29, "gu-vertical-space", 21)(30, "gu-paragraph-text", 22), e._uU(31, " Receive 10% of the money spent by the people you refer! "), e.qZA()(), e.TgZ(32, "gu-paragraph-text", 23)(33, "strong"), e._uU(34, "People you refer need to:"), e.qZA(), e.TgZ(35, "ol")(36, "li"), e._uU(37, "Create a Gods Unchained account"), e.qZA(), e.TgZ(38, "li"), e._uU(39, "Purchase any Divine Order Packs and/or Chests"), e.qZA(), e.TgZ(40, "li"), e._uU(41, "Have a valid wallet linked to Immutable X"), e.qZA()()(), e.TgZ(42, "gu-paragraph-text", 24), e._uU(43, " There is "), e.TgZ(44, "strong"), e._uU(45, "no limit to how many friends you can invite"), e.qZA(), e._uU(46, ", so send your unique codes far and wide. "), e.qZA(), e.TgZ(47, "gu-paragraph-text", 24), e._uU(48, " The processing of referral payments will take place every 14 days. At these intervals any referral payouts due will be calculated and payed out for all purchases made in the previous cycle. "), e.TgZ(49, "strong"), e._uU(50, "Payment will be made in ETH"), e.qZA(), e._uU(51, " directly to your selected Immutable X linked wallet. "), e.qZA(), e._UZ(52, "gu-vertical-space", 13), e.qZA()()(), e.TgZ(53, "gu-vertical-space", 25)(54, "div"), e.YNc(55, Vt, 3, 0, "div", 14), e.YNc(56, Ys, 3, 0, "div", 14), e.qZA()()(), e.TgZ(57, "picture"), e._UZ(58, "source", 26)(59, "source", 27)(60, "img", 28), e.qZA(), e._UZ(61, "section", 29)), 2 & u && (e.xp6(3), e.Q6J("responsiveSize", e.VKq(8, Mt, e.DdM(7, Nt))), e.xp6(12), e.Q6J("ngForOf", D.referralTasks), e.xp6(1), e.Q6J("ngIf", D.isUserSignedIn), e.xp6(3), e.Q6J("ngIf", !D.isUserSignedIn), e.xp6(8), e.Q6J("responsiveSize", e.VKq(11, Mt, e.DdM(10, gs))), e.xp6(28), e.Q6J("ngIf", !D.isUserSignedIn), e.xp6(1), e.Q6J("ngIf", D.isUserSignedIn))
+            template: function (u, T) {
+                1 & u && (e.TgZ(0, "div")(1, "section", 0)(2, "gu-vertical-space", 1)(3, "gu-heading-text", 2), e._uU(4, " Money Spent Is Money Earned "), e.qZA()(), e.TgZ(5, "gu-vertical-space", 3)(6, "gu-paragraph-text", 4), e._uU(7, " Mortals. Together. Strong. "), e.qZA()(), e.TgZ(8, "gu-vertical-space", 5)(9, "gu-paragraph-text", 6)(10, "div", 7), e._uU(11, " Put down your axe and extend a helping hand to your fellow mortal. By inviting friends who make purchases, you\u2019ll receive great rewards! "), e.qZA()()()(), e.TgZ(12, "section", 8)(13, "gu-vertical-space", 9)(14, "div", 10), e.YNc(15, Ks, 2, 4, "ng-container", 11), e.qZA()()(), e.YNc(16, Qs, 26, 13, "section", 12), e.TgZ(17, "section")(18, "gu-vertical-space", 13), e.YNc(19, wo, 3, 0, "div", 14), e.qZA()(), e.TgZ(20, "section", 15)(21, "gu-vertical-space", 16), e._UZ(22, "img", 17), e.qZA(), e.TgZ(23, "div", 18)(24, "div", 19), e._UZ(25, "referrals-card-back"), e.qZA(), e.TgZ(26, "div")(27, "gu-heading-text", 20), e._uU(28, " Earn Together "), e.qZA(), e.TgZ(29, "gu-vertical-space", 21)(30, "gu-paragraph-text", 22), e._uU(31, " Receive 10% of the money spent by the people you refer! "), e.qZA()(), e.TgZ(32, "gu-paragraph-text", 23)(33, "strong"), e._uU(34, "People you refer need to:"), e.qZA(), e.TgZ(35, "ol")(36, "li"), e._uU(37, "Create a Gods Unchained account"), e.qZA(), e.TgZ(38, "li"), e._uU(39, "Purchase any Divine Order Packs and/or Chests"), e.qZA(), e.TgZ(40, "li"), e._uU(41, "Have a valid wallet linked to Immutable X"), e.qZA()()(), e.TgZ(42, "gu-paragraph-text", 24), e._uU(43, " There is "), e.TgZ(44, "strong"), e._uU(45, "no limit to how many friends you can invite"), e.qZA(), e._uU(46, ", so send your unique codes far and wide. "), e.qZA(), e.TgZ(47, "gu-paragraph-text", 24), e._uU(48, " The processing of referral payments will take place every 14 days. At these intervals any referral payouts due will be calculated and payed out for all purchases made in the previous cycle. "), e.TgZ(49, "strong"), e._uU(50, "Payment will be made in ETH"), e.qZA(), e._uU(51, " directly to your selected Immutable X linked wallet. "), e.qZA(), e._UZ(52, "gu-vertical-space", 13), e.qZA()()(), e.TgZ(53, "gu-vertical-space", 25)(54, "div"), e.YNc(55, Vt, 3, 0, "div", 14), e.YNc(56, Ys, 3, 0, "div", 14), e.qZA()()(), e.TgZ(57, "picture"), e._UZ(58, "source", 26)(59, "source", 27)(60, "img", 28), e.qZA(), e._UZ(61, "section", 29)), 2 & u && (e.xp6(3), e.Q6J("responsiveSize", e.VKq(8, wt, e.DdM(7, Nt))), e.xp6(12), e.Q6J("ngForOf", T.referralTasks), e.xp6(1), e.Q6J("ngIf", T.isUserSignedIn), e.xp6(3), e.Q6J("ngIf", !T.isUserSignedIn), e.xp6(8), e.Q6J("responsiveSize", e.VKq(11, wt, e.DdM(10, ps))), e.xp6(28), e.Q6J("ngIf", !T.isUserSignedIn), e.xp6(1), e.Q6J("ngIf", T.isUserSignedIn))
             },
-            directives: [c.sg, So, c.O5, ps, Vs, Qo],
+            directives: [d.sg, Po, d.O5, us, Vs, Qo],
             styles: [".share__socialMedia__title[_ngcontent-%COMP%], .subTitle[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22)}.share__socialMedia__text[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}[_nghost-%COMP%]{overflow-y:auto;background-color:#f6f6f6}a[_ngcontent-%COMP%]{color:#000}.subTitle[_ngcontent-%COMP%]{font-weight:700;line-height:28px}.earnTogether[_ngcontent-%COMP%]{display:flex;flex-direction:row;position:relative;max-width:960px;padding:20px}@media only screen and (max-width: 768px){.earnTogether[_ngcontent-%COMP%]{flex-wrap:wrap;flex-direction:column-reverse;justify-content:center;align-items:center}}.tasks__divider[_ngcontent-%COMP%]{width:100%}.referralSteps[_ngcontent-%COMP%]{display:flex;flex-direction:row;justify-content:center;flex-wrap:wrap;margin:10px}.signInToBegin[_ngcontent-%COMP%]{align-items:center;display:flex;flex-direction:column}.theMoreYouPurchase[_ngcontent-%COMP%]{margin:0 auto;max-width:566px;padding:10px}[_nghost-%COMP%]{display:flex;flex-direction:column;position:relative}[_nghost-%COMP%] > div[_ngcontent-%COMP%]{width:100%;z-index:1;display:flex;flex-direction:column;justify-content:center;align-items:center}[_nghost-%COMP%] > picture[_ngcontent-%COMP%]{align-items:center;bottom:0;display:flex;justify-content:center;left:0;overflow:hidden;position:absolute;right:0;top:0}[_nghost-%COMP%] > picture[_ngcontent-%COMP%]   img[_ngcontent-%COMP%]{width:100%;height:100%;object-fit:cover;object-position:center top}.earnTogether__text[_ngcontent-%COMP%]{display:flex;flex-direction:column}.innerFooter[_ngcontent-%COMP%]{background:#0A0A0A;height:40px;z-index:1;margin-top:-24px;position:relative;clip-path:polygon(0% 0%,calc(50% - 140px) 0%,calc(50% - 124px) 22px,calc(50% + 124px) 22px,calc(50% + 140px) 0%,100% 0%,100% 100%,0% 100%)}.share[_ngcontent-%COMP%]{width:100%;display:flex;flex-direction:row;border-top:1px solid #0A0A0A;border-bottom:1px solid #0A0A0A;flex-wrap:wrap;justify-content:center;align-items:center;background:#0F1B27}@media only screen and (max-width: 768px){.share[_ngcontent-%COMP%]{display:block}}.share__content[_ngcontent-%COMP%]{flex:1;background:#0F1B27;display:flex;flex-direction:column;padding:40px}@media only screen and (max-width: 768px){.share__content[_ngcontent-%COMP%]{align-items:center;text-align:center}}.share__figure[_ngcontent-%COMP%]{flex:1;margin:0;line-height:.5}.share__img[_ngcontent-%COMP%]{width:100%;object-fit:cover;object-position:center center;height:470px}@media only screen and (max-width: 768px){.share__img[_ngcontent-%COMP%]{height:148px}}.share__socialMedia__title[_ngcontent-%COMP%]{font-weight:700;color:#f6f6f6}.share__socialMedia__text[_ngcontent-%COMP%]{font-size:16px;text-align:left;color:#b6b6b6;border:2px solid #3D5A74;box-sizing:border-box;padding:15px;background:#1D2F41}.share__socialMedia__text__Link[_ngcontent-%COMP%]{color:#f6f6f6}.share__socialMedia__buttons[_ngcontent-%COMP%]{display:flex;flex-direction:row;padding:10px 10px 10px 0}.share__socialMedia__divider__line[_ngcontent-%COMP%]{border:1px solid #1D2F41;width:100%}.referral_status_btn[_ngcontent-%COMP%]{width:200px;margin:10px 0;padding:20px}.rewards[_ngcontent-%COMP%]   ol[_ngcontent-%COMP%]{list-style:inside decimal;padding-left:0;margin-block:0}.rewards[_ngcontent-%COMP%]   gu-paragraph-text[_ngcontent-%COMP%]{margin-bottom:32px}.rewards__container[_ngcontent-%COMP%]{display:flex;flex-direction:column-reverse;max-width:960px;margin:0 20px}.cardBack__container[_ngcontent-%COMP%]{display:flex;justify-content:center;margin-bottom:20px}.cardBack__container[_ngcontent-%COMP%] > referrals-card-back[_ngcontent-%COMP%]{margin-right:-80px}@media screen and (min-width: 768px){.rewards__container[_ngcontent-%COMP%]{flex-direction:row}.cardBack__container[_ngcontent-%COMP%]{margin-bottom:0}.cardBack__container[_ngcontent-%COMP%] > referrals-card-back[_ngcontent-%COMP%]{margin-right:-40px}}@media screen and (min-width: 960px){.cardBack__container[_ngcontent-%COMP%] > referrals-card-back[_ngcontent-%COMP%]{margin-right:0}}"]
         }), x
     })();
-    var ks = o(37371);
+    var Ps = o(37371);
     o(39765)
 }, 46313
 :
 se => {
-    function R(o) {
-        var c = new Error("Cannot find module '" + o + "'");
-        throw c.code = "MODULE_NOT_FOUND", c
+    function U(o) {
+        var d = new Error("Cannot find module '" + o + "'");
+        throw d.code = "MODULE_NOT_FOUND", d
     }
 
-    R.keys = () => [], R.resolve = R, R.id = 46313, se.exports = R
+    U.keys = () => [], U.resolve = U, U.id = 46313, se.exports = U
 }, 88677
 :
 () => {

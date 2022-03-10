@@ -238,9 +238,10 @@ gu-secondary-hex-button::before {
 
 gu-primary-hex-button.deleteDeck {
     color: var(--gu-red);
+    border-color: var(--gu-red);
 }
 
-gu-primary-hex-button:not(.fake-selector):hover {
+gu-primary-hex-button:hover {
     color: var(--gu-blue-hover);
     border: solid 1px var(--gu-blue-hover);
 }
