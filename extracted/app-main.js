@@ -21701,13 +21701,13 @@ return $.\u0275fac = function (b) {
                 }), this.dispatchEvent(new CustomEvent("onPackOpened", {detail: {pack: F}})), Pe(Bt(!0))
             }, gs = () => {
                 console.log("RESET TEMPLE CODE"), Pe({type: qe}), Je.p8.set(K.current, {clearProps: "all"})
-            }, ts = M, ks = !F.set || Object.keys(a).length === F.cards.length, as = ks && !x.length && M;
+            }, ts = M, ks = !F.set || Object.keys(a).length === F.cards.length, as = ks && !x.length;
             const fillColorMap = {common: '#bcbcbc', rare: '#26b1fb', epic: '#971ded', legendary: '#f9c123'};
             return X.dy`
     <div class="videoAspectRatio" ?domRef=${(0, we.Q)(ft)}>
       <img class="videoAspectRatio__img" alt="ratio image" src="/assets/images/ratio-images/16-x-9-ratio.png" />
       
-      ${F && F.rarity ? J.dy`
+      ${F && F.rarity ? X.dy`
         <gu-heading-text class="open-pack-header" fillcolor="${fillColorMap[F.rarity] ?? fillColorMap.common}" size="large">${F.rarity} pack</gu-heading-text>
       ` : null}
 
@@ -21719,22 +21719,12 @@ return $.\u0275fac = function (b) {
         ${as ? X.dy`
               <gu-primary-hex-button
                 size="large"
-                href=${`imtbl://${V.gv.routeContent({}).home.path}`}
+                href=${`/#/${V.gv.routeContent({}).home.path}`}
                 class="ctasArea__cta ctasArea__cta--buyPacksCta"
               >
                 Play to unlock
               </gu-primary-hex-button>
             ` : null}
-        <!-- @NOTE: While a card sale is active, direct users toward buying packs, not playing the game
-          ${as ? X.dy`
-              <gu-primary-hex-button
-                size="large"
-                href=${`imtbl://${V.gv.routeContent({}).home.path}`}
-                class="ctasArea__cta ctasArea__cta--buyPacksCta"
-              >
-                Play to unlock
-              </gu-primary-hex-button>
-            ` : null} -->
         ${x.length ? X.dy`
               <gu-primary-hex-button size="large" @click=${() => {
                 Je.p8.set(K.current, {clearProps: "all"});
@@ -21743,7 +21733,7 @@ return $.\u0275fac = function (b) {
                 Pe(Bt(!1));
                 Pe({type: Fe, payload: !0});
             }} class="ctasArea__cta">
-                Open Next Pack
+                Open Pack
               </gu-primary-hex-button>
               <gu-vertical-space top="large">
                 <gu-heading-text size="2x-small" align="center"> ${x.length - 1} packs left </gu-heading-text>
@@ -21862,6 +21852,7 @@ return $.\u0275fac = function (b) {
             }
 
             onPackOpened(u) {
+                console.log('pack: ', u);
                 console.log("TempleRoute->onOpenPack() opening pack", u.detail.pack), this.packService.openPack$(u.detail.pack).pipe((0, he.q)(1)).subscribe(T => {
                     console.log("TempleRoute->onOpenPack() pack opened!!!", u.detail.pack)
                 })
