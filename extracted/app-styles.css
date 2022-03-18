@@ -796,3 +796,7 @@ gu-controllable-vimeo-embed.packOpenVideo,
 gu-controllable-vimeo-embed.introVideo {
     opacity: 0;
 }
+
+.is-5-hidden {
+    display: none;
+}

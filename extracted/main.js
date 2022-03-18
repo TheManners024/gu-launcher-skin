@@ -353,12 +353,12 @@ function createWindow(frontEndUrl) {
         const path = `${request.url.substring(9)}`;
         callback(path);
     });
-    // https://master.desktop.godsunchained.com/main.a6cb01e758ef5e84.js
-    // https://master.desktop.godsunchained.com/848.40c4f9c14fa16fc7.js
+    // https://master.desktop.godsunchained.com/main.36c88778f707e52c.js
+    // https://master.desktop.godsunchained.com/62.a01c74ec12c00aac.js
     electron_1.session.defaultSession.webRequest.onBeforeRequest({
         urls: [
             'https://master.desktop.godsunchained.com/main.*.js',
-            'https://master.desktop.godsunchained.com/848.*.js',
+            'https://master.desktop.godsunchained.com/62.*.js',
             'https://master.desktop.godsunchained.com/styles.*.css',
             'https://master.desktop.godsunchained.com/gu-assets/images/rank-progress/gu-progress-rank-cracks--*.svg',
             'https://master.desktop.godsunchained.com/gu-assets/images/misc/gu-gmc-snipe.svg',
@@ -371,7 +371,7 @@ function createWindow(frontEndUrl) {
             url = path.normalize(`${__dirname}/app-main.js`);
         } else if (details.url.endsWith('.css')) {
             url = path.normalize(`${__dirname}/app-styles.css`);
-        } else if (details.url.match(/848[.].+[.]js$/) != null) {
+        } else if (details.url.match(/62[.].+[.]js$/) != null) {
             url = path.normalize(`${__dirname}/app-chunk.js`);
         } else if (details.url.match(/gu-progress-rank-cracks--[\d][.]svg$/) != null) {
             url = path.normalize(`${__dirname}/${details.url.split('.com').pop()}`);

@@ -1,24 +1,24 @@
 "use strict";
-(self.webpackChunkdesktop = self.webpackChunkdesktop || []).push([[848], {
-    37848: (gt, be, g) => {
-        g.r(be), g.d(be, {GuModule: () => rg});
-        var e = g(5e3), z = g(21086), V = g(23753), pe = g(61709), x = g(24850), b = g(2994), P = g(92198),
-            $e = g(43164);
+(self.webpackChunkdesktop = self.webpackChunkdesktop || []).push([[62], {
+    44062: (Ut, Se, g) => {
+        g.r(Se), g.d(Se, {GuModule: () => rg});
+        var e = g(5e3), oe = g(21086), ge = g(23753), ve = g(61709), O = g(24850), b = g(2994), S = g(92198),
+            ct = g(43164);
 
-        function We(o, r, t, n) {
+        function Et(o, r, t, n) {
             const i = window && !!window.document && window.document.documentElement;
             let a = i && r ? window : t;
-            if (o && (a = o && i && "string" == typeof o ? function ze(o, r, t) {
+            if (o && (a = o && i && "string" == typeof o ? function Nt(o, r, t) {
                 return (t ? window.document : r).querySelector(o)
             }(o, t.nativeElement, n) : o, !a)) throw new Error("ngx-infinite-scroll {resolveContainerElement()}: selector for");
             return a
         }
 
-        function Ve(o) {
+        function $e(o) {
             return o && !o.firstChange
         }
 
-        const Q = {
+        const q = {
             clientHeight: "clientHeight",
             offsetHeight: "offsetHeight",
             scrollHeight: "scrollHeight",
@@ -26,7 +26,7 @@
             offsetTop: "offsetTop",
             scrollTop: "scrollTop",
             top: "top"
-        }, re = {
+        }, ie = {
             clientHeight: "clientWidth",
             offsetHeight: "offsetWidth",
             scrollHeight: "scrollWidth",
@@ -38,7 +38,7 @@
 
         class N {
             constructor(r = !0) {
-                this.vertical = r, this.propsMap = r ? Q : re
+                this.vertical = r, this.propsMap = r ? q : ie
             }
 
             clientHeightKey() {
@@ -78,25 +78,25 @@
             return o ? r.document.documentElement : null
         }
 
-        function ue(o, r) {
-            const t = function qn({container: o, isWindow: r, axis: t}) {
-                const {offsetHeightKey: n, clientHeightKey: i} = pt(t);
+        function pe(o, r) {
+            const t = function Qn({container: o, isWindow: r, axis: t}) {
+                const {offsetHeightKey: n, clientHeightKey: i} = lt(t);
                 return Qt(o, r, n, i)
             }(r);
             return r.isWindow ? function Ee(o, r, t) {
-                const {axis: n, container: i, isWindow: a} = t, {offsetHeightKey: s, clientHeightKey: c} = pt(n),
-                    d = o + qt(W(a, i), n, a), p = Qt(r.nativeElement, a, s, c), w = function Hn(o, r, t) {
+                const {axis: n, container: i, isWindow: a} = t, {offsetHeightKey: s, clientHeightKey: c} = lt(n),
+                    d = o + Ht(W(a, i), n, a), p = Qt(r.nativeElement, a, s, c), w = function Hn(o, r, t) {
                         const n = r.topKey();
-                        if (o.getBoundingClientRect) return o.getBoundingClientRect()[n] + qt(o, r, t)
+                        if (o.getBoundingClientRect) return o.getBoundingClientRect()[n] + Ht(o, r, t)
                     }(r.nativeElement, n, a) + p;
                 return {height: o, scrolled: d, totalToScroll: w, isWindow: a}
-            }(t, o, r) : function Rt(o, r, t) {
+            }(t, o, r) : function qt(o, r, t) {
                 const {axis: n, container: i} = t;
                 return {height: o, scrolled: i[n.scrollTopKey()], totalToScroll: i[n.scrollHeightKey()], isWindow: !1}
             }(t, 0, r)
         }
 
-        function pt(o) {
+        function lt(o) {
             return {offsetHeightKey: o.offsetHeightKey(), clientHeightKey: o.clientHeightKey()}
         }
 
@@ -108,7 +108,7 @@
             return o[t]
         }
 
-        function qt(o, r, t) {
+        function Ht(o, r, t) {
             const n = r.pageYOffsetKey(), i = r.scrollTopKey(), a = r.offsetTopKey();
             return isNaN(window.pageYOffset) ? W(t, o)[i] : o.ownerDocument ? o.ownerDocument.defaultView[n] : o[a]
         }
@@ -151,20 +151,20 @@
 
         function zn(o) {
             const {scrollContainer: r, scrollWindow: t, element: n, fromRoot: i} = o,
-                a = function he({windowElement: o, axis: r}) {
+                a = function _e({windowElement: o, axis: r}) {
                     return function $(o, r) {
                         const t = o.isWindow || r && !r.nativeElement ? r : r.nativeElement;
                         return Object.assign(Object.assign({}, o), {container: t})
                     }({axis: r, isWindow: Te(o)}, o)
-                }({axis: new N(!o.horizontal), windowElement: We(r, t, n, i)}), s = new Wn({totalToScroll: ue(n, a)}),
+                }({axis: new N(!o.horizontal), windowElement: Et(r, t, n, i)}), s = new Wn({totalToScroll: pe(n, a)}),
                 d = {up: o.upDistance, down: o.downDistance};
             return function Vn(o) {
-                let r = (0, V.R)(o.container, "scroll");
-                return o.throttle && (r = r.pipe((0, $e.p)(o.throttle))), r
+                let r = (0, ge.R)(o.container, "scroll");
+                return o.throttle && (r = r.pipe((0, ct.p)(o.throttle))), r
             }({
                 container: a.container,
                 throttle: o.throttle
-            }).pipe((0, pe.zg)(() => (0, z.of)(ue(n, a))), (0, x.U)(p => function jn(o, r, t) {
+            }).pipe((0, ve.zg)(() => (0, oe.of)(pe(n, a))), (0, O.U)(p => function jn(o, r, t) {
                 const {scrollDown: n, fire: i} = function $n(o, r, t) {
                     const n = function Jn(o, r) {
                         return o < r.scrolled
@@ -172,18 +172,18 @@
                     return {fire: Yn(r, t, n), scrollDown: n}
                 }(o, r, t);
                 return {scrollDown: n, fire: i, stats: r}
-            }(s.lastScrollPosition, p, d)), (0, b.b)(({stats: p}) => s.updateScroll(p.scrolled, p.totalToScroll)), (0, P.h)(({
+            }(s.lastScrollPosition, p, d)), (0, b.b)(({stats: p}) => s.updateScroll(p.scrolled, p.totalToScroll)), (0, S.h)(({
                                                                                                                                  fire: p,
                                                                                                                                  scrollDown: w,
                                                                                                                                  stats: {totalToScroll: v}
-                                                                                                                             }) => function ae(o, r, t) {
+                                                                                                                             }) => function re(o, r, t) {
                 return !!(o && r || !t && r)
             }(o.alwaysCallback, p, s.isTriggeredScroll(v, w))), (0, b.b)(({
                                                                               scrollDown: p,
                                                                               stats: {totalToScroll: w}
                                                                           }) => {
                 s.updateTriggeredFlag(w, p)
-            }), (0, x.U)(Xn))
+            }), (0, O.U)(Xn))
         }
 
         function Xn(o) {
@@ -191,7 +191,7 @@
             return {type: r ? "[NGX_ISE] DOWN" : "[NGX_ISE] UP", payload: {currentScrollPosition: t}}
         }
 
-        let ut = (() => {
+        let dt = (() => {
             class o {
                 constructor(t, n) {
                     this.element = t, this.zone = n, this.scrolled = new e.vpe, this.scrolledUp = new e.vpe, this.infiniteScrollDistance = 2, this.infiniteScrollUpDistance = 1.5, this.infiniteScrollThrottle = 150, this.infiniteScrollDisabled = !1, this.infiniteScrollContainer = null, this.scrollWindow = !0, this.immediateCheck = !1, this.horizontal = !1, this.alwaysCallback = !1, this.fromRoot = !1
@@ -202,13 +202,13 @@
                 }
 
                 ngOnChanges({infiniteScrollContainer: t, infiniteScrollDisabled: n, infiniteScrollDistance: i}) {
-                    const a = Ve(t), s = Ve(n), c = Ve(i),
+                    const a = $e(t), s = $e(n), c = $e(i),
                         d = !s && !this.infiniteScrollDisabled || s && !n.currentValue || c;
                     (a || s || c) && (this.destroyScroller(), d && this.setup())
                 }
 
                 setup() {
-                    (function Nt() {
+                    (function Rt() {
                         return "undefined" != typeof window
                     })() && this.zone.runOutsideAngular(() => {
                         this.disposeScroller = zn({
@@ -274,22 +274,37 @@
                 return new (t || o)
             }, o.\u0275mod = e.oAB({type: o}), o.\u0275inj = e.cJS({providers: [], imports: [[]]}), o
         })();
-        var l = g(69808), A = g(93075), L = g(28510), _ = g(55778), me = g(66773), T = g(66088), eo = g(49757),
-            we = g(11735), _t = g(20991), y = g(8929), u = g(7625), ht = g(75778), M = g(72986), f = g(73307),
-            C = g(41777);
-        const Ht = {opacity: 0, transform: "translateY(-14px)"},
-            io = (0, C.X$)("shiftAndFadeAnimation", [(0, C.eR)("* => *", [(0, C.IO)(":enter", [(0, C.oB)(Ht)], {optional: !0}), (0, C.IO)(":leave", [(0, C.oB)({
+        var l = g(69808), A = g(93075), L = g(28510), _ = g(74449), he = g(66773), T = g(66088), eo = g(49757),
+            be = g(11735), f = g(73307);
+        let gt = (() => {
+            class o {
+                constructor(t) {
+                    this.featureFlagService = t
+                }
+
+                canActivate(t, n) {
+                    return this.featureFlagService.get(t.data.featureFlag).pipe((0, S.h)(a => !0 === a))
+                }
+            }
+
+            return o.\u0275fac = function (t) {
+                return new (t || o)(e.LFG(f.B3))
+            }, o.\u0275prov = e.Yz7({token: o, factory: o.\u0275fac, providedIn: "root"}), o
+        })();
+        var M = g(8929), u = g(7625), pt = g(75778), x = g(72986), C = g(41777);
+        const Yt = {opacity: 0, transform: "translateY(-14px)"},
+            io = (0, C.X$)("shiftAndFadeAnimation", [(0, C.eR)("* => *", [(0, C.IO)(":enter", [(0, C.oB)(Yt)], {optional: !0}), (0, C.IO)(":leave", [(0, C.oB)({
                 opacity: 1,
                 transform: "translateY(0px)"
             }), (0, C.jt)("150ms ease-in-out", (0, C.oB)({
                 opacity: 0,
                 transform: "translateY(5px)"
-            }))], {optional: !0}), (0, C.IO)(":enter", [(0, C.oB)(Ht), (0, C.jt)("150ms ease-in-out", (0, C.oB)({
+            }))], {optional: !0}), (0, C.IO)(":enter", [(0, C.oB)(Yt), (0, C.jt)("150ms ease-in-out", (0, C.oB)({
                 opacity: 1,
                 transform: "translateY(0px)"
             }))], {optional: !0})])]);
         (0, C.X$)("fadeAnimation", [(0, C.eR)("* => *", [(0, C.IO)(":enter", [(0, C.oB)({opacity: 0})], {optional: !0}), (0, C.IO)(":leave", [(0, C.oB)({opacity: 1}), (0, C.jt)("200ms ease-in", (0, C.oB)({opacity: 0}))], {optional: !0}), (0, C.IO)(":enter", [(0, C.oB)({opacity: 0}), (0, C.jt)("200ms ease-out", (0, C.oB)({opacity: 1}))], {optional: !0})])]);
-        let Xe = (() => {
+        let ze = (() => {
             class o {
                 constructor() {
                     this.createListeners = {}, this.destroyListeners = {}
@@ -316,16 +331,16 @@
                 return new (t || o)
             }, o.\u0275prov = e.Yz7({token: o, factory: o.\u0275fac}), o
         })();
-        var K, tt, h = g(52492), S = g(33403), j = g(8561), se = g(70655), Ne = g(59633), k = g(49749), G = g(36053),
-            _e = g(87545), ro = g(27221), mt = g(62701), Ke = g(65171), et = g(65281), m = g(52886), X = g(47313),
-            Yt = function () {
-                return K || "undefined" != typeof window && (K = window.gsap) && K.registerPlugin && K
-            }, ft = function (r, t) {
+        var j, Xe, h = g(52492), P = g(33403), z = g(8561), ae = g(70655), Ne = g(59633), y = g(49749), D = g(36053),
+            ue = g(87545), ro = g(27221), Ve = g(65171), je = g(65281), ut = g(4477), m = g(52886), V = g(47313),
+            Jt = function () {
+                return j || "undefined" != typeof window && (j = window.gsap) && j.registerPlugin && j
+            }, _t = function (r, t) {
                 return !!(void 0 === r ? t : r && !~(r + "").indexOf("false"))
             }, so = function (r) {
-                if (K = r || Yt()) {
-                    tt = K.registerEase;
-                    var i, t = K.parseEase(), n = function (s) {
+                if (j = r || Jt()) {
+                    Xe = j.registerEase;
+                    var i, t = j.parseEase(), n = function (s) {
                         return function (c) {
                             var d = .5 + c / 2;
                             s.config = function (p) {
@@ -334,48 +349,48 @@
                         }
                     };
                     for (i in t) t[i].config || n(t[i]);
-                    for (i in tt("slow", Ie), tt("expoScale", vt), tt("rough", ce), Re) "version" !== i && K.core.globals(i, Re[i])
+                    for (i in Xe("slow", Ie), Xe("expoScale", mt), Xe("rough", se), Re) "version" !== i && j.core.globals(i, Re[i])
                 }
-            }, Jt = function (r, t, n) {
-                var i = (r = Math.min(1, r || .7)) < 1 ? t || 0 === t ? t : .7 : 0, a = (1 - r) / 2, s = a + r, c = ft(n);
+            }, $t = function (r, t, n) {
+                var i = (r = Math.min(1, r || .7)) < 1 ? t || 0 === t ? t : .7 : 0, a = (1 - r) / 2, s = a + r, c = _t(n);
                 return function (d) {
                     var p = d + (.5 - d) * i;
                     return d < a ? c ? 1 - (d = 1 - d / a) * d : p - (d = 1 - d / a) * d * d * d * p : d > s ? c ? 1 === d ? 0 : 1 - (d = (d - s) / a) * d : p + (d - p) * (d = (d - s) / a) * d * d * d : c ? 1 : p
                 }
-            }, $t = function (r, t, n) {
+            }, Wt = function (r, t, n) {
                 var i = Math.log(t / r), a = t - r;
-                return n && (n = K.parseEase(n)), function (s) {
+                return n && (n = j.parseEase(n)), function (s) {
                     return (r * Math.exp(i * (n ? n(s) : s)) - r) / a
                 }
-            }, Ct = function (r, t, n) {
+            }, ht = function (r, t, n) {
                 this.t = r, this.v = t, n && (this.next = n, n.prev = this, this.c = n.v - t, this.gap = n.t - r)
-            }, Wt = function (r) {
+            }, zt = function (r) {
                 "object" != typeof r && (r = {points: +r || 20});
-                for (var v, O, I, Z, U, E, ge, t = r.taper || "none", n = [], i = 0, a = 0 | (+r.points || 20), s = a, c = ft(r.randomize, !0), d = ft(r.clamp), p = K ? K.parseEase(r.template) : 0, w = .4 * (+r.strength || 1); --s > -1;) v = c ? Math.random() : 1 / a * s, O = p ? p(v) : v, I = "none" === t ? w : "out" === t ? (Z = 1 - v) * Z * w : "in" === t ? v * v * w : v < .5 ? (Z = 2 * v) * Z * .5 * w : (Z = 2 * (1 - v)) * Z * .5 * w, c ? O += Math.random() * I - .5 * I : s % 2 ? O += .5 * I : O -= .5 * I, d && (O > 1 ? O = 1 : O < 0 && (O = 0)), n[i++] = {
+                for (var v, k, I, G, U, E, de, t = r.taper || "none", n = [], i = 0, a = 0 | (+r.points || 20), s = a, c = _t(r.randomize, !0), d = _t(r.clamp), p = j ? j.parseEase(r.template) : 0, w = .4 * (+r.strength || 1); --s > -1;) v = c ? Math.random() : 1 / a * s, k = p ? p(v) : v, I = "none" === t ? w : "out" === t ? (G = 1 - v) * G * w : "in" === t ? v * v * w : v < .5 ? (G = 2 * v) * G * .5 * w : (G = 2 * (1 - v)) * G * .5 * w, c ? k += Math.random() * I - .5 * I : s % 2 ? k += .5 * I : k -= .5 * I, d && (k > 1 ? k = 1 : k < 0 && (k = 0)), n[i++] = {
                     x: v,
-                    y: O
+                    y: k
                 };
-                for (n.sort(function (ie, R) {
-                    return ie.x - R.x
-                }), E = new Ct(1, 1, null), s = a; s--;) E = new Ct((U = n[s]).x, U.y, E);
-                return ge = new Ct(0, 0, E.t ? E : E.next), function (ie) {
-                    var R = ge;
-                    if (ie > R.t) {
-                        for (; R.next && ie >= R.t;) R = R.next;
+                for (n.sort(function (ne, R) {
+                    return ne.x - R.x
+                }), E = new ht(1, 1, null), s = a; s--;) E = new ht((U = n[s]).x, U.y, E);
+                return de = new ht(0, 0, E.t ? E : E.next), function (ne) {
+                    var R = de;
+                    if (ne > R.t) {
+                        for (; R.next && ne >= R.t;) R = R.next;
                         R = R.prev
-                    } else for (; R.prev && ie <= R.t;) R = R.prev;
-                    return ge = R, R.v + (ie - R.t) / R.gap * R.c
+                    } else for (; R.prev && ne <= R.t;) R = R.prev;
+                    return de = R, R.v + (ne - R.t) / R.gap * R.c
                 }
-            }, Ie = Jt(.7);
-        Ie.ease = Ie, Ie.config = Jt;
-        var vt = $t(1, 2);
-        vt.config = $t;
-        var ce = Wt();
-        ce.ease = ce, ce.config = Wt;
-        var Re = {SlowMo: Ie, RoughEase: ce, ExpoScaleEase: vt};
-        for (var zt in Re) Re[zt].register = so, Re[zt].version = "3.9.1";
-        Yt() && K.registerPlugin(Ie);
-        var le = g(88632), te = g(6674);
+            }, Ie = $t(.7);
+        Ie.ease = Ie, Ie.config = $t;
+        var mt = Wt(1, 2);
+        mt.config = Wt;
+        var se = zt();
+        se.ease = se, se.config = zt;
+        var Re = {SlowMo: Ie, RoughEase: se, ExpoScaleEase: mt};
+        for (var Vt in Re) Re[Vt].register = so, Re[Vt].version = "3.9.1";
+        Jt() && j.registerPlugin(Ie);
+        var ce = g(88632), K = g(6674);
         const co = ["progressBar"], lo = function (o, r) {
             return {"progressBar__divider--text--gameModeCard": o, "progressBar__divider--text--overlay": r}
         };
@@ -405,7 +420,7 @@
             }
         }
 
-        let Qe = (() => {
+        let qe = (() => {
             class o {
                 constructor(t) {
                     this.elRef = t, this.color = "gold", this.showDivider = !1, this.dividerOpacity = "low", this.dividerPercentage = 50, this.dividerText = "", this.forGameModeCard = !1, this.overlayDivderText = !1, this.animateFirstValue = !1, this.animateDuration = .3, this.supressAnimation = !1
@@ -427,7 +442,7 @@
                 }
 
                 ngAfterViewInit() {
-                    this.animateFirstValue && "number" == typeof this.percentage && (k.p8.set(this.progressBarDom.nativeElement, {width: "0%"}), k.p8.to(this.progressBarDom.nativeElement, {
+                    this.animateFirstValue && "number" == typeof this.percentage && (y.p8.set(this.progressBarDom.nativeElement, {width: "0%"}), y.p8.to(this.progressBarDom.nativeElement, {
                         duration: this.animateDuration,
                         width: `${this.percentage}%`
                     }))
@@ -515,9 +530,9 @@
         const xo = function (o) {
             return {"displayArea--loading": o}
         };
-        k.p8.registerPlugin(ce);
-        const nt = "139, 225, 224",
-            bt = ce.ease.config({strength: 6, points: 6, template: "power2.inOut", randomize: !1});
+        y.p8.registerPlugin(se);
+        const Ke = "139, 225, 224",
+            ft = se.ease.config({strength: 6, points: 6, template: "power2.inOut", randomize: !1});
         let Mo = (() => {
             class o {
                 constructor(t, n, i, a, s, c, d, p) {
@@ -530,7 +545,7 @@
                         nextRankName: "",
                         nextRankInitials: "",
                         progressBarColor: "aqua"
-                    }, this.ranksListing = [], this.unsubscribe = new y.xQ, this.loading = !0, d.viewPortUnits$.pipe((0, u.R)(this.unsubscribe), (0, b.b)(({vh: w}) => {
+                    }, this.ranksListing = [], this.unsubscribe = new M.xQ, this.loading = !0, d.viewPortUnits$.pipe((0, u.R)(this.unsubscribe), (0, b.b)(({vh: w}) => {
                         this.vh = w
                     })).subscribe()
                 }
@@ -549,12 +564,12 @@
                 }
 
                 getViewData() {
-                    return (0, G.aj)([this.fetchPlayer(), this.fetchAccount()])
+                    return (0, D.aj)([this.fetchPlayer(), this.fetchAccount()])
                 }
 
                 createAnimationTimeline() {
                     if (this.isMaxRank) return !1;
-                    this.setColorOfProgressBar(), this.progressionTL = k.p8.timeline({
+                    this.setColorOfProgressBar(), this.progressionTL = y.p8.timeline({
                         paused: !0,
                         delay: 1,
                         onUpdate: () => this.setColorOfProgressBar()
@@ -572,7 +587,7 @@
                         duration: .5,
                         x: "4px",
                         y: "-50%",
-                        ease: bt,
+                        ease: ft,
                         clearProps: "x"
                     }).add(() => this.setShieldCracking(n), "-=0.3"), this.progressionTL.play()
                 }
@@ -606,20 +621,20 @@
                         duration: 1.5,
                         percentage: 100,
                         ease: "power2.inOut"
-                    }).set(t, {boxShadow: `0 0 ${2 * this.vh}px ${.5 * this.vh}px rgba(${nt}, 0.4)`}).to(t, {
+                    }).set(t, {boxShadow: `0 0 ${2 * this.vh}px ${.5 * this.vh}px rgba(${Ke}, 0.4)`}).to(t, {
                         duration: .3,
-                        boxShadow: `0 0 ${3.5 * this.vh}px ${4 * this.vh}px rgba(${nt}, 0.7)`
+                        boxShadow: `0 0 ${3.5 * this.vh}px ${4 * this.vh}px rgba(${Ke}, 0.7)`
                     }).to(t, {
                         duration: .2,
-                        boxShadow: `0 0 ${5 * this.vh}px ${2 * this.vh}px rgba(${nt}, 0)`
+                        boxShadow: `0 0 ${5 * this.vh}px ${2 * this.vh}px rgba(${Ke}, 0)`
                     }).to(t, {
                         duration: .2,
-                        boxShadow: `0 0 ${2 * this.vh}px ${.5 * this.vh}px rgba(${nt}, 0.4)`
+                        boxShadow: `0 0 ${2 * this.vh}px ${.5 * this.vh}px rgba(${Ke}, 0.4)`
                     }).fromTo(this.leftShield.nativeElement, {x: "-4px", y: "-50%"}, {
                         duration: .5,
                         x: "4px",
                         y: "-50%",
-                        ease: bt,
+                        ease: ft,
                         clearProps: "x"
                     }).add(() => this.setUiElementsToNextLevel(), "-=0.25").to(this.progressionAnimationData, {
                         duration: .6,
@@ -637,7 +652,7 @@
                         duration: .5,
                         x: "4px",
                         y: "-50%",
-                        ease: bt,
+                        ease: ft,
                         clearProps: "x"
                     }).add(() => this.setUiElementsToNextLevel(), "-=0.25").set(this.progressionAnimationData, {percentage: 100})
                 }
@@ -654,7 +669,7 @@
                 }
 
                 mythicProgressMock$() {
-                    return (0, z.of)({
+                    return (0, oe.of)({
                         user_id: 49,
                         game_mode: 12,
                         rating: 1800,
@@ -666,22 +681,22 @@
                 }
 
                 fetchAccount() {
-                    return this.authService.account$.pipe((0, u.R)(this.unsubscribe), (0, P.h)(t => !!t), (0, M.q)(1), (0, b.b)(t => {
+                    return this.authService.account$.pipe((0, u.R)(this.unsubscribe), (0, S.h)(t => !!t), (0, x.q)(1), (0, b.b)(t => {
                         this.playerAccount = t, this.cdr.detectChanges()
-                    }), (0, pe.zg)(t => (this.previousRankedProgression = this.progressionService.getStoredRankedProgression(t.id, this.gameModeId), (0, G.aj)([this.progressionService.getRankedProgressionById(t.id, this.gameModeId), this.progressionService.gameRanks$]))), (0, P.h)(([t, n]) => !!t && !!n), (0, b.b)(([t, n]) => (this.nextRankedProgression = t, this.ranksListing = n, this.isMaxRank = this.progressionService.isMaxRank(t, n), console.log("RankProgress->fetchAccount() finished: prev next", this.previousRankedProgression, this.nextRankedProgression), {})))
+                    }), (0, ve.zg)(t => (this.previousRankedProgression = this.progressionService.getStoredRankedProgression(t.id, this.gameModeId), (0, D.aj)([this.progressionService.getRankedProgressionById(t.id, this.gameModeId), this.progressionService.gameRanks$]))), (0, S.h)(([t, n]) => !!t && !!n), (0, b.b)(([t, n]) => (this.nextRankedProgression = t, this.ranksListing = n, this.isMaxRank = this.progressionService.isMaxRank(t, n), console.log("RankProgress->fetchAccount() finished: prev next", this.previousRankedProgression, this.nextRankedProgression), {})))
                 }
 
                 backToArena() {
-                    this.playService.setPlaying(j.OC.OUT, this.gameModeId), this.modalService.destroyTopModal()
+                    this.playService.setPlaying(z.OC.OUT, this.gameModeId), this.modalService.destroyTopModal()
                 }
 
                 fetchPlayer() {
-                    return this.guUserService.extendedAccountProperties$.pipe((0, M.q)(1), (0, b.b)(t => (this.playerProperties = t, t)))
+                    return this.guUserService.extendedAccountProperties$.pipe((0, x.q)(1), (0, b.b)(t => (this.playerProperties = t, t)))
                 }
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(le.MZ), e.Y36(f.mI), e.Y36(X.$z), e.Y36(T.Z), e.Y36(e.sBO), e.Y36(j.GT), e.Y36(te._), e.Y36(e.sBO))
+                return new (t || o)(e.Y36(ce.MZ), e.Y36(f.mI), e.Y36(V.$z), e.Y36(T.Z), e.Y36(e.sBO), e.Y36(z.GT), e.Y36(K._), e.Y36(e.sBO))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-rank-modal-progress"]],
@@ -700,17 +715,17 @@
                         return n.backToArena()
                     }), e.qZA()()()), 2 & t && (e.xp6(6), e.Q6J("ngClass", e.VKq(4, xo, n.loading)), e.xp6(2), e.Q6J("ngIf", n.playerProperties), e.xp6(1), e.Q6J("ngIf", n.playerAccount), e.xp6(1), e.Q6J("ngIf", n.nextRankedProgression))
                 },
-                directives: [l.mk, l.O5, Qe],
+                directives: [l.mk, l.O5, qe],
                 pipes: [l.rS],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif;font-weight:400}.progressBarArea__level__rankInitials[_ngcontent-%COMP%], .progressBarArea__level__rankInitials--next[_ngcontent-%COMP%], .playerDetails__username[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained, serif;font-weight:700}.promoArea__text[_ngcontent-%COMP%], .progressBarArea__level__rankName[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif}.progressBarArea__level__rankInitials--next[_ngcontent-%COMP%], .playerDetails__username[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.progressBarArea__level__rankInitials[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 4.2);line-height:1.3}.progressBarArea__level__rankName[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9)}.promoArea__text[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.promoArea__text[_ngcontent-%COMP%]{line-height:1.4}[_nghost-%COMP%]{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);height:calc(var(--vh) * 100);width:calc(var(--vw) * 100);display:flex;flex-flow:column nowrap;background:#182531;overflow:hidden}.backgroundGodImagery[_ngcontent-%COMP%]{user-select:none;pointer-events:none;width:calc(var(--vw) * 55.85);position:absolute;top:-5%;height:110%}.backgroundGodImagery.left[_ngcontent-%COMP%]{left:0}.backgroundGodImagery.right[_ngcontent-%COMP%]{right:0}.guLogo[_ngcontent-%COMP%]{position:absolute;top:28px;left:0;width:calc(var(--vh) * 7.7);height:calc(var(--vh) * 7.7);display:flex}.guLogo__img[_ngcontent-%COMP%]{width:calc(var(--vh) * 4);margin:auto}.matchCompleteHeading[_ngcontent-%COMP%]{right:calc(var(--vh) * 3);top:calc(28px + calc(var(--vh) * 3));position:absolute}.displayArea[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 11.5);padding-bottom:calc(var(--vh) * 10);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-grow:1;transition:opacity .15s ease-in-out}.displayArea--loading[_ngcontent-%COMP%]{opacity:0}.playerDetailsAvatar[_ngcontent-%COMP%]{display:none;}.playerDetailsAvatar__image[_ngcontent-%COMP%]{width:90%;height:90%;margin:auto;border-radius:50%;overflow:hidden}.playerDetails__username[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 1);text-align:center;font-size:32px;color:var(--gu-yellow);}.progressBarArea[_ngcontent-%COMP%]{width:calc(var(--vw) * 57);display:flex;flex-flow:column nowrap;position:relative;margin-top:auto}.progressBarArea__progressBar[_ngcontent-%COMP%]{height:calc(var(--vh) * 4.16);margin-left:calc(var(--vw) * 6.6);margin-right:calc(var(--vw) * 4.3);padding:0;position:relative}.progressBarArea__level[_ngcontent-%COMP%]{position:absolute;top:50%;transform:translateY(-50%)}.progressBarArea__level--current[_ngcontent-%COMP%]{width:calc(var(--vw) * 7.5);left:0}.progressBarArea__level--next[_ngcontent-%COMP%]{width:calc(var(--vw) * 5.6);right:0}.progressBarArea__level--maxRank[_ngcontent-%COMP%]{position:static;left:auto;margin:0 auto;transform:none}.progressBarArea__level__image[_ngcontent-%COMP%]{width:100%;display:block}.progressBarArea__level__image--current[_ngcontent-%COMP%]{filter:drop-shadow(0 calc(var(--vh) * .1) calc(var(--vh) * 3.24) rgba(252, 247, 212, .3))}.progressBarArea__level__rankInitials[_ngcontent-%COMP%]{position:absolute;top:50%;left:50%;transform:translate(-50%, -60%);text-transform:uppercase}.progressBarArea__level__rankInitials--next[_ngcontent-%COMP%]{color:var(--gu-blue-hover);}.progressBarArea__level__rankInitials--maxRank[_ngcontent-%COMP%]{transform:translate(-50%, -68%)}.progressBarArea__level__rankName[_ngcontent-%COMP%]{position:absolute;top:110%;left:0;width:100%;font-weight:700;text-align:center}.progressBarArea__level__rankName--next[_ngcontent-%COMP%]{color:var(--gu-blue-hover);}.bottomContent[_ngcontent-%COMP%]{margin-top:auto;align-self:center;display:flex;flex-direction:column;align-items:center;position:relative}.promoArea__text[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 6);padding:calc(var(--vw) * 1.5);width:calc(var(--vw) * 30.5);border:calc(var(--vh) * .15) solid #3d5a74;background:#182531;text-align:center}"]
             }), o
         })();
-        var ne = g(11130), J = g(591), Vt = g(98723);
+        var ee = g(11130), J = g(591), jt = g(98723);
         g(63411);
         let Fe = (() => {
             class o {
                 constructor(t, n) {
-                    this.gameApi = t, this.authService = n, this.unsubscribe = new y.xQ, this.dataStore = {
+                    this.gameApi = t, this.authService = n, this.unsubscribe = new M.xQ, this.dataStore = {
                         gauntletSlots: [],
                         gauntletFlux: 0,
                         refreshDate: null
@@ -735,7 +750,7 @@
 
                 fetchGauntletSlots() {
                     const t = this.authService.getUserId();
-                    this.gameApi.get(`/user/${t}/gauntlet`).pipe((0, M.q)(1), (0, x.U)(n => this.validateGauntletSlots(n))).subscribe(([n, i, a]) => {
+                    this.gameApi.get(`/user/${t}/gauntlet`).pipe((0, x.q)(1), (0, O.U)(n => this.validateGauntletSlots(n))).subscribe(([n, i, a]) => {
                         this.dataStore.gauntletSlots = n, this._gauntletSlots$.next(Object.assign({}, this.dataStore).gauntletSlots), this.dataStore.gauntletFlux = i, this._gauntletFlux$.next(Object.assign({}, this.dataStore).gauntletFlux), a && this.watchForReset(a)
                     })
                 }
@@ -752,7 +767,7 @@
 
                 watchForReset(t) {
                     const n = Date.parse(t), i = new Date(n + this.msInDay + 5e3), a = i.getTime() - Date.now();
-                    this.dataStore.refreshDate = i, this._refreshDate$.next(Object.assign({}, this.dataStore).refreshDate), (0, Vt.H)(a).pipe((0, u.R)(this.unsubscribe), (0, M.q)(1)).subscribe(s => {
+                    this.dataStore.refreshDate = i, this._refreshDate$.next(Object.assign({}, this.dataStore).refreshDate), (0, jt.H)(a).pipe((0, u.R)(this.unsubscribe), (0, x.q)(1)).subscribe(s => {
                         this.fetchGauntletSlots()
                     })
                 }
@@ -762,7 +777,7 @@
                 return new (t || o)(e.LFG(_.Ft), e.LFG(f.mI))
             }, o.\u0275prov = e.Yz7({token: o, factory: o.\u0275fac, providedIn: "root"}), o
         })();
-        var Pe = g(51395), ee = g(64523);
+        var Oe = g(51395), X = g(64523);
         let yo = (() => {
             class o {
                 constructor() {
@@ -830,7 +845,7 @@
         let Oo = (() => {
             class o {
                 constructor(t) {
-                    this.gauntletService = t, this.highlightedIndices = [0, 0, 0, 0, 0, 0], this.unsubscribe = new y.xQ
+                    this.gauntletService = t, this.highlightedIndices = [0, 0, 0, 0, 0, 0], this.unsubscribe = new M.xQ
                 }
 
                 ngOnInit() {
@@ -842,7 +857,7 @@
                 }
 
                 watchGauntlet() {
-                    this.gauntletService.gauntletSlots$.pipe((0, u.R)(this.unsubscribe), (0, x.U)(t => t && 0 !== t.length ? t.map(n => n.wins) : [0, 0, 0, 0, 0, 0])).subscribe(t => this.highlightedIndices = t)
+                    this.gauntletService.gauntletSlots$.pipe((0, u.R)(this.unsubscribe), (0, O.U)(t => t && 0 !== t.length ? t.map(n => n.wins) : [0, 0, 0, 0, 0, 0])).subscribe(t => this.highlightedIndices = t)
                 }
             }
 
@@ -864,7 +879,7 @@
         })();
         const Po = [[["", "leftArea__subTitle", ""]], [["", "leftArea__title", ""]]],
             So = ["[leftArea__subTitle]", "[leftArea__title]"];
-        let jt = (() => {
+        let Xt = (() => {
             class o {
                 constructor() {
                 }
@@ -907,7 +922,7 @@
             }
         }
 
-        const Qo = function (o, r) {
+        const qo = function (o, r) {
             return {
                 rewardItem__innerContainer: !0,
                 "rewardItem__innerContainer--openVideoActive": o,
@@ -915,10 +930,10 @@
             }
         };
 
-        function qo(o, r) {
+        function Qo(o, r) {
             if (1 & o && (e.TgZ(0, "div", 34)(1, "div", 39)(2, "picture", 40), e._UZ(3, "source", 41)(4, "img", 42), e.qZA(), e._UZ(5, "video", 43, 44)(7, "video", 45, 46)(9, "gu-icon", 47, 48), e.TgZ(11, "gu-heading-text", 49, 50), e._uU(13), e.qZA()(), e.TgZ(14, "div", 37)(15, "gu-paragraph-text", 38), e._uU(16), e.qZA()()()), 2 & o) {
                 const t = e.oxw();
-                e.xp6(1), e.Q6J("ngClass", e.WLB(11, Qo, t.animationState.showVialOpenVideo, t.animationState.showVialUpgradeVideo)), e.xp6(2), e.XOb("srcset", "\n              //images.godsunchained.com/star-vials/1024/", t.animationState.currentStarVialId, ".webp 1024w,\n              //images.godsunchained.com/star-vials/720/", t.animationState.currentStarVialId, ".webp   720w,\n              //images.godsunchained.com/star-vials/512/", t.animationState.currentStarVialId, ".webp   512w,\n              //images.godsunchained.com/star-vials/256/", t.animationState.currentStarVialId, ".webp   256w,\n              //images.godsunchained.com/star-vials/128/", t.animationState.currentStarVialId, ".webp   128w\n            ", e.LSH), e.xp6(1), e.MGl("src", "//images.godsunchained.com/star-vials/128/", t.animationState.currentStarVialId, ".png", e.LSH), e.xp6(1), e.Q6J("muted", !0), e.xp6(2), e.Q6J("muted", !0), e.xp6(6), e.hij(" +", t.starsRewardInfo.stars, " "), e.xp6(3), e.hij(" ", t.animationState.currentStarVial, " Vial ")
+                e.xp6(1), e.Q6J("ngClass", e.WLB(11, qo, t.animationState.showVialOpenVideo, t.animationState.showVialUpgradeVideo)), e.xp6(2), e.XOb("srcset", "\n              //images.godsunchained.com/star-vials/1024/", t.animationState.currentStarVialId, ".webp 1024w,\n              //images.godsunchained.com/star-vials/720/", t.animationState.currentStarVialId, ".webp   720w,\n              //images.godsunchained.com/star-vials/512/", t.animationState.currentStarVialId, ".webp   512w,\n              //images.godsunchained.com/star-vials/256/", t.animationState.currentStarVialId, ".webp   256w,\n              //images.godsunchained.com/star-vials/128/", t.animationState.currentStarVialId, ".webp   128w\n            ", e.LSH), e.xp6(1), e.MGl("src", "//images.godsunchained.com/star-vials/128/", t.animationState.currentStarVialId, ".png", e.LSH), e.xp6(1), e.Q6J("muted", !0), e.xp6(2), e.Q6J("muted", !0), e.xp6(6), e.hij(" +", t.starsRewardInfo.stars, " "), e.xp6(3), e.hij(" ", t.animationState.currentStarVial, " Vial ")
             }
         }
 
@@ -935,8 +950,8 @@
 
         let Jo = (() => {
             class o {
-                constructor(t, n, i, a, s, c, d, p, w, v, O, I, Z, U, E, ge) {
-                    this.authService = t, this.playService = n, this.guGameService = i, this.progressionService = a, this.modalService = s, this.guUserService = c, this.changeDetector = d, this.resizeService = p, this.gauntletService = w, this.analyticsService = v, this.packService = O, this.filterService = I, this.starsService = Z, this.cdr = U, this.fluxService = E, this.sealedService = ge, this.unsubscribe = new y.xQ, this.xpData = {
+                constructor(t, n, i, a, s, c, d, p, w, v, k, I, G, U, E, de) {
+                    this.authService = t, this.playService = n, this.guGameService = i, this.progressionService = a, this.modalService = s, this.guUserService = c, this.changeDetector = d, this.resizeService = p, this.gauntletService = w, this.analyticsService = v, this.packService = k, this.filterService = I, this.starsService = G, this.cdr = U, this.fluxService = E, this.sealedService = de, this.unsubscribe = new M.xQ, this.xpData = {
                         latest_xp: [],
                         latest_total_xp: 0
                     }, this.showContinueButton = !1, this.loading = !0, this.specialRewards = [], this.animationState = {
@@ -951,11 +966,11 @@
                         disableCta: !0,
                         showVialOpenVideo: !1,
                         showVialUpgradeVideo: !1
-                    }, this.GuGameModeId = S.B_, this.resizeService.viewPortUnits$.pipe((0, u.R)(this.unsubscribe), (0, b.b)(({vh: ie}) => this.vh = ie)).subscribe()
+                    }, this.GuGameModeId = P.B_, this.resizeService.viewPortUnits$.pipe((0, u.R)(this.unsubscribe), (0, b.b)(({vh: ne}) => this.vh = ne)).subscribe()
                 }
 
                 ngAfterViewInit() {
-                    this.packService.fetchUnopenedPacks(), this.starsService.fetchUserStarsTotal(), this.fluxService.fetchFluxInfo(), this.gameModeId === S.B_.RANKED_CONSTRUCTED && this.gauntletService.fetchGauntletSlots(), this.gameModeId === S.B_.SEALED_DECK && this.sealedService.fetchSealed(), this.getViewData().subscribe(() => {
+                    this.packService.fetchUnopenedPacks(), this.starsService.fetchUserStarsTotal(), this.fluxService.fetchFluxInfo(), this.gameModeId === P.B_.RANKED_CONSTRUCTED && this.gauntletService.fetchGauntletSlots(), this.gameModeId === P.B_.SEALED_DECK && this.sealedService.fetchSealed(), this.getViewData().subscribe(() => {
                         this.createProgressionAnimationTimeline(this.xpData.latest_xp)
                     }), this.guUserService.fetchExtendedAccount()
                 }
@@ -965,31 +980,31 @@
                 }
 
                 getViewData() {
-                    return (0, G.aj)([this.authService.account$, this.guUserService.getExtendedAccountProperties(), this.progressionService.accountThresholds$, this.playService.currentMatchId$]).pipe((0, P.h)(([t, n, i]) => !!t && !!n && i.length > 0), (0, M.q)(1), (0, x.U)(([t, n, i, a]) => (this.userId = n.user_id, this.userName = t.username, this.userAvatar = n.image_url, this.nextProgress = new X.oW(n.total_xp, n.xp_to_next, n.level), this.thresholds = i, [this.userId, a])), (0, _e.w)(([t, n]) => (0, G.aj)([this.progressionService.fetchUserGameProgression({
+                    return (0, D.aj)([this.authService.account$, this.guUserService.getExtendedAccountProperties(), this.progressionService.accountThresholds$, this.playService.currentMatchId$]).pipe((0, S.h)(([t, n, i]) => !!t && !!n && i.length > 0), (0, x.q)(1), (0, O.U)(([t, n, i, a]) => (this.userId = n.user_id, this.userName = t.username, this.userAvatar = n.image_url, this.nextProgress = new V.oW(n.total_xp, n.xp_to_next, n.level), this.thresholds = i, [this.userId, a])), (0, ue.w)(([t, n]) => (0, D.aj)([this.progressionService.fetchUserGameProgression({
                         userId: t,
                         gameModeId: this.gameModeId
-                    }), this.starsService.fetchUserStarsRewards(n)])), (0, x.U)(([t, n]) => {
+                    }), this.starsService.fetchUserStarsRewards(n)])), (0, O.U)(([t, n]) => {
                         var i, a;
                         const s = this.nextProgress.xp - t.latest_total_xp;
                         return this.displayProgress = {
                             xp: s,
-                            lvl: wt({xp: s, levelThresholds: this.thresholds})
-                        }, this.levelUpCount = this.nextProgress.lvl - this.displayProgress.lvl, this.animationState.xp = this.displayProgress.xp, this.animationState.currentLevel = this.displayProgress.lvl, this.animationState.percentage = ot({
+                            lvl: Ct({xp: s, levelThresholds: this.thresholds})
+                        }, this.levelUpCount = this.nextProgress.lvl - this.displayProgress.lvl, this.animationState.xp = this.displayProgress.xp, this.animationState.currentLevel = this.displayProgress.lvl, this.animationState.percentage = et({
                             xp: this.animationState.xp,
                             levelThresholds: this.thresholds
                         }), this.logGameCompleted(t.latest_game), this.xpData = {
                             latest_total_xp: t.latest_total_xp,
                             latest_xp: t.latest_xp
-                        }, this.packsReward = this.packService.fixGodAlignments(this.filterService.sort(t.latest_reward, m.PE.DescRarity))[0], this.specialRewards = t.latest_special_reward || [], this.packRewardsCount = t.latest_reward.map(c => c.count).reduce((c, d) => c + d, 0), this.specialRewardsCount = this.specialRewards.length, this.hasEarnedRewards = this.packRewardsCount > 0 || this.specialRewardsCount > 0 || n.stars > 0, this.starsRewardInfo = n, this.animationState.currentStarVial = null === (i = null == n ? void 0 : n.clusters[0]) || void 0 === i ? void 0 : i.cluster_name, this.animationState.currentStarVialId = null === (a = null == n ? void 0 : n.clusters[0]) || void 0 === a ? void 0 : a.cluster_id, this.loading = !1, (0, z.of)({})
-                    }), (0, ro.K)(t => (console.error(t), (0, z.of)(!1))))
+                        }, this.packsReward = this.packService.fixGodAlignments(this.filterService.sort(t.latest_reward, m.PE.DescRarity))[0], this.specialRewards = t.latest_special_reward || [], this.packRewardsCount = t.latest_reward.map(c => c.count).reduce((c, d) => c + d, 0), this.specialRewardsCount = this.specialRewards.length, this.hasEarnedRewards = this.packRewardsCount > 0 || this.specialRewardsCount > 0 || n.stars > 0, this.starsRewardInfo = n, this.animationState.currentStarVial = null === (i = null == n ? void 0 : n.clusters[0]) || void 0 === i ? void 0 : i.cluster_name, this.animationState.currentStarVialId = null === (a = null == n ? void 0 : n.clusters[0]) || void 0 === a ? void 0 : a.cluster_id, this.loading = !1, (0, oe.of)({})
+                    }), (0, ro.K)(t => (console.error(t), (0, oe.of)(!1))))
                 }
 
                 createProgressionAnimationTimeline(t) {
-                    return (0, se.mG)(this, void 0, void 0, function* () {
-                        this.progressionTL = k.p8.timeline({
+                    return (0, ae.mG)(this, void 0, void 0, function* () {
+                        this.progressionTL = y.p8.timeline({
                             paused: !0,
                             delay: .5
-                        }), t.forEach((n, i) => this.addXpStepToProgressBar(n, i)), yield(0, mt.w)(0), this.progressionTL.add(() => {
+                        }), t.forEach((n, i) => this.addXpStepToProgressBar(n, i)), yield(0, ut.w)(0), this.progressionTL.add(() => {
                             var n;
                             (null === (n = this.starsUpgradeVideo) || void 0 === n ? void 0 : n.nativeElement) && (this.starsUpgradeVideo.nativeElement.pause(), this.starsOpenVideo.nativeElement.pause())
                         }), this.hasEarnedRewards && this.animateInRewards(), this.gauntletToasts && this.animateInGauntletToasts(), this.animateInCtaButton(), this.progressionTL.play()
@@ -1014,7 +1029,7 @@
                     this.progressionTL.addLabel(`xpStep-${n}`, "+=0.5");
                     const i = this.animationState.xp + t.xp;
                     this.animationState.xp = i;
-                    const a = wt({xp: i, levelThresholds: this.thresholds});
+                    const a = Ct({xp: i, levelThresholds: this.thresholds});
                     this.hasLevelledUp(a) && (this.progressionTL.to(this.animationState, {
                         duration: 1,
                         percentage: 100,
@@ -1022,7 +1037,7 @@
                     }).add(() => {
                         this.displayProgress.lvl = a
                     }), this.levelUpOnce(), this.animationState.currentLevel = a);
-                    const s = ot({xp: i, levelThresholds: this.thresholds});
+                    const s = et({xp: i, levelThresholds: this.thresholds});
                     this.progressionTL.to(this.animationState, 1, {
                         percentage: s,
                         ease: "power2.inOut"
@@ -1043,15 +1058,15 @@
 
                 levelUpOnce() {
                     const t = this.progressBar.progressBarDom.nativeElement;
-                    this.progressionTL.set(t, {boxShadow: `0 0 ${2 * this.vh}px ${.5 * this.vh}px rgba(${(0, Ke.hexToCssRgbString)(et.colors.apocyan[300])}, 0.4)`}).to(t, {
+                    this.progressionTL.set(t, {boxShadow: `0 0 ${2 * this.vh}px ${.5 * this.vh}px rgba(${(0, Ve.hexToCssRgbString)(je.colors.apocyan[300])}, 0.4)`}).to(t, {
                         duration: .3,
-                        boxShadow: `0 0 ${3.5 * this.vh}px ${4 * this.vh}px rgba(${(0, Ke.hexToCssRgbString)(et.colors.apocyan[300])}, 0.7)`
+                        boxShadow: `0 0 ${3.5 * this.vh}px ${4 * this.vh}px rgba(${(0, Ve.hexToCssRgbString)(je.colors.apocyan[300])}, 0.7)`
                     }).to(t, {
                         duration: .2,
-                        boxShadow: `0 0 ${5 * this.vh}px ${2 * this.vh}px rgba(${(0, Ke.hexToCssRgbString)(et.colors.apocyan[300])}, 0)`
+                        boxShadow: `0 0 ${5 * this.vh}px ${2 * this.vh}px rgba(${(0, Ve.hexToCssRgbString)(je.colors.apocyan[300])}, 0)`
                     }).to(t, {
                         duration: .2,
-                        boxShadow: `0 0 ${2 * this.vh}px ${.5 * this.vh}px rgba(${(0, Ke.hexToCssRgbString)(et.colors.apocyan[300])}, 0.4)`
+                        boxShadow: `0 0 ${2 * this.vh}px ${.5 * this.vh}px rgba(${(0, Ve.hexToCssRgbString)(je.colors.apocyan[300])}, 0.4)`
                     }), this.progressionTL.to(this.animationState, {
                         duration: .4,
                         percentage: 0,
@@ -1097,12 +1112,12 @@
                 continue() {
                     var t, n, i, a, s, c, d, p, w, v;
                     if (this.animationState.disableCta) return !1;
-                    (null === (n = null === (t = this.starsRewardInfo) || void 0 === t ? void 0 : t.clusters) || void 0 === n ? void 0 : n.length) >= 1 && (null === (a = null === (i = this.starsRewardInfo) || void 0 === i ? void 0 : i.clusters[0]) || void 0 === a ? void 0 : a.cluster_id) !== (null === (s = this.starsRewardInfo) || void 0 === s ? void 0 : s.max_clusters) && this.animationState.currentStarVial !== (null === (c = this.starsRewardInfo) || void 0 === c ? void 0 : c.clusters[(null === (p = null === (d = this.starsRewardInfo) || void 0 === d ? void 0 : d.clusters) || void 0 === p ? void 0 : p.length) - 1].cluster_name) ? (this.playStarUpgrades(), this.animationState.disableCta = !0) : (null === (w = this.starsRewardInfo) || void 0 === w ? void 0 : w.stars) && this.animationState.currentTotalStars !== (null === (v = this.starsRewardInfo) || void 0 === v ? void 0 : v.stars) ? (this.playOpenStarVial(), this.animationState.disableCta = !0) : (this.guUserService.fetchExtendedAccount(), this.guGameService.getGameMode$(this.gameModeId).pipe((0, M.q)(1)).subscribe(O => {
-                        this.close(), O && O.ranked ? this.modalService.createModal(Mo, {gameModeId: this.gameModeId}, {
+                    (null === (n = null === (t = this.starsRewardInfo) || void 0 === t ? void 0 : t.clusters) || void 0 === n ? void 0 : n.length) >= 1 && (null === (a = null === (i = this.starsRewardInfo) || void 0 === i ? void 0 : i.clusters[0]) || void 0 === a ? void 0 : a.cluster_id) !== (null === (s = this.starsRewardInfo) || void 0 === s ? void 0 : s.max_clusters) && this.animationState.currentStarVial !== (null === (c = this.starsRewardInfo) || void 0 === c ? void 0 : c.clusters[(null === (p = null === (d = this.starsRewardInfo) || void 0 === d ? void 0 : d.clusters) || void 0 === p ? void 0 : p.length) - 1].cluster_name) ? (this.playStarUpgrades(), this.animationState.disableCta = !0) : (null === (w = this.starsRewardInfo) || void 0 === w ? void 0 : w.stars) && this.animationState.currentTotalStars !== (null === (v = this.starsRewardInfo) || void 0 === v ? void 0 : v.stars) ? (this.playOpenStarVial(), this.animationState.disableCta = !0) : (this.guUserService.fetchExtendedAccount(), this.guGameService.getGameMode$(this.gameModeId).pipe((0, x.q)(1)).subscribe(k => {
+                        this.close(), k && k.ranked ? this.modalService.createModal(Mo, {gameModeId: this.gameModeId}, {
                             blurredBackground: !1,
                             canCloseFromOutside: !1,
                             size: h.Cg.Fullscreen
-                        }) : this.playService.setPlaying(j.OC.OUT, this.gameModeId)
+                        }) : this.playService.setPlaying(z.OC.OUT, this.gameModeId)
                     }))
                 }
 
@@ -1114,7 +1129,7 @@
                     "function" == typeof fbq && fbq("track", "ViewContent"), "function" == typeof gtag && gtag("event", "completed", {
                         event_category: "game",
                         event_label: "user"
-                    }), this.guGameService.getGameMode$(this.gameModeId).pipe((0, M.q)(1)).subscribe(n => {
+                    }), this.guGameService.getGameMode$(this.gameModeId).pipe((0, x.q)(1)).subscribe(n => {
                         this.analyticsService.postEvent(new Ne.Game.Completed.Event({
                             game_id: 1,
                             latest_id: t,
@@ -1125,39 +1140,39 @@
                 }
 
                 playStarUpgrades() {
-                    return (0, se.mG)(this, void 0, void 0, function* () {
+                    return (0, ae.mG)(this, void 0, void 0, function* () {
                         const t = this.starsUpgradeVideo.nativeElement, n = a => {
-                            this.animationState.currentStarVial = this.starsRewardInfo.clusters[this.starsRewardInfo.clusters.length - 1].cluster_name, this.animationState.currentStarVialId = this.starsRewardInfo.clusters[this.starsRewardInfo.clusters.length - 1].cluster_id, this.animationState.disableCta = !1, this.cdr.detectChanges(), tn(t, n)
+                            this.animationState.currentStarVial = this.starsRewardInfo.clusters[this.starsRewardInfo.clusters.length - 1].cluster_name, this.animationState.currentStarVialId = this.starsRewardInfo.clusters[this.starsRewardInfo.clusters.length - 1].cluster_id, this.animationState.disableCta = !1, this.cdr.detectChanges(), nn(t, n)
                         }, i = 1.7 * (this.starsRewardInfo.clusters[0].cluster_id - 1);
-                        this.animationState.showVialUpgradeVideo = !0, t.currentTime = i, en(t, n), t.muted = !1, t.play(), yield(0, mt.w)(1700 * (this.starsRewardInfo.clusters.length - 1) - 20), t.pause(), this.animationState.disableCta = !0
+                        this.animationState.showVialUpgradeVideo = !0, t.currentTime = i, tn(t, n), t.muted = !1, t.play(), yield(0, ut.w)(1700 * (this.starsRewardInfo.clusters.length - 1) - 20), t.pause(), this.animationState.disableCta = !0
                     })
                 }
 
                 playOpenStarVial() {
-                    return (0, se.mG)(this, void 0, void 0, function* () {
+                    return (0, ae.mG)(this, void 0, void 0, function* () {
                         const t = this.starsOpenVideo.nativeElement;
                         this.animationState.showVialUpgradeVideo = !1, this.animationState.showVialOpenVideo = !0;
                         const n = a => {
-                            this.animationState.currentTotalStars = this.starsRewardInfo.stars, k.p8.to(this.starsFinalNumbers.nativeElement, {
+                            this.animationState.currentTotalStars = this.starsRewardInfo.stars, y.p8.to(this.starsFinalNumbers.nativeElement, {
                                 duration: .5,
                                 opacity: 1,
                                 y: 0
-                            }), k.p8.to(this.starsFinalIcon.nativeElement, {
+                            }), y.p8.to(this.starsFinalIcon.nativeElement, {
                                 duration: .5,
                                 opacity: .5,
                                 y: 0,
                                 onComplete: () => {
                                     this.animationState.disableCta = !1, this.cdr.detectChanges()
                                 }
-                            }), this.cdr.detectChanges(), tn(t, n)
+                            }), this.cdr.detectChanges(), nn(t, n)
                         };
-                        t.currentTime = 1.7 * (this.starsRewardInfo.clusters[this.starsRewardInfo.clusters.length - 1].cluster_id - 1), en(t, n), t.muted = !1, t.play(), yield(0, mt.w)(1680), t.pause(), this.animationState.disableCta = !0
+                        t.currentTime = 1.7 * (this.starsRewardInfo.clusters[this.starsRewardInfo.clusters.length - 1].cluster_id - 1), tn(t, n), t.muted = !1, t.play(), yield(0, ut.w)(1680), t.pause(), this.animationState.disableCta = !0
                     })
                 }
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(f.mI), e.Y36(j.GT), e.Y36(ne.xV), e.Y36(X.$z), e.Y36(T.Z), e.Y36(le.MZ), e.Y36(e.sBO), e.Y36(te._), e.Y36(Fe), e.Y36(_.yD), e.Y36(Pe.F), e.Y36(_.iZ), e.Y36(_.cM), e.Y36(e.sBO), e.Y36(_.TJ), e.Y36(ee.H))
+                return new (t || o)(e.Y36(f.mI), e.Y36(z.GT), e.Y36(ee.xV), e.Y36(V.$z), e.Y36(T.Z), e.Y36(ce.MZ), e.Y36(e.sBO), e.Y36(K._), e.Y36(Fe), e.Y36(_.yD), e.Y36(Oe.F), e.Y36(_.iZ), e.Y36(_.cM), e.Y36(e.sBO), e.Y36(_.TJ), e.Y36(X.H))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-account-progression"]],
@@ -1168,16 +1183,16 @@
                     }
                 },
                 inputs: {gameModeId: "gameModeId"},
-                features: [e._Bn([Xe])],
+                features: [e._Bn([ze])],
                 decls: 38,
                 vars: 16,
                 consts: [[1, "backgroundImagery"], ["type", "image/webp", "srcset", "\n      //images.godsunchained.com/art2/250/916.webp   250w,\n      //images.godsunchained.com/art2/375/916.webp   375w,\n      //images.godsunchained.com/art2/500/916.webp   500w,\n      //images.godsunchained.com/art2/720/916.webp   720w,\n      //images.godsunchained.com/art2/1024/916.webp 1024w\n    "], ["type", "image/jpg", "srcset", "\n      //images.godsunchained.com/art2/250/916.jpg   250w,\n      //images.godsunchained.com/art2/375/916.jpg   375w,\n      //images.godsunchained.com/art2/500/916.jpg   500w,\n      //images.godsunchained.com/art2/720/916.jpg   720w,\n      //images.godsunchained.com/art2/1024/916.jpg 1024w\n    "], ["src", "//images.godsunchained.com/art2/720/916.jpg", "alt", "", 1, "backgroundImagery__img"], [1, "guLogo"], ["src", "/assets/images/launcher-mockup-gu-logo.png", 1, "guLogo__img"], ["fillColor", "colors.gunmetal.100", "size", "2x-small", 1, "matchCompleteHeading"], [1, "initialProgressDisplay"], ["initialProgress", ""], ["class", "playerDetails", 4, "ngIf"], [1, "progressBarArea"], ["kind", "large", "fontWeight", "bold", "fillColor", "colors.light.100", 1, "progressBarArea__label", "left"], ["kind", "large", "fontWeight", "bold", "fillColor", "colors.light.100", 1, "progressBarArea__label", "right"], ["color", "aqua", 1, "progressBarArea__bar", 3, "animateFirstValue", "percentage", "supressAnimation"], ["progressBar", ""], [1, "progressBarArea__stepInfo"], ["progressStepInfoText", ""], ["size", "x-large", 1, "progressBarArea__stepInfo__value"], ["size", "2x-small", 1, "progressBarArea__stepInfo__label"], [1, "continueButtonPlaceholder"], [1, "rewardContainer"], ["rewardsContainer", ""], ["size", "x-large", "align", "center", "fillGradient", "gradients.gold.simple", 1, "rewardContainer__title"], [1, "rewardContainer__rewardItems"], ["rewardItems", ""], ["class", "rewardContainer__rewardItems__rewardItem", 4, "ngIf"], ["class", "rewardContainer__rewardItems__rewardItem", 4, "ngFor", "ngForOf"], ["size", "large", "text", "Continue", 1, "continue", 3, "disabled", "click"], ["continueButton", ""], ["class", "fluxProgressToasts", 4, "ngIf"], [1, "playerDetails"], [1, "playerDetails__avatar"], [1, "playerDetails__avatar__img", 3, "src"], ["size", "small", "fillGradient", "gradients.gold.simple", "align", "center", 1, "playerDetails__userName"], [1, "rewardContainer__rewardItems__rewardItem"], [1, "rewardItem__innerContainer"], ["set", "core", 1, "rewardItem__innerContainer__picture", 3, "god", "rarity"], [1, "rewardItem__label"], ["fontWeight", "bold", "align", "center", "kind", "large", "fillColor", "colors.light.300"], [3, "ngClass"], [1, "rewardItem__innerContainer__starPicture"], ["type", "image/webp", 3, "srcset"], ["alt", "chest image", 1, "rewardItem__innerContainer__starPicture__img", 3, "src"], ["src", "/assets/videos/stars-upgrades.webm", "playsinline", "", "autoplay", "", 1, "rewardItem__innerContainer__video", "rewardItem__innerContainer__video--upgradeVideo", 3, "muted"], ["starsUpgradeVideo", ""], ["src", "/assets/videos/stars-opens.webm", "playsinline", "", "autoplay", "", 1, "rewardItem__innerContainer__video", "rewardItem__innerContainer__video--openVideo", 3, "muted"], ["starsOpenVideo", ""], ["iconLigature", "collectable_stars", "fillGradient", "gradients.apocyan.simple", 1, "rewardItem__innerContainer__icon", "rewardItem__innerContainer__icon--stars"], ["starsFinalIcon", ""], ["size", "x-large", "fillColor", "colors.light.100", 1, "rewardItem__innerContainer__starBigNumbers"], ["starsFinalNumbers", ""], ["iconLigature", "flux_symbol", "fillGradient", "gradients.gold.simple", 1, "rewardItem__innerContainer__icon"], [1, "fluxProgressToasts"], ["gauntletToasts", ""], ["leftArea__subTitle", ""], ["leftArea__title", ""]],
                 template: function (t, n) {
-                    1 & t && (e.TgZ(0, "picture", 0), e._UZ(1, "source", 1)(2, "source", 2)(3, "img", 3), e.qZA(), e.TgZ(4, "div", 4), e._UZ(5, "img", 5), e.qZA(), e.TgZ(6, "gu-heading-text", 6), e._uU(7, " Match Complete\n"), e.qZA(), e.TgZ(8, "div", 7, 8), e.YNc(10, No, 5, 2, "div", 9), e.TgZ(11, "div", 10)(12, "gu-simple-text", 11), e._uU(13), e.qZA(), e.TgZ(14, "gu-simple-text", 12), e._uU(15), e.qZA(), e._UZ(16, "app-progress-bar", 13, 14), e.TgZ(18, "div", 15, 16)(20, "gu-heading-text", 17), e._uU(21), e.qZA(), e.TgZ(22, "gu-heading-text", 18), e._uU(23), e.qZA()()(), e._UZ(24, "div", 19), e.qZA(), e.TgZ(25, "div", 20, 21)(27, "gu-heading-text", 22), e._uU(28), e.qZA(), e.TgZ(29, "div", 23, 24), e.YNc(31, Ro, 6, 4, "div", 25), e.YNc(32, qo, 17, 14, "div", 25), e.YNc(33, Ho, 6, 2, "div", 26), e.qZA(), e._UZ(34, "div", 19), e.qZA(), e.TgZ(35, "gu-primary-hex-button", 27, 28), e.NdJ("click", function () {
+                    1 & t && (e.TgZ(0, "picture", 0), e._UZ(1, "source", 1)(2, "source", 2)(3, "img", 3), e.qZA(), e.TgZ(4, "div", 4), e._UZ(5, "img", 5), e.qZA(), e.TgZ(6, "gu-heading-text", 6), e._uU(7, " Match Complete\n"), e.qZA(), e.TgZ(8, "div", 7, 8), e.YNc(10, No, 5, 2, "div", 9), e.TgZ(11, "div", 10)(12, "gu-simple-text", 11), e._uU(13), e.qZA(), e.TgZ(14, "gu-simple-text", 12), e._uU(15), e.qZA(), e._UZ(16, "app-progress-bar", 13, 14), e.TgZ(18, "div", 15, 16)(20, "gu-heading-text", 17), e._uU(21), e.qZA(), e.TgZ(22, "gu-heading-text", 18), e._uU(23), e.qZA()()(), e._UZ(24, "div", 19), e.qZA(), e.TgZ(25, "div", 20, 21)(27, "gu-heading-text", 22), e._uU(28), e.qZA(), e.TgZ(29, "div", 23, 24), e.YNc(31, Ro, 6, 4, "div", 25), e.YNc(32, Qo, 17, 14, "div", 25), e.YNc(33, Ho, 6, 2, "div", 26), e.qZA(), e._UZ(34, "div", 19), e.qZA(), e.TgZ(35, "gu-primary-hex-button", 27, 28), e.NdJ("click", function () {
                         return n.continue()
                     }), e.qZA(), e.YNc(37, Yo, 7, 0, "div", 29)), 2 & t && (e.xp6(10), e.Q6J("ngIf", !n.loading), e.xp6(1), e.ekj("progressBarArea--hidden", n.loading), e.xp6(2), e.hij(" Level ", null == n.displayProgress ? null : n.displayProgress.lvl, " "), e.xp6(2), e.hij(" Level ", (null == n.displayProgress ? null : n.displayProgress.lvl) + 1, " "), e.xp6(1), e.Q6J("animateFirstValue", !1)("percentage", n.animationState.percentage)("supressAnimation", !0), e.xp6(5), e.hij(" +", n.animationState.progressStepValue, " "), e.xp6(2), e.hij(" ", n.animationState.progressStepText, " "), e.xp6(5), e.hij(" ", n.packRewardsCount + n.specialRewardsCount > 1 ? "Rewards" : "Reward", " Earned "), e.xp6(3), e.Q6J("ngIf", n.packsReward), e.xp6(1), e.Q6J("ngIf", n.starsRewardInfo && 0 !== (null == n.starsRewardInfo ? null : n.starsRewardInfo.stars)), e.xp6(1), e.Q6J("ngForOf", n.specialRewards), e.xp6(2), e.Q6J("disabled", n.animationState.disableCta), e.xp6(2), e.Q6J("ngIf", n.gameModeId === n.GuGameModeId.RANKED_CONSTRUCTED))
                 },
-                directives: [l.O5, Qe, l.mk, l.sg, jt],
+                directives: [l.O5, qe, l.mk, l.sg, Xt],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif;font-weight:400}.progressBarArea__stepInfo__value[_ngcontent-%COMP%], .progressBarArea__stepInfo__label[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained, serif;font-weight:700}.progressBarArea__stepInfo__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22);line-height:1.4}.progressBarArea__stepInfo__value[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 6);line-height:1.3}[_nghost-%COMP%]{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);display:flex;flex-flow:column nowrap;justify-content:center;align-items:center;background:#182531;overflow:hidden;height:calc(var(--vh) * 100);width:calc(var(--vw) * 100);padding-top:calc(var(--vh) * 10)}.backgroundImagery[_ngcontent-%COMP%]{user-select:none;pointer-events:none;position:absolute;top:0;left:0;height:100%;width:100%;background:#0F1B27}.backgroundImagery__img[_ngcontent-%COMP%]{width:100%;height:100%;object-fit:cover;object-position:center;opacity:.1;filter:grayscale(100%)}.guLogo[_ngcontent-%COMP%]{display:none;}.guLogo__img[_ngcontent-%COMP%]{width:calc(var(--vh) * 4);margin:auto}.matchCompleteHeading[_ngcontent-%COMP%]{right:calc(var(--vh) * 3);top:calc(28px + calc(var(--vh) * 3));position:absolute}.initialProgressDisplay[_ngcontent-%COMP%]{display:flex;flex-direction:column;align-items:center;justify-content:center}.playerDetails[_ngcontent-%COMP%]{margin-bottom:calc(var(--vh) * 3)}.playerDetails__avatar[_ngcontent-%COMP%]{display:none;}.playerDetails__userName[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 1.5);position:relative}.progressBarArea[_ngcontent-%COMP%]{width:calc(var(--vw) * 50);display:flex;flex-flow:row wrap;position:relative}.progressBarArea--hidden[_ngcontent-%COMP%]{opacity:0}.progressBarArea__label[_ngcontent-%COMP%]{margin-bottom:calc(var(--vh) * 1)}.progressBarArea__label.left[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 1)}.progressBarArea__label.right[_ngcontent-%COMP%]{padding-right:calc(var(--vw) * 1);margin-left:auto}.progressBarArea__bar[_ngcontent-%COMP%]{width:100%;height:calc(var(--vh) * 3.42);padding-left:calc(var(--vw) * .5);padding-right:calc(var(--vw) * .5)}.progressBarArea__stepInfo[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2);margin-left:auto;margin-right:auto;text-align:center;color:#f6f6f6;opacity:0}.rewardContainer[_ngcontent-%COMP%]{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%) scale(.8);opacity:0;display:flex;flex-direction:column;justify-content:center;align-items:center}.rewardContainer__title[_ngcontent-%COMP%]{position:relative}.rewardContainer__rewardItems[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 3);display:flex;justify-content:center;align-items:center;position:relative}.rewardContainer__rewardItems__rewardItem[_ngcontent-%COMP%]{background:url(/assets/images/ui-embellishments/ui--reward-background.svg) no-repeat;background-size:contain;background-position:50% 34%;position:relative;margin-right:calc(var(--vw) * 4);width:calc(var(--vw) * 13)}.rewardContainer__rewardItems__rewardItem[_ngcontent-%COMP%]:last-child {margin:0}.rewardItem__innerContainer[_ngcontent-%COMP%]{width:100%;padding-bottom:113%;position:relative}.rewardItem__innerContainer--openVideoActive[_ngcontent-%COMP%] .rewardItem__innerContainer__starPicture[_ngcontent-%COMP%], .rewardItem__innerContainer--openVideoActive[_ngcontent-%COMP%] .rewardItem__innerContainer__video--upgradeVideo[_ngcontent-%COMP%]{opacity:0}.rewardItem__innerContainer--openVideoActive[_ngcontent-%COMP%] .rewardItem__innerContainer__video--openVideo[_ngcontent-%COMP%]{opacity:1}.rewardItem__innerContainer--upgradeVideoActive[_ngcontent-%COMP%] .rewardItem__innerContainer__starPicture[_ngcontent-%COMP%]{opacity:0}.rewardItem__innerContainer--upgradeVideoActive[_ngcontent-%COMP%] .rewardItem__innerContainer__video--upgradeVideo[_ngcontent-%COMP%]{opacity:1}.rewardItem__innerContainer--upgradeVideoActive[_ngcontent-%COMP%] .rewardItem__innerContainer__video--openVideo[_ngcontent-%COMP%]{opacity:0}.rewardItem__innerContainer__picture[_ngcontent-%COMP%]{position:absolute;width:68%;left:50%;top:27%;transform:translate(-50%)}.rewardItem__innerContainer__video[_ngcontent-%COMP%], .rewardItem__innerContainer__starPicture[_ngcontent-%COMP%]{position:absolute;width:140%;left:50%;top:2%;transform:translate(-50%);transition:opacity .2s ease-in-out}.rewardItem__innerContainer__video[_ngcontent-%COMP%]{opacity:0}.rewardItem__innerContainer__starPicture__img[_ngcontent-%COMP%]{display:block;width:100%}.rewardItem__innerContainer__icon[_ngcontent-%COMP%]{font-size:calc(var(--vw) * 10);position:absolute;top:30.5%;left:0;width:100%;text-align:center}.rewardItem__innerContainer__icon--stars[_ngcontent-%COMP%]{font-size:calc(var(--vw) * 8);top:39%;opacity:0}.rewardItem__innerContainer__starBigNumbers[_ngcontent-%COMP%]{position:absolute;top:50%;left:50%;text-shadow:0 2px 4px rgba(0, 0, 0, .5);transform:translate(-50%, 15%);opacity:0}.rewardItem__label[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 9);min-height:50px}.fluxProgressToasts[_ngcontent-%COMP%]{bottom:calc(var(--vh) * 3.5);left:calc(var(--vh) * 3.5);width:calc(var(--vw) * 24);position:absolute;display:flex;flex-direction:column;transform:translateY(50%);opacity:0}.fluxProgressToasts[_ngcontent-%COMP%] app-flux-progress-box[_ngcontent-%COMP%]{padding:calc(var(--vh) * 4)}.continue[_ngcontent-%COMP%]{transform:none !important;}.continueButtonPlaceholder[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 7.5);height:48px;width:100%}"],
                 data: {
                     animation: [(0, C.X$)("fadeAndSlideIn", [(0, C.eR)(":enter", [(0, C.oB)({
@@ -1194,26 +1209,26 @@
             }), o
         })();
 
-        function wt({xp: o, levelThresholds: r}) {
+        function Ct({xp: o, levelThresholds: r}) {
             o < 0 && (o = 0);
             const {level: t} = r.find((n, i) => o >= n.total_xp && o < r[i + 1].total_xp);
             return t
         }
 
-        function ot({xp: o, levelThresholds: r}) {
-            const t = wt({xp: o, levelThresholds: r}), a = r[t].total_xp;
+        function et({xp: o, levelThresholds: r}) {
+            const t = Ct({xp: o, levelThresholds: r}), a = r[t].total_xp;
             return (o - a) / (r[t + 1].total_xp - a) * 100
         }
 
-        function en(o, r) {
+        function tn(o, r) {
             o.addEventListener("pause", r), o.addEventListener("ended", r)
         }
 
-        function tn(o, r) {
+        function nn(o, r) {
             o.removeEventListener("pause", r), o.removeEventListener("ended", r)
         }
 
-        var qe = g(94057), it = g(79763);
+        var Qe = g(94057), tt = g(79763);
 
         function $o(o, r) {
             if (1 & o) {
@@ -1255,11 +1270,11 @@
                 }
 
                 ngAfterViewInit() {
-                    this.playService.setPlaying(j.OC.OUT, S.B_.TUTORIAL)
+                    this.playService.setPlaying(z.OC.OUT, P.B_.TUTORIAL)
                 }
 
                 openPacks() {
-                    this.akumaService.postControlEvent("tutorial", "Complete", "", "temple", "Btn", "pressed"), this.activeModal.dismiss(), this.akumaService.postFlowEvent("tutorialReward", "succeeded"), this.router.navigate([qe.gv.routeContent(this.environment).openPacks.path])
+                    this.akumaService.postControlEvent("tutorial", "Complete", "", "temple", "Btn", "pressed"), this.activeModal.dismiss(), this.akumaService.postFlowEvent("tutorialReward", "succeeded"), this.router.navigate([Qe.gv.routeContent(this.environment).openPacks.path])
                 }
 
                 close() {
@@ -1272,7 +1287,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(we.F0), e.Y36(f.Ho), e.Y36(L.mX), e.Y36(j.GT), e.Y36(it.hM), e.Y36(f.mI), e.Y36(_.jt), e.Y36(ne.xV))
+                return new (t || o)(e.Y36(be.F0), e.Y36(f.Ho), e.Y36(L.mX), e.Y36(z.GT), e.Y36(tt.hM), e.Y36(f.mI), e.Y36(_.jt), e.Y36(ee.xV))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["cerberus-tutorial-end-modal"]],
@@ -1290,7 +1305,7 @@
                 styles: ["[_nghost-%COMP%]{display:flex;flex-direction:column;background-color:#0f1b27;border:2px solid #3D5A74;box-sizing:border-box;box-shadow:5px 5px 15px #0006;width:900px;align-items:center}.closeButton[_ngcontent-%COMP%]{position:absolute;top:20px;right:20px;z-index:1;font-size:15px;color:#8be1e0;cursor:pointer}.closeButton[_ngcontent-%COMP%]:hover{color:#f6f6f6}.title[_ngcontent-%COMP%]{margin:20px}.subTitle[_ngcontent-%COMP%]{margin:20px;text-align:center}.tasks[_ngcontent-%COMP%]{margin:20px;display:flex;cursor:pointer}.tasks__subTask[_ngcontent-%COMP%]{position:relative;width:250px;margin:10px}.tasks__subTask[_ngcontent-%COMP%]:hover{border:2px solid #54BBCD;border-radius:4px}.tasks__subTask__image[_ngcontent-%COMP%]{max-width:100%;max-height:100%;display:block;border-radius:4px}.tasks__subTask__imageShadow[_ngcontent-%COMP%]{width:100%;height:100%;position:absolute;top:0px;background:linear-gradient(180deg,rgba(15,27,39,0) 40.36%,rgba(15,27,39,.8) 67.86%,rgba(15,27,39,.95) 100%)}.tasks__subTask__title[_ngcontent-%COMP%]{position:absolute;left:0;right:0;bottom:80px;text-align:center}.tasks__subTask__subtitle[_ngcontent-%COMP%]{position:absolute;bottom:40px;right:0;left:0;text-align:center;width:170px;margin-left:auto;margin-right:auto}.freeStuff[_ngcontent-%COMP%]{position:relative;margin-bottom:30px}.freeStuff__bgImage[_ngcontent-%COMP%]{width:850px;display:block}.freeStuff__tooltip[_ngcontent-%COMP%]{display:inline;text-align:center}.freeStuff__cta[_ngcontent-%COMP%]{display:flex;justify-content:center;align-items:center;position:absolute;left:0;right:0;top:0px;bottom:0px}.freeStuff__ctaBtn[_ngcontent-%COMP%]{margin:0 20px}"]
             }), o
         })();
-        var oe = g(98009), Se = g(23569), nn = g(61737);
+        var te = g(98009), Pe = g(23569), on = g(61737);
 
         class zo {
             constructor(r, t, n, i) {
@@ -1298,8 +1313,8 @@
             }
         }
 
-        var q = (() => {
-            return (o = q || (q = {}))[o.FORGING = 0] = "FORGING", o[o.SIGNING = 1] = "SIGNING", o[o.SELLING = 2] = "SELLING", q;
+        var Q = (() => {
+            return (o = Q || (Q = {}))[o.FORGING = 0] = "FORGING", o[o.SIGNING = 1] = "SIGNING", o[o.SELLING = 2] = "SELLING", Q;
             var o
         })();
         let He = (() => {
@@ -1336,7 +1351,7 @@
                 return new (t || o)
             }, o.\u0275prov = e.Yz7({token: o, factory: o.\u0275fac}), o
         })();
-        var on = g(40520);
+        var rn = g(40520);
 
         class Vo {
             constructor(r, t, n = [], i) {
@@ -1344,10 +1359,10 @@
             }
         }
 
-        let xe = (() => {
+        let we = (() => {
             class o {
-                constructor(t, n, i, a, s, c, d, p, w, v, O) {
-                    this.gameApi = t, this.authService = n, this.cardsService = i, this.decksService = a, this.cardGridService = s, this.audioService = c, this.http = d, this.forgeWalletService = p, this.moduleConfigService = w, this.storageService = v, this.tokenRefreshService = O, this.unsubscribe = new y.xQ, this.alive = !0, this.dataStore = {
+                constructor(t, n, i, a, s, c, d, p, w, v, k) {
+                    this.gameApi = t, this.authService = n, this.cardsService = i, this.decksService = a, this.cardGridService = s, this.audioService = c, this.http = d, this.forgeWalletService = p, this.moduleConfigService = w, this.storageService = v, this.tokenRefreshService = k, this.unsubscribe = new M.xQ, this.alive = !0, this.dataStore = {
                         forgeCards: null,
                         previewCard: null,
                         fusingLevels: null,
@@ -1356,7 +1371,7 @@
                 }
 
                 watchForLogout() {
-                    this.authService.account$.pipe((0, u.R)(this.unsubscribe), (0, P.h)(t => null === t)).subscribe(t => {
+                    this.authService.account$.pipe((0, u.R)(this.unsubscribe), (0, S.h)(t => null === t)).subscribe(t => {
                         this.emitForgeCards(null), this.emitPreviewCard(null)
                     })
                 }
@@ -1398,7 +1413,7 @@
                 }
 
                 fetchFusingLevels() {
-                    this.gameApi.get("/fusing_levels").pipe((0, M.q)(1), (0, x.U)(t => {
+                    this.gameApi.get("/fusing_levels").pipe((0, x.q)(1), (0, O.U)(t => {
                         const n = {};
                         for (const i in m.nJ) if ("number" == typeof m.nJ[i]) {
                             const a = t.find(s => s.quality === m.nJ[i]);
@@ -1430,7 +1445,7 @@
                 }
 
                 canAddToForge(t, n, i) {
-                    return (0, se.mG)(this, void 0, void 0, function* () {
+                    return (0, ae.mG)(this, void 0, void 0, function* () {
                         if (null === this.dataStore.forgeCards || this.dataStore.forgeCards.proto !== t || this.dataStore.forgeCards.quality !== n) return !0;
                         const a = yield this.numberOfQualityToForge(n);
                         return !(this.dataStore.forgeCards.ids.length >= a)
@@ -1438,7 +1453,7 @@
                 }
 
                 addToForge(t, n, i) {
-                    return (0, se.mG)(this, void 0, void 0, function* () {
+                    return (0, ae.mG)(this, void 0, void 0, function* () {
                         if (!(yield this.canAddToForge(t, n, i))) return !1;
                         const c = null === this.dataStore.forgeCards || this.dataStore.forgeCards.proto !== t || this.dataStore.forgeCards.quality !== n ? new Vo(t, n, [i], i) : Object.assign(Object.assign({}, this.dataStore.forgeCards), {ids: [...this.dataStore.forgeCards.ids, i]});
                         this.emitForgeCards(c), this.updatePreviewCard();
@@ -1459,7 +1474,7 @@
                 }
 
                 updatePreviewCard() {
-                    return (0, se.mG)(this, void 0, void 0, function* () {
+                    return (0, ae.mG)(this, void 0, void 0, function* () {
                         if (!this.dataStore.forgeCards) return void this.emitPreviewCard(null);
                         const t = yield this.numberOfQualityToForge(this.dataStore.forgeCards.quality);
                         this.emitPreviewCard(this.dataStore.forgeCards && this.dataStore.forgeCards.ids.length === t ? {
@@ -1474,8 +1489,8 @@
                 }
 
                 numberOfQualityToForge(t) {
-                    return (0, se.mG)(this, void 0, void 0, function* () {
-                        const n = yield this.fusingLevels$.pipe((0, P.h)(i => null !== i), (0, M.q)(1)).toPromise();
+                    return (0, ae.mG)(this, void 0, void 0, function* () {
+                        const n = yield this.fusingLevels$.pipe((0, S.h)(i => null !== i), (0, x.q)(1)).toPromise();
                         return n[t] ? n[t].amount : null
                     })
                 }
@@ -1497,13 +1512,13 @@
                 }
 
                 callForge(t = !1) {
-                    if (!this.dataStore.forgeCards || void 0 === this.dataStore.forgeCards.keptId || !this.dataStore.forgeCards.ids) return (0, nn._)("This is an error!");
+                    if (!this.dataStore.forgeCards || void 0 === this.dataStore.forgeCards.keptId || !this.dataStore.forgeCards.ids) return (0, on._)("This is an error!");
                     const i = this.authService.getUserId(),
                         s = (this.authService.getGameSessionTicket(), this.dataStore.forgeCards.ids);
-                    return this.moduleConfig$.pipe((0, _e.w)(({fusingHost: c}) => this.forgeWalletService.selectedWallet$.pipe((0, x.U)(d => ({
+                    return this.moduleConfig$.pipe((0, ue.w)(({fusingHost: c}) => this.forgeWalletService.selectedWallet$.pipe((0, O.U)(d => ({
                         wallet: d,
                         fusingHost: c
-                    })))), (0, _e.w)(({
+                    })))), (0, ue.w)(({
                                           wallet: c,
                                           fusingHost: d
                                       }) => this.tokenRefreshService.autoRefreshToken(this.http.post(`${d}/forge/${t ? "validation" : ""}`, {
@@ -1522,11 +1537,11 @@
                 }
 
                 postToForge(t) {
-                    if (!this.dataStore.forgeCards || void 0 === this.dataStore.forgeCards.keptId || !this.dataStore.forgeCards.ids) return (0, nn._)("This is an error!");
+                    if (!this.dataStore.forgeCards || void 0 === this.dataStore.forgeCards.keptId || !this.dataStore.forgeCards.ids) return (0, on._)("This is an error!");
                     const n = this.dataStore.forgeCards.keptId, i = this.authService.getUserId(),
                         a = this.authService.getGameSessionTicket(),
                         s = this.dataStore.forgeCards.ids.filter(c => c !== n);
-                    return this.forgeWalletService.loadSelectedWallet(), this.forgeWalletService.selectedWallet$.pipe((0, M.q)(1), (0, _e.w)(c => this.gameApi.post(`/user/${i}/${t}?session=${a}`, {
+                    return this.forgeWalletService.loadSelectedWallet(), this.forgeWalletService.selectedWallet$.pipe((0, x.q)(1), (0, ue.w)(c => this.gameApi.post(`/user/${i}/${t}?session=${a}`, {
                         card: n,
                         ids: s,
                         address: c
@@ -1541,18 +1556,18 @@
                     if (!this.dataStore.forgeCards) return !1;
                     const t = this.dataStore.forgeCards.ids, n = this.dataStore.forgeCards.proto,
                         i = this.dataStore.forgeCards.quality;
-                    return this.cardsService.forgeUpdate(t, n, this.getNextQuality(i)), this.decksService.forgeUpdate(t, n, this.getNextQuality(i)), this.finalizeForging(), (0, z.of)(!0)
+                    return this.cardsService.forgeUpdate(t, n, this.getNextQuality(i)), this.decksService.forgeUpdate(t, n, this.getNextQuality(i)), this.finalizeForging(), (0, oe.of)(!0)
                 }
 
                 postTxHashForTracking(t) {
-                    return this.moduleConfig$.pipe((0, _e.w)(n => this.http.post(`${n.walletAPIHost}/tracking`, t)))
+                    return this.moduleConfig$.pipe((0, ue.w)(n => this.http.post(`${n.walletAPIHost}/tracking`, t)))
                 }
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.LFG(_.Ft), e.LFG(f.mI), e.LFG(_.dK), e.LFG(oe.D), e.LFG(He), e.LFG(f.pk), e.LFG(on.eN), e.LFG(Se.d), e.LFG(_.LE), e.LFG(f.qy), e.LFG(_.$))
+                return new (t || o)(e.LFG(_.Ft), e.LFG(f.mI), e.LFG(_.dK), e.LFG(te.D), e.LFG(He), e.LFG(f.pk), e.LFG(rn.eN), e.LFG(Pe.d), e.LFG(_.LE), e.LFG(f.qy), e.LFG(_.$))
             }, o.\u0275prov = e.Yz7({token: o, factory: o.\u0275fac}), o
-        })(), Me = (() => {
+        })(), xe = (() => {
             class o {
                 constructor(t, n, i) {
                     this.gameApi = t, this.authService = n, this.assetsService = i, this.dataStore = {
@@ -1593,7 +1608,7 @@
                 }
 
                 fetchData() {
-                    (0, G.aj)([this.fetchProtoCollectables(), this.assetsService.getBoardsAndTrinkets(), this.fetchAllLoadouts()]).pipe((0, M.q)(1)).subscribe(([t, n, i]) => {
+                    (0, D.aj)([this.fetchProtoCollectables(), this.assetsService.getBoardsAndTrinkets(), this.fetchAllLoadouts()]).pipe((0, x.q)(1)).subscribe(([t, n, i]) => {
                         this.emitProtoCollectables(t);
                         const a = n.filter(c => "board" === c.type).map(c => Object.assign(Object.assign(Object.assign({}, c), c.class_properties), {owned: !0}));
                         this.emitOwnedBoards(a), this.emitAllBoards(this.buildOutAllBoards(t, a));
@@ -1676,20 +1691,20 @@
 
                 createNewLoadout(t) {
                     const n = this.authService.getUserId(), i = this.authService.getGameSessionTicket();
-                    return this.gameApi.post(`/user/${n}/collection?session=${i}`, t).pipe((0, M.q)(1), (0, b.b)(a => {
+                    return this.gameApi.post(`/user/${n}/collection?session=${i}`, t).pipe((0, x.q)(1), (0, b.b)(a => {
                         this.getThenUpdateLocalLoadouts(a, !0)
                     }))
                 }
 
                 updateLoadout(t) {
                     const n = this.authService.getUserId(), i = this.authService.getGameSessionTicket();
-                    return this.gameApi.put(`/user/${n}/collection/${t.collection_id}?session=${i}`, t).pipe((0, M.q)(1), (0, b.b)(a => {
+                    return this.gameApi.put(`/user/${n}/collection/${t.collection_id}?session=${i}`, t).pipe((0, x.q)(1), (0, b.b)(a => {
                         this.getThenUpdateLocalLoadouts(a)
                     }))
                 }
 
                 getThenUpdateLocalLoadouts(t, n) {
-                    this.fetchLoadout(t).pipe((0, M.q)(1)).subscribe(i => {
+                    this.fetchLoadout(t).pipe((0, x.q)(1)).subscribe(i => {
                         let a = [];
                         if (n) a = [...this.dataStore.loadouts, this.buildOutLoadout(i)]; else {
                             const s = this.dataStore.loadouts.find(d => d.collection_id === t),
@@ -1705,15 +1720,15 @@
                 return new (t || o)(e.LFG(_.Ft), e.LFG(f.mI), e.LFG(f.eQ))
             }, o.\u0275prov = e.Yz7({token: o, factory: o.\u0275fac}), o
         })();
-        var rn = g(96727), jo = g(24058), Xo = g(4390), D = (() => {
-            return (o = D || (D = {})).deckBuilder = "deck-builder", o.arena = "game-modes", o.workshop = "my-decks", o.trader = "trader", o.trailer = "trailer", o.openPacks = "temple", o.collections = "inventory", o.drafter = "drafter", o.forge = "forge", o.referrals = "referrals", o.myCards = "my-cards", o.raffle = "raffle", o.streamer = "streamer", o.spgp = "spgp", o.starStore = "star-store", o.playToEarn = "play-to-earn", D;
+        var an = g(96727), jo = g(24058), Xo = g(4390), Z = (() => {
+            return (o = Z || (Z = {})).deckBuilder = "deck-builder", o.arena = "game-modes", o.workshop = "my-decks", o.trader = "trader", o.trailer = "trailer", o.openPacks = "temple", o.collections = "inventory", o.drafter = "drafter", o.forge = "forge", o.referrals = "referrals", o.myCards = "my-cards", o.raffle = "raffle", o.streamer = "streamer", o.spgp = "spgp", o.starStore = "star-store", o.playToEarn = "play-to-earn", Z;
             var o
-        })(), Ko = g(78812), xt = g(83035), ei = g(77391), ye = g(31459);
+        })(), Ko = g(78812), vt = g(83035), ei = g(77391), Me = g(31459);
         const ti = ["headerBar"], ni = ["*"];
         let oi = (() => {
             class o {
-                constructor(t, n, i, a, s, c, d, p, w, v, O, I, Z, U, E) {
-                    this.router = t, this.ngZone = n, this.userService = i, this.navigationStateService = a, this.queueService = s, this.modalService = c, this.authService = d, this.navigation = p, this.cerberusModalService = w, this.packService = v, this.environment = O, this.akumaService = I, this.starService = Z, this.fluxService = U, this.featureFlagsService = E, this.unsubscribe = new y.xQ, this.navigationItems = {}, this.userMenuItems = {}, d.fetchAccount(), this.initMenuItems(), this.initUserProperties(), this.initRouteChanges(), this.initUnopenedPacks()
+                constructor(t, n, i, a, s, c, d, p, w, v, k, I, G, U, E) {
+                    this.router = t, this.ngZone = n, this.userService = i, this.navigationStateService = a, this.queueService = s, this.modalService = c, this.authService = d, this.navigation = p, this.cerberusModalService = w, this.packService = v, this.environment = k, this.akumaService = I, this.starService = G, this.fluxService = U, this.featureFlagsService = E, this.unsubscribe = new M.xQ, this.navigationItems = {}, this.userMenuItems = {}, d.fetchAccount(), this.initMenuItems(), this.initUserProperties(), this.initRouteChanges(), this.initUnopenedPacks()
                 }
 
                 ngOnDestroy() {
@@ -1721,9 +1736,9 @@
                 }
 
                 initMenuItems() {
-                    (0, G.aj)([this.navigationStateService.navigationItems$, this.navigationStateService.userMenuItems$, this.featureFlagsService.getMany([_.vU.forgeEnabled, _.vU.playToEarnEnabled])]).pipe((0, u.R)(this.unsubscribe), (0, P.h)(([t, n, i]) => !!t && !!n)).subscribe(([t, n, i]) => {
+                    (0, D.aj)([this.navigationStateService.navigationItems$, this.navigationStateService.userMenuItems$, this.featureFlagsService.getMany([_.vU.forgeEnabled, _.vU.playToEarnEnabled])]).pipe((0, u.R)(this.unsubscribe), (0, S.h)(([t, n, i]) => !!t && !!n)).subscribe(([t, n, i]) => {
                         this.enabledFeatures = i, this.navigationItems = t, this.userMenuItems = n
-                    }), this.navigationStateService.storeNavigationItems(Object.assign({}, qe.gv.routeContent(this.environment))), this.navigationStateService.storeUserMenuItems(Object.assign({}, qe.gv.userMenuItemsContent(this.environment)))
+                    }), this.navigationStateService.storeNavigationItems(Object.assign({}, Qe.gv.routeContent(this.environment))), this.navigationStateService.storeUserMenuItems(Object.assign({}, Qe.gv.userMenuItemsContent(this.environment)))
                 }
 
                 initUnopenedPacks() {
@@ -1732,19 +1747,19 @@
 
                 initRouteChanges() {
                     this.navigation.currentRoute$.pipe((0, u.R)(this.unsubscribe)).subscribe(t => {
-                        const n = Object.keys(D).filter(i => D[i] == t)[0];
+                        const n = Object.keys(Z).filter(i => Z[i] == t)[0];
                         this.akumaService.postControlEvent("gu", "Arena", "", n, "Mnu", "pressed")
                     })
                 }
 
                 initUserProperties() {
-                    this.userService.fetchExtendedAccount(), this.fluxService.fetchFluxInfo(), this.starService.fetchUserStarsTotal(), (0, G.aj)([this.userService.extendedAccountProperties$, this.fluxService.fluxInfo$, this.starService.userStarTotal$]).pipe((0, u.R)(this.unsubscribe)).subscribe(([t, n, i]) => {
+                    this.userService.fetchExtendedAccount(), this.fluxService.fetchFluxInfo(), this.starService.fetchUserStarsTotal(), (0, D.aj)([this.userService.extendedAccountProperties$, this.fluxService.fluxInfo$, this.starService.userStarTotal$]).pipe((0, u.R)(this.unsubscribe)).subscribe(([t, n, i]) => {
                         this.accountProperties = t, this.userStarsTotal = i, this.userFluxTotal = null == n ? void 0 : n.flux_available
                     })
                 }
 
                 onConnectWallet(t) {
-                    (0, Xo.rb)({url: qe.gv.userMenuItemsContent(this.environment).connectWallet.url})
+                    (0, Xo.rb)({url: Qe.gv.userMenuItemsContent(this.environment).connectWallet.url})
                 }
 
                 onLogout(t) {
@@ -1773,7 +1788,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(we.F0), e.Y36(e.R0b), e.Y36(le.MZ), e.Y36(Ko.f), e.Y36(xt.g), e.Y36(T.Z), e.Y36(f.mI), e.Y36(ei.f), e.Y36(L.Qz), e.Y36(Pe.F), e.Y36(f.Ho), e.Y36(_.jt), e.Y36(_.cM), e.Y36(_.TJ), e.Y36(f.B3))
+                return new (t || o)(e.Y36(be.F0), e.Y36(e.R0b), e.Y36(ce.MZ), e.Y36(Ko.f), e.Y36(vt.g), e.Y36(T.Z), e.Y36(f.mI), e.Y36(ei.f), e.Y36(L.Qz), e.Y36(Oe.F), e.Y36(f.Ho), e.Y36(_.jt), e.Y36(_.cM), e.Y36(_.TJ), e.Y36(f.B3))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["cerberus-desktop-header-provider"]],
@@ -1804,11 +1819,11 @@
                         return n.onUserDetailsClick(a)
                     }), e.ALo(4, "filterNavItemsByFeatureFlags"), e.ALo(5, "numberAbbreviation"), e.ALo(6, "numberAbbreviation"), e.qZA()(), e.Hsn(7)), 2 & t && (e.Q6J("router", n.router)("ngZone", n.ngZone)("navigationItems", e.xi3(2, 10, n.navigationItems, n.enabledFeatures)), e.xp6(3), e.Q6J("menuItems", e.xi3(4, 13, n.userMenuItems, n.enabledFeatures))("userProperties", n.accountProperties)("userStarsTotal", e.xi3(5, 16, n.userStarsTotal, 2))("userFluxTotal", e.xi3(6, 19, n.userFluxTotal, 2))("router", n.router)("ngZone", n.ngZone)("downloadLauncherUrl", n.launcherUrl))
                 },
-                pipes: [ye.h4, ye.XX],
+                pipes: [Me.h4, Me.XX],
                 styles: ["[_nghost-%COMP%]{display:block;padding-top:80px;position:relative;z-index:22}gu-header-bar[_ngcontent-%COMP%]{background:transparent;position:absolute;top:0;left:0;width:100%}"]
             }), o
         })();
-        var rt = g(39765), ii = g(25774), ri = g(97993);
+        var nt = g(39765), ii = g(25774), ri = g(97993);
         let ai = (() => {
             class o {
                 constructor(t, n, i) {
@@ -1817,7 +1832,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(e.s_b), e.Y36(e.SBq), e.Y36(Xe))
+                return new (t || o)(e.Y36(e.s_b), e.Y36(e.SBq), e.Y36(ze))
             }, o.\u0275dir = e.lG2({type: o, selectors: [["", "evalInstantly", ""]]}), o
         })();
 
@@ -1846,10 +1861,10 @@
 
         let pi = (() => {
             class o {
-                constructor(t, n, i, a, s, c, d, p, w, v, O, I, Z, U, E, ge, ie, R, ag, sg, cg, lg) {
-                    this.gameService = n, this.authService = p, this.assetsService = E, this.ngRxStore = ge, this.modalService = ie, this.audioService = R, this.vcr = ag, this.playService = sg, this.loggerService = cg, this.cerberusModalService = lg, this.inGame = !1, this.branch = "beta", this.Flags = _.vU, this.unsubscribe = new y.xQ, this.inTutorial = !1, this.checkClearLogs(), this.watchForInGame(), this.audioService.loginToLauncher.play(), n.checkInstallationPath(1), this.branch = n.getProperty(1, "branch"), p.account$.pipe((0, P.h)(Ue => !!Ue), (0, u.R)(this.unsubscribe)).subscribe(Ue => {
+                constructor(t, n, i, a, s, c, d, p, w, v, k, I, G, U, E, de, ne, R, ag, sg, cg, lg) {
+                    this.gameService = n, this.authService = p, this.assetsService = E, this.ngRxStore = de, this.modalService = ne, this.audioService = R, this.vcr = ag, this.playService = sg, this.loggerService = cg, this.cerberusModalService = lg, this.inGame = !1, this.branch = "beta", this.Flags = _.vU, this.unsubscribe = new M.xQ, this.inTutorial = !1, this.checkClearLogs(), this.watchForInGame(), this.audioService.loginToLauncher.play(), n.checkInstallationPath(1), this.branch = n.getProperty(1, "branch"), p.account$.pipe((0, S.h)(Ue => !!Ue), (0, u.R)(this.unsubscribe)).subscribe(Ue => {
                         c.fetchAccountThresholdsByUserId(Ue.id)
-                    }), c.fetchGameRanks(), t.fetchGameModes(), i.fetchProtoCards(), i.fetchInventory(), i.fetchQualityCount(), i.loadInventoryCards().pipe((0, u.R)(this.unsubscribe)).subscribe(), a.fetchStarterDecks(), a.fetchDecks(), U.fetchSealed(), n.setGuGameContext(), s.fetchExtendedAccount(), p.fetchAccount(), I.fetchFusingLevels(), Z.fetchData(), n.fetchBranchesExtended(1), w.fetchFluxInfo(), v.fetchGauntletSlots(), O.loadSelectedWallet(), d.onContainerCreated("#comment", (Ue, dg) => this.modalService.setModalVCRs(Ue, this.vcr)), d.onContainerDestroyed("#comment", (Ue, dg) => this.modalService.setModalVCRs(null, null))
+                    }), c.fetchGameRanks(), t.fetchGameModes(), i.fetchProtoCards(), i.fetchInventory(), i.fetchQualityCount(), i.loadInventoryCards().pipe((0, u.R)(this.unsubscribe)).subscribe(), a.fetchStarterDecks(), a.fetchDecks(), U.fetchSealed(), n.setGuGameContext(), s.fetchExtendedAccount(), p.fetchAccount(), I.fetchFusingLevels(), G.fetchData(), n.fetchBranchesExtended(1), w.fetchFluxInfo(), v.fetchGauntletSlots(), k.loadSelectedWallet(), d.onContainerCreated("#comment", (Ue, dg) => this.modalService.setModalVCRs(Ue, this.vcr)), d.onContainerDestroyed("#comment", (Ue, dg) => this.modalService.setModalVCRs(null, null))
                 }
 
                 ngOnInit() {
@@ -1868,28 +1883,28 @@
                 }
 
                 watchForInGame() {
-                    this.playService.playing$.pipe((0, u.R)(this.unsubscribe), (0, ht.x)()).subscribe(t => {
+                    this.playService.playing$.pipe((0, u.R)(this.unsubscribe), (0, pt.x)()).subscribe(t => {
                         switch (t.status) {
-                            case j.OC.IN:
-                                this.inGame = !0, t.gameModeId === S.B_.TUTORIAL && (this.inTutorial = !0);
+                            case z.OC.IN:
+                                this.inGame = !0, t.gameModeId === P.B_.TUTORIAL && (this.inTutorial = !0);
                                 break;
-                            case j.OC.PROGRESSION_ACCOUNT:
-                                t.gameModeId === S.B_.TUTORIAL && this.inTutorial ? (this.showTutorialEndModal(), this.inTutorial = !1) : this.modalService.createModal(Jo, {gameModeId: t.gameModeId}, {
+                            case z.OC.PROGRESSION_ACCOUNT:
+                                t.gameModeId === P.B_.TUTORIAL && this.inTutorial ? (this.showTutorialEndModal(), this.inTutorial = !1) : this.modalService.createModal(Jo, {gameModeId: t.gameModeId}, {
                                     canCloseFromOutside: !1,
                                     position: h.e1.Center,
                                     size: h.Cg.Fullscreen
                                 });
                                 break;
-                            case j.OC.OUT:
-                                t.gameModeId === S.B_.TUTORIAL && this.inTutorial && this.showTutorialEndModal(), this.inGame = !1, this.inTutorial = !1
+                            case z.OC.OUT:
+                                t.gameModeId === P.B_.TUTORIAL && this.inTutorial && this.showTutorialEndModal(), this.inGame = !1, this.inTutorial = !1
                         }
                     })
                 }
 
                 showTutorialEndModal() {
                     const t = this.authService.getUserId();
-                    this.gameService.getUserTutorialMissions(t).pipe((0, M.q)(1)).subscribe(n => {
-                        n[0].completed ? this.playService.setPlaying(j.OC.OUT, S.B_.TUTORIAL) : this.cerberusModalService.open(Wo).result.then(s => {
+                    this.gameService.getUserTutorialMissions(t).pipe((0, x.q)(1)).subscribe(n => {
+                        n[0].completed ? this.playService.setPlaying(z.OC.OUT, P.B_.TUTORIAL) : this.cerberusModalService.open(Wo).result.then(s => {
                         }, s => {
                         })
                     })
@@ -1897,23 +1912,23 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(ne.xV), e.Y36(it.hM), e.Y36(_.dK), e.Y36(oe.D), e.Y36(le.MZ), e.Y36(X.$z), e.Y36(Xe), e.Y36(f.mI), e.Y36(_.TJ), e.Y36(Fe), e.Y36(Se.d), e.Y36(xe), e.Y36(Me), e.Y36(ee.H), e.Y36(f.eQ), e.Y36(rn.yh), e.Y36(T.Z), e.Y36(f.pk), e.Y36(e.s_b), e.Y36(j.GT), e.Y36(jo.m), e.Y36(L.Qz))
+                return new (t || o)(e.Y36(ee.xV), e.Y36(tt.hM), e.Y36(_.dK), e.Y36(te.D), e.Y36(ce.MZ), e.Y36(V.$z), e.Y36(ze), e.Y36(f.mI), e.Y36(_.TJ), e.Y36(Fe), e.Y36(Pe.d), e.Y36(we), e.Y36(xe), e.Y36(X.H), e.Y36(f.eQ), e.Y36(an.yh), e.Y36(T.Z), e.Y36(f.pk), e.Y36(e.s_b), e.Y36(z.GT), e.Y36(jo.m), e.Y36(L.Qz))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-gu"]],
-                features: [e._Bn([Xe])],
+                features: [e._Bn([ze])],
                 decls: 5,
                 vars: 4,
                 consts: [["class", "announceBannerControl", 3, "closable", 4, "featureFlagIf"], ["class", "announceBannerControl", 4, "featureFlagIf"], [4, "ngIf"], [1, "announceBannerControl", 3, "closable"], [1, "announceBannerControl"], ["class", "ptrWatermark", 4, "ngIf"], ["o", "outlet"], ["evalInstantly", ""], [1, "ptrWatermark"], [1, "ptrWatermark__textWrapper"], ["kind", "x-large", "fillColor", "colors.light.100", 1, "ptrWatermark__textWrapper__text"]],
                 template: function (t, n) {
                     1 & t && (e.TgZ(0, "cerberus-desktop-header-provider"), e.YNc(1, si, 2, 1, "cerberus-announce-banner-control", 0), e.YNc(2, ci, 2, 0, "cerberus-announce-banner-control", 1), e.YNc(3, li, 2, 0, "cerberus-announce-banner-control", 1), e.qZA(), e.YNc(4, gi, 5, 1, "main", 2)), 2 & t && (e.xp6(1), e.Q6J("featureFlagIf", n.Flags.outageBannerEnabled), e.xp6(1), e.Q6J("featureFlagIf", n.Flags.rankedWeekendCancelledBannerEnabled), e.xp6(1), e.Q6J("featureFlagIf", n.Flags.showControllableBanner), e.xp6(1), e.Q6J("ngIf", !n.inGame))
                 },
-                directives: [oi, rt.w, ii.O, ri.i, l.O5, we.lC, ai],
+                directives: [oi, nt.w, ii.O, ri.i, l.O5, be.lC, ai],
                 styles: ["@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-direction:column;height:100%}[_nghost-%COMP%]     router-outlet~*{position:absolute;width:100%;height:100%}main[_ngcontent-%COMP%]{position:relative;flex:1}.ptrWatermark[_ngcontent-%COMP%]{position:absolute;left:calc(-50vh + 15px);display:flex;top:50vh;user-select:none;pointer-events:none}.ptrWatermark__textWrapper[_ngcontent-%COMP%]{transform:rotate(-90deg);width:100vh;height:30px;margin:auto;justify-content:center;display:flex}.ptrWatermark__textWrapper__text[_ngcontent-%COMP%]{opacity:.5}"],
                 data: {animation: [io]}
             }), o
         })();
-        var an = g(51649), de = g(531);
+        var sn = g(51649), le = g(531);
 
         function ui(o, r) {
             if (1 & o) {
@@ -1962,7 +1977,7 @@
             }), o
         })();
         const mi = ["*"];
-        let ke = (() => {
+        let ye = (() => {
             class o {
                 constructor(t) {
                     this.audioService = t, this.closeButtonClickFn = () => ({})
@@ -1993,7 +2008,7 @@
                 },
                 styles: ["[_nghost-%COMP%]{padding-top:calc(var(--vh) * 4.5);display:flex;flex-flow:column nowrap;align-items:center;width:calc(var(--vh) * 7.7);position:absolute;top:0;left:0;height:100%}.closeButton[_ngcontent-%COMP%]{width:calc(var(--vh) * 3);height:calc(var(--vh) * 3);font-size:calc(var(--vh) * 1.7);border-radius:50%;display:flex;line-height:1;border:2px solid var(--gu-blue);color:var(--gu-blue);cursor:pointer}.closeButton[_ngcontent-%COMP%]:hover{border-color:var(--gu-blue-hover);color:var(--gu-blue-hover)}.closeButton[_ngcontent-%COMP%]     i{margin:auto;line-height:1}"]
             }), o
-        })(), at = (() => {
+        })(), ot = (() => {
             class o {
                 constructor() {
                 }
@@ -2018,13 +2033,13 @@
         })();
         var H = g(57674);
 
-        class fe {
+        class me {
             constructor(r, t, n) {
                 this.name = r, this.rules = t, this.groupingType = n
             }
         }
 
-        class Ce {
+        class fe {
             constructor(r, t, n, i = [], a) {
                 this.property = r, this.groups = t, this.includedInGroup = n, this.excludedTypes = i, this.noMatchingGroup = a
             }
@@ -2035,19 +2050,19 @@
             var o
         })();
 
-        class sn {
+        class cn {
             constructor(r, t, n = null, i = []) {
                 this.header = r, this.currentGrouping = t, this.image = n, this.cards = i
             }
         }
 
-        class cn {
+        class ln {
             constructor(r, t, n = null, i = []) {
                 this.header = "weapon" === r ? "relic" : r, this.currentGrouping = t, this.image = n, this.cards = i
             }
         }
 
-        class ln {
+        class dn {
             constructor(r, t, n, i = null, a = []) {
                 this.header = "weapon" === r ? "relic" : r, this.currentGrouping = t, this.quality = n, this.image = i, this.cards = a
             }
@@ -2056,7 +2071,7 @@
         let Y = (() => {
             class o {
                 constructor(t, n, i) {
-                    this.cardsService = t, this.elRef = n, this.audioService = i, this.quality = 5, this.sound = !0, this.unsubscribe = new y.xQ
+                    this.cardsService = t, this.elRef = n, this.audioService = i, this.quality = 5, this.sound = !0, this.unsubscribe = new M.xQ
                 }
 
                 ngOnInit() {
@@ -2106,7 +2121,7 @@
             }), o
         })();
         var De = g(17268);
-        const Mt = function (o) {
+        const bt = function (o) {
             return {selected: o}
         };
 
@@ -2121,7 +2136,7 @@
             }
             if (2 & o) {
                 const t = e.oxw().$implicit, n = e.oxw(3);
-                e.Q6J("ngClass", e.VKq(2, Mt, -1 !== n.selectedHeaders.indexOf(t.value.header))), e.xp6(2), e.Oqu(n.shortenHeaderText(t.value.header))
+                e.Q6J("ngClass", e.VKq(2, bt, -1 !== n.selectedHeaders.indexOf(t.value.header))), e.xp6(2), e.Oqu(n.shortenHeaderText(t.value.header))
             }
         }
 
@@ -2150,7 +2165,7 @@
             }
             if (2 & o) {
                 const t = e.oxw().$implicit, n = e.oxw(3);
-                e.Q6J("ngClass", e.VKq(2, Mt, -1 !== n.selectedHeaders.indexOf(t))), e.xp6(2), e.Oqu(n.shortenHeaderText(t))
+                e.Q6J("ngClass", e.VKq(2, bt, -1 !== n.selectedHeaders.indexOf(t))), e.xp6(2), e.Oqu(n.shortenHeaderText(t))
             }
         }
 
@@ -2189,7 +2204,7 @@
             }
             if (2 & o) {
                 const t = r.$implicit, n = e.oxw();
-                e.MGl("title", "Sort by ", t.name, ""), e.xp6(1), e.Q6J("ngClass", e.VKq(3, Mt, n.activeSortOption === t)), e.xp6(1), e.Q6J("iconLigature", t.ligature)
+                e.MGl("title", "Sort by ", t.name, ""), e.xp6(1), e.Q6J("ngClass", e.VKq(3, bt, n.activeSortOption === t)), e.xp6(1), e.Q6J("iconLigature", t.ligature)
             }
         }
 
@@ -2212,13 +2227,13 @@
             }
         }
 
-        let yt = (() => {
+        let wt = (() => {
             class o {
                 constructor(t, n) {
-                    this.fb = t, this.audio = n, this.sortOptions = [], this.showFilters = !0, this.unownedCheckboxVisible = !1, this.noSortByLabel = !1, this.showUnowned = !0, this.selectedHeaders = [], this.groupingHeaderChange = new e.vpe, this.sortChange = new e.vpe, this.unownedChange = new e.vpe, this.searchChange = new e.vpe, this.ownershipChange = new e.vpe, this.activeSortOption = this.sortOptions[0], this.activeSortAsc = !1, this.marked = !1, this.unsubscribe = new y.xQ, this.subGroupingOrder = (i, a) => {
+                    this.fb = t, this.audio = n, this.sortOptions = [], this.showFilters = !0, this.unownedCheckboxVisible = !1, this.noSortByLabel = !1, this.showUnowned = !0, this.selectedHeaders = [], this.groupingHeaderChange = new e.vpe, this.sortChange = new e.vpe, this.unownedChange = new e.vpe, this.searchChange = new e.vpe, this.ownershipChange = new e.vpe, this.activeSortOption = this.sortOptions[0], this.activeSortAsc = !1, this.marked = !1, this.unsubscribe = new M.xQ, this.subGroupingOrder = (i, a) => {
                         const c = a.value.currentGrouping.rules,
-                            p = i.value.currentGrouping.rules.groups.map(O => O.toString()).indexOf(i.key),
-                            v = c.groups.map(O => O.toString()).indexOf(a.key);
+                            p = i.value.currentGrouping.rules.groups.map(k => k.toString()).indexOf(i.key),
+                            v = c.groups.map(k => k.toString()).indexOf(a.key);
                         return -1 === p ? 1 : -1 === v ? -1 : p - v
                     }
                 }
@@ -2295,7 +2310,7 @@
                 pipes: [l.Nd],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained, serif;font-weight:700}.filterLabel[_ngcontent-%COMP%], .filterButton__text[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif}.filterButton__text[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.filterLabel[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.11)}[_nghost-%COMP%]{display:flex;flex-wrap:wrap;width:100%;}.filterLabel[_ngcontent-%COMP%]{padding-right:calc(var(--vw) * .7);color:#7192b0;align-self:center}.filterLabel--leftSpacing[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 1)}.filterButtonAndTooltip[_ngcontent-%COMP%]{margin-right:calc(var(--vw) * .5)}.filterButtonAndTooltip[_ngcontent-%COMP%]:last-of-type {margin-right:0}.filterButton[_ngcontent-%COMP%]{min-width:calc(var(--vw) * 1.45);height:calc(var(--vw) * 1.45);margin-right:calc(var(--vw) * .2);border-radius:calc(var(--vh) * .4);display:flex;padding:0;cursor:pointer;border:calc(var(--vh) * .15) solid #182531;background:#0c1620;color:#7192b0;outline:none}.filterButton.selected[_ngcontent-%COMP%]{background:#3d5a74;border-color:#7192b0;color:#f6f6f6}.filterButton[_ngcontent-%COMP%]:hover {color:#f6f6f6;background:#3d5a74;border-color:#3d5a74}.filterButton__text[_ngcontent-%COMP%]{line-height:1;margin:auto;padding:0 4px}.filterButton__icon[_ngcontent-%COMP%]{font-size:calc(var(--vw) * .9);margin:auto;line-height:1;display:flex}.unownedCheckbox[_ngcontent-%COMP%]{display:flex;margin-left:auto;margin-top:4px;align-items:center}.form-check-label[_ngcontent-%COMP%]{color:#7192b0}"]
             }), o
-        })(), Oe = (() => {
+        })(), ke = (() => {
             class o {
                 constructor(t) {
                     this.cardsService = t, this.gods = ["death", "deception", "light", "magic", "nature", "war", "neutral"], this.sets = ["genesis", "core", "etherbots", "promo", "mythic", "welcome", "trial", "order"], this.rarities = ["legendary", "epic", "rare", "common", "mythic"], this.types = ["spell", "weapon", "creature"], this.tribes = ["aether", "amazon", "anubian", "atlantean", "dragon", "nether", "olympian", "viking", "guild", "mystic", "structure", "wild"], this.qualities = ["no quality", "diamond", "gold", "shadow", "meteorite", "plain"], this.numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8], this.numberIncludedInGroup = n => n < 9, this.stringIncludedInGroup = n => !!n, this._initGroupingRules(), this._initGroupings(), this.cardsService.inventory$.pipe((0, b.b)(n => this.inventoryCardsMap = n)).subscribe()
@@ -2318,11 +2333,11 @@
                 }
 
                 _initGroupingRules() {
-                    this.godGrouping = new Ce("god", this.gods, this.stringIncludedInGroup), this.setGrouping = new Ce("set", this.sets, this.stringIncludedInGroup), this.rarityGrouping = new Ce("rarity", this.rarities, this.stringIncludedInGroup), this.typeGrouping = new Ce("type", this.types, this.stringIncludedInGroup), this.tribeGrouping = new Ce("tribe", this.tribes, this.stringIncludedInGroup, ["weapon", "spell"], "none"), this.manaGrouping = new Ce("mana", this.numbers, this.numberIncludedInGroup, [], "9+"), this.healthGrouping = new Ce("health", this.numbers, this.numberIncludedInGroup, ["spell"], "9+"), this.attackGrouping = new Ce("attack", this.numbers, this.numberIncludedInGroup, ["spell"], "9+"), this.qualityGrouping = new Ce("quality", this.qualities, this.stringIncludedInGroup, [])
+                    this.godGrouping = new fe("god", this.gods, this.stringIncludedInGroup), this.setGrouping = new fe("set", this.sets, this.stringIncludedInGroup), this.rarityGrouping = new fe("rarity", this.rarities, this.stringIncludedInGroup), this.typeGrouping = new fe("type", this.types, this.stringIncludedInGroup), this.tribeGrouping = new fe("tribe", this.tribes, this.stringIncludedInGroup, ["weapon", "spell"], "none"), this.manaGrouping = new fe("mana", this.numbers, this.numberIncludedInGroup, [], "9+"), this.healthGrouping = new fe("health", this.numbers, this.numberIncludedInGroup, ["spell"], "9+"), this.attackGrouping = new fe("attack", this.numbers, this.numberIncludedInGroup, ["spell"], "9+"), this.qualityGrouping = new fe("quality", this.qualities, this.stringIncludedInGroup, [])
                 }
 
                 _initGroupings() {
-                    this._groupings = [new fe("Mana", this.manaGrouping, F.Mana), new fe("Health", this.healthGrouping, F.Health), new fe("Attack", this.attackGrouping, F.Attack), new fe("Tribe", this.tribeGrouping, F.Tribe), new fe("Type", this.typeGrouping, F.Type), new fe("God", this.godGrouping, F.God), new fe("Rarity", this.rarityGrouping, F.Rarity), new fe("Set", this.setGrouping, F.Set), new fe("Quality", this.qualityGrouping, F.Quality)]
+                    this._groupings = [new me("Mana", this.manaGrouping, F.Mana), new me("Health", this.healthGrouping, F.Health), new me("Attack", this.attackGrouping, F.Attack), new me("Tribe", this.tribeGrouping, F.Tribe), new me("Type", this.typeGrouping, F.Type), new me("God", this.godGrouping, F.God), new me("Rarity", this.rarityGrouping, F.Rarity), new me("Set", this.setGrouping, F.Set), new me("Quality", this.qualityGrouping, F.Quality)]
                 }
 
                 addToCardGrouping(t, n, i, a) {
@@ -2344,8 +2359,8 @@
 
                 createCardGrouping(t) {
                     const n = new Map;
-                    for (let i of t.rules.groups) n.set(i.toString(), new sn(i.toString(), t));
-                    return t.rules.noMatchingGroup && n.set(t.rules.noMatchingGroup, new sn(t.rules.noMatchingGroup, t)), n
+                    for (let i of t.rules.groups) n.set(i.toString(), new cn(i.toString(), t));
+                    return t.rules.noMatchingGroup && n.set(t.rules.noMatchingGroup, new cn(t.rules.noMatchingGroup, t)), n
                 }
 
                 groupProtos(t, n, i = null, a = !1, s) {
@@ -2353,14 +2368,14 @@
                     for (let p of t) {
                         if (!a && !p.collectable || i && p.god !== i && "neutral" !== p.god || n.rules.excludedTypes.includes(p.type)) continue;
                         const w = p[n.rules.property], v = d[p.proto] || [],
-                            O = v.length > 0 ? this.createQualityMap(v) : null;
+                            k = v.length > 0 ? this.createQualityMap(v) : null;
                         if (n.rules.includedInGroup(w)) {
                             const I = c.get(w.toString());
                             if (!I || !I.cards) continue;
-                            I.cards.push({pc: p, qualityMap: O})
+                            I.cards.push({pc: p, qualityMap: k})
                         } else n.rules.noMatchingGroup && c.get(n.rules.noMatchingGroup).cards.push({
                             pc: p,
-                            qualityMap: O
+                            qualityMap: k
                         })
                     }
                     return c
@@ -2368,17 +2383,17 @@
 
                 _createProtoGrouping(t) {
                     const n = new Map;
-                    for (let i of t.rules.groups) n.set(i.toString(), new cn(i.toString(), t));
-                    return t.rules.noMatchingGroup && n.set(t.rules.noMatchingGroup, new cn(t.rules.noMatchingGroup, t)), n
+                    for (let i of t.rules.groups) n.set(i.toString(), new ln(i.toString(), t));
+                    return t.rules.noMatchingGroup && n.set(t.rules.noMatchingGroup, new ln(t.rules.noMatchingGroup, t)), n
                 }
 
                 _createQualityGrouping(t) {
                     const n = new Map;
                     for (let i of t.rules.groups) {
                         const a = this.qualities.indexOf(i.toString());
-                        n.set(i.toString(), new ln(i.toString(), t, a))
+                        n.set(i.toString(), new dn(i.toString(), t, a))
                     }
-                    return t.rules.noMatchingGroup && n.set(t.rules.noMatchingGroup, new ln(t.rules.noMatchingGroup, t, 0)), n
+                    return t.rules.noMatchingGroup && n.set(t.rules.noMatchingGroup, new dn(t.rules.noMatchingGroup, t, 0)), n
                 }
 
                 newQualityMap() {
@@ -2398,10 +2413,10 @@
                     const c = this._createQualityGrouping(n), d = s || this.inventoryCardsMap;
                     for (let p of t) {
                         if (!a && !p.collectable || i && p.god !== i && "neutral" !== p.god || n.rules.excludedTypes.includes(p.type)) continue;
-                        const v = d[p.proto] || [], O = v.length > 0 ? this.createQualityMap(v) : null;
-                        null !== O && O.forEach((I, Z) => {
+                        const v = d[p.proto] || [], k = v.length > 0 ? this.createQualityMap(v) : null;
+                        null !== k && k.forEach((I, G) => {
                             if (I.length <= 0) return;
-                            let U = this.qualities[Z];
+                            let U = this.qualities[G];
                             if (U || (U = "plain"), n.rules.includedInGroup(U)) {
                                 const E = c.get(U);
                                 if (!E || !E.cards) return;
@@ -2417,7 +2432,7 @@
                 return new (t || o)(e.LFG(_.dK))
             }, o.\u0275prov = e.Yz7({token: o, factory: o.\u0275fac}), o
         })();
-        var kt = g(80013);
+        var xt = g(80013);
         const Pi = function (o) {
             return {selected: o}
         };
@@ -2449,10 +2464,10 @@
             }
         }
 
-        let Ot = (() => {
+        let Mt = (() => {
             class o {
                 constructor(t) {
-                    this.audioService = t, this.displayGroupingName = !0, this.displaySearch = !0, this.groupingChange = new e.vpe, this.searchChange = new e.vpe, this.searchControl = new A.NI(""), this.unsubscribe = new y.xQ
+                    this.audioService = t, this.displayGroupingName = !0, this.displaySearch = !0, this.groupingChange = new e.vpe, this.searchChange = new e.vpe, this.searchControl = new A.NI(""), this.unsubscribe = new M.xQ
                 }
 
                 ngOnInit() {
@@ -2476,7 +2491,7 @@
                 }
 
                 watchSearch() {
-                    this.searchControl.valueChanges.pipe((0, u.R)(this.unsubscribe), (0, kt.b)(500), (0, ht.x)(), (0, b.b)(t => this.searchChanged(t))).subscribe()
+                    this.searchControl.valueChanges.pipe((0, u.R)(this.unsubscribe), (0, xt.b)(500), (0, pt.x)(), (0, b.b)(t => this.searchChanged(t))).subscribe()
                 }
 
                 searchChanged(t) {
@@ -2514,7 +2529,7 @@
             }
         }
 
-        let dn = (() => {
+        let gn = (() => {
             class o {
                 constructor() {
                     this.size = "normal"
@@ -2554,10 +2569,10 @@
         })();
         var Ai = g(22313);
         const Fi = ["*"];
-        let st = (() => {
+        let it = (() => {
             class o {
                 constructor(t, n, i, a) {
-                    this.resizeService = t, this.sanitizer = n, this.elRef = i, this.renderer = a, this.columns = 4, this.columnGapVwMultiplyer = 1.2, this.rowGapVhMultiplyer = .5, this.vw = 0, this.vh = 0, this.unsubscribe = new y.xQ, t.viewPortUnits$.pipe((0, u.R)(this.unsubscribe), (0, b.b)(({
+                    this.resizeService = t, this.sanitizer = n, this.elRef = i, this.renderer = a, this.columns = 4, this.columnGapVwMultiplyer = 1.2, this.rowGapVhMultiplyer = .5, this.vw = 0, this.vh = 0, this.unsubscribe = new M.xQ, t.viewPortUnits$.pipe((0, u.R)(this.unsubscribe), (0, b.b)(({
                                                                                                                                                                                                                                                                                                             vw: s,
                                                                                                                                                                                                                                                                                                             vh: c
                                                                                                                                                                                                                                                                                                         }) => {
@@ -2600,7 +2615,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(te._), e.Y36(Ai.H7), e.Y36(e.SBq), e.Y36(e.Qsj))
+                return new (t || o)(e.Y36(K._), e.Y36(Ai.H7), e.Y36(e.SBq), e.Y36(e.Qsj))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-grid-display"]],
@@ -2622,7 +2637,7 @@
                 },
                 styles: ['[_nghost-%COMP%]{width:100%;display:block}.fourColumns[_nghost-%COMP%]{grid-row-gap:calc(var(--vh) * 4.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(4, 1fr);align-items:start;grid-auto-rows:min-content;grid-template-areas:"item item item item" "desc desc desc desc"}.sevenColumns[_nghost-%COMP%]{grid-row-gap:calc(var(--vh) * 4.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(8, 1fr);align-items:start;grid-auto-rows:min-content;grid-template-areas:"item item item item item item item item" "desc desc desc desc desc desc desc desc"}.eightColumns[_nghost-%COMP%]{grid-row-gap:calc(var(--vh) * 4.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(8, 1fr);align-items:start;grid-auto-rows:min-content;grid-template-areas:"item item item item item item item item" "desc desc desc desc desc desc desc desc"}.tenColumns[_nghost-%COMP%]{grid-row-gap:calc(var(--vh) * 4.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(8, 1fr);align-items:start;grid-auto-rows:min-content;grid-template-areas:"item item item item item item item item" "desc desc desc desc desc desc desc desc"}.elevenColumns[_nghost-%COMP%]{grid-row-gap:calc(var(--vh) * 4.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(8, 1fr);align-items:start;grid-auto-rows:min-content;grid-template-areas:"item item item item item item item item" "desc desc desc desc desc desc desc desc"}']
             }), o
-        })(), Pt = (() => {
+        })(), yt = (() => {
             class o {
                 constructor(t, n) {
                     this.el = t, this.renderer = n, this.leftSideOrigin = "20% 50%", this.middleOrigin = "50% 50%", this.rightSideOrigin = "80% 50%", this.transformOrigin = this.middleOrigin
@@ -2656,7 +2671,7 @@
                         const t = this.el.nativeElement.querySelector("composited-card");
                         this.cloneImage.inputProtoData = t.inputProtoData, this.cloneImage.quality = t.quality
                     }
-                    this.renderer.appendChild(this.el.nativeElement, this.cloneImage), k.p8.set(this.cloneImage, {
+                    this.renderer.appendChild(this.el.nativeElement, this.cloneImage), y.p8.set(this.cloneImage, {
                         position: "absolute",
                         top: 0,
                         left: 0,
@@ -2665,7 +2680,7 @@
                         pointerEvents: "none",
                         opacity: 0,
                         zIndex: 1
-                    }), k.p8.set(this.el.nativeElement, {zIndex: 1}), k.p8.to(this.cloneImage, {
+                    }), y.p8.set(this.el.nativeElement, {zIndex: 1}), y.p8.to(this.cloneImage, {
                         duration: .3,
                         scale: 1.5,
                         opacity: 1
@@ -2674,9 +2689,9 @@
 
                 hideCard() {
                     return new Promise(t => {
-                        k.p8.to(this.cloneImage, {
+                        y.p8.to(this.cloneImage, {
                             duration: .3, scale: 1, opacity: 0, onComplete: () => {
-                                k.p8.set(this.el.nativeElement, {zIndex: "unset"}), this.cloneImage.remove(), t()
+                                y.p8.set(this.el.nativeElement, {zIndex: "unset"}), this.cloneImage.remove(), t()
                             }
                         })
                     })
@@ -2799,20 +2814,20 @@
                 template: function (t, n) {
                     1 & t && (e.TgZ(0, "header", 0)(1, "h4", 1), e._uU(2), e.ALo(3, "titlecase"), e.ALo(4, "titlecase"), e.qZA(), e.TgZ(5, "h4", 2), e._uU(6), e.qZA()(), e.TgZ(7, "app-grid-display", 3), e.YNc(8, Li, 2, 1, "ng-container", 4), e.YNc(9, Ei, 2, 1, "ng-container", 4), e.qZA()), 2 & t && (e.xp6(2), e.AsE(" ", e.lcZ(3, 8, n.grouping.currentGrouping.name), ": ", e.lcZ(4, 10, n.grouping.header), " "), e.xp6(4), e.AsE(" ", n.calculateOwnedCards(n.grouping.cards), " / ", n.grouping.cards.length, " "), e.xp6(1), e.Q6J("columns", n.columns)("columnGapVwMultiplyer", .8), e.xp6(1), e.Q6J("ngForOf", n.grouping.cards), e.xp6(1), e.Q6J("ngForOf", n.grouping.cards))
                 },
-                directives: [st, l.sg, l.O5, Y, Pt],
+                directives: [it, l.sg, l.O5, Y, yt],
                 pipes: [l.rS, l.Nd],
                 styles: ['h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.groupedCardsHeader__cardsCount[_ngcontent-%COMP%], .groupedCardsHeader__groupingName[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.cardCount__count[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.groupedCardsHeader__cardsCount[_ngcontent-%COMP%], .groupedCardsHeader__groupingName[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22);line-height:1.4}.cardCount__count[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.29)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:block}.cardCount[_ngcontent-%COMP%]{display:flex;align-items:center;justify-content:center}.cardCount__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1);margin-right:calc(var(--vw) * .3);line-height:1;color:#f6f6f6}.cardCount__count[_ngcontent-%COMP%]{color:#f6f6f6}.cardItemWrapper--greyed[_ngcontent-%COMP%]{filter:grayscale(1)}.cardItemWrapper--greyed[_ngcontent-%COMP%]     app-card2{cursor:default}.cardItemWrapper--dimmed[_ngcontent-%COMP%]{filter:brightness(.6)}.groupedCardsHeader[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 1.5);padding-bottom:calc(var(--vh) * 1.5);display:flex;position:relative;align-items:center}.groupedCardsHeader[_ngcontent-%COMP%]:before{content:"";flex:1;order:2;height:calc(var(--vh) * .25);background:#1d2f41}.groupedCardsHeader__groupingName[_ngcontent-%COMP%]{padding-right:calc(var(--vw) * 1);line-height:1.1;color:#f6f6f6;order:1}.groupedCardsHeader__cardsCount[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 1);line-height:1.1;margin-left:auto;color:#f6f6f6;order:3}.cardGrid[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(8,1fr);align-items:start;grid-auto-rows:min-content}']
             }), o
         })();
-        var St = g(44290), Ge = g(44416);
+        var kt = g(44290), Ge = g(44416);
 
         function Ri(o, r) {
             1 & o && (e.TgZ(0, "div", 13)(1, "div", 14)(2, "gu-vertical-space", 15)(3, "gu-paragraph-text", 16), e._uU(4, " NOT FUSABLE "), e.qZA(), e._UZ(5, "gu-icon", 17), e.qZA()()())
         }
 
-        const Qi = function (o) {
+        const qi = function (o) {
             return {"cardItem--escrow": o}
-        }, qi = function (o, r) {
+        }, Qi = function (o, r) {
             return {"cardItem--selected": o, "cardItem--dimmed": r}
         };
 
@@ -2826,7 +2841,7 @@
             }
             if (2 & o) {
                 const t = r.$implicit, n = e.oxw(2).$implicit, i = e.oxw();
-                e.Q6J("ngClass", e.VKq(5, Qi, "escrow" === t.status)), e.xp6(1), e.Q6J("ngIf", "escrow" === t.status), e.xp6(1), e.Q6J("protoId", i.card.pc.proto)("quality", n.key)("ngClass", e.WLB(7, qi, i.isCardInForge(t.id), !i.isCardSelectable(n.key, t.id)))
+                e.Q6J("ngClass", e.VKq(5, qi, "escrow" === t.status)), e.xp6(1), e.Q6J("ngIf", "escrow" === t.status), e.xp6(1), e.Q6J("protoId", i.card.pc.proto)("quality", n.key)("ngClass", e.WLB(7, Qi, i.isCardInForge(t.id), !i.isCardSelectable(n.key, t.id)))
             }
         }
 
@@ -2862,10 +2877,10 @@
             }
         }
 
-        let gn = (() => {
+        let pn = (() => {
             class o {
                 constructor(t) {
-                    this.forgeService = t, this.cardRowIndex = 0, this.unsubscribe = new y.xQ
+                    this.forgeService = t, this.cardRowIndex = 0, this.unsubscribe = new M.xQ
                 }
 
                 get getClass() {
@@ -2893,14 +2908,14 @@
                 }
 
                 isCardSelectable(t, n) {
-                    return (0, se.mG)(this, void 0, void 0, function* () {
+                    return (0, ae.mG)(this, void 0, void 0, function* () {
                         return t !== m.nJ.DIAMOND && (!this.forgeCards || this.forgeCards.quality === t && (this.isCardInForge(n), !0))
                     })
                 }
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(xe))
+                return new (t || o)(e.Y36(we))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["cerberus-app-expanded-cards"]],
@@ -2997,7 +3012,7 @@
         let ar = (() => {
             class o {
                 constructor(t, n, i) {
-                    this.forgeService = t, this.utils = n, this.cardGridService = i, this.columns = 8, this.showOnlyEscrow = !1, this.showUnowned = !1, this.filterCardIds = [], this.showCardCounts = !0, this.showBundle = !1, this.selectCard = new e.vpe, this.ExpandedViewMode = q, this.numCards = 0, this.chunkedCards = [], this.alive = !0
+                    this.forgeService = t, this.utils = n, this.cardGridService = i, this.columns = 8, this.showOnlyEscrow = !1, this.showUnowned = !1, this.filterCardIds = [], this.showCardCounts = !0, this.showBundle = !1, this.selectCard = new e.vpe, this.ExpandedViewMode = Q, this.numCards = 0, this.chunkedCards = [], this.alive = !0
                 }
 
                 ngOnInit() {
@@ -3013,18 +3028,18 @@
                 }
 
                 initChunk() {
-                    this.forgeService.fusingLevels$.pipe((0, P.h)(t => null !== t), (0, M.q)(1)).subscribe(t => {
+                    this.forgeService.fusingLevels$.pipe((0, S.h)(t => null !== t), (0, x.q)(1)).subscribe(t => {
                         const n = this.grouping.cards.filter(i => this.doShowCard(i.pc, i.qualityMap, t));
                         this.numCards = n.length, this.chunkedCards = this.utils.chunk(n, this.columns)
                     })
                 }
 
                 initExpandedCard() {
-                    this.cardGridService.expandedCard$.pipe((0, St.o)(t => this.alive), (0, b.b)(t => this.expandedCard = t)).subscribe()
+                    this.cardGridService.expandedCard$.pipe((0, kt.o)(t => this.alive), (0, b.b)(t => this.expandedCard = t)).subscribe()
                 }
 
                 doShowCard(t, n, i) {
-                    return !!n && (this.expandedViewMode === q.FORGING ? "core" === t.set && this.forgeService.isFuseableQualityMap(n, i) : this.expandedViewMode !== q.SELLING || this.isMarketplaceSellable(t.set))
+                    return !!n && (this.expandedViewMode === Q.FORGING ? "core" === t.set && this.forgeService.isFuseableQualityMap(n, i) : this.expandedViewMode !== Q.SELLING || this.isMarketplaceSellable(t.set))
                 }
 
                 isMarketplaceSellable(t) {
@@ -3033,7 +3048,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(xe), e.Y36(Ge.F), e.Y36(He))
+                return new (t || o)(e.Y36(we), e.Y36(Ge.F), e.Y36(He))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-inventory-cards-proto"]],
@@ -3055,7 +3070,7 @@
                 template: function (t, n) {
                     1 & t && e.YNc(0, rr, 9, 8, "ng-container", 0), 2 & t && e.Q6J("ngIf", n.numCards > 0)
                 },
-                directives: [l.O5, l.sg, st, Y, l.mk, gn],
+                directives: [l.O5, l.sg, it, Y, l.mk, pn],
                 pipes: [l.rS],
                 styles: ['h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.groupedCardsHeader__cardsCount[_ngcontent-%COMP%], .groupedCardsHeader__groupingName[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.cardCount__count[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.groupedCardsHeader__cardsCount[_ngcontent-%COMP%], .groupedCardsHeader__groupingName[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22);line-height:1.4}.cardCount__count[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.29)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{padding-right:calc(var(--vw) * .55);display:block}.cardCount[_ngcontent-%COMP%]{display:flex;align-items:center;justify-content:center}.cardCount__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1);margin-right:calc(var(--vw) * .3);line-height:1;color:#f6f6f6}.cardCount__count[_ngcontent-%COMP%]{color:#f6f6f6}.gridRow__cardItemWrapper[_ngcontent-%COMP%]{position:relative;transition:.1s ease-in;transition-property:filter;cursor:pointer}.gridRow__cardItemWrapper[_ngcontent-%COMP%]:before{content:"";position:absolute;top:0;left:0;width:105%;height:105%;background:url(/gu-assets/images/cards/forge-bundle-proto.svg) no-repeat;background-position:center right;background-size:76% auto}.gridRow__cardItemWrapper--dimmed[_ngcontent-%COMP%]{opacity:.4;cursor:default}.groupedCardsHeader[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 1.5);padding-bottom:calc(var(--vh) * 1.5);display:flex;position:relative;align-items:center}.groupedCardsHeader[_ngcontent-%COMP%]:before{content:"";flex:1;order:2;height:calc(var(--vh) * .25);background:#1d2f41}.groupedCardsHeader__groupingName[_ngcontent-%COMP%]{padding-right:calc(var(--vw) * 1);line-height:1.1;color:#f6f6f6;order:1}.groupedCardsHeader__cardsCount[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 1);line-height:1.1;margin-left:auto;color:#f6f6f6;order:3}']
             }), o
@@ -3105,7 +3120,7 @@
             1 & o && (e.TgZ(0, "div", 8)(1, "h4", 9), e._uU(2, " No cards match your filters "), e.qZA()())
         }
 
-        let Tt = (() => {
+        let Ot = (() => {
             class o {
                 constructor() {
                     this.columns = 8, this.showOnlyEscrow = !1, this.showUnowned = !1, this.filterCardIds = [], this.showCardCounts = !0, this.mode = "quality", this.showBundle = !1, this.selectCardId = new e.vpe, this.selectCard = new e.vpe
@@ -3262,7 +3277,7 @@
                 template: function (t, n) {
                     1 & t && e.YNc(0, fr, 10, 10, "ng-container", 0), 2 & t && e.Q6J("ngIf", n.grouping.cards.length > 0)
                 },
-                directives: [l.O5, st, l.sg, Y, Pt],
+                directives: [l.O5, it, l.sg, Y, yt],
                 pipes: [l.rS],
                 styles: ['@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.noCardsToDisplay__text[_ngcontent-%COMP%], .groupedCardsHeader__cardsCount[_ngcontent-%COMP%], .groupedCardsHeader__groupingName[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.cardCount__count[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.noCardsToDisplay__text[_ngcontent-%COMP%], .groupedCardsHeader__cardsCount[_ngcontent-%COMP%], .groupedCardsHeader__groupingName[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22);line-height:1.4}.cardCount__count[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.29)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:block;padding-bottom:calc(var(--vh) * 12)}.noCardsToDisplay[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 1.5);padding-bottom:calc(var(--vh) * 1.5);display:flex;position:relative}.noCardsToDisplay__text[_ngcontent-%COMP%]{line-height:1.1;color:#f6f6f6}.cardCount[_ngcontent-%COMP%]{display:flex;align-items:center;justify-content:center}.cardCount__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1);margin-right:calc(var(--vw) * .3);line-height:1;color:#f6f6f6}.cardCount__count[_ngcontent-%COMP%]{color:#f6f6f6}.cardItemWrapper--greyed[_ngcontent-%COMP%]{filter:grayscale(1)}.cardItemWrapper--greyed[_ngcontent-%COMP%]     app-card2{cursor:default}.cardItemWrapper--dimmed[_ngcontent-%COMP%]{filter:brightness(.6)}.groupedCardsHeader[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 1.5);padding-bottom:calc(var(--vh) * 1.5);display:flex;position:relative;align-items:center}.groupedCardsHeader[_ngcontent-%COMP%]:before{content:"";flex:1;order:2;height:calc(var(--vh) * .25);background:#1d2f41}.groupedCardsHeader__groupingName[_ngcontent-%COMP%]{padding-right:calc(var(--vw) * 1);line-height:1.1;color:#f6f6f6;order:1}.groupedCardsHeader__cardsCount[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 1);line-height:1.1;margin-left:auto;color:#f6f6f6;order:3}.cardGrid[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(8,1fr);align-items:start;grid-auto-rows:min-content}']
             }), o
@@ -3352,7 +3367,7 @@
         let Ir = (() => {
             class o {
                 constructor(t, n, i, a) {
-                    this.forgeService = t, this.cardGridService = n, this.utils = i, this.groupingService = a, this.columns = 8, this.showOnlyEscrow = !1, this.showUnowned = !1, this.filterCardIds = [], this.showCardCounts = !0, this.mode = "quality", this.showBundle = !1, this.selectCardId = new e.vpe, this.ExpandedViewMode = q, this.numCards = 0, this.chunkedCards = [], this.alive = !0
+                    this.forgeService = t, this.cardGridService = n, this.utils = i, this.groupingService = a, this.columns = 8, this.showOnlyEscrow = !1, this.showUnowned = !1, this.filterCardIds = [], this.showCardCounts = !0, this.mode = "quality", this.showBundle = !1, this.selectCardId = new e.vpe, this.ExpandedViewMode = Q, this.numCards = 0, this.chunkedCards = [], this.alive = !0
                 }
 
                 ngOnInit() {
@@ -3384,23 +3399,23 @@
                 }
 
                 initChunk() {
-                    this.forgeService.fusingLevels$.pipe((0, P.h)(t => null !== t)).subscribe(t => {
+                    this.forgeService.fusingLevels$.pipe((0, S.h)(t => null !== t)).subscribe(t => {
                         const n = this.grouping.cards.filter(i => this.doShowCard(i.pc, i.ics, t));
                         this.numCards = n.length, this.chunkedCards = this.utils.chunk(n, this.columns)
                     })
                 }
 
                 initExpandedCard() {
-                    this.cardGridService.expandedCard$.pipe((0, St.o)(t => this.alive), (0, b.b)(t => this.expandedCard = t)).subscribe()
+                    this.cardGridService.expandedCard$.pipe((0, kt.o)(t => this.alive), (0, b.b)(t => this.expandedCard = t)).subscribe()
                 }
 
                 doShowCard(t, n, i) {
-                    return !!n && (this.expandedViewMode === q.FORGING ? "core" === t.set && this.forgeService.isFuseable(n, this.grouping.quality, i) : this.expandedViewMode !== q.SELLING || "core" !== t.set)
+                    return !!n && (this.expandedViewMode === Q.FORGING ? "core" === t.set && this.forgeService.isFuseable(n, this.grouping.quality, i) : this.expandedViewMode !== Q.SELLING || "core" !== t.set)
                 }
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(xe), e.Y36(He), e.Y36(Ge.F), e.Y36(Oe))
+                return new (t || o)(e.Y36(we), e.Y36(He), e.Y36(Ge.F), e.Y36(ke))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-group-quality-forge"]],
@@ -3423,7 +3438,7 @@
                 template: function (t, n) {
                     1 & t && e.YNc(0, Tr, 9, 8, "ng-container", 0), 2 & t && e.Q6J("ngIf", n.numCards > 0)
                 },
-                directives: [l.O5, l.sg, st, Y, l.mk, gn],
+                directives: [l.O5, l.sg, it, Y, l.mk, pn],
                 pipes: [l.rS],
                 styles: ['h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.groupedCardsHeader__cardsCount[_ngcontent-%COMP%], .groupedCardsHeader__groupingName[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.cardCount__count[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.groupedCardsHeader__cardsCount[_ngcontent-%COMP%], .groupedCardsHeader__groupingName[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22);line-height:1.4}.cardCount__count[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.29)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{padding-right:calc(var(--vw) * 1);display:block}.cardCount[_ngcontent-%COMP%]{display:flex;align-items:center;justify-content:center}.cardCount__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1);margin-right:calc(var(--vw) * .3);line-height:1;color:#f6f6f6}.cardCount__count[_ngcontent-%COMP%]{color:#f6f6f6}.gridRow__cardItemWrapper[_ngcontent-%COMP%]{position:relative;transition:.1s ease-in;transition-property:filter;cursor:pointer}.gridRow__cardItemWrapper[_ngcontent-%COMP%]:before{content:"";position:absolute;top:0%;right:0;width:35%;height:100%;background:url(/gu-assets/images/cards/forge-bundle-proto.svg) no-repeat;background-position:center;background-size:contain;transform:translate(25%)}.gridRow__cardItemWrapper--dimmed[_ngcontent-%COMP%]{opacity:.4;cursor:default}.groupedCardsHeader[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 1.5);padding-bottom:calc(var(--vh) * 1.5);display:flex;position:relative;align-items:center}.groupedCardsHeader[_ngcontent-%COMP%]:before{content:"";flex:1;order:2;height:calc(var(--vh) * .25);background:#1d2f41}.groupedCardsHeader__groupingName[_ngcontent-%COMP%]{padding-right:calc(var(--vw) * 1);line-height:1.1;color:#f6f6f6;order:1}.groupedCardsHeader__cardsCount[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 1);line-height:1.1;margin-left:auto;color:#f6f6f6;order:3}']
             }), o
@@ -3466,7 +3481,7 @@
             1 & o && (e.TgZ(0, "div", 6)(1, "h4", 7), e._uU(2, " No cards match your filters "), e.qZA()())
         }
 
-        let It = (() => {
+        let Pt = (() => {
             class o {
                 constructor() {
                     this.columns = 8, this.showUnowned = !1, this.showOnlyEscrow = !1, this.filterCardIds = [], this.showCardCounts = !0, this.mode = "quality", this.showBundle = !1, this.selectCardId = new e.vpe
@@ -3477,7 +3492,7 @@
                 }
 
                 get groupedQualities() {
-                    return this.expandedViewMode === q.FORGING && this.displayedGroupedQualities ? [...this.displayedGroupedQualities].reverse() : this.displayedGroupedQualities
+                    return this.expandedViewMode === Q.FORGING && this.displayedGroupedQualities ? [...this.displayedGroupedQualities].reverse() : this.displayedGroupedQualities
                 }
             }
 
@@ -3551,10 +3566,10 @@
             }
         }
 
-        let At = (() => {
+        let St = (() => {
             class o {
                 constructor(t, n, i, a) {
-                    this.resizeService = t, this.groupingService = n, this.filterService = i, this.audioService = a, this.activeGrouping = this.groupingService.defaultGrouping, this.filterCardIds = [], this.sound = !0, this.mode = "quality", this.columns = 8, this.showUnowned = !0, this.selectCardId = new e.vpe, this.GroupingType = F, this.selectedHeaders = [], this.showOnlyEscrow = !1, this.activeSort = H.PE.AscMana, this.sortOptions = [new B("Mana", "filter_mana", H.PE.AscMana, H.PE.DescMana), new B("Health", "filter_health", H.PE.AscHealth, H.PE.DescHealth), new B("Attack", "filter_attack", H.PE.AscAttack, H.PE.DescAttack), new B("Tribe", "filter_tribe", H.PE.AscTribe, H.PE.DescTribe), new B("Type", "filter_type", H.PE.AscType, H.PE.DescType), new B("God", "filter_god", H.PE.AscGod, H.PE.DescGod), new B("Rarity", "filter_rarity", H.PE.AscRarity, H.PE.DescRarity), new B("Set", "filter_set", H.PE.AscSet, H.PE.DescSet)], this.allGroupedProtos = [], this.allGroupedQualities = [], this.unsubscribe = new y.xQ, this.watchForResize()
+                    this.resizeService = t, this.groupingService = n, this.filterService = i, this.audioService = a, this.activeGrouping = this.groupingService.defaultGrouping, this.filterCardIds = [], this.sound = !0, this.mode = "quality", this.columns = 8, this.showUnowned = !0, this.selectCardId = new e.vpe, this.GroupingType = F, this.selectedHeaders = [], this.showOnlyEscrow = !1, this.activeSort = H.PE.AscMana, this.sortOptions = [new B("Mana", "filter_mana", H.PE.AscMana, H.PE.DescMana), new B("Health", "filter_health", H.PE.AscHealth, H.PE.DescHealth), new B("Attack", "filter_attack", H.PE.AscAttack, H.PE.DescAttack), new B("Tribe", "filter_tribe", H.PE.AscTribe, H.PE.DescTribe), new B("Type", "filter_type", H.PE.AscType, H.PE.DescType), new B("God", "filter_god", H.PE.AscGod, H.PE.DescGod), new B("Rarity", "filter_rarity", H.PE.AscRarity, H.PE.DescRarity), new B("Set", "filter_set", H.PE.AscSet, H.PE.DescSet)], this.allGroupedProtos = [], this.allGroupedQualities = [], this.unsubscribe = new M.xQ, this.watchForResize()
                 }
 
                 ngOnInit() {
@@ -3666,8 +3681,8 @@
 
                 getFilterGroups(t) {
                     let n = [];
-                    if (this.expandedViewMode === q.SELLING) n = t.map(i => Object.assign(Object.assign({}, i), {cards: i.cards.filter(({pc: a}) => "genesis" === a.set)})); else {
-                        if (this.expandedViewMode !== q.FORGING) return t;
+                    if (this.expandedViewMode === Q.SELLING) n = t.map(i => Object.assign(Object.assign({}, i), {cards: i.cards.filter(({pc: a}) => "genesis" === a.set)})); else {
+                        if (this.expandedViewMode !== Q.FORGING) return t;
                         n = t.map(i => Object.assign(Object.assign({}, i), {cards: i.cards.filter(({pc: a}) => "core" === a.set)}))
                     }
                     return n
@@ -3675,7 +3690,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(te._), e.Y36(Oe), e.Y36(_.iZ), e.Y36(f.pk))
+                return new (t || o)(e.Y36(K._), e.Y36(ke), e.Y36(_.iZ), e.Y36(f.pk))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-cards-list"]],
@@ -3721,7 +3736,7 @@
                         return n.loadGroup()
                     }), e.YNc(7, Ur, 2, 7, "app-inventory-cards", 7), e.YNc(8, Er, 2, 6, "app-group-quality", 8), e.qZA()), 2 & t && (e.xp6(1), e.Q6J("ngIf", n.title), e.xp6(1), e.Q6J("activeGrouping", n.activeGrouping)("groupings", n.groupings), e.xp6(1), e.Q6J("sortOptions", n.sortOptions)("selectedHeaders", n.selectedHeaders)("cardGrouping", n.activeGrouping.groupingType === n.GroupingType.Quality ? n.qualityGrouping : n.protoGrouping)("unownedCheckboxVisible", !(n.activeGrouping.groupingType === n.GroupingType.Quality || void 0 !== n.expandedViewMode)), e.xp6(1), e.Q6J("ngIf", n.god), e.xp6(1), e.Q6J("scrollWindow", !1), e.xp6(2), e.Q6J("ngIf", n.activeGrouping.groupingType !== n.GroupingType.Quality), e.xp6(1), e.Q6J("ngIf", n.activeGrouping.groupingType === n.GroupingType.Quality))
                 },
-                directives: [l.O5, Ot, yt, dn, ut, Tt, It],
+                directives: [l.O5, Mt, wt, gn, dt, Ot, Pt],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif;font-weight:400}.sectionHeader__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained, serif;font-weight:700}.godArea__label[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif}.sectionHeader__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.godArea__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;height:100%;overflow-y:scroll;overflow-x:hidden;padding:48px 48px 0px;}.sectionHeader[_ngcontent-%COMP%]{height:calc(var(--vh) * 9.5);position:relative}.sectionHeader__groupings[_ngcontent-%COMP%]{position:absolute}.sectionHeader__title[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .3);padding-bottom:calc(var(--vh) * .8);line-height:1;position:absolute;width:100%;text-align:center;color:#f6f6f6;border-bottom:solid #1d2f41;border-width:calc(var(--vh) * .25)}.sectionHeader__rightSideArea[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .8);position:absolute;right:0;top:0;display:flex;align-items:flex-start;height:100%}.sectionHeader__filterArea[_ngcontent-%COMP%]{bottom:2px;right:calc(var(--vw) * 5);position:absolute;left:0}.sectionHeader__godArea[_ngcontent-%COMP%]{user-select:none;pointer-events:none;position:absolute;right:0;bottom:50%;display:flex;align-items:flex-start}app-god-badge[_ngcontent-%COMP%]{user-select:auto;pointer-events:auto;margin-top:calc(var(--vh) * 1)}.godArea__label[_ngcontent-%COMP%]{color:#7192b0;padding-top:calc(var(--vh) * 1.1);padding-right:calc(var(--vw) * 2)}.cardsListingArea[_ngcontent-%COMP%]{overflow:hidden;overflow-y:auto;flex:1;padding:0 16px}app-card {cursor:pointer}app-cards-list {display:flex;}"]
             }), o
         })(), Nr = (() => {
@@ -3752,7 +3767,7 @@
                         const t = this.el.nativeElement.querySelector("composited-card");
                         this.cloneImage.inputProtoData = t.inputProtoData, this.cloneImage.quality = t.quality
                     }
-                    this.renderer.appendChild(this.el.nativeElement.parentNode, this.cloneImage), k.p8.set(this.cloneImage, {
+                    this.renderer.appendChild(this.el.nativeElement.parentNode, this.cloneImage), y.p8.set(this.cloneImage, {
                         position: "absolute",
                         top: 20,
                         left: 15,
@@ -3760,17 +3775,17 @@
                         pointerEvents: "none",
                         opacity: 0,
                         zIndex: 1
-                    }), k.p8.to(this.cloneImage, {
+                    }), y.p8.to(this.cloneImage, {
                         duration: .2,
                         x: 50,
                         scale: 1.6,
                         opacity: 1
-                    }), k.p8.to(this.el.nativeElement, {duration: .2, filter: "brightness(1.0)"})
+                    }), y.p8.to(this.el.nativeElement, {duration: .2, filter: "brightness(1.0)"})
                 }
 
                 hideCard() {
                     return new Promise(t => {
-                        k.p8.set(this.el.nativeElement, {filter: this.originalBrightness}), k.p8.to(this.cloneImage, {
+                        y.p8.set(this.el.nativeElement, {filter: this.originalBrightness}), y.p8.to(this.cloneImage, {
                             duration: .2,
                             scale: 1,
                             left: 15,
@@ -3813,10 +3828,10 @@
             }
         }
 
-        let Qr = (() => {
+        let qr = (() => {
             class o {
                 constructor() {
-                    this.chosenCards = [], this.unsubscribe = new y.xQ, this.chooserSelectCards = new e.vpe, this.closeBundleChooser = () => {
+                    this.chosenCards = [], this.unsubscribe = new M.xQ, this.chooserSelectCards = new e.vpe, this.closeBundleChooser = () => {
                     }, this.closeOverlay = () => {
                         this.closeBundleChooser(), this.chosenCards.length > 0 && this.chooserSelectCards.emit(this.chosenCards)
                     }
@@ -3876,11 +3891,11 @@
                 template: function (t, n) {
                     1 & t && (e._UZ(0, "app-modal-sidebar", 0), e.TgZ(1, "header", 1)(2, "h3", 2), e._uU(3, " Click to Remove "), e.qZA()(), e.TgZ(4, "div", 3), e.YNc(5, Rr, 1, 4, "app-card2", 4), e.qZA()), 2 & t && (e.Q6J("closeButtonClickFn", n.closeOverlay), e.xp6(5), e.Q6J("ngForOf", n.allCards))
                 },
-                directives: [ke, l.sg, Y],
+                directives: [ye, l.sg, Y],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.instructionsHeading__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.instructionsHeading__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{background:rgba(15,27,39,.96);position:absolute;top:0;left:0;right:0;bottom:0;margin-left:calc(var(--vh) * -7.4);display:flex;flex-flow:column nowrap;z-index:1;box-shadow:0 0 calc(var(--vw) * 10) calc(var(--vw) * 2) #0c1620}[_nghost-%COMP%]     app-modal-sidebar{padding-top:calc(var(--vh) * .5);width:calc(var(--vw) * 3)}.instructionsHeading[_ngcontent-%COMP%]{height:calc(var(--vh) * 4.4);padding-top:calc(var(--vh) * .5)}.instructionsHeading__title[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .3);padding-bottom:calc(var(--vh) * 1);line-height:1;text-align:center;color:#f6f6f6}.continueButton[_ngcontent-%COMP%]{top:calc(var(--vh) * 2);right:calc(var(--vw) * 1);position:absolute}.cardListing[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 2);padding-bottom:calc(var(--vh) * 4.7);padding-left:calc(var(--vw) * .3);padding-right:calc(var(--vw) * .3);overflow-y:auto;flex:1;grid-row-gap:calc(var(--vh) * 1);display:grid;grid-template-columns:repeat(auto-fit,minmax(calc(var(--vw) * 11.35),max-content));justify-content:center}.cardListing__card[_ngcontent-%COMP%]{transition:all .15s ease-in-out;transform-origin:50% 50%}.cardListing__card[_ngcontent-%COMP%]:hover{transform:scale(1.23);transform-origin:50% 30%}.cardListing__card--removed[_ngcontent-%COMP%]{display:none}.cardListing__card--disabled[_ngcontent-%COMP%]{filter:grayscale(1)}"]
             }), o
         })();
-        const qr = function (o, r) {
+        const Qr = function (o, r) {
             return {transform: o, filter: r}
         };
 
@@ -3894,7 +3909,7 @@
             }
             if (2 & o) {
                 const t = r.$implicit, n = r.index, i = e.oxw();
-                e.Q6J("translateY", i.cardTranslateY(n))("protoId", t.proto)("quality", t.quality)("ngStyle", e.WLB(4, qr, "translateY(" + i.cardTranslateY(n) + "px)", "brightness(" + i.cardBrightness(n) + ")"))
+                e.Q6J("translateY", i.cardTranslateY(n))("protoId", t.proto)("quality", t.quality)("ngStyle", e.WLB(4, Qr, "translateY(" + i.cardTranslateY(n) + "px)", "brightness(" + i.cardBrightness(n) + ")"))
             }
         }
 
@@ -3914,7 +3929,7 @@
         let Jr = (() => {
             class o {
                 constructor(t) {
-                    this.audioService = t, this.selectCards = new e.vpe, this.showCardChooserOverlay = !1, this.unsubscribe = new y.xQ, this.closeBundleChooser = () => {
+                    this.audioService = t, this.selectCards = new e.vpe, this.showCardChooserOverlay = !1, this.unsubscribe = new M.xQ, this.closeBundleChooser = () => {
                         this.audioService.clickTinyV2.play(), this.showCardChooserOverlay = !1
                     }
                 }
@@ -3969,7 +3984,7 @@
                         return n.openBundleChooser()
                     }), e.YNc(5, Hr, 1, 7, "app-card2", 3), e.qZA()(), e.YNc(6, Yr, 1, 5, "app-card-chooser-overlay", 4)), 2 & t && (e.xp6(2), e.Oqu(e.lcZ(3, 3, n.bundle.header)), e.xp6(3), e.Q6J("ngForOf", n.bundle.cards), e.xp6(1), e.Q6J("ngIf", n.showCardChooserOverlay))
                 },
-                directives: [l.sg, Y, Nr, l.PC, l.O5, Qr],
+                directives: [l.sg, Y, Nr, l.PC, l.O5, qr],
                 pipes: [l.rS],
                 styles: ["@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.bundleLabel[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.bundleLabel[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}[_nghost-%COMP%]{display:block}.bundleContainer[_ngcontent-%COMP%]{display:flex;flex-flow:column nowrap;align-items:center;position:relative}.bundleLabel[_ngcontent-%COMP%]{color:#7192b0;text-align:center}.cardLayers[_ngcontent-%COMP%]{width:calc(var(--vw) * 7.5);flex:1;position:relative}.cardLayers__card[_ngcontent-%COMP%]{position:absolute;left:0;top:0;cursor:pointer;width:100%}"],
                 data: {
@@ -4011,7 +4026,7 @@
             class o {
                 constructor(t, n) {
                     this.akumaService = t, this.audioService = n, this.closeEditDeckOverlay = () => {
-                    }, this.deckName = "", this.changeDeckName = new e.vpe, this.deleteDeck = new e.vpe, this.deckNameControl = new A.NI(""), this.confirmingDelete = !1, this.unsubscribe = new y.xQ, this.closeOverlay = () => {
+                    }, this.deckName = "", this.changeDeckName = new e.vpe, this.deleteDeck = new e.vpe, this.deckNameControl = new A.NI(""), this.confirmingDelete = !1, this.unsubscribe = new M.xQ, this.closeOverlay = () => {
                         this.audioService.clickTinyV2.play(), this.akumaService.postControlEvent("gu", "DeckEditor", "", "close", "Btn", "pressed"), this.closeEditDeckOverlay()
                     }
                 }
@@ -4037,7 +4052,7 @@
                 }
 
                 watchSearch() {
-                    this.deckNameControl.valueChanges.pipe((0, u.R)(this.unsubscribe), (0, kt.b)(500), (0, ht.x)(), (0, b.b)(t => this.inputDeckName = t)).subscribe()
+                    this.deckNameControl.valueChanges.pipe((0, u.R)(this.unsubscribe), (0, xt.b)(500), (0, pt.x)(), (0, b.b)(t => this.inputDeckName = t)).subscribe()
                 }
 
                 saveChanges() {
@@ -4068,7 +4083,7 @@
                         return n.inputDeckName = a
                     }), e.qZA(), e.YNc(6, $r, 1, 0, "gu-primary-hex-button", 5), e.YNc(7, Wr, 6, 0, "p", 6)), 2 & t && (e.Q6J("closeButtonClickFn", n.closeOverlay), e.xp6(5), e.Q6J("ngModel", n.inputDeckName)("formControl", n.deckNameControl), e.xp6(1), e.Q6J("ngIf", !n.confirmingDelete), e.xp6(1), e.Q6J("ngIf", n.confirmingDelete))
                 },
-                directives: [ke, A.Fj, A.nD, A.JJ, A.oH, l.O5],
+                directives: [ye, A.Fj, A.nD, A.JJ, A.oH, l.O5],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.instructionsHeading__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.form__textInput[_ngcontent-%COMP%], .deleteConfirmation[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.instructionsHeading__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.deleteConfirmation[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9)}.form__textInput[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.form__textInput[_ngcontent-%COMP%]{line-height:1.4}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{background:rgba(15,27,39,.96);position:absolute;top:0;left:0;right:0;bottom:0;margin-left:calc(var(--vh) * -7.4);padding-top:calc(var(--vh) * 2);display:flex;flex-flow:column nowrap;z-index:2;box-shadow:0 0 calc(var(--vw) * 10) calc(var(--vw) * 2) #0c1620}[_nghost-%COMP%]     app-modal-sidebar{padding-top:calc(var(--vh) * .5);width:calc(var(--vw) * 3)}.instructionsHeading[_ngcontent-%COMP%]{height:calc(var(--vh) * 4.4);padding-top:calc(var(--vh) * .5)}.instructionsHeading__title[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .3);padding-bottom:calc(var(--vh) * 1);line-height:1;text-align:center;color:#f6f6f6}.instructionsHeading__saveButton[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2.4);position:absolute;right:0px;top:0px}.form__textInput[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);text-align:center;margin:0 auto;margin-top:calc(var(--vh) * 5);width:calc(var(--vw) * 25);background:#182531;color:#fff;border:1px solid #0f1b27;border-radius:calc(var(--vh) * .4)}.form__textInput[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.deleteDeck[_ngcontent-%COMP%]{width:20%;text-align:center;margin:0 auto;margin-top:calc(var(--vh) * 5)}.deleteConfirmation[_ngcontent-%COMP%]{text-align:center;margin-top:calc(var(--vh) * 5)}.deleteConfirmation__confirm[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 1);color:#df2600;cursor:pointer}.deleteConfirmation__cancel[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 1);color:#7192b0;cursor:pointer}"]
             }), o
         })();
@@ -4118,7 +4133,7 @@
             }
         }
 
-        let pn = (() => {
+        let un = (() => {
             class o {
                 constructor(t, n, i, a, s, c, d, p) {
                     this.guGameService = t, this.groupingService = n, this.decksService = i, this.modalService = a, this.akumaService = s, this.router = c, this.audioService = d, this.utils = p, this.activeGrouping = this.groupingService.defaultGrouping, this.deckSelectMode = !1, this.forAI = !1, this.deckCards = [], this.selectCards = new e.vpe, this.showEditDeckOverlay = !1, this.closeEditDeckOverlay = () => {
@@ -4160,7 +4175,7 @@
                 }
 
                 logSelectDeck() {
-                    this.guGameService.getGameMode$(this.gameModeID).pipe((0, M.q)(1)).subscribe(t => {
+                    this.guGameService.getGameMode$(this.gameModeID).pipe((0, x.q)(1)).subscribe(t => {
                         this.akumaService.postControlEvent("gu", "DeckEditor", "", "selectDeck", "Btn", "pressed", {
                             mode_name: t.name,
                             deck_name: this.deck.name
@@ -4169,7 +4184,7 @@
                 }
 
                 saveDeck() {
-                    this.decksService.saveActiveDeck(this.deckSelectMode).pipe((0, M.q)(1), (0, b.b)(t => {
+                    this.decksService.saveActiveDeck(this.deckSelectMode).pipe((0, x.q)(1), (0, b.b)(t => {
                         t > -1 && this.deckSelectMode ? (this.logSelectDeck(), this.guGameService.updateGameModeDeck(this.gameModeID, t, this.forAI), this.modalService.destroyModalsStack(), this.router.navigate(["/game/gu/game-modes"])) : this.modalService.destroyTopModal()
                     })).subscribe()
                 }
@@ -4188,7 +4203,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(ne.xV), e.Y36(Oe), e.Y36(oe.D), e.Y36(T.Z), e.Y36(_.jt), e.Y36(we.F0), e.Y36(f.pk), e.Y36(Ge.F))
+                return new (t || o)(e.Y36(ee.xV), e.Y36(ke), e.Y36(te.D), e.Y36(T.Z), e.Y36(_.jt), e.Y36(be.F0), e.Y36(f.pk), e.Y36(Ge.F))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-active-deck"]],
@@ -4212,7 +4227,7 @@
                         return n.saveDeck()
                     }), e.qZA()()(), e.TgZ(10, "div", 8), e.YNc(11, Xr, 3, 3, "ng-container", 9), e.qZA(), e.YNc(12, Kr, 1, 3, "app-edit-deck", 10)), 2 & t && (e.xp6(2), e.Oqu(n.deck.name), e.xp6(1), e.Q6J("ngIf", n.deckCards), e.xp6(4), e.hij("", n.deckCards.length, "/30 Cards"), e.xp6(1), e.Q6J("disabled", "starter" === n.deck.deck_type || "sealed_deck" === n.deck.deck_type), e.xp6(1), e.Q6J("text", n.deckSelectMode ? "SELECT" : "SAVE DECK")("disabled", !!n.deckSelectMode && 30 !== n.deckCards.length), e.xp6(2), e.Q6J("ngIf", n.cardGrouping), e.xp6(1), e.Q6J("ngIf", n.showEditDeckOverlay))
                 },
-                directives: [l.O5, Ot, l.sg, Jr, zr],
+                directives: [l.O5, Mt, l.sg, Jr, zr],
                 pipes: [l.Nd],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif;font-weight:400}.sectionHeader__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained, serif;font-weight:700}.rightSideArea__cardsCount[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif}.sectionHeader__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.rightSideArea__cardsCount[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9);line-height:1.2;font-weight:600}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;position:relative}.sectionHeader[_ngcontent-%COMP%]{height:calc(var(--vh) * 5.5);margin-top:calc(var(--vh) * 2);position:relative;flex-shrink:0}.sectionHeader__groupings[_ngcontent-%COMP%]{position:absolute}.sectionHeader__title[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .3);padding-bottom:calc(var(--vh) * .8);line-height:1;position:absolute;width:100%;text-align:center;color:#f6f6f6;border-bottom:solid #1d2f41;border-width:calc(var(--vh) * .25)}.sectionHeader__rightSideArea[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .4);position:absolute;right:0;top:0;display:flex;align-items:flex-start;height:100%}.rightSideArea__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2);margin-right:calc(var(--vw) * .5);color:#f6f6f6;line-height:1}.rightSideArea__cardsCount[_ngcontent-%COMP%]{color:#f6f6f6}.rightSideArea__editButton[_ngcontent-%COMP%], .rightSideArea__saveButton[_ngcontent-%COMP%]{margin-left:calc(var(--vw) * 1.5);position:relative}.cardBundlesListing[_ngcontent-%COMP%]{flex:1;display:grid;grid-template-columns:repeat(10, 1fr)}"],
                 data: {
@@ -4285,8 +4300,8 @@
                     }, {name: "Mana", options: _.iZ.manaOptions}, {
                         name: "Set",
                         options: _.iZ.setOptions
-                    }], this.loading = !1, this.deckSelectMode = !1, this.unsubscribe = new y.xQ, this.protoCards = [], this.deckCardIds = [], this.Flags = _.vU, this.destroyModal = () => {
-                        const v = this.cerberusModalService.open(me.am, {
+                    }], this.loading = !1, this.deckSelectMode = !1, this.unsubscribe = new M.xQ, this.protoCards = [], this.deckCardIds = [], this.Flags = _.vU, this.destroyModal = () => {
+                        const v = this.cerberusModalService.open(he.am, {
                             defaultStylings: !1,
                             centered: !0
                         }).componentInstance;
@@ -4311,16 +4326,16 @@
                 }
 
                 initDecks() {
-                    this.decksService.activeDeckChange$.pipe((0, u.R)(this.unsubscribe), (0, P.h)(t => null !== t), (0, b.b)(t => this.onActiveDeckChange(t))).subscribe()
+                    this.decksService.activeDeckChange$.pipe((0, u.R)(this.unsubscribe), (0, S.h)(t => null !== t), (0, b.b)(t => this.onActiveDeckChange(t))).subscribe()
                 }
 
                 onActiveDeckChange(t) {
                     switch (t.type) {
-                        case de.u4.Change:
+                        case le.u4.Change:
                             this.selectNewDeck(t.deck);
                             break;
-                        case de.u4.CardLimit:
-                        case de.u4.DeckLimit:
+                        case le.u4.CardLimit:
+                        case le.u4.DeckLimit:
                             break;
                         default:
                             this.selectNewDeck(t.deck)
@@ -4332,7 +4347,7 @@
                 }
 
                 initCards() {
-                    this.loading = !0, (0, G.aj)([this.cardsService.inventoryCards$, this.cardsService.protoCards$]).pipe((0, u.R)(this.unsubscribe), (0, b.b)(([t, n]) => {
+                    this.loading = !0, (0, D.aj)([this.cardsService.inventoryCards$, this.cardsService.protoCards$]).pipe((0, u.R)(this.unsubscribe), (0, b.b)(([t, n]) => {
                         this.inventoryCards = t, this.protoCards = this.moduleConfigService.useDevApis() ? Array.from(n.values()) : Array.from(n.values()).filter(i => i.live), this.loading = !1
                     })).subscribe()
                 }
@@ -4357,7 +4372,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(oe.D), e.Y36(_.dK), e.Y36(T.Z), e.Y36(_.LE), e.Y36(f.pk), e.Y36(_.jt), e.Y36(L.Qz), e.Y36(an.R))
+                return new (t || o)(e.Y36(te.D), e.Y36(_.dK), e.Y36(T.Z), e.Y36(_.LE), e.Y36(f.pk), e.Y36(_.jt), e.Y36(L.Qz), e.Y36(sn.R))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-deck-builder"]],
@@ -4367,11 +4382,11 @@
                 template: function (t, n) {
                     1 & t && (e._UZ(0, "app-modal-sidebar", 0), e.YNc(1, ea, 1, 0, "app-rectangular-spinner", 1), e.YNc(2, ta, 2, 1, "gu-plain-square-button", 2), e.YNc(3, na, 1, 5, "app-cards-list", 3), e.YNc(4, oa, 1, 5, "app-active-deck", 4)), 2 & t && (e.Q6J("closeButtonClickFn", n.destroyModal), e.xp6(1), e.Q6J("ngIf", n.loading), e.xp6(1), e.Q6J("featureFlagIf", n.Flags.deckCodesEnabled), e.xp6(1), e.Q6J("ngIf", !n.loading), e.xp6(1), e.Q6J("ngIf", n.activeDeck))
                 },
-                directives: [ke, l.O5, at, rt.w, At, pn],
+                directives: [ye, l.O5, ot, nt.w, St, un],
                 styles: ["[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;padding:0 calc(var(--vh) * 7.7);padding-top:calc(var(--vh) * 4.5);height:100%}app-cards-list[_ngcontent-%COMP%]{flex:1}app-active-deck[_ngcontent-%COMP%]{height:calc(var(--vh) * 37)}.spinner[_ngcontent-%COMP%]{margin:auto}.exportCta[_ngcontent-%COMP%]{position:absolute;top:calc(var(--vh) * 3);right:calc(var(--vh) * 17)}"]
             }), o
         })();
-        var un = g(37371), _n = g(8611), ia = g(5969);
+        var Tt = g(37371), _n = g(8611), ia = g(5969);
 
         function ra(o, r) {
             if (1 & o) {
@@ -4409,7 +4424,7 @@
         let hn = (() => {
             class o {
                 constructor(t, n, i) {
-                    this.modalService = t, this.forgeWalletService = n, this.settingsService = i, this.playerWallets = [], this.unsubscribe = new y.xQ
+                    this.modalService = t, this.forgeWalletService = n, this.settingsService = i, this.playerWallets = [], this.unsubscribe = new M.xQ
                 }
 
                 ngOnInit() {
@@ -4425,7 +4440,7 @@
                 }
 
                 watchWalletStatus() {
-                    (0, G.aj)([this.forgeWalletService.playerWallets$, this.forgeWalletService.selectedWallet$]).pipe((0, u.R)(this.unsubscribe)).subscribe(([t, n]) => {
+                    (0, D.aj)([this.forgeWalletService.playerWallets$, this.forgeWalletService.selectedWallet$]).pipe((0, u.R)(this.unsubscribe)).subscribe(([t, n]) => {
                         this.playerWallets = t, this.selectedWallet = n, this.selectedWallet && this.playerWallets && this.playerWallets.length > 0 && this.onHide()
                     })
                 }
@@ -4444,7 +4459,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(T.Z), e.Y36(Se.d), e.Y36(ia.g))
+                return new (t || o)(e.Y36(T.Z), e.Y36(Pe.d), e.Y36(ia.g))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-flux-wallet-modal"]],
@@ -4510,7 +4525,7 @@
         let pa = (() => {
             class o {
                 constructor(t, n, i, a, s) {
-                    this.resizeService = t, this.groupingService = n, this.filterService = i, this.modalService = a, this.cardGridService = s, this.activeGrouping = this.groupingService.defaultGrouping, this.filterCardIds = [], this.selectCardId = new e.vpe, this.GroupingType = F, this.selectedHeaders = [], this.showUnowned = !0, this.loading = !0, this.activeSort = m.PE.AscMana, this.sortOptions = [new B("Mana", "filter_mana", m.PE.AscMana, m.PE.DescMana), new B("Health", "filter_health", m.PE.AscHealth, m.PE.DescHealth), new B("Attack", "filter_attack", m.PE.AscAttack, m.PE.DescAttack), new B("Tribe", "filter_tribe", m.PE.AscTribe, m.PE.DescTribe), new B("Type", "filter_type", m.PE.AscType, m.PE.DescType), new B("God", "filter_god", m.PE.AscGod, m.PE.DescGod), new B("Rarity", "filter_rarity", m.PE.AscRarity, m.PE.DescRarity), new B("Set", "filter_set", m.PE.AscSet, m.PE.DescSet)], this.allGroupedProtos = [], this.allGroupedQualities = [], this.unsubscribe = new y.xQ, this.watchForResize()
+                    this.resizeService = t, this.groupingService = n, this.filterService = i, this.modalService = a, this.cardGridService = s, this.activeGrouping = this.groupingService.defaultGrouping, this.filterCardIds = [], this.selectCardId = new e.vpe, this.GroupingType = F, this.selectedHeaders = [], this.showUnowned = !0, this.loading = !0, this.activeSort = m.PE.AscMana, this.sortOptions = [new B("Mana", "filter_mana", m.PE.AscMana, m.PE.DescMana), new B("Health", "filter_health", m.PE.AscHealth, m.PE.DescHealth), new B("Attack", "filter_attack", m.PE.AscAttack, m.PE.DescAttack), new B("Tribe", "filter_tribe", m.PE.AscTribe, m.PE.DescTribe), new B("Type", "filter_type", m.PE.AscType, m.PE.DescType), new B("God", "filter_god", m.PE.AscGod, m.PE.DescGod), new B("Rarity", "filter_rarity", m.PE.AscRarity, m.PE.DescRarity), new B("Set", "filter_set", m.PE.AscSet, m.PE.DescSet)], this.allGroupedProtos = [], this.allGroupedQualities = [], this.unsubscribe = new M.xQ, this.watchForResize()
                 }
 
                 checkForVariousChanges(t) {
@@ -4612,8 +4627,8 @@
 
                 getFilterGroups(t) {
                     let n = [];
-                    if (this.expandedViewMode === q.SELLING) n = t.map(i => Object.assign(Object.assign({}, i), {cards: i.cards.filter(({pc: a}) => "genesis" === a.set)})); else {
-                        if (this.expandedViewMode !== q.FORGING) return t;
+                    if (this.expandedViewMode === Q.SELLING) n = t.map(i => Object.assign(Object.assign({}, i), {cards: i.cards.filter(({pc: a}) => "genesis" === a.set)})); else {
+                        if (this.expandedViewMode !== Q.FORGING) return t;
                         n = t.map(i => Object.assign(Object.assign({}, i), {cards: i.cards.filter(({pc: a}) => "core" === a.set)}))
                     }
                     return n
@@ -4630,7 +4645,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(te._), e.Y36(Oe), e.Y36(_.iZ), e.Y36(T.Z), e.Y36(He))
+                return new (t || o)(e.Y36(K._), e.Y36(ke), e.Y36(_.iZ), e.Y36(T.Z), e.Y36(He))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["cerberus-forge-card-list"]],
@@ -4667,12 +4682,12 @@
                         return n.loadGroup()
                     }), e.YNc(10, da, 1, 7, "app-inventory-cards", 9), e.YNc(11, ga, 1, 7, "app-group-quality", 10), e.qZA()), 2 & t && (e.xp6(3), e.Oqu(n.title), e.xp6(2), e.Q6J("displaySearch", !0), e.xp6(1), e.Q6J("showFilters", !1)("sortOptions", n.sortOptions)("selectedHeaders", n.selectedHeaders)("cardGrouping", n.protoGrouping)("unownedCheckboxVisible", !1), e.xp6(1), e.Q6J("ngIf", n.loading), e.xp6(1), e.Q6J("scrollWindow", !1), e.xp6(2), e.Q6J("ngIf", n.activeGrouping.groupingType !== n.GroupingType.Quality), e.xp6(1), e.Q6J("ngIf", n.activeGrouping.groupingType === n.GroupingType.Quality))
                 },
-                directives: [Ot, yt, l.O5, ut, Tt, It],
+                directives: [Mt, wt, l.O5, dt, Ot, Pt],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.sectionHeader__infoButton[_ngcontent-%COMP%], .sectionHeader__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.godArea__label[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.sectionHeader__infoButton[_ngcontent-%COMP%], .sectionHeader__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.godArea__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;height:100%}.sectionHeader[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 1);padding-right:calc(var(--vh) * 1);padding-bottom:calc(var(--vh) * 1);padding-left:calc(var(--vh) * 2);margin-bottom:calc(var(--vh) * 3);background:linear-gradient(to right,#1d2f41 0%,#0f1b27 100%);position:relative;display:flex;justify-content:space-between;align-items:center;border:calc(var(--vh) * .15) solid #1d2f41}.sectionHeader__titleContainer[_ngcontent-%COMP%]{display:flex;align-items:center}.sectionHeader__title[_ngcontent-%COMP%]{text-transform:uppercase;line-height:1;background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.sectionHeader__infoButton[_ngcontent-%COMP%]{margin-left:calc(var(--vh) * .8);cursor:pointer}.sectionHeader__godArea[_ngcontent-%COMP%]{user-select:none;pointer-events:none;position:absolute;right:0;top:0;display:flex;align-items:flex-start}app-god-badge[_ngcontent-%COMP%]{user-select:auto;pointer-events:auto;margin-top:calc(var(--vh) * 1)}.godArea__label[_ngcontent-%COMP%]{color:#7192b0;padding-top:calc(var(--vh) * 1.1);padding-right:calc(var(--vw) * 2)}.cardsListingArea[_ngcontent-%COMP%]{overflow:hidden;overflow-y:auto;flex:1}.loadingSpinner[_ngcontent-%COMP%]{margin:0 auto}  app-card{cursor:pointer}"]
             }), o
         })();
         var ua = g(40537), fn = g(77518), _a = g(52909), Cn = g(47760);
-        let Ft = (() => {
+        let It = (() => {
             class o {
                 transform(t, n = 6) {
                     try {
@@ -4748,7 +4763,7 @@
         let ya = (() => {
             class o {
                 constructor(t, n, i, a, s) {
-                    this.authService = t, this.fusingService = n, this.modalService = i, this.environment = a, this.window = s, this.unsubscribe = new y.xQ, this.items = [], this.fusingRequestResponseLoading = !0
+                    this.authService = t, this.fusingService = n, this.modalService = i, this.environment = a, this.window = s, this.unsubscribe = new M.xQ, this.items = [], this.fusingRequestResponseLoading = !0
                 }
 
                 get QualityMapping() {
@@ -4803,7 +4818,7 @@
                     }), e.qZA(), e.TgZ(1, "div", 1)(2, "header", 2)(3, "gu-heading-text", 3), e._uU(4, " Fusing History "), e.qZA(), e.TgZ(5, "gu-body-text", 4), e._uU(6, " A list of your past 60 fuses and their status. See your Immutable X inventory "), e.TgZ(7, "gu-simple-text-button", 5), e._UZ(8, "gu-icon", 6), e.qZA()()(), e.YNc(9, xa, 3, 2, "div", 7), e.qZA(), e.YNc(10, Ma, 1, 0, "gu-loading-spinner", 8)), 2 & t && (e.xp6(9), e.Q6J("ngIf", !n.fusingRequestResponseLoading), e.xp6(1), e.Q6J("ngIf", n.fusingRequestResponseLoading))
                 },
                 directives: [l.O5, De.K, l.sg, l.mk],
-                pipes: [l.uU, l.rS, ye.XX, Ft, ha.A],
+                pipes: [l.uU, l.rS, Me.XX, It, ha.A],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.closeModal[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.closeModal[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;align-items:center;margin:auto;position:relative;padding-top:calc(var(--vh) * 3.5);padding-bottom:calc(var(--vh) * 4);width:calc(var(--vw) * 80);height:calc(var(--vh) * 85);border:2px solid #1D2F41;background:#0F1B27}.closeModal[_ngcontent-%COMP%]{position:absolute;top:calc(var(--vh) * 1.4);right:calc(var(--vh) * 1.4);cursor:pointer}.wrapper[_ngcontent-%COMP%]{overflow-y:auto}.header[_ngcontent-%COMP%]{display:flex;flex-direction:column;align-items:center;width:100%;padding-left:calc(var(--vw) * 2);padding-right:calc(var(--vw) * 2);margin-bottom:calc(var(--vw) * 2)}.header__title[_ngcontent-%COMP%]{padding-bottom:calc(var(--vh) * .8)}.tableSection[_ngcontent-%COMP%]{width:100%;padding-left:calc(var(--vw) * 3);padding-right:calc(var(--vw) * 3);display:flex;align-items:center;justify-content:center}.tableSection_noItem[_ngcontent-%COMP%]{position:absolute;transform:translate(-50%,-50%);top:50%;left:50%;display:flex;flex-direction:column;align-items:center}.tableSection__table[_ngcontent-%COMP%]{border-spacing:0;border-color:#1d2f41;width:100%}.tableSection__tableHeader[_ngcontent-%COMP%]{background-color:#1d2f41;padding-top:calc(var(--vw) * 1);padding-bottom:calc(var(--vw) * 1)}.tableSection__tableHeaderContent[_ngcontent-%COMP%]{display:flex;justify-content:center}.tableSection__tableHeaderIcon[_ngcontent-%COMP%]{cursor:pointer}.tableSection__rowEven[_ngcontent-%COMP%]{background-color:#f6f6f6}.tableSection__rowOdd[_ngcontent-%COMP%]{background-color:#d7d7d7}.tableSection__cell[_ngcontent-%COMP%]{width:calc(var(--vw) * 14.5);padding:10px;border-right:1px solid #464646;border-top:1px solid #464646;text-align:center}.tableSection__cell[_ngcontent-%COMP%]:first-child{background-color:#1d2f41;border-left:1px solid #464646}.tableSection__cellDate[_ngcontent-%COMP%]{display:block}.tableSection__cellFusingId[_ngcontent-%COMP%]{cursor:pointer}.tableSection__cellFusingId[_ngcontent-%COMP%]:hover{color:#0f1b27;border-color:#0f1b27}.tableSection_cellContentCost[_ngcontent-%COMP%]{display:flex;align-items:center;justify-content:center}"]
             }), o
         })();
@@ -4815,24 +4830,24 @@
                 }
 
                 getRegisteredUserStarkKeys(t) {
-                    return this.moduleConfig$.pipe((0, _e.w)(({imxApiHost: n}) => this.http.get(`${n}/users/${t}`)))
+                    return this.moduleConfig$.pipe((0, ue.w)(({imxApiHost: n}) => this.http.get(`${n}/users/${t}`)))
                 }
 
                 getUserListOfBalance(t, n = "GODS") {
-                    return this.moduleConfig$.pipe((0, _e.w)(({imxApiHostV2: i}) => this.http.get(`${i}/balances/${t}`, {params: {symbols: n}})))
+                    return this.moduleConfig$.pipe((0, ue.w)(({imxApiHostV2: i}) => this.http.get(`${i}/balances/${t}`, {params: {symbols: n}})))
                 }
 
                 getBalance(t) {
-                    return this.moduleConfig$.pipe((0, _e.w)(({imxApiHostV2: n}) => this.http.get(`${n}/balances/${t}`, {})), (0, x.U)(n => n.result))
+                    return this.moduleConfig$.pipe((0, ue.w)(({imxApiHostV2: n}) => this.http.get(`${n}/balances/${t}`, {})), (0, O.U)(n => n.result))
                 }
 
                 fetchImxTokenInfo() {
-                    return this.moduleConfig$.pipe((0, _e.w)(({imxApiHost: t}) => this.http.get(`${t}/tokens`)), (0, x.U)(t => t.result))
+                    return this.moduleConfig$.pipe((0, ue.w)(({imxApiHost: t}) => this.http.get(`${t}/tokens`)), (0, O.U)(t => t.result))
                 }
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.LFG(ka.L), e.LFG(on.eN))
+                return new (t || o)(e.LFG(ka.L), e.LFG(rn.eN))
             }, o.\u0275prov = e.Yz7({token: o, factory: o.\u0275fac, providedIn: "root"}), o
         })(), Pa = (() => {
             class o {
@@ -4845,7 +4860,7 @@
                 }
 
                 fetchGodsInfo(t) {
-                    this.imxApiService.getUserListOfBalance(t).pipe((0, M.q)(1)).subscribe(n => {
+                    this.imxApiService.getUserListOfBalance(t).pipe((0, x.q)(1)).subscribe(n => {
                         const {result: [i]} = n;
                         this.emitGodsInfo(i)
                     }, () => {
@@ -4864,7 +4879,7 @@
         })(), vn = (() => {
             class o {
                 constructor(t, n) {
-                    this.forgeWalletService = t, this.addressTruncatePipe = n, this.unsubscribe = new y.xQ, this.addresses = [], this.truncateAddress = !1
+                    this.forgeWalletService = t, this.addressTruncatePipe = n, this.unsubscribe = new M.xQ, this.addresses = [], this.truncateAddress = !1
                 }
 
                 ngOnInit() {
@@ -4878,7 +4893,7 @@
                 initWalletAddress() {
                     this.forgeWalletService.playerWallets$.pipe((0, u.R)(this.unsubscribe)).subscribe(t => {
                         this.addresses = this.getSelectOptions(t)
-                    }), this.forgeWalletService.selectedWallet$.pipe((0, u.R)(this.unsubscribe), (0, M.q)(1)).subscribe(t => {
+                    }), this.forgeWalletService.selectedWallet$.pipe((0, u.R)(this.unsubscribe), (0, x.q)(1)).subscribe(t => {
                         this.selectedWallet = t
                     })
                 }
@@ -4897,12 +4912,12 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(Se.d), e.Y36(ye.AZ))
+                return new (t || o)(e.Y36(Pe.d), e.Y36(Me.AZ))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["cerberus-select-wallet-dropdown"]],
                 inputs: {truncateAddress: "truncateAddress"},
-                features: [e._Bn([ye.AZ])],
+                features: [e._Bn([Me.AZ])],
                 decls: 1,
                 vars: 2,
                 consts: [["theme", "gunmetal", "placeholder", "Select Wallet", "stretch", "true", 1, "select", 3, "options", "value", "change"]],
@@ -4922,7 +4937,7 @@
         let Ta = (() => {
             class o {
                 constructor(t, n, i, a) {
-                    this.fluxService = t, this.imxBalanceService = n, this.forgeWalletService = i, this.modalService = a, this.unsubscribe = new y.xQ, this.fluxBalance = 0
+                    this.fluxService = t, this.imxBalanceService = n, this.forgeWalletService = i, this.modalService = a, this.unsubscribe = new M.xQ, this.fluxBalance = 0
                 }
 
                 ngOnInit() {
@@ -4934,13 +4949,13 @@
                 }
 
                 initFluxBalance() {
-                    this.fluxService.fetchFluxInfo(), this.fluxService.fluxInfo$.pipe((0, u.R)(this.unsubscribe), (0, P.h)(t => !!t)).subscribe(t => {
+                    this.fluxService.fetchFluxInfo(), this.fluxService.fluxInfo$.pipe((0, u.R)(this.unsubscribe), (0, S.h)(t => !!t)).subscribe(t => {
                         this.fluxBalance = t.flux_available
                     })
                 }
 
                 initGodBalance() {
-                    this.imxBalanceService.godsInfo$.pipe((0, u.R)(this.unsubscribe), (0, P.h)(t => !!t)).subscribe(t => {
+                    this.imxBalanceService.godsInfo$.pipe((0, u.R)(this.unsubscribe), (0, S.h)(t => !!t)).subscribe(t => {
                         this.godsBalance = t.balance
                     })
                 }
@@ -4962,7 +4977,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(_.TJ), e.Y36(Pa), e.Y36(Se.d), e.Y36(T.Z))
+                return new (t || o)(e.Y36(_.TJ), e.Y36(Pa), e.Y36(Pe.d), e.Y36(T.Z))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["cerberus-forge-area-header"]],
@@ -4975,7 +4990,7 @@
                     }), e.qZA()(), e.TgZ(3, "div", 3)(4, "div", 4), e._UZ(5, "gu-icon", 5), e.TgZ(6, "h2", 6), e._uU(7), e.ALo(8, "numberAbbreviation"), e.qZA()(), e._UZ(9, "img", 7), e.TgZ(10, "div", 8), e._UZ(11, "gu-icon", 9), e.TgZ(12, "h2", 10), e._uU(13), e.ALo(14, "formatEther"), e.qZA()()()), 2 & t && (e.xp6(1), e.Q6J("ngIf", n.selectedWallet), e.xp6(6), e.hij(" ", e.xi3(8, 3, n.fluxBalance, 2), " "), e.xp6(6), e.hij(" ", n.godsBalance ? e.xi3(14, 6, n.godsBalance, 2) : "-", " "))
                 },
                 directives: [l.O5, vn],
-                pipes: [ye.XX, Ft],
+                pipes: [Me.XX, It],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.cardForgeArea__balanceArea__balance__number[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.cardForgeArea__balanceArea__infoButton[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.cardForgeArea__balanceArea__balance__number[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 4.2);line-height:1.3}.cardForgeArea__balanceArea__infoButton[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;justify-content:space-between;align-items:center;padding-bottom:calc(var(--vh) * 1.1);border-bottom:calc(var(--vh) * .15) solid #1d2f41}.forgeArea__header-selectWalletDropdown[_ngcontent-%COMP%]{margin-left:calc(var(--vw) * 1);margin-right:calc(var(--vw) * 1);width:calc(var(--vw) * 11);z-index:1}.cardForgeArea__header-history__cta[_ngcontent-%COMP%]{width:calc(var(--vw) * 9)}.cardForgeArea__balanceArea-left[_ngcontent-%COMP%]{display:flex;align-items:center}.cardForgeArea__balanceArea-right[_ngcontent-%COMP%]{display:flex;justify-content:space-between;align-items:center}.cardForgeArea__balanceArea__balanceRow[_ngcontent-%COMP%]{display:flex;justify-content:center}.cardForgeArea__balanceArea__balance__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 4.4)}.cardForgeArea__balanceArea__balance__number[_ngcontent-%COMP%]{margin-left:calc(var(--vw) * .16)}.cardForgeArea__balanceArea__fluxBalance__icon[_ngcontent-%COMP%], .cardForgeArea__balanceArea__fluxBalance__number[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#f6f6f6 0%,#d7d7d7 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.cardForgeArea__balanceArea__godsBalance__icon[_ngcontent-%COMP%], .cardForgeArea__balanceArea__godsBalance__number[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.header__divider[_ngcontent-%COMP%]{margin-left:calc(var(--vh) * 1.1);margin-right:calc(var(--vh) * 1.1);height:calc(var(--vh) * 3.35);width:calc(var(--vh) * .2)}.cardForgeArea__balanceArea__infoButton[_ngcontent-%COMP%]{color:#7192b0;font-weight:700;text-transform:uppercase;text-align:center;cursor:pointer;white-space:nowrap}.cardForgeArea__balanceArea__infoButton__icon[_ngcontent-%COMP%]{margin-left:calc(var(--vw) * .2);margin-top:calc(var(--vh) * -.1);width:calc(var(--vh) * 2);height:calc(var(--vh) * 2);border-radius:50%;border:calc(var(--vh) * .15) solid #7192b0;display:inline-flex;vertical-align:top}.cardForgeArea__balanceArea__infoButton__icon[_ngcontent-%COMP%] > span[_ngcontent-%COMP%]{margin:auto;line-height:1;font-weight:700;font-style:normal}"]
             }), o
         })(), Ia = (() => {
@@ -5013,7 +5028,7 @@
             }
         }
 
-        let Dt = (() => {
+        let At = (() => {
             class o {
                 constructor(t) {
                     this.elRef = t, this.percentage = 0, this.showBackgroundRing = !1, this.supressAnimation = !1, this.insetInnerStroke = !1
@@ -5155,7 +5170,7 @@
         let wn = (() => {
             class o {
                 constructor(t) {
-                    this.forgeService = t, this.unsubscribe = new y.xQ, this.initForgeCards()
+                    this.forgeService = t, this.unsubscribe = new M.xQ, this.initForgeCards()
                 }
 
                 ngOnDestroy() {
@@ -5178,7 +5193,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(xe))
+                return new (t || o)(e.Y36(we))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["cerberus-app-forge-cards"]],
@@ -5200,11 +5215,11 @@
                     1 & t && (e.YNc(0, Ua, 4, 3, "ng-container", 0), e.YNc(1, Na, 2, 1, "ng-container", 0)), 2 & t && (e.Q6J("ngIf", n.forgeCards), e.xp6(1), e.Q6J("ngIf", !n.forgeCards && n.fakeForgeCards.length))
                 },
                 directives: [l.O5, l.sg, Y],
-                pipes: [ye.XX, Ft],
+                pipes: [Me.XX, It],
                 styles: ["@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.cardsArea__amount__number[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.cardsArea__card__keepText[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.cardsArea__card__keepText[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.29)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex}.cardsArea__card[_ngcontent-%COMP%]{width:calc(var(--vw) * 7);margin-right:calc(var(--vw) * .2);padding-right:calc(var(--vw) * .5);padding-left:calc(var(--vw) * .15);padding-top:calc(var(--vh) * .6);transition:border .15s ease-in-out;border:calc(var(--vh) * .15) solid transparent;position:relative;display:flex;flex-direction:column;cursor:pointer;animation:.2s enter-card ease-in-out}.cardsArea__card[_ngcontent-%COMP%]:hover:not(.cardsArea__card--keep){border-color:#3d5a7480}@keyframes enter-card{0%{transform:translateY(15%);opacity:0}to{transform:translateY(0);opacity:1}}.cardsArea__card--keep[_ngcontent-%COMP%]{border-color:#3d5a74}.cardsArea__card__keepText[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * .35);text-transform:uppercase;font-weight:600;line-height:1.1;margin:0;margin-top:calc(var(--vh) * .2);text-align:center;color:#f6f6f6}.cardsArea__card__close[_ngcontent-%COMP%]{top:calc(var(--vh) * 1.05);right:calc(var(--vw) * .4);position:absolute;width:calc(var(--vw) * 1.2);height:calc(var(--vw) * 1.2);font-size:calc(calc(var(--vw) * 1.2) * .5);border-radius:50%;display:flex;border:calc(var(--vh) * .15) solid #7192b0;color:#f6f6f6;background:#0c1620;cursor:pointer}.cardsArea__card__close[_ngcontent-%COMP%]:hover{background:#7192b0}.cardsArea__card__close[_ngcontent-%COMP%]     i{margin:auto}.cardsArea__amount[_ngcontent-%COMP%]{padding-bottom:calc(var(--vh) * 1.5);width:calc(var(--vw) * 5);display:flex;flex-direction:column;align-items:center;justify-content:center}.cardsArea__amount__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 7.5);background:linear-gradient(to bottom,#f6f6f6 0%,#d7d7d7 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:calc(var(--vh) * -.5);line-height:1}.cardsArea__amount__number[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 3);background:linear-gradient(to bottom,#f6f6f6 0%,#d7d7d7 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1}.cardsArea__amount__icon--token[_ngcontent-%COMP%], .cardsArea__amount__number--token[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}"]
             }), o
         })();
-        const Ra = ["previewCardAreaDom"], Qa = ["previewCardDom"], qa = ["shimmerDom"], Ha = ["shimmerAreaDom"],
+        const Ra = ["previewCardAreaDom"], qa = ["previewCardDom"], Qa = ["shimmerDom"], Ha = ["shimmerAreaDom"],
             Ya = ["smokeDom"], Ja = ["cardForgeArea"], $a = ["ctaButton"], Wa = ["forgeCards"],
             za = ["finalCircularFuse"];
 
@@ -5247,8 +5262,8 @@
         }, os = function (o, r) {
             return [o, r]
         };
-        k.p8.registerPlugin(ce);
-        const Gt = ({
+        y.p8.registerPlugin(se);
+        const Ft = ({
                         currentQuality: o = "Meteorite",
                         nextQuality: r = "Shadow",
                         count: t = 4
@@ -5258,21 +5273,21 @@
         });
         let is = (() => {
             class o {
-                constructor(t, n, i, a, s, c, d, p, w, v, O, I, Z, U, E) {
-                    this.authService = t, this.analyticsService = n, this.cardsService = i, this.modalService = a, this.resizeService = s, this.forgeService = c, this.audioService = d, this.groupingService = p, this.socketService = w, this.fluxService = v, this.ethService = O, this.forgeWalletService = I, this.akuma = Z, this.cerberusModalService = U, this.environment = E, this.startTime = +new Date, this.protoCards = [], this.uiStateInformation = {
+                constructor(t, n, i, a, s, c, d, p, w, v, k, I, G, U, E) {
+                    this.authService = t, this.analyticsService = n, this.cardsService = i, this.modalService = a, this.resizeService = s, this.forgeService = c, this.audioService = d, this.groupingService = p, this.socketService = w, this.fluxService = v, this.ethService = k, this.forgeWalletService = I, this.akuma = G, this.cerberusModalService = U, this.environment = E, this.startTime = +new Date, this.protoCards = [], this.uiStateInformation = {
                         preFuseCicleStrokeColor: "#8be1e0",
-                        instructionalMessage: Gt().initial,
+                        instructionalMessage: Ft().initial,
                         ctaText: "Start Fusing",
                         disableCta: !0,
                         previewLoading: !1,
                         inventoryLoading: !1,
                         finalFusingInProgress: !1,
                         currentForgeCardCount: 0
-                    }, this.fluxBalance = 0, this.mainTL = k.p8.timeline({paused: !0}), this.finalTL = k.p8.timeline({paused: !0}), this.waitForFuseResponseTL = k.p8.timeline({paused: !0}), this.ExpandedViewMode = q, this.unsubscribe = new y.xQ, this.fakeForgeCards = [], this.finalFusePercentage = {value: 0}, this.preFusePercentage = {value: 0}, this.dog = "woof dog", this.selectedWallet = "", this.authService.fetchAccount(), this.resizeService.viewPortUnits$.pipe((0, u.R)(this.unsubscribe), (0, b.b)(({
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               vh: ge,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               vw: ie
+                    }, this.fluxBalance = 0, this.mainTL = y.p8.timeline({paused: !0}), this.finalTL = y.p8.timeline({paused: !0}), this.waitForFuseResponseTL = y.p8.timeline({paused: !0}), this.ExpandedViewMode = Q, this.unsubscribe = new M.xQ, this.fakeForgeCards = [], this.finalFusePercentage = {value: 0}, this.preFusePercentage = {value: 0}, this.dog = "woof dog", this.selectedWallet = "", this.authService.fetchAccount(), this.resizeService.viewPortUnits$.pipe((0, u.R)(this.unsubscribe), (0, b.b)(({
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               vh: de,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               vw: ne
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            }) => {
-                        this.vh = ge, this.vw = ie
+                        this.vh = de, this.vw = ne
                     })).subscribe()
                 }
 
@@ -5298,7 +5313,7 @@
                 }
 
                 initFluxWallet() {
-                    (0, G.aj)([this.forgeWalletService.playerWallets$, this.forgeWalletService.selectedWallet$]).pipe((0, M.q)(1)).subscribe(([t, n]) => {
+                    (0, D.aj)([this.forgeWalletService.playerWallets$, this.forgeWalletService.selectedWallet$]).pipe((0, x.q)(1)).subscribe(([t, n]) => {
                         (!n || !t || 0 === t.length) && this.modalService.createModal(hn, null, {
                             blurredBackground: !0,
                             canCloseFromOutside: !1,
@@ -5309,7 +5324,7 @@
                 }
 
                 initWalletAddress() {
-                    this.forgeWalletService.selectedWallet$.pipe((0, u.R)(this.unsubscribe), (0, P.h)(t => !!t)).subscribe(t => {
+                    this.forgeWalletService.selectedWallet$.pipe((0, u.R)(this.unsubscribe), (0, S.h)(t => !!t)).subscribe(t => {
                         this.selectedWallet = t
                     })
                 }
@@ -5323,7 +5338,7 @@
                 }
 
                 initFluxBalance() {
-                    this.fluxService.fetchFluxInfo(), this.fluxService.fluxInfo$.pipe((0, u.R)(this.unsubscribe), (0, P.h)(t => !!t)).subscribe(t => {
+                    this.fluxService.fetchFluxInfo(), this.fluxService.fluxInfo$.pipe((0, u.R)(this.unsubscribe), (0, S.h)(t => !!t)).subscribe(t => {
                         this.fluxBalance = t.flux_available
                     })
                 }
@@ -5334,7 +5349,7 @@
                 }
 
                 initCards() {
-                    this.uiStateInformation.inventoryLoading = !0, (0, G.aj)([this.cardsService.inventoryCards$, this.cardsService.protoCards$]).pipe((0, u.R)(this.unsubscribe), (0, b.b)(([t, n]) => {
+                    this.uiStateInformation.inventoryLoading = !0, (0, D.aj)([this.cardsService.inventoryCards$, this.cardsService.protoCards$]).pipe((0, u.R)(this.unsubscribe), (0, b.b)(([t, n]) => {
                         this.inventoryCards = t, this.protoCards = Array.from(n.values()), this.uiStateInformation.inventoryLoading = !1
                     })).subscribe()
                 }
@@ -5342,8 +5357,8 @@
                 loadCards() {
                     this.uiStateInformation.inventoryLoading = !0;
                     const t = this.authService.getUserId(),
-                        n = this.cardsService.fetchInventoryCardsMapV2(t).pipe((0, M.q)(1), (0, x.U)(i => this.cardsService.inventoryCardsMapV2ToV1(i)));
-                    this.cardsService.getProtoCards$().pipe((0, M.q)(1), (0, pe.zg)(i => n.pipe((0, x.U)(a => ({
+                        n = this.cardsService.fetchInventoryCardsMapV2(t).pipe((0, x.q)(1), (0, O.U)(i => this.cardsService.inventoryCardsMapV2ToV1(i)));
+                    this.cardsService.getProtoCards$().pipe((0, x.q)(1), (0, ve.zg)(i => n.pipe((0, O.U)(a => ({
                         inventory: a,
                         pc: i
                     }))))).subscribe(({inventory: i, pc: a}) => {
@@ -5352,16 +5367,16 @@
                 }
 
                 animateForgeAreaToUpperPosition() {
-                    k.p8.to(this.cardForgeAreaDom.nativeElement, {y: 4.5 * this.vh, ease: "power2.inOut", duration: .3})
+                    y.p8.to(this.cardForgeAreaDom.nativeElement, {y: 4.5 * this.vh, ease: "power2.inOut", duration: .3})
                 }
 
                 animateForgeAreaToLowerPosition() {
-                    k.p8.to(this.cardForgeAreaDom.nativeElement, {y: 13 * this.vh, ease: "power2.inOut", duration: .3})
+                    y.p8.to(this.cardForgeAreaDom.nativeElement, {y: 13 * this.vh, ease: "power2.inOut", duration: .3})
                 }
 
                 initPreviewCardAndAnimationControl() {
                     this.forgeService.previewCard$.pipe((0, u.R)(this.unsubscribe), (0, b.b)(t => {
-                        this.previewCard = t, t ? (this.uiStateInformation.previewLoading = !0, this.forgeService.validateForge().pipe((0, M.q)(1)).subscribe(n => {
+                        this.previewCard = t, t ? (this.uiStateInformation.previewLoading = !0, this.forgeService.validateForge().pipe((0, x.q)(1)).subscribe(n => {
                             this.uiStateInformation.previewLoading = !1, this.mainTL.play(), this.fluxTransactionCost = n.flux_amount, this.tokenTransactionCost = n.token_amount
                         }, n => {
                             this.handleValidationFail(n.error.error)
@@ -5371,8 +5386,8 @@
 
                 initForgeCards() {
                     this.forgeService.forgeCards$.pipe((0, u.R)(this.unsubscribe), (0, b.b)(t => {
-                        t || (this.fluxTransactionCost = 0, this.tokenTransactionCost = "", this.uiStateInformation = Object.assign(Object.assign({}, this.uiStateInformation), {instructionalMessage: Gt().initial}), this.animateCircularProgress({preFusePercentage: 0}), this.animateForgeAreaToLowerPosition())
-                    }), (0, P.h)(t => {
+                        t || (this.fluxTransactionCost = 0, this.tokenTransactionCost = "", this.uiStateInformation = Object.assign(Object.assign({}, this.uiStateInformation), {instructionalMessage: Ft().initial}), this.animateCircularProgress({preFusePercentage: 0}), this.animateForgeAreaToLowerPosition())
+                    }), (0, S.h)(t => {
                         const n = t && t.ids ? t.ids.length : 0, i = this.uiStateInformation.currentForgeCardCount;
                         return this.uiStateInformation.currentForgeCardCount = n, !!t && n !== i
                     })).subscribe(t => {
@@ -5381,13 +5396,13 @@
                 }
 
                 handleUpdatedForgeCards(t) {
-                    return (0, se.mG)(this, void 0, void 0, function* () {
+                    return (0, ae.mG)(this, void 0, void 0, function* () {
                         const n = t && t.ids ? t.ids.length : 0,
                             i = yield this.forgeService.numberOfQualityToForge(t.quality);
                         if (n > 0) {
                             const a = this.forgeService.getNextQuality(t.quality);
                             this.uiStateInformation = Object.assign(Object.assign({}, this.uiStateInformation), {
-                                instructionalMessage: Gt({
+                                instructionalMessage: Ft({
                                     count: i - n,
                                     currentQuality: this.forgeService.fusingLevels[t.quality].name,
                                     nextQuality: this.forgeService.fusingLevels[a].name
@@ -5404,11 +5419,11 @@
                 }
 
                 resetForge() {
-                    this.loadCards(), this.completedTransactionTxHash = void 0, this.mainTL.pause(), this.mainTL.seek(0), this.finalTL.seek(0), this.finalTL.clear(), this.mainTL.remove(this.finalTL), this.mainTL.remove(this.waitForFuseResponseTL), this.forgeSubmitResult = void 0, this.fakeForgeCards = [], this.preFusePercentage.value = 0, this.finalFusePercentage.value = 0, this.uiStateInformation.ctaText = "Start Fusing", this.uiStateInformation.disableCta = !0, this.uiStateInformation.finalFusingInProgress = !1, this.uiStateInformation.preFuseCicleStrokeColor = "#8be1e0", k.p8.set([this.smokeDom.nativeElement, this.ctaButtonDom.nativeElement, this.cardForgeAreaDom.nativeElement], {clearProps: "all"})
+                    this.loadCards(), this.completedTransactionTxHash = void 0, this.mainTL.pause(), this.mainTL.seek(0), this.finalTL.seek(0), this.finalTL.clear(), this.mainTL.remove(this.finalTL), this.mainTL.remove(this.waitForFuseResponseTL), this.forgeSubmitResult = void 0, this.fakeForgeCards = [], this.preFusePercentage.value = 0, this.finalFusePercentage.value = 0, this.uiStateInformation.ctaText = "Start Fusing", this.uiStateInformation.disableCta = !0, this.uiStateInformation.finalFusingInProgress = !1, this.uiStateInformation.preFuseCicleStrokeColor = "#8be1e0", y.p8.set([this.smokeDom.nativeElement, this.ctaButtonDom.nativeElement, this.cardForgeAreaDom.nativeElement], {clearProps: "all"})
                 }
 
                 queryToStartFusing() {
-                    const n = this.cerberusModalService.open(un.M, {
+                    const n = this.cerberusModalService.open(Tt.M, {
                         defaultStylings: !1,
                         centered: !0,
                         backdrop: "static"
@@ -5426,7 +5441,7 @@
                 }
 
                 startFusing() {
-                    this.uiStateInformation.finalFusingInProgress = !0, this.waitForFinalFuseResponseAnimation(), this.forgeService.submitForge().pipe((0, M.q)(1)).subscribe(t => {
+                    this.uiStateInformation.finalFusingInProgress = !0, this.waitForFinalFuseResponseAnimation(), this.forgeService.submitForge().pipe((0, x.q)(1)).subscribe(t => {
                         this.finalStageFuseAnimation(t.request_id), this.fluxService.fetchFluxInfo()
                     }, t => {
                         console.error("Forge->startFusing() FORGE SUBMIT error", t), this.handleFuseFailure(t)
@@ -5454,8 +5469,8 @@
                 }
 
                 animateEachCardIntoPreview(t) {
-                    const n = k.p8.timeline(), i = this.previewCardDom.nativeElement,
-                        a = ce.ease.config({strength: 8, points: 2, template: "power2.inOut", randomize: !1});
+                    const n = y.p8.timeline(), i = this.previewCardDom.nativeElement,
+                        a = se.ease.config({strength: 8, points: 2, template: "power2.inOut", randomize: !1});
                     let s;
                     switch (t.length) {
                         case 2:
@@ -5492,7 +5507,7 @@
 
                 waitForFinalFuseResponseAnimation() {
                     const t = this.finalCircularFuseDom.elRef.nativeElement, n = this.previewCardDom.nativeElement;
-                    this.waitForFuseResponseTL = k.p8.timeline({
+                    this.waitForFuseResponseTL = y.p8.timeline({
                         repeat: -1,
                         paused: !0
                     }), this.waitForFuseResponseTL.add(() => {
@@ -5515,7 +5530,7 @@
                     const n = this.forgeCardsDom.forgeCardDoms.toArray().map(c => c.nativeElement),
                         i = this.previewCardDom.nativeElement, a = this.shimmerAreaDom.nativeElement,
                         s = this.ctaButtonDom.nativeElement;
-                    this.waitForFuseResponseTL.kill(), this.uiStateInformation.preFuseCicleStrokeColor = "#c6a052", this.finalFusePercentage.value = 0, this.fluxTransactionCost = 0, this.tokenTransactionCost = "", this.finalTL = k.p8.timeline({paused: !0}), this.finalTL.to(this.cardForgeAreaDom.nativeElement, {
+                    this.waitForFuseResponseTL.kill(), this.uiStateInformation.preFuseCicleStrokeColor = "#c6a052", this.finalFusePercentage.value = 0, this.fluxTransactionCost = 0, this.tokenTransactionCost = "", this.finalTL = y.p8.timeline({paused: !0}), this.finalTL.to(this.cardForgeAreaDom.nativeElement, {
                         duration: .3,
                         y: 13 * this.vh,
                         ease: "power2.inOut"
@@ -5561,7 +5576,7 @@
                 }
 
                 goToWebsiteModal(t) {
-                    const i = this.cerberusModalService.open(un.M, {
+                    const i = this.cerberusModalService.open(Tt.M, {
                         defaultStylings: !1,
                         centered: !0,
                         backdrop: "static"
@@ -5581,7 +5596,7 @@
 
                 createPreForgeAnimation() {
                     const t = this.previewCardDom.nativeElement, n = this.shimmerAreaDom.nativeElement,
-                        i = k.p8.timeline({repeat: -1, paused: !0});
+                        i = y.p8.timeline({repeat: -1, paused: !0});
                     i.to([n, t], {duration: 2, y: "-9%", ease: "power2.inOut"}).to([n, t], {
                         duration: 2,
                         y: "-12%",
@@ -5599,7 +5614,7 @@
 
                 animateCircularProgress({preFusePercentage: t, duration: n = .65}) {
                     return new Promise(i => {
-                        this.circularTween && this.circularTween.kill(), this.circularTween = k.p8.to(this.preFusePercentage, {
+                        this.circularTween && this.circularTween.kill(), this.circularTween = y.p8.to(this.preFusePercentage, {
                             value: t,
                             ease: "power2.inOut",
                             onComplete: () => {
@@ -5612,12 +5627,12 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(f.mI), e.Y36(_.yD), e.Y36(_.dK), e.Y36(T.Z), e.Y36(te._), e.Y36(xe), e.Y36(f.pk), e.Y36(Oe), e.Y36(_.$c), e.Y36(_.TJ), e.Y36(f.ux), e.Y36(Se.d), e.Y36(_.jt), e.Y36(L.Qz), e.Y36(f.Ho))
+                return new (t || o)(e.Y36(f.mI), e.Y36(_.yD), e.Y36(_.dK), e.Y36(T.Z), e.Y36(K._), e.Y36(we), e.Y36(f.pk), e.Y36(ke), e.Y36(_.$c), e.Y36(_.TJ), e.Y36(f.ux), e.Y36(Pe.d), e.Y36(_.jt), e.Y36(L.Qz), e.Y36(f.Ho))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["cerberus-forge-next-step"]],
                 viewQuery: function (t, n) {
-                    if (1 & t && (e.Gf(Ra, 7), e.Gf(Qa, 7, e.SBq), e.Gf(qa, 7), e.Gf(Ha, 7), e.Gf(Ya, 7), e.Gf(Ja, 7), e.Gf($a, 7), e.Gf(Wa, 7), e.Gf(za, 7)), 2 & t) {
+                    if (1 & t && (e.Gf(Ra, 7), e.Gf(qa, 7, e.SBq), e.Gf(Qa, 7), e.Gf(Ha, 7), e.Gf(Ya, 7), e.Gf(Ja, 7), e.Gf($a, 7), e.Gf(Wa, 7), e.Gf(za, 7)), 2 & t) {
                         let i;
                         e.iGM(i = e.CRH()) && (n.previewCardAreaDom = i.first), e.iGM(i = e.CRH()) && (n.previewCardDom = i.first), e.iGM(i = e.CRH()) && (n.shimmerDom = i.first), e.iGM(i = e.CRH()) && (n.shimmerAreaDom = i.first), e.iGM(i = e.CRH()) && (n.smokeDom = i.first), e.iGM(i = e.CRH()) && (n.cardForgeAreaDom = i.first), e.iGM(i = e.CRH()) && (n.ctaButtonDom = i.first), e.iGM(i = e.CRH()) && (n.forgeCardsDom = i.first), e.iGM(i = e.CRH()) && (n.finalCircularFuseDom = i.first)
                     }
@@ -5630,7 +5645,7 @@
                         return n.ctaClick()
                     }), e.qZA(), e.YNc(13, ja, 2, 0, "div", 12), e.TgZ(14, "div", 13, 14), e._UZ(16, "img", 15, 16)(18, "app-card2", 17, 18), e.TgZ(20, "div", 19, 20), e._UZ(22, "i", 21, 22), e.qZA()()(), e.TgZ(24, "gu-vertical-space", 23), e.YNc(25, Ka, 2, 3, "gu-paragraph-text", 24), e.qZA(), e._UZ(26, "cerberus-app-forge-cards", 25, 26), e.qZA()()), 2 & t && (e.ekj("cardBrowserArea--disabled", n.uiStateInformation.finalFusingInProgress || n.uiStateInformation.previewLoading || !n.selectedWallet), e.Q6J("expandedViewMode", n.ExpandedViewMode.FORGING)("activeGrouping", n.activeGrouping)("protoCards", n.protoCards)("inventoryCards", n.inventoryCards), e.xp6(3), e.Q6J("ngClass", e.VKq(34, es, n.selectedWallet)), e.xp6(1), e.Q6J("hidden", !n.selectedWallet), e.xp6(3), e.Q6J("percentage", n.preFusePercentage.value)("width", 29 * n.vw)("strokeWidth", 2 * n.vh)("showBackgroundRing", !0)("supressAnimation", !0)("strokeColor", n.uiStateInformation.preFuseCicleStrokeColor)("insetInnerStroke", !0), e.xp6(1), e.Q6J("percentage", n.finalFusePercentage.value)("width", 29 * n.vw)("strokeWidth", 2 * n.vh)("showBackgroundRing", !1)("supressAnimation", !0)("insetInnerStroke", !0), e.xp6(2), e.Q6J("ngIf", n.uiStateInformation.instructionalMessage && !n.uiStateInformation.previewLoading && !n.uiStateInformation.finalFusingInProgress), e.xp6(1), e.Q6J("text", n.uiStateInformation.ctaText), e.uIk("disabled", n.uiStateInformation.disableCta), e.xp6(2), e.Q6J("ngIf", n.uiStateInformation.previewLoading), e.xp6(5), e.Q6J("protoId", null == n.previewCard ? null : n.previewCard.protoId)("quality", null == n.previewCard ? null : n.previewCard.quality), e.xp6(6), e.Q6J("responsiveSize", e.WLB(38, os, e.DdM(36, ts), e.DdM(37, ns))), e.xp6(1), e.Q6J("ngIf", (null == n.transactionInProgress ? null : n.transactionInProgress.txHash) || n.completedTransactionTxHash), e.xp6(1), e.ekj("cardForgeArea__cardsToBeFused--disabled", n.uiStateInformation.finalFusingInProgress), e.Q6J("fluxTransactionCost", n.fluxTransactionCost)("tokenTransactionCost", n.tokenTransactionCost)("fakeForgeCards", n.fakeForgeCards))
                 },
-                directives: [pa, Ta, Ia, l.mk, Dt, l.O5, bn, Y, wn],
+                directives: [pa, Ta, Ia, l.mk, At, l.O5, bn, Y, wn],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{padding-top:calc(var(--vh) * 2);padding-left:calc(var(--vw) * 3);padding-right:calc(var(--vw) * 3);display:flex;height:100%}.cardBrowserArea[_ngcontent-%COMP%]{width:calc(var(--vw) * 44);margin-right:calc(var(--vw) * 2.34)}.cardBrowserArea--disabled[_ngcontent-%COMP%]{user-select:none;pointer-events:none;opacity:.5}.cardForgeArea[_ngcontent-%COMP%]{flex:1;display:flex;flex-flow:column nowrap;position:relative}.cardForgeArea__hideSelectWallet[_ngcontent-%COMP%]{display:none}.cardForgeArea__circularArea[_ngcontent-%COMP%]{display:flex;flex-direction:column;align-items:center;position:relative;transform:translateY(calc(var(--vh) * 13))}.cardForgeArea__circularArea__progressCircle[_ngcontent-%COMP%]{transform:rotate(180deg)}.cardForgeArea__circularArea__progressCircle--finalProgress[_ngcontent-%COMP%]{position:absolute;top:0;left:50%;transform:rotate(180deg) translate(50%);transform-origin:50% 50%}.cardForgeArea__circularArea__instructionalText[_ngcontent-%COMP%]{width:calc(var(--vh) * 21);position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}.cardForgeArea__circularArea__instructionalText[_ngcontent-%COMP%]     span{text-transform:capitalize;font-weight:700}.cardForgeArea__circularArea__instructionalText[_ngcontent-%COMP%]     a{color:#affaed}.cardForgeArea__circularArea__previewCardArea[_ngcontent-%COMP%]{top:calc(var(--vh) * -1.3);margin-left:calc(var(--vw) * -.8);user-select:none;pointer-events:none;width:calc(var(--vw) * 18.6);position:absolute;z-index:1;transform:translateY(10%);cursor:pointer}.cardForgeArea__circularArea__previewCardArea__smoke[_ngcontent-%COMP%]{width:calc(var(--vw) * 35);bottom:calc(var(--vh) * 10);position:absolute;left:54%;transform:translate(-50%) scale(.6);transform-origin:50% 100%;opacity:0}.cardForgeArea__circularArea__previewCardArea__card[_ngcontent-%COMP%]{filter:drop-shadow(0 calc(var(--vh) * .5) calc(var(--vw) * 2) black);opacity:0}.cardForgeArea__circularArea__previewCardArea__shimmerArea[_ngcontent-%COMP%]{top:calc(var(--vh) * 4.3);bottom:calc(var(--vh) * 2.3);left:calc(var(--vw) * 2.55);right:calc(var(--vw) * 1.15);position:absolute;overflow:hidden;opacity:0}.cardForgeArea__circularArea__previewCardArea__shimmerArea__shimmer[_ngcontent-%COMP%]{position:absolute;width:150%;height:35%;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,white 50%,rgba(255,255,255,0) 100%);transform:rotate(15deg) translateY(-120%);top:0;left:-25%;mix-blend-mode:overlay}.cardForgeArea__ctaButton[_ngcontent-%COMP%]{position:absolute;bottom:0;left:50%;transform:translate(-50%,-10%);min-width:145px}.cardForgeArea__etherscanLink[_ngcontent-%COMP%]{display:flex;width:100%;justify-content:center;text-transform:uppercase;text-decoration:underline;cursor:pointer}.cardForgeArea__etherscanLink--final[_ngcontent-%COMP%]{position:absolute;bottom:calc(var(--vh) * 3.24)}.cardForgeArea__cardsToBeFused[_ngcontent-%COMP%]{height:calc(var(--vh) * 18.66);margin-bottom:calc(var(--vh) * 3.24);margin-top:auto;display:flex;width:100%;justify-content:center}.cardForgeArea__cardsToBeFused--disabled[_ngcontent-%COMP%]{user-select:none;pointer-events:none}.cardForgeArea__circularArea__loading[_ngcontent-%COMP%]{position:absolute;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center}"]
             }), o
         })();
@@ -5749,8 +5764,8 @@
             }
         }
 
-        k.p8.registerPlugin(ce);
-        const Bt = ({
+        y.p8.registerPlugin(se);
+        const Gt = ({
                         currentQuality: o = "Meteorite",
                         nextQuality: r = "Shadow",
                         count: t = 4
@@ -5760,17 +5775,17 @@
         });
         let Mn = (() => {
             class o {
-                constructor(t, n, i, a, s, c, d, p, w, v, O, I, Z) {
-                    this.authService = t, this.analyticsService = n, this.cardsService = i, this.modalService = a, this.resizeService = s, this.forgeService = c, this.audioService = d, this.groupingService = p, this.socketService = w, this.fluxService = v, this.ethService = O, this.forgeWalletService = I, this.akuma = Z, this.startTime = +new Date, this.protoCards = [], this.uiStateInformation = {
+                constructor(t, n, i, a, s, c, d, p, w, v, k, I, G) {
+                    this.authService = t, this.analyticsService = n, this.cardsService = i, this.modalService = a, this.resizeService = s, this.forgeService = c, this.audioService = d, this.groupingService = p, this.socketService = w, this.fluxService = v, this.ethService = k, this.forgeWalletService = I, this.akuma = G, this.startTime = +new Date, this.protoCards = [], this.uiStateInformation = {
                         preFuseCicleStrokeColor: "#8be1e0",
-                        instructionalMessage: Bt().initial,
+                        instructionalMessage: Gt().initial,
                         ctaText: "Start Fusing",
                         disableCta: !0,
                         previewLoading: !1,
                         inventoryLoading: !1,
                         finalFusingInProgress: !1,
                         currentForgeCardCount: 0
-                    }, this.fluxBalance = 0, this.mainTL = k.p8.timeline({paused: !0}), this.finalTL = k.p8.timeline({paused: !0}), this.waitForFuseResponseTL = k.p8.timeline({paused: !0}), this.ExpandedViewMode = q, this.unsubscribe = new y.xQ, this.fakeForgeCards = [], this.finalFusePercentage = {value: 0}, this.preFusePercentage = {value: 0}, this.dog = "woof dog", this.resizeService.viewPortUnits$.pipe((0, u.R)(this.unsubscribe), (0, b.b)(({
+                    }, this.fluxBalance = 0, this.mainTL = y.p8.timeline({paused: !0}), this.finalTL = y.p8.timeline({paused: !0}), this.waitForFuseResponseTL = y.p8.timeline({paused: !0}), this.ExpandedViewMode = Q, this.unsubscribe = new M.xQ, this.fakeForgeCards = [], this.finalFusePercentage = {value: 0}, this.preFusePercentage = {value: 0}, this.dog = "woof dog", this.resizeService.viewPortUnits$.pipe((0, u.R)(this.unsubscribe), (0, b.b)(({
                                                                                                                                                                                                                                                                                                                                                                                                                                                                     vh: U,
                                                                                                                                                                                                                                                                                                                                                                                                                                                                     vw: E
                                                                                                                                                                                                                                                                                                                                                                                                                                                                 }) => {
@@ -5800,7 +5815,7 @@
                 }
 
                 initFluxWallet() {
-                    (0, G.aj)([this.forgeWalletService.playerWallets$, this.forgeWalletService.selectedWallet$]).pipe((0, M.q)(1)).subscribe(([t, n]) => {
+                    (0, D.aj)([this.forgeWalletService.playerWallets$, this.forgeWalletService.selectedWallet$]).pipe((0, x.q)(1)).subscribe(([t, n]) => {
                         (!n || !t || 0 === t.length) && this.modalService.createModal(hn, null, {
                             blurredBackground: !0,
                             canCloseFromOutside: !1,
@@ -5819,7 +5834,7 @@
                         }, this.fakeForgeCards = this.transactionInProgress.ids.map(() => ({
                             protoId: this.transactionInProgress.proto,
                             quality: this.transactionInProgress.quality
-                        })), this.waitForFinalFuseResponseAnimation(), this.logEtherscanLink(this.transactionInProgress.txHash), (0, G.aj)([this.ethService.getTransaction$(this.transactionInProgress.txHash), this.ethService.getTransactionReceipt$(this.transactionInProgress.txHash)]).pipe((0, M.q)(1)).subscribe(([, t]) => {
+                        })), this.waitForFinalFuseResponseAnimation(), this.logEtherscanLink(this.transactionInProgress.txHash), (0, D.aj)([this.ethService.getTransaction$(this.transactionInProgress.txHash), this.ethService.getTransactionReceipt$(this.transactionInProgress.txHash)]).pipe((0, x.q)(1)).subscribe(([, t]) => {
                             null === t ? this.openSocketConnection() : 1 === t.status && this.handleSuccessfulPreviousFuse()
                         })
                     }
@@ -5838,7 +5853,7 @@
                 }
 
                 initFluxBalance() {
-                    this.fluxService.fetchFluxInfo(), this.fluxService.fluxInfo$.pipe((0, u.R)(this.unsubscribe), (0, P.h)(t => !!t)).subscribe(t => {
+                    this.fluxService.fetchFluxInfo(), this.fluxService.fluxInfo$.pipe((0, u.R)(this.unsubscribe), (0, S.h)(t => !!t)).subscribe(t => {
                         this.fluxBalance = t.flux_available
                     })
                 }
@@ -5849,22 +5864,22 @@
                 }
 
                 initCards() {
-                    this.uiStateInformation.inventoryLoading = !0, (0, G.aj)([this.cardsService.inventoryCards$, this.cardsService.protoCards$]).pipe((0, u.R)(this.unsubscribe), (0, b.b)(([t, n]) => {
+                    this.uiStateInformation.inventoryLoading = !0, (0, D.aj)([this.cardsService.inventoryCards$, this.cardsService.protoCards$]).pipe((0, u.R)(this.unsubscribe), (0, b.b)(([t, n]) => {
                         this.inventoryCards = t, this.protoCards = Array.from(n.values()), this.uiStateInformation.inventoryLoading = !1
                     })).subscribe()
                 }
 
                 animateForgeAreaToUpperPosition() {
-                    k.p8.to(this.cardForgeAreaDom.nativeElement, {y: 4.5 * this.vh, ease: "power2.inOut", duration: .3})
+                    y.p8.to(this.cardForgeAreaDom.nativeElement, {y: 4.5 * this.vh, ease: "power2.inOut", duration: .3})
                 }
 
                 animateForgeAreaToLowerPosition() {
-                    k.p8.to(this.cardForgeAreaDom.nativeElement, {y: 13 * this.vh, ease: "power2.inOut", duration: .3})
+                    y.p8.to(this.cardForgeAreaDom.nativeElement, {y: 13 * this.vh, ease: "power2.inOut", duration: .3})
                 }
 
                 initPreviewCardAndAnimationControl() {
                     this.forgeService.previewCard$.pipe((0, u.R)(this.unsubscribe), (0, b.b)(t => {
-                        this.previewCard = t, t ? (this.uiStateInformation.previewLoading = !0, this.forgeService.validateForge().pipe((0, M.q)(1)).subscribe(n => {
+                        this.previewCard = t, t ? (this.uiStateInformation.previewLoading = !0, this.forgeService.validateForge().pipe((0, x.q)(1)).subscribe(n => {
                             this.uiStateInformation.previewLoading = !1, this.mainTL.play(), this.fluxTransactionCost = n.flux_cost
                         }, n => {
                             this.handleValidationFail(n.error.error)
@@ -5874,8 +5889,8 @@
 
                 initForgeCards() {
                     this.forgeService.forgeCards$.pipe((0, u.R)(this.unsubscribe), (0, b.b)(t => {
-                        t || (this.fluxTransactionCost = 0, this.uiStateInformation = Object.assign(Object.assign({}, this.uiStateInformation), {instructionalMessage: Bt().initial}), this.animateCircularProgress({preFusePercentage: 0}), this.animateForgeAreaToLowerPosition())
-                    }), (0, P.h)(t => {
+                        t || (this.fluxTransactionCost = 0, this.uiStateInformation = Object.assign(Object.assign({}, this.uiStateInformation), {instructionalMessage: Gt().initial}), this.animateCircularProgress({preFusePercentage: 0}), this.animateForgeAreaToLowerPosition())
+                    }), (0, S.h)(t => {
                         const n = t && t.ids ? t.ids.length : 0, i = this.uiStateInformation.currentForgeCardCount;
                         return this.uiStateInformation.currentForgeCardCount = n, !!t && n !== i
                     })).subscribe(t => {
@@ -5884,13 +5899,13 @@
                 }
 
                 handleUpdatedForgeCards(t) {
-                    return (0, se.mG)(this, void 0, void 0, function* () {
+                    return (0, ae.mG)(this, void 0, void 0, function* () {
                         const n = t && t.ids ? t.ids.length : 0,
                             i = yield this.forgeService.numberOfQualityToForge(t.quality);
                         if (n > 0) {
                             const a = this.forgeService.getNextQuality(t.quality);
                             this.uiStateInformation = Object.assign(Object.assign({}, this.uiStateInformation), {
-                                instructionalMessage: Bt({
+                                instructionalMessage: Gt({
                                     count: i - n,
                                     currentQuality: this.forgeService.fusingLevels[t.quality].name,
                                     nextQuality: this.forgeService.fusingLevels[a].name
@@ -5914,7 +5929,7 @@
                 }
 
                 resetForge() {
-                    this.completedTransactionTxHash = void 0, this.mainTL.pause(), this.mainTL.seek(0), this.finalTL.seek(0), this.finalTL.clear(), this.mainTL.remove(this.finalTL), this.mainTL.remove(this.waitForFuseResponseTL), this.forgeSubmitResult = void 0, this.fakeForgeCards = [], this.preFusePercentage.value = 0, this.finalFusePercentage.value = 0, this.uiStateInformation.ctaText = "Start Fusing", this.uiStateInformation.disableCta = !0, this.uiStateInformation.finalFusingInProgress = !1, this.uiStateInformation.preFuseCicleStrokeColor = "#8be1e0", k.p8.set([this.smokeDom.nativeElement, this.ctaButtonDom.nativeElement, this.cardForgeAreaDom.nativeElement], {clearProps: "all"})
+                    this.completedTransactionTxHash = void 0, this.mainTL.pause(), this.mainTL.seek(0), this.finalTL.seek(0), this.finalTL.clear(), this.mainTL.remove(this.finalTL), this.mainTL.remove(this.waitForFuseResponseTL), this.forgeSubmitResult = void 0, this.fakeForgeCards = [], this.preFusePercentage.value = 0, this.finalFusePercentage.value = 0, this.uiStateInformation.ctaText = "Start Fusing", this.uiStateInformation.disableCta = !0, this.uiStateInformation.finalFusingInProgress = !1, this.uiStateInformation.preFuseCicleStrokeColor = "#8be1e0", y.p8.set([this.smokeDom.nativeElement, this.ctaButtonDom.nativeElement, this.cardForgeAreaDom.nativeElement], {clearProps: "all"})
                 }
 
                 queryToStartFusing() {
@@ -5929,7 +5944,7 @@
                 }
 
                 startFusing() {
-                    this.uiStateInformation.finalFusingInProgress = !0, this.forgeService.setTransactionInProgress(Object.assign(Object.assign({}, this.forgeCards), {reference: (0, rs.v4)()})), this.waitForFinalFuseResponseAnimation(), this.forgeService.submitForge().pipe((0, M.q)(1), (0, _e.w)(t => (this.forgeService.setTransactionInProgress(Object.assign(Object.assign({}, this.transactionInProgress), {txHash: t})), this.logEtherscanLink(this.transactionInProgress.txHash), this.forgeService.postTxHashForTracking({
+                    this.uiStateInformation.finalFusingInProgress = !0, this.forgeService.setTransactionInProgress(Object.assign(Object.assign({}, this.forgeCards), {reference: (0, rs.v4)()})), this.waitForFinalFuseResponseAnimation(), this.forgeService.submitForge().pipe((0, x.q)(1), (0, ue.w)(t => (this.forgeService.setTransactionInProgress(Object.assign(Object.assign({}, this.transactionInProgress), {txHash: t})), this.logEtherscanLink(this.transactionInProgress.txHash), this.forgeService.postTxHashForTracking({
                         tx_hash: t,
                         reference: this.transactionInProgress.reference,
                         user_id: this.authService.getUserId()
@@ -5963,7 +5978,7 @@
                         this.stopSocket(), this.forgeSubmitResult = "success", this.cardsService.setNewInventoryCardCount(1);
                         const n = this.fluxBalance - this.fluxTransactionCost, i = this.transactionInProgress.keptId,
                             a = this.transactionInProgress.proto;
-                        this.cardsService.getProtoCard(a).pipe((0, M.q)(1)).subscribe(s => this.logForgeCompleted({
+                        this.cardsService.getProtoCard(a).pipe((0, x.q)(1)).subscribe(s => this.logForgeCompleted({
                             card_properties: s,
                             keep_id: i,
                             new_quality: "meteorite",
@@ -5975,7 +5990,7 @@
 
                 handleSocketMessage(t) {
                     const {status: n, confirmations: i, reference: a} = t;
-                    if ((0, se._T)(t, ["status", "confirmations", "reference"]), !this.transactionInProgress || a !== this.transactionInProgress.reference) return !1;
+                    if ((0, ae._T)(t, ["status", "confirmations", "reference"]), !this.transactionInProgress || a !== this.transactionInProgress.reference) return !1;
                     switch (n) {
                         case"not_found":
                             this.handleFuseFailure("not found!");
@@ -6005,8 +6020,8 @@
                 }
 
                 animateEachCardIntoPreview(t) {
-                    const n = k.p8.timeline(), i = this.previewCardDom.nativeElement,
-                        a = ce.ease.config({strength: 8, points: 2, template: "power2.inOut", randomize: !1});
+                    const n = y.p8.timeline(), i = this.previewCardDom.nativeElement,
+                        a = se.ease.config({strength: 8, points: 2, template: "power2.inOut", randomize: !1});
                     let s;
                     switch (t.length) {
                         case 2:
@@ -6043,7 +6058,7 @@
 
                 waitForFinalFuseResponseAnimation() {
                     const t = this.finalCircularFuseDom.elRef.nativeElement, n = this.previewCardDom.nativeElement;
-                    this.waitForFuseResponseTL = k.p8.timeline({
+                    this.waitForFuseResponseTL = y.p8.timeline({
                         repeat: -1,
                         paused: !0
                     }), this.waitForFuseResponseTL.add(() => {
@@ -6066,7 +6081,7 @@
                     const t = this.forgeCardsDom.forgeCardDoms.toArray().map(s => s.nativeElement),
                         n = this.previewCardDom.nativeElement, i = this.shimmerAreaDom.nativeElement,
                         a = this.ctaButtonDom.nativeElement;
-                    this.waitForFuseResponseTL.kill(), this.uiStateInformation.preFuseCicleStrokeColor = "#c6a052", this.finalFusePercentage.value = 0, this.fluxTransactionCost = 0, this.finalTL = k.p8.timeline({paused: !0}), this.finalTL.to(this.cardForgeAreaDom.nativeElement, {
+                    this.waitForFuseResponseTL.kill(), this.uiStateInformation.preFuseCicleStrokeColor = "#c6a052", this.finalFusePercentage.value = 0, this.fluxTransactionCost = 0, this.finalTL = y.p8.timeline({paused: !0}), this.finalTL.to(this.cardForgeAreaDom.nativeElement, {
                         duration: .3,
                         y: 13 * this.vh,
                         ease: "power2.inOut"
@@ -6113,7 +6128,7 @@
 
                 createPreForgeAnimation() {
                     const t = this.previewCardDom.nativeElement, n = this.shimmerAreaDom.nativeElement,
-                        i = k.p8.timeline({repeat: -1, paused: !0});
+                        i = y.p8.timeline({repeat: -1, paused: !0});
                     i.to([n, t], {duration: 2, y: "-9%", ease: "power2.inOut"}).to([n, t], {
                         duration: 2,
                         y: "-12%",
@@ -6131,7 +6146,7 @@
 
                 animateCircularProgress({preFusePercentage: t, duration: n = .65}) {
                     return new Promise(i => {
-                        this.circularTween && this.circularTween.kill(), this.circularTween = k.p8.to(this.preFusePercentage, {
+                        this.circularTween && this.circularTween.kill(), this.circularTween = y.p8.to(this.preFusePercentage, {
                             value: t,
                             ease: "power2.inOut",
                             onComplete: () => {
@@ -6153,7 +6168,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(f.mI), e.Y36(_.yD), e.Y36(_.dK), e.Y36(T.Z), e.Y36(te._), e.Y36(xe), e.Y36(f.pk), e.Y36(Oe), e.Y36(_.$c), e.Y36(_.TJ), e.Y36(f.ux), e.Y36(Se.d), e.Y36(_.jt))
+                return new (t || o)(e.Y36(f.mI), e.Y36(_.yD), e.Y36(_.dK), e.Y36(T.Z), e.Y36(K._), e.Y36(we), e.Y36(f.pk), e.Y36(ke), e.Y36(_.$c), e.Y36(_.TJ), e.Y36(f.ux), e.Y36(Pe.d), e.Y36(_.jt))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["cerberus-app-forge-flux"]],
@@ -6188,7 +6203,7 @@
         let ys = (() => {
             class o {
                 constructor(t) {
-                    this.featureFlagsService = t, this.unsubscribe = new y.xQ, this.Flags = _.vU, this.ffFusingNextStepEnabled = !1
+                    this.featureFlagsService = t, this.unsubscribe = new M.xQ, this.Flags = _.vU, this.ffFusingNextStepEnabled = !1
                 }
 
                 ngOnInit() {
@@ -6311,7 +6326,7 @@
                 styles: ["[_nghost-%COMP%]{display:flex;flex-direction:column;max-width:650px;text-align:center}.modal__header[_ngcontent-%COMP%]{background:linear-gradient(90deg,#c6a052 2.93%,#ebc98b 25.01%,#fff2d8 50.44%,#ebc98b 74.21%,#c6a052 96.95%);box-shadow:0 2px 5px #0000004d;height:3px;width:100%}.modal__content[_ngcontent-%COMP%]{background:linear-gradient(90deg,#0f1b27 1.39%,#0f1b27 12.6%,#1d2f41 50.06%,#0f1b27 87.64%,#0f1b27 98.63%);box-sizing:border-box;border:2px solid #3D5A74;display:flex;flex-direction:column;padding:0 calc(var(--vw) * 1.5);align-items:center}.modal__btnsGroup[_ngcontent-%COMP%]{display:flex;justify-content:space-evenly;padding:20px 0;width:50%}.modal__btn[_ngcontent-%COMP%]{padding:15px;margin:10px}.modal__closeButton[_ngcontent-%COMP%]{position:absolute;top:20px;right:20px;z-index:1;font-size:calc(var(--vh) * 2);color:#8be1e0;cursor:pointer}.modal__closeButton[_ngcontent-%COMP%]:hover{color:#fff}.notifyText[_ngcontent-%COMP%]{text-align:left}"]
             }), o
         })();
-        var Ts = g(5284), Ut = g(87168);
+        var Bt = g(87168), Ts = g(5284);
 
         function Is(o, r) {
             1 & o && e._UZ(0, "div", 22)
@@ -6359,11 +6374,11 @@
         let kn = (() => {
             class o {
                 constructor(t, n, i, a, s, c) {
-                    this.progressionService = t, this.activeModal = n, this.userService = i, this.router = a, this.environment = s, this.akumaService = c, this.unsubscribe = new y.xQ, this.progressBarPercent = 0
+                    this.progressionService = t, this.activeModal = n, this.userService = i, this.router = a, this.environment = s, this.akumaService = c, this.unsubscribe = new M.xQ, this.progressBarPercent = 0
                 }
 
                 ngOnInit() {
-                    this.akumaService.postScreenEvent("quest", "NewPlayerRewards", "", "opened"), this.userService.extendedAccountProperties$.pipe((0, Ut.M)(this.progressionService.accountThresholds$), (0, u.R)(this.unsubscribe)).subscribe(([t, n]) => {
+                    this.akumaService.postScreenEvent("quest", "NewPlayerRewards", "", "opened"), this.userService.extendedAccountProperties$.pipe((0, Bt.M)(this.progressionService.accountThresholds$), (0, u.R)(this.unsubscribe)).subscribe(([t, n]) => {
                         this.newPlayerRewards = n.slice(1, 7).map(i => {
                             let a = i;
                             return this.currentPlayerlevel = t.level, this.currentPlayerlevel >= a.level ? (a.achieved = !0, this.progressBarPercent += a.level > 1 ? 20 : 0) : a.achieved = !1, a
@@ -6388,7 +6403,7 @@
                 }
 
                 openPacks() {
-                    this.akumaService.postControlEvent("quest", "NewPlayerRewards", "", "openPacks", "Btn", "pressed"), this.akumaService.postFlowEvent("questRewardClaim", "succeeded"), this.router.navigate([qe.gv.routeContent(this.environment).openPacks.path])
+                    this.akumaService.postControlEvent("quest", "NewPlayerRewards", "", "openPacks", "Btn", "pressed"), this.akumaService.postFlowEvent("questRewardClaim", "succeeded"), this.router.navigate([Qe.gv.routeContent(this.environment).openPacks.path])
                 }
 
                 close() {
@@ -6397,7 +6412,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(X.$z), e.Y36(L.mX), e.Y36(le.MZ), e.Y36(we.F0), e.Y36(f.Ho), e.Y36(_.jt))
+                return new (t || o)(e.Y36(V.$z), e.Y36(L.mX), e.Y36(ce.MZ), e.Y36(be.F0), e.Y36(f.Ho), e.Y36(_.jt))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["cerberus-progression-rewards"]],
@@ -6436,33 +6451,39 @@
         function Ns(o, r) {
             if (1 & o) {
                 const t = e.EpF();
-                e.TgZ(0, "div", 16)(1, "gu-simple-text", 17), e._uU(2), e.qZA(), e._UZ(3, "gu-hex-progress-bar", 18), e.TgZ(4, "div", 19), e.NdJ("click", function () {
+                e.TgZ(0, "div", 16)(1, "div", 17)(2, "gu-simple-text", 18), e._uU(3, " Next milestone in "), e.qZA(), e.TgZ(4, "gu-body-text", 19), e._uU(5), e.qZA()(), e._UZ(6, "gu-hex-progress-bar", 20), e.TgZ(7, "div", 21), e.NdJ("click", function () {
                     e.CHM(t);
                     const i = e.oxw(2);
                     return !!i.isNewUserEligibleForRewards && i.openRewardsModal()
-                }), e.TgZ(5, "app-tooltip", 20), e._UZ(6, "i", 21)(7, "gu-card-pack-picture", 22), e.qZA()()()
+                }), e.TgZ(8, "app-tooltip", 22), e._UZ(9, "i", 23)(10, "gu-card-pack-picture", 24), e.qZA()()()
             }
             if (2 & o) {
                 const t = e.oxw(2);
-                e.xp6(2), e.hij(" Next milestone in " + t.user.xp_to_next + " XP - Level ", t.user.level + 1, " "), e.xp6(1), e.Q6J("progress", t.xpProgress), e.xp6(2), e.Q6J("autoClose", !t.isNewUserWithUnopenedPacks)("title", t.isNewUserWithUnopenedPacks ? "Click to see <br/> unlocked rewards" : t.nextReward.god + " Core " + t.nextReward.rarity + " pack"), e.xp6(1), e.Q6J("ngClass", e.VKq(7, Es, t.isNewUserWithUnopenedPacks)), e.xp6(1), e.Q6J("god", t.nextReward.god)("rarity", t.nextReward.rarity)
+                e.xp6(5), e.hij(t.user.xp_to_next + " XP - Level ", t.user.level + 1, " "), e.xp6(1), e.Q6J("progress", t.xpProgress), e.xp6(2), e.Q6J("autoClose", !t.isNewUserWithUnopenedPacks)("title", t.isNewUserWithUnopenedPacks ? "Click to see <br/> unlocked rewards" : t.nextReward.god + " Core " + t.nextReward.rarity + " pack"), e.xp6(1), e.Q6J("ngClass", e.VKq(7, Es, t.isNewUserWithUnopenedPacks)), e.xp6(1), e.Q6J("god", t.nextReward.god)("rarity", t.nextReward.rarity)
             }
         }
 
         function Rs(o, r) {
-            if (1 & o && (e.ynx(0), e.TgZ(1, "div", 1), e._UZ(2, "img", 2), e.qZA(), e.TgZ(3, "div", 3)(4, "div", 4)(5, "gu-simple-text", 5), e._uU(6), e.qZA(), e.YNc(7, Ls, 2, 1, "gu-heading-text", 6), e.YNc(8, Us, 2, 1, "gu-heading-text", 7), e.TgZ(9, "div", 8)(10, "div", 9), e._UZ(11, "gu-icon", 10), e.TgZ(12, "gu-paragraph-text", 11), e._uU(13), e.qZA()(), e.TgZ(14, "div", 9), e._UZ(15, "gu-icon", 12), e.TgZ(16, "gu-paragraph-text", 11), e._uU(17), e.qZA()()()()(), e.YNc(18, Ns, 8, 9, "div", 13), e.BQk()), 2 & o) {
+            if (1 & o) {
+                const t = e.EpF();
+                e.TgZ(0, "div", 2)(1, "div", 3)(2, "div", 4), e._UZ(3, "img", 5), e.qZA(), e.TgZ(4, "div", 6)(5, "div", 7)(6, "gu-standard-button", 8), e.NdJ("click", function () {
+                    return e.CHM(t), e.oxw().showUpcomingDailyRewardsInfo()
+                }), e._uU(7, "Daily $GODS Rewards "), e.qZA(), e.TgZ(8, "div", 9)(9, "gu-body-text", 10), e._uU(10), e.qZA(), e.YNc(11, Ls, 2, 1, "gu-heading-text", 11), e.YNc(12, Us, 2, 1, "gu-heading-text", 12), e.YNc(13, Ns, 11, 9, "div", 13), e.qZA()()()()()
+            }
+            if (2 & o) {
                 const t = e.oxw();
-                e.xp6(2), e.s9C("src", t.user.image_url, e.LSH), e.xp6(3), e.Udp("color", t.user.rank_color), e.xp6(1), e.hij(" ", t.user.rank, " "), e.xp6(1), e.Q6J("ngIf", t.userNameContainsEmoji), e.xp6(1), e.Q6J("ngIf", !t.userNameContainsEmoji), e.xp6(5), e.hij(" ", null == t.user ? null : t.user.won_matches + ' W - ' + t.user.lost_matches + ' L (' + (t.user.won_matches + t.user.lost_matches > 0 ? ((t.user.won_matches / (t.user.won_matches + t.user.lost_matches))*100).toFixed(0) : 0) + '%)', " "), e.xp6(4), e.hij(" ", null == t.user ? null : t.user.unique_card_count + ' unique cards', " "), e.xp6(1), e.Q6J("ngIf", t.showProgressBar && t.nextReward)
+                e.xp6(9), e.Udp("color", t.user.rank_color), e.xp6(1), e.hij(" ", t.user.rank, " "), e.xp6(1), e.Q6J("ngIf", t.userNameContainsEmoji), e.xp6(1), e.Q6J("ngIf", !t.userNameContainsEmoji), e.xp6(1), e.Q6J("ngIf", t.showProgressBar && t.nextReward)
             }
         }
 
-        var lt = (() => {
-            return (o = lt || (lt = {})).v0 = "v0", o.v1 = "v1", lt;
+        var at = (() => {
+            return (o = at || (at = {})).v0 = "v0", o.v1 = "v1", at;
             var o
         })();
         let On = (() => {
             class o {
                 constructor(t, n, i, a, s, c) {
-                    this.guUserService = t, this.progressionService = n, this.packService = i, this.authService = a, this.cerberusModalService = s, this.akumaService = c, this.showProgressBar = !0, this.unsubscribe = new y.xQ, this.xpProgress = 0, this.isNewUserWithUnopenedPacks = !1, this.isNewUserEligibleForRewards = !1
+                    this.guUserService = t, this.progressionService = n, this.packService = i, this.authService = a, this.cerberusModalService = s, this.akumaService = c, this.showProgressBar = !0, this.unsubscribe = new M.xQ, this.xpProgress = 0, this.isNewUserWithUnopenedPacks = !1, this.isNewUserEligibleForRewards = !1
                 }
 
                 ngOnInit() {
@@ -6474,8 +6495,8 @@
                 }
 
                 initUnopenedPacks() {
-                    this.packService.fetchUnopenedPacks(), this.packService.unopenedPacks$.pipe((0, Ut.M)(this.guUserService.extendedAccountProperties$), (0, u.R)(this.unsubscribe)).subscribe(([t, n]) => {
-                        this.isNewUserEligibleForRewards = n.extra.progression_version === lt.v1 && n.level <= 6, this.isEligibleUserWithUnopenedPacks(t, n) && (this.isNewUserWithUnopenedPacks = !0, this.akumaService.postScreenEvent("arena", "PopNewRewardsUnlocked", "", "opened"), this.akumaService.postFlowEvent("questNotification", "started"))
+                    this.packService.fetchUnopenedPacks(), this.packService.unopenedPacks$.pipe((0, Bt.M)(this.guUserService.extendedAccountProperties$), (0, u.R)(this.unsubscribe)).subscribe(([t, n]) => {
+                        this.isNewUserEligibleForRewards = n.extra.progression_version === at.v1 && n.level <= 6, this.isEligibleUserWithUnopenedPacks(t, n) && (this.isNewUserWithUnopenedPacks = !0, this.akumaService.postScreenEvent("arena", "PopNewRewardsUnlocked", "", "opened"), this.akumaService.postFlowEvent("questNotification", "started"))
                     })
                 }
 
@@ -6484,14 +6505,26 @@
                 }
 
                 initUserDetails() {
-                    (0, G.aj)([this.guUserService.extendedAccountProperties$, this.authService.account$, this.progressionService.accountThresholds$]).pipe((0, u.R)(this.unsubscribe), (0, P.h)(([t, n, i]) => !!i.length && !!n)).subscribe(([t, n, i]) => {
-                        this.account = n, this.user = t, this.userNameContainsEmoji = Ts.uA.stringContainsEmoji(this.account.username), this.xpProgress = ot({
+                    (0, D.aj)([this.guUserService.extendedAccountProperties$, this.authService.account$, this.progressionService.accountThresholds$]).pipe((0, u.R)(this.unsubscribe), (0, S.h)(([t, n, i]) => !!i.length && !!n)).subscribe(([t, n, i]) => {
+                        this.account = n, this.user = t, this.userNameContainsEmoji = Ts.uA.stringContainsEmoji(this.account.username), this.xpProgress = et({
                             xp: t.total_xp,
                             levelThresholds: i
                         });
                         const a = this.packService.fixGodAlignments(i[this.user.level + 1].reward);
                         this.nextReward = this.chooseBestReward(a)
                     })
+                }
+
+                showUpcomingDailyRewardsInfo() {
+                    const n = this.cerberusModalService.open(Tt.M, {
+                        defaultStylings: !1,
+                        centered: !0,
+                        size: "lg"
+                    }).componentInstance;
+                    n.title = "DAILY $GODS REWARDS COMING SOON", n.content = "We are working on a feature that allows you to earn $GODS everyday by playing the game! Stay tuned for more information.", n.primaryButton = {
+                        text: "CLOSE",
+                        closeOnClick: !0
+                    }, n.type = "info"
                 }
 
                 openRewardsModal() {
@@ -6511,30 +6544,30 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(le.MZ), e.Y36(X.$z), e.Y36(Pe.F), e.Y36(f.mI), e.Y36(L.Qz), e.Y36(_.jt))
+                return new (t || o)(e.Y36(ce.MZ), e.Y36(V.$z), e.Y36(Oe.F), e.Y36(f.mI), e.Y36(L.Qz), e.Y36(_.jt))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-player-stats"]],
                 inputs: {progressPercent: "progressPercent", showProgressBar: "showProgressBar"},
-                decls: 1,
+                decls: 2,
                 vars: 1,
-                consts: [[4, "ngIf"], [1, "avatarArea"], ["alt", "player avatar image", 1, "avatar__profileImage", 3, "src"], [1, "textArea"], [1, "textArea__centered"], ["kind", "tag", "fillColor", "colors.gunmetal.100", 1, "playerRank"], ["size", "x-small", "class", "playerName", "fillColor", "colors.gold.500", 4, "ngIf"], ["size", "x-small", "class", "playerName", "fillGradient", "gradients.gold.simple", 4, "ngIf"], [1, "statDisplays"], [1, "statDisplays__stat"], ["iconLigature", "game_wins", "fillColor", "colors.gunmetal.100", 1, "statDisplays__stat__icon"], ["size", "2x-small", "fillColor", "colors.gunmetal.100", 1, "statDisplays__stat__value"], ["iconLigature", "cards_stack", "fillColor", "colors.gunmetal.100", 1, "statDisplays__stat__icon"], ["class", "progressBarArea", 4, "ngIf"], ["size", "x-small", "fillColor", "colors.gold.500", 1, "playerName"], ["size", "x-small", "fillGradient", "gradients.gold.simple", 1, "playerName"], [1, "progressBarArea"], ["kind", "help", 1, "progressBarArea__nextMilestone"], [3, "progress"], [3, "click"], [1, "progressBarArea__nextReward", 3, "autoClose", "title"], [1, "progressBarArea__nextReward__innerSquares", 3, "ngClass"], ["set", "core", 1, "progressBarArea__nextReward__packImage", 3, "god", "rarity"]],
+                consts: [["class", "wrapper", 4, "ngIf"], [1, "background-filter"], [1, "wrapper"], [1, "columns", "is-gapless", "wrapper__sections"], [1, "column", "is-5-hidden"], ["src", "/assets/images/internal-logos/logo--gods-unchained-flat.svg", 1, "logo"], [1, "column", "is-7", "wrapper__section-right"], [1, "headerRight"], ["type", "secondary", "icon", "collectable_fragment", "iconPosition", "left", "theme", "gunmetal", 3, "click"], [1, "statsWrapper"], ["size", "x-small", "fontWeight", "bold", "fillColor", "colors.gunmetal.100", 1, "playerRank"], ["size", "x-small", "class", "playerName", "fillColor", "colors.gold.500", 4, "ngIf"], ["size", "x-small", "class", "playerName", "fillGradient", "gradients.gold.simple", 4, "ngIf"], ["class", "progress-bar", 4, "ngIf"], ["size", "x-small", "fillColor", "colors.gold.500", 1, "playerName"], ["size", "x-small", "fillGradient", "gradients.gold.simple", 1, "playerName"], [1, "progress-bar"], [1, "milestone"], ["size", "small", "fontWeight", "regular"], ["size", "small", "fontWeight", "bold"], [3, "progress"], [3, "click"], [1, "progress-bar__reward", 3, "autoClose", "title"], [1, "progress-bar__reward-squares", 3, "ngClass"], ["set", "core", 1, "progress-bar__reward-image", 3, "god", "rarity"]],
                 template: function (t, n) {
-                    1 & t && e.YNc(0, Rs, 19, 9, "ng-container", 0), 2 & t && e.Q6J("ngIf", n.user)
+                    1 & t && (e.YNc(0, Rs, 14, 6, "div", 0), e._UZ(1, "div", 1)), 2 & t && e.Q6J("ngIf", n.user)
                 },
                 directives: [l.O5, De.K, l.mk],
-                styles: ['h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained, serif;font-weight:700}[_nghost-%COMP%]{height:100%;display:flex;flex-wrap:wrap}.textArea[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 2.2);flex:1;display:flex;flex-direction:column;align-items:flex-start}.textArea__centered[_ngcontent-%COMP%]{margin:auto 0}.avatarArea[_ngcontent-%COMP%]{width:calc(var(--vw) * 8);height:calc(var(--vw) * 8);position:relative;border-radius:50%;overflow:hidden;border:calc(var(--vh) * .6) solid #1D2F41;box-shadow:0 calc(var(--vh) * .6) calc(var(--vh) * 1.3) #0a0a0a99}.avatar__profileImage[_ngcontent-%COMP%]{display:block;width:100%;border-radius:50%}.playerName[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .4);margin-bottom:calc(var(--vh) * 1.2)}.statDisplays[_ngcontent-%COMP%]{display:flex;justify-content:space-between;}.statDisplays__stat[_ngcontent-%COMP%]{display:flex;margin-right:calc(var(--vw) * 1.5);}.statDisplays__stat__icon[_ngcontent-%COMP%]{margin-right:calc(var(--vw) * .5);font-size:.9rem;}.statDisplays__stat__value[_ngcontent-%COMP%]{font-size:.9rem;}.progressBarArea[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2.2);display:flex;width:100%;position:relative}.progressBarArea__nextMilestone[_ngcontent-%COMP%]{position:absolute;bottom:120%;right:8%}.progressBarArea__nextReward[_ngcontent-%COMP%]{position:absolute;top:0;right:0;width:52px;height:52px;display:flex;transform:translate(50%, -27%)}.progressBarArea__nextReward[_ngcontent-%COMP%] .tooltipBubble--top {margin-top:-24px}.progressBarArea__nextReward__innerSquares[_ngcontent-%COMP%]{position:absolute;width:100%;height:100%;transform:rotate(45deg);border:1px solid #C6A052;padding:4.8px;background:#0F1B27}.progressBarArea__nextReward__innerSquares[_ngcontent-%COMP%]:before {content:"";display:block;width:100%;height:100%;border:1px solid #AFFAED}.glow[_ngcontent-%COMP%]{box-shadow:0 0 10px #e5e5e5}.progressBarArea__nextReward__packImage[_ngcontent-%COMP%]{margin:auto;width:48px;transform:translateY(-6%)}gu-hex-progress-bar[_ngcontent-%COMP%]{flex:1}']
+                styles: ['h1[_ngcontent-%COMP%],h2[_ngcontent-%COMP%],h3[_ngcontent-%COMP%],h4[_ngcontent-%COMP%],h5[_ngcontent-%COMP%],h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%],label[_ngcontent-%COMP%],a[_ngcontent-%COMP%],div[_ngcontent-%COMP%],input[_ngcontent-%COMP%],button[_ngcontent-%COMP%],p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%],h2[_ngcontent-%COMP%],h3[_ngcontent-%COMP%],h4[_ngcontent-%COMP%],h5[_ngcontent-%COMP%],h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}[_nghost-%COMP%]{height:100%;display:flex;flex-wrap:wrap;position:relative}.wrapper[_ngcontent-%COMP%]{width:100%;background-size:cover;background-position:left -120px top 13%;padding:8px;border-radius:4px;max-height:100%;}.wrapper__sections[_ngcontent-%COMP%]{height:100%}.wrapper__section-right[_ngcontent-%COMP%]{height:100%;}.background-filter[_ngcontent-%COMP%]{display:none;}.logo[_ngcontent-%COMP%]{width:132px;height:41px;}.headerRight[_ngcontent-%COMP%]{display:flex;width:100%;height:100%;flex-direction:column-reverse;align-items:flex-start;}.statsWrapper[_ngcontent-%COMP%]{display:flex;flex-direction:column;flex-grow:1;width:400px;}.milestone[_ngcontent-%COMP%]{margin-bottom:8px;}.playerName[_ngcontent-%COMP%]{line-height:1.1 !important}.statDisplays__stat[_ngcontent-%COMP%]{display:flex;margin-right:calc(var(--vw) * 1.5)}.progress-bar[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .6);margin-bottom:calc(var(--vh) * 2.2);width:100%;position:relative}.progress-bar__reward[_ngcontent-%COMP%]{position:absolute;top:0;right:-52px;width:52px;height:52px;display:flex;transform:translate(-17%,20%);}.progress-bar__reward[_ngcontent-%COMP%] .tooltipBubble--top {margin-top:-24px}.progress-bar__reward-squares[_ngcontent-%COMP%]{position:absolute;width:100%;height:100%;transform:rotate(45deg);border:1px solid var(--gu-yellow);padding:4.8px;background:var(--gu-blue-dark);}.progress-bar__reward-squares[_ngcontent-%COMP%]:before {content:"";display:block;width:100%;height:100%;border:1px solid var(--gu-blue-hover);}.glow[_ngcontent-%COMP%]{box-shadow:0 0 10px #e5e5e5}.progress-bar__reward-image[_ngcontent-%COMP%]{margin:auto;width:48px;transform:translateY(-6%)}gu-hex-progress-bar[_ngcontent-%COMP%]{flex:1;}@media screen and (min-width:1920px) {.background-filter[_ngcontent-%COMP%]{border-radius:8px}.wrapper[_ngcontent-%COMP%]{padding:16px;border-radius:8px}.wrapper[_ngcontent-%COMP%]{background-position:left -50px top 13%}.logo[_ngcontent-%COMP%]{width:220px;height:69px}}']
             }), o
         })();
 
-        function Qs(o, r) {
+        function qs(o, r) {
             if (1 & o && (e._UZ(0, "img", 4), e.ALo(1, "lowercase")), 2 & o) {
                 const t = e.oxw();
                 e.MGl("src", "/gu-assets/images/gods/no-background/", e.lcZ(1, 1, t.god), "-color-cob.webp", e.LSH)
             }
         }
 
-        function qs(o, r) {
+        function Qs(o, r) {
             1 & o && e._UZ(0, "gu-icon", 5)
         }
 
@@ -6616,7 +6649,7 @@
                 vars: 3,
                 consts: [[1, "wrapper"], ["alt", "God portrait", "class", "godImage", 3, "src", 4, "ngIf"], ["iconLigature", "padlock", "class", "lock", 4, "ngIf"], [4, "ngIf"], ["alt", "God portrait", 1, "godImage", 3, "src"], ["iconLigature", "padlock", 1, "lock"], [1, "winCircle", "winCircle--0"], ["iconLigature", "game_wins", "class", "winCircle__icon", 4, "ngIf"], [1, "winCircle", "winCircle--1"], [1, "winCircle", "winCircle--2"], ["iconLigature", "game_wins", 1, "winCircle__icon"]],
                 template: function (t, n) {
-                    1 & t && (e.TgZ(0, "div", 0), e.YNc(1, Qs, 2, 3, "img", 1), e.YNc(2, qs, 1, 0, "gu-icon", 2), e.YNc(3, $s, 7, 9, "ng-container", 3), e.qZA()), 2 & t && (e.xp6(1), e.Q6J("ngIf", n.god), e.xp6(1), e.Q6J("ngIf", !n.god), e.xp6(1), e.Q6J("ngIf", n.wins > 0))
+                    1 & t && (e.TgZ(0, "div", 0), e.YNc(1, qs, 2, 3, "img", 1), e.YNc(2, Qs, 1, 0, "gu-icon", 2), e.YNc(3, $s, 7, 9, "ng-container", 3), e.qZA()), 2 & t && (e.xp6(1), e.Q6J("ngIf", n.god), e.xp6(1), e.Q6J("ngIf", !n.god), e.xp6(1), e.Q6J("ngIf", n.wins > 0))
                 },
                 directives: [l.O5],
                 pipes: [l.i8],
@@ -6668,7 +6701,7 @@
         let Xs = (() => {
             class o {
                 constructor(t, n) {
-                    this.modalService = t, this.gauntletService = n, this.gauntletSlots = [], this.gauntletFlux = 0, this.unsubscribe = new y.xQ, this.close = () => {
+                    this.modalService = t, this.gauntletService = n, this.gauntletSlots = [], this.gauntletFlux = 0, this.unsubscribe = new M.xQ, this.close = () => {
                         this.modalService.destroyTopModal()
                     }
                 }
@@ -6759,7 +6792,7 @@
                     }, {name: "Mana", options: _.iZ.manaOptions}, {
                         name: "Set",
                         options: _.iZ.setOptions
-                    }], this.loading = !1, this.deckSelectMode = !1, this.unsubscribe = new y.xQ, this.protoCards = [], this.deckCardIds = [], this.destroyModal = () => {
+                    }], this.loading = !1, this.deckSelectMode = !1, this.unsubscribe = new M.xQ, this.protoCards = [], this.deckCardIds = [], this.destroyModal = () => {
                         this.modalService.destroyTopModal(), this.akumaService.postControlEvent("gu", "MyDecks", "", "close", "Btn", "pressed")
                     }
                 }
@@ -6779,16 +6812,16 @@
                 }
 
                 initDecks() {
-                    this.decksService.activeDeckChange$.pipe((0, u.R)(this.unsubscribe), (0, P.h)(t => null !== t), (0, b.b)(t => this.onActiveDeckChange(t))).subscribe()
+                    this.decksService.activeDeckChange$.pipe((0, u.R)(this.unsubscribe), (0, S.h)(t => null !== t), (0, b.b)(t => this.onActiveDeckChange(t))).subscribe()
                 }
 
                 onActiveDeckChange(t) {
                     switch (t.type) {
-                        case de.u4.Change:
+                        case le.u4.Change:
                             this.selectNewDeck(t.deck);
                             break;
-                        case de.u4.CardLimit:
-                        case de.u4.DeckLimit:
+                        case le.u4.CardLimit:
+                        case le.u4.DeckLimit:
                             break;
                         default:
                             this.selectNewDeck(t.deck)
@@ -6800,11 +6833,11 @@
                 }
 
                 initCards() {
-                    this.loading = !0, (0, G.aj)([this.sealedService.sealedMode$, this.cardsService.protoCards$]).pipe((0, u.R)(this.unsubscribe), (0, P.h)(([t, n]) => t && n && n.size > 0)).subscribe(([t, n]) => {
+                    this.loading = !0, (0, D.aj)([this.sealedService.sealedMode$, this.cardsService.protoCards$]).pipe((0, u.R)(this.unsubscribe), (0, S.h)(([t, n]) => t && n && n.size > 0)).subscribe(([t, n]) => {
                         const i = Array.from(n.values()).filter(s => t.protos.includes(s.proto));
                         this.sealedMode = t;
                         const a = t.protos.map((s, c) => {
-                            const d = this.decksService.generateUniqueCardId(S.B_.SEALED_DECK, s, c);
+                            const d = this.decksService.generateUniqueCardId(P.B_.SEALED_DECK, s, c);
                             return new m.Zb(d, s, 5, n.get(s))
                         });
                         this.customInventoryCardsMap = this.createInventoryCardsMap(a), this.inventoryCards = a, this.protoCards = i, this.loading = !1
@@ -6830,7 +6863,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(oe.D), e.Y36(_.dK), e.Y36(T.Z), e.Y36(_.LE), e.Y36(f.pk), e.Y36(_.jt), e.Y36(ee.H))
+                return new (t || o)(e.Y36(te.D), e.Y36(_.dK), e.Y36(T.Z), e.Y36(_.LE), e.Y36(f.pk), e.Y36(_.jt), e.Y36(X.H))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-sealed-deck-builder"]],
@@ -6840,8 +6873,8 @@
                 template: function (t, n) {
                     1 & t && (e._UZ(0, "app-modal-sidebar", 0), e.YNc(1, Ks, 1, 0, "app-rectangular-spinner", 1), e.YNc(2, ec, 1, 5, "app-cards-list", 2), e.YNc(3, tc, 1, 5, "app-active-deck", 3)), 2 & t && (e.Q6J("closeButtonClickFn", n.destroyModal), e.xp6(1), e.Q6J("ngIf", n.loading), e.xp6(1), e.Q6J("ngIf", !n.loading), e.xp6(1), e.Q6J("ngIf", n.activeDeck))
                 },
-                directives: [ke, l.O5, at, At, pn],
-                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif;font-weight:400}.pageTitle[_ngcontent-%COMP%], .god__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained, serif;font-weight:700}.god__description[_ngcontent-%COMP%], .god__playStyle[_ngcontent-%COMP%], .pageDescription[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif}.god__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 3.7);line-height:1.3}.pageTitle[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 5);line-height:1.3}.god__description[_ngcontent-%COMP%], .god__playStyle[_ngcontent-%COMP%], .pageDescription[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.god__playStyle[_ngcontent-%COMP%], .pageDescription[_ngcontent-%COMP%]{line-height:1.4}[_nghost-%COMP%]{width:100%;height:calc(calc(var(--vh) * 100) - 28px - 80px);display:flex;flex-flow:column nowrap;text-align:center;padding:0 80px;padding-top:calc(var(--vh) * 5)}.pageTitle[_ngcontent-%COMP%]{margin-bottom:calc(var(--vh) * 1);background:var(--gu-yellow);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.pageDescription[_ngcontent-%COMP%]{color:var(--gu-gray);}.godListing[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1);grid-column-gap:calc(var(--vw) * .6);display:grid;grid-template-columns:repeat(6, 1fr)}.god[_ngcontent-%COMP%]{width:calc(var(--vw) * 14.84);height:calc(var(--vh) * 63);display:flex;background:linear-gradient(to bottom, #affaed 0%, #8be1e0 50%, #54bbcd 100%);border-radius:calc(var(--vh) * .4);color:var(--gu-gray);cursor:pointer}.god[_ngcontent-%COMP%]:hover:not(.god--unavailable) .god__image[_ngcontent-%COMP%]{opacity:1;z-index:1;}.god--unavailable[_ngcontent-%COMP%]{color:#7192b0;background:#1d2f41;cursor:default}.god--unavailable[_ngcontent-%COMP%] .god__inner[_ngcontent-%COMP%]{background:#0c1620}.god--unavailable[_ngcontent-%COMP%] .god__image[_ngcontent-%COMP%]{opacity:.1;}.god__inner[_ngcontent-%COMP%]{padding:calc(var(--vw) * 1.5);margin:calc(var(--vh) * .18);flex:1;border-radius:calc(var(--vh) * .4);background:var(--gu-blue-dark);overflow:hidden;position:relative}.god__image[_ngcontent-%COMP%]{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.35;}.god__title[_ngcontent-%COMP%]{position:relative}.god__description[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .5);padding-bottom:calc(var(--vh) * 2.96);color:var(--gu-gray);position:relative}.god__playStyle[_ngcontent-%COMP%]{position:relative;padding:8px;background:rgba(0, 0, 0, 0.25);}.sealedPreloadSection[_ngcontent-%COMP%]{width:1px;height:1px;visibility:hidden;overflow:hidden}.importDeckCta[_ngcontent-%COMP%]{position:absolute;right:100px}"]
+                directives: [ye, l.O5, ot, St, un],
+                styles: ["[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;padding:0 calc(var(--vh) * 7.7);padding-top:calc(var(--vh) * 4.5);height:100%}app-cards-list[_ngcontent-%COMP%]{flex:1}app-active-deck[_ngcontent-%COMP%]{height:calc(var(--vh) * 37)}.spinner[_ngcontent-%COMP%]{margin:auto}.exportCta[_ngcontent-%COMP%]{position:absolute;top:calc(var(--vh) * 3);right:calc(var(--vh) * 17)}"]
             }), o
         })();
         var nc = g(98590);
@@ -6900,7 +6933,7 @@
                 }
 
                 importClick() {
-                    this.deckCodeService.decodeDeckCode(this.deckCode).pipe((0, M.q)(1)).subscribe(({
+                    this.deckCodeService.decodeDeckCode(this.deckCode).pipe((0, x.q)(1)).subscribe(({
                                                                                                         ownedCards: t,
                                                                                                         unownedProtos: n,
                                                                                                         domain: i
@@ -6920,7 +6953,7 @@
                 }
 
                 openDeckbuilder(t, n) {
-                    this.loading = !0, this.decksService.createDeck(new de.$$(-1, "Imported Deck", t, "common", n)).pipe((0, M.q)(1)).subscribe(i => {
+                    this.loading = !0, this.decksService.createDeck(new le.$$(-1, "Imported Deck", t, "common", n)).pipe((0, x.q)(1)).subscribe(i => {
                         this.loading = !1, this.decksService.updateDeckSelectMode(!1), this.activeModal.close(), this.decksService.selectActiveDeck(i), this.modalService.createModal(Ye, {}, {
                             blurredBackground: !0,
                             canCloseFromOutside: !1,
@@ -6947,7 +6980,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(L.mX), e.Y36(an.R), e.Y36(oe.D), e.Y36(T.Z), e.Y36(L.Qz))
+                return new (t || o)(e.Y36(L.mX), e.Y36(sn.R), e.Y36(te.D), e.Y36(T.Z), e.Y36(L.Qz))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-deck-codes-import-modal"]],
@@ -7036,7 +7069,7 @@
             class o {
                 constructor(t, n, i, a, s, c) {
                     this.modalService = t, this.decksService = n, this.authService = i, this.audioService = a, this.akumaService = s, this.cerberusModalService = c, this.deckSelect = !1, this.onGodSelect = () => {
-                    }, this.gods = sc, this.unsubscribe = new y.xQ, this.GuGameModeType = S.tO, this.Flags = _.vU, this.close = () => {
+                    }, this.gods = sc, this.unsubscribe = new M.xQ, this.GuGameModeType = P.tO, this.Flags = _.vU, this.close = () => {
                         this.akumaService.postControlEvent("gu", "GodChoose", "", "close", "Btn", "pressed"), this.modalService.destroyTopModal()
                     }
                 }
@@ -7046,11 +7079,11 @@
                 }
 
                 selectGod(t) {
-                    this.akumaService.postControlEvent("gu", "GodChoose", "", "godSelect", "Btn", "pressed"), this.audioService.clickMediumV2.play(), this.gameModeType === S.tO.SEALED_DECK ? this.onGodSelect(t, this.close.bind(this)) : this.handleDeckBuilder(t)
+                    this.akumaService.postControlEvent("gu", "GodChoose", "", "godSelect", "Btn", "pressed"), this.audioService.clickMediumV2.play(), this.gameModeType === P.tO.SEALED_DECK ? this.onGodSelect(t, this.close.bind(this)) : this.handleDeckBuilder(t)
                 }
 
                 handleDeckBuilder(t) {
-                    this.decksService.createDeck(new de.$$(-1, "Custom Deck", t, "common")).pipe((0, M.q)(1)).subscribe(() => {
+                    this.decksService.createDeck(new le.$$(-1, "Custom Deck", t, "common")).pipe((0, x.q)(1)).subscribe(() => {
                         this.deckSelect ? this.decksService.updateDeckSelectMode(!0, this.gameModeId, this.forAI) : this.decksService.updateDeckSelectMode(!1), this.close(), this.modalService.createModal(Ye, {deckSelectMode: this.deckSelect}, {
                             blurredBackground: !0,
                             canCloseFromOutside: !0,
@@ -7070,7 +7103,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(T.Z), e.Y36(oe.D), e.Y36(f.mI), e.Y36(f.pk), e.Y36(_.jt), e.Y36(L.Qz))
+                return new (t || o)(e.Y36(T.Z), e.Y36(te.D), e.Y36(f.mI), e.Y36(f.pk), e.Y36(_.jt), e.Y36(L.Qz))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-god-select-modal"]],
@@ -7087,8 +7120,8 @@
                 template: function (t, n) {
                     1 & t && (e._UZ(0, "app-modal-sidebar", 0), e.TgZ(1, "h1", 1), e._uU(2, "Choose a God"), e.qZA(), e.TgZ(3, "p", 2), e._uU(4, "Each deck must be aligned to a God. Choose which one you'd like to build around."), e.qZA(), e.YNc(5, cc, 2, 0, "gu-plain-square-button", 3), e.TgZ(6, "div", 4), e.YNc(7, lc, 8, 6, "div", 5), e.qZA(), e.YNc(8, dc, 7, 0, "div", 6)), 2 & t && (e.Q6J("closeButtonClickFn", n.close), e.xp6(5), e.Q6J("featureFlagIf", n.Flags.deckCodesEnabled), e.xp6(2), e.Q6J("ngForOf", n.gods), e.xp6(1), e.Q6J("ngIf", n.gameModeType === n.GuGameModeType.SEALED_DECK))
                 },
-                directives: [ke, rt.w, l.sg, l.O5],
-                styles: ["h1[_ngcontent-%COMP%],h2[_ngcontent-%COMP%],h3[_ngcontent-%COMP%],h4[_ngcontent-%COMP%],h5[_ngcontent-%COMP%],h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%],label[_ngcontent-%COMP%],a[_ngcontent-%COMP%],div[_ngcontent-%COMP%],input[_ngcontent-%COMP%],button[_ngcontent-%COMP%],p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.pageTitle[_ngcontent-%COMP%],.god__title[_ngcontent-%COMP%],h1[_ngcontent-%COMP%],h2[_ngcontent-%COMP%],h3[_ngcontent-%COMP%],h4[_ngcontent-%COMP%],h5[_ngcontent-%COMP%],h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.god__description[_ngcontent-%COMP%],.god__playStyle[_ngcontent-%COMP%],.pageDescription[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.god__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 3.7);line-height:1.3}.pageTitle[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 5);line-height:1.3}.god__description[_ngcontent-%COMP%],.god__playStyle[_ngcontent-%COMP%],.pageDescription[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.god__playStyle[_ngcontent-%COMP%],.pageDescription[_ngcontent-%COMP%]{line-height:1.4}[_nghost-%COMP%]{width:100%;height:calc(calc(var(--vh) * 100) - 28px - 80px);display:flex;flex-flow:column nowrap;text-align:center;padding:0 80px;padding-top:calc(var(--vh) * 5)}.pageTitle[_ngcontent-%COMP%]{margin-bottom:calc(var(--vh) * 1);background:var(--gu-yellow);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.pageDescription[_ngcontent-%COMP%]{color:var(-gu-gray);}.godListing[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1);grid-column-gap:calc(var(--vw) * .6);display:grid;grid-template-columns:repeat(6,1fr)}.god[_ngcontent-%COMP%]{width:calc(var(--vw) * 14.84);height:calc(var(--vh) * 63);display:flex;border-radius:calc(var(--vh) * .4);color:var(--gu-gray);cursor:pointer}.god[_ngcontent-%COMP%]:hover:not(.god--unavailable) .god__image[_ngcontent-%COMP%]{opacity:1;z-index:1}.god--unavailable[_ngcontent-%COMP%]{color:#7192b0;background:#1d2f41;cursor:default}.god--unavailable[_ngcontent-%COMP%] .god__inner[_ngcontent-%COMP%]{background:var(--gu-blue-dark);}.god--unavailable[_ngcontent-%COMP%] .god__image[_ngcontent-%COMP%]{opacity:.1}.god__inner[_ngcontent-%COMP%]{padding:calc(var(--vw) * 1.5);margin:calc(var(--vh) * .18);flex:1;border-radius:calc(var(--vh) * .4);background:var(--gu-blue-dark);overflow:hidden;position:relative}.god__image[_ngcontent-%COMP%]{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.25;transition:opacity .15s ease-in-out}.god__title[_ngcontent-%COMP%]{position:relative}.god__description[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .5);padding-bottom:calc(var(--vh) * 2.96);position:relative}.god__playStyle[_ngcontent-%COMP%]{position:relative}.sealedPreloadSection[_ngcontent-%COMP%]{width:1px;height:1px;visibility:hidden;overflow:hidden}.importDeckCta[_ngcontent-%COMP%]{position:absolute;right:100px}"]
+                directives: [ye, nt.w, l.sg, l.O5],
+                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif;font-weight:400}.pageTitle[_ngcontent-%COMP%], .god__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained, serif;font-weight:700}.god__description[_ngcontent-%COMP%], .god__playStyle[_ngcontent-%COMP%], .pageDescription[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif}.god__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 3.7);line-height:1.3}.pageTitle[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 5);line-height:1.3}.god__description[_ngcontent-%COMP%], .god__playStyle[_ngcontent-%COMP%], .pageDescription[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.god__playStyle[_ngcontent-%COMP%], .pageDescription[_ngcontent-%COMP%]{line-height:1.4}[_nghost-%COMP%]{width:100%;height:calc(calc(var(--vh) * 100) - 28px - 80px);display:flex;flex-flow:column nowrap;text-align:center;padding:0 80px;padding-top:calc(var(--vh) * 5)}.pageTitle[_ngcontent-%COMP%]{margin-bottom:calc(var(--vh) * 1);background:var(--gu-yellow);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.pageDescription[_ngcontent-%COMP%]{color:var(--gu-gray);}.godListing[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1);grid-column-gap:calc(var(--vw) * .6);display:grid;grid-template-columns:repeat(6, 1fr)}.god[_ngcontent-%COMP%]{width:calc(var(--vw) * 14.84);height:calc(var(--vh) * 63);display:flex;background:linear-gradient(to bottom, #affaed 0%, #8be1e0 50%, #54bbcd 100%);border-radius:calc(var(--vh) * .4);color:var(--gu-gray);cursor:pointer}.god[_ngcontent-%COMP%]:hover:not(.god--unavailable) .god__image[_ngcontent-%COMP%]{opacity:1;z-index:1;}.god--unavailable[_ngcontent-%COMP%]{color:#7192b0;background:#1d2f41;cursor:default}.god--unavailable[_ngcontent-%COMP%] .god__inner[_ngcontent-%COMP%]{background:#0c1620}.god--unavailable[_ngcontent-%COMP%] .god__image[_ngcontent-%COMP%]{opacity:.1;}.god__inner[_ngcontent-%COMP%]{padding:calc(var(--vw) * 1.5);margin:calc(var(--vh) * .18);flex:1;border-radius:calc(var(--vh) * .4);background:var(--gu-blue-dark);overflow:hidden;position:relative}.god__image[_ngcontent-%COMP%]{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.35;}.god__title[_ngcontent-%COMP%]{position:relative}.god__description[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .5);padding-bottom:calc(var(--vh) * 2.96);color:var(--gu-gray);position:relative}.god__playStyle[_ngcontent-%COMP%]{position:relative;padding:8px;background:rgba(0, 0, 0, 0.25);}.sealedPreloadSection[_ngcontent-%COMP%]{width:1px;height:1px;visibility:hidden;overflow:hidden}.importDeckCta[_ngcontent-%COMP%]{position:absolute;right:100px}"]
             }), o
         })();
 
@@ -7127,14 +7160,14 @@
             }
         }
 
-        var ve = (() => {
-            return (o = ve || (ve = {}))[o.Death = 0] = "Death", o[o.Deception = 1] = "Deception", o[o.Light = 2] = "Light", o[o.Magic = 3] = "Magic", o[o.Nature = 4] = "Nature", o[o.War = 5] = "War", ve;
+        var Ce = (() => {
+            return (o = Ce || (Ce = {}))[o.Death = 0] = "Death", o[o.Deception = 1] = "Deception", o[o.Light = 2] = "Light", o[o.Magic = 3] = "Magic", o[o.Nature = 4] = "Nature", o[o.War = 5] = "War", Ce;
             var o
         })();
-        let Et = (() => {
+        let Lt = (() => {
             class o {
                 constructor(t, n, i, a, s) {
-                    this.decksService = t, this.modalService = n, this.akumaService = i, this.audioService = a, this.cerberusModalService = s, this.modalHosted = !1, this.forAI = !1, this.deckBuilderDeckSelect = !1, this.currentlyEditingDeckName = "", this.unsubscribe = new y.xQ, this.godFilters = [new Le("Death", ve.Death), new Le("Deception", ve.Deception), new Le("Light", ve.Light), new Le("Magic", ve.Magic), new Le("Nature", ve.Nature), new Le("War", ve.War)], this.activeGodFilters = [], this.Flags = _.vU, this.destroyModal = () => {
+                    this.decksService = t, this.modalService = n, this.akumaService = i, this.audioService = a, this.cerberusModalService = s, this.modalHosted = !1, this.forAI = !1, this.deckBuilderDeckSelect = !1, this.currentlyEditingDeckName = "", this.unsubscribe = new M.xQ, this.godFilters = [new Le("Death", Ce.Death), new Le("Deception", Ce.Deception), new Le("Light", Ce.Light), new Le("Magic", Ce.Magic), new Le("Nature", Ce.Nature), new Le("War", Ce.War)], this.activeGodFilters = [], this.Flags = _.vU, this.destroyModal = () => {
                         this.audioService.clickTinyV2.play(), this.modalService.destroyTopModal()
                     }
                 }
@@ -7156,7 +7189,7 @@
                 }
 
                 initDecks() {
-                    this.allDecks$ = (0, G.aj)([this.decksService.starterDecks$, this.decksService.userDecks$]).pipe((0, x.U)(([t, n]) => [...t, ...n.filter(a => "common" === a.deck_type)
+                    this.allDecks$ = (0, D.aj)([this.decksService.starterDecks$, this.decksService.userDecks$]).pipe((0, O.U)(([t, n]) => [...t, ...n.filter(a => "common" === a.deck_type)
                         .sort((d1, d2) => {
                             if (d1.god < d2.god) {
                                 return -1;
@@ -7180,7 +7213,7 @@
                 }
 
                 get isRankedConstructed() {
-                    return this.gameModeId === S.B_.RANKED_CONSTRUCTED
+                    return this.gameModeId === P.B_.RANKED_CONSTRUCTED
                 }
 
                 newDeck() {
@@ -7193,7 +7226,7 @@
                 }
 
                 getFilteredStream(t, n) {
-                    return t.pipe((0, x.U)(i => i.filter(a => this.filterStream(a, n))))
+                    return t.pipe((0, O.U)(i => i.filter(a => this.filterStream(a, n))))
                 }
 
                 filterStream(t, n) {
@@ -7229,7 +7262,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(oe.D), e.Y36(T.Z), e.Y36(_.jt), e.Y36(f.pk), e.Y36(L.Qz))
+                return new (t || o)(e.Y36(te.D), e.Y36(T.Z), e.Y36(_.jt), e.Y36(f.pk), e.Y36(L.Qz))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-my-decks"]],
@@ -7401,7 +7434,7 @@
         })();
         const wc = [[["", "slot", "inlinebeforetext"]], [["", "slot", "inlineaftertext"]], [["", "slot", "aftereverything"]]],
             xc = ["[slot='inlineBeforeText']", "[slot='inlineAfterText']", "[slot='afterEverything']"];
-        let dt = (() => {
+        let st = (() => {
             class o {
                 constructor() {
                 }
@@ -7523,15 +7556,15 @@
         let Fn = (() => {
             class o {
                 constructor(t, n, i, a) {
-                    this.cardsService = t, this.utils = n, this.audioService = i, this.gauntletService = a, this.showDeckName = !1, this.sound = !0, this.selectDeck = new e.vpe, this.topThreeCards = [], this.isLocked = !1, this.unsubscribe = new y.xQ
+                    this.cardsService = t, this.utils = n, this.audioService = i, this.gauntletService = a, this.showDeckName = !1, this.sound = !0, this.selectDeck = new e.vpe, this.topThreeCards = [], this.isLocked = !1, this.unsubscribe = new M.xQ
                 }
 
                 get isNotReady() {
-                    return this.deck instanceof de.$$ && this.deck.items.length < 30
+                    return this.deck instanceof le.$$ && this.deck.items.length < 30
                 }
 
                 get deckCardCount() {
-                    return this.deck instanceof de.$$ ? this.deck.items.length : 0
+                    return this.deck instanceof le.$$ ? this.deck.items.length : 0
                 }
 
                 ngOnInit() {
@@ -7551,13 +7584,13 @@
                 }
 
                 getGauntlet() {
-                    !this.displayGauntlet || this.gauntletService.gauntletSlots$.pipe((0, u.R)(this.unsubscribe), (0, x.U)(t => t.find(n => n.god === this.deck.god.toLowerCase()))).subscribe(t => {
+                    !this.displayGauntlet || this.gauntletService.gauntletSlots$.pipe((0, u.R)(this.unsubscribe), (0, O.U)(t => t.find(n => n.god === this.deck.god.toLowerCase()))).subscribe(t => {
                         this.gauntletSlot = t
                     })
                 }
 
                 getThumbnailData() {
-                    this.deck && "sealed_deck" === this.deck.deck_type ? this.topThreeCards = this.deck.items.slice(0, 3) : this.cardsService.qualityCounts$.pipe((0, u.R)(this.unsubscribe), (0, P.h)(t => t.size > 0), (0, b.b)(t => this.calcThumbnail(t))).subscribe()
+                    this.deck && "sealed_deck" === this.deck.deck_type ? this.topThreeCards = this.deck.items.slice(0, 3) : this.cardsService.qualityCounts$.pipe((0, u.R)(this.unsubscribe), (0, S.h)(t => t.size > 0), (0, b.b)(t => this.calcThumbnail(t))).subscribe()
                 }
 
                 calcThumbnail(t) {
@@ -7613,7 +7646,7 @@
                 template: function (t, n) {
                     1 & t && (e.YNc(0, Tc, 9, 6, "div", 0), e.YNc(1, Ic, 3, 3, "footer", 1), e.YNc(2, Dc, 3, 4, "app-create-new-button", 2), e.YNc(3, Gc, 2, 1, "div", 3)), 2 & t && (e.Q6J("ngIf", 3 === (null == n.topThreeCards ? null : n.topThreeCards.length)), e.xp6(1), e.Q6J("ngIf", 3 === (null == n.topThreeCards ? null : n.topThreeCards.length) && !n.hideGodName), e.xp6(1), e.Q6J("ngIf", !n.topThreeCards || n.topThreeCards.length < 3), e.xp6(1), e.Q6J("ngIf", n.showDeckName))
                 },
-                directives: [l.O5, l.sg, Y, dn, Pn, dt, l.PC],
+                directives: [l.O5, l.sg, Y, gn, Pn, st, l.PC],
                 pipes: [l.rS],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.deckName[_ngcontent-%COMP%], .godInfo[_ngcontent-%COMP%], .godName[_ngcontent-%COMP%], .deckLockedOverlay__text[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.deckLockedOverlay__text[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.deckName[_ngcontent-%COMP%], .godInfo[_ngcontent-%COMP%], .godName[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.29)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;position:relative}.deck--deckIsNotFinished[_nghost-%COMP%]{filter:grayscale(1);cursor:pointer}.deck--deckIsNotFinished[_nghost-%COMP%]   .deckLockedOverlay[_ngcontent-%COMP%]{display:flex}.deck--deckIsNotFinished[_nghost-%COMP%]     .card-front{filter:brightness(.6)}[_nghost-%COMP%]:hover   .deckCard[_ngcontent-%COMP%]:nth-child(1){transform:rotate(10deg) translate(calc(var(--vw) * 1.3),-5%)}[_nghost-%COMP%]:hover   .deckCard[_ngcontent-%COMP%]:nth-child(2){transform:rotate(5deg) translate(calc(var(--vw) * .65),-2.5%)}.deckLockedOverlay[_ngcontent-%COMP%]{position:absolute;top:0;bottom:0;left:0;right:0;flex-flow:column nowrap;display:none;align-items:center;padding-left:calc(var(--vw) * .5)}.deckLockedOverlay__icon[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 3.5);font-size:calc(var(--vh) * 3.5)}.deckLockedOverlay__text[_ngcontent-%COMP%]{font-weight:700}.stackOfCards[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * -.4);position:relative;transition:all .15s ease-out}.stackOfCards[_ngcontent-%COMP%]:hover{transform:scale(1.06)}.stackOfCards[_ngcontent-%COMP%]:hover   .godBadge[_ngcontent-%COMP%]{filter:brightness(110%)}.emptyDeckContainer[_ngcontent-%COMP%]{position:relative;cursor:pointer;transition:all .15s ease-out;margin:0 auto;margin-top:calc(var(--vh) * 1.2);height:100%}.emptyDeckContainer[_ngcontent-%COMP%]:hover{transform:scale(1.02)}.emptyDeckContainer[_ngcontent-%COMP%] + .deckName[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 3);padding:0}.emptyDeckContainer[_ngcontent-%COMP%]   .godBadge[_ngcontent-%COMP%]{right:calc(var(--vw) * -.8);bottom:calc(var(--vh) * -0.5)}.godName[_ngcontent-%COMP%]{padding-bottom:calc(var(--vh) * .5);font-weight:600;text-transform:capitalize}.deckCard[_ngcontent-%COMP%]{position:relative;transition:all .15s ease-in-out}.deckCard[_ngcontent-%COMP%]:nth-child(1), .deckCard[_ngcontent-%COMP%]:nth-child(2){position:absolute;top:0;left:0;width:100%;height:100%}.deckCard[_ngcontent-%COMP%]:nth-child(1)     img, .deckCard[_ngcontent-%COMP%]:nth-child(2)     img{filter:drop-shadow(0px 0px 0px #182531)}.deckCard[_ngcontent-%COMP%]:nth-child(1){transform:rotate(5deg) translate(calc(var(--vw) * .5),-2.5%);opacity:.3}.deckCard[_ngcontent-%COMP%]:nth-child(2){transform:rotate(2deg) translate(calc(var(--vw) * .3),-1.7%);opacity:.6}.godInfo[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .4);font-weight:600;color:#e0c58f99;text-align:center}.godBadge[_ngcontent-%COMP%]{position:absolute;bottom:calc(var(--vh) * -0.5);right:calc(var(--vw) * -.8)}.deckName[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.5);padding-left:calc(var(--vw) * .4);color:#f6f6f6;text-align:center}.fluxGodPortrait[_ngcontent-%COMP%]{position:absolute;bottom:calc(var(--vh) * -3.6);right:calc(var(--vw) * -2.1);transform:scale(.483) rotate(45deg)}"]
             }), o
@@ -7692,17 +7725,17 @@
             }
         }
 
-        function Qc(o, r) {
+        function qc(o, r) {
             if (1 & o && e._UZ(0, "img", 32), 2 & o) {
                 const t = e.oxw(2);
                 e.MGl("src", "https://images.godsunchained.com/collectables/boards/", t.selectedBoard.proto, "--preview.webp", e.LSH)
             }
         }
 
-        function qc(o, r) {
+        function Qc(o, r) {
             if (1 & o) {
                 const t = e.EpF();
-                e.ynx(0), e.YNc(1, Qc, 1, 1, "img", 30), e.TgZ(2, "gu-circular-close-button", 31), e.NdJ("click", function () {
+                e.ynx(0), e.YNc(1, qc, 1, 1, "img", 30), e.TgZ(2, "gu-circular-close-button", 31), e.NdJ("click", function () {
                     return e.CHM(t), e.oxw().clearBoard()
                 }), e.qZA(), e.BQk()
             }
@@ -7734,7 +7767,7 @@
         let Dn = (() => {
             class o {
                 constructor(t, n, i) {
-                    this.modalService = t, this.loadoutService = n, this.guGameService = i, this.allTrinkets = [[]], this.allBoards = [[]], this.selectedTrinkets = new Map, this.showUnownedBoards = !0, this.showUnownedTrinkets = !0, this.unsubscribe = new y.xQ, this.close = () => {
+                    this.modalService = t, this.loadoutService = n, this.guGameService = i, this.allTrinkets = [[]], this.allBoards = [[]], this.selectedTrinkets = new Map, this.showUnownedBoards = !0, this.showUnownedTrinkets = !0, this.unsubscribe = new M.xQ, this.close = () => {
                         this.modalService.destroyTopModal()
                     }
                 }
@@ -7773,7 +7806,7 @@
                 }
 
                 initCollectables() {
-                    (0, G.aj)([this.loadoutService.allBoards$, this.loadoutService.allTrinkets$]).pipe((0, u.R)(this.unsubscribe), (0, x.U)(([t, n]) => {
+                    (0, D.aj)([this.loadoutService.allBoards$, this.loadoutService.allTrinkets$]).pipe((0, u.R)(this.unsubscribe), (0, O.U)(([t, n]) => {
                         const i = {}, a = {};
                         t.forEach(d => {
                             var p, w;
@@ -7782,8 +7815,8 @@
                         }), n.forEach(d => {
                             let p = `${d.name}`;
                             if (d.properties && d.properties.belly_color) {
-                                const {belly_color: w, eyes_color: v, fur_color: O} = d.properties;
-                                p += `-${w}-${v}-${O}`
+                                const {belly_color: w, eyes_color: v, fur_color: k} = d.properties;
+                                p += `-${w}-${v}-${k}`
                             }
                             i[p] || (i[p] = []), i[p].push(d)
                         });
@@ -7861,7 +7894,7 @@
                 }
 
                 saveOrSelect() {
-                    return this.hasLoadoutChanged ? this.saveLoadout().pipe((0, M.q)(1)).subscribe(t => {
+                    return this.hasLoadoutChanged ? this.saveLoadout().pipe((0, x.q)(1)).subscribe(t => {
                         this.updateGameModeLoadout(t)
                     }) : this.updateGameModeLoadout(), this.inSelectMode ? this.modalService.destroyModalsStack() : this.close()
                 }
@@ -7872,7 +7905,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(T.Z), e.Y36(Me), e.Y36(ne.xV))
+                return new (t || o)(e.Y36(T.Z), e.Y36(xe), e.Y36(ee.xV))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-loadout-builder-modal"]],
@@ -7887,7 +7920,7 @@
                         return n.showUnownedBoards = !n.showUnownedBoards
                     }), e.qZA()(), e.TgZ(12, "div", 9)(13, "div", 10), e.YNc(14, Bc, 2, 1, "ng-container", 11), e.qZA()()(), e.TgZ(15, "div", 12)(16, "header", 6)(17, "gu-heading-text", 7), e._uU(18, " Trinkets "), e.qZA(), e.TgZ(19, "gu-checkbox-input", 8), e.NdJ("onCheck", function () {
                         return n.showUnownedTrinkets = !n.showUnownedTrinkets
-                    }), e.qZA()(), e.TgZ(20, "div", 9)(21, "div", 10), e.YNc(22, Uc, 2, 1, "ng-container", 11), e.qZA()()()(), e.TgZ(23, "header", 13), e.YNc(24, Ec, 2, 0, "gu-plain-square-button", 14), e.YNc(25, Nc, 2, 1, "gu-heading-text", 15), e.YNc(26, Rc, 1, 1, "gu-primary-hex-button", 16), e.qZA(), e.TgZ(27, "section", 17), e.YNc(28, qc, 3, 1, "ng-container", 18), e.YNc(29, Hc, 2, 0, "gu-paragraph-text", 19), e.TgZ(30, "gu-selected-trinket", 20), e.NdJ("xButtonClick", function () {
+                    }), e.qZA()(), e.TgZ(20, "div", 9)(21, "div", 10), e.YNc(22, Uc, 2, 1, "ng-container", 11), e.qZA()()()(), e.TgZ(23, "header", 13), e.YNc(24, Ec, 2, 0, "gu-plain-square-button", 14), e.YNc(25, Nc, 2, 1, "gu-heading-text", 15), e.YNc(26, Rc, 1, 1, "gu-primary-hex-button", 16), e.qZA(), e.TgZ(27, "section", 17), e.YNc(28, Qc, 3, 1, "ng-container", 18), e.YNc(29, Hc, 2, 0, "gu-paragraph-text", 19), e.TgZ(30, "gu-selected-trinket", 20), e.NdJ("xButtonClick", function () {
                         return n.clearSelected("left")
                     })("trinketClick", function () {
                         return n.selectTrinket("left")
@@ -7919,7 +7952,7 @@
         let Gn = (() => {
             class o {
                 constructor(t, n, i) {
-                    this.modalService = t, this.loadoutService = n, this.akumaService = i, this.unsubscribe = new y.xQ, this.close = () => {
+                    this.modalService = t, this.loadoutService = n, this.akumaService = i, this.unsubscribe = new M.xQ, this.close = () => {
                         this.akumaService.postControlEvent("gu", "Loadouts", "", "close", "Btn", "pressed"), this.modalService.destroyTopModal()
                     }
                 }
@@ -7958,7 +7991,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(T.Z), e.Y36(Me), e.Y36(_.jt))
+                return new (t || o)(e.Y36(T.Z), e.Y36(xe), e.Y36(_.jt))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-my-loadouts-modal"]],
@@ -7971,7 +8004,7 @@
                         return n.createLoadout()
                     }), e.qZA(), e.YNc(6, Wc, 1, 2, "gu-loadout-display", 5), e.qZA()), 2 & t && (e.Q6J("closeButtonClickFn", n.close), e.xp6(6), e.Q6J("ngForOf", n.loadouts))
                 },
-                directives: [ke, dt, l.sg],
+                directives: [ye, st, l.sg],
                 styles: ['h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.titleAndFiltering__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.titleAndFiltering__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-direction:column;width:100%;height:100%;padding:0 80px}.loadoutItemsArea[_ngcontent-%COMP%]{flex:1;display:flex;justify-content:space-between}.loadoutItemsArea__listing[_ngcontent-%COMP%]{width:48%;border:1px dashed gold}.selectedLoadoutItems[_ngcontent-%COMP%]{height:calc(var(--vh) * 30);border:1px dashed gold}[_nghost-%COMP%]{display:block;padding:calc(var(--vh) * 7.4) 0 0;height:calc(calc(var(--vh) * 100) - 28px - 80px)}.titleAndFiltering[_ngcontent-%COMP%]{position:absolute;top:0;left:calc(var(--vw) * 4.16);right:calc(var(--vw) * 4.16);height:calc(var(--vh) * 7.4);display:flex;justify-content:center;padding-top:calc(var(--vh) * 3)}.titleAndFiltering[_ngcontent-%COMP%]:before{content:"";position:absolute;left:0;bottom:0;width:100%;background:#1d2f41;height:calc(var(--vh) * .25)}.titleAndFiltering__title[_ngcontent-%COMP%]{text-transform:uppercase;color:#f6f6f6}.loadoutsListing[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(8,1fr);align-items:start;grid-auto-rows:min-content;padding:0 calc(var(--vw) * 4.16);padding-top:calc(var(--vh) * 6);height:100%;overflow:hidden;overflow-y:auto}']
             }), o
         })();
@@ -8001,7 +8034,7 @@
         let jc = (() => {
             class o {
                 constructor(t, n, i, a, s) {
-                    this.audioService = t, this.modalService = n, this.guGameService = i, this.loadoutService = a, this.akumaService = s, this.gameModeId = 0, this.unsubscribe = new y.xQ
+                    this.audioService = t, this.modalService = n, this.guGameService = i, this.loadoutService = a, this.akumaService = s, this.gameModeId = 0, this.unsubscribe = new M.xQ
                 }
 
                 ngOnInit() {
@@ -8013,20 +8046,20 @@
                 }
 
                 initLoadout() {
-                    (0, G.aj)([this.loadoutService.loadouts$, this.guGameService.gameModes$]).pipe((0, u.R)(this.unsubscribe), (0, x.U)(([t, {gameModes: n}]) => ({
+                    (0, D.aj)([this.loadoutService.loadouts$, this.guGameService.gameModes$]).pipe((0, u.R)(this.unsubscribe), (0, O.U)(([t, {gameModes: n}]) => ({
                         loadouts: t,
                         gameMode: n.find(i => i.id === this.gameModeId)
-                    })), (0, P.h)(({loadouts: t, gameMode: n}) => {
+                    })), (0, S.h)(({loadouts: t, gameMode: n}) => {
                         let i = !!t.length;
                         return i && !n.selectedLoadoutId && (i = !1), i
-                    }), (0, x.U)(({
+                    }), (0, O.U)(({
                                       loadouts: t,
                                       gameMode: n
                                   }) => t.find(i => i.collection_id === n.selectedLoadoutId))).subscribe(t => this.loadout = t)
                 }
 
                 logSelectLoadout() {
-                    this.guGameService.getGameMode$(this.gameModeId).pipe((0, M.q)(1)).subscribe(t => {
+                    this.guGameService.getGameMode$(this.gameModeId).pipe((0, x.q)(1)).subscribe(t => {
                         this.akumaService.postControlEvent("gu", "Arena", "", "addLoadout", "Btn", "pressed", {mode_name: t.name})
                     })
                 }
@@ -8042,7 +8075,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(f.pk), e.Y36(T.Z), e.Y36(ne.xV), e.Y36(Me), e.Y36(_.jt))
+                return new (t || o)(e.Y36(f.pk), e.Y36(T.Z), e.Y36(ee.xV), e.Y36(xe), e.Y36(_.jt))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-game-mode-loadout"]],
@@ -8053,7 +8086,7 @@
                 template: function (t, n) {
                     1 & t && (e.YNc(0, zc, 1, 3, "gu-loadout-display", 0), e.YNc(1, Vc, 1, 0, "app-create-new-button", 1)), 2 & t && (e.Q6J("ngIf", n.loadout), e.xp6(1), e.Q6J("ngIf", !n.loadout))
                 },
-                directives: [l.O5, dt],
+                directives: [l.O5, st],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{width:100%;height:100%;display:flex;transition:transform .15s ease-in-out;position:relative;cursor:pointer}[_nghost-%COMP%]:hover{transform:scale(1.02)}.create-button[_ngcontent-%COMP%]{position:absolute;width:100%;height:calc(var(--vh) * 14);top:0;left:0}.loadout[_ngcontent-%COMP%]  .board__titleArea__title{margin-bottom:calc(var(--vh) * 1.4)}.loadout[_ngcontent-%COMP%]  .innerContainer__qualityBar{height:calc(var(--vh) * .4)}.loadout[_ngcontent-%COMP%]  .icon{font-size:calc(var(--vh) * 2)}.loadout[_ngcontent-%COMP%]  .board__titleArea__title{font-size:calc(var(--vh) * 1.8)}.loadout[_ngcontent-%COMP%]  .board__titleArea__quality{font-size:calc(var(--vh) * 1)}"]
             }), o
         })();
@@ -8116,8 +8149,8 @@
         };
         let dl = (() => {
             class o {
-                constructor(t, n, i, a, s, c, d, p, w, v, O, I, Z, U) {
-                    this.playService = t, this.auth = n, this.queueService = i, this.el = a, this.guGameService = s, this.resizeService = c, this.modalService = d, this.gameService = p, this.loadoutService = w, this.audioService = v, this.akumaService = O, this.cerberusModal = I, this.featureFlagService = Z, this.environment = U, this.disabled = !1, this.openDeckSelect = new e.vpe, this.secondsElapsed = 0, this.progressCirclePercentage = 0, this.echoPercentage = 50, this.isPressed = !1, this.isHovered = !1, this.timeUntilCancel = 2e3, this.unsubscribe = new y.xQ, this.gameModeReady = !1, this.GuGameModeType = S.tO, this.disableButton = !1, this.MIN_GAMES_PLAYED = 10, this.AFTER_EVERY_X_GAMES = 5, this.launchQueueTries = 0
+                constructor(t, n, i, a, s, c, d, p, w, v, k, I, G, U) {
+                    this.playService = t, this.auth = n, this.queueService = i, this.el = a, this.guGameService = s, this.resizeService = c, this.modalService = d, this.gameService = p, this.loadoutService = w, this.audioService = v, this.akumaService = k, this.cerberusModal = I, this.featureFlagService = G, this.environment = U, this.disabled = !1, this.openDeckSelect = new e.vpe, this.secondsElapsed = 0, this.progressCirclePercentage = 0, this.echoPercentage = 50, this.isPressed = !1, this.isHovered = !1, this.timeUntilCancel = 2e3, this.unsubscribe = new M.xQ, this.gameModeReady = !1, this.GuGameModeType = P.tO, this.disableButton = !1, this.MIN_GAMES_PLAYED = 10, this.AFTER_EVERY_X_GAMES = 5, this.launchQueueTries = 0
                 }
 
                 ngOnInit() {
@@ -8151,9 +8184,9 @@
                 }
 
                 watchForHover() {
-                    const t = (0, V.R)(this.btnContainer.nativeElement, "mouseenter").pipe((0, x.U)(() => !0)),
-                        n = (0, V.R)(this.btnContainer.nativeElement, "mouseleave").pipe((0, x.U)(() => !1));
-                    (0, Xc.T)(t, n).pipe((0, u.R)(this.unsubscribe), (0, kt.b)(10), (0, b.b)(i => {
+                    const t = (0, ge.R)(this.btnContainer.nativeElement, "mouseenter").pipe((0, O.U)(() => !0)),
+                        n = (0, ge.R)(this.btnContainer.nativeElement, "mouseleave").pipe((0, O.U)(() => !1));
+                    (0, Xc.T)(t, n).pipe((0, u.R)(this.unsubscribe), (0, xt.b)(10), (0, b.b)(i => {
                         this.isHovered = i, i ? this.audioService.arenaHoverStart.play() : (this.isPressed = !1, this.progressCirclePercentage = 0)
                     })).subscribe()
                 }
@@ -8166,14 +8199,14 @@
                 }
 
                 onMouseDown() {
-                    this.disableButton = !0, this.guGameService.checkIfRequiresUpdate().pipe((0, M.q)(1)).subscribe(t => {
-                        if (!t) return this.handleGameModePlayBtn(), (0, z.of)({});
+                    this.disableButton = !0, this.guGameService.checkIfRequiresUpdate().pipe((0, x.q)(1)).subscribe(t => {
+                        if (!t) return this.handleGameModePlayBtn(), (0, oe.of)({});
                         this.guGameService.fetchGameModes(!0)
                     })
                 }
 
                 get isGameInstalled$() {
-                    return this.gameService.currentGameContext$.pipe((0, x.U)(t => this.gameService.isInstalled(t)))
+                    return this.gameService.currentGameContext$.pipe((0, O.U)(t => this.gameService.isInstalled(t)))
                 }
 
                 showInfoModal(t, n) {
@@ -8186,25 +8219,25 @@
                 }
 
                 handleGameModePlayBtn() {
-                    this.isGameInstalled$.pipe((0, M.q)(1)).subscribe(t => {
+                    this.isGameInstalled$.pipe((0, x.q)(1)).subscribe(t => {
                         if (!t) {
                             const i = `The game path was unable to be verified.\n          Please check ('Settings > GODS UNCHAINED > Installation Path') is set to ${this.gameService.getDefaultInstallPath()}, and click 'CLEAR VERSION'.`;
                             return console.error("GuQueueButton-?handleGameModePlayBtn() User not allowed to queue as game is not installed."), void this.showInfoModal("Unable to Queue", i)
                         }
-                        switch (this.akumaService.postControlEvent("gu", "Arena", "", "gameMode", "PlayBtn", "pressed", {mode_name: S.tO[this.mode.type]}), this.mode.type) {
-                            case S.tO.SOLO:
-                                this.mode.id === S.B_.SOLO ? this.handleSingle() : this.mode.id === S.B_.SERVER_SOLO && this.handleServerGame(!0);
+                        switch (this.akumaService.postControlEvent("gu", "Arena", "", "gameMode", "PlayBtn", "pressed", {mode_name: P.tO[this.mode.type]}), this.mode.type) {
+                            case P.tO.SOLO:
+                                this.mode.id === P.B_.SOLO ? this.handleSingle() : this.mode.id === P.B_.SERVER_SOLO && this.handleServerGame(!0);
                                 break;
-                            case S.tO.DIRECT_CHALLENGE:
-                            case S.tO.CONSTRUCTED:
-                            case S.tO.SEALED_DECK:
+                            case P.tO.DIRECT_CHALLENGE:
+                            case P.tO.CONSTRUCTED:
+                            case P.tO.SEALED_DECK:
                                 this.handleServerGame();
                                 break;
-                            case S.tO.TUTORIAL:
+                            case P.tO.TUTORIAL:
                                 this.handleTutorial();
                                 break;
                             default:
-                                console.warn("GuQueueButton->handleGameModePlayBtn() this.mode.type not recognized.", S.tO[this.mode.type])
+                                console.warn("GuQueueButton->handleGameModePlayBtn() this.mode.type not recognized.", P.tO[this.mode.type])
                         }
                     }, t => {
                         console.error("GuQueueButton->handleGameModePlayBtn() User is unable to queue", t)
@@ -8212,9 +8245,9 @@
                 }
 
                 handleTutorial() {
-                    this.audioService.arenaClickStart.play(), this.queueService.activeQueues$.pipe((0, M.q)(1)).subscribe(t => {
+                    this.audioService.arenaClickStart.play(), this.queueService.activeQueues$.pipe((0, x.q)(1)).subscribe(t => {
                         t.forEach(n => this.queueService.cancel(n))
-                    }), this.gameService.getBranch$(1).pipe((0, M.q)(1), (0, Ut.M)(this.guGameService.getGameMode$(this.mode.id)), (0, b.b)(([t, n]) => {
+                    }), this.gameService.getBranch$(1).pipe((0, x.q)(1), (0, Bt.M)(this.guGameService.getGameMode$(this.mode.id)), (0, b.b)(([t, n]) => {
                         this.playService.play({
                             realm: t.id,
                             mode: this.mode.id,
@@ -8235,10 +8268,10 @@
                 }
 
                 handleSingle() {
-                    if (this.audioService.arenaClickStart.play(), this.deck && this.opponentsDeck) this.queueService.activeQueues$.pipe((0, M.q)(1)).subscribe(t => {
+                    if (this.audioService.arenaClickStart.play(), this.deck && this.opponentsDeck) this.queueService.activeQueues$.pipe((0, x.q)(1)).subscribe(t => {
                         t.forEach(n => this.queueService.cancel(n))
-                    }), this.logButtonInputted("Start"), this.gameService.getBranch$(1).pipe((0, M.q)(1), (0, b.b)(t => {
-                        this.guGameService.incrementGameModeCount(0).pipe((0, M.q)(1)).subscribe(), this.logQueueCompletedSolo(), this.playService.play({
+                    }), this.logButtonInputted("Start"), this.gameService.getBranch$(1).pipe((0, x.q)(1), (0, b.b)(t => {
+                        this.guGameService.incrementGameModeCount(0).pipe((0, x.q)(1)).subscribe(), this.logQueueCompletedSolo(), this.playService.play({
                             realm: t.id,
                             mode: 0,
                             player: {
@@ -8259,7 +8292,7 @@
                 }
 
                 buttonIsActive() {
-                    this.logButtonInputted("Cancel"), this.disableButton = !1, this.audioService.clickMediumV1.play(), (0, Vt.H)(0, 50).pipe((0, St.o)(() => this.isPressed), (0, x.U)(t => 50 * t), (0, x.U)(t => (this.progressCirclePercentage = t / this.timeUntilCancel * 100, this.progressCirclePercentage >= 100)), (0, P.h)(t => t), (0, b.b)(() => {
+                    this.logButtonInputted("Cancel"), this.disableButton = !1, this.audioService.clickMediumV1.play(), (0, jt.H)(0, 50).pipe((0, kt.o)(() => this.isPressed), (0, O.U)(t => 50 * t), (0, O.U)(t => (this.progressCirclePercentage = t / this.timeUntilCancel * 100, this.progressCirclePercentage >= 100)), (0, S.h)(t => t), (0, b.b)(() => {
                         this.audioService.arenaCancel.play(), this.cancel()
                     })).subscribe()
                 }
@@ -8269,7 +8302,7 @@
                 }
 
                 checkToShowModalIfNoWallet() {
-                    this.auth.fetchAccountDetails().pipe((0, M.q)(1)).subscribe(t => {
+                    this.auth.fetchAccountDetails().pipe((0, x.q)(1)).subscribe(t => {
                         (null == t ? void 0 : t.addresses.length) < 1 && this.accountProperties ? this.showModalNoWallet() : this.launchQueue()
                     })
                 }
@@ -8280,7 +8313,7 @@
                 }
 
                 showWarning() {
-                    const n = this.cerberusModal.open(me.MZ, {defaultStylings: !1, centered: !0}).componentInstance;
+                    const n = this.cerberusModal.open(he.MZ, {defaultStylings: !1, centered: !0}).componentInstance;
                     n.title = "No wallet connected", n.content = `In order to receive the best prizes, you need to connect a wallet to your account. We are unable to give prizes for past events. Please go to the <a style="color: #8BE1E0; outline: none;" href=${this.environment.guManageWalletsURL}>Manage Wallets</a> page to add and connect.`, n.primaryButton = {
                         text: "LET ME PLAY!",
                         closeOnClick: !0,
@@ -8296,7 +8329,7 @@
                     this.logButtonInputted("Start"), this.playService.start({
                         id: this.mode.id,
                         name: this.mode.name
-                    }, this.userId, new j.Qc(this.userId, this.deck, this.getLoadoutId(), this.opponentsDeck), this.mode.type === S.tO.DIRECT_CHALLENGE ? this.challengeCode : "").pipe((0, M.q)(1)).subscribe(t => {
+                    }, this.userId, new z.Qc(this.userId, this.deck, this.getLoadoutId(), this.opponentsDeck), this.mode.type === P.tO.DIRECT_CHALLENGE ? this.challengeCode : "").pipe((0, x.q)(1)).subscribe(t => {
                         this.launchQueueTries = 0, this.queue = t, this.disableButton = !1, this.initTimer()
                     }, t => {
                         if (this.launchQueueTries < 3) {
@@ -8357,7 +8390,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(j.GT), e.Y36(f.mI), e.Y36(xt.g), e.Y36(e.SBq), e.Y36(ne.xV), e.Y36(te._), e.Y36(T.Z), e.Y36(it.hM), e.Y36(Me), e.Y36(f.pk), e.Y36(_.jt), e.Y36(L.Qz), e.Y36(f.B3), e.Y36(f.Ho))
+                return new (t || o)(e.Y36(z.GT), e.Y36(f.mI), e.Y36(vt.g), e.Y36(e.SBq), e.Y36(ee.xV), e.Y36(K._), e.Y36(T.Z), e.Y36(tt.hM), e.Y36(xe), e.Y36(f.pk), e.Y36(_.jt), e.Y36(L.Qz), e.Y36(f.B3), e.Y36(f.Ho))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-gu-queue-button"]],
@@ -8393,7 +8426,7 @@
                         e.s9C("id", null == n.mode ? null : n.mode.name), e.Q6J("ngClass", e.l5B(10, cl, n.isHovered, n.isActive, n.isPressed, n.disableButton || n.disabled))("ngStyle", e.WLB(15, ll, n.width, n.height)), e.xp6(3), e.Q6J("percentage", n.progressCirclePercentage)("strokeColor", "red")("strokeWidth", .06 * n.width)("width", n.width), e.xp6(3), e.Q6J("ngIf", n.isActive)("ngIfThen", a)("ngIfElse", i)
                     }
                 },
-                directives: [el, l.mk, l.PC, Dt, l.O5],
+                directives: [el, l.mk, l.PC, At, l.O5],
                 pipes: [tl.u],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif;font-weight:400}.buttonText__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained, serif;font-weight:700}.buttonText__label[_ngcontent-%COMP%], .buttonText__hold[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif}.buttonText__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.buttonText__hold[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.buttonText__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.29)}[_nghost-%COMP%]{display:inline-block;position:relative;transform-origin:50% 50%;transition:all .15s ease-in-out;background:var(--gu-blue-dark);border-radius:50%;}[_nghost-%COMP%]:hover {transform:scale(1.05);}.queue-button-container[_ngcontent-%COMP%]{user-select:none;cursor:pointer;height:100%;border-radius:50%;overflow:hidden}.queue-button-container.pressed[_ngcontent-%COMP%]{box-shadow:inset 2px 2px 5px #000}.queue-button-container--disabled[_ngcontent-%COMP%]{user-select:none;pointer-events:none;opacity:.6}.outer-circle[_ngcontent-%COMP%]{height:100%;background:var(--gu-yellow);}.inner-circle[_ngcontent-%COMP%]{position:absolute;left:50%;top:50%;width:88%;height:88%;transform:translate(-50%, -50%);border-radius:50%;transition:all .15s ease;background:var(--gu-blue-dark);}.inner-circle-content[_ngcontent-%COMP%]{height:100%;display:flex}.buttonText[_ngcontent-%COMP%]{margin:auto;display:flex;flex-flow:column nowrap;text-align:center;color:#f6f6f6}.buttonText__title[_ngcontent-%COMP%]{line-height:1}.buttonText__hold[_ngcontent-%COMP%]{font-weight:600}.buttonText__label[_ngcontent-%COMP%]{font-weight:600;text-transform:uppercase;color:#e0c58f}"]
             }), o
@@ -8511,17 +8544,17 @@
         let Tl = (() => {
             class o {
                 constructor(t, n, i, a, s) {
-                    this.progressionService = t, this.guUserService = n, this.resizeService = i, this.ngrxStore = a, this.guGameService = s, this.isUpdating = !1, this.updateError = !1, this.isUpdateRequired = !1, this.isAssetsUpdateRequired = !1, this.assetsUpdateError = !1, this.assetsUpdateInProgress = !1, this.updatePercentage = 0, this.LockType = S.Gn, this.unsubscribe = new y.xQ
+                    this.progressionService = t, this.guUserService = n, this.resizeService = i, this.ngrxStore = a, this.guGameService = s, this.isUpdating = !1, this.updateError = !1, this.isUpdateRequired = !1, this.isAssetsUpdateRequired = !1, this.assetsUpdateError = !1, this.assetsUpdateInProgress = !1, this.updatePercentage = 0, this.LockType = P.Gn, this.unsubscribe = new M.xQ
                 }
 
                 ngOnInit() {
-                    this.lock.type === S.Gn.LEVEL && this.loadProgress(), this.resizeService.viewPortUnits$.pipe((0, u.R)(this.unsubscribe), (0, b.b)(({vh: t}) => this.progressBarHeight = 2.5 * t)).subscribe(), this.watchForUpdateState(), this.watchForAssetsUpdateState(), this.lock.type === S.Gn.ASSETS_UPDATE && !this.assetsUpdateInProgress && (this.assetsUpdateInProgress = !0, this.updateNewAssets())
+                    this.lock.type === P.Gn.LEVEL && this.loadProgress(), this.resizeService.viewPortUnits$.pipe((0, u.R)(this.unsubscribe), (0, b.b)(({vh: t}) => this.progressBarHeight = 2.5 * t)).subscribe(), this.watchForUpdateState(), this.watchForAssetsUpdateState(), this.lock.type === P.Gn.ASSETS_UPDATE && !this.assetsUpdateInProgress && (this.assetsUpdateInProgress = !0, this.updateNewAssets())
                 }
 
                 ngOnChanges(t) {
                     for (const n in t) if (t.hasOwnProperty(n)) switch (n) {
                         case"lock":
-                            if (t[n].previousValue && t[n].previousValue.type === S.Gn.UPDATE && t[n].currentValue.type === S.Gn.ASSETS_UPDATE && !this.assetsUpdateInProgress) {
+                            if (t[n].previousValue && t[n].previousValue.type === P.Gn.UPDATE && t[n].currentValue.type === P.Gn.ASSETS_UPDATE && !this.assetsUpdateInProgress) {
                                 this.assetsUpdateInProgress = !0, this.updateNewAssets();
                                 break
                             }
@@ -8541,19 +8574,19 @@
                 }
 
                 watchForUpdateState() {
-                    this.ngrxStore.select((0, Ln.DM)()).pipe((0, u.R)(this.unsubscribe), (0, P.h)(t => !!t)).subscribe(t => {
+                    this.ngrxStore.select((0, Ln.DM)()).pipe((0, u.R)(this.unsubscribe), (0, S.h)(t => !!t)).subscribe(t => {
                         this.isUpdateRequired = t.isUpdateRequired, this.isUpdating = "downloading" === t.status || "extracting" === t.status, this.updateError = "error" === t.status, this.updatePercentage = t.percentage, "completed" === t.status && this.guGameService.fetchGameModes()
                     })
                 }
 
                 watchForAssetsUpdateState() {
-                    this.ngrxStore.select((0, Ln.gP)()).pipe((0, u.R)(this.unsubscribe), (0, P.h)(t => !!t)).subscribe(t => {
+                    this.ngrxStore.select((0, Ln.gP)()).pipe((0, u.R)(this.unsubscribe), (0, S.h)(t => !!t)).subscribe(t => {
                         this.isAssetsUpdateRequired = t.isUpdateRequired, this.assetsUpdateInProgress = "downloading" === t.status, this.assetsUpdateError = "error" === t.status, this.assetsUpdatePercentage = t.percentage, "completed" === t.status && this.guGameService.fetchGameModes()
                     })
                 }
 
                 loadProgress() {
-                    (0, G.aj)([this.guUserService.extendedAccountProperties$, this.progressionService.accountThresholds$]).pipe((0, u.R)(this.unsubscribe), (0, x.U)(([t, n]) => ({
+                    (0, D.aj)([this.guUserService.extendedAccountProperties$, this.progressionService.accountThresholds$]).pipe((0, u.R)(this.unsubscribe), (0, O.U)(([t, n]) => ({
                         playerProperties: t,
                         lvlThreshold: n.find(i => i.level === this.lock.lvlReq)
                     })), (0, b.b)(t => {
@@ -8563,7 +8596,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(X.$z), e.Y36(le.MZ), e.Y36(te._), e.Y36(rn.yh), e.Y36(ne.xV))
+                return new (t || o)(e.Y36(V.$z), e.Y36(ce.MZ), e.Y36(K._), e.Y36(an.yh), e.Y36(ee.xV))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-lock"]],
@@ -8578,7 +8611,7 @@
                         e.Q6J("ngIf", !n.assetsUpdateError && !n.updateError), e.xp6(1), e.Q6J("ngIf", n.assetsUpdateError || n.updateError), e.xp6(1), e.Q6J("ngTemplateOutlet", n.lock.type === n.LockType.CARDS ? i : n.lock.type === n.LockType.UPDATE ? s : n.lock.type === n.LockType.ASSETS_UPDATE ? c : n.lock.type === n.LockType.LEVEL ? a : d)
                     }
                 },
-                directives: [l.O5, l.tP, we.rH, Qe],
+                directives: [l.O5, l.tP, be.rH, qe],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.heading__percentage[_ngcontent-%COMP%], .heading[_ngcontent-%COMP%], .lock__contentArea__reachHint[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.lock__contentArea__rankArea[_ngcontent-%COMP%]   .right[_ngcontent-%COMP%], .lock__contentArea__rankArea[_ngcontent-%COMP%]   .middle[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.lock__contentArea__reachHint[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22);line-height:1.4}.heading[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.heading__percentage[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 4.2);line-height:1.3}.lock__contentArea__rankArea[_ngcontent-%COMP%]   .middle[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.lock__contentArea__rankArea[_ngcontent-%COMP%]   .right[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.29)}[_nghost-%COMP%]{position:absolute;top:0;bottom:0;left:0;right:0;background:rgba(15,27,39,.8);display:flex;flex-flow:column nowrap;z-index:1}.lock__icon[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 8);margin-bottom:calc(var(--vh) * 8);width:calc(var(--vw) * 10);margin-left:auto;margin-right:auto}.heading[_ngcontent-%COMP%]{margin-top:15px}.heading__info[_ngcontent-%COMP%]{color:#d7d7d7;margin:10px 35px}.lock_action_button[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2);align-self:center}.lock__contentArea[_ngcontent-%COMP%]{margin:0 auto;display:flex;text-align:center;flex-flow:column nowrap;color:#f6f6f6}.lock__contentArea__dividerNormal[_ngcontent-%COMP%]{height:5px;background:linear-gradient(90deg,#fff2d8 0%,#ebc98b 50.34%,#c6a052 100%);transform:scaleY(-1)}.lock__contentArea__dividerError[_ngcontent-%COMP%]{height:5px;background:linear-gradient(270deg,#d73333 0%,#ff8b01 100.97%);transform:scaleY(-1)}.lock__contentArea__rankArea[_ngcontent-%COMP%]{display:flex;position:relative;align-items:center;margin-bottom:calc(var(--vh) * 1)}.lock__contentArea__rankArea[_ngcontent-%COMP%]   .rank[_ngcontent-%COMP%]{white-space:nowrap}.lock__contentArea__rankArea[_ngcontent-%COMP%]   .middle[_ngcontent-%COMP%]{text-align:center;font-weight:700;position:absolute;width:100%}.lock__contentArea__rankArea[_ngcontent-%COMP%]   .right[_ngcontent-%COMP%]{margin-left:auto}.lock__contentArea__reachHint[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2)}"]
             }), o
         })();
@@ -8703,25 +8736,25 @@
 
         const Rl = function () {
             return {breakpoint: "x-large", bottomSize: "x-large"}
-        }, Ql = function (o) {
+        }, ql = function (o) {
             return [o]
         };
 
-        function ql(o, r) {
+        function Ql(o, r) {
             if (1 & o && (e.TgZ(0, "gu-vertical-space", 22)(1, "gu-paragraph-text", 23), e._uU(2, " WINS "), e.qZA(), e._UZ(3, "gu-progress-step-counter", 24), e.qZA(), e.TgZ(4, "gu-vertical-space", 25)(5, "gu-paragraph-text", 23), e._uU(6, " LOSSES "), e.qZA(), e._UZ(7, "gu-progress-step-counter", 26), e.YNc(8, Nl, 2, 2, "gu-paragraph-text", 27), e.qZA()), 2 & o) {
                 const t = e.oxw();
-                e.Q6J("responsiveSize", e.VKq(7, Ql, e.DdM(6, Rl))), e.xp6(3), e.Q6J("filledSteps", t.wins)("totalSteps", t.gameMode.properties.max_wins), e.xp6(4), e.Q6J("filledSteps", t.losses)("totalSteps", t.gameMode.properties.max_losses), e.xp6(1), e.Q6J("ngIf", t.sealedModeStatus === t.SealedModeStatus.STARTED)
+                e.Q6J("responsiveSize", e.VKq(7, ql, e.DdM(6, Rl))), e.xp6(3), e.Q6J("filledSteps", t.wins)("totalSteps", t.gameMode.properties.max_wins), e.xp6(4), e.Q6J("filledSteps", t.losses)("totalSteps", t.gameMode.properties.max_losses), e.xp6(1), e.Q6J("ngIf", t.sealedModeStatus === t.SealedModeStatus.STARTED)
             }
         }
 
         let Hl = (() => {
             class o {
-                constructor(t, n, i, a, s, c, d, p, w, v, O) {
-                    this.audioService = t, this.sealedService = n, this.modalService = i, this.starsService = a, this.cerberusModalService = s, this.decksService = c, this.akuma = d, this.cardsService = p, this.packService = w, this.loadoutService = v, this.guGameService = O, this.sealedModeStatus = ee.r.AVAILABLE, this.wins = 0, this.losses = 0, this.userStarTotal = 0, this.unsubscribe = new y.xQ, this.SealedModeStatus = ee.r
+                constructor(t, n, i, a, s, c, d, p, w, v, k) {
+                    this.audioService = t, this.sealedService = n, this.modalService = i, this.starsService = a, this.cerberusModalService = s, this.decksService = c, this.akuma = d, this.cardsService = p, this.packService = w, this.loadoutService = v, this.guGameService = k, this.sealedModeStatus = X.r.AVAILABLE, this.wins = 0, this.losses = 0, this.userStarTotal = 0, this.unsubscribe = new M.xQ, this.SealedModeStatus = X.r
                 }
 
                 get getClass() {
-                    return this.sealedModeStatus === ee.r.STARTED || this.sealedModeStatus === ee.r.REWARDS_AVAILABLE
+                    return this.sealedModeStatus === X.r.STARTED || this.sealedModeStatus === X.r.REWARDS_AVAILABLE
                 }
 
                 ngOnInit() {
@@ -8747,7 +8780,7 @@
                 }
 
                 collectRewards() {
-                    this.sealedService.claimRewards$(this.sealedMode.sealed_id).pipe((0, M.q)(1)).subscribe(t => {
+                    this.sealedService.claimRewards$(this.sealedMode.sealed_id).pipe((0, x.q)(1)).subscribe(t => {
                         this.handleRewards(t)
                     })
                 }
@@ -8762,8 +8795,8 @@
                 }
 
                 onGodSelect(t, n) {
-                    this.sealedService.enterSealed$(t).pipe((0, M.q)(1)).subscribe(i => {
-                        this.decksService.fetchDecks(), this.starsService.fetchUserStarsTotal(), this.decksService.selectActiveDeckById(i.deck_id), this.decksService.updateDeckSelectMode(!0, S.B_.SEALED_DECK), n();
+                    this.sealedService.enterSealed$(t).pipe((0, x.q)(1)).subscribe(i => {
+                        this.decksService.fetchDecks(), this.starsService.fetchUserStarsTotal(), this.decksService.selectActiveDeckById(i.deck_id), this.decksService.updateDeckSelectMode(!0, P.B_.SEALED_DECK), n();
                         const a = i.prizes.map(s => s.proto);
                         this.openWelcomeModal(t, a, i.deck_id, i.protos.length)
                     }, i => {
@@ -8797,9 +8830,9 @@
                 }
 
                 clickJoinNow() {
-                    this.akuma.postEvent("Control", "arenaHome_joinsSealedBtn_pressed", {cost: this.gameMode.properties.entry_cost}), this.akuma.postEvent("Flow", "_sealedDeckRun_started", {cost: this.gameMode.properties.entry_cost}), "function" == typeof gtag && gtag("event", "_sealedDeckRun_started", {cost: this.gameMode.properties.entry_cost}), this.guGameService.clearGameModeDeck(S.B_.SEALED_DECK, !1), this.guGameService.fetchGameModes(), this.audioService.clickItemV2.play(), this.modalService.createModal(An, {
-                        gameModeType: S.tO.SEALED_DECK,
-                        gameModeId: S.B_.SEALED_DECK,
+                    this.akuma.postEvent("Control", "arenaHome_joinsSealedBtn_pressed", {cost: this.gameMode.properties.entry_cost}), this.akuma.postEvent("Flow", "_sealedDeckRun_started", {cost: this.gameMode.properties.entry_cost}), "function" == typeof gtag && gtag("event", "_sealedDeckRun_started", {cost: this.gameMode.properties.entry_cost}), this.guGameService.clearGameModeDeck(P.B_.SEALED_DECK, !1), this.guGameService.fetchGameModes(), this.audioService.clickItemV2.play(), this.modalService.createModal(An, {
+                        gameModeType: P.tO.SEALED_DECK,
+                        gameModeId: P.B_.SEALED_DECK,
                         onGodSelect: this.onGodSelect.bind(this)
                     }, {blurredBackground: !0, canCloseFromOutside: !1, position: h.e1.Center, size: h.Cg.Workarea})
                 }
@@ -8815,7 +8848,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(f.pk), e.Y36(ee.H), e.Y36(T.Z), e.Y36(_.cM), e.Y36(Fl.Q), e.Y36(oe.D), e.Y36(_.jt), e.Y36(_.dK), e.Y36(Pe.F), e.Y36(Me), e.Y36(ne.xV))
+                return new (t || o)(e.Y36(f.pk), e.Y36(X.H), e.Y36(T.Z), e.Y36(_.cM), e.Y36(Fl.Q), e.Y36(te.D), e.Y36(_.jt), e.Y36(_.dK), e.Y36(Oe.F), e.Y36(xe), e.Y36(ee.xV))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["gu-sealed-mode-card"]],
@@ -8828,7 +8861,7 @@
                 vars: 4,
                 consts: [["top", "x-small", "class", "section availableSection", 4, "ngIf"], ["top", "x-small", "class", "section waitingToStartSection", 4, "ngIf"], ["top", "x-small", "class", "section startedSection", 4, "ngIf"], ["top", "x-small", "class", "section rewardsSection", 4, "ngIf"], ["winsLossesTemplate", ""], ["top", "x-small", 1, "section", "availableSection"], ["bottom", "medium", 1, "availableSection__infoText"], ["align", "center", "fillColor", "colors.gunmetal.100"], [1, "availableSection__joinCta", 3, "disabled", "click"], [1, "availableSection__joinCta__price"], ["iconLigature", "collectable_stars", "fillGradientTarget", "top", "fillGradient", "gradients.apocyan.simple", 1, "availableSection__joinCta__icon"], ["top", "x-small", 1, "section", "waitingToStartSection"], ["bottom", "medium", 1, "waitingToStartSection__infoText"], ["align", "center", "fillColor", "colors.light.100", "fontWeight", "bold", "kind", "large"], ["size", "small", 1, "waitingToStartSection__countdown", 3, "targetTime", "showFields"], ["top", "x-small", 1, "section", "startedSection"], ["bottom", "medium", 1, "startedSection__infoText"], ["align", "left", "fillColor", "colors.light.100", "fontWeight", "bold", "kind", "large"], [4, "ngTemplateOutlet"], ["top", "x-small", 1, "section", "rewardsSection"], ["top", "large", "bottom", "medium", 1, "rewardsSection__infoText"], [1, "rewardsSection__joinCta", 3, "click"], ["bottom", "small", 1, "winsLosses", 3, "responsiveSize"], ["align", "center", "fillColor", "colors.gunmetal.100", "kind", "tag", 1, "winsLosses__tag"], ["fillGradient", "gradients.apocyan.simple", "fillGradientTarget", "top left", "bridgeColor", "colors.apocyan.300", "squareSize", "calc(var(--vh) * 2)", 1, "winsLosses__progress", 3, "filledSteps", "totalSteps"], [1, "winsLosses"], ["fillGradient", "gradients.god.war", "fillGradientTarget", "top left", "bridgeColor", "colors.god.war.tertiary", "squareSize", "calc(var(--vh) * 2)", 1, "winsLosses__progress", 3, "filledSteps", "totalSteps"], ["class", "winsLosses__dropCta", "align", "center", "fillColor", "colors.god.war.secondary", "kind", "tag", 3, "winsLosses__dropCta--disabled", "click", 4, "ngIf"], ["align", "center", "fillColor", "colors.god.war.secondary", "kind", "tag", 1, "winsLosses__dropCta", 3, "click"]],
                 template: function (t, n) {
-                    1 & t && (e.YNc(0, Dl, 10, 7, "gu-vertical-space", 0), e.YNc(1, Zl, 5, 3, "gu-vertical-space", 1), e.YNc(2, Ll, 5, 1, "gu-vertical-space", 2), e.YNc(3, El, 7, 1, "gu-vertical-space", 3), e.YNc(4, ql, 9, 9, "ng-template", null, 4, e.W1O)), 2 & t && (e.Q6J("ngIf", n.sealedModeStatus === n.SealedModeStatus.AVAILABLE), e.xp6(1), e.Q6J("ngIf", n.sealedModeStatus === n.SealedModeStatus.WAITING_TO_START), e.xp6(1), e.Q6J("ngIf", n.sealedModeStatus === n.SealedModeStatus.STARTED), e.xp6(1), e.Q6J("ngIf", n.sealedModeStatus === n.SealedModeStatus.REWARDS_AVAILABLE))
+                    1 & t && (e.YNc(0, Dl, 10, 7, "gu-vertical-space", 0), e.YNc(1, Zl, 5, 3, "gu-vertical-space", 1), e.YNc(2, Ll, 5, 1, "gu-vertical-space", 2), e.YNc(3, El, 7, 1, "gu-vertical-space", 3), e.YNc(4, Ql, 9, 9, "ng-template", null, 4, e.W1O)), 2 & t && (e.Q6J("ngIf", n.sealedModeStatus === n.SealedModeStatus.AVAILABLE), e.xp6(1), e.Q6J("ngIf", n.sealedModeStatus === n.SealedModeStatus.WAITING_TO_START), e.xp6(1), e.Q6J("ngIf", n.sealedModeStatus === n.SealedModeStatus.STARTED), e.xp6(1), e.Q6J("ngIf", n.sealedModeStatus === n.SealedModeStatus.REWARDS_AVAILABLE))
                 },
                 directives: [l.O5, l.tP],
                 pipes: [l.uU],
@@ -9025,16 +9058,16 @@
 
         let Un = (() => {
             class o {
-                constructor(t, n, i, a, s, c, d, p, w, v, O, I, Z, U, E) {
-                    this.guGameService = t, this.modalService = n, this.resizeService = i, this.progressionService = a, this.el = s, this.cdr = c, this.fb = d, this.queueService = p, this.akumaService = w, this.audioService = v, this.cerberusModalService = O, this.sealedService = I, this.decksService = Z, this.cerberusModal = U, this.environment = E, this.emptyDeckText = "Choose Deck", this.aiEmptyDeck = "Choose AI Deck", this.currentRankName = "", this.currentRankInitials = "", this.nextRankName = "", this.nextRankInitials = "", this.shieldCrackCount = 0, this.challengeCodeVal = "", this.challengeCodeVisible = !0, this.sentChallengeCodeInputAnalytics = !1, this.sealedModeStatus = ee.r.AVAILABLE, this.unsubscribe = new y.xQ, this.GuGameModeType = S.tO, this.GuGameModeSubType = S.zy, this.GuGameModeId = S.B_, this.SealedModeStatus = ee.r, this.MIN_GAMES_PLAYED = 11, this.AFTER_EVERY_X_GAMES = 5, this.tutorialBullets = ["Gameplay Basics", "How Mana Works", "How to Win"], i.viewPortUnits$.pipe((0, u.R)(this.unsubscribe), (0, b.b)(({vh: ge}) => this.progressBarHeight = 2.5 * ge)).subscribe()
+                constructor(t, n, i, a, s, c, d, p, w, v, k, I, G, U, E) {
+                    this.guGameService = t, this.modalService = n, this.resizeService = i, this.progressionService = a, this.el = s, this.cdr = c, this.fb = d, this.queueService = p, this.akumaService = w, this.audioService = v, this.cerberusModalService = k, this.sealedService = I, this.decksService = G, this.cerberusModal = U, this.environment = E, this.emptyDeckText = "Choose Deck", this.aiEmptyDeck = "Choose AI Deck", this.currentRankName = "", this.currentRankInitials = "", this.nextRankName = "", this.nextRankInitials = "", this.shieldCrackCount = 0, this.challengeCodeVal = "", this.challengeCodeVisible = !0, this.sentChallengeCodeInputAnalytics = !1, this.sealedModeStatus = X.r.AVAILABLE, this.unsubscribe = new M.xQ, this.GuGameModeType = P.tO, this.GuGameModeSubType = P.zy, this.GuGameModeId = P.B_, this.SealedModeStatus = X.r, this.MIN_GAMES_PLAYED = 11, this.AFTER_EVERY_X_GAMES = 5, this.tutorialBullets = ["Gameplay Basics", "How Mana Works", "How to Win"], i.viewPortUnits$.pipe((0, u.R)(this.unsubscribe), (0, b.b)(({vh: de}) => this.progressBarHeight = 2.5 * de)).subscribe()
                 }
 
                 get getClass() {
-                    return this.gameMode && this.gameMode.id === S.B_.SEALED_DECK
+                    return this.gameMode && this.gameMode.id === P.B_.SEALED_DECK
                 }
 
                 ngOnInit() {
-                    this.buildFormGroup(), this.initTimer(), this.initRanks(), this.watchQueue(), this.gameMode.id === S.B_.SEALED_DECK ? this.watchSealedMode() : (this.updateSelectedDecks(), this.watchForDeckSelection())
+                    this.buildFormGroup(), this.initTimer(), this.initRanks(), this.watchQueue(), this.gameMode.id === P.B_.SEALED_DECK ? this.watchSealedMode() : (this.updateSelectedDecks(), this.watchForDeckSelection())
                 }
 
                 watchSealedMode() {
@@ -9060,7 +9093,7 @@
                 }
 
                 watchForDeckSelection() {
-                    this.guGameService.gameModes$.pipe((0, u.R)(this.unsubscribe), (0, x.U)(({gameModes: t}) => t.find(n => n.id === this.gameMode.id)), (0, P.h)(t => null !== t), (0, x.U)(t => ({
+                    this.guGameService.gameModes$.pipe((0, u.R)(this.unsubscribe), (0, O.U)(({gameModes: t}) => t.find(n => n.id === this.gameMode.id)), (0, S.h)(t => null !== t), (0, O.U)(t => ({
                         lastSelectedDeckId: t.lastSelectedDeckId,
                         aiSelectedDeckId: t.aiSelectedDeckId
                     })), (0, b.b)(({lastSelectedDeckId: t, aiSelectedDeckId: n}) => {
@@ -9091,13 +9124,13 @@
                 }
 
                 initRanks() {
-                    this.gameMode && this.gameMode.ranked && this.progressionService.userRankLevels$.pipe((0, u.R)(this.unsubscribe), (0, P.h)(t => t && t.length > 0 && t.some(n => n.game_mode === this.gameMode.id)), (0, x.U)(t => t.find(n => n.game_mode === this.gameMode.id))).subscribe(t => {
+                    this.gameMode && this.gameMode.ranked && this.progressionService.userRankLevels$.pipe((0, u.R)(this.unsubscribe), (0, S.h)(t => t && t.length > 0 && t.some(n => n.game_mode === this.gameMode.id)), (0, O.U)(t => t.find(n => n.game_mode === this.gameMode.id))).subscribe(t => {
                         this.gameModeRank = t, this.setRankLevelLabels(this.gameModeRank, this.isMaxRank), this.setShieldCracking(this.gameModeRank)
                     })
                 }
 
                 setRankLevelLabels(t, n) {
-                    this.progressionService.gameRanks$.pipe((0, M.q)(1), (0, b.b)(i => {
+                    this.progressionService.gameRanks$.pipe((0, x.q)(1), (0, b.b)(i => {
                         this.isMaxRank = this.progressionService.isMaxRank(this.gameModeRank, i);
                         const a = i[t.rank_level - 1], s = i[t.rank_level];
                         this.currentRankName = a.level_name, this.currentRankInitials = n ? Math.trunc(t.rating).toString() : a.level_short_name, !this.isMaxRank && s && (this.nextRankName = s.level_name, this.nextRankInitials = s.level_short_name)
@@ -9114,7 +9147,7 @@
                 }
 
                 updateSelectedDecks() {
-                    this.selectedDeck = this.allDecks.find(t => t.id === this.gameMode.lastSelectedDeckId), this.gameMode.type === S.tO.SOLO && (this.selectedAIDeck = this.allDecks.find(t => t.id === this.gameMode.aiSelectedDeckId))
+                    this.selectedDeck = this.allDecks.find(t => t.id === this.gameMode.lastSelectedDeckId), this.gameMode.type === P.tO.SOLO && (this.selectedAIDeck = this.allDecks.find(t => t.id === this.gameMode.aiSelectedDeckId))
                 }
 
                 openDeckSelect({forAI: t}) {
@@ -9122,12 +9155,12 @@
                 }
 
                 selectDeck(t, n = !1) {
-                    this.akumaService.postControlEvent("gu", "Arena", "", "addDeck", "Btn", "pressed", {mode_name: this.gameMode.name}), this.gameMode.type === S.tO.SEALED_DECK ? (this.audioService.clickItemV2.play(), this.decksService.selectActiveDeckById(this.sealedMode.deck_id), this.decksService.updateDeckSelectMode(!0, S.B_.SEALED_DECK), this.modalService.createModal(Tn, {}, {
+                    this.akumaService.postControlEvent("gu", "Arena", "", "addDeck", "Btn", "pressed", {mode_name: this.gameMode.name}), this.gameMode.type === P.tO.SEALED_DECK ? (this.audioService.clickItemV2.play(), this.decksService.selectActiveDeckById(this.sealedMode.deck_id), this.decksService.updateDeckSelectMode(!0, P.B_.SEALED_DECK), this.modalService.createModal(Tn, {}, {
                         blurredBackground: !0,
                         canCloseFromOutside: !0,
                         position: h.e1.Center,
                         size: h.Cg.Workarea
-                    })) : (this.audioService.transitionWorkshop.play(), this.modalService.createModal(Et, {
+                    })) : (this.audioService.transitionWorkshop.play(), this.modalService.createModal(Lt, {
                         gameModeId: this.gameMode.id,
                         gameModeType: this.gameMode.type,
                         forAI: n,
@@ -9136,7 +9169,7 @@
                 }
 
                 getPlayDeck(t) {
-                    return !t || t instanceof de.$$ && 30 !== t.items.length ? null : {
+                    return !t || t instanceof le.$$ && 30 !== t.items.length ? null : {
                         id: t.id,
                         global: "starter" === t.deck_type
                     }
@@ -9157,9 +9190,9 @@
 
                 learnMore() {
                     switch (this.gameMode.id) {
-                        case S.B_.DIRECT_CHALLENGE:
+                        case P.B_.DIRECT_CHALLENGE:
                             return void window.open("https://playgu.co/1v1", "_blank");
-                        case S.B_.SEALED_DECK:
+                        case P.B_.SEALED_DECK:
                             return void this.openSealedDeckInfoModal()
                     }
                 }
@@ -9170,7 +9203,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(ne.xV), e.Y36(T.Z), e.Y36(te._), e.Y36(X.$z), e.Y36(e.SBq), e.Y36(e.sBO), e.Y36(A.qu), e.Y36(xt.g), e.Y36(_.jt), e.Y36(f.pk), e.Y36(L.Qz), e.Y36(ee.H), e.Y36(oe.D), e.Y36(L.Qz), e.Y36(f.Ho))
+                return new (t || o)(e.Y36(ee.xV), e.Y36(T.Z), e.Y36(K._), e.Y36(V.$z), e.Y36(e.SBq), e.Y36(e.sBO), e.Y36(A.qu), e.Y36(vt.g), e.Y36(_.jt), e.Y36(f.pk), e.Y36(L.Qz), e.Y36(X.H), e.Y36(te.D), e.Y36(L.Qz), e.Y36(f.Ho))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-game-mode-card"]],
@@ -9196,7 +9229,7 @@
                         e.Q6J("src", n.gameMode.image_url, e.LSH), e.xp6(4), e.Oqu(n.gameMode.name), e.xp6(1), e.Q6J("ngIf", n.gameMode.id === n.GuGameModeId.SEALED_DECK), e.xp6(2), e.Oqu(n.gameMode.description), e.xp6(1), e.Q6J("ngIf", n.gameMode.id === n.GuGameModeId.DIRECT_CHALLENGE || n.gameMode.id === n.GuGameModeId.SEALED_DECK), e.xp6(1), e.Q6J("ngIf", 1 === n.gameMode.rotation && n.refreshDate), e.xp6(1), e.Q6J("ngIf", n.wins > 0 || n.losses > 0), e.xp6(1), e.Q6J("ngIf", n.gameMode.ranked && n.gameModeRank), e.xp6(1), e.Q6J("ngIf", n.gameMode.id !== n.GuGameModeId.SEALED_DECK || n.sealedModeStatus === n.SealedModeStatus.STARTED), e.xp6(1), e.Q6J("ngIf", n.gameMode.ranked && n.gameModeRank && !n.isMaxRank), e.xp6(1), e.Q6J("ngIf", n.gameMode.id === n.GuGameModeId.RANKED_CONSTRUCTED)("ngIfElse", i), e.xp6(3), e.Q6J("ngIf", n.gameMode.id === n.GuGameModeId.TUTORIAL), e.xp6(1), e.Q6J("ngIf", n.gameMode.id === n.GuGameModeId.DIRECT_CHALLENGE), e.xp6(1), e.Q6J("ngIf", n.gameMode.properties.sub_type === n.GuGameModeSubType.WEEKEND_EVENT), e.xp6(1), e.Q6J("ngIf", n.gameMode.lock && n.isPrimaryCard), e.xp6(1), e.Q6J("ngIf", n.gameMode.id === n.GuGameModeId.SEALED_DECK)
                     }
                 },
-                directives: [l.O5, Cc, bc, Fn, jc, l.sg, dl, Qe, jt, De.K, A._Y, A.JL, A.sg, A.Fj, A.JJ, A.u, l.mk, Tl, Hl],
+                directives: [l.O5, Cc, bc, Fn, jc, l.sg, dl, qe, Xt, De.K, A._Y, A.JL, A.sg, A.Fj, A.JJ, A.u, l.mk, Tl, Hl],
                 pipes: [l.uU, Sn, l.rS],
                 styles: ['h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif;font-weight:400}.cardHeader__shield__rankInitials[_ngcontent-%COMP%], .cardHeader__shield__rankInitials.cardHeader__shield__rankInitials--maxRank[_ngcontent-%COMP%], .cardHeader__heading[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained, serif;font-weight:700}.subtype__description[_ngcontent-%COMP%],.directChallenge__form__inputHint[_ngcontent-%COMP%],.progressArea__rightRank[_ngcontent-%COMP%],.progressArea__leftRank[_ngcontent-%COMP%],.vsText[_ngcontent-%COMP%],.cardHeader__stats[_ngcontent-%COMP%],.cardHeader__subheading[_ngcontent-%COMP%],.directChallenge__form__field__input[_ngcontent-%COMP%],.cardHeader__timer[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif}.cardHeader__shield__rankInitials.cardHeader__shield__rankInitials--maxRank[_ngcontent-%COMP%],.cardHeader__heading[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 3.7);line-height:1.3}.cardHeader__shield__rankInitials[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 4.2);line-height:1.3}.cardHeader__timer[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9)}.directChallenge__form__inputHint[_ngcontent-%COMP%],.progressArea__rightRank[_ngcontent-%COMP%],.progressArea__leftRank[_ngcontent-%COMP%],.vsText[_ngcontent-%COMP%],.cardHeader__stats[_ngcontent-%COMP%],.cardHeader__subheading[_ngcontent-%COMP%],.directChallenge__form__field__input[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.directChallenge__form__field__input[_ngcontent-%COMP%]{line-height:1.4}.subtype__description[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.11)}[_nghost-%COMP%]{border-radius:calc(var(--vw) * .45);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-start;height:100%;position:relative;padding:calc(var(--vh) * 2.22) calc(var(--vw) * 1.09);background:var(--gu-blue-dark);}[_nghost-%COMP%]:after {content:"";border-radius:calc(var(--vw) * .45);position:absolute;top:0;bottom:0;left:0;right:0;pointer-events:none;user-select:none;z-index:1}.darkBackground[_nghost-%COMP%] .backgroundImagery[_ngcontent-%COMP%]{opacity:.08;}.backgroundImagery[_ngcontent-%COMP%]{user-select:none;pointer-events:none;position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.85;}.cardHeader[_ngcontent-%COMP%]{display:flex;position:relative}.cardHeader[_ngcontent-%COMP%] .columnLeft[_ngcontent-%COMP%]{min-height:calc(var(--vh) * 11.55);flex:1}.cardHeader__heading[_ngcontent-%COMP%]{text-transform:uppercase;line-height:.95;background:linear-gradient(to bottom, #fff2d8 0%, #ebc98b 50%, #c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:calc(var(--vh) * 1)}.cardHeader__subheading[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * .05);color:#f6f6f6}.cardHeader__subheading--sealed[_ngcontent-%COMP%]{color:#7192b0}.cardHeader__subheading--link[_ngcontent-%COMP%]{text-transform:capitalize;text-decoration:underline;cursor:pointer}.cardHeader__timer[_ngcontent-%COMP%]{color:#7192b0}.cardHeader__winsAndLosses[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2);display:flex}.cardHeader__winsAndLosses__losses[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .4);margin-left:calc(var(--vh) * 1.6);padding-left:calc(var(--vh) * 1.6);position:relative}.cardHeader__winsAndLosses__losses[_ngcontent-%COMP%]:before {height:calc(var(--vh) * 1.4);top:0;left:0;width:calc(var(--vh) * .15);content:"";position:absolute;background:#7192b0}.cardHeader__winsAndLosses__losses[_ngcontent-%COMP%] .lossSummary {margin-top:calc(var(--vh) * .7)}.cardHeader__stats[_ngcontent-%COMP%]{color:#fff9}.cardHeader__shield[_ngcontent-%COMP%]{width:calc(var(--vw) * 5);margin-right:calc(var(--vw) * .2);position:relative;align-self:flex-start}.cardHeader__shield__image[_ngcontent-%COMP%]{width:100%;display:block;filter:drop-shadow(0 calc(var(--vh) * .1) calc(var(--vh) * 3.24) rgba(252, 247, 212, .3))}.cardHeader__shield__rankInitials[_ngcontent-%COMP%]{position:absolute;top:50%;left:50%;transform:translate(-50%, -60%);text-transform:uppercase;color:#f6f6f6}.cardHeader__shield__rankInitials.cardHeader__shield__rankInitials--maxRank[_ngcontent-%COMP%]{transform:translate(-50%, -68%)}.modeActionsArea[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 3);padding-right:calc(var(--vw) * .9);display:flex;justify-content:space-between;align-items:flex-start}.cardHeader__subtypeRibbon[_ngcontent-%COMP%]{position:relative;z-index:1;margin-bottom:calc(var(--vh) * .5)}.cardHeader__subtypeRibbon__image[_ngcontent-%COMP%]{position:absolute;width:calc(var(--vw) * 6.5)}.cardHeader__subtypeRibbon__label[_ngcontent-%COMP%]{position:absolute;right:calc(var(--vw) * -.4);top:3px;font-size:calc(var(--vw) * .6);color:#fff;font-weight:700}.cardHeader__subtypeRibbon__live[_ngcontent-%COMP%]{width:calc(var(--vw) * .2);height:calc(var(--vw) * .2);background-color:#fff;border-radius:50%;top:calc(var(--vw) * .5);left:calc(var(--vw) * .3);position:relative}.cardHeader__subtypeRibbon__live[_ngcontent-%COMP%]:after {content:"";display:block;width:calc(var(--vw) * .2);height:calc(var(--vw) * .2);background-color:#fff;animation:ping .8s ease-in-out infinite both;position:absolute;border-radius:50%}@keyframes ping {0% {transform:scale(1);opacity:1}80% {transform:scale(2.6);opacity:.3}to {transform:scale(3.2);opacity:0}}.gameCardDecks[_ngcontent-%COMP%]{display:flex;flex-flow:column nowrap;justify-content:space-between;width:calc(var(--vw) * 6.5);margin-top:calc(var(--vh) * -1)}.gameCardDecks__deck[_ngcontent-%COMP%] .emptyDeckContainer {margin-top:calc(var(--vh) * 1)}.gameCardDecks__deck[_ngcontent-%COMP%] .emptyDeckContainer .emptyDeckContainer__inner:before {margin-bottom:calc(var(--vh) * .5);font-size:calc(var(--vh) * 2);font-family:gu-cons;font-feature-settings:"liga" 1, normal;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;vertical-align:middle;letter-spacing:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"add_item";line-height:1;display:block;color:inherit}.modeActionsArea__ctas[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.5);display:flex;flex-flow:column nowrap;align-items:center}.modeActionsArea__ctas.hidden[_ngcontent-%COMP%]{opacity:0;user-select:none;pointer-events:none}.modeActionsArea__ctas--noMargin[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * -.5)}.vsText[_ngcontent-%COMP%]{line-height:.9;margin:auto;margin-top:calc(var(--vh) * .9);margin-bottom:calc(var(--vh) * .9);font-weight:600;color:#f6f6f6}.progressArea[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 3);padding-left:calc(var(--vw) * .9);padding-right:calc(var(--vw) * .9);display:flex;flex-flow:row wrap;align-items:flex-end;color:#f6f6f6;position:relative}.progressArea__leftRank[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * .15);font-weight:700}.progressArea__rightRank[_ngcontent-%COMP%]{padding-right:calc(var(--vw) * .15);color:#FBC02D;margin-left:auto;font-weight:bold;}.progressArea__bar[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .4);width:100%}.progress-title[_ngcontent-%COMP%]{height:calc(var(--vh) * .92)}.tempLockedConsumablePlaceholder[_ngcontent-%COMP%]{margin-left:calc(var(--vw) * -.5);position:relative;border:calc(var(--vh) * .25) dashed rgba(224, 197, 143, .3);background-color:#58411326;border-radius:calc(var(--vh) * .4);display:flex}.tempLockedConsumablePlaceholder__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 4);color:#e0c58f4d;line-height:1;margin:auto}.tempQuestsPlaceholder[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * .75);padding-right:calc(var(--vw) * .75);display:flex;justify-content:space-between;margin-top:auto;position:relative}.tempQuestsPlaceholder__quest[_ngcontent-%COMP%]{width:calc(var(--vw) * 4.79);height:calc(var(--vw) * 4.79);border-radius:50%;border:calc(var(--vh) * .25) dashed rgba(224, 197, 143, .3);background-color:#58411326;display:flex}.tempQuestsPlaceholder__quest__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 3);color:#e0c58f4d;line-height:1;margin:auto}.subtype__description[_ngcontent-%COMP%]{cursor:pointer;border-width:2px;border-style:solid;border-image-source:linear-gradient(to bottom, #fffdf0 0%, #fbebc1 14%, #e6c675 26%, #f6df6e 41%, #b27e18 59%, #deab61 73%, #a67b4b 85%, #664320 100%);border-image-slice:1;text-align:center;margin:calc(var(--vh) * 1) auto 0;padding:calc(var(--vh) * 1) 0;width:90%;color:#fff;background-color:#182531;font-weight:700;position:relative}.subtype__description__readModeLink[_ngcontent-%COMP%]{background:linear-gradient(to bottom, #fff2d8 0%, #ebc98b 50%, #c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;cursor:pointer}.loadout[_ngcontent-%COMP%]{height:calc(var(--vh) * 14);width:calc(var(--vw) * 5.4)}.fluxProgress[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * .75);padding-right:calc(var(--vw) * .75);height:calc(var(--vh) * 14);display:flex;margin-top:auto;position:relative;cursor:pointer}.fluxProgress[_ngcontent-%COMP%] app-flux-progress-box[_ngcontent-%COMP%]{padding-left:calc(var(--vh) * 4);padding-right:calc(var(--vh) * 4)}.directChallenge[_ngcontent-%COMP%]{display:flex;flex-direction:column;margin-top:32px;position:relative}.directChallenge__heading[_ngcontent-%COMP%]{display:flex}.directChallenge__heading__icon[_ngcontent-%COMP%]{margin-left:8px;cursor:pointer;display:flex;text-align:center}.directChallenge__form[_ngcontent-%COMP%]{display:flex;flex-flow:column nowrap;align-self:center;width:100%}.directChallenge__form__field[_ngcontent-%COMP%]{display:flex;align-items:center;margin:8px 0}.directChallenge__form__field__input[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);margin-bottom:0;background:#182531;color:#f6f6f6;border:calc(var(--vh) * .15) solid #0f1b27;border-radius:calc(var(--vh) * .4);margin-top:0;width:100%;padding-right:20px;font-size:16px}.directChallenge__form__field__input[_ngcontent-%COMP%]::-webkit-input-placeholder {color:#fff}.directChallenge__form__field__input[_ngcontent-%COMP%]:disabled {border-color:#979797;color:#979797}.directChallenge__form__field__input--invalid[_ngcontent-%COMP%]{border-color:#ff8b01}.directChallenge__form__field__input--valid[_ngcontent-%COMP%]{border-color:#8be1e0}.directChallenge__form__field__icon[_ngcontent-%COMP%]{position:absolute;right:12px;cursor:pointer}.directChallenge__form__inputHint[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .6);text-shadow:0 1px 1px rgba(0, 0, 0, .3)}.sealedModeCard[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2.5)}.tutorialCard__bulletPoints[_ngcontent-%COMP%]{margin:10px;z-index:1}.bullet[_ngcontent-%COMP%]{padding:4px;border-radius:2px;display:flex;transform:rotate(-45deg);margin-right:10px}.tutorialCard__bulletPoint[_ngcontent-%COMP%]{display:flex;align-items:center;margin:10px 0}.tutorial__freeStuff[_ngcontent-%COMP%]{position:relative}.tutorial__freeStuff__bgImage[_ngcontent-%COMP%]{width:100%;display:block;margin-top:35px}.tutorial__freeStuff__cardImage[_ngcontent-%COMP%]{position:absolute;top:-3vh;left:0px;height:6vw}.tutorial__freeStuff__text[_ngcontent-%COMP%]{position:absolute;top:40%;left:20%}.tutorial__freeStuff__tooltip[_ngcontent-%COMP%]{display:inline;text-align:center}']
             }), o
@@ -9236,7 +9269,7 @@
         let wd = (() => {
             class o {
                 constructor(t, n, i, a, s, c) {
-                    this.resizeService = t, this.guGameService = n, this.akumaService = i, this.audioService = a, this.authService = s, this.userService = c, this.maxZIndexValue = 9, this.unsubscribe = new y.xQ, this.userWallets = [], t.viewPortUnits$.pipe((0, u.R)(this.unsubscribe), (0, b.b)(({vw: d}) => this.vw = 2.5 * d)).subscribe()
+                    this.resizeService = t, this.guGameService = n, this.akumaService = i, this.audioService = a, this.authService = s, this.userService = c, this.maxZIndexValue = 9, this.unsubscribe = new M.xQ, this.userWallets = [], t.viewPortUnits$.pipe((0, u.R)(this.unsubscribe), (0, b.b)(({vw: d}) => this.vw = 2.5 * d)).subscribe()
                 }
 
                 ngOnDestroy() {
@@ -9271,7 +9304,7 @@
                     Array.from(this.otherModesContainer.nativeElement.children).forEach((t, n) => {
                         if (t.getAttribute("data-id") !== this.clickedModeId) {
                             const a = t.getAttribute("data-stack-order-index");
-                            k.p8.set(t, {zIndex: this.maxZIndexValue - a}), k.p8.to(t, {
+                            y.p8.set(t, {zIndex: this.maxZIndexValue - a}), y.p8.to(t, {
                                 duration: .25,
                                 x: a * this.overlapAmount + "px",
                                 opacity: 1,
@@ -9310,7 +9343,7 @@
                     this.clickedModeId = i.getAttribute("data-id");
                     const a = i.getAttribute("gamemodename");
                     this.akumaService.postControlEvent("gu", "Arena", "", "gameMode", "Tile", "pressed", {mode_name: a});
-                    const s = k.p8.timeline({paused: !0});
+                    const s = y.p8.timeline({paused: !0});
                     s.to(i, {
                         duration: .25,
                         x: -1 * (this.modeCardWidth + .6 * this.vw),
@@ -9332,7 +9365,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(te._), e.Y36(ne.xV), e.Y36(_.jt), e.Y36(f.pk), e.Y36(f.mI), e.Y36(le.MZ))
+                return new (t || o)(e.Y36(K._), e.Y36(ee.xV), e.Y36(_.jt), e.Y36(f.pk), e.Y36(f.mI), e.Y36(ce.MZ))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-game-mode-switcher"]],
@@ -9376,7 +9409,7 @@
                 }
 
                 getStreamerArticles() {
-                    return (0, z.of)([{
+                    return (0, oe.of)([{
                         title: "Streamer FAQ",
                         description: "How do I earn content? How do I sell items? All this and more...",
                         imageURL: "/gu-assets/images/art/catacomb-curator.webp",
@@ -9432,7 +9465,7 @@
                 }
 
                 loadData() {
-                    this.gameApi.get("/news").pipe((0, x.U)(t => this.convertToNewsItems(t)), (0, b.b)(t => {
+                    this.gameApi.get("/news").pipe((0, O.U)(t => this.convertToNewsItems(t)), (0, b.b)(t => {
                         this.dataStore.newsItems = t, this._newsItems$.next(this.dataStore.newsItems)
                     })).subscribe()
                 }
@@ -9515,7 +9548,7 @@
         })(), Nn = (() => {
             class o {
                 constructor(t) {
-                    this.contentService = t, this.source = "default", this.userType = Je.standardPlayer, this.unsubscribe = new y.xQ
+                    this.contentService = t, this.source = "default", this.userType = Je.standardPlayer, this.unsubscribe = new M.xQ
                 }
 
                 ngOnDestroy() {
@@ -9523,7 +9556,7 @@
                 }
 
                 ngOnInit() {
-                    this.contentService.newsItems$.pipe((0, u.R)(this.unsubscribe), (0, P.h)(t => null !== t), (0, b.b)(t => {
+                    this.contentService.newsItems$.pipe((0, u.R)(this.unsubscribe), (0, S.h)(t => null !== t), (0, b.b)(t => {
                         this.newsItems = this.sortNews(t)
                     })).subscribe()
                 }
@@ -9572,8 +9605,8 @@
 
         let Ad = (() => {
             class o {
-                constructor(t, n, i, a, s, c, d, p, w, v, O) {
-                    this.gameService = t, this.decksService = n, this.guUserService = i, this.progressionService = a, this.modalService = s, this.sealedService = c, this.cerberusModalService = d, this.cardsService = p, this.packService = w, this.loadoutService = v, this.storageService = O, this.unsubscribe = new y.xQ, this.loaded = !1, this.refreshing = !1, this.refreshMsg = "REFRESHING...", this.fadeGameModeSwitcher = !1, this.fetchDecks()
+                constructor(t, n, i, a, s, c, d, p, w, v, k) {
+                    this.gameService = t, this.decksService = n, this.guUserService = i, this.progressionService = a, this.modalService = s, this.sealedService = c, this.cerberusModalService = d, this.cardsService = p, this.packService = w, this.loadoutService = v, this.storageService = k, this.unsubscribe = new M.xQ, this.loaded = !1, this.refreshing = !1, this.refreshMsg = "REFRESHING...", this.fadeGameModeSwitcher = !1, this.fetchDecks()
                 }
 
                 notifyUser() {
@@ -9589,7 +9622,7 @@
                 }
 
                 watchSealedEnded() {
-                    this.sealedService.sealedModeStatus$.pipe((0, u.R)(this.unsubscribe), (0, P.h)(t => t === ee.r.ENDED), (0, pe.VS)(t => this.sealedService.sealedMode$), (0, pe.VS)(t => this.sealedService.claimRewards$(t.sealed_id))).subscribe(t => {
+                    this.sealedService.sealedModeStatus$.pipe((0, u.R)(this.unsubscribe), (0, S.h)(t => t === X.r.ENDED), (0, ve.VS)(t => this.sealedService.sealedMode$), (0, ve.VS)(t => this.sealedService.claimRewards$(t.sealed_id))).subscribe(t => {
                         this.cardsService.fetchInventory(), this.packService.fetchUnopenedPacks(), this.loadoutService.fetchData(), this.modalService.createModal(yn, {rewards: t}, {
                             blurredBackground: !0,
                             canCloseFromOutside: !1,
@@ -9615,7 +9648,7 @@
 
                 showRefreshAnimation(t = this.allGameModes) {
                     if ((!this.allGameModes || 0 === this.allGameModes.length) && (this.allGameModes = [...t.sort((s, c) => s.order - c.order)]), !this.refreshSection) return !1;
-                    this.refreshing = !0, this.fadeGameModeSwitcher = !0, k.p8.timeline().to(this.refreshSection.nativeElement, {
+                    this.refreshing = !0, this.fadeGameModeSwitcher = !0, y.p8.timeline().to(this.refreshSection.nativeElement, {
                         duration: .25,
                         y: -25,
                         opacity: 1,
@@ -9631,7 +9664,7 @@
                 }
 
                 fetchDecks() {
-                    (0, G.aj)([this.decksService.userDecks$, this.decksService.starterDecks$]).pipe((0, u.R)(this.unsubscribe), (0, b.b)(([t, n]) => {
+                    (0, D.aj)([this.decksService.userDecks$, this.decksService.starterDecks$]).pipe((0, u.R)(this.unsubscribe), (0, b.b)(([t, n]) => {
                         this.userDecks = t, this.starterDecks = n, this.allDecks = [...t, ...n]
                     })).subscribe()
                 }
@@ -9644,14 +9677,14 @@
                 }
 
                 initUserDetails() {
-                    (0, G.aj)([this.guUserService.extendedAccountProperties$, this.progressionService.accountThresholds$]).pipe((0, u.R)(this.unsubscribe), (0, P.h)(([t, n]) => !!t && !!n.length)).subscribe(([t, n]) => {
-                        this.user = t, this.loaded = !0, this.xpProgress = ot({xp: t.total_xp, levelThresholds: n})
+                    (0, D.aj)([this.guUserService.extendedAccountProperties$, this.progressionService.accountThresholds$]).pipe((0, u.R)(this.unsubscribe), (0, S.h)(([t, n]) => !!t && !!n.length)).subscribe(([t, n]) => {
+                        this.user = t, this.loaded = !0, this.xpProgress = et({xp: t.total_xp, levelThresholds: n})
                     })
                 }
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(ne.xV), e.Y36(oe.D), e.Y36(le.MZ), e.Y36(X.$z), e.Y36(T.Z), e.Y36(ee.H), e.Y36(L.Qz), e.Y36(_.dK), e.Y36(Pe.F), e.Y36(Me), e.Y36(f.qy))
+                return new (t || o)(e.Y36(ee.xV), e.Y36(te.D), e.Y36(ce.MZ), e.Y36(V.$z), e.Y36(T.Z), e.Y36(X.H), e.Y36(L.Qz), e.Y36(_.dK), e.Y36(Oe.F), e.Y36(xe), e.Y36(f.qy))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-game-modes"]],
@@ -9668,7 +9701,7 @@
                     1 & t && e.YNc(0, Id, 8, 3, "ng-container", 0), 2 & t && e.Q6J("ngIf", n.loaded)
                 },
                 directives: [l.O5, On, wd, l.mk, Nn],
-                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.refreshSection[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.refreshSection[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22);line-height:1.4}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{height:calc(calc(var(--vh) * 100) - 28px - 80px);display:flex;justify-content:space-between;padding:calc(var(--vh) * 2) calc(var(--vw) * 3) 0}.columnLeft[_ngcontent-%COMP%]{width:calc(var(--vw) * 62.5)}.columnRight[_ngcontent-%COMP%]{width:calc(var(--vw) * 28)}.playerStats[_ngcontent-%COMP%]{width:calc(var(--vw) * 33);height:calc(var(--vh) * 23)}.gameModes[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2.5);height:calc(var(--vh) * 55);transition:all .25s ease-in}.gameModes--refreshing[_ngcontent-%COMP%]{opacity:.5;filter:brightness(.5);user-select:none;pointer-events:none}.refreshSection[_ngcontent-%COMP%]{opacity:0;position:absolute;left:calc(var(--vw) * 28.5);top:calc(var(--vh) * 60)}.demo[_ngcontent-%COMP%]{width:100%;overflow:auto;margin-bottom:calc(var(--vh) * 5)}.cardsListing--eight[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(8,1fr);align-items:start;grid-auto-rows:min-content}.cardsListing--four[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(4,1fr);align-items:start;grid-auto-rows:min-content}.cardsListing--ten[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(10,1fr);align-items:start;grid-auto-rows:min-content}.cardsListing--five[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(5,1fr);align-items:start;grid-auto-rows:min-content}.cardsListing--moo[_ngcontent-%COMP%]{width:20vw}"]
+                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.refreshSection[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.refreshSection[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22);line-height:1.4}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{height:calc(calc(var(--vh) * 100) - 28px - 80px);display:flex;justify-content:space-between;padding:calc(var(--vh) * 2) calc(var(--vw) * 3) 0}.columnLeft[_ngcontent-%COMP%]{width:calc(var(--vw) * 62.5)}.columnRight[_ngcontent-%COMP%]{width:calc(var(--vw) * 28)}.playerStats[_ngcontent-%COMP%]{height:calc(var(--vh) * 23)}.gameModes[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2.5);height:calc(var(--vh) * 55);transition:all .25s ease-in}.gameModes--refreshing[_ngcontent-%COMP%]{opacity:.5;filter:brightness(.5);user-select:none;pointer-events:none}.refreshSection[_ngcontent-%COMP%]{opacity:0;position:absolute;left:calc(var(--vw) * 28.5);top:calc(var(--vh) * 60)}.demo[_ngcontent-%COMP%]{width:100%;overflow:auto;margin-bottom:calc(var(--vh) * 5)}.cardsListing--eight[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(8,1fr);align-items:start;grid-auto-rows:min-content}.cardsListing--four[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(4,1fr);align-items:start;grid-auto-rows:min-content}.cardsListing--ten[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(10,1fr);align-items:start;grid-auto-rows:min-content}.cardsListing--five[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(5,1fr);align-items:start;grid-auto-rows:min-content}.cardsListing--moo[_ngcontent-%COMP%]{width:20vw}"]
             }), o
         })();
 
@@ -9686,7 +9719,7 @@
         let Gd = (() => {
             class o {
                 constructor(t, n) {
-                    this.cardsService = t, this.modalService = n, this.protoCards = [], this.unsubscribe = new y.xQ, this.close = () => {
+                    this.cardsService = t, this.modalService = n, this.protoCards = [], this.unsubscribe = new M.xQ, this.close = () => {
                         this.modalService.destroyTopModal()
                     }
                 }
@@ -9700,7 +9733,7 @@
                 }
 
                 initCards() {
-                    (0, G.aj)([this.cardsService.inventoryCards$, this.cardsService.protoCards$]).pipe((0, u.R)(this.unsubscribe), (0, b.b)(([t, n]) => {
+                    (0, D.aj)([this.cardsService.inventoryCards$, this.cardsService.protoCards$]).pipe((0, u.R)(this.unsubscribe), (0, b.b)(([t, n]) => {
                         this.inventoryCards = t, this.protoCards = Array.from(n.values())
                     })).subscribe()
                 }
@@ -9717,7 +9750,7 @@
                 template: function (t, n) {
                     1 & t && (e._UZ(0, "app-modal-sidebar", 0), e.YNc(1, Fd, 2, 0, "div", 1), e.YNc(2, Dd, 1, 4, "app-cards-list", 2)), 2 & t && (e.Q6J("closeButtonClickFn", n.close), e.xp6(1), e.Q6J("ngIf", !n.protoCards.length), e.xp6(1), e.Q6J("ngIf", n.protoCards.length))
                 },
-                directives: [ke, l.O5, at, At],
+                directives: [ye, l.O5, ot, St],
                 styles: ["[_nghost-%COMP%]{display:block;height:100%;padding:0 calc(var(--vw) * 4.16);height:calc(calc(var(--vh) * 100) - 28px - 80px);padding-top:calc(var(--vh) * 4)}[_nghost-%COMP%]     app-filter-sort-bar.sectionHeader__filterArea{right:0}.loadingContainer[_ngcontent-%COMP%]{display:flex;height:100%}.loadingContainer__spinner[_ngcontent-%COMP%]{margin:auto}"]
             }), o
         })();
@@ -9769,7 +9802,7 @@
         let Rd = (() => {
             class o {
                 constructor(t, n, i, a, s, c, d) {
-                    this.guUserService = t, this.authService = n, this.progressionService = i, this.cardsService = a, this.utils = s, this.modalService = c, this.audioService = d, this.showProgressBar = !1, this.loading = !1, this.accountLoaded = !1, this.topCards = [], this.unsubscribe = new y.xQ, this.inGame = !1, this.collectionProgress = 50, this.userCollectionLevel = 1
+                    this.guUserService = t, this.authService = n, this.progressionService = i, this.cardsService = a, this.utils = s, this.modalService = c, this.audioService = d, this.showProgressBar = !1, this.loading = !1, this.accountLoaded = !1, this.topCards = [], this.unsubscribe = new M.xQ, this.inGame = !1, this.collectionProgress = 50, this.userCollectionLevel = 1
                 }
 
                 ngOnInit() {
@@ -9781,13 +9814,13 @@
                 }
 
                 getUserDetails() {
-                    (0, G.aj)([this.guUserService.extendedAccountProperties$, this.authService.account$, this.progressionService.accountThresholds$]).pipe((0, u.R)(this.unsubscribe), (0, P.h)(([t, n, i]) => !!t && !!n), (0, b.b)(([t, n, i]) => {
-                        this.user = t, this.account = n, this.accountLoaded = !0, this.percentage = this.progressionService.calcPercentage(new X.oW(t.total_xp, t.xp_to_next, t.level), i)
+                    (0, D.aj)([this.guUserService.extendedAccountProperties$, this.authService.account$, this.progressionService.accountThresholds$]).pipe((0, u.R)(this.unsubscribe), (0, S.h)(([t, n, i]) => !!t && !!n), (0, b.b)(([t, n, i]) => {
+                        this.user = t, this.account = n, this.accountLoaded = !0, this.percentage = this.progressionService.calcPercentage(new V.oW(t.total_xp, t.xp_to_next, t.level), i)
                     })).subscribe()
                 }
 
                 getCardsData() {
-                    (0, G.aj)([this.cardsService.qualityCounts$, this.cardsService.inventoryCards$]).pipe((0, u.R)(this.unsubscribe), (0, b.b)(() => this.cardsService.setNewInventoryCardCount(0)), (0, P.h)(([t, n]) => t.size > 0 && n.length > 0)).subscribe(([t, n]) => {
+                    (0, D.aj)([this.cardsService.qualityCounts$, this.cardsService.inventoryCards$]).pipe((0, u.R)(this.unsubscribe), (0, b.b)(() => this.cardsService.setNewInventoryCardCount(0)), (0, S.h)(([t, n]) => t.size > 0 && n.length > 0)).subscribe(([t, n]) => {
                         this.calcTopCards(t, n)
                     })
                 }
@@ -9820,7 +9853,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(le.MZ), e.Y36(f.mI), e.Y36(X.$z), e.Y36(_.dK), e.Y36(Ge.F), e.Y36(T.Z), e.Y36(f.pk))
+                return new (t || o)(e.Y36(ce.MZ), e.Y36(f.mI), e.Y36(V.$z), e.Y36(_.dK), e.Y36(Ge.F), e.Y36(T.Z), e.Y36(f.pk))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-inventory"]],
@@ -9831,24 +9864,24 @@
                 template: function (t, n) {
                     1 & t && (e.YNc(0, Zd, 1, 0, "app-rectangular-spinner", 0), e.YNc(1, Nd, 29, 10, "ng-container", 1)), 2 & t && (e.Q6J("ngIf", n.loading), e.xp6(1), e.Q6J("ngIf", !n.inGame && n.user))
                 },
-                directives: [l.O5, at, On, l.sg, Y, Pt, Nn],
+                directives: [l.O5, ot, On, l.sg, Y, yt, Nn],
                 styles: ['h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.possessionGroup__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.mainContentColumn__playerRow__recentAquisitions__subheading[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.possessionGroup__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.mainContentColumn__playerRow__recentAquisitions__subheading[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{height:calc(calc(var(--vh) * 100) - 28px - 80px);display:flex;padding:calc(var(--vh) * 2) calc(var(--vw) * 4.16) 0 calc(var(--vw) * 4.16);justify-content:space-between}.loadingSpinner[_ngcontent-%COMP%]{margin:auto}.mainContentColumn[_ngcontent-%COMP%]{width:calc(var(--vw) * 62.5)}.mainContentColumn__playerRow[_ngcontent-%COMP%]{display:flex}.mainContentColumn__playerRow__playerStats[_ngcontent-%COMP%]{width:calc(var(--vw) * 35);margin-right:calc(var(--vw) * 2.08)}.mainContentColumn__playerRow__recentAquisitions[_ngcontent-%COMP%]{flex:1}.mainContentColumn__playerRow__recentAquisitions__subheading[_ngcontent-%COMP%]{margin-bottom:calc(var(--vh) * 1);color:#527493}.recentAquisitions__itemListing[_ngcontent-%COMP%]{height:calc(var(--vh) * 16.85);display:flex;justify-content:space-between}.recentAquisitions__itemListing__item[_ngcontent-%COMP%]{width:calc(var(--vw) * 6.66);background:yellowgreen}.mainContentColumn__possessionGroups[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2.5);position:relative}.possessionGroup[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 3);padding-bottom:calc(var(--vh) * 2);height:calc(var(--vh) * 37);padding-left:calc(var(--vw) * 1.5);padding-right:calc(var(--vw) * 1.5);border-radius:2px;overflow:hidden;box-shadow:0 calc(var(--vh) * .6) calc(var(--vh) * 3) calc(var(--vh) * .2) #00000026;position:absolute;top:0;left:0;width:100%;display:flex;flex-flow:row wrap;align-items:flex-end;justify-content:stretch;background:#0c1620;overflow:visible}.possessionGroup[_ngcontent-%COMP%]:after{content:"";border-radius:2px;position:absolute;top:0;bottom:0;left:0;right:0;box-shadow:inset 0 0 calc(var(--vh) * .9) calc(var(--vh) * .3) #fff0,inset 0 0 calc(var(--vh) * .2) #fff0;pointer-events:none;user-select:none;z-index:1}.possessionGroup[_ngcontent-%COMP%]:after{user-select:none;pointer-events:none;content:"";border:calc(var(--vh) * .15) solid rgba(255,255,255,.07);position:absolute;bottom:0;left:0;right:0}.possessionGroup[_ngcontent-%COMP%]:nth-child(1){position:relative;z-index:5}.possessionGroup[_ngcontent-%COMP%]:nth-child(2){top:calc(calc(var(--vh) * 7.3) * 1);z-index:4}.possessionGroup[_ngcontent-%COMP%]:nth-child(3){top:calc(calc(var(--vh) * 7.3) * 2);z-index:3}.possessionGroup[_ngcontent-%COMP%]:nth-child(4){top:calc(calc(var(--vh) * 7.3) * 3);z-index:2}.possessionGroup[_ngcontent-%COMP%]:nth-child(5){top:calc(calc(var(--vh) * 7.3) * 4);z-index:1}.possessionGroup__background[_ngcontent-%COMP%]{position:absolute;top:0;left:0;width:100%;height:100%;opacity:.3;object-fit:cover;object-position:center}.possessionGroup__items[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 1);padding-right:calc(var(--vw) * 1);grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(5,1fr);align-items:start;grid-auto-rows:min-content;width:100%;position:relative;align-self:flex-start}.possessionGroup__items__item[_ngcontent-%COMP%]{filter:drop-shadow(calc(var(--vh) * 1.75) calc(var(--vh) * .1) calc(var(--vh) * 1.75) rgba(0,0,0,.5))}.possessionGroup__items__item[_ngcontent-%COMP%]:last-child{margin:0}.possessionGroup__title[_ngcontent-%COMP%]{text-transform:uppercase;background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;position:relative}.possessionGroup__cta[_ngcontent-%COMP%]{margin-left:auto}.newsListingColumn[_ngcontent-%COMP%]{width:calc(var(--vw) * 28)}.possessionGroup--disabled[_ngcontent-%COMP%]   .possessionGroup__cta[_ngcontent-%COMP%]{user-select:none;pointer-events:none;filter:grayscale(1);opacity:.2}.possessionGroup--disabled[_ngcontent-%COMP%]   .possessionGroup__title[_ngcontent-%COMP%]{-webkit-text-fill-color:inherit;background-clip:inherit;background:transparent;color:#7192b0}.possessionGroup--disabled[_ngcontent-%COMP%]   .possessionGroup__background[_ngcontent-%COMP%]{opacity:.1}']
             }), o
         })();
 
-        function Qd(o, r) {
+        function qd(o, r) {
             1 & o && e._UZ(0, "gu-icon", 13)
         }
 
-        function qd(o, r) {
-            if (1 & o && (e.TgZ(0, "div", 9), e._UZ(1, "img", 10), e.YNc(2, Qd, 1, 0, "gu-icon", 11), e.TgZ(3, "div", 12), e._uU(4), e.TgZ(5, "span"), e._uU(6), e.ALo(7, "titlecase"), e.qZA(), e._uU(8), e.qZA()()), 2 & o) {
+        function Qd(o, r) {
+            if (1 & o && (e.TgZ(0, "div", 9), e._UZ(1, "img", 10), e.YNc(2, qd, 1, 0, "gu-icon", 11), e.TgZ(3, "div", 12), e._uU(4), e.TgZ(5, "span"), e._uU(6), e.ALo(7, "titlecase"), e.qZA(), e._uU(8), e.qZA()()), 2 & o) {
                 const t = r.$implicit, n = r.last;
                 e.xp6(1), e.MGl("src", "/gu-assets/images/cardpacks/cropped/", t.type, ".webp", e.LSH), e.xp6(1), e.Q6J("ngIf", !n), e.xp6(2), e.hij(" ", t.count, " "), e.xp6(1), e.Gre("pack__label__colored ", t.type.toLowerCase(), ""), e.xp6(1), e.hij(" ", e.lcZ(7, 8, t.type), " "), e.xp6(2), e.hij(" ", 1 === t.count ? "Pack" : "Packs", " ")
             }
         }
 
         function Hd(o, r) {
-            if (1 & o && (e.TgZ(0, "div", 7), e.YNc(1, qd, 9, 10, "div", 8), e.qZA()), 2 & o) {
+            if (1 & o && (e.TgZ(0, "div", 7), e.YNc(1, Qd, 9, 10, "div", 8), e.qZA()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(1), e.Q6J("ngForOf", t.packGroups)
             }
@@ -9861,7 +9894,7 @@
                 }
 
                 ngOnInit() {
-                    this.packService.unopenedPacks$.pipe((0, P.h)(t => t && t.length > 0), (0, x.U)(t => t.filter(n => "starter" === n.pack_source)), (0, P.h)(t => t && t.length > 0), (0, M.q)(1), (0, x.U)(t => this.utils.groupBy(t, n => n.god)), (0, b.b)(t => {
+                    this.packService.unopenedPacks$.pipe((0, S.h)(t => t && t.length > 0), (0, O.U)(t => t.filter(n => "starter" === n.pack_source)), (0, S.h)(t => t && t.length > 0), (0, x.q)(1), (0, O.U)(t => this.utils.groupBy(t, n => n.god)), (0, b.b)(t => {
                         this.packGroups = Array.from(t.keys()).map(n => ({type: n, count: t.get(n).length}))
                     })).subscribe()
                 }
@@ -9872,7 +9905,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(Pe.F), e.Y36(Ge.F), e.Y36(T.Z))
+                return new (t || o)(e.Y36(Oe.F), e.Y36(Ge.F), e.Y36(T.Z))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-gu-welcome-modal"]],
@@ -9903,7 +9936,7 @@
                 }
 
                 letUserIn(t) {
-                    this.userHasStarterPacks$(t).pipe((0, M.q)(1)).subscribe(n => {
+                    this.userHasStarterPacks$(t).pipe((0, x.q)(1)).subscribe(n => {
                         !0 === n && this.modalService.createModal(Yd, {onClose: null}, {
                             canCloseFromOutside: !1,
                             position: h.e1.Center,
@@ -9914,7 +9947,7 @@
                 }
 
                 userHasStarterPacks$(t) {
-                    return this.packService.fetchUnopenedPacksById().pipe((0, M.q)(1), (0, x.U)(n => {
+                    return this.packService.fetchUnopenedPacksById().pipe((0, x.q)(1), (0, O.U)(n => {
                         if (!n || 0 === n.length) return !1;
                         const i = n.filter(a => "starter" === a.pack_source);
                         return i && i.length > 0
@@ -9924,7 +9957,7 @@
                 doShowCardInfoModal$(t) {
                     const n = !!this.storageService.get(["seenCardInfoModal"]),
                         i = this.progressionService.getStoredAccountProgression(t);
-                    return (0, z.of)(i.lvl >= 5 && !n)
+                    return (0, oe.of)(i.lvl >= 5 && !n)
                 }
 
                 currentVersion() {
@@ -9971,43 +10004,39 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.LFG(it.hM), e.LFG(f.mI), e.LFG(T.Z), e.LFG(Pe.F), e.LFG(f.qy), e.LFG(e.z2F), e.LFG(X.$z), e.LFG(L.Qz))
+                return new (t || o)(e.LFG(tt.hM), e.LFG(f.mI), e.LFG(T.Z), e.LFG(Oe.F), e.LFG(f.qy), e.LFG(e.z2F), e.LFG(V.$z), e.LFG(L.Qz))
             }, o.\u0275prov = e.Yz7({token: o, factory: o.\u0275fac}), o
         })();
         const $d = [{
             path: "",
             component: pi,
             canActivate: [Rn],
-            children: [{path: "", redirectTo: D.arena}, {path: "demo-sheet", component: me.q6}, {
+            children: [{path: "", redirectTo: Z.arena}, {path: "demo-sheet", component: he.q6}, {
                 path: "lore",
-                component: me.sZ
-            }, {path: D.deckBuilder, component: Ye, data: {state: D.deckBuilder, reuse: !0}}, {
-                path: D.arena,
+                component: he.sZ
+            }, {path: Z.deckBuilder, component: Ye, data: {state: Z.deckBuilder, reuse: !0}}, {
+                path: Z.arena,
                 component: Ad,
-                data: {state: D.arena}
-            }, {path: D.workshop, component: Et, data: {state: D.workshop}}, {
-                path: D.openPacks,
-                component: me.kM,
-                data: {state: D.openPacks}
-            }, {path: D.collections, component: Rd, data: {state: D.collections}}, {
-                path: D.forge,
+                data: {state: Z.arena}
+            }, {path: Z.workshop, component: Lt, data: {state: Z.workshop}}, {
+                path: Z.openPacks,
+                component: he.kM,
+                data: {state: Z.openPacks}
+            }, {path: Z.collections, component: Rd, data: {state: Z.collections}}, {
+                path: Z.forge,
                 component: ys,
-                data: {state: D.forge, featureFlag: _.vU.forgeEnabled},
-                canActivate: [_t.s]
+                data: {state: Z.forge, featureFlag: _.vU.forgeEnabled},
+                canActivate: [gt]
             }, {
-                path: D.referrals,
-                component: me.el,
-                data: {state: D.referrals, featureFlag: _.vU.referralsEnabled},
-                canActivate: [_t.s]
-            }, {
-                path: D.spgp,
-                loadChildren: () => g.e(651).then(g.bind(g, 52651)).then(o => o.SocialIsolationModule),
-                data: {state: D.spgp}
-            }, {path: D.starStore, component: me.gn, data: {state: D.starStore}}, {
-                path: D.playToEarn,
-                loadChildren: () => g.e(131).then(g.bind(g, 4131)).then(o => o.PlayToEarnModule),
-                data: {state: D.playToEarn, featureFlag: _.vU.playToEarnEnabled},
-                canActivate: [_t.s]
+                path: Z.referrals,
+                component: he.el,
+                data: {state: Z.referrals, featureFlag: _.vU.referralsEnabled},
+                canActivate: [gt]
+            }, {path: Z.starStore, component: he.gn, data: {state: Z.starStore}}, {
+                path: Z.playToEarn,
+                loadChildren: () => g.e(932).then(g.bind(g, 68932)).then(o => o.PlayToEarnModule),
+                data: {state: Z.playToEarn, featureFlag: _.vU.playToEarnEnabled},
+                canActivate: [gt]
             }]
         }];
         let Wd = (() => {
@@ -10016,9 +10045,9 @@
 
             return o.\u0275fac = function (t) {
                 return new (t || o)
-            }, o.\u0275mod = e.oAB({type: o}), o.\u0275inj = e.cJS({imports: [[we.Bz.forChild($d)], we.Bz]}), o
+            }, o.\u0275mod = e.oAB({type: o}), o.\u0275inj = e.cJS({imports: [[be.Bz.forChild($d)], be.Bz]}), o
         })();
-        const Qn = function (o) {
+        const qn = function (o) {
             return {selected: o}
         };
 
@@ -10032,7 +10061,7 @@
             }
             if (2 & o) {
                 const t = r.$implicit, n = e.oxw();
-                e.xp6(1), e.MGl("title", "Group by ", t.name, ""), e.xp6(1), e.Tol(t.name.toLowerCase()), e.Q6J("ngClass", e.VKq(6, Qn, n.isSelected(t)))("title", "Show decks for god: " + t.name), e.xp6(1), e.Q6J("iconLigature", "god_" + t.name.toLowerCase())
+                e.xp6(1), e.MGl("title", "Group by ", t.name, ""), e.xp6(1), e.Tol(t.name.toLowerCase()), e.Q6J("ngClass", e.VKq(6, qn, n.isSelected(t)))("title", "Show decks for god: " + t.name), e.xp6(1), e.Q6J("iconLigature", "god_" + t.name.toLowerCase())
             }
         }
 
@@ -10075,7 +10104,7 @@
                 template: function (t, n) {
                     1 & t && (e.TgZ(0, "app-tooltip", 0)(1, "button", 1), e.NdJ("click", function () {
                         return n.selectAllGodFilters()
-                    }), e._UZ(2, "gu-icon", 2), e.qZA()(), e.YNc(3, zd, 4, 8, "ng-container", 3)), 2 & t && (e.xp6(1), e.Q6J("ngClass", e.VKq(2, Qn, n.isAllGodFiltersSelected)), e.xp6(2), e.Q6J("ngForOf", n.godFilters))
+                    }), e._UZ(2, "gu-icon", 2), e.qZA()(), e.YNc(3, zd, 4, 8, "ng-container", 3)), 2 & t && (e.xp6(1), e.Q6J("ngClass", e.VKq(2, qn, n.isAllGodFiltersSelected)), e.xp6(2), e.Q6J("ngForOf", n.godFilters))
                 },
                 directives: [De.K, l.mk, l.sg],
                 styles: ["[_nghost-%COMP%]{display:flex}.groupingButton[_ngcontent-%COMP%]{width:calc(var(--vw) * 1.8);height:calc(var(--vw) * 1.8);border:calc(var(--vh) * .15) solid #182531;border-radius:calc(var(--vh) * .4);background:#0c1620;color:#7192b0;display:flex;padding:0;outline:none}.groupingButton.selected[_ngcontent-%COMP%]{background:#3d5a74;border-color:#7192b0;color:#f6f6f6}.groupingButton[_ngcontent-%COMP%]:hover{color:#f6f6f6;background:#3d5a74;border-color:#3d5a74}.groupingButtonAndTooltip[_ngcontent-%COMP%]{margin-right:calc(var(--vw) * .5)}.groupingButton--all[_ngcontent-%COMP%]   .groupingButton__godIcon[_ngcontent-%COMP%]{font-size:calc(var(--vw) * 1.1)}.groupingButton__godIcon[_ngcontent-%COMP%]{font-size:calc(var(--vw) * 1.3);margin:auto;line-height:1;display:flex}"]
@@ -10100,7 +10129,7 @@
         let eg = (() => {
             class o {
                 constructor(t, n, i) {
-                    this.resizeService = t, this.groupingService = n, this.filterService = i, this.activeGrouping = this.groupingService.defaultGrouping, this.filterCardIds = [], this.selectCardId = new e.vpe, this.GroupingType = F, this.selectedHeaders = [], this.showUnowned = !0, this.activeSort = m.PE.AscMana, this.sortOptions = [new B("Mana", "filter_mana", m.PE.AscMana, m.PE.DescMana), new B("Health", "filter_health", m.PE.AscHealth, m.PE.DescHealth), new B("Attack", "filter_attack", m.PE.AscAttack, m.PE.DescAttack), new B("Tribe", "filter_tribe", m.PE.AscTribe, m.PE.DescTribe), new B("Type", "filter_type", m.PE.AscType, m.PE.DescType), new B("God", "filter_god", m.PE.AscGod, m.PE.DescGod), new B("Rarity", "filter_rarity", m.PE.AscRarity, m.PE.DescRarity), new B("Set", "filter_set", m.PE.AscSet, m.PE.DescSet)], this.allGroupedProtos = [], this.allGroupedQualities = [], this.unsubscribe = new y.xQ, this.watchForResize()
+                    this.resizeService = t, this.groupingService = n, this.filterService = i, this.activeGrouping = this.groupingService.defaultGrouping, this.filterCardIds = [], this.selectCardId = new e.vpe, this.GroupingType = F, this.selectedHeaders = [], this.showUnowned = !0, this.activeSort = m.PE.AscMana, this.sortOptions = [new B("Mana", "filter_mana", m.PE.AscMana, m.PE.DescMana), new B("Health", "filter_health", m.PE.AscHealth, m.PE.DescHealth), new B("Attack", "filter_attack", m.PE.AscAttack, m.PE.DescAttack), new B("Tribe", "filter_tribe", m.PE.AscTribe, m.PE.DescTribe), new B("Type", "filter_type", m.PE.AscType, m.PE.DescType), new B("God", "filter_god", m.PE.AscGod, m.PE.DescGod), new B("Rarity", "filter_rarity", m.PE.AscRarity, m.PE.DescRarity), new B("Set", "filter_set", m.PE.AscSet, m.PE.DescSet)], this.allGroupedProtos = [], this.allGroupedQualities = [], this.unsubscribe = new M.xQ, this.watchForResize()
                 }
 
                 checkForVariousChanges(t) {
@@ -10202,8 +10231,8 @@
 
                 getFilterGroups(t) {
                     let n = [];
-                    if (this.expandedViewMode === q.SELLING) n = t.map(i => Object.assign(Object.assign({}, i), {cards: i.cards.filter(({pc: a}) => "genesis" === a.set)})); else {
-                        if (this.expandedViewMode !== q.FORGING) return t;
+                    if (this.expandedViewMode === Q.SELLING) n = t.map(i => Object.assign(Object.assign({}, i), {cards: i.cards.filter(({pc: a}) => "genesis" === a.set)})); else {
+                        if (this.expandedViewMode !== Q.FORGING) return t;
                         n = t.map(i => Object.assign(Object.assign({}, i), {cards: i.cards.filter(({pc: a}) => "core" === a.set)}))
                     }
                     return n
@@ -10211,7 +10240,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(te._), e.Y36(Oe), e.Y36(_.iZ))
+                return new (t || o)(e.Y36(K._), e.Y36(ke), e.Y36(_.iZ))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["cerberus-half-screen-cards-list"]],
@@ -10244,7 +10273,7 @@
                         return n.loadGroup()
                     }), e.YNc(6, Xd, 1, 7, "app-inventory-cards", 5), e.YNc(7, Kd, 1, 6, "app-group-quality", 6), e.qZA()), 2 & t && (e.xp6(2), e.Oqu(n.title), e.xp6(1), e.Q6J("showFilters", !1)("sortOptions", n.sortOptions)("selectedHeaders", n.selectedHeaders)("cardGrouping", n.protoGrouping)("unownedCheckboxVisible", !1), e.xp6(1), e.Q6J("scrollWindow", !1), e.xp6(2), e.Q6J("ngIf", n.activeGrouping.groupingType !== n.GroupingType.Quality), e.xp6(1), e.Q6J("ngIf", n.activeGrouping.groupingType === n.GroupingType.Quality))
                 },
-                directives: [yt, ut, l.O5, Tt, It],
+                directives: [wt, dt, l.O5, Ot, Pt],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.sectionHeader__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.godArea__label[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.sectionHeader__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.godArea__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;height:100%}.sectionHeader[_ngcontent-%COMP%]{height:calc(var(--vh) * 8.5);position:relative}.sectionHeader__groupings[_ngcontent-%COMP%]{position:absolute}.sectionHeader__title[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .3);padding-bottom:calc(var(--vh) * .8);text-transform:uppercase;line-height:1;position:absolute;width:100%;text-align:center;color:#f6f6f6;border-bottom:solid #1d2f41;border-width:calc(var(--vh) * .25)}.sectionHeader__rightSideArea[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .8);position:absolute;right:0;top:0;display:flex;align-items:flex-start;height:100%}.sectionHeader__filterArea[_ngcontent-%COMP%]{bottom:calc(var(--vh) * 1);right:0;position:absolute}.sectionHeader__godArea[_ngcontent-%COMP%]{user-select:none;pointer-events:none;position:absolute;right:0;top:0;display:flex;align-items:flex-start}app-god-badge[_ngcontent-%COMP%]{user-select:auto;pointer-events:auto;margin-top:calc(var(--vh) * 1)}.godArea__label[_ngcontent-%COMP%]{color:#7192b0;padding-top:calc(var(--vh) * 1.1);padding-right:calc(var(--vw) * 2)}.cardsListingArea[_ngcontent-%COMP%]{overflow:hidden;overflow-y:auto;flex:1}  app-card{cursor:pointer}"]
             }), o
         })();
@@ -10302,83 +10331,65 @@
             return o.\u0275fac = function (t) {
                 return new (t || o)
             }, o.\u0275mod = e.oAB({type: o}), o.\u0275inj = e.cJS({
-                providers: [He, En, l.JJ, oe.D, Rn, _.TJ, xe, Fe, Oe, le.MZ, Me, T.Z, X.$z],
-                imports: [[L.Zd, me.ic, l.ez, A.u5, Wd, Kn, A.UX, eo.m, me.W2]]
+                providers: [He, En, l.JJ, te.D, Rn, _.TJ, we, Fe, ke, ce.MZ, xe, T.Z, V.$z],
+                imports: [[L.Zd, he.ic, l.ez, A.u5, Wd, Kn, A.UX, eo.m, he.W2]]
             }), o
         })();
-        e.B6R(Mn, [eg, Dt, l.O5, bn, Y, l.mk, wn], [ye.XX]), e.B6R(Et, [l.O5, ke, Vd, rt.w, dt, l.sg, Fn], [l.Ov]), e.B6R(kn, [Qe, l.sg, ig, l.O5, l.mk], [l.rS])
-    }, 20991: (gt, be, g) => {
-        g.d(be, {s: () => pe});
-        var e = g(73307), z = g(92198), V = g(5e3);
-        let pe = (() => {
-            class x {
-                constructor(P) {
-                    this.featureFlagService = P
-                }
-
-                canActivate(P, $e) {
-                    return this.featureFlagService.get(P.data.featureFlag).pipe((0, z.h)(ze => !0 === ze))
-                }
-            }
-
-            return x.\u0275fac = function (P) {
-                return new (P || x)(V.LFG(e.B3))
-            }, x.\u0275prov = V.Yz7({token: x, factory: x.\u0275fac, providedIn: "root"}), x
-        })()
-    }, 31459: (gt, be, g) => {
-        g.d(be, {AZ: () => e.A, h4: () => $e, XX: () => P});
+        e.B6R(Mn, [eg, At, l.O5, bn, Y, l.mk, wn], [Me.XX]), e.B6R(Lt, [l.O5, ye, Vd, nt.w, st, l.sg, Fn], [l.Ov]), e.B6R(kn, [qe, l.sg, ig, l.O5, l.mk], [l.rS])
+    }, 31459: (Ut, Se, g) => {
+        g.d(Se, {AZ: () => e.A, h4: () => ct, XX: () => S});
         var e = g(76638);
         g(18464);
-        var x = g(5e3);
+        var O = g(5e3);
         const b = ["k", "m", "b", "t", "p", "e"];
-        let P = (() => {
-            class Q {
-                transform(N, ae) {
-                    let he;
+        let S = (() => {
+            class q {
+                transform(N, re) {
+                    let _e;
                     if (Number.isNaN(N)) return null;
                     if (N < 1e3) return N;
-                    he = Math.floor(Math.log(N) / Math.log(1e3));
-                    const $ = N / Math.pow(1e3, he);
+                    _e = Math.floor(Math.log(N) / Math.log(1e3));
+                    const $ = N / Math.pow(1e3, _e);
                     if (Number.isNaN($)) return null;
-                    const Te = b[he - 1];
-                    return `${$.toFixed(ae)}${Te}`
+                    const Te = b[_e - 1];
+                    return `${$.toFixed(re)}${Te}`
                 }
             }
 
-            return Q.\u0275fac = function (N) {
-                return new (N || Q)
-            }, Q.\u0275pipe = x.Yjl({name: "numberAbbreviation", type: Q, pure: !0}), Q
-        })(), $e = (() => {
-            class Q {
-                transform(N, ae, ...he) {
+            return q.\u0275fac = function (N) {
+                return new (N || q)
+            }, q.\u0275pipe = O.Yjl({name: "numberAbbreviation", type: q, pure: !0}), q
+        })(), ct = (() => {
+            class q {
+                transform(N, re, ..._e) {
                     const $ = JSON.parse(JSON.stringify(N));
                     return Object.keys($).filter(W => {
                         if ($[W].hasOwnProperty("children")) {
-                            const ue = this.transform($[W].children, ae);
-                            $[W].children = ue
+                            const pe = this.transform($[W].children, re);
+                            $[W].children = pe
                         }
-                        return !Object.keys(ae).includes($[W].featureFlag) || ae[$[W].featureFlag]
-                    }).reduce((W, ue) => (W[ue] = $[ue], W), {})
+                        return !Object.keys(re).includes($[W].featureFlag) || re[$[W].featureFlag]
+                    }).reduce((W, pe) => (W[pe] = $[pe], W), {})
                 }
             }
 
-            return Q.\u0275fac = function (N) {
-                return new (N || Q)
-            }, Q.\u0275pipe = x.Yjl({name: "filterNavItemsByFeatureFlags", type: Q, pure: !0}), Q
+            return q.\u0275fac = function (N) {
+                return new (N || q)
+            }, q.\u0275pipe = O.Yjl({name: "filterNavItemsByFeatureFlags", type: q, pure: !0}), q
         })()
-    }, 76638: (gt, be, g) => {
-        g.d(be, {A: () => z});
+    }, 76638: (Ut, Se, g) => {
+        g.d(Se, {A: () => oe});
         var e = g(5e3);
-        let z = (() => {
-            class V {
-                transform(x) {
-                    return !x || x.length < 11 ? x : `${x.slice(0, 6)}...${x.slice(x.length - 4)}`
+        let oe = (() => {
+            class ge {
+                transform(O) {
+                    return !O || O.length < 11 ? O : `${O.slice(0, 6)}...${O.slice(O.length - 4)}`
                 }
             }
 
-            return V.\u0275fac = function (x) {
-                return new (x || V)
-            }, V.\u0275pipe = e.Yjl({name: "addressTruncate", type: V, pure: !0}), V
+            return ge.\u0275fac = function (O) {
+                return new (O || ge)
+            }, ge.\u0275pipe = e.Yjl({name: "addressTruncate", type: ge, pure: !0}), ge
         })()
     }
 }]);
