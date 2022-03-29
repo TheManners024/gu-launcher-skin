@@ -954,7 +954,7 @@
                     this.authService = t, this.playService = n, this.guGameService = i, this.progressionService = a, this.modalService = s, this.guUserService = c, this.changeDetector = d, this.resizeService = p, this.gauntletService = w, this.analyticsService = v, this.packService = k, this.filterService = I, this.starsService = G, this.cdr = U, this.fluxService = E, this.sealedService = de, this.unsubscribe = new M.xQ, this.xpData = {
                         latest_xp: [],
                         latest_total_xp: 0
-                    }, this.showContinueButton = !1, this.loading = !0, this.specialRewards = [], this.animationState = {
+                    }, this.showContinueButton = !0, this.loading = !0, this.specialRewards = [], this.animationState = {
                         percentage: 0,
                         progressStepText: "",
                         progressStepValue: 0,
@@ -1003,7 +1003,7 @@
                     return (0, ae.mG)(this, void 0, void 0, function* () {
                         this.progressionTL = y.p8.timeline({
                             paused: !0,
-                            delay: .5
+                            delay: .1
                         }), t.forEach((n, i) => this.addXpStepToProgressBar(n, i)), yield(0, ut.w)(0), this.progressionTL.add(() => {
                             var n;
                             (null === (n = this.starsUpgradeVideo) || void 0 === n ? void 0 : n.nativeElement) && (this.starsUpgradeVideo.nativeElement.pause(), this.starsOpenVideo.nativeElement.pause())
@@ -1013,7 +1013,7 @@
 
                 animateInGauntletToasts() {
                     this.progressionTL.to(this.gauntletToasts.nativeElement, {
-                        duration: .5,
+                        duration: .1,
                         y: 0,
                         opacity: 1,
                         ease: "power2.inOut"
@@ -1031,7 +1031,7 @@
                     this.animationState.xp = i;
                     const a = Ct({xp: i, levelThresholds: this.thresholds});
                     this.hasLevelledUp(a) && (this.progressionTL.to(this.animationState, {
-                        duration: 1,
+                        duration: .25,
                         percentage: 100,
                         ease: "power2.inOut"
                     }).add(() => {
@@ -1049,7 +1049,7 @@
                     this.progressionTL.add(() => {
                         this.animationState.progressStepText = t.display_name, this.animationState.progressStepValue = t.xp, this.changeDetector.detectChanges()
                     }, `xpStep-${n}`).set(i, {x: "-40%", opacity: 0}, `xpStep-${n}`).to(i, {
-                        duration: 1.5,
+                        duration: .25,
                         x: "0%",
                         opacity: 1,
                         ease: "power2.inOut"
@@ -1059,50 +1059,42 @@
                 levelUpOnce() {
                     const t = this.progressBar.progressBarDom.nativeElement;
                     this.progressionTL.set(t, {boxShadow: `0 0 ${2 * this.vh}px ${.5 * this.vh}px rgba(${(0, Ve.hexToCssRgbString)(je.colors.apocyan[300])}, 0.4)`}).to(t, {
-                        duration: .3,
+                        duration: .1,
                         boxShadow: `0 0 ${3.5 * this.vh}px ${4 * this.vh}px rgba(${(0, Ve.hexToCssRgbString)(je.colors.apocyan[300])}, 0.7)`
                     }).to(t, {
-                        duration: .2,
+                        duration: .1,
                         boxShadow: `0 0 ${5 * this.vh}px ${2 * this.vh}px rgba(${(0, Ve.hexToCssRgbString)(je.colors.apocyan[300])}, 0)`
                     }).to(t, {
-                        duration: .2,
+                        duration: .1,
                         boxShadow: `0 0 ${2 * this.vh}px ${.5 * this.vh}px rgba(${(0, Ve.hexToCssRgbString)(je.colors.apocyan[300])}, 0.4)`
                     }), this.progressionTL.to(this.animationState, {
-                        duration: .4,
+                        duration: .1,
                         percentage: 0,
                         ease: "power2.inOut"
                     }, "-=0.2")
                 }
 
                 animateInCtaButton() {
-                    this.progressionTL.to(this.continueButton.nativeElement, {
-                        opacity: 1,
-                        scale: 1,
-                        ease: "power2.inOut",
-                        duration: .5,
-                        onComplete: () => {
-                            this.animationState.disableCta = !1
-                        }
-                    })
+                    this.animationState.disableCta = !1
                 }
 
                 animateInRewards() {
                     this.progressionTL.to(this.initialProgress.nativeElement, {
-                        duration: .5,
+                        duration: .1,
                         opacity: 0,
                         ease: "power2.inOut"
                     }).to(this.rewardsContainer.nativeElement, {
-                        duration: .5,
+                        duration: .1,
                         opacity: 1,
                         scale: 1,
                         ease: "power2.inOut"
                     }, "-=0.3"), Array.from(this.rewardItems.nativeElement.children).forEach((t, n) => {
                         this.progressionTL.to(t, {
-                            duration: .2,
+                            duration: .1,
                             opacity: 1,
                             ease: "power2.inOut"
                         }, n > 0 ? "-=0.3" : "-=0").to(t, {
-                            duration: .3,
+                            duration: .1,
                             transform: "scale(1.2)",
                             ease: "power2.inOut"
                         }, "-=0.15").to(t, {duration: .2, transform: "scale(1)", ease: "power2.inOut"})
@@ -1111,7 +1103,7 @@
 
                 continue() {
                     var t, n, i, a, s, c, d, p, w, v;
-                    if (this.animationState.disableCta) return !1;
+                    // if (this.animationState.disableCta) return !1;
                     (null === (n = null === (t = this.starsRewardInfo) || void 0 === t ? void 0 : t.clusters) || void 0 === n ? void 0 : n.length) >= 1 && (null === (a = null === (i = this.starsRewardInfo) || void 0 === i ? void 0 : i.clusters[0]) || void 0 === a ? void 0 : a.cluster_id) !== (null === (s = this.starsRewardInfo) || void 0 === s ? void 0 : s.max_clusters) && this.animationState.currentStarVial !== (null === (c = this.starsRewardInfo) || void 0 === c ? void 0 : c.clusters[(null === (p = null === (d = this.starsRewardInfo) || void 0 === d ? void 0 : d.clusters) || void 0 === p ? void 0 : p.length) - 1].cluster_name) ? (this.playStarUpgrades(), this.animationState.disableCta = !0) : (null === (w = this.starsRewardInfo) || void 0 === w ? void 0 : w.stars) && this.animationState.currentTotalStars !== (null === (v = this.starsRewardInfo) || void 0 === v ? void 0 : v.stars) ? (this.playOpenStarVial(), this.animationState.disableCta = !0) : (this.guUserService.fetchExtendedAccount(), this.guGameService.getGameMode$(this.gameModeId).pipe((0, x.q)(1)).subscribe(k => {
                         this.close(), k && k.ranked ? this.modalService.createModal(Mo, {gameModeId: this.gameModeId}, {
                             blurredBackground: !1,
@@ -1126,10 +1118,7 @@
                 }
 
                 logGameCompleted(t) {
-                    "function" == typeof fbq && fbq("track", "ViewContent"), "function" == typeof gtag && gtag("event", "completed", {
-                        event_category: "game",
-                        event_label: "user"
-                    }), this.guGameService.getGameMode$(this.gameModeId).pipe((0, x.q)(1)).subscribe(n => {
+                    this.guGameService.getGameMode$(this.gameModeId).pipe((0, x.q)(1)).subscribe(n => {
                         this.analyticsService.postEvent(new Ne.Game.Completed.Event({
                             game_id: 1,
                             latest_id: t,
@@ -1143,8 +1132,8 @@
                     return (0, ae.mG)(this, void 0, void 0, function* () {
                         const t = this.starsUpgradeVideo.nativeElement, n = a => {
                             this.animationState.currentStarVial = this.starsRewardInfo.clusters[this.starsRewardInfo.clusters.length - 1].cluster_name, this.animationState.currentStarVialId = this.starsRewardInfo.clusters[this.starsRewardInfo.clusters.length - 1].cluster_id, this.animationState.disableCta = !1, this.cdr.detectChanges(), nn(t, n)
-                        }, i = 1.7 * (this.starsRewardInfo.clusters[0].cluster_id - 1);
-                        this.animationState.showVialUpgradeVideo = !0, t.currentTime = i, tn(t, n), t.muted = !1, t.play(), yield(0, ut.w)(1700 * (this.starsRewardInfo.clusters.length - 1) - 20), t.pause(), this.animationState.disableCta = !0
+                        }, i = .25 * (this.starsRewardInfo.clusters[0].cluster_id - 1);
+                        this.animationState.showVialUpgradeVideo = !0, t.currentTime = i, tn(t, n), t.muted = !1, t.play(), yield(0, ut.w)(250 * (this.starsRewardInfo.clusters.length - 1) - 20), t.pause(), this.animationState.disableCta = !0
                     })
                 }
 
@@ -1154,11 +1143,11 @@
                         this.animationState.showVialUpgradeVideo = !1, this.animationState.showVialOpenVideo = !0;
                         const n = a => {
                             this.animationState.currentTotalStars = this.starsRewardInfo.stars, y.p8.to(this.starsFinalNumbers.nativeElement, {
-                                duration: .5,
+                                duration: .1,
                                 opacity: 1,
                                 y: 0
                             }), y.p8.to(this.starsFinalIcon.nativeElement, {
-                                duration: .5,
+                                duration: .1,
                                 opacity: .5,
                                 y: 0,
                                 onComplete: () => {
@@ -1166,7 +1155,7 @@
                                 }
                             }), this.cdr.detectChanges(), nn(t, n)
                         };
-                        t.currentTime = 1.7 * (this.starsRewardInfo.clusters[this.starsRewardInfo.clusters.length - 1].cluster_id - 1), tn(t, n), t.muted = !1, t.play(), yield(0, ut.w)(1680), t.pause(), this.animationState.disableCta = !0
+                        t.currentTime = .25 * (this.starsRewardInfo.clusters[this.starsRewardInfo.clusters.length - 1].cluster_id - 1), tn(t, n), t.muted = !1, t.play(), yield(0, ut.w)(247), t.pause(), this.animationState.disableCta = !0
                     })
                 }
             }
@@ -1198,13 +1187,13 @@
                     animation: [(0, C.X$)("fadeAndSlideIn", [(0, C.eR)(":enter", [(0, C.oB)({
                         opacity: 0,
                         transform: "translateY(calc(var(--vh) * 3))"
-                    }), (0, C.jt)("250ms 250ms ease-in-out", (0, C.oB)({
+                    }), (0, C.jt)("150ms 150ms ease-in-out", (0, C.oB)({
                         opacity: 1,
                         transform: "translateY(0)"
                     }))])]), (0, C.X$)("fadeAndScaleIn", [(0, C.eR)(":enter", [(0, C.oB)({
                         opacity: 0,
                         transform: "scale(0.5)"
-                    }), (0, C.jt)("250ms ease-in-out", (0, C.oB)({opacity: 1, transform: "scale(1)"}))])])]
+                    }), (0, C.jt)("150ms ease-in-out", (0, C.oB)({opacity: 1, transform: "scale(1)"}))])])]
                 }
             }), o
         })();
@@ -9839,6 +9828,7 @@
                 }
 
                 calcTopCards(t, n) {
+                    console.log('n length: ', n.length);
                     this.topCards = this.utils.calcTopCards(t, n, 5)
                 }
 
