@@ -295,6 +295,10 @@ app-game-mode-card .subtype__description {
     margin: 8px calc(var(--vw) * .9) 0 !important;
 }
 
+app-game-mode-card .godInfo {
+    display: none;
+}
+
 app-inventory:not(.fake-selector) {
     padding: calc(var(--vh) * 2) calc(var(--vw) * 3) 0;
 }
@@ -350,7 +354,7 @@ app-inventory-cards-quality > header.groupedCardsHeader:before {
     margin-right: calc(var(--vw) * .9);
     border-radius: 4px;
     padding: 4px 8px;
-    margin-top: 4px;
+    margin-top: 8px;
 }
 
 .fluxProgress:not(.fake-selector) app-flux-progress-box:not(.fake-selector) {
@@ -589,6 +593,10 @@ cerberus-forge-card-list.cardBrowserArea .sectionHeader .sectionHeader__title {
     border: none !important;
 }
 
+.titleAndFiltering {
+    border: none
+}
+
 .titleAndFiltering::before {
     background: var(--gu-blue-dark) !important;
 }
@@ -730,7 +738,7 @@ app-active-deck > header {
 }
 .cardItemWrapper:hover > app-card2 > composited-card {
   z-index: 1 !important;
-  transform: scale(1.35);
+  transform: scale(1.5);
   position: relative;
 }
 .cardItemWrapper > app-card2 > composited-card {

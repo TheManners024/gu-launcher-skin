@@ -339,13 +339,30 @@ function createWindow(frontEndUrl) {
     // }
     win.loadURL(frontEndUrl);
     var handleRedirect = function (e, url) {
+        if (e && url) {
+            try {
+                e.preventDefault();
+            } catch (e) {
+                console.error(e);
+            }
+        }
+        if (e && !url) {
+            url = e?.url;
+        }
         if (url != win.webContents.getURL()) {
-            e.preventDefault();
-            electron_1.shell.openExternal(url);
+            return electron_1.shell.openExternal(url);
         }
     };
     win.webContents.on('will-navigate', handleRedirect);
 
+    /**
+     * Intercept the request to get the starter decks and always return empty array
+     */
+    electron_1.protocol.registerStringProtocol('intercept', (request, callback) => {
+       if (request.url.match(/.*deck\.prod\.prod\.godsunchained\.com\/deck$/) != null) {
+           return callback('[]');
+       }
+    });
     /**
      * Intercept the requests to their assets and provide our own
      */
@@ -353,17 +370,18 @@ function createWindow(frontEndUrl) {
         const path = `${request.url.substring(9)}`;
         callback(path);
     });
-    // https://master.desktop.godsunchained.com/main.36c88778f707e52c.js
-    // https://master.desktop.godsunchained.com/62.a01c74ec12c00aac.js
+    // https://master.desktop.godsunchained.com/main.2d85198292267e7d.js
+    // https://master.desktop.godsunchained.com/957.32a054f96d8b1933.js
     electron_1.session.defaultSession.webRequest.onBeforeRequest({
         urls: [
             'https://master.desktop.godsunchained.com/main.*.js',
-            'https://master.desktop.godsunchained.com/62.*.js',
+            'https://master.desktop.godsunchained.com/957.*.js',
             'https://master.desktop.godsunchained.com/styles.*.css',
             'https://master.desktop.godsunchained.com/gu-assets/images/rank-progress/gu-progress-rank-cracks--*.svg',
             'https://master.desktop.godsunchained.com/gu-assets/images/misc/gu-gmc-snipe.svg',
             'https://master.desktop.godsunchained.com/assets/images/ui-embellishments/ui--divider-complex-2.svg',
-            'https://master.desktop.godsunchained.com/new-relic.*.js'
+            'https://master.desktop.godsunchained.com/new-relic.*.js',
+            'https://deck.prod.prod.godsunchained.com/deck'
         ]
     }, (details, callback) => {
         let url = null;
@@ -371,7 +389,7 @@ function createWindow(frontEndUrl) {
             url = path.normalize(`${__dirname}/app-main.js`);
         } else if (details.url.endsWith('.css')) {
             url = path.normalize(`${__dirname}/app-styles.css`);
-        } else if (details.url.match(/62[.].+[.]js$/) != null) {
+        } else if (details.url.match(/957[.].+[.]js$/) != null) {
             url = path.normalize(`${__dirname}/app-chunk.js`);
         } else if (details.url.match(/gu-progress-rank-cracks--[\d][.]svg$/) != null) {
             url = path.normalize(`${__dirname}/${details.url.split('.com').pop()}`);
@@ -381,6 +399,8 @@ function createWindow(frontEndUrl) {
             url = path.normalize(`${__dirname}/${details.url.split('.com').pop()}`);
         } else if (details.url.endsWith('ui--divider-complex-2.svg')) {
             url = path.normalize(`${__dirname}/${details.url.split('.com').pop()}`);
+        } else if (details.url.match(/.*deck\.prod\.prod\.godsunchained\.com\/deck$/) != null) {
+            return callback({redirectURL: 'intercept://deck.prod.prod.godsunchained.com/deck'})
         }
 
         callback({redirectURL: `inject://${url}`});

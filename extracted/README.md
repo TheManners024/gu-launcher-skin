@@ -34,12 +34,15 @@ this is what is called to remove a card.
           }
         }
     ```
+- The colors in app-main need to be updated to match whatever color scheme you're going for.
 
 #### App Chunk
 - Search for `null == t.account ? null : t.account.username` and replace with `null == t.account ? null : t.account.username + ' - ' + t.user.user_id`
   - Might have to remove `t` reference if the minification changes the variable.
+  - This might not be relevant since they added the banner for the p2e campaign stuff
 - Search for `null == t.user ? null : t.user.won_matches` and `null == t.user ? null : t.user.unique_card_count` are where
 you should replace the match win/loss ratio and unique card count labels.
+  - - This might not be relevant since they added the banner for the p2e campaign stuff
 - Also don't forget to update the gu-heading-text to gu-paragraph-text for the previous two changes
 - setRankLevelLabels()
   - Called to set the rank level labels and stuff
@@ -77,4 +80,16 @@ So search the string before the n.god part.
   - Used to start a queue to find a match. Need to use the counter to recursively call it
 a few times so we don't have to deal with the error from the first time failure.
 - Search for `Next milestone` and replace with `" Next milestone in " + t.user.xp_to_next + " XP - Level "` 
+- buttonIsActive()
+  - Used to detect when the queue cancel button is pressed. Change the `timeUntilCancel` value from 2e3 (2 seconds) to 
+something lower like 150
+- Look for occurrences of "close_x" and replace with `chevron_left` in the `app-modal-sidebar` component.
+- calcThumbnail() will need to be edited so we can have our top card from the deck be a card from a neutral domain.
+- calcTopCards() needs to be updated to accept deckId as a final parameter and use that to fetch the preferred showcase
+card from localStorage.
+
+### Other stuff
+
+The top card is the 30th card added to the deck. To show the default top cards open the deck, remove the current 
+top card, and leave deck edit without saving changes. 
 
