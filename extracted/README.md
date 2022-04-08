@@ -43,7 +43,7 @@ this is what is called to remove a card.
 - Search for `null == t.user ? null : t.user.won_matches` and `null == t.user ? null : t.user.unique_card_count` are where
 you should replace the match win/loss ratio and unique card count labels.
   - - This might not be relevant since they added the banner for the p2e campaign stuff
-- Also don't forget to update the gu-heading-text to gu-paragraph-text for the previous two changes
+  - Also don't forget to update the gu-heading-text to gu-paragraph-text for the previous two changes
 - setRankLevelLabels()
   - Called to set the rank level labels and stuff
 - initFormGroup()

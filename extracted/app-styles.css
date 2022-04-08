@@ -242,8 +242,8 @@ gu-primary-hex-button.deleteDeck {
 }
 
 gu-primary-hex-button:hover {
-    color: var(--gu-blue-hover);
-    border: solid 1px var(--gu-blue-hover);
+    color: var(--gu-yellow);
+    border: solid 1px var(--gu-yellow);
 }
 
 a:not(.fake-selector),

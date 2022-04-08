@@ -1,7 +1,7 @@
 "use strict";
 (self.webpackChunkdesktop = self.webpackChunkdesktop || []).push([[957], {
     6957: (Ut, Se, g) => {
-        g.r(Se), g.d(Se, {GuModule: () => dg});
+        g.r(Se), g.d(Se, {GuModule: () => lg});
         var e = g(5e3), oe = g(21086), ge = g(23753), Ce = g(61709), O = g(24850), b = g(2994), S = g(92198),
             ct = g(43164);
 
@@ -194,7 +194,7 @@
         let dt = (() => {
             class o {
                 constructor(t, n) {
-                    this.element = t, this.zone = n, this.scrolled = new e.vpe, this.scrolledUp = new e.vpe, this.infiniteScrollDistance = 2, this.infiniteScrollUpDistance = 1.5, this.infiniteScrollThrottle = 150, this.infiniteScrollDisabled = !1, this.infiniteScrollContainer = null, this.scrollWindow = !0, this.immediateCheck = !1, this.horizontal = !1, this.alwaysCallback = !1, this.fromRoot = !1
+                    this.element = t, this.zone = n, this.scrolled = new e.vpe, this.scrolledUp = new e.vpe, this.infiniteScrollDistance = 3, this.infiniteScrollUpDistance = 1.5, this.infiniteScrollThrottle = 150, this.infiniteScrollDisabled = !1, this.infiniteScrollContainer = null, this.scrollWindow = !0, this.immediateCheck = !0, this.horizontal = !1, this.alwaysCallback = !1, this.fromRoot = !1
                 }
 
                 ngAfterViewInit() {
@@ -274,8 +274,8 @@
                 return new (t || o)
             }, o.\u0275mod = e.oAB({type: o}), o.\u0275inj = e.cJS({providers: [], imports: [[]]}), o
         })();
-        var l = g(69808), T = g(93075), eo = g(57289), L = g(28510), _ = g(55278), ve = g(4324), I = g(66088),
-            to = g(49757), be = g(11735), h = g(73307);
+        var l = g(69808), T = g(93075), eo = g(57289), L = g(28510), _ = g(49002), ve = g(4324), I = g(66088),
+            to = g(21057), be = g(11735), f = g(73307);
         let gt = (() => {
             class o {
                 constructor(t) {
@@ -288,7 +288,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.LFG(h.B3))
+                return new (t || o)(e.LFG(f.B3))
             }, o.\u0275prov = e.Yz7({token: o, factory: o.\u0275fac, providedIn: "root"}), o
         })();
         var M = g(8929), u = g(7625), pt = g(75778), x = g(72986), C = g(41777);
@@ -331,8 +331,8 @@
                 return new (t || o)
             }, o.\u0275prov = e.Yz7({token: o, factory: o.\u0275fac}), o
         })();
-        var V, Xe, m = g(52492), P = g(33403), z = g(8561), ae = g(70655), Ne = g(59633), y = g(49749), D = g(36053),
-            ue = g(87545), ao = g(27221), je = g(65171), Ve = g(65281), ut = g(4477), f = g(52886), j = g(47313),
+        var V, Xe, h = g(52492), P = g(33403), z = g(8561), ae = g(70655), Ne = g(59633), y = g(49749), D = g(36053),
+            ue = g(87545), ao = g(27221), je = g(65171), Ve = g(65281), ut = g(4477), m = g(52886), j = g(47313),
             Jt = function () {
                 return V || "undefined" != typeof window && (V = window.gsap) && V.registerPlugin && V
             }, _t = function (r, t) {
@@ -559,14 +559,7 @@
 
                 ngAfterViewInit() {
                     this.getViewData().pipe().subscribe(() => {
-                        this.setColorOfProgressBar();
-                        this.progressionAnimationData.percentage = this.previousRankedProgression.win_points;
-                        this.progressionAnimationData.progressSafetyLine = this.previousRankedProgression.safety_line;
-                        this.setRankLevelLabels(this.previousRankedProgression);
-                        this.setShieldCracking(this.calcNewCracksCount(this.previousRankedProgression));
-                        this.changeDetector.detectChanges();
-                        this.loading = !1;
-                        this.createAnimationTimeline();
+                        this.setColorOfProgressBar(), this.progressionAnimationData.percentage = this.previousRankedProgression.win_points, this.progressionAnimationData.progressSafetyLine = this.previousRankedProgression.safety_line, this.setRankLevelLabels(this.previousRankedProgression), this.setShieldCracking(this.calcNewCracksCount(this.previousRankedProgression)), this.changeDetector.detectChanges(), this.loading = !1, this.createAnimationTimeline()
                     })
                 }
 
@@ -575,7 +568,28 @@
                 }
 
                 createAnimationTimeline() {
-                    return !1;
+                    if (this.isMaxRank) return !1;
+                    this.setColorOfProgressBar(), this.progressionTL = y.p8.timeline({
+                        paused: !0,
+                        delay: 1,
+                        onUpdate: () => this.setColorOfProgressBar()
+                    });
+                    const t = this.nextRankedProgression.rank_level - this.previousRankedProgression.rank_level;
+                    t > 0 ? this.levelUp() : t < 0 && this.levelDown(), this.progressionTL.to(this.progressionAnimationData, 1, {
+                        percentage: this.nextRankedProgression.win_points,
+                        ease: "power2.inOut"
+                    });
+                    const n = this.calcNewCracksCount(this.nextRankedProgression);
+                    n !== this.progressionAnimationData.shieldCrackCount && this.progressionTL.fromTo(this.leftShield.nativeElement, {
+                        x: "-4px",
+                        y: "-50%"
+                    }, {
+                        duration: .5,
+                        x: "4px",
+                        y: "-50%",
+                        ease: ft,
+                        clearProps: "x"
+                    }).add(() => this.setShieldCracking(n), "-=0.3"), this.progressionTL.play()
                 }
 
                 calcNewCracksCount(t) {
@@ -682,7 +696,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(ce.MZ), e.Y36(h.mI), e.Y36(j.$z), e.Y36(I.Z), e.Y36(e.sBO), e.Y36(z.GT), e.Y36(K._), e.Y36(e.sBO))
+                return new (t || o)(e.Y36(ce.MZ), e.Y36(f.mI), e.Y36(j.$z), e.Y36(I.Z), e.Y36(e.sBO), e.Y36(z.GT), e.Y36(K._), e.Y36(e.sBO))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-rank-modal-progress"]],
@@ -760,7 +774,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.LFG(_.Ft), e.LFG(h.mI))
+                return new (t || o)(e.LFG(_.Ft), e.LFG(f.mI))
             }, o.\u0275prov = e.Yz7({token: o, factory: o.\u0275fac, providedIn: "root"}), o
         })();
         var Oe = g(51395), X = g(64523);
@@ -981,18 +995,29 @@
                         }), this.logGameCompleted(t.latest_game), this.xpData = {
                             latest_total_xp: t.latest_total_xp,
                             latest_xp: t.latest_xp
-                        }, this.packsReward = this.packService.fixGodAlignments(this.filterService.sort(t.latest_reward, f.PE.DescRarity))[0], this.specialRewards = t.latest_special_reward || [], this.packRewardsCount = t.latest_reward.map(c => c.count).reduce((c, d) => c + d, 0), this.specialRewardsCount = this.specialRewards.length, this.hasEarnedRewards = this.packRewardsCount > 0 || this.specialRewardsCount > 0 || n.stars > 0, this.starsRewardInfo = n, this.animationState.currentStarVial = null === (i = null == n ? void 0 : n.clusters[0]) || void 0 === i ? void 0 : i.cluster_name, this.animationState.currentStarVialId = null === (a = null == n ? void 0 : n.clusters[0]) || void 0 === a ? void 0 : a.cluster_id, this.loading = !1, (0, oe.of)({})
+                        }, this.packsReward = this.packService.fixGodAlignments(this.filterService.sort(t.latest_reward, m.PE.DescRarity))[0], this.specialRewards = t.latest_special_reward || [], this.packRewardsCount = t.latest_reward.map(c => c.count).reduce((c, d) => c + d, 0), this.specialRewardsCount = this.specialRewards.length, this.hasEarnedRewards = this.packRewardsCount > 0 || this.specialRewardsCount > 0 || n.stars > 0, this.starsRewardInfo = n, this.animationState.currentStarVial = null === (i = null == n ? void 0 : n.clusters[0]) || void 0 === i ? void 0 : i.cluster_name, this.animationState.currentStarVialId = null === (a = null == n ? void 0 : n.clusters[0]) || void 0 === a ? void 0 : a.cluster_id, this.loading = !1, (0, oe.of)({})
                     }), (0, ao.K)(t => (console.error(t), (0, oe.of)(!1))))
                 }
 
                 createProgressionAnimationTimeline(t) {
-                    return (0, ae.mG)(this, void 0, void 0, function* () {
-                        yield(0, ut.w)(0);
-                    });
+                    return (0, ae.__awaiter)(this, void 0, void 0, function* () {
+                        this.progressionTL = y.p8.timeline({
+                            paused: !0,
+                            delay: .5
+                        }), t.forEach((n, i) => this.addXpStepToProgressBar(n, i)), yield(0, ut.w)(0), this.progressionTL.add(() => {
+                            var n;
+                            (null === (n = this.starsUpgradeVideo) || void 0 === n ? void 0 : n.nativeElement) && (this.starsUpgradeVideo.nativeElement.pause(), this.starsOpenVideo.nativeElement.pause())
+                        }), this.hasEarnedRewards && this.animateInRewards(), this.gauntletToasts && this.animateInGauntletToasts(), this.animateInCtaButton(), this.progressionTL.play()
+                    })
                 }
 
                 animateInGauntletToasts() {
-                    return;
+                    this.progressionTL.to(this.gauntletToasts.nativeElement, {
+                        duration: .5,
+                        y: 0,
+                        opacity: 1,
+                        ease: "power2.inOut"
+                    })
                 }
 
                 hasLevelledUp(t) {
@@ -1000,11 +1025,35 @@
                 }
 
                 addXpStepToProgressBar(t, n) {
-                    return;
+                    if (0 === t.xp) return;
+                    this.progressionTL.addLabel(`xpStep-${n}`, "+=0.5");
+                    const i = this.animationState.xp + t.xp;
+                    this.animationState.xp = i;
+                    const a = Ct({xp: i, levelThresholds: this.thresholds});
+                    this.hasLevelledUp(a) && (this.progressionTL.to(this.animationState, {
+                        duration: 1,
+                        percentage: 100,
+                        ease: "power2.inOut"
+                    }).add(() => {
+                        this.displayProgress.lvl = a
+                    }), this.levelUpOnce(), this.animationState.currentLevel = a);
+                    const s = et({xp: i, levelThresholds: this.thresholds});
+                    this.progressionTL.to(this.animationState, 1, {
+                        percentage: s,
+                        ease: "power2.inOut"
+                    }), this.animateTextLabel(t, n)
                 }
 
                 animateTextLabel(t, n) {
-                    return;
+                    const i = this.progressStepInfoText.nativeElement;
+                    this.progressionTL.add(() => {
+                        this.animationState.progressStepText = t.display_name, this.animationState.progressStepValue = t.xp, this.changeDetector.detectChanges()
+                    }, `xpStep-${n}`).set(i, {x: "-40%", opacity: 0}, `xpStep-${n}`).to(i, {
+                        duration: 1.5,
+                        x: "0%",
+                        opacity: 1,
+                        ease: "power2.inOut"
+                    }, `xpStep-${n}`)
                 }
 
                 levelUpOnce() {
@@ -1026,41 +1075,50 @@
                 }
 
                 animateInCtaButton() {
-                    this.animationState.disableCta = !1;
+                    this.progressionTL.to(this.continueButton.nativeElement, {
+                        opacity: 1,
+                        scale: 1,
+                        ease: "power2.inOut",
+                        duration: .5,
+                        onComplete: () => {
+                            this.animationState.disableCta = !1
+                        }
+                    })
                 }
 
                 animateInRewards() {
-                    // this.progressionTL.to(this.initialProgress.nativeElement, {
-                    //     duration: .5,
-                    //     opacity: 0,
-                    //     ease: "power2.inOut"
-                    // }).to(this.rewardsContainer.nativeElement, {
-                    //     duration: .5,
-                    //     opacity: 1,
-                    //     scale: 1,
-                    //     ease: "power2.inOut"
-                    // }, "-=0.3"), Array.from(this.rewardItems.nativeElement.children).forEach((t, n) => {
-                    //     this.progressionTL.to(t, {
-                    //         duration: .2,
-                    //         opacity: 1,
-                    //         ease: "power2.inOut"
-                    //     }, n > 0 ? "-=0.3" : "-=0").to(t, {
-                    //         duration: .3,
-                    //         transform: "scale(1.2)",
-                    //         ease: "power2.inOut"
-                    //     }, "-=0.15").to(t, {duration: .2, transform: "scale(1)", ease: "power2.inOut"})
-                    // })
+                    this.progressionTL.to(this.initialProgress.nativeElement, {
+                        duration: .5,
+                        opacity: 0,
+                        ease: "power2.inOut"
+                    }).to(this.rewardsContainer.nativeElement, {
+                        duration: .5,
+                        opacity: 1,
+                        scale: 1,
+                        ease: "power2.inOut"
+                    }, "-=0.3"), Array.from(this.rewardItems.nativeElement.children).forEach((t, n) => {
+                        this.progressionTL.to(t, {
+                            duration: .2,
+                            opacity: 1,
+                            ease: "power2.inOut"
+                        }, n > 0 ? "-=0.3" : "-=0").to(t, {
+                            duration: .3,
+                            transform: "scale(1.2)",
+                            ease: "power2.inOut"
+                        }, "-=0.15").to(t, {duration: .2, transform: "scale(1)", ease: "power2.inOut"})
+                    })
                 }
 
                 continue() {
-                    this.guGameService.getGameMode$(this.gameModeId).pipe((0, x.q)(1)).subscribe(k => {
-                        this.close();
-                        k && k.ranked ? this.modalService.createModal(yo, {gameModeId: this.gameModeId}, {
+                    var t, n, i, a, s, c, d, p, w, v;
+                    if (this.animationState.disableCta) return !1;
+                    (null === (n = null === (t = this.starsRewardInfo) || void 0 === t ? void 0 : t.clusters) || void 0 === n ? void 0 : n.length) >= 1 && (null === (a = null === (i = this.starsRewardInfo) || void 0 === i ? void 0 : i.clusters[0]) || void 0 === a ? void 0 : a.cluster_id) !== (null === (s = this.starsRewardInfo) || void 0 === s ? void 0 : s.max_clusters) && this.animationState.currentStarVial !== (null === (c = this.starsRewardInfo) || void 0 === c ? void 0 : c.clusters[(null === (p = null === (d = this.starsRewardInfo) || void 0 === d ? void 0 : d.clusters) || void 0 === p ? void 0 : p.length) - 1].cluster_name) ? (this.playStarUpgrades(), this.animationState.disableCta = !0) : (null === (w = this.starsRewardInfo) || void 0 === w ? void 0 : w.stars) && this.animationState.currentTotalStars !== (null === (v = this.starsRewardInfo) || void 0 === v ? void 0 : v.stars) ? (this.playOpenStarVial(), this.animationState.disableCta = !0) : (this.guUserService.fetchExtendedAccount(), this.guGameService.getGameMode$(this.gameModeId).pipe((0, x.q)(1)).subscribe(k => {
+                        this.close(), k && k.ranked ? this.modalService.createModal(yo, {gameModeId: this.gameModeId}, {
                             blurredBackground: !1,
                             canCloseFromOutside: !1,
-                            size: m.Cg.Fullscreen
+                            size: h.Cg.Fullscreen
                         }) : this.playService.setPlaying(z.OC.OUT, this.gameModeId)
-                    });
+                    }))
                 }
 
                 close() {
@@ -1082,7 +1140,7 @@
                 }
 
                 playStarUpgrades() {
-                    return (0, ae.mG)(this, void 0, void 0, function* () {
+                    return (0, ae.__awaiter)(this, void 0, void 0, function* () {
                         const t = this.starsUpgradeVideo.nativeElement, n = a => {
                             this.animationState.currentStarVial = this.starsRewardInfo.clusters[this.starsRewardInfo.clusters.length - 1].cluster_name, this.animationState.currentStarVialId = this.starsRewardInfo.clusters[this.starsRewardInfo.clusters.length - 1].cluster_id, this.animationState.disableCta = !1, this.cdr.detectChanges(), nn(t, n)
                         }, i = 1.7 * (this.starsRewardInfo.clusters[0].cluster_id - 1);
@@ -1091,7 +1149,7 @@
                 }
 
                 playOpenStarVial() {
-                    return (0, ae.mG)(this, void 0, void 0, function* () {
+                    return (0, ae.__awaiter)(this, void 0, void 0, function* () {
                         const t = this.starsOpenVideo.nativeElement;
                         this.animationState.showVialUpgradeVideo = !1, this.animationState.showVialOpenVideo = !0;
                         const n = a => {
@@ -1108,16 +1166,13 @@
                                 }
                             }), this.cdr.detectChanges(), nn(t, n)
                         };
-                        t.currentTime = 1.7 * (this.starsRewardInfo.clusters[this.starsRewardInfo.clusters.length - 1].cluster_id - 1), tn(t, n), t.muted = !1, t.play(),
-                        yield(0, ut.w)(1680),
-                            t.pause(),
-                        this.animationState.disableCta = !0
+                        t.currentTime = 1.7 * (this.starsRewardInfo.clusters[this.starsRewardInfo.clusters.length - 1].cluster_id - 1), tn(t, n), t.muted = !1, t.play(), yield(0, ut.w)(1680), t.pause(), this.animationState.disableCta = !0
                     })
                 }
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(h.mI), e.Y36(z.GT), e.Y36(ee.xV), e.Y36(j.$z), e.Y36(I.Z), e.Y36(ce.MZ), e.Y36(e.sBO), e.Y36(K._), e.Y36(Fe), e.Y36(_.yD), e.Y36(Oe.F), e.Y36(_.iZ), e.Y36(_.cM), e.Y36(e.sBO), e.Y36(_.TJ), e.Y36(X.H))
+                return new (t || o)(e.Y36(f.mI), e.Y36(z.GT), e.Y36(ee.xV), e.Y36(j.$z), e.Y36(I.Z), e.Y36(ce.MZ), e.Y36(e.sBO), e.Y36(K._), e.Y36(Fe), e.Y36(_.yD), e.Y36(Oe.F), e.Y36(_.iZ), e.Y36(_.cM), e.Y36(e.sBO), e.Y36(_.TJ), e.Y36(X.H))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-account-progression"]],
@@ -1135,7 +1190,7 @@
                 template: function (t, n) {
                     1 & t && (e.TgZ(0, "picture", 0), e._UZ(1, "source", 1)(2, "source", 2)(3, "img", 3), e.qZA(), e.TgZ(4, "div", 4), e._UZ(5, "img", 5), e.qZA(), e.TgZ(6, "gu-heading-text", 6), e._uU(7, " Match Complete\n"), e.qZA(), e.TgZ(8, "div", 7, 8), e.YNc(10, Ro, 5, 2, "div", 9), e.TgZ(11, "div", 10)(12, "gu-simple-text", 11), e._uU(13), e.qZA(), e.TgZ(14, "gu-simple-text", 12), e._uU(15), e.qZA(), e._UZ(16, "app-progress-bar", 13, 14), e.TgZ(18, "div", 15, 16)(20, "gu-heading-text", 17), e._uU(21), e.qZA(), e.TgZ(22, "gu-heading-text", 18), e._uU(23), e.qZA()()(), e._UZ(24, "div", 19), e.qZA(), e.TgZ(25, "div", 20, 21)(27, "gu-heading-text", 22), e._uU(28), e.qZA(), e.TgZ(29, "div", 23, 24), e.YNc(31, Qo, 6, 4, "div", 25), e.YNc(32, Ho, 17, 14, "div", 25), e.YNc(33, Yo, 6, 2, "div", 26), e.qZA(), e._UZ(34, "div", 19), e.qZA(), e.TgZ(35, "gu-primary-hex-button", 27, 28), e.NdJ("click", function () {
                         return n.continue()
-                    }), e.qZA(), e.YNc(37, Jo, 7, 0, "div", 29)), 2 & t && (e.xp6(10), e.Q6J("ngIf", !n.loading), e.xp6(1), e.ekj("progressBarArea--hidden", n.loading), e.xp6(2), e.hij(" Level ", null == n.displayProgress ? null : n.displayProgress.lvl, " "), e.xp6(2), e.hij(" Level ", (null == n.displayProgress ? null : n.displayProgress.lvl) + 1, " "), e.xp6(1), e.Q6J("animateFirstValue", !1)("percentage", n.animationState.percentage)("supressAnimation", !0), e.xp6(5), e.hij(" +", n.animationState.progressStepValue, " "), e.xp6(2), e.hij(" ", n.animationState.progressStepText, " "), e.xp6(5), e.hij(" ", n.packRewardsCount + n.specialRewardsCount > 1 ? "Rewards" : "Reward", " Earned "), e.xp6(3), e.Q6J("ngIf", n.packsReward), e.xp6(1), e.Q6J("ngIf", n.starsRewardInfo && 0 !== (null == n.starsRewardInfo ? null : n.starsRewardInfo.stars)), e.xp6(1), e.Q6J("ngForOf", n.specialRewards), e.xp6(2), e.Q6J("disabled", !1), e.xp6(2), e.Q6J("ngIf", n.gameModeId === n.GuGameModeId.RANKED_CONSTRUCTED))
+                    }), e.qZA(), e.YNc(37, Jo, 7, 0, "div", 29)), 2 & t && (e.xp6(10), e.Q6J("ngIf", !n.loading), e.xp6(1), e.ekj("progressBarArea--hidden", n.loading), e.xp6(2), e.hij(" Level ", null == n.displayProgress ? null : n.displayProgress.lvl, " "), e.xp6(2), e.hij(" Level ", (null == n.displayProgress ? null : n.displayProgress.lvl) + 1, " "), e.xp6(1), e.Q6J("animateFirstValue", !1)("percentage", n.animationState.percentage)("supressAnimation", !0), e.xp6(5), e.hij(" +", n.animationState.progressStepValue, " "), e.xp6(2), e.hij(" ", n.animationState.progressStepText, " "), e.xp6(5), e.hij(" ", n.packRewardsCount + n.specialRewardsCount > 1 ? "Rewards" : "Reward", " Earned "), e.xp6(3), e.Q6J("ngIf", n.packsReward), e.xp6(1), e.Q6J("ngIf", n.starsRewardInfo && 0 !== (null == n.starsRewardInfo ? null : n.starsRewardInfo.stars)), e.xp6(1), e.Q6J("ngForOf", n.specialRewards), e.xp6(2), e.Q6J("disabled", n.animationState.disableCta), e.xp6(2), e.Q6J("ngIf", n.gameModeId === n.GuGameModeId.RANKED_CONSTRUCTED))
                 },
                 directives: [l.O5, Qe, l.mk, l.sg, Xt],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif;font-weight:400}.progressBarArea__stepInfo__value[_ngcontent-%COMP%], .progressBarArea__stepInfo__label[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained, serif;font-weight:700}.progressBarArea__stepInfo__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22);line-height:1.4}.progressBarArea__stepInfo__value[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 6);line-height:1.3}[_nghost-%COMP%]{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);display:flex;flex-flow:column nowrap;justify-content:center;align-items:center;background:#182531;overflow:hidden;height:calc(var(--vh) * 100);width:calc(var(--vw) * 100);padding-top:calc(var(--vh) * 10)}.backgroundImagery[_ngcontent-%COMP%]{user-select:none;pointer-events:none;position:absolute;top:0;left:0;height:100%;width:100%;background:#0F1B27}.backgroundImagery__img[_ngcontent-%COMP%]{width:100%;height:100%;object-fit:cover;object-position:center;opacity:.1;filter:grayscale(100%)}.guLogo[_ngcontent-%COMP%]{display:none;}.guLogo__img[_ngcontent-%COMP%]{width:calc(var(--vh) * 4);margin:auto}.matchCompleteHeading[_ngcontent-%COMP%]{right:calc(var(--vh) * 3);top:calc(28px + calc(var(--vh) * 3));position:absolute}.initialProgressDisplay[_ngcontent-%COMP%]{display:flex;flex-direction:column;align-items:center;justify-content:center}.playerDetails[_ngcontent-%COMP%]{margin-bottom:calc(var(--vh) * 3)}.playerDetails__avatar[_ngcontent-%COMP%]{display:none;}.playerDetails__userName[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 1.5);position:relative}.progressBarArea[_ngcontent-%COMP%]{width:calc(var(--vw) * 50);display:flex;flex-flow:row wrap;position:relative}.progressBarArea--hidden[_ngcontent-%COMP%]{opacity:0}.progressBarArea__label[_ngcontent-%COMP%]{margin-bottom:calc(var(--vh) * 1)}.progressBarArea__label.left[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 1)}.progressBarArea__label.right[_ngcontent-%COMP%]{padding-right:calc(var(--vw) * 1);margin-left:auto}.progressBarArea__bar[_ngcontent-%COMP%]{width:100%;height:calc(var(--vh) * 3.42);padding-left:calc(var(--vw) * .5);padding-right:calc(var(--vw) * .5)}.progressBarArea__stepInfo[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2);margin-left:auto;margin-right:auto;text-align:center;color:#f6f6f6;opacity:0}.rewardContainer[_ngcontent-%COMP%]{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%) scale(.8);opacity:0;display:flex;flex-direction:column;justify-content:center;align-items:center}.rewardContainer__title[_ngcontent-%COMP%]{position:relative}.rewardContainer__rewardItems[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 3);display:flex;justify-content:center;align-items:center;position:relative}.rewardContainer__rewardItems__rewardItem[_ngcontent-%COMP%]{background:url(/assets/images/ui-embellishments/ui--reward-background.svg) no-repeat;background-size:contain;background-position:50% 34%;position:relative;margin-right:calc(var(--vw) * 4);width:calc(var(--vw) * 13)}.rewardContainer__rewardItems__rewardItem[_ngcontent-%COMP%]:last-child {margin:0}.rewardItem__innerContainer[_ngcontent-%COMP%]{width:100%;padding-bottom:113%;position:relative}.rewardItem__innerContainer--openVideoActive[_ngcontent-%COMP%] .rewardItem__innerContainer__starPicture[_ngcontent-%COMP%], .rewardItem__innerContainer--openVideoActive[_ngcontent-%COMP%] .rewardItem__innerContainer__video--upgradeVideo[_ngcontent-%COMP%]{opacity:0}.rewardItem__innerContainer--openVideoActive[_ngcontent-%COMP%] .rewardItem__innerContainer__video--openVideo[_ngcontent-%COMP%]{opacity:1}.rewardItem__innerContainer--upgradeVideoActive[_ngcontent-%COMP%] .rewardItem__innerContainer__starPicture[_ngcontent-%COMP%]{opacity:0}.rewardItem__innerContainer--upgradeVideoActive[_ngcontent-%COMP%] .rewardItem__innerContainer__video--upgradeVideo[_ngcontent-%COMP%]{opacity:1}.rewardItem__innerContainer--upgradeVideoActive[_ngcontent-%COMP%] .rewardItem__innerContainer__video--openVideo[_ngcontent-%COMP%]{opacity:0}.rewardItem__innerContainer__picture[_ngcontent-%COMP%]{position:absolute;width:68%;left:50%;top:27%;transform:translate(-50%)}.rewardItem__innerContainer__video[_ngcontent-%COMP%], .rewardItem__innerContainer__starPicture[_ngcontent-%COMP%]{position:absolute;width:140%;left:50%;top:2%;transform:translate(-50%);transition:opacity .2s ease-in-out}.rewardItem__innerContainer__video[_ngcontent-%COMP%]{opacity:0}.rewardItem__innerContainer__starPicture__img[_ngcontent-%COMP%]{display:block;width:100%}.rewardItem__innerContainer__icon[_ngcontent-%COMP%]{font-size:calc(var(--vw) * 10);position:absolute;top:30.5%;left:0;width:100%;text-align:center}.rewardItem__innerContainer__icon--stars[_ngcontent-%COMP%]{font-size:calc(var(--vw) * 8);top:39%;opacity:0}.rewardItem__innerContainer__starBigNumbers[_ngcontent-%COMP%]{position:absolute;top:50%;left:50%;text-shadow:0 2px 4px rgba(0, 0, 0, .5);transform:translate(-50%, 15%);opacity:0}.rewardItem__label[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 9);min-height:50px}.fluxProgressToasts[_ngcontent-%COMP%]{bottom:calc(var(--vh) * 3.5);left:calc(var(--vh) * 3.5);width:calc(var(--vw) * 24);position:absolute;display:flex;flex-direction:column;transform:translateY(50%);opacity:0}.fluxProgressToasts[_ngcontent-%COMP%] app-flux-progress-box[_ngcontent-%COMP%]{padding:calc(var(--vh) * 4)}.continue[_ngcontent-%COMP%]{transform:none !important;}.continueButtonPlaceholder[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 7.5);height:48px;width:100%}"],
@@ -1232,7 +1287,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(be.F0), e.Y36(h.Ho), e.Y36(L.mX), e.Y36(z.GT), e.Y36(tt.hM), e.Y36(h.mI), e.Y36(_.jt), e.Y36(ee.xV))
+                return new (t || o)(e.Y36(be.F0), e.Y36(f.Ho), e.Y36(L.mX), e.Y36(z.GT), e.Y36(tt.hM), e.Y36(f.mI), e.Y36(_.jt), e.Y36(ee.xV))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["cerberus-tutorial-end-modal"]],
@@ -1360,9 +1415,9 @@
                 fetchFusingLevels() {
                     this.gameApi.get("/fusing_levels").pipe((0, x.q)(1), (0, O.U)(t => {
                         const n = {};
-                        for (const i in f.nJ) if ("number" == typeof f.nJ[i]) {
-                            const a = t.find(s => s.quality === f.nJ[i]);
-                            n[f.nJ[i]] = a
+                        for (const i in m.nJ) if ("number" == typeof m.nJ[i]) {
+                            const a = t.find(s => s.quality === m.nJ[i]);
+                            n[m.nJ[i]] = a
                         }
                         return n
                     })).subscribe(t => {
@@ -1378,7 +1433,7 @@
                 }
 
                 isFuseable(t, n, i) {
-                    if (n !== f.nJ.PLAIN) return !1;
+                    if (n !== m.nJ.PLAIN) return !1;
                     const a = this.numberOfQualityToForgeSync(n, i);
                     return -1 !== a && t.length >= a
                 }
@@ -1390,7 +1445,7 @@
                 }
 
                 canAddToForge(t, n, i) {
-                    return (0, ae.mG)(this, void 0, void 0, function* () {
+                    return (0, ae.__awaiter)(this, void 0, void 0, function* () {
                         if (null === this.dataStore.forgeCards || this.dataStore.forgeCards.proto !== t || this.dataStore.forgeCards.quality !== n) return !0;
                         const a = yield this.numberOfQualityToForge(n);
                         return !(this.dataStore.forgeCards.ids.length >= a)
@@ -1398,7 +1453,7 @@
                 }
 
                 addToForge(t, n, i) {
-                    return (0, ae.mG)(this, void 0, void 0, function* () {
+                    return (0, ae.__awaiter)(this, void 0, void 0, function* () {
                         if (!(yield this.canAddToForge(t, n, i))) return !1;
                         const c = null === this.dataStore.forgeCards || this.dataStore.forgeCards.proto !== t || this.dataStore.forgeCards.quality !== n ? new Vo(t, n, [i], i) : Object.assign(Object.assign({}, this.dataStore.forgeCards), {ids: [...this.dataStore.forgeCards.ids, i]});
                         this.emitForgeCards(c), this.updatePreviewCard();
@@ -1419,7 +1474,7 @@
                 }
 
                 updatePreviewCard() {
-                    return (0, ae.mG)(this, void 0, void 0, function* () {
+                    return (0, ae.__awaiter)(this, void 0, void 0, function* () {
                         if (!this.dataStore.forgeCards) return void this.emitPreviewCard(null);
                         const t = yield this.numberOfQualityToForge(this.dataStore.forgeCards.quality);
                         this.emitPreviewCard(this.dataStore.forgeCards && this.dataStore.forgeCards.ids.length === t ? {
@@ -1434,7 +1489,7 @@
                 }
 
                 numberOfQualityToForge(t) {
-                    return (0, ae.mG)(this, void 0, void 0, function* () {
+                    return (0, ae.__awaiter)(this, void 0, void 0, function* () {
                         const n = yield this.fusingLevels$.pipe((0, S.h)(i => null !== i), (0, x.q)(1)).toPromise();
                         return n[t] ? n[t].amount : null
                     })
@@ -1442,15 +1497,15 @@
 
                 getNextQuality(t) {
                     switch (t) {
-                        case f.nJ.DIAMOND:
-                        case f.nJ.GOLD:
-                            return f.nJ.DIAMOND;
-                        case f.nJ.SHADOW:
-                            return f.nJ.GOLD;
-                        case f.nJ.METEORITE:
-                            return f.nJ.SHADOW;
-                        case f.nJ.PLAIN:
-                            return f.nJ.METEORITE;
+                        case m.nJ.DIAMOND:
+                        case m.nJ.GOLD:
+                            return m.nJ.DIAMOND;
+                        case m.nJ.SHADOW:
+                            return m.nJ.GOLD;
+                        case m.nJ.METEORITE:
+                            return m.nJ.SHADOW;
+                        case m.nJ.PLAIN:
+                            return m.nJ.METEORITE;
                         default:
                             return t
                     }
@@ -1510,12 +1565,12 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.LFG(_.Ft), e.LFG(h.mI), e.LFG(_.dK), e.LFG(te.D), e.LFG(He), e.LFG(h.pk), e.LFG(rn.eN), e.LFG(Pe.d), e.LFG(_.LE), e.LFG(h.qy), e.LFG(_.$))
+                return new (t || o)(e.LFG(_.Ft), e.LFG(f.mI), e.LFG(_.dK), e.LFG(te.D), e.LFG(He), e.LFG(f.pk), e.LFG(rn.eN), e.LFG(Pe.d), e.LFG(_.LE), e.LFG(f.qy), e.LFG(_.$))
             }, o.\u0275prov = e.Yz7({token: o, factory: o.\u0275fac}), o
         })(), xe = (() => {
             class o {
                 constructor(t, n, i) {
-                    this.gameApi = t, this.authService = n, this.assetsService = i, this.dataStore = {
+                    this.gameApi = t, this.authService = n, this.marketplaceApiService = i, this.dataStore = {
                         allBoards: [],
                         ownedBoards: [],
                         allTrinkets: [],
@@ -1523,9 +1578,6 @@
                         loadouts: [],
                         protoCollectables: []
                     }, this._allBoards$ = new J.X([]), this._ownedBoards$ = new J.X([]), this._allTrinkets$ = new J.X([]), this._ownedTrinkets$ = new J.X([]), this._loadouts$ = new J.X([]), this._protoCollectables$ = new J.X([])
-                }
-
-                ngOnDestroy() {
                 }
 
                 get protoCollectables$() {
@@ -1552,8 +1604,13 @@
                     return this._loadouts$.asObservable()
                 }
 
+                getBoardsAndTrinkets() {
+                    const t = this.authService.getUserId();
+                    return this.marketplaceApiService.get(`/user/${t}/asset?type=board&type=trinket`)
+                }
+
                 fetchData() {
-                    (0, D.aj)([this.fetchProtoCollectables(), this.assetsService.getBoardsAndTrinkets(), this.fetchAllLoadouts()]).pipe((0, x.q)(1)).subscribe(([t, n, i]) => {
+                    (0, D.aj)([this.fetchProtoCollectables(), this.getBoardsAndTrinkets(), this.fetchAllLoadouts()]).pipe((0, x.q)(1)).subscribe(([t, n, i]) => {
                         this.emitProtoCollectables(t);
                         const a = n.filter(c => "board" === c.type).map(c => Object.assign(Object.assign(Object.assign({}, c), c.class_properties), {owned: !0}));
                         this.emitOwnedBoards(a), this.emitAllBoards(this.buildOutAllBoards(t, a));
@@ -1662,7 +1719,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.LFG(_.Ft), e.LFG(h.mI), e.LFG(h.eQ))
+                return new (t || o)(e.LFG(_.Ft), e.LFG(f.mI), e.LFG(_._q))
             }, o.\u0275prov = e.Yz7({token: o, factory: o.\u0275fac}), o
         })();
         var an = g(96727), Xo = g(24058), Ko = g(4390), Z = (() => {
@@ -1733,7 +1790,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(be.F0), e.Y36(e.R0b), e.Y36(ce.MZ), e.Y36(ei.f), e.Y36(vt.g), e.Y36(I.Z), e.Y36(h.mI), e.Y36(ti.f), e.Y36(L.Qz), e.Y36(Oe.F), e.Y36(h.Ho), e.Y36(_.jt), e.Y36(_.cM), e.Y36(_.TJ), e.Y36(h.B3))
+                return new (t || o)(e.Y36(be.F0), e.Y36(e.R0b), e.Y36(ce.MZ), e.Y36(ei.f), e.Y36(vt.g), e.Y36(I.Z), e.Y36(f.mI), e.Y36(ti.f), e.Y36(L.Qz), e.Y36(Oe.F), e.Y36(f.Ho), e.Y36(_.jt), e.Y36(_.cM), e.Y36(_.TJ), e.Y36(f.B3))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["cerberus-desktop-header-provider"]],
@@ -1806,13 +1863,10 @@
 
         let ui = (() => {
             class o {
-                constructor(t, n, i, a, s, c, d, p, w, v, k, A, G, U, E, de, ne, R, gg, pg, ug, _g) {
-                    this.gameService = n, this.authService = p, this.assetsService = E, this.ngRxStore = de, this.modalService = ne, this.audioService = R, this.vcr = gg, this.playService = pg, this.loggerService = ug, this.cerberusModalService = _g, this.inGame = !1, this.branch = "beta", this.Flags = _.vU, this.unsubscribe = new M.xQ, this.inTutorial = !1, this.checkClearLogs(), this.watchForInGame(), this.audioService.loginToLauncher.play(), n.checkInstallationPath(1), this.branch = n.getProperty(1, "branch"), p.account$.pipe((0, S.h)(Ue => !!Ue), (0, u.R)(this.unsubscribe)).subscribe(Ue => {
+                constructor(t, n, i, a, s, c, d, p, w, v, k, A, G, U, E, de, ne, R, dg, gg, pg) {
+                    this.gameService = n, this.authService = p, this.ngRxStore = E, this.modalService = de, this.audioService = ne, this.vcr = R, this.playService = dg, this.loggerService = gg, this.cerberusModalService = pg, this.inGame = !1, this.branch = "beta", this.Flags = _.vU, this.unsubscribe = new M.xQ, this.inTutorial = !1, this.checkClearLogs(), this.watchForInGame(), this.audioService.loginToLauncher.play(), n.checkInstallationPath(1), this.branch = n.getProperty(1, "branch"), p.account$.pipe((0, S.h)(Ue => !!Ue), (0, u.R)(this.unsubscribe)).subscribe(Ue => {
                         c.fetchAccountThresholdsByUserId(Ue.id)
-                    }), c.fetchGameRanks(), t.fetchGameModes(), i.fetchProtoCards(), i.fetchInventory(), i.fetchQualityCount(), i.loadInventoryCards().pipe((0, u.R)(this.unsubscribe)).subscribe(), a.fetchStarterDecks(), a.fetchDecks(), U.fetchSealed(), n.setGuGameContext(), s.fetchExtendedAccount(), p.fetchAccount(), A.fetchFusingLevels(), G.fetchData(), n.fetchBranchesExtended(1), w.fetchFluxInfo(), v.fetchGauntletSlots(), k.loadSelectedWallet(), d.onContainerCreated("#comment", (Ue, hg) => this.modalService.setModalVCRs(Ue, this.vcr)), d.onContainerDestroyed("#comment", (Ue, hg) => this.modalService.setModalVCRs(null, null))
-                }
-
-                ngOnInit() {
+                    }), c.fetchGameRanks(), t.fetchGameModes(), i.fetchProtoCards(), i.fetchInventory(), i.fetchQualityCount(), i.loadInventoryCards().pipe((0, u.R)(this.unsubscribe)).subscribe(), a.fetchStarterDecks(), a.fetchDecks(), U.fetchSealed(), n.setGuGameContext(), s.fetchExtendedAccount(), p.fetchAccount(), A.fetchFusingLevels(), G.fetchData(), n.fetchBranchesExtended(1), w.fetchFluxInfo(), v.fetchGauntletSlots(), k.loadSelectedWallet(), d.onContainerCreated("#comment", (Ue, ug) => this.modalService.setModalVCRs(Ue, this.vcr)), d.onContainerDestroyed("#comment", (Ue, ug) => this.modalService.setModalVCRs(null, null))
                 }
 
                 ngOnDestroy() {
@@ -1836,8 +1890,8 @@
                             case z.OC.PROGRESSION_ACCOUNT:
                                 t.gameModeId === P.B_.TUTORIAL && this.inTutorial ? (this.showTutorialEndModal(), this.inTutorial = !1) : this.modalService.createModal($o, {gameModeId: t.gameModeId}, {
                                     canCloseFromOutside: !1,
-                                    position: m.e1.Center,
-                                    size: m.Cg.Fullscreen
+                                    position: h.e1.Center,
+                                    size: h.Cg.Fullscreen
                                 });
                                 break;
                             case z.OC.OUT:
@@ -1857,7 +1911,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(ee.xV), e.Y36(tt.hM), e.Y36(_.dK), e.Y36(te.D), e.Y36(ce.MZ), e.Y36(j.$z), e.Y36(ze), e.Y36(h.mI), e.Y36(_.TJ), e.Y36(Fe), e.Y36(Pe.d), e.Y36(we), e.Y36(xe), e.Y36(X.H), e.Y36(h.eQ), e.Y36(an.yh), e.Y36(I.Z), e.Y36(h.pk), e.Y36(e.s_b), e.Y36(z.GT), e.Y36(Xo.m), e.Y36(L.Qz))
+                return new (t || o)(e.Y36(ee.xV), e.Y36(tt.hM), e.Y36(_.dK), e.Y36(te.D), e.Y36(ce.MZ), e.Y36(j.$z), e.Y36(ze), e.Y36(f.mI), e.Y36(_.TJ), e.Y36(Fe), e.Y36(Pe.d), e.Y36(we), e.Y36(xe), e.Y36(X.H), e.Y36(an.yh), e.Y36(I.Z), e.Y36(f.pk), e.Y36(e.s_b), e.Y36(z.GT), e.Y36(Xo.m), e.Y36(L.Qz))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-gu"]],
@@ -1937,7 +1991,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(h.pk))
+                return new (t || o)(e.Y36(f.pk))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-modal-sidebar"]],
@@ -1951,7 +2005,7 @@
                         return n.closeButtonClick()
                     }), e.qZA(), e.Hsn(1))
                 },
-                styles: ["[_nghost-%COMP%]{padding-top:calc(var(--vh) * 4.5);display:flex;flex-flow:column nowrap;align-items:center;width:calc(var(--vh) * 7.7);position:absolute;top:0;left:0;height:100%}.closeButton[_ngcontent-%COMP%]{width:calc(var(--vh) * 3);height:calc(var(--vh) * 3);font-size:calc(var(--vh) * 1.7);border-radius:50%;display:flex;line-height:1;border:2px solid var(--gu-blue);color:var(--gu-blue);cursor:pointer}.closeButton[_ngcontent-%COMP%]:hover{border-color:var(--gu-blue-hover);color:var(--gu-blue-hover)}.closeButton[_ngcontent-%COMP%]     i{margin:auto;line-height:1}"]
+                styles: ["[_nghost-%COMP%]{padding-top:calc(var(--vh) * 4.5);display:flex;flex-flow:column nowrap;align-items:center;width:calc(var(--vh) * 7.7);position:absolute;top:0;left:0;height:100%}.closeButton[_ngcontent-%COMP%]{width:calc(var(--vh) * 3);height:calc(var(--vh) * 3);font-size:calc(var(--vh) * 1.7);border-radius:50%;display:flex;line-height:1;border:2px solid var(--gu-blue);color:var(--gu-blue);cursor:pointer}.closeButton[_ngcontent-%COMP%]:hover{border-color:var(--gu-yellow);color:var(--gu-yellow)}.closeButton[_ngcontent-%COMP%]     i{margin:auto;line-height:1}"]
             }), o
         })(), ot = (() => {
             class o {
@@ -2043,7 +2097,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(_.dK), e.Y36(e.SBq), e.Y36(h.pk))
+                return new (t || o)(e.Y36(_.dK), e.Y36(e.SBq), e.Y36(f.pk))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-card2"]],
@@ -2056,7 +2110,7 @@
                 features: [e.TTD],
                 decls: 1,
                 vars: 3,
-                consts: [[3, "inputProtoData", "quality", "responsiveSrcsetSizes", "mouseenter"]],
+                consts: [["data-test-id", "composited-card", 3, "inputProtoData", "quality", "responsiveSrcsetSizes", "mouseenter"]],
                 template: function (t, n) {
                     1 & t && (e.TgZ(0, "composited-card", 0), e.NdJ("mouseenter", function () {
                         // noop thanks
@@ -2223,7 +2277,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(T.qu), e.Y36(h.pk))
+                return new (t || o)(e.Y36(T.qu), e.Y36(f.pk))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-filter-sort-bar"]],
@@ -2247,7 +2301,7 @@
                 features: [e.TTD],
                 decls: 4,
                 vars: 4,
-                consts: [[4, "ngIf"], ["class", "filterLabel filterLabel--leftSpacing", 4, "ngIf"], ["class", "filterButtonAndTooltip", 3, "title", 4, "ngFor", "ngForOf"], ["class", "unownedCheckbox", 3, "formGroup", "click", 4, "ngIf"], [1, "filterLabel"], [1, "filterButtonAndTooltip", 3, "title"], ["class", "filterButton", 3, "ngClass", "click", 4, "ngIf"], [1, "filterButton", 3, "ngClass", "click"], [1, "filterButton__text"], [1, "filterLabel", "filterLabel--leftSpacing"], [1, "filterButton__icon", 3, "iconLigature"], [1, "unownedCheckbox", 3, "formGroup", "click"], ["value", "escrow", "name", "ownership", "formControlName", "ownership", "type", "radio", "id", "escrowCheckbox", 1, "form-check-input"], ["for", "escrowCheckbox", 1, "checker", "checker--radio"], ["for", "escrowCheckbox", 1, "form-check-label", "unownedCheckbox__text"], ["value", "owned", "name", "ownership", "formControlName", "ownership", "type", "radio", "id", "ownedCheckbox", 1, "form-check-input"], ["for", "ownedCheckbox", 1, "checker", "checker--radio"], ["for", "ownedCheckbox", 1, "form-check-label", "unownedCheckbox__text"], ["value", "all", "name", "ownership", "formControlName", "ownership", "type", "radio", "id", "allCheckbox", 1, "form-check-input"], ["for", "allCheckbox", 1, "checker", "checker--radio"], ["for", "allCheckbox", 1, "form-check-label", "unownedCheckbox__text"]],
+                consts: [[4, "ngIf"], ["class", "filterLabel filterLabel--leftSpacing", 4, "ngIf"], ["class", "filterButtonAndTooltip", 3, "title", 4, "ngFor", "ngForOf"], ["class", "unownedCheckbox", 3, "formGroup", "click", 4, "ngIf"], [1, "filterLabel"], [1, "filterButtonAndTooltip", 3, "title"], ["class", "filterButton", 3, "ngClass", "click", 4, "ngIf"], [1, "filterButton", 3, "ngClass", "click"], [1, "filterButton__text"], [1, "filterLabel", "filterLabel--leftSpacing"], [1, "filterButton__icon", 3, "iconLigature"], [1, "unownedCheckbox", 3, "formGroup", "click"], ["value", "escrow", "name", "ownership", "formControlName", "ownership", "type", "radio", "id", "escrowCheckbox", 1, "form-check-input"], ["for", "escrowCheckbox", 1, "checker", "checker--radio"], ["for", "escrowCheckbox", 1, "form-check-label", "unownedCheckbox__text"], ["value", "owned", "name", "ownership", "formControlName", "ownership", "type", "radio", "id", "ownedCheckbox", "data-test-id", "ownedCheckbox", 1, "form-check-input"], ["for", "ownedCheckbox", 1, "checker", "checker--radio"], ["for", "ownedCheckbox", 1, "form-check-label", "unownedCheckbox__text"], ["value", "all", "name", "ownership", "formControlName", "ownership", "type", "radio", "id", "allCheckbox", 1, "form-check-input"], ["for", "allCheckbox", 1, "checker", "checker--radio"], ["for", "allCheckbox", 1, "form-check-label", "unownedCheckbox__text"]],
                 template: function (t, n) {
                     1 & t && (e.YNc(0, yi, 5, 2, "ng-container", 0), e.YNc(1, ki, 2, 0, "div", 1), e.YNc(2, Oi, 3, 5, "app-tooltip", 2), e.YNc(3, Pi, 13, 1, "form", 3)), 2 & t && (e.Q6J("ngIf", n.showFilters), e.xp6(1), e.Q6J("ngIf", !n.noSortByLabel), e.xp6(1), e.Q6J("ngForOf", n.sortOptions), e.xp6(1), e.Q6J("ngIf", n.unownedCheckboxVisible))
                 },
@@ -2256,11 +2310,11 @@
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained, serif;font-weight:700}.filterLabel[_ngcontent-%COMP%], .filterButton__text[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif}.filterButton__text[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.filterLabel[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.11)}[_nghost-%COMP%]{display:flex;flex-wrap:wrap;width:100%;}.filterLabel[_ngcontent-%COMP%]{padding-right:calc(var(--vw) * .7);color:#7192b0;align-self:center}.filterLabel--leftSpacing[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 1)}.filterButtonAndTooltip[_ngcontent-%COMP%]{margin-right:calc(var(--vw) * .5)}.filterButtonAndTooltip[_ngcontent-%COMP%]:last-of-type {margin-right:0}.filterButton[_ngcontent-%COMP%]{min-width:calc(var(--vw) * 1.45);height:calc(var(--vw) * 1.45);margin-right:calc(var(--vw) * .2);border-radius:calc(var(--vh) * .4);display:flex;padding:0;cursor:pointer;border:calc(var(--vh) * .15) solid #182531;background:#0c1620;color:#7192b0;outline:none}.filterButton.selected[_ngcontent-%COMP%]{background:#3d5a74;border-color:#7192b0;color:#f6f6f6}.filterButton[_ngcontent-%COMP%]:hover {color:#f6f6f6;background:#3d5a74;border-color:#3d5a74}.filterButton__text[_ngcontent-%COMP%]{line-height:1;margin:auto;padding:0 4px}.filterButton__icon[_ngcontent-%COMP%]{font-size:calc(var(--vw) * .9);margin:auto;line-height:1;display:flex}.unownedCheckbox[_ngcontent-%COMP%]{display:flex;margin-left:auto;margin-top:4px;align-items:center}.form-check-label[_ngcontent-%COMP%]{color:#7192b0}"]
             }), o
         })();
-        var Si = g(1025);
+        g(1025);
         let ke = (() => {
             class o {
                 constructor(t, n) {
-                    this.cardsService = t, this.featureFlagsService = n, this.gods = ["death", "deception", "light", "magic", "nature", "war", "neutral"], this.sets = ["genesis", "core", "etherbots", "promo", "mythic", "welcome", "trial", "order", "mortal"], this.rarities = ["legendary", "epic", "rare", "common", "mythic"], this.types = ["spell", "weapon", "creature"], this.tribes = ["aether", "amazon", "anubian", "atlantean", "dragon", "nether", "olympian", "viking", "guild", "mystic", "structure", "wild"], this.qualities = ["no quality", "diamond", "gold", "shadow", "meteorite", "plain"], this.numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8], this.destroyed$ = new M.xQ, this.numberIncludedInGroup = i => i < 9, this.stringIncludedInGroup = i => !!i, this._initSetFilters(), this._initGroupingRules(), this._initGroupings(), this.cardsService.inventory$.pipe((0, b.b)(i => this.inventoryCardsMap = i)).subscribe()
+                    this.cardsService = t, this.featureFlagsService = n, this.gods = ["death", "deception", "light", "magic", "nature", "war", "neutral"], this.sets = ["genesis", "core", "etherbots", "promo", "mythic", "welcome", "trial", "order", "mortal"], this.rarities = ["legendary", "epic", "rare", "common", "mythic"], this.types = ["spell", "weapon", "creature"], this.tribes = ["aether", "amazon", "anubian", "atlantean", "dragon", "nether", "olympian", "viking", "guild", "mystic", "structure", "wild"], this.qualities = ["no quality", "diamond", "gold", "shadow", "meteorite", "plain"], this.numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8], this.destroyed$ = new M.xQ, this.numberIncludedInGroup = i => i < 9, this.stringIncludedInGroup = i => !!i, this._initGroupingRules(), this._initGroupings(), this.cardsService.inventory$.pipe((0, b.b)(i => this.inventoryCardsMap = i)).subscribe()
                 }
 
                 ngOnDestroy() {
@@ -2281,12 +2335,6 @@
 
                 get groupingsNoTribe() {
                     return this._groupings.filter(t => t.groupingType !== F.Tribe)
-                }
-
-                _initSetFilters() {
-                    this.featureFlagsService.get(Si.v.mortalJudgementEnabled).pipe((0, u.R)(this.destroyed$)).subscribe(t => {
-                        t || (this.sets = [...this.sets])
-                    })
                 }
 
                 _initGroupingRules() {
@@ -2355,7 +2403,7 @@
 
                 newQualityMap() {
                     const t = new Map;
-                    for (const n in f.nJ) "number" == typeof f.nJ[n] && t.set(f.nJ[n], []);
+                    for (const n in m.nJ) "number" == typeof m.nJ[n] && t.set(m.nJ[n], []);
                     return t
                 }
 
@@ -2386,15 +2434,15 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.LFG(_.dK), e.LFG(h.B3))
+                return new (t || o)(e.LFG(_.dK), e.LFG(f.B3))
             }, o.\u0275prov = e.Yz7({token: o, factory: o.\u0275fac}), o
         })();
         var xt = g(80013);
-        const Ti = function (o) {
+        const Si = function (o) {
             return {selected: o}
         };
 
-        function Ii(o, r) {
+        function Ti(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.ynx(0), e.TgZ(1, "app-tooltip", 2)(2, "button", 3), e.NdJ("click", function () {
@@ -2404,11 +2452,11 @@
             }
             if (2 & o) {
                 const t = r.$implicit, n = e.oxw();
-                e.xp6(1), e.MGl("title", "Group by ", t.name, ""), e.xp6(1), e.Q6J("ngClass", e.VKq(3, Ti, n.isSelected(t))), e.xp6(1), e.Q6J("iconLigature", "filter_" + t.name.toLowerCase())
+                e.xp6(1), e.MGl("title", "Group by ", t.name, ""), e.xp6(1), e.Q6J("ngClass", e.VKq(3, Si, n.isSelected(t))), e.xp6(1), e.Q6J("iconLigature", "filter_" + t.name.toLowerCase())
             }
         }
 
-        function Ai(o, r) {
+        function Ii(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "input", 5), e.NdJ("click", function () {
@@ -2457,7 +2505,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(h.pk))
+                return new (t || o)(e.Y36(f.pk))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-singular-active-filter-bar"]],
@@ -2472,14 +2520,14 @@
                 vars: 2,
                 consts: [[4, "ngFor", "ngForOf"], ["type", "search", "class", "searchBox", "placeholder", "Search...", 3, "formControl", "click", 4, "ngIf"], [1, "filterButtonAndTooltip", 3, "title"], [1, "filterButton", 3, "ngClass", "click"], [1, "filterButton__icon", 3, "iconLigature"], ["type", "search", "placeholder", "Search...", 1, "searchBox", 3, "formControl", "click"]],
                 template: function (t, n) {
-                    1 & t && (e.YNc(0, Ii, 4, 5, "ng-container", 0), e.YNc(1, Ai, 1, 1, "input", 1)), 2 & t && (e.Q6J("ngForOf", n.groupings), e.xp6(1), e.Q6J("ngIf", n.displaySearch))
+                    1 & t && (e.YNc(0, Ti, 4, 5, "ng-container", 0), e.YNc(1, Ii, 1, 1, "input", 1)), 2 & t && (e.Q6J("ngForOf", n.groupings), e.xp6(1), e.Q6J("ngIf", n.displaySearch))
                 },
                 directives: [l.sg, De.K, l.mk, l.O5, T.Fj, T.JJ, T.oH],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.searchBox[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.searchBox[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.searchBox[_ngcontent-%COMP%]{line-height:1.4}[_nghost-%COMP%]{display:flex}.filterButton[_ngcontent-%COMP%]{width:calc(var(--vw) * 1.8);height:calc(var(--vw) * 1.8);border:calc(var(--vh) * .15) solid #182531;border-radius:calc(var(--vh) * .4);background:#0c1620;color:#7192b0;display:flex;padding:0;outline:none}.filterButton.selected[_ngcontent-%COMP%]{background:#3d5a74;border-color:#7192b0;color:#f6f6f6}.filterButton[_ngcontent-%COMP%]:hover{color:#f6f6f6;background:#3d5a74;border-color:#3d5a74}.filterButtonAndTooltip[_ngcontent-%COMP%]{margin-right:calc(var(--vw) * .5)}.filterButton__icon[_ngcontent-%COMP%]{font-size:calc(var(--vw) * 1);margin:auto;line-height:1;display:flex}.searchBox[_ngcontent-%COMP%]{margin-right:calc(var(--vw) * .5);padding-left:calc(var(--vw) * .5);padding-right:calc(var(--vw) * .5);outline:none;background:#182531;color:#7192b0;border:1px solid #0f1b27;border-radius:calc(var(--vh) * .4)}.searchBox[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#7192b0}"]
             }), o
         })();
 
-        function Fi(o, r) {
+        function Ai(o, r) {
             if (1 & o && e._UZ(0, "img", 1), 2 & o) {
                 const t = e.oxw();
                 e.MGl("src", "/gu-assets/images/gods/", t.god.toLowerCase(), ".webp", e.LSH)
@@ -2518,14 +2566,14 @@
                 vars: 1,
                 consts: [["class", "godBadge__image", "alt", "god badge illustration", 3, "src", 4, "ngIf"], ["alt", "god badge illustration", 1, "godBadge__image", 3, "src"]],
                 template: function (t, n) {
-                    1 & t && e.YNc(0, Fi, 1, 1, "img", 0), 2 & t && e.Q6J("ngIf", n.god)
+                    1 & t && e.YNc(0, Ai, 1, 1, "img", 0), 2 & t && e.Q6J("ngIf", n.god)
                 },
                 directives: [l.O5],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained, serif;font-weight:700}[_nghost-%COMP%]{width:calc(var(--vw) * 2.64);height:calc(var(--vw) * 2.64);display:flex;transition:all .5s ease-in-out;overflow:hidden;opacity:1;transform:rotate(45deg);}.godBadge--empty[_nghost-%COMP%]{box-shadow:none;border:calc(var(--vh) * .2) solid #527493;}.godBadge__image[_ngcontent-%COMP%]{display:block;margin-left:-25%;margin-top:-25%;width:150%;height:150%;transform:rotate(-45deg)}"]
             }), o
         })();
-        var Di = g(22313);
-        const Gi = ["*"];
+        var Fi = g(22313);
+        const Di = ["*"];
         let it = (() => {
             class o {
                 constructor(t, n, i, a) {
@@ -2572,7 +2620,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(K._), e.Y36(Di.H7), e.Y36(e.SBq), e.Y36(e.Qsj))
+                return new (t || o)(e.Y36(K._), e.Y36(Fi.H7), e.Y36(e.SBq), e.Y36(e.Qsj))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-grid-display"]],
@@ -2586,7 +2634,7 @@
                     rowGapVhMultiplyer: "rowGapVhMultiplyer",
                     className: "className"
                 },
-                ngContentSelectors: Gi,
+                ngContentSelectors: Di,
                 decls: 1,
                 vars: 0,
                 template: function (t, n) {
@@ -2671,21 +2719,21 @@
             }), o
         })();
 
-        function Zi(o, r) {
+        function Gi(o, r) {
             if (1 & o && (e.TgZ(0, "div", 10), e._UZ(1, "gu-icon", 11), e.TgZ(2, "span", 12), e._uU(3), e.qZA()()), 2 & o) {
                 const t = e.oxw(2).$implicit, n = e.oxw(3);
                 e.xp6(3), e.Oqu(n.calculateDisplayedCount(t.value))
             }
         }
 
-        function Bi(o, r) {
+        function Zi(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "div", 7)(1, "app-card2", 8), e.NdJ("click", function () {
                     e.CHM(t);
                     const i = e.oxw().$implicit;
                     return e.oxw(3).selectCard(i.value)
-                }), e.qZA(), e.YNc(2, Zi, 4, 1, "div", 9), e.qZA()
+                }), e.qZA(), e.YNc(2, Gi, 4, 1, "div", 9), e.qZA()
             }
             if (2 & o) {
                 const t = e.oxw().$implicit, n = e.oxw(2).$implicit, i = e.oxw();
@@ -2693,42 +2741,42 @@
             }
         }
 
-        function Li(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, Bi, 3, 7, "div", 6), e.BQk()), 2 & o) {
+        function Bi(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, Zi, 3, 7, "div", 6), e.BQk()), 2 & o) {
                 const t = r.$implicit, n = e.oxw(3);
                 e.xp6(1), e.Q6J("ngIf", t.value.length > 0 && n.calculateDisplayedCount(t.value) > 0)
             }
         }
 
-        function Ui(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, Li, 2, 1, "ng-container", 4), e.ALo(2, "keyvalue"), e.BQk()), 2 & o) {
+        function Li(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, Bi, 2, 1, "ng-container", 4), e.ALo(2, "keyvalue"), e.BQk()), 2 & o) {
                 const t = e.oxw().$implicit;
                 e.xp6(1), e.Q6J("ngForOf", e.lcZ(2, 1, t.qualityMap))
             }
         }
 
-        function Ei(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, Ui, 3, 3, "ng-container", 5), e.BQk()), 2 & o) {
+        function Ui(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, Li, 3, 3, "ng-container", 5), e.BQk()), 2 & o) {
                 const t = r.$implicit;
                 e.xp6(1), e.Q6J("ngIf", t.qualityMap)
             }
         }
 
-        function Ni(o, r) {
+        function Ei(o, r) {
             if (1 & o && (e.TgZ(0, "div", 14), e._UZ(1, "app-card2", 15), e.qZA()), 2 & o) {
                 const t = e.oxw().$implicit;
                 e.xp6(1), e.Q6J("protoId", t.pc.proto)("quality", 5)("inputCw", 0)("inputCh", 0)
             }
         }
 
-        function Ri(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, Ni, 2, 4, "div", 13), e.BQk()), 2 & o) {
+        function Ni(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, Ei, 2, 4, "div", 13), e.BQk()), 2 & o) {
                 const t = r.$implicit, n = e.oxw();
                 e.xp6(1), e.Q6J("ngIf", !t.qualityMap && n.showUnowned)
             }
         }
 
-        let Qi = (() => {
+        let Ri = (() => {
             class o {
                 constructor() {
                     this.columns = 8, this.showOnlyEscrow = !1, this.showUnowned = !1, this.filterCardIds = [], this.showCardCounts = !0, this.selectCardId = new e.vpe
@@ -2767,9 +2815,9 @@
                 outputs: {selectCardId: "selectCardId"},
                 decls: 10,
                 vars: 12,
-                consts: [[1, "groupedCardsHeader"], [1, "groupedCardsHeader__groupingName"], [1, "groupedCardsHeader__cardsCount"], [1, "cardGrid", 3, "columns", "columnGapVwMultiplyer"], [4, "ngFor", "ngForOf"], [4, "ngIf"], ["class", "cardItemWrapper", 3, "cardItemWrapper--dimmed", 4, "ngIf"], [1, "cardItemWrapper"], ["appSingleCardHoverFX", "", 3, "protoId", "quality", "inputCw", "inputCh", "click"], ["class", "cardCount", 4, "ngIf"], [1, "cardCount"], ["iconLigature", "stat_card", 1, "cardCount__icon"], [1, "cardCount__count"], ["class", "cardItemWrapper cardItemWrapper--greyed", 4, "ngIf"], [1, "cardItemWrapper", "cardItemWrapper--greyed"], ["appSingleCardHoverFX", "", 3, "protoId", "quality", "inputCw", "inputCh"]],
+                consts: [[1, "groupedCardsHeader"], [1, "groupedCardsHeader__groupingName"], [1, "groupedCardsHeader__cardsCount"], [1, "cardGrid", 3, "columns", "columnGapVwMultiplyer"], [4, "ngFor", "ngForOf"], [4, "ngIf"], ["class", "cardItemWrapper", "data-test-id", "selectCard", 3, "cardItemWrapper--dimmed", 4, "ngIf"], ["data-test-id", "selectCard", 1, "cardItemWrapper"], ["appSingleCardHoverFX", "", 3, "protoId", "quality", "inputCw", "inputCh", "click"], ["class", "cardCount", 4, "ngIf"], [1, "cardCount"], ["iconLigature", "stat_card", 1, "cardCount__icon"], [1, "cardCount__count"], ["class", "cardItemWrapper cardItemWrapper--greyed", 4, "ngIf"], [1, "cardItemWrapper", "cardItemWrapper--greyed"], ["appSingleCardHoverFX", "", 3, "protoId", "quality", "inputCw", "inputCh"]],
                 template: function (t, n) {
-                    1 & t && (e.TgZ(0, "header", 0)(1, "h4", 1), e._uU(2), e.ALo(3, "titlecase"), e.ALo(4, "titlecase"), e.qZA(), e.TgZ(5, "h4", 2), e._uU(6), e.qZA()(), e.TgZ(7, "app-grid-display", 3), e.YNc(8, Ei, 2, 1, "ng-container", 4), e.YNc(9, Ri, 2, 1, "ng-container", 4), e.qZA()), 2 & t && (e.xp6(2), e.AsE(" ", e.lcZ(3, 8, n.grouping.currentGrouping.name), ": ", e.lcZ(4, 10, n.grouping.header), " "), e.xp6(4), e.AsE(" ", n.calculateOwnedCards(n.grouping.cards), " / ", n.grouping.cards.length, " "), e.xp6(1), e.Q6J("columns", n.columns)("columnGapVwMultiplyer", .8), e.xp6(1), e.Q6J("ngForOf", n.grouping.cards), e.xp6(1), e.Q6J("ngForOf", n.grouping.cards))
+                    1 & t && (e.TgZ(0, "header", 0)(1, "h4", 1), e._uU(2), e.ALo(3, "titlecase"), e.ALo(4, "titlecase"), e.qZA(), e.TgZ(5, "h4", 2), e._uU(6), e.qZA()(), e.TgZ(7, "app-grid-display", 3), e.YNc(8, Ui, 2, 1, "ng-container", 4), e.YNc(9, Ni, 2, 1, "ng-container", 4), e.qZA()), 2 & t && (e.xp6(2), e.AsE(" ", e.lcZ(3, 8, n.grouping.currentGrouping.name), ": ", e.lcZ(4, 10, n.grouping.header), " "), e.xp6(4), e.AsE(" ", n.calculateOwnedCards(n.grouping.cards), " / ", n.grouping.cards.length, " "), e.xp6(1), e.Q6J("columns", n.columns)("columnGapVwMultiplyer", .8), e.xp6(1), e.Q6J("ngForOf", n.grouping.cards), e.xp6(1), e.Q6J("ngForOf", n.grouping.cards))
                 },
                 directives: [it, l.sg, l.O5, Y, yt],
                 pipes: [l.rS, l.Nd],
@@ -2778,57 +2826,57 @@
         })();
         var kt = g(44290), Ge = g(44416);
 
-        function qi(o, r) {
+        function Qi(o, r) {
             1 & o && (e.TgZ(0, "div", 13)(1, "div", 14)(2, "gu-vertical-space", 15)(3, "gu-paragraph-text", 16), e._uU(4, " NOT FUSABLE "), e.qZA(), e._UZ(5, "gu-icon", 17), e.qZA()()())
         }
 
-        const Hi = function (o) {
+        const qi = function (o) {
             return {"cardItem--escrow": o}
-        }, Yi = function (o, r) {
+        }, Hi = function (o, r) {
             return {"cardItem--selected": o, "cardItem--dimmed": r}
         };
 
-        function Ji(o, r) {
+        function Yi(o, r) {
             if (1 & o) {
                 const t = e.EpF();
-                e.TgZ(0, "div", 10), e.YNc(1, qi, 6, 0, "div", 11), e.TgZ(2, "app-card2", 12), e.NdJ("click", function () {
+                e.TgZ(0, "div", 10), e.YNc(1, Qi, 6, 0, "div", 11), e.TgZ(2, "app-card2", 12), e.NdJ("click", function () {
                     const a = e.CHM(t).$implicit, s = e.oxw(2).$implicit, c = e.oxw();
                     return c.selectCard(c.card.pc.proto, s.key, a.id)
                 }), e.qZA()()
             }
             if (2 & o) {
                 const t = r.$implicit, n = e.oxw(2).$implicit, i = e.oxw();
-                e.Q6J("ngClass", e.VKq(5, Hi, "escrow" === t.status)), e.xp6(1), e.Q6J("ngIf", "escrow" === t.status), e.xp6(1), e.Q6J("protoId", i.card.pc.proto)("quality", n.key)("ngClass", e.WLB(7, Yi, i.isCardInForge(t.id), !i.isCardSelectable(n.key, t.id)))
+                e.Q6J("ngClass", e.VKq(5, qi, "escrow" === t.status)), e.xp6(1), e.Q6J("ngIf", "escrow" === t.status), e.xp6(1), e.Q6J("protoId", i.card.pc.proto)("quality", n.key)("ngClass", e.WLB(7, Hi, i.isCardInForge(t.id), !i.isCardSelectable(n.key, t.id)))
             }
         }
 
-        function $i(o, r) {
+        function Ji(o, r) {
             1 & o && (e.TgZ(0, "p", 18), e._uU(1, " You cannot forge Diamond cards. "), e.qZA())
         }
 
-        function Wi(o, r) {
+        function $i(o, r) {
             if (1 & o && (e.TgZ(0, "p", 18), e._uU(1), e.ALo(2, "titlecase"), e.qZA()), 2 & o) {
                 const t = e.oxw(3).$implicit, n = e.oxw();
                 e.xp6(1), e.AsE(" You need ", n.forgeService.fusingLevels[t.key].amount - t.value.length, " more ", e.lcZ(2, 2, n.forgeService.fusingLevels[t.key].name), " cards to forge ")
             }
         }
 
-        function zi(o, r) {
-            if (1 & o && e.YNc(0, Wi, 3, 4, "p", 19), 2 & o) {
+        function Wi(o, r) {
+            if (1 & o && e.YNc(0, $i, 3, 4, "p", 19), 2 & o) {
                 const t = e.oxw(2).$implicit, n = e.oxw();
                 e.Q6J("ngIf", t.value.length < n.forgeService.fusingLevels[t.key].amount)
             }
         }
 
-        function ji(o, r) {
-            if (1 & o && (e.ynx(0), e.TgZ(1, "header", 3)(2, "h4", 4), e._uU(3), e.ALo(4, "titlecase"), e.qZA(), e.TgZ(5, "h4", 5), e._uU(6), e.qZA()(), e.TgZ(7, "div", 6), e.YNc(8, Ji, 3, 10, "div", 7), e.qZA(), e.YNc(9, $i, 2, 0, "p", 8), e.YNc(10, zi, 1, 1, "ng-template", null, 9, e.W1O), e.BQk()), 2 & o) {
+        function zi(o, r) {
+            if (1 & o && (e.ynx(0), e.TgZ(1, "header", 3)(2, "h4", 4), e._uU(3), e.ALo(4, "titlecase"), e.qZA(), e.TgZ(5, "h4", 5), e._uU(6), e.qZA()(), e.TgZ(7, "div", 6), e.YNc(8, Yi, 3, 10, "div", 7), e.qZA(), e.YNc(9, Ji, 2, 0, "p", 8), e.YNc(10, Wi, 1, 1, "ng-template", null, 9, e.W1O), e.BQk()), 2 & o) {
                 const t = e.MAs(11), n = e.oxw().$implicit, i = e.oxw();
                 e.xp6(3), e.hij(" ", e.lcZ(4, 5, i.forgeService.fusingLevels[n.key].name), " "), e.xp6(3), e.hij(" ", n.value.length, " "), e.xp6(2), e.Q6J("ngForOf", n.value), e.xp6(1), e.Q6J("ngIf", 1 === n.key)("ngIfElse", t)
             }
         }
 
-        function Vi(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, ji, 12, 7, "ng-container", 2), e.BQk()), 2 & o) {
+        function ji(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, zi, 12, 7, "ng-container", 2), e.BQk()), 2 & o) {
                 const t = r.$implicit;
                 e.xp6(1), e.Q6J("ngIf", t.value.length > 0)
             }
@@ -2857,7 +2905,7 @@
                 }
 
                 selectCard(t, n, i) {
-                    n !== f.nJ.DIAMOND && (this.isCardInForge(i) ? this.forgeService.removeFromForge(t, n, i) : this.forgeService.addToForge(t, n, i))
+                    n !== m.nJ.DIAMOND && (this.isCardInForge(i) ? this.forgeService.removeFromForge(t, n, i) : this.forgeService.addToForge(t, n, i))
                 }
 
                 isCardInForge(t) {
@@ -2865,8 +2913,8 @@
                 }
 
                 isCardSelectable(t, n) {
-                    return (0, ae.mG)(this, void 0, void 0, function* () {
-                        return t !== f.nJ.DIAMOND && (!this.forgeCards || this.forgeCards.quality === t && (this.isCardInForge(n), !0))
+                    return (0, ae.__awaiter)(this, void 0, void 0, function* () {
+                        return t !== m.nJ.DIAMOND && (!this.forgeCards || this.forgeCards.quality === t && (this.isCardInForge(n), !0))
                     })
                 }
             }
@@ -2885,18 +2933,18 @@
                 vars: 6,
                 consts: [[1, "cardName"], [4, "ngFor", "ngForOf"], [4, "ngIf"], [1, "cardHeader"], [1, "cardHeader__quality"], [1, "cardHeader__cardsCount"], [1, "cardSection"], ["class", "cardItem", 3, "ngClass", 4, "ngFor", "ngForOf"], ["class", "cardSection__infoText", 4, "ngIf", "ngIfElse"], ["notDiamond", ""], [1, "cardItem", 3, "ngClass"], ["class", "cardItem__dropdown", "title", "Card is not in a state where it can be used for Fusing. Learn more by clicking on your profile, then on Transactions.", 4, "ngIf"], [1, "cardItem__card", 3, "protoId", "quality", "ngClass", "click"], ["title", "Card is not in a state where it can be used for Fusing. Learn more by clicking on your profile, then on Transactions.", 1, "cardItem__dropdown"], [1, "cardItem__dropdown__inner"], ["top", "x-large", 1, "cardItem__dropDown__inner_wrapper"], ["kind", "tag", "align", "center", "fillGradient", "gradients.gold.simple"], ["iconLigature", "alert_triangle", "align", "center", "fillGradientTarget", "bottom", "fillGradient", "gradients.gold.simple", 1, "cardItem__dropDown__inner_wrapper__icon", 2, "font-size", "16px"], [1, "cardSection__infoText"], ["class", "cardSection__infoText", 4, "ngIf"]],
                 template: function (t, n) {
-                    1 & t && (e.TgZ(0, "h1", 0), e._uU(1), e.ALo(2, "titlecase"), e.qZA(), e.YNc(3, Vi, 2, 1, "ng-container", 1), e.ALo(4, "keyvalue")), 2 & t && (e.xp6(1), e.Oqu(e.lcZ(2, 2, n.card.pc.name)), e.xp6(2), e.Q6J("ngForOf", e.lcZ(4, 4, null == n.card ? null : n.card.qualityMap)))
+                    1 & t && (e.TgZ(0, "h1", 0), e._uU(1), e.ALo(2, "titlecase"), e.qZA(), e.YNc(3, ji, 2, 1, "ng-container", 1), e.ALo(4, "keyvalue")), 2 & t && (e.xp6(1), e.Oqu(e.lcZ(2, 2, n.card.pc.name)), e.xp6(2), e.Q6J("ngForOf", e.lcZ(4, 4, null == n.card ? null : n.card.qualityMap)))
                 },
                 directives: [l.sg, l.O5, l.mk, Y],
                 pipes: [l.rS, l.Nd],
                 styles: ['@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.cardName[_ngcontent-%COMP%], .cardHeader__cardsCount[_ngcontent-%COMP%], .cardHeader__quality[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.cardSection__infoText[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.cardHeader__cardsCount[_ngcontent-%COMP%], .cardHeader__quality[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22);line-height:1.4}.cardName[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.cardSection__infoText[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.cardSection__infoText[_ngcontent-%COMP%]{line-height:1.4}[_nghost-%COMP%]{padding:calc(var(--vw) * 1);margin-bottom:calc(var(--vh) * 4);grid-area:desc;display:flex;flex-direction:column;border:calc(var(--vh) * .3) solid #1d2f41;background:#08111a;position:relative}[_nghost-%COMP%]:before{content:"";position:absolute;border:calc(var(--vh) * 2.5) solid transparent;border-bottom-color:#1d2f41;top:calc(calc(var(--vh) * 2.5) * -2.05)}[_nghost-%COMP%]:after{content:"";position:absolute;border:calc(calc(var(--vh) * 2.5) * .85) solid transparent;border-bottom-color:#08111a;top:calc(calc(calc(var(--vh) * 2.5) * .85) * -2)}.column-0[_nghost-%COMP%]:before{left:calc(var(--vw) * 3.8)}.column-0[_nghost-%COMP%]:after{left:calc(var(--vw) * 4)}.column-1[_nghost-%COMP%]:before{left:calc(var(--vw) * 15)}.column-1[_nghost-%COMP%]:after{left:calc(var(--vw) * 15.2)}.column-2[_nghost-%COMP%]:before{left:calc(var(--vw) * 25.6)}.column-2[_nghost-%COMP%]:after{left:calc(var(--vw) * 25.8)}.column-3[_nghost-%COMP%]:before{left:calc(var(--vw) * 36.5)}.column-3[_nghost-%COMP%]:after{left:calc(var(--vw) * 36.7)}.cardName[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-transform:none}.cardHeader[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 1.5);padding-bottom:calc(var(--vh) * 1.5);display:flex;position:relative;align-items:center}.cardHeader[_ngcontent-%COMP%]:before{content:"";flex:1;order:2;height:calc(var(--vh) * .25);background:#1d2f41}.cardHeader__quality[_ngcontent-%COMP%]{padding-right:calc(var(--vw) * 1);line-height:1.1;color:#f6f6f6;order:1}.cardHeader__cardsCount[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 1);line-height:1.1;margin-left:auto;color:#f6f6f6;order:3}.cardSection[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(5,1fr);align-items:start;grid-auto-rows:min-content;grid-column-gap:calc(var(--vh) * .3);margin-left:calc(var(--vw) * -.5)}.cardSection__infoText[_ngcontent-%COMP%]{font-style:italic;text-align:left;color:#f6f6f6;max-width:calc(var(--vw) * 8.5);margin-top:calc(var(--vh) * 2);margin-bottom:calc(var(--vh) * 2);margin-left:calc(var(--vw) * .5)}.cardItem[_ngcontent-%COMP%]{transition:.1s ease-in;transition-property:filter,transform;position:relative}.cardItem--escrow[_ngcontent-%COMP%]{padding-bottom:56px}.cardItem--selected[_ngcontent-%COMP%]{transform:scale(1.1);filter:drop-shadow(0 0 calc(var(--vh) * .8) rgba(89,168,205,.8))}.cardItem--dimmed[_ngcontent-%COMP%]{filter:brightness(.6)}.gridRow[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;align-items:start;grid-auto-rows:min-content;grid-template-areas:"item item item item item" "desc desc desc desc desc";grid-template-columns:repeat(5,1fr)}.cardItem__card[_ngcontent-%COMP%]{cursor:pointer}.cardItem__dropdown[_ngcontent-%COMP%]{position:absolute;background:linear-gradient(to bottom,#FFF2D8 0%,#C6A052 100%);padding:3px;width:76%;height:100px;bottom:0;left:54%;transform:translate(-50%);clip-path:polygon(0% 0%,100% 0%,100% calc(100% - var(--vh) * 4),50% 100%,0% calc(100% - var(--vh) * 4),0% 0%);-webkit-clip-path:polygon(0% 0%,100% 0%,100% calc(100% - var(--vh) * 4),50% 100%,0% calc(100% - var(--vh) * 4),0% 0%)}.cardItem__dropdown__inner[_ngcontent-%COMP%]{width:100%;height:100%;background:#0F1B27;clip-path:polygon(0% 0%,100% 0%,100% calc(100% - var(--vh) * 3.9),50% 100%,0% calc(100% - var(--vh) * 3.9),0% 0%);-webkit-clip-path:polygon(0% 0%,100% 0%,100% calc(100% - var(--vh) * 3.9),50% 100%,0% calc(100% - var(--vh) * 3.9),0% 0%);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:24px 0 20px}.cardItem__dropDown__inner_wrapper[_ngcontent-%COMP%]{display:flex;flex-direction:column}.cardItem__dropDown__inner_wrapper__tooltip[_ngcontent-%COMP%]{position:relative}']
             }), o
         })();
-        const Xi = function (o) {
+        const Vi = function (o) {
             return {"gridRow__cardItemWrapper--dimmed": o}
         };
 
-        function Ki(o, r) {
+        function Xi(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-card2", 7), e.NdJ("click", function () {
@@ -2906,67 +2954,67 @@
             }
             if (2 & o) {
                 const t = r.$implicit, n = e.oxw(3);
-                e.Q6J("protoId", t.pc.proto)("quality", 5)("inputCh", 0)("inputCw", 0)("ngClass", e.VKq(5, Xi, n.expandedCard && t.pc.proto !== n.expandedCard.card.pc.proto))
+                e.Q6J("protoId", t.pc.proto)("quality", 5)("inputCh", 0)("inputCw", 0)("ngClass", e.VKq(5, Vi, n.expandedCard && t.pc.proto !== n.expandedCard.card.pc.proto))
             }
         }
 
-        function er(o, r) {
+        function Ki(o, r) {
             if (1 & o && e._UZ(0, "cerberus-app-expanded-cards", 9), 2 & o) {
                 const t = e.oxw(4);
                 e.Q6J("card", t.expandedCard.card)("cardRowIndex", t.expandedCard.cardRowIndex)
             }
         }
 
-        function tr(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, er, 1, 2, "cerberus-app-expanded-cards", 8), e.BQk()), 2 & o) {
+        function er(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, Ki, 1, 2, "cerberus-app-expanded-cards", 8), e.BQk()), 2 & o) {
                 const t = e.oxw().index, n = e.oxw(2);
                 e.xp6(1), e.Q6J("ngIf", n.expandedCard && n.expandedCard.groupingIndex === n.groupingIndex && n.expandedCard.gridRowIndex === t)
             }
         }
 
-        function nr(o, r) {
+        function tr(o, r) {
             if (1 & o && e._UZ(0, "app-expanded-cards-signing", 9), 2 & o) {
                 const t = e.oxw(4);
                 e.Q6J("card", t.expandedCard.card)("cardRowIndex", t.expandedCard.cardRowIndex)
             }
         }
 
-        function or(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, nr, 1, 2, "app-expanded-cards-signing", 8), e.BQk()), 2 & o) {
+        function nr(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, tr, 1, 2, "app-expanded-cards-signing", 8), e.BQk()), 2 & o) {
                 const t = e.oxw().index, n = e.oxw(2);
                 e.xp6(1), e.Q6J("ngIf", n.expandedCard && n.expandedCard.groupingIndex === n.groupingIndex && n.expandedCard.gridRowIndex === t)
             }
         }
 
-        function ir(o, r) {
+        function or(o, r) {
             if (1 & o && e._UZ(0, "app-expanded-cards-selling", 9), 2 & o) {
                 const t = e.oxw(4);
                 e.Q6J("card", t.expandedCard.card)("cardRowIndex", t.expandedCard.cardRowIndex)
             }
         }
 
-        function rr(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, ir, 1, 2, "app-expanded-cards-selling", 8), e.BQk()), 2 & o) {
+        function ir(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, or, 1, 2, "app-expanded-cards-selling", 8), e.BQk()), 2 & o) {
                 const t = e.oxw().index, n = e.oxw(2);
                 e.xp6(1), e.Q6J("ngIf", n.expandedCard && n.expandedCard.groupingIndex === n.groupingIndex && n.expandedCard.gridRowIndex === t)
             }
         }
 
-        function ar(o, r) {
-            if (1 & o && (e.TgZ(0, "app-grid-display", 5), e.YNc(1, Ki, 1, 7, "app-card2", 6), e.YNc(2, tr, 2, 1, "ng-container", 0), e.YNc(3, or, 2, 1, "ng-container", 0), e.YNc(4, rr, 2, 1, "ng-container", 0), e.qZA()), 2 & o) {
+        function rr(o, r) {
+            if (1 & o && (e.TgZ(0, "app-grid-display", 5), e.YNc(1, Xi, 1, 7, "app-card2", 6), e.YNc(2, er, 2, 1, "ng-container", 0), e.YNc(3, nr, 2, 1, "ng-container", 0), e.YNc(4, ir, 2, 1, "ng-container", 0), e.qZA()), 2 & o) {
                 const t = r.$implicit, n = e.oxw(2);
                 e.Q6J("columns", n.columns)("columnGapVwMultiplyer", .8), e.xp6(1), e.Q6J("ngForOf", t), e.xp6(1), e.Q6J("ngIf", n.expandedViewMode === n.ExpandedViewMode.FORGING), e.xp6(1), e.Q6J("ngIf", n.expandedViewMode === n.ExpandedViewMode.SIGNING), e.xp6(1), e.Q6J("ngIf", n.expandedViewMode === n.ExpandedViewMode.SELLING)
             }
         }
 
-        function sr(o, r) {
-            if (1 & o && (e.ynx(0), e.TgZ(1, "header", 1)(2, "h4", 2), e._uU(3), e.ALo(4, "titlecase"), e.ALo(5, "titlecase"), e.qZA(), e.TgZ(6, "h4", 3), e._uU(7), e.qZA()(), e.YNc(8, ar, 5, 6, "app-grid-display", 4), e.BQk()), 2 & o) {
+        function ar(o, r) {
+            if (1 & o && (e.ynx(0), e.TgZ(1, "header", 1)(2, "h4", 2), e._uU(3), e.ALo(4, "titlecase"), e.ALo(5, "titlecase"), e.qZA(), e.TgZ(6, "h4", 3), e._uU(7), e.qZA()(), e.YNc(8, rr, 5, 6, "app-grid-display", 4), e.BQk()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(3), e.AsE(" ", e.lcZ(4, 4, t.grouping.currentGrouping.name), ": ", e.lcZ(5, 6, t.grouping.header), " "), e.xp6(4), e.hij(" ", t.numCards, " "), e.xp6(1), e.Q6J("ngForOf", t.chunkedCards)
             }
         }
 
-        let cr = (() => {
+        let sr = (() => {
             class o {
                 constructor(t, n, i) {
                     this.forgeService = t, this.utils = n, this.cardGridService = i, this.columns = 8, this.showOnlyEscrow = !1, this.showUnowned = !1, this.filterCardIds = [], this.showCardCounts = !0, this.showBundle = !1, this.selectCard = new e.vpe, this.ExpandedViewMode = q, this.numCards = 0, this.chunkedCards = [], this.alive = !0
@@ -3025,7 +3073,7 @@
                 vars: 1,
                 consts: [[4, "ngIf"], [1, "groupedCardsHeader"], [1, "groupedCardsHeader__groupingName"], [1, "groupedCardsHeader__cardsCount"], ["className", "gridRow", 3, "columns", "columnGapVwMultiplyer", 4, "ngFor", "ngForOf"], ["className", "gridRow", 3, "columns", "columnGapVwMultiplyer"], ["class", "gridRow__cardItemWrapper", 3, "protoId", "quality", "inputCh", "inputCw", "ngClass", "click", 4, "ngFor", "ngForOf"], [1, "gridRow__cardItemWrapper", 3, "protoId", "quality", "inputCh", "inputCw", "ngClass", "click"], ["className", "gridRow__expandedCards", 3, "card", "cardRowIndex", 4, "ngIf"], ["className", "gridRow__expandedCards", 3, "card", "cardRowIndex"]],
                 template: function (t, n) {
-                    1 & t && e.YNc(0, sr, 9, 8, "ng-container", 0), 2 & t && e.Q6J("ngIf", n.numCards > 0)
+                    1 & t && e.YNc(0, ar, 9, 8, "ng-container", 0), 2 & t && e.Q6J("ngIf", n.numCards > 0)
                 },
                 directives: [l.O5, l.sg, it, Y, l.mk, pn],
                 pipes: [l.rS],
@@ -3033,7 +3081,7 @@
             }), o
         })();
 
-        function lr(o, r) {
+        function cr(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-inventory-cards-quality", 6), e.NdJ("selectCardId", function (i) {
@@ -3046,7 +3094,7 @@
             }
         }
 
-        function dr(o, r) {
+        function lr(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-inventory-cards-proto", 7), e.NdJ("selectCard", function (i) {
@@ -3059,21 +3107,21 @@
             }
         }
 
-        function gr(o, r) {
-            if (1 & o && (e.ynx(0)(1, 3), e.YNc(2, lr, 1, 9, "app-inventory-cards-quality", 4), e.YNc(3, dr, 1, 9, "app-inventory-cards-proto", 5), e.BQk()()), 2 & o) {
+        function dr(o, r) {
+            if (1 & o && (e.ynx(0)(1, 3), e.YNc(2, cr, 1, 9, "app-inventory-cards-quality", 4), e.YNc(3, lr, 1, 9, "app-inventory-cards-proto", 5), e.BQk()()), 2 & o) {
                 const t = e.oxw(2);
                 e.xp6(1), e.Q6J("ngSwitch", t.mode), e.xp6(1), e.Q6J("ngSwitchCase", "quality"), e.xp6(1), e.Q6J("ngSwitchCase", "proto")
             }
         }
 
-        function pr(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, gr, 4, 3, "ng-container", 2), e.BQk()), 2 & o) {
+        function gr(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, dr, 4, 3, "ng-container", 2), e.BQk()), 2 & o) {
                 const t = r.$implicit;
                 e.xp6(1), e.Q6J("ngIf", t.cards.length > 0)
             }
         }
 
-        function ur(o, r) {
+        function pr(o, r) {
             1 & o && (e.TgZ(0, "div", 8)(1, "h4", 9), e._uU(2, " No cards match your filters "), e.qZA()())
         }
 
@@ -3124,42 +3172,42 @@
                 vars: 2,
                 consts: [[4, "ngFor", "ngForOf"], ["class", "noCardsToDisplay", 4, "ngIf"], [4, "ngIf"], [3, "ngSwitch"], ["class", "cardsListingArea__cardsListing", 3, "columns", "grouping", "showCardCounts", "showOnlyEscrow", "showUnowned", "filterCardIds", "cardsListingArea__cardsListing--4Column", "expandedViewMode", "selectCardId", 4, "ngSwitchCase"], [3, "columns", "groupingIndex", "showBundle", "grouping", "showCardCounts", "showOnlyEscrow", "showUnowned", "filterCardIds", "expandedViewMode", "selectCard", 4, "ngSwitchCase"], [1, "cardsListingArea__cardsListing", 3, "columns", "grouping", "showCardCounts", "showOnlyEscrow", "showUnowned", "filterCardIds", "expandedViewMode", "selectCardId"], [3, "columns", "groupingIndex", "showBundle", "grouping", "showCardCounts", "showOnlyEscrow", "showUnowned", "filterCardIds", "expandedViewMode", "selectCard"], [1, "noCardsToDisplay"], [1, "noCardsToDisplay__text"]],
                 template: function (t, n) {
-                    1 & t && (e.YNc(0, pr, 2, 1, "ng-container", 0), e.YNc(1, ur, 3, 0, "div", 1)), 2 & t && (e.Q6J("ngForOf", n.displayedGroupedProtos), e.xp6(1), e.Q6J("ngIf", !n.displayedGroupedProtos || 0 === n.displayedGroupedProtos.length))
+                    1 & t && (e.YNc(0, gr, 2, 1, "ng-container", 0), e.YNc(1, pr, 3, 0, "div", 1)), 2 & t && (e.Q6J("ngForOf", n.displayedGroupedProtos), e.xp6(1), e.Q6J("ngIf", !n.displayedGroupedProtos || 0 === n.displayedGroupedProtos.length))
                 },
-                directives: [l.sg, l.O5, l.RF, l.n9, Qi, cr],
+                directives: [l.sg, l.O5, l.RF, l.n9, Ri, sr],
                 styles: ['h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.noCardsToDisplay__text[_ngcontent-%COMP%], .groupedCardsHeader__cardsCount[_ngcontent-%COMP%], .groupedCardsHeader__groupingName[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.noCardsToDisplay__text[_ngcontent-%COMP%], .groupedCardsHeader__cardsCount[_ngcontent-%COMP%], .groupedCardsHeader__groupingName[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22);line-height:1.4}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:block;padding-bottom:calc(var(--vh) * 12)}.groupedCardsHeader[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 1.5);padding-bottom:calc(var(--vh) * 1.5);display:flex;position:relative;align-items:center}.groupedCardsHeader[_ngcontent-%COMP%]:before{content:"";flex:1;order:2;height:calc(var(--vh) * .25);background:#1d2f41}.groupedCardsHeader__groupingName[_ngcontent-%COMP%]{padding-right:calc(var(--vw) * 1);line-height:1.1;color:#f6f6f6;order:1}.groupedCardsHeader__cardsCount[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 1);line-height:1.1;margin-left:auto;color:#f6f6f6;order:3}.noCardsToDisplay[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 1.5);padding-bottom:calc(var(--vh) * 1.5);display:flex;position:relative}.noCardsToDisplay__text[_ngcontent-%COMP%]{line-height:1.1;color:#f6f6f6}']
             }), o
         })();
 
-        function _r(o, r) {
+        function ur(o, r) {
             if (1 & o && (e.ynx(0), e.TgZ(1, "span", 13), e._uU(2), e.qZA(), e.BQk()), 2 & o) {
                 const t = e.oxw(3).$implicit, n = e.oxw(2);
                 e.xp6(2), e.Oqu(n.calculateDisplayedCount(t.ics))
             }
         }
 
-        function hr(o, r) {
+        function _r(o, r) {
             if (1 & o && (e.TgZ(0, "span", 13), e._uU(1), e.qZA()), 2 & o) {
                 const t = e.oxw(3).$implicit;
                 e.xp6(1), e.Oqu(t.ics.length)
             }
         }
 
-        function mr(o, r) {
-            if (1 & o && (e.TgZ(0, "div", 9), e._UZ(1, "gu-icon", 10), e.YNc(2, _r, 3, 1, "ng-container", 11), e.YNc(3, hr, 2, 1, "ng-template", null, 12, e.W1O), e.qZA()), 2 & o) {
+        function hr(o, r) {
+            if (1 & o && (e.TgZ(0, "div", 9), e._UZ(1, "gu-icon", 10), e.YNc(2, ur, 3, 1, "ng-container", 11), e.YNc(3, _r, 2, 1, "ng-template", null, 12, e.W1O), e.qZA()), 2 & o) {
                 const t = e.MAs(4), n = e.oxw(4);
                 e.xp6(2), e.Q6J("ngIf", n.filterCardIds.length > 0)("ngIfElse", t)
             }
         }
 
-        function fr(o, r) {
+        function mr(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.ynx(0), e.TgZ(1, "div", 6)(2, "app-card2", 7), e.NdJ("click", function () {
                     e.CHM(t);
                     const i = e.oxw().$implicit;
                     return e.oxw(2).selectCard(i.ics)
-                }), e.qZA(), e.YNc(3, mr, 5, 2, "div", 8), e.qZA(), e.BQk()
+                }), e.qZA(), e.YNc(3, hr, 5, 2, "div", 8), e.qZA(), e.BQk()
             }
             if (2 & o) {
                 const t = e.oxw().$implicit, n = e.oxw(2);
@@ -3167,21 +3215,21 @@
             }
         }
 
-        function Cr(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, fr, 4, 7, "ng-container", 0), e.BQk()), 2 & o) {
+        function fr(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, mr, 4, 7, "ng-container", 0), e.BQk()), 2 & o) {
                 const t = r.$implicit;
                 e.xp6(1), e.Q6J("ngIf", t.ics && t.ics.length)
             }
         }
 
-        function vr(o, r) {
-            if (1 & o && (e.ynx(0), e.TgZ(1, "header", 1)(2, "h4", 2), e._uU(3), e.ALo(4, "titlecase"), e.ALo(5, "titlecase"), e.qZA(), e.TgZ(6, "h4", 3), e._uU(7), e.qZA()(), e.TgZ(8, "app-grid-display", 4), e.YNc(9, Cr, 2, 1, "ng-container", 5), e.qZA(), e.BQk()), 2 & o) {
+        function Cr(o, r) {
+            if (1 & o && (e.ynx(0), e.TgZ(1, "header", 1)(2, "h4", 2), e._uU(3), e.ALo(4, "titlecase"), e.ALo(5, "titlecase"), e.qZA(), e.TgZ(6, "h4", 3), e._uU(7), e.qZA()(), e.TgZ(8, "app-grid-display", 4), e.YNc(9, fr, 2, 1, "ng-container", 5), e.qZA(), e.BQk()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(3), e.AsE(" ", e.lcZ(4, 6, t.grouping.currentGrouping.name), ": ", e.lcZ(5, 8, t.grouping.header), " "), e.xp6(4), e.hij(" ", t.grouping.cards.length, " "), e.xp6(1), e.Q6J("columns", t.columns)("columnGapVwMultiplyer", .8), e.xp6(1), e.Q6J("ngForOf", t.grouping.cards)
             }
         }
 
-        let br = (() => {
+        let vr = (() => {
             class o {
                 constructor() {
                     this.columns = 8, this.showOnlyEscrow = !1, this.showUnowned = !1, this.filterCardIds = [], this.showCardCounts = !0, this.mode = "quality", this.showBundle = !1, this.selectCardId = new e.vpe
@@ -3232,18 +3280,18 @@
                 vars: 1,
                 consts: [[4, "ngIf"], [1, "groupedCardsHeader"], [1, "groupedCardsHeader__groupingName"], [1, "groupedCardsHeader__cardsCount"], [1, "cardGrid", 3, "columns", "columnGapVwMultiplyer"], [4, "ngFor", "ngForOf"], [1, "cardItemWrapper"], ["appSingleCardHoverFX", "", 3, "protoId", "quality", "inputCw", "inputCh", "click"], ["class", "cardCount", 4, "ngIf"], [1, "cardCount"], ["iconLigature", "stat_card", 1, "cardCount__icon"], [4, "ngIf", "ngIfElse"], ["elseBlock", ""], [1, "cardCount__count"]],
                 template: function (t, n) {
-                    1 & t && e.YNc(0, vr, 10, 10, "ng-container", 0), 2 & t && e.Q6J("ngIf", n.grouping.cards.length > 0)
+                    1 & t && e.YNc(0, Cr, 10, 10, "ng-container", 0), 2 & t && e.Q6J("ngIf", n.grouping.cards.length > 0)
                 },
                 directives: [l.O5, it, l.sg, Y, yt],
                 pipes: [l.rS],
                 styles: ['@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.noCardsToDisplay__text[_ngcontent-%COMP%], .groupedCardsHeader__cardsCount[_ngcontent-%COMP%], .groupedCardsHeader__groupingName[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.cardCount__count[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.noCardsToDisplay__text[_ngcontent-%COMP%], .groupedCardsHeader__cardsCount[_ngcontent-%COMP%], .groupedCardsHeader__groupingName[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22);line-height:1.4}.cardCount__count[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.29)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:block;padding-bottom:calc(var(--vh) * 12)}.noCardsToDisplay[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 1.5);padding-bottom:calc(var(--vh) * 1.5);display:flex;position:relative}.noCardsToDisplay__text[_ngcontent-%COMP%]{line-height:1.1;color:#f6f6f6}.cardCount[_ngcontent-%COMP%]{display:flex;align-items:center;justify-content:center}.cardCount__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1);margin-right:calc(var(--vw) * .3);line-height:1;color:#f6f6f6}.cardCount__count[_ngcontent-%COMP%]{color:#f6f6f6}.cardItemWrapper--greyed[_ngcontent-%COMP%]{filter:grayscale(1)}.cardItemWrapper--greyed[_ngcontent-%COMP%]     app-card2{cursor:default}.cardItemWrapper--dimmed[_ngcontent-%COMP%]{filter:brightness(.6)}.groupedCardsHeader[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 1.5);padding-bottom:calc(var(--vh) * 1.5);display:flex;position:relative;align-items:center}.groupedCardsHeader[_ngcontent-%COMP%]:before{content:"";flex:1;order:2;height:calc(var(--vh) * .25);background:#1d2f41}.groupedCardsHeader__groupingName[_ngcontent-%COMP%]{padding-right:calc(var(--vw) * 1);line-height:1.1;color:#f6f6f6;order:1}.groupedCardsHeader__cardsCount[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 1);line-height:1.1;margin-left:auto;color:#f6f6f6;order:3}.cardGrid[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(8,1fr);align-items:start;grid-auto-rows:min-content}']
             }), o
         })();
-        const wr = function (o) {
+        const br = function (o) {
             return {"gridRow__cardItemWrapper--dimmed": o}
         };
 
-        function xr(o, r) {
+        function wr(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.ynx(0), e.TgZ(1, "app-card2", 7), e.NdJ("click", function () {
@@ -3254,74 +3302,74 @@
             }
             if (2 & o) {
                 const t = e.oxw().$implicit, n = e.oxw(3);
-                e.xp6(1), e.Q6J("ngClass", e.VKq(5, wr, n.expandedCard && t.pc.proto !== n.expandedCard.card.pc.proto))("protoId", t.pc.proto)("quality", t.ics[0].q)("inputCw", 0)("inputCh", 0)
+                e.xp6(1), e.Q6J("ngClass", e.VKq(5, br, n.expandedCard && t.pc.proto !== n.expandedCard.card.pc.proto))("protoId", t.pc.proto)("quality", t.ics[0].q)("inputCw", 0)("inputCh", 0)
             }
         }
 
-        function Mr(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, xr, 2, 7, "ng-container", 0), e.BQk()), 2 & o) {
+        function xr(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, wr, 2, 7, "ng-container", 0), e.BQk()), 2 & o) {
                 const t = r.$implicit;
                 e.xp6(1), e.Q6J("ngIf", t.ics && t.ics.length)
             }
         }
 
-        function yr(o, r) {
+        function Mr(o, r) {
             if (1 & o && e._UZ(0, "cerberus-app-expanded-cards", 9), 2 & o) {
                 const t = e.oxw(4);
                 e.Q6J("card", t.expandedCard.card)("cardRowIndex", t.expandedCard.cardRowIndex)
             }
         }
 
-        function kr(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, yr, 1, 2, "cerberus-app-expanded-cards", 8), e.BQk()), 2 & o) {
+        function yr(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, Mr, 1, 2, "cerberus-app-expanded-cards", 8), e.BQk()), 2 & o) {
                 const t = e.oxw().index, n = e.oxw(2);
                 e.xp6(1), e.Q6J("ngIf", n.expandedCard && n.expandedCard.groupingIndex === n.groupingIndex && n.expandedCard.gridRowIndex === t)
             }
         }
 
-        function Or(o, r) {
+        function kr(o, r) {
             if (1 & o && e._UZ(0, "app-expanded-cards-signing", 9), 2 & o) {
                 const t = e.oxw(4);
                 e.Q6J("card", t.expandedCard.card)("cardRowIndex", t.expandedCard.cardRowIndex)
             }
         }
 
-        function Pr(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, Or, 1, 2, "app-expanded-cards-signing", 8), e.BQk()), 2 & o) {
+        function Or(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, kr, 1, 2, "app-expanded-cards-signing", 8), e.BQk()), 2 & o) {
                 const t = e.oxw().index, n = e.oxw(2);
                 e.xp6(1), e.Q6J("ngIf", n.expandedCard && n.expandedCard.groupingIndex === n.groupingIndex && n.expandedCard.gridRowIndex === t)
             }
         }
 
-        function Sr(o, r) {
+        function Pr(o, r) {
             if (1 & o && e._UZ(0, "app-expanded-cards-selling", 9), 2 & o) {
                 const t = e.oxw(4);
                 e.Q6J("card", t.expandedCard.card)("cardRowIndex", t.expandedCard.cardRowIndex)
             }
         }
 
-        function Tr(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, Sr, 1, 2, "app-expanded-cards-selling", 8), e.BQk()), 2 & o) {
+        function Sr(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, Pr, 1, 2, "app-expanded-cards-selling", 8), e.BQk()), 2 & o) {
                 const t = e.oxw().index, n = e.oxw(2);
                 e.xp6(1), e.Q6J("ngIf", n.expandedCard && n.expandedCard.groupingIndex === n.groupingIndex && n.expandedCard.gridRowIndex === t)
             }
         }
 
-        function Ir(o, r) {
-            if (1 & o && (e.TgZ(0, "app-grid-display", 5), e.YNc(1, Mr, 2, 1, "ng-container", 6), e.YNc(2, kr, 2, 1, "ng-container", 0), e.YNc(3, Pr, 2, 1, "ng-container", 0), e.YNc(4, Tr, 2, 1, "ng-container", 0), e.qZA()), 2 & o) {
+        function Tr(o, r) {
+            if (1 & o && (e.TgZ(0, "app-grid-display", 5), e.YNc(1, xr, 2, 1, "ng-container", 6), e.YNc(2, yr, 2, 1, "ng-container", 0), e.YNc(3, Or, 2, 1, "ng-container", 0), e.YNc(4, Sr, 2, 1, "ng-container", 0), e.qZA()), 2 & o) {
                 const t = r.$implicit, n = e.oxw(2);
                 e.Q6J("columns", n.columns)("columnGapVwMultiplyer", .8), e.xp6(1), e.Q6J("ngForOf", t), e.xp6(1), e.Q6J("ngIf", n.expandedViewMode === n.ExpandedViewMode.FORGING), e.xp6(1), e.Q6J("ngIf", n.expandedViewMode === n.ExpandedViewMode.SIGNING), e.xp6(1), e.Q6J("ngIf", n.expandedViewMode === n.ExpandedViewMode.SELLING)
             }
         }
 
-        function Ar(o, r) {
-            if (1 & o && (e.ynx(0), e.TgZ(1, "header", 1)(2, "h4", 2), e._uU(3), e.ALo(4, "titlecase"), e.ALo(5, "titlecase"), e.qZA(), e.TgZ(6, "h4", 3), e._uU(7), e.qZA()(), e.YNc(8, Ir, 5, 6, "app-grid-display", 4), e.BQk()), 2 & o) {
+        function Ir(o, r) {
+            if (1 & o && (e.ynx(0), e.TgZ(1, "header", 1)(2, "h4", 2), e._uU(3), e.ALo(4, "titlecase"), e.ALo(5, "titlecase"), e.qZA(), e.TgZ(6, "h4", 3), e._uU(7), e.qZA()(), e.YNc(8, Tr, 5, 6, "app-grid-display", 4), e.BQk()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(3), e.AsE(" ", e.lcZ(4, 4, t.grouping.currentGrouping.name), ": ", e.lcZ(5, 6, t.grouping.header), " "), e.xp6(4), e.hij(" ", t.numCards, " "), e.xp6(1), e.Q6J("ngForOf", t.chunkedCards)
             }
         }
 
-        let Fr = (() => {
+        let Ar = (() => {
             class o {
                 constructor(t, n, i, a) {
                     this.forgeService = t, this.cardGridService = n, this.utils = i, this.groupingService = a, this.columns = 8, this.showOnlyEscrow = !1, this.showUnowned = !1, this.filterCardIds = [], this.showCardCounts = !0, this.mode = "quality", this.showBundle = !1, this.selectCardId = new e.vpe, this.ExpandedViewMode = q, this.numCards = 0, this.chunkedCards = [], this.alive = !0
@@ -3393,7 +3441,7 @@
                 vars: 1,
                 consts: [[4, "ngIf"], [1, "groupedCardsHeader"], [1, "groupedCardsHeader__groupingName"], [1, "groupedCardsHeader__cardsCount"], ["className", "gridRow", 3, "columns", "columnGapVwMultiplyer", 4, "ngFor", "ngForOf"], ["className", "gridRow", 3, "columns", "columnGapVwMultiplyer"], [4, "ngFor", "ngForOf"], [1, "gridRow__cardItemWrapper", 3, "ngClass", "protoId", "quality", "inputCw", "inputCh", "click"], ["className", "gridRow__expandedCards", 3, "card", "cardRowIndex", 4, "ngIf"], ["className", "gridRow__expandedCards", 3, "card", "cardRowIndex"]],
                 template: function (t, n) {
-                    1 & t && e.YNc(0, Ar, 9, 8, "ng-container", 0), 2 & t && e.Q6J("ngIf", n.numCards > 0)
+                    1 & t && e.YNc(0, Ir, 9, 8, "ng-container", 0), 2 & t && e.Q6J("ngIf", n.numCards > 0)
                 },
                 directives: [l.O5, l.sg, it, Y, l.mk, pn],
                 pipes: [l.rS],
@@ -3401,7 +3449,7 @@
             }), o
         })();
 
-        function Dr(o, r) {
+        function Fr(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.ynx(0), e.TgZ(1, "app-group-quality-inventory", 4), e.NdJ("selectCardId", function (i) {
@@ -3414,7 +3462,7 @@
             }
         }
 
-        function Gr(o, r) {
+        function Dr(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-group-quality-forge", 5), e.NdJ("selectCardId", function (i) {
@@ -3427,14 +3475,14 @@
             }
         }
 
-        function Zr(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, Dr, 2, 4, "ng-container", 2), e.YNc(2, Gr, 1, 7, "ng-template", null, 3, e.W1O), e.BQk()), 2 & o) {
+        function Gr(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, Fr, 2, 4, "ng-container", 2), e.YNc(2, Dr, 1, 7, "ng-template", null, 3, e.W1O), e.BQk()), 2 & o) {
                 const t = e.MAs(3), n = e.oxw();
                 e.xp6(1), e.Q6J("ngIf", void 0 === n.expandedViewMode)("ngIfElse", t)
             }
         }
 
-        function Br(o, r) {
+        function Zr(o, r) {
             1 & o && (e.TgZ(0, "div", 6)(1, "h4", 7), e._uU(2, " No cards match your filters "), e.qZA()())
         }
 
@@ -3475,29 +3523,29 @@
                 vars: 2,
                 consts: [[4, "ngFor", "ngForOf"], ["class", "noCardsToDisplay", 4, "ngIf"], [4, "ngIf", "ngIfElse"], ["expandedViewBlock", ""], [3, "showOnlyEscrow", "showUnowned", "grouping", "filterCardIds", "selectCardId"], [3, "columns", "groupingIndex", "expandedViewMode", "showOnlyEscrow", "showUnowned", "grouping", "filterCardIds", "selectCardId"], [1, "noCardsToDisplay"], [1, "noCardsToDisplay__text"]],
                 template: function (t, n) {
-                    1 & t && (e.YNc(0, Zr, 4, 2, "ng-container", 0), e.YNc(1, Br, 3, 0, "div", 1)), 2 & t && (e.Q6J("ngForOf", n.groupedQualities), e.xp6(1), e.Q6J("ngIf", !(n.loading || n.displayedGroupedQualities && 0 !== n.displayedGroupedQualities.length)))
+                    1 & t && (e.YNc(0, Gr, 4, 2, "ng-container", 0), e.YNc(1, Zr, 3, 0, "div", 1)), 2 & t && (e.Q6J("ngForOf", n.groupedQualities), e.xp6(1), e.Q6J("ngIf", !(n.loading || n.displayedGroupedQualities && 0 !== n.displayedGroupedQualities.length)))
                 },
-                directives: [l.sg, l.O5, br, Fr],
+                directives: [l.sg, l.O5, vr, Ar],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.noCardsToDisplay__text[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.noCardsToDisplay__text[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22);line-height:1.4}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:block;padding-bottom:calc(var(--vh) * 12)}.noCardsToDisplay[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 1.5);padding-bottom:calc(var(--vh) * 1.5);display:flex;position:relative}.noCardsToDisplay__text[_ngcontent-%COMP%]{line-height:1.1;color:#f6f6f6}"]
             }), o
         })();
-        const Lr = ["groupsContainer"];
+        const Br = ["groupsContainer"];
 
-        function Ur(o, r) {
+        function Lr(o, r) {
             if (1 & o && (e.TgZ(0, "h3", 9), e._uU(1), e.qZA()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(1), e.Oqu(t.title)
             }
         }
 
-        function Er(o, r) {
+        function Ur(o, r) {
             if (1 & o && (e.TgZ(0, "div", 10), e._UZ(1, "app-god-badge", 11), e.qZA()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(1), e.Q6J("god", t.god.toLowerCase())
             }
         }
 
-        function Nr(o, r) {
+        function Er(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-inventory-cards", 12, 13), e.NdJ("selectCardId", function (i) {
@@ -3510,7 +3558,7 @@
             }
         }
 
-        function Rr(o, r) {
+        function Nr(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-group-quality", 14, 13), e.NdJ("selectCardId", function (i) {
@@ -3647,12 +3695,12 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(K._), e.Y36(ke), e.Y36(_.iZ), e.Y36(h.pk))
+                return new (t || o)(e.Y36(K._), e.Y36(ke), e.Y36(_.iZ), e.Y36(f.pk))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-cards-list"]],
                 viewQuery: function (t, n) {
-                    if (1 & t && (e.Gf(Lr, 7), e.Gf(Y, 5)), 2 & t) {
+                    if (1 & t && (e.Gf(Br, 7), e.Gf(Y, 5)), 2 & t) {
                         let i;
                         e.iGM(i = e.CRH()) && (n.groupsContainer = i.first), e.iGM(i = e.CRH()) && (n.cardComponents = i)
                     }
@@ -3675,9 +3723,9 @@
                 features: [e.TTD],
                 decls: 9,
                 vars: 11,
-                consts: [[1, "sectionHeader"], ["class", "sectionHeader__title", 4, "ngIf"], [1, "sectionHeader__groupings", 3, "activeGrouping", "groupings", "groupingChange", "searchChange"], [1, "sectionHeader__filterArea", 3, "sortOptions", "selectedHeaders", "cardGrouping", "unownedCheckboxVisible", "sortChange", "groupingHeaderChange", "unownedChange", "ownershipChange"], ["class", "sectionHeader__godArea", 4, "ngIf"], ["infiniteScroll", "", 1, "cardsListingArea", 3, "scrollWindow", "scrolled"], ["groupsContainer", ""], [3, "columns", "mode", "showUnowned", "showOnlyEscrow", "expandedViewMode", "displayedGroupedProtos", "filterCardIds", "selectCardId", 4, "ngIf"], [3, "columns", "showUnowned", "showOnlyEscrow", "expandedViewMode", "displayedGroupedQualities", "filterCardIds", "selectCardId", 4, "ngIf"], [1, "sectionHeader__title"], [1, "sectionHeader__godArea"], [1, "godArea__badge", 3, "god"], [3, "columns", "mode", "showUnowned", "showOnlyEscrow", "expandedViewMode", "displayedGroupedProtos", "filterCardIds", "selectCardId"], ["cardsContainer", ""], [3, "columns", "showUnowned", "showOnlyEscrow", "expandedViewMode", "displayedGroupedQualities", "filterCardIds", "selectCardId"]],
+                consts: [[1, "sectionHeader"], ["class", "sectionHeader__title", 4, "ngIf"], [1, "sectionHeader__groupings", 3, "activeGrouping", "groupings", "groupingChange", "searchChange"], [1, "sectionHeader__filterArea", 3, "sortOptions", "selectedHeaders", "cardGrouping", "unownedCheckboxVisible", "sortChange", "groupingHeaderChange", "unownedChange", "ownershipChange"], ["class", "sectionHeader__godArea", 4, "ngIf"], ["infiniteScroll", "", "data-test-id", "cardsListing", 1, "cardsListingArea", 3, "scrollWindow", "scrolled"], ["groupsContainer", ""], [3, "columns", "mode", "showUnowned", "showOnlyEscrow", "expandedViewMode", "displayedGroupedProtos", "filterCardIds", "selectCardId", 4, "ngIf"], [3, "columns", "showUnowned", "showOnlyEscrow", "expandedViewMode", "displayedGroupedQualities", "filterCardIds", "selectCardId", 4, "ngIf"], [1, "sectionHeader__title"], [1, "sectionHeader__godArea"], [1, "godArea__badge", 3, "god"], [3, "columns", "mode", "showUnowned", "showOnlyEscrow", "expandedViewMode", "displayedGroupedProtos", "filterCardIds", "selectCardId"], ["cardsContainer", ""], [3, "columns", "showUnowned", "showOnlyEscrow", "expandedViewMode", "displayedGroupedQualities", "filterCardIds", "selectCardId"]],
                 template: function (t, n) {
-                    1 & t && (e.TgZ(0, "header", 0), e.YNc(1, Ur, 2, 1, "h3", 1), e.TgZ(2, "app-singular-active-filter-bar", 2), e.NdJ("groupingChange", function (a) {
+                    1 & t && (e.TgZ(0, "header", 0), e.YNc(1, Lr, 2, 1, "h3", 1), e.TgZ(2, "app-singular-active-filter-bar", 2), e.NdJ("groupingChange", function (a) {
                         return n.groupingChange(a)
                     })("searchChange", function (a) {
                         return n.searchChange(a)
@@ -3689,14 +3737,14 @@
                         return n.unownedChange(a)
                     })("ownershipChange", function (a) {
                         return n.ownershipChange(a)
-                    }), e.qZA(), e.YNc(4, Er, 2, 1, "div", 4), e.qZA(), e.TgZ(5, "section", 5, 6), e.NdJ("scrolled", function () {
+                    }), e.qZA(), e.YNc(4, Ur, 2, 1, "div", 4), e.qZA(), e.TgZ(5, "section", 5, 6), e.NdJ("scrolled", function () {
                         return n.loadGroup()
-                    }), e.YNc(7, Nr, 2, 7, "app-inventory-cards", 7), e.YNc(8, Rr, 2, 6, "app-group-quality", 8), e.qZA()), 2 & t && (e.xp6(1), e.Q6J("ngIf", n.title), e.xp6(1), e.Q6J("activeGrouping", n.activeGrouping)("groupings", n.groupings), e.xp6(1), e.Q6J("sortOptions", n.sortOptions)("selectedHeaders", n.selectedHeaders)("cardGrouping", n.activeGrouping.groupingType === n.GroupingType.Quality ? n.qualityGrouping : n.protoGrouping)("unownedCheckboxVisible", !(n.activeGrouping.groupingType === n.GroupingType.Quality || void 0 !== n.expandedViewMode)), e.xp6(1), e.Q6J("ngIf", n.god), e.xp6(1), e.Q6J("scrollWindow", !1), e.xp6(2), e.Q6J("ngIf", n.activeGrouping.groupingType !== n.GroupingType.Quality), e.xp6(1), e.Q6J("ngIf", n.activeGrouping.groupingType === n.GroupingType.Quality))
+                    }), e.YNc(7, Er, 2, 7, "app-inventory-cards", 7), e.YNc(8, Nr, 2, 6, "app-group-quality", 8), e.qZA()), 2 & t && (e.xp6(1), e.Q6J("ngIf", n.title), e.xp6(1), e.Q6J("activeGrouping", n.activeGrouping)("groupings", n.groupings), e.xp6(1), e.Q6J("sortOptions", n.sortOptions)("selectedHeaders", n.selectedHeaders)("cardGrouping", n.activeGrouping.groupingType === n.GroupingType.Quality ? n.qualityGrouping : n.protoGrouping)("unownedCheckboxVisible", !(n.activeGrouping.groupingType === n.GroupingType.Quality || void 0 !== n.expandedViewMode)), e.xp6(1), e.Q6J("ngIf", n.god), e.xp6(1), e.Q6J("scrollWindow", !1), e.xp6(2), e.Q6J("ngIf", n.activeGrouping.groupingType !== n.GroupingType.Quality), e.xp6(1), e.Q6J("ngIf", n.activeGrouping.groupingType === n.GroupingType.Quality))
                 },
                 directives: [l.O5, Mt, wt, gn, dt, Ot, Pt],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif;font-weight:400}.sectionHeader__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained, serif;font-weight:700}.godArea__label[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif}.sectionHeader__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.godArea__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;height:100%;overflow-y:scroll;overflow-x:hidden;padding:48px 48px 0px;}.sectionHeader[_ngcontent-%COMP%]{height:calc(var(--vh) * 9.5);position:relative}.sectionHeader__groupings[_ngcontent-%COMP%]{position:absolute}.sectionHeader__title[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .3);padding-bottom:calc(var(--vh) * .8);line-height:1;position:absolute;width:100%;text-align:center;color:#f6f6f6;border-bottom:solid #1d2f41;border-width:calc(var(--vh) * .25)}.sectionHeader__rightSideArea[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .8);position:absolute;right:0;top:0;display:flex;align-items:flex-start;height:100%}.sectionHeader__filterArea[_ngcontent-%COMP%]{bottom:2px;right:calc(var(--vw) * 5);position:absolute;left:0}.sectionHeader__godArea[_ngcontent-%COMP%]{user-select:none;pointer-events:none;position:absolute;right:0;bottom:50%;display:flex;align-items:flex-start}app-god-badge[_ngcontent-%COMP%]{user-select:auto;pointer-events:auto;margin-top:calc(var(--vh) * 1)}.godArea__label[_ngcontent-%COMP%]{color:#7192b0;padding-top:calc(var(--vh) * 1.1);padding-right:calc(var(--vw) * 2)}.cardsListingArea[_ngcontent-%COMP%]{overflow:hidden;overflow-y:auto;flex:1;padding:0 16px}app-card {cursor:pointer}app-cards-list {display:flex;}"]
             }), o
-        })(), Qr = (() => {
+        })(), Rr = (() => {
             class o {
                 constructor(t, n) {
                     this.el = t, this.renderer = n
@@ -3771,7 +3819,7 @@
             }), o
         })();
 
-        function qr(o, r) {
+        function Qr(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-card2", 5), e.NdJ("click", function () {
@@ -3785,7 +3833,7 @@
             }
         }
 
-        let Hr = (() => {
+        let qr = (() => {
             class o {
                 constructor() {
                     this.chosenCards = [], this.unsubscribe = new M.xQ, this.chooserSelectCards = new e.vpe, this.closeBundleChooser = () => {
@@ -3846,17 +3894,17 @@
                 vars: 2,
                 consts: [[3, "closeButtonClickFn"], [1, "instructionsHeading"], [1, "instructionsHeading__title"], [1, "cardListing"], ["class", "cardListing__card", 3, "protoId", "quality", "cardListing__card--removed", "click", 4, "ngFor", "ngForOf"], [1, "cardListing__card", 3, "protoId", "quality", "click"]],
                 template: function (t, n) {
-                    1 & t && (e._UZ(0, "app-modal-sidebar", 0), e.TgZ(1, "header", 1)(2, "h3", 2), e._uU(3, " Click to Remove "), e.qZA()(), e.TgZ(4, "div", 3), e.YNc(5, qr, 1, 4, "app-card2", 4), e.qZA()), 2 & t && (e.Q6J("closeButtonClickFn", n.closeOverlay), e.xp6(5), e.Q6J("ngForOf", n.allCards))
+                    1 & t && (e._UZ(0, "app-modal-sidebar", 0), e.TgZ(1, "header", 1)(2, "h3", 2), e._uU(3, " Click to Remove "), e.qZA()(), e.TgZ(4, "div", 3), e.YNc(5, Qr, 1, 4, "app-card2", 4), e.qZA()), 2 & t && (e.Q6J("closeButtonClickFn", n.closeOverlay), e.xp6(5), e.Q6J("ngForOf", n.allCards))
                 },
                 directives: [ye, l.sg, Y],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.instructionsHeading__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.instructionsHeading__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{background:rgba(15,27,39,.96);position:absolute;top:0;left:0;right:0;bottom:0;margin-left:calc(var(--vh) * -7.4);display:flex;flex-flow:column nowrap;z-index:1;box-shadow:0 0 calc(var(--vw) * 10) calc(var(--vw) * 2) #0c1620}[_nghost-%COMP%]     app-modal-sidebar{padding-top:calc(var(--vh) * .5);width:calc(var(--vw) * 3)}.instructionsHeading[_ngcontent-%COMP%]{height:calc(var(--vh) * 4.4);padding-top:calc(var(--vh) * .5)}.instructionsHeading__title[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .3);padding-bottom:calc(var(--vh) * 1);line-height:1;text-align:center;color:#f6f6f6}.continueButton[_ngcontent-%COMP%]{top:calc(var(--vh) * 2);right:calc(var(--vw) * 1);position:absolute}.cardListing[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 2);padding-bottom:calc(var(--vh) * 4.7);padding-left:calc(var(--vw) * .3);padding-right:calc(var(--vw) * .3);overflow-y:auto;flex:1;grid-row-gap:calc(var(--vh) * 1);display:grid;grid-template-columns:repeat(auto-fit,minmax(calc(var(--vw) * 11.35),max-content));justify-content:center}.cardListing__card[_ngcontent-%COMP%]{transition:all .15s ease-in-out;transform-origin:50% 50%}.cardListing__card[_ngcontent-%COMP%]:hover{transform:scale(1.23);transform-origin:50% 30%}.cardListing__card--removed[_ngcontent-%COMP%]{display:none}.cardListing__card--disabled[_ngcontent-%COMP%]{filter:grayscale(1)}"]
             }), o
         })();
-        const Yr = function (o, r) {
+        const Hr = function (o, r) {
             return {transform: o, filter: r}
         };
 
-        function Jr(o, r) {
+        function Yr(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-card2", 5), e.NdJ("click", function () {
@@ -3866,11 +3914,11 @@
             }
             if (2 & o) {
                 const t = r.$implicit, n = r.index, i = e.oxw();
-                e.Q6J("translateY", i.cardTranslateY(n))("protoId", t.proto)("quality", t.quality)("ngStyle", e.WLB(4, Yr, "translateY(" + i.cardTranslateY(n) + "px)", "brightness(" + i.cardBrightness(n) + ")"))
+                e.Q6J("translateY", i.cardTranslateY(n))("protoId", t.proto)("quality", t.quality)("ngStyle", e.WLB(4, Hr, "translateY(" + i.cardTranslateY(n) + "px)", "brightness(" + i.cardBrightness(n) + ")"))
             }
         }
 
-        function $r(o, r) {
+        function Jr(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-card-chooser-overlay", 6), e.NdJ("chooserSelectCards", function (i) {
@@ -3883,7 +3931,7 @@
             }
         }
 
-        let Wr = (() => {
+        let $r = (() => {
             class o {
                 constructor(t) {
                     this.audioService = t, this.selectCards = new e.vpe, this.showCardChooserOverlay = !1, this.unsubscribe = new M.xQ, this.closeBundleChooser = () => {
@@ -3927,7 +3975,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(h.pk))
+                return new (t || o)(e.Y36(f.pk))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-card-bundle"]],
@@ -3939,9 +3987,9 @@
                 template: function (t, n) {
                     1 & t && (e.TgZ(0, "div", 0)(1, "div", 1), e._uU(2), e.ALo(3, "titlecase"), e.qZA(), e.TgZ(4, "div", 2), e.NdJ("click", function () {
                         return n.openBundleChooser()
-                    }), e.YNc(5, Jr, 1, 7, "app-card2", 3), e.qZA()(), e.YNc(6, $r, 1, 5, "app-card-chooser-overlay", 4)), 2 & t && (e.xp6(2), e.Oqu(e.lcZ(3, 3, n.bundle.header)), e.xp6(3), e.Q6J("ngForOf", n.bundle.cards), e.xp6(1), e.Q6J("ngIf", n.showCardChooserOverlay))
+                    }), e.YNc(5, Yr, 1, 7, "app-card2", 3), e.qZA()(), e.YNc(6, Jr, 1, 5, "app-card-chooser-overlay", 4)), 2 & t && (e.xp6(2), e.Oqu(e.lcZ(3, 3, n.bundle.header)), e.xp6(3), e.Q6J("ngForOf", n.bundle.cards), e.xp6(1), e.Q6J("ngIf", n.showCardChooserOverlay))
                 },
-                directives: [l.sg, Y, Qr, l.PC, l.O5, Hr],
+                directives: [l.sg, Y, Rr, l.PC, l.O5, qr],
                 pipes: [l.rS],
                 styles: ["@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.bundleLabel[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.bundleLabel[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}[_nghost-%COMP%]{display:block}.bundleContainer[_ngcontent-%COMP%]{display:flex;flex-flow:column nowrap;align-items:center;position:relative}.bundleLabel[_ngcontent-%COMP%]{color:#7192b0;text-align:center}.cardLayers[_ngcontent-%COMP%]{width:calc(var(--vw) * 7.5);flex:1;position:relative}.cardLayers__card[_ngcontent-%COMP%]{position:absolute;left:0;top:0;cursor:pointer;width:100%}"],
                 data: {
@@ -3959,7 +4007,7 @@
             }), o
         })();
 
-        function zr(o, r) {
+        function Wr(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "gu-primary-hex-button", 7), e.NdJ("click", function () {
@@ -3968,7 +4016,7 @@
             }
         }
 
-        function jr(o, r) {
+        function zr(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "p", 8), e._uU(1, " Are you sure? "), e.TgZ(2, "span", 9), e.NdJ("click", function () {
@@ -3979,7 +4027,7 @@
             }
         }
 
-        let Vr = (() => {
+        let jr = (() => {
             class o {
                 constructor(t, n) {
                     this.akumaService = t, this.audioService = n, this.closeEditDeckOverlay = () => {
@@ -4022,7 +4070,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(_.jt), e.Y36(h.pk))
+                return new (t || o)(e.Y36(_.jt), e.Y36(f.pk))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-edit-deck"]],
@@ -4030,7 +4078,7 @@
                 outputs: {changeDeckName: "changeDeckName", deleteDeck: "deleteDeck"},
                 decls: 8,
                 vars: 5,
-                consts: [[3, "closeButtonClickFn"], [1, "instructionsHeading"], [1, "instructionsHeading__title"], ["text", "Save Changes", 1, "instructionsHeading__saveButton", 3, "click"], ["type", "search", "name", "deckNameControl", "maxlength", "15", 1, "form__textInput", 3, "ngModel", "formControl", "click", "ngModelChange"], ["class", "deleteDeck", "text", "Delete Deck", 3, "click", 4, "ngIf"], ["class", "deleteConfirmation", 4, "ngIf"], ["text", "Delete Deck", 1, "deleteDeck", 3, "click"], [1, "deleteConfirmation"], [1, "deleteConfirmation__cancel", 3, "click"], [1, "deleteConfirmation__confirm", 3, "click"]],
+                consts: [[3, "closeButtonClickFn"], [1, "instructionsHeading"], [1, "instructionsHeading__title"], ["data-test-id", "deck__saveButton", "text", "Save Changes", 1, "instructionsHeading__saveButton", 3, "click"], ["type", "search", "name", "deckNameControl", "data-test-id", "editDeckName", "maxlength", "15", 1, "form__textInput", 3, "ngModel", "formControl", "click", "ngModelChange"], ["class", "deleteDeck", "data-test-id", "deleteDeck", "text", "Delete Deck", 3, "click", 4, "ngIf"], ["class", "deleteConfirmation", 4, "ngIf"], ["data-test-id", "deleteDeck", "text", "Delete Deck", 1, "deleteDeck", 3, "click"], [1, "deleteConfirmation"], [1, "deleteConfirmation__cancel", 3, "click"], ["data-test-id", "deleteConfirmation__confirm", 1, "deleteConfirmation__confirm", 3, "click"]],
                 template: function (t, n) {
                     1 & t && (e._UZ(0, "app-modal-sidebar", 0), e.TgZ(1, "header", 1)(2, "h3", 2), e._uU(3, " Edit Deck "), e.qZA(), e.TgZ(4, "gu-primary-hex-button", 3), e.NdJ("click", function () {
                         return n.saveChanges()
@@ -4038,14 +4086,14 @@
                         return n.playClickTinyV1()
                     })("ngModelChange", function (a) {
                         return n.inputDeckName = a
-                    }), e.qZA(), e.YNc(6, zr, 1, 0, "gu-primary-hex-button", 5), e.YNc(7, jr, 6, 0, "p", 6)), 2 & t && (e.Q6J("closeButtonClickFn", n.closeOverlay), e.xp6(5), e.Q6J("ngModel", n.inputDeckName)("formControl", n.deckNameControl), e.xp6(1), e.Q6J("ngIf", !n.confirmingDelete), e.xp6(1), e.Q6J("ngIf", n.confirmingDelete))
+                    }), e.qZA(), e.YNc(6, Wr, 1, 0, "gu-primary-hex-button", 5), e.YNc(7, zr, 6, 0, "p", 6)), 2 & t && (e.Q6J("closeButtonClickFn", n.closeOverlay), e.xp6(5), e.Q6J("ngModel", n.inputDeckName)("formControl", n.deckNameControl), e.xp6(1), e.Q6J("ngIf", !n.confirmingDelete), e.xp6(1), e.Q6J("ngIf", n.confirmingDelete))
                 },
                 directives: [ye, T.Fj, T.nD, T.JJ, T.oH, l.O5],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.instructionsHeading__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.form__textInput[_ngcontent-%COMP%], .deleteConfirmation[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.instructionsHeading__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.deleteConfirmation[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9)}.form__textInput[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.form__textInput[_ngcontent-%COMP%]{line-height:1.4}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{background:rgba(15,27,39,.96);position:absolute;top:0;left:0;right:0;bottom:0;margin-left:calc(var(--vh) * -7.4);padding-top:calc(var(--vh) * 2);display:flex;flex-flow:column nowrap;z-index:2;box-shadow:0 0 calc(var(--vw) * 10) calc(var(--vw) * 2) #0c1620}[_nghost-%COMP%]     app-modal-sidebar{padding-top:calc(var(--vh) * .5);width:calc(var(--vw) * 3)}.instructionsHeading[_ngcontent-%COMP%]{height:calc(var(--vh) * 4.4);padding-top:calc(var(--vh) * .5)}.instructionsHeading__title[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .3);padding-bottom:calc(var(--vh) * 1);line-height:1;text-align:center;color:#f6f6f6}.instructionsHeading__saveButton[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2.4);position:absolute;right:0px;top:0px}.form__textInput[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);text-align:center;margin:0 auto;margin-top:calc(var(--vh) * 5);width:calc(var(--vw) * 25);background:#182531;color:#fff;border:1px solid #0f1b27;border-radius:calc(var(--vh) * .4)}.form__textInput[_ngcontent-%COMP%]::-webkit-input-placeholder{color:#fff}.deleteDeck[_ngcontent-%COMP%]{width:20%;text-align:center;margin:0 auto;margin-top:calc(var(--vh) * 5)}.deleteConfirmation[_ngcontent-%COMP%]{text-align:center;margin-top:calc(var(--vh) * 5)}.deleteConfirmation__confirm[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 1);color:#df2600;cursor:pointer}.deleteConfirmation__cancel[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 1);color:#7192b0;cursor:pointer}"]
             }), o
         })();
 
-        function Xr(o, r) {
+        function Vr(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-singular-active-filter-bar", 11), e.NdJ("groupingChange", function (i) {
@@ -4058,7 +4106,7 @@
             }
         }
 
-        function Kr(o, r) {
+        function Xr(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-card-bundle", 13), e.NdJ("selectCards", function (i) {
@@ -4068,14 +4116,14 @@
             2 & o && e.Q6J("bundle", r.$implicit.value)
         }
 
-        function ea(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, Kr, 1, 1, "app-card-bundle", 12), e.ALo(2, "keyvalue"), e.BQk()), 2 & o) {
+        function Kr(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, Xr, 1, 1, "app-card-bundle", 12), e.ALo(2, "keyvalue"), e.BQk()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(1), e.Q6J("ngForOf", e.lcZ(2, 1, t.cardGrouping))
             }
         }
 
-        function ta(o, r) {
+        function ea(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-edit-deck", 14), e.NdJ("deleteDeck", function () {
@@ -4160,7 +4208,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(ee.xV), e.Y36(ke), e.Y36(te.D), e.Y36(I.Z), e.Y36(_.jt), e.Y36(be.F0), e.Y36(h.pk), e.Y36(Ge.F))
+                return new (t || o)(e.Y36(ee.xV), e.Y36(ke), e.Y36(te.D), e.Y36(I.Z), e.Y36(_.jt), e.Y36(be.F0), e.Y36(f.pk), e.Y36(Ge.F))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-active-deck"]],
@@ -4176,15 +4224,15 @@
                 features: [e.TTD],
                 decls: 13,
                 vars: 8,
-                consts: [[1, "sectionHeader"], [1, "sectionHeader__title"], ["class", "sectionHeader__groupings", 3, "displaySearch", "activeGrouping", "groupings", "groupingChange", 4, "ngIf"], [1, "sectionHeader__rightSideArea"], ["iconLigature", "stat_card", 1, "rightSideArea__icon"], [1, "rightSideArea__cardsCount"], ["text", "EDIT DECK", "kind", "secondary", 1, "rightSideArea__editButton", 3, "disabled", "click"], [1, "rightSideArea__saveButton", 3, "text", "disabled", "click"], [1, "cardBundlesListing"], [4, "ngIf"], [3, "closeEditDeckOverlay", "deckName", "deleteDeck", "changeDeckName", 4, "ngIf"], [1, "sectionHeader__groupings", 3, "displaySearch", "activeGrouping", "groupings", "groupingChange"], [3, "bundle", "selectCards", 4, "ngFor", "ngForOf"], [3, "bundle", "selectCards"], [3, "closeEditDeckOverlay", "deckName", "deleteDeck", "changeDeckName"]],
+                consts: [[1, "sectionHeader"], [1, "sectionHeader__title"], ["class", "sectionHeader__groupings", 3, "displaySearch", "activeGrouping", "groupings", "groupingChange", 4, "ngIf"], [1, "sectionHeader__rightSideArea"], ["iconLigature", "stat_card", 1, "rightSideArea__icon"], ["data-test-id", "cardsCount", 1, "rightSideArea__cardsCount"], ["data-test-id", "rightSideArea__editButton", "text", "EDIT DECK", "kind", "secondary", 1, "rightSideArea__editButton", 3, "disabled", "click"], ["data-test-id", "rightSideArea__saveButton", 1, "rightSideArea__saveButton", 3, "text", "disabled", "click"], [1, "cardBundlesListing"], [4, "ngIf"], [3, "closeEditDeckOverlay", "deckName", "deleteDeck", "changeDeckName", 4, "ngIf"], [1, "sectionHeader__groupings", 3, "displaySearch", "activeGrouping", "groupings", "groupingChange"], [3, "bundle", "selectCards", 4, "ngFor", "ngForOf"], [3, "bundle", "selectCards"], [3, "closeEditDeckOverlay", "deckName", "deleteDeck", "changeDeckName"]],
                 template: function (t, n) {
-                    1 & t && (e.TgZ(0, "header", 0)(1, "h3", 1), e._uU(2), e.qZA(), e.YNc(3, Xr, 1, 3, "app-singular-active-filter-bar", 2), e.TgZ(4, "div", 3), e._UZ(5, "gu-icon", 4), e.TgZ(6, "div", 5), e._uU(7), e.qZA(), e.TgZ(8, "gu-primary-hex-button", 6), e.NdJ("click", function () {
+                    1 & t && (e.TgZ(0, "header", 0)(1, "h3", 1), e._uU(2), e.qZA(), e.YNc(3, Vr, 1, 3, "app-singular-active-filter-bar", 2), e.TgZ(4, "div", 3), e._UZ(5, "gu-icon", 4), e.TgZ(6, "div", 5), e._uU(7), e.qZA(), e.TgZ(8, "gu-primary-hex-button", 6), e.NdJ("click", function () {
                         return n.openEditDeckOverlay()
                     }), e.qZA(), e.TgZ(9, "gu-primary-hex-button", 7), e.NdJ("click", function () {
                         return n.saveDeck()
-                    }), e.qZA()()(), e.TgZ(10, "div", 8), e.YNc(11, ea, 3, 3, "ng-container", 9), e.qZA(), e.YNc(12, ta, 1, 3, "app-edit-deck", 10)), 2 & t && (e.xp6(2), e.Oqu(n.deck.name), e.xp6(1), e.Q6J("ngIf", n.deckCards), e.xp6(4), e.hij("", n.deckCards.length, "/30 Cards"), e.xp6(1), e.Q6J("disabled", "starter" === n.deck.deck_type || "sealed_deck" === n.deck.deck_type), e.xp6(1), e.Q6J("text", n.deckSelectMode ? "SELECT" : "SAVE DECK")("disabled", !!n.deckSelectMode && 30 !== n.deckCards.length), e.xp6(2), e.Q6J("ngIf", n.cardGrouping), e.xp6(1), e.Q6J("ngIf", n.showEditDeckOverlay))
+                    }), e.qZA()()(), e.TgZ(10, "div", 8), e.YNc(11, Kr, 3, 3, "ng-container", 9), e.qZA(), e.YNc(12, ea, 1, 3, "app-edit-deck", 10)), 2 & t && (e.xp6(2), e.Oqu(n.deck.name), e.xp6(1), e.Q6J("ngIf", n.deckCards), e.xp6(4), e.hij("", n.deckCards.length, "/30 Cards"), e.xp6(1), e.Q6J("disabled", "starter" === n.deck.deck_type || "sealed_deck" === n.deck.deck_type), e.xp6(1), e.Q6J("text", n.deckSelectMode ? "SELECT" : "SAVE DECK")("disabled", !!n.deckSelectMode && 30 !== n.deckCards.length), e.xp6(2), e.Q6J("ngIf", n.cardGrouping), e.xp6(1), e.Q6J("ngIf", n.showEditDeckOverlay))
                 },
-                directives: [l.O5, Mt, l.sg, Wr, Vr],
+                directives: [l.O5, Mt, l.sg, $r, jr],
                 pipes: [l.Nd],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif;font-weight:400}.sectionHeader__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained, serif;font-weight:700}.rightSideArea__cardsCount[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif}.sectionHeader__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.rightSideArea__cardsCount[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9);line-height:1.2;font-weight:600}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;position:relative}.sectionHeader[_ngcontent-%COMP%]{height:calc(var(--vh) * 5.5);margin-top:calc(var(--vh) * 2);position:relative;flex-shrink:0}.sectionHeader__groupings[_ngcontent-%COMP%]{position:absolute}.sectionHeader__title[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .3);padding-bottom:calc(var(--vh) * .8);line-height:1;position:absolute;width:100%;text-align:center;color:#f6f6f6;border-bottom:solid #1d2f41;border-width:calc(var(--vh) * .25)}.sectionHeader__rightSideArea[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .4);position:absolute;right:0;top:0;display:flex;align-items:flex-start;height:100%}.rightSideArea__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2);margin-right:calc(var(--vw) * .5);color:#f6f6f6;line-height:1}.rightSideArea__cardsCount[_ngcontent-%COMP%]{color:#f6f6f6}.rightSideArea__editButton[_ngcontent-%COMP%], .rightSideArea__saveButton[_ngcontent-%COMP%]{margin-left:calc(var(--vw) * 1.5);position:relative}.cardBundlesListing[_ngcontent-%COMP%]{flex:1;display:grid;grid-template-columns:repeat(10, 1fr)}"],
                 data: {
@@ -4202,11 +4250,11 @@
             }), o
         })();
 
-        function na(o, r) {
+        function ta(o, r) {
             1 & o && e._UZ(0, "app-rectangular-spinner", 5)
         }
 
-        function oa(o, r) {
+        function na(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "gu-plain-square-button", 6), e.NdJ("click", function () {
@@ -4219,7 +4267,7 @@
             }
         }
 
-        function ia(o, r) {
+        function oa(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-cards-list", 7), e.NdJ("selectCardId", function (i) {
@@ -4232,7 +4280,7 @@
             }
         }
 
-        function ra(o, r) {
+        function ia(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-active-deck", 8), e.NdJ("selectCards", function (i) {
@@ -4248,7 +4296,7 @@
         let Ye = (() => {
             class o {
                 constructor(t, n, i, a, s, c, d, p) {
-                    this.decksService = t, this.cardsService = n, this.modalService = i, this.moduleConfigService = a, this.audioService = s, this.akumaService = c, this.cerberusModalService = d, this.deckCodeService = p, this.filters = _.iZ.standardCardFilters(f.nE.All, f.PE.AscID, "genesis", ""), this.availableFilters = [{
+                    this.decksService = t, this.cardsService = n, this.modalService = i, this.moduleConfigService = a, this.audioService = s, this.akumaService = c, this.cerberusModalService = d, this.deckCodeService = p, this.filters = _.iZ.standardCardFilters(m.nE.All, m.PE.AscID, "genesis", ""), this.availableFilters = [{
                         name: "Quality",
                         options: _.iZ.qualityOptions
                     }, {name: "Rarity", options: _.iZ.rarityOptions}, {
@@ -4329,7 +4377,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(te.D), e.Y36(_.dK), e.Y36(I.Z), e.Y36(_.LE), e.Y36(h.pk), e.Y36(_.jt), e.Y36(L.Qz), e.Y36(sn.R))
+                return new (t || o)(e.Y36(te.D), e.Y36(_.dK), e.Y36(I.Z), e.Y36(_.LE), e.Y36(f.pk), e.Y36(_.jt), e.Y36(L.Qz), e.Y36(sn.R))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-deck-builder"]],
@@ -4337,15 +4385,15 @@
                 vars: 5,
                 consts: [[3, "closeButtonClickFn"], ["class", "spinner", 4, "ngIf"], ["backgroundFillColor", "colors.gunmetal.700", "borderColor", "colors.apocyan.500", "borderColorHover", "colors.gunmetal.100", "fillColor", "colors.apocyan.300", "leftIconPosition", "true", "icon", "external_link", "class", "exportCta", 3, "disabled", "click", 4, "featureFlagIf"], ["class", "card-selection", 3, "protoCards", "inventoryCards", "god", "filterCardIds", "customInventoryCardsMap", "selectCardId", 4, "ngIf"], [3, "deckCards", "deckSelectMode", "gameModeID", "deck", "forAI", "selectCards", 4, "ngIf"], [1, "spinner"], ["backgroundFillColor", "colors.gunmetal.700", "borderColor", "colors.apocyan.500", "borderColorHover", "colors.gunmetal.100", "fillColor", "colors.apocyan.300", "leftIconPosition", "true", "icon", "external_link", 1, "exportCta", 3, "disabled", "click"], [1, "card-selection", 3, "protoCards", "inventoryCards", "god", "filterCardIds", "customInventoryCardsMap", "selectCardId"], [3, "deckCards", "deckSelectMode", "gameModeID", "deck", "forAI", "selectCards"]],
                 template: function (t, n) {
-                    1 & t && (e._UZ(0, "app-modal-sidebar", 0), e.YNc(1, na, 1, 0, "app-rectangular-spinner", 1), e.YNc(2, oa, 2, 1, "gu-plain-square-button", 2), e.YNc(3, ia, 1, 5, "app-cards-list", 3), e.YNc(4, ra, 1, 5, "app-active-deck", 4)), 2 & t && (e.Q6J("closeButtonClickFn", n.destroyModal), e.xp6(1), e.Q6J("ngIf", n.loading), e.xp6(1), e.Q6J("featureFlagIf", n.Flags.deckCodesEnabled), e.xp6(1), e.Q6J("ngIf", !n.loading), e.xp6(1), e.Q6J("ngIf", n.activeDeck))
+                    1 & t && (e._UZ(0, "app-modal-sidebar", 0), e.YNc(1, ta, 1, 0, "app-rectangular-spinner", 1), e.YNc(2, na, 2, 1, "gu-plain-square-button", 2), e.YNc(3, oa, 1, 5, "app-cards-list", 3), e.YNc(4, ia, 1, 5, "app-active-deck", 4)), 2 & t && (e.Q6J("closeButtonClickFn", n.destroyModal), e.xp6(1), e.Q6J("ngIf", n.loading), e.xp6(1), e.Q6J("featureFlagIf", n.Flags.deckCodesEnabled), e.xp6(1), e.Q6J("ngIf", !n.loading), e.xp6(1), e.Q6J("ngIf", n.activeDeck))
                 },
                 directives: [ye, l.O5, ot, nt.w, St, un],
                 styles: ["[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;padding:0 calc(var(--vh) * 7.7);padding-top:calc(var(--vh) * 4.5);height:100%}app-cards-list[_ngcontent-%COMP%]{flex:1}app-active-deck[_ngcontent-%COMP%]{height:calc(var(--vh) * 37)}.spinner[_ngcontent-%COMP%]{margin:auto}.exportCta[_ngcontent-%COMP%]{position:absolute;top:calc(var(--vh) * 3);right:calc(var(--vh) * 17)}"]
             }), o
         })();
-        var Tt = g(37371), _n = g(8611), aa = g(5969);
+        var Tt = g(37371), _n = g(8611), ra = g(5969);
 
-        function sa(o, r) {
+        function aa(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.ynx(0), e.TgZ(1, "header", 2)(2, "h1", 3), e._uU(3, " CONNECT YOUR WALLET "), e.qZA(), e.TgZ(4, "div", 4), e._uU(5, " We want to make sure your cards get to the right wallet. Please connect your wallet via the Gods Unchained website. "), e.qZA(), e.TgZ(6, "gu-primary-hex-button", 5), e.NdJ("click", function () {
@@ -4354,7 +4402,7 @@
             }
         }
 
-        function ca(o, r) {
+        function sa(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.ynx(0), e.TgZ(1, "header", 2)(2, "h1", 3), e._uU(3, " CONFIRM YOUR WALLET "), e.qZA(), e.TgZ(4, "div", 4), e._uU(5, " We want to make sure your cards get to the right wallet. Please confirm this is the right address to send cards to. "), e.qZA(), e.TgZ(6, "div", 6), e._uU(7), e.qZA(), e.TgZ(8, "gu-primary-hex-button", 7), e.NdJ("click", function () {
@@ -4369,7 +4417,7 @@
             }
         }
 
-        function la(o, r) {
+        function ca(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.ynx(0), e.TgZ(1, "header", 2)(2, "h1", 3), e._uU(3, " CONNECT YOUR WALLET "), e.qZA(), e.TgZ(4, "div", 4), e._uU(5, " It looks like you have more then one wallet linked to your account. To ensure your new card goes to the right place, please confirm which wallet you want linked. "), e.qZA(), e.TgZ(6, "gu-primary-hex-button", 9), e.NdJ("click", function () {
@@ -4416,7 +4464,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(I.Z), e.Y36(Pe.d), e.Y36(aa.g))
+                return new (t || o)(e.Y36(I.Z), e.Y36(Pe.d), e.Y36(ra.g))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-flux-wallet-modal"]],
@@ -4424,7 +4472,7 @@
                 vars: 3,
                 consts: [[1, "gradientOverlay"], [4, "ngIf"], [1, "header"], [1, "header__title"], [1, "header__text"], ["text", "LINK WALLET", 1, "okButton", 3, "click"], [1, "header__address"], ["text", "LOOKS GOOD", 1, "okButton", 3, "click"], [1, "linkWallet", 3, "click"], ["text", "SELECT WALLET", 1, "okButton", 3, "click"]],
                 template: function (t, n) {
-                    1 & t && (e._UZ(0, "div", 0), e.YNc(1, sa, 7, 0, "ng-container", 1), e.YNc(2, ca, 11, 1, "ng-container", 1), e.YNc(3, la, 7, 0, "ng-container", 1)), 2 & t && (e.xp6(1), e.Q6J("ngIf", !n.playerWallets || 0 === n.playerWallets.length), e.xp6(1), e.Q6J("ngIf", n.playerWallets && 1 === n.playerWallets.length), e.xp6(1), e.Q6J("ngIf", n.playerWallets && n.playerWallets.length > 1))
+                    1 & t && (e._UZ(0, "div", 0), e.YNc(1, aa, 7, 0, "ng-container", 1), e.YNc(2, sa, 11, 1, "ng-container", 1), e.YNc(3, ca, 7, 0, "ng-container", 1)), 2 & t && (e.xp6(1), e.Q6J("ngIf", !n.playerWallets || 0 === n.playerWallets.length), e.xp6(1), e.Q6J("ngIf", n.playerWallets && 1 === n.playerWallets.length), e.xp6(1), e.Q6J("ngIf", n.playerWallets && n.playerWallets.length > 1))
                 },
                 directives: [l.O5],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.header__title[_ngcontent-%COMP%], .header__subtitle[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.header__text[_ngcontent-%COMP%], .header__address[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.header__subtitle[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.header__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 4.2);line-height:1.3}.header__address[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22)}.header__address[_ngcontent-%COMP%]{line-height:1.4}.header__text[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.header__text[_ngcontent-%COMP%]{line-height:1.4}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;align-items:center;margin:auto;position:relative;margin-top:calc(var(--vh) * 14);width:calc(var(--vw) * 50);border:2px solid #182531;background-image:url(/gu-assets/images/backgrounds/trader-overlay-bg.webp);background-size:cover;background-position:center}[_nghost-%COMP%] > *[_ngcontent-%COMP%]{position:relative}.gradientOverlay[_ngcontent-%COMP%]{position:absolute;height:100%;width:100%;border:1px solid #182531;background:radial-gradient(ellipse at center,rgba(12,22,32,0) -80%,#0c1620 70%)}.header[_ngcontent-%COMP%]{display:flex;flex-direction:column;align-items:center;width:100%;padding-left:calc(var(--vw) * 8);padding-right:calc(var(--vw) * 8);padding-top:calc(var(--vh) * 4);padding-bottom:calc(var(--vh) * 4)}.header__title[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;padding-bottom:calc(var(--vh) * 2)}.header__subtitle[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 1);padding-bottom:calc(var(--vh) * 1)}.header__text[_ngcontent-%COMP%]{padding-bottom:calc(var(--vh) * 2);text-align:center}.header__address[_ngcontent-%COMP%]{padding-bottom:calc(var(--vh) * 2);padding-top:calc(var(--vh) * 2);text-align:center}.okButton[_ngcontent-%COMP%]{width:100px;margin-top:calc(var(--vh) * 4);margin-bottom:calc(var(--vh) * 3)}.linkWallet[_ngcontent-%COMP%]{color:#affaed;cursor:pointer}"]
@@ -4459,30 +4507,30 @@
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.header__title[_ngcontent-%COMP%], .header__subtitle[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.header__text[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.header__subtitle[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.header__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 4.2);line-height:1.3}.header__text[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.header__text[_ngcontent-%COMP%]{line-height:1.4}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;align-items:center;margin:auto;position:relative;margin-top:calc(var(--vh) * 3);width:calc(var(--vw) * 60);height:calc(var(--vh) * 85);border:2px solid #182531;background:rgba(15,27,39,.6)}.header[_ngcontent-%COMP%]{display:flex;flex-direction:column;align-items:center;width:100%;padding-left:calc(var(--vw) * 2);padding-right:calc(var(--vw) * 2)}.header__title[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;padding-top:calc(var(--vh) * 1);padding-bottom:calc(var(--vh) * 2)}.header__subtitle[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 1);padding-bottom:calc(var(--vh) * 1)}.header__text[_ngcontent-%COMP%]{padding-bottom:calc(var(--vh) * 2);text-align:center}.fuseImage[_ngcontent-%COMP%]{height:calc(var(--vh) * 57);margin-left:calc(var(--vw) * -7.43)}.okButton[_ngcontent-%COMP%]{margin-top:auto;margin-bottom:calc(var(--vh) * 4)}"]
             }), o
         })();
-        const da = ["groupsContainer"];
+        const la = ["groupsContainer"];
 
-        function ga(o, r) {
+        function da(o, r) {
             1 & o && e._UZ(0, "gu-loading-spinner", 11)
         }
 
-        function pa(o, r) {
+        function ga(o, r) {
             if (1 & o && e._UZ(0, "app-inventory-cards", 12), 2 & o) {
                 const t = e.oxw();
                 e.Q6J("showBundle", !0)("expandedViewMode", t.expandedViewMode)("columns", 4)("showCardCounts", !1)("showUnowned", !1)("displayedGroupedProtos", t.displayedGroupedProtos)("filterCardIds", t.filterCardIds)
             }
         }
 
-        function ua(o, r) {
+        function pa(o, r) {
             if (1 & o && e._UZ(0, "app-group-quality", 13), 2 & o) {
                 const t = e.oxw();
                 e.Q6J("columns", 4)("loading", t.loading)("showCardCounts", !1)("expandedViewMode", t.expandedViewMode)("showUnowned", !1)("displayedGroupedQualities", t.displayedGroupedQualities)("filterCardIds", t.filterCardIds)
             }
         }
 
-        let _a = (() => {
+        let ua = (() => {
             class o {
                 constructor(t, n, i, a, s) {
-                    this.resizeService = t, this.groupingService = n, this.filterService = i, this.modalService = a, this.cardGridService = s, this.activeGrouping = this.groupingService.defaultGrouping, this.filterCardIds = [], this.selectCardId = new e.vpe, this.GroupingType = F, this.selectedHeaders = [], this.showUnowned = !0, this.loading = !0, this.activeSort = f.PE.AscMana, this.sortOptions = [new B("Mana", "filter_mana", f.PE.AscMana, f.PE.DescMana), new B("Health", "filter_health", f.PE.AscHealth, f.PE.DescHealth), new B("Attack", "filter_attack", f.PE.AscAttack, f.PE.DescAttack), new B("Tribe", "filter_tribe", f.PE.AscTribe, f.PE.DescTribe), new B("Type", "filter_type", f.PE.AscType, f.PE.DescType), new B("God", "filter_god", f.PE.AscGod, f.PE.DescGod), new B("Rarity", "filter_rarity", f.PE.AscRarity, f.PE.DescRarity), new B("Set", "filter_set", f.PE.AscSet, f.PE.DescSet)], this.allGroupedProtos = [], this.allGroupedQualities = [], this.unsubscribe = new M.xQ, this.watchForResize()
+                    this.resizeService = t, this.groupingService = n, this.filterService = i, this.modalService = a, this.cardGridService = s, this.activeGrouping = this.groupingService.defaultGrouping, this.filterCardIds = [], this.selectCardId = new e.vpe, this.GroupingType = F, this.selectedHeaders = [], this.showUnowned = !0, this.loading = !0, this.activeSort = m.PE.AscMana, this.sortOptions = [new B("Mana", "filter_mana", m.PE.AscMana, m.PE.DescMana), new B("Health", "filter_health", m.PE.AscHealth, m.PE.DescHealth), new B("Attack", "filter_attack", m.PE.AscAttack, m.PE.DescAttack), new B("Tribe", "filter_tribe", m.PE.AscTribe, m.PE.DescTribe), new B("Type", "filter_type", m.PE.AscType, m.PE.DescType), new B("God", "filter_god", m.PE.AscGod, m.PE.DescGod), new B("Rarity", "filter_rarity", m.PE.AscRarity, m.PE.DescRarity), new B("Set", "filter_set", m.PE.AscSet, m.PE.DescSet)], this.allGroupedProtos = [], this.allGroupedQualities = [], this.unsubscribe = new M.xQ, this.watchForResize()
                 }
 
                 checkForVariousChanges(t) {
@@ -4595,8 +4643,8 @@
                     this.modalService.createModal(mn, null, {
                         blurredBackground: !0,
                         canCloseFromOutside: !1,
-                        position: m.e1.Center,
-                        size: m.Cg.Workarea
+                        position: h.e1.Center,
+                        size: h.Cg.Workarea
                     })
                 }
             }
@@ -4607,7 +4655,7 @@
                 type: o,
                 selectors: [["cerberus-forge-card-list"]],
                 viewQuery: function (t, n) {
-                    if (1 & t && (e.Gf(da, 7), e.Gf(Y, 5)), 2 & t) {
+                    if (1 & t && (e.Gf(la, 7), e.Gf(Y, 5)), 2 & t) {
                         let i;
                         e.iGM(i = e.CRH()) && (n.groupsContainer = i.first), e.iGM(i = e.CRH()) && (n.cardComponents = i)
                     }
@@ -4625,7 +4673,7 @@
                 features: [e.TTD],
                 decls: 12,
                 vars: 11,
-                consts: [[1, "sectionHeader"], [1, "sectionHeader__titleContainer"], [1, "sectionHeader__title"], ["iconLigature", "help", "fillColor", "colors.light.700", 1, "sectionHeader__infoButton", 3, "click"], [1, "sectionHeader__groupings", 3, "displaySearch", "searchChange"], [1, "sectionHeader__filterArea", 3, "showFilters", "sortOptions", "selectedHeaders", "cardGrouping", "unownedCheckboxVisible", "sortChange", "groupingHeaderChange"], ["class", "loadingSpinner", 4, "ngIf"], ["infiniteScroll", "", 1, "cardsListingArea", 3, "scrollWindow", "scrolled"], ["groupsContainer", ""], ["mode", "proto", 3, "showBundle", "expandedViewMode", "columns", "showCardCounts", "showUnowned", "displayedGroupedProtos", "filterCardIds", 4, "ngIf"], [3, "columns", "loading", "showCardCounts", "expandedViewMode", "showUnowned", "displayedGroupedQualities", "filterCardIds", 4, "ngIf"], [1, "loadingSpinner"], ["mode", "proto", 3, "showBundle", "expandedViewMode", "columns", "showCardCounts", "showUnowned", "displayedGroupedProtos", "filterCardIds"], [3, "columns", "loading", "showCardCounts", "expandedViewMode", "showUnowned", "displayedGroupedQualities", "filterCardIds"]],
+                consts: [[1, "sectionHeader"], [1, "sectionHeader__titleContainer"], [1, "sectionHeader__title"], ["iconLigature", "help", "fillColor", "colors.light.700", 1, "sectionHeader__infoButton", 3, "click"], [1, "sectionHeader__groupings", 3, "displaySearch", "searchChange"], [1, "sectionHeader__filterArea", 3, "showFilters", "sortOptions", "selectedHeaders", "cardGrouping", "unownedCheckboxVisible", "sortChange", "groupingHeaderChange"], ["class", "loadingSpinner", 4, "ngIf"], ["infiniteScroll", "", "data-test-id", "cardsListingForge", 1, "cardsListingArea", 3, "scrollWindow", "scrolled"], ["groupsContainer", ""], ["mode", "proto", 3, "showBundle", "expandedViewMode", "columns", "showCardCounts", "showUnowned", "displayedGroupedProtos", "filterCardIds", 4, "ngIf"], [3, "columns", "loading", "showCardCounts", "expandedViewMode", "showUnowned", "displayedGroupedQualities", "filterCardIds", 4, "ngIf"], [1, "loadingSpinner"], ["mode", "proto", 3, "showBundle", "expandedViewMode", "columns", "showCardCounts", "showUnowned", "displayedGroupedProtos", "filterCardIds"], [3, "columns", "loading", "showCardCounts", "expandedViewMode", "showUnowned", "displayedGroupedQualities", "filterCardIds"]],
                 template: function (t, n) {
                     1 & t && (e.TgZ(0, "header", 0)(1, "div", 1)(2, "h3", 2), e._uU(3), e.qZA(), e.TgZ(4, "gu-icon", 3), e.NdJ("click", function () {
                         return n.fluxInfoModal()
@@ -4635,20 +4683,20 @@
                         return n.sortChange(a)
                     })("groupingHeaderChange", function (a) {
                         return n.groupingHeaderChange(a)
-                    }), e.qZA()(), e.YNc(7, ga, 1, 0, "gu-loading-spinner", 6), e.TgZ(8, "section", 7, 8), e.NdJ("scrolled", function () {
+                    }), e.qZA()(), e.YNc(7, da, 1, 0, "gu-loading-spinner", 6), e.TgZ(8, "section", 7, 8), e.NdJ("scrolled", function () {
                         return n.loadGroup()
-                    }), e.YNc(10, pa, 1, 7, "app-inventory-cards", 9), e.YNc(11, ua, 1, 7, "app-group-quality", 10), e.qZA()), 2 & t && (e.xp6(3), e.Oqu(n.title), e.xp6(2), e.Q6J("displaySearch", !0), e.xp6(1), e.Q6J("showFilters", !1)("sortOptions", n.sortOptions)("selectedHeaders", n.selectedHeaders)("cardGrouping", n.protoGrouping)("unownedCheckboxVisible", !1), e.xp6(1), e.Q6J("ngIf", n.loading), e.xp6(1), e.Q6J("scrollWindow", !1), e.xp6(2), e.Q6J("ngIf", n.activeGrouping.groupingType !== n.GroupingType.Quality), e.xp6(1), e.Q6J("ngIf", n.activeGrouping.groupingType === n.GroupingType.Quality))
+                    }), e.YNc(10, ga, 1, 7, "app-inventory-cards", 9), e.YNc(11, pa, 1, 7, "app-group-quality", 10), e.qZA()), 2 & t && (e.xp6(3), e.Oqu(n.title), e.xp6(2), e.Q6J("displaySearch", !0), e.xp6(1), e.Q6J("showFilters", !1)("sortOptions", n.sortOptions)("selectedHeaders", n.selectedHeaders)("cardGrouping", n.protoGrouping)("unownedCheckboxVisible", !1), e.xp6(1), e.Q6J("ngIf", n.loading), e.xp6(1), e.Q6J("scrollWindow", !1), e.xp6(2), e.Q6J("ngIf", n.activeGrouping.groupingType !== n.GroupingType.Quality), e.xp6(1), e.Q6J("ngIf", n.activeGrouping.groupingType === n.GroupingType.Quality))
                 },
                 directives: [Mt, wt, l.O5, dt, Ot, Pt],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.sectionHeader__infoButton[_ngcontent-%COMP%], .sectionHeader__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.godArea__label[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.sectionHeader__infoButton[_ngcontent-%COMP%], .sectionHeader__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.godArea__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;height:100%}.sectionHeader[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 1);padding-right:calc(var(--vh) * 1);padding-bottom:calc(var(--vh) * 1);padding-left:calc(var(--vh) * 2);margin-bottom:calc(var(--vh) * 3);background:linear-gradient(to right,#1d2f41 0%,#0f1b27 100%);position:relative;display:flex;justify-content:space-between;align-items:center;border:calc(var(--vh) * .15) solid #1d2f41}.sectionHeader__titleContainer[_ngcontent-%COMP%]{display:flex;align-items:center}.sectionHeader__title[_ngcontent-%COMP%]{text-transform:uppercase;line-height:1;background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.sectionHeader__infoButton[_ngcontent-%COMP%]{margin-left:calc(var(--vh) * .8);cursor:pointer}.sectionHeader__godArea[_ngcontent-%COMP%]{user-select:none;pointer-events:none;position:absolute;right:0;top:0;display:flex;align-items:flex-start}app-god-badge[_ngcontent-%COMP%]{user-select:auto;pointer-events:auto;margin-top:calc(var(--vh) * 1)}.godArea__label[_ngcontent-%COMP%]{color:#7192b0;padding-top:calc(var(--vh) * 1.1);padding-right:calc(var(--vw) * 2)}.cardsListingArea[_ngcontent-%COMP%]{overflow:hidden;overflow-y:auto;flex:1}.loadingSpinner[_ngcontent-%COMP%]{margin:0 auto}  app-card{cursor:pointer}"]
             }), o
         })();
-        var ha = g(40537), fn = g(77518), ma = g(52909), Cn = g(47760);
+        var _a = g(40537), fn = g(77518), ha = g(52909), Cn = g(47760);
         let It = (() => {
             class o {
                 transform(t, n = 6) {
                     try {
-                        const i = ma.O$.from(t);
+                        const i = ha.O$.from(t);
                         return (0, Cn.Fn)(Number.parseFloat(Number((0, Cn.dF)(i)).toFixed(n)))
                     } catch (i) {
                         return "0"
@@ -4660,13 +4708,13 @@
                 return new (t || o)
             }, o.\u0275pipe = e.Yjl({name: "formatEther", type: o, pure: !0}), o
         })();
-        var fa = g(76638);
+        var ma = g(76638);
 
-        function Ca(o, r) {
+        function fa(o, r) {
             1 & o && (e.TgZ(0, "div", 12)(1, "gu-body-text", 13), e._uU(2, " There\u2019s nothing here! "), e.qZA(), e.TgZ(3, "gu-body-text", 14), e._uU(4, " Start fusing then check back again. "), e.qZA()())
         }
 
-        function va(o, r) {
+        function Ca(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.ynx(0), e.TgZ(1, "gu-simple-text-button", 33), e.NdJ("click", function () {
@@ -4681,50 +4729,50 @@
             }
         }
 
-        function ba(o, r) {
+        function va(o, r) {
             if (1 & o && (e.TgZ(0, "a", 34)(1, "gu-body-text", 28), e._uU(2), e.qZA()()), 2 & o) {
                 const t = e.oxw().$implicit, n = e.oxw(3);
                 e.hYB("href", "", n.environment.GUCollectioimmutableXMarketplaceUrlGUInventory, "/", t.target_assets[0].id, "", e.LSH), e.xp6(2), e.hij(" ", t.target_assets[0].id, " ")
             }
         }
 
-        const wa = function (o, r) {
+        const ba = function (o, r) {
             return {tableSection__rowEven: o, tableSection__rowOdd: r}
         };
 
-        function xa(o, r) {
-            if (1 & o && (e.TgZ(0, "tr", 24)(1, "td", 25)(2, "gu-body-text", 26), e._uU(3), e.ALo(4, "date"), e.qZA(), e.TgZ(5, "gu-body-text", 27), e._uU(6), e.ALo(7, "date"), e.qZA()(), e.TgZ(8, "td", 25)(9, "gu-body-text", 28), e._uU(10), e.ALo(11, "titlecase"), e.YNc(12, va, 2, 2, "ng-container", 8), e.qZA()(), e.TgZ(13, "td", 25)(14, "gu-body-text", 28), e._uU(15), e.qZA()(), e.TgZ(16, "td", 25), e.YNc(17, ba, 3, 3, "a", 29), e.qZA(), e.TgZ(18, "td", 25)(19, "gu-body-text", 28), e._uU(20), e.ALo(21, "titlecase"), e.qZA()(), e.TgZ(22, "td", 25)(23, "gu-body-text", 30), e._uU(24), e.ALo(25, "numberAbbreviation"), e._UZ(26, "gu-icon", 31), e._uU(27), e.ALo(28, "formatEther"), e._UZ(29, "gu-icon", 32), e.qZA()(), e.TgZ(30, "td", 25)(31, "gu-body-text", 28), e._uU(32), e.ALo(33, "addressTruncate"), e.qZA()()()), 2 & o) {
+        function wa(o, r) {
+            if (1 & o && (e.TgZ(0, "tr", 24)(1, "td", 25)(2, "gu-body-text", 26), e._uU(3), e.ALo(4, "date"), e.qZA(), e.TgZ(5, "gu-body-text", 27), e._uU(6), e.ALo(7, "date"), e.qZA()(), e.TgZ(8, "td", 25)(9, "gu-body-text", 28), e._uU(10), e.ALo(11, "titlecase"), e.YNc(12, Ca, 2, 2, "ng-container", 8), e.qZA()(), e.TgZ(13, "td", 25)(14, "gu-body-text", 28), e._uU(15), e.qZA()(), e.TgZ(16, "td", 25), e.YNc(17, va, 3, 3, "a", 29), e.qZA(), e.TgZ(18, "td", 25)(19, "gu-body-text", 28), e._uU(20), e.ALo(21, "titlecase"), e.qZA()(), e.TgZ(22, "td", 25)(23, "gu-body-text", 30), e._uU(24), e.ALo(25, "numberAbbreviation"), e._UZ(26, "gu-icon", 31), e._uU(27), e.ALo(28, "formatEther"), e._UZ(29, "gu-icon", 32), e.qZA()(), e.TgZ(30, "td", 25)(31, "gu-body-text", 28), e._uU(32), e.ALo(33, "addressTruncate"), e.qZA()()()), 2 & o) {
                 const t = r.$implicit, n = r.even, i = e.oxw(3);
-                e.Q6J("ngClass", e.WLB(29, wa, n, !n)), e.xp6(3), e.hij(" ", e.xi3(4, 12, t.created_at, "dd/MM/YYYY"), " "), e.xp6(3), e.hij(" ", e.xi3(7, 15, t.created_at, "h:mm:ss"), " "), e.xp6(4), e.hij(" ", e.lcZ(11, 18, i.ForgeStatusMapping[t.status]), "\xa0 "), e.xp6(2), e.Q6J("ngIf", t.status !== i.ForgeStatus.COMPLETED && t.status !== i.ForgeStatus.VALIDATING_PAYMENT), e.xp6(3), e.hij(" ", t.request_id, " "), e.xp6(2), e.Q6J("ngIf", (null == t.target_assets[0] ? null : t.target_assets[0].id) > 0), e.xp6(3), e.AsE(" ", t.target_assets[0].name, " - ", e.lcZ(21, 20, i.QualityMapping[t.target_assets[0].quality]), " "), e.xp6(4), e.hij(" ", e.xi3(25, 22, t.flux_amount, 2), " "), e.xp6(3), e.hij(" \xa0 ", e.lcZ(28, 25, t.token_amount), " "), e.xp6(5), e.hij(" ", e.lcZ(33, 27, t.address), " ")
+                e.Q6J("ngClass", e.WLB(29, ba, n, !n)), e.xp6(3), e.hij(" ", e.xi3(4, 12, t.created_at, "dd/MM/YYYY"), " "), e.xp6(3), e.hij(" ", e.xi3(7, 15, t.created_at, "h:mm:ss"), " "), e.xp6(4), e.hij(" ", e.lcZ(11, 18, i.ForgeStatusMapping[t.status]), "\xa0 "), e.xp6(2), e.Q6J("ngIf", t.status !== i.ForgeStatus.COMPLETED && t.status !== i.ForgeStatus.VALIDATING_PAYMENT), e.xp6(3), e.hij(" ", t.request_id, " "), e.xp6(2), e.Q6J("ngIf", (null == t.target_assets[0] ? null : t.target_assets[0].id) > 0), e.xp6(3), e.AsE(" ", t.target_assets[0].name, " - ", e.lcZ(21, 20, i.QualityMapping[t.target_assets[0].quality]), " "), e.xp6(4), e.hij(" ", e.xi3(25, 22, t.flux_amount, 2), " "), e.xp6(3), e.hij(" \xa0 ", e.lcZ(28, 25, t.token_amount), " "), e.xp6(5), e.hij(" ", e.lcZ(33, 27, t.address), " ")
             }
         }
 
-        function Ma(o, r) {
-            if (1 & o && (e.TgZ(0, "table", 15)(1, "thead")(2, "tr")(3, "th", 16)(4, "gu-body-text", 17), e._uU(5, " Time (UTC) "), e.qZA()(), e.TgZ(6, "th", 16)(7, "div", 18)(8, "gu-body-text", 17), e._uU(9, " Status "), e.qZA(), e._uU(10, " \xa0 "), e.TgZ(11, "app-tooltip", 19), e._UZ(12, "gu-icon", 20), e.qZA()()(), e.TgZ(13, "th", 16)(14, "div", 18)(15, "gu-body-text", 17), e._uU(16, " Fusing ID "), e.qZA(), e._uU(17, " \xa0 "), e.TgZ(18, "app-tooltip", 21), e._UZ(19, "gu-icon", 20), e.qZA()()(), e.TgZ(20, "th", 16)(21, "div", 18)(22, "gu-body-text", 17), e._uU(23, " Card ID "), e.qZA(), e._uU(24, " \xa0 "), e.TgZ(25, "app-tooltip", 22), e._UZ(26, "gu-icon", 20), e.qZA()()(), e.TgZ(27, "th", 16)(28, "gu-body-text", 17), e._uU(29, " Card Fused "), e.qZA()(), e.TgZ(30, "th", 16)(31, "gu-body-text", 17), e._uU(32, " Cost "), e.qZA()(), e.TgZ(33, "th", 16)(34, "gu-body-text", 17), e._uU(35, " Wallet "), e.qZA()()()(), e.TgZ(36, "tbody"), e.YNc(37, xa, 34, 32, "tr", 23), e.qZA()()), 2 & o) {
+        function xa(o, r) {
+            if (1 & o && (e.TgZ(0, "table", 15)(1, "thead")(2, "tr")(3, "th", 16)(4, "gu-body-text", 17), e._uU(5, " Time (UTC) "), e.qZA()(), e.TgZ(6, "th", 16)(7, "div", 18)(8, "gu-body-text", 17), e._uU(9, " Status "), e.qZA(), e._uU(10, " \xa0 "), e.TgZ(11, "app-tooltip", 19), e._UZ(12, "gu-icon", 20), e.qZA()()(), e.TgZ(13, "th", 16)(14, "div", 18)(15, "gu-body-text", 17), e._uU(16, " Fusing ID "), e.qZA(), e._uU(17, " \xa0 "), e.TgZ(18, "app-tooltip", 21), e._UZ(19, "gu-icon", 20), e.qZA()()(), e.TgZ(20, "th", 16)(21, "div", 18)(22, "gu-body-text", 17), e._uU(23, " Card ID "), e.qZA(), e._uU(24, " \xa0 "), e.TgZ(25, "app-tooltip", 22), e._UZ(26, "gu-icon", 20), e.qZA()()(), e.TgZ(27, "th", 16)(28, "gu-body-text", 17), e._uU(29, " Card Fused "), e.qZA()(), e.TgZ(30, "th", 16)(31, "gu-body-text", 17), e._uU(32, " Cost "), e.qZA()(), e.TgZ(33, "th", 16)(34, "gu-body-text", 17), e._uU(35, " Wallet "), e.qZA()()()(), e.TgZ(36, "tbody"), e.YNc(37, wa, 34, 32, "tr", 23), e.qZA()()), 2 & o) {
                 const t = e.oxw(2);
                 e.xp6(37), e.Q6J("ngForOf", t.items)
             }
         }
 
-        function ya(o, r) {
-            if (1 & o && (e.TgZ(0, "div", 9), e.YNc(1, Ca, 5, 0, "div", 10), e.YNc(2, Ma, 38, 1, "table", 11), e.qZA()), 2 & o) {
+        function Ma(o, r) {
+            if (1 & o && (e.TgZ(0, "div", 9), e.YNc(1, fa, 5, 0, "div", 10), e.YNc(2, xa, 38, 1, "table", 11), e.qZA()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(1), e.Q6J("ngIf", 0 === t.items.length), e.xp6(1), e.Q6J("ngIf", t.items.length > 0)
             }
         }
 
-        function ka(o, r) {
+        function ya(o, r) {
             1 & o && e._UZ(0, "gu-loading-spinner")
         }
 
-        let Oa = (() => {
+        let ka = (() => {
             class o {
                 constructor(t, n, i, a, s) {
                     this.authService = t, this.fusingService = n, this.modalService = i, this.environment = a, this.window = s, this.unsubscribe = new M.xQ, this.items = [], this.fusingRequestResponseLoading = !0
                 }
 
                 get QualityMapping() {
-                    return f.Xl
+                    return m.Xl
                 }
 
                 get ForgeStatus() {
@@ -4737,7 +4785,7 @@
 
                 ngOnInit() {
                     const t = this.authService.getUserId();
-                    this.fusingRequestResponseLoading = !0, this.fusingService.getFusingLatestsRequests(t).pipe((0, u.R)(this.unsubscribe), (0, ha.x)(() => {
+                    this.fusingRequestResponseLoading = !0, this.fusingService.getFusingLatestsRequests(t).pipe((0, u.R)(this.unsubscribe), (0, _a.x)(() => {
                         this.fusingRequestResponseLoading = !1
                     })).subscribe(n => {
                         this.items = n.records
@@ -4762,7 +4810,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(h.mI), e.Y36(_.pH), e.Y36(I.Z), e.Y36(h.Ho), e.Y36(Window))
+                return new (t || o)(e.Y36(f.mI), e.Y36(_.pH), e.Y36(I.Z), e.Y36(f.Ho), e.Y36(Window))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["cerberus-fusing-history-modal"]],
@@ -4772,15 +4820,15 @@
                 template: function (t, n) {
                     1 & t && (e.TgZ(0, "gu-icon", 0), e.NdJ("click", function () {
                         return n.onHide()
-                    }), e.qZA(), e.TgZ(1, "div", 1)(2, "header", 2)(3, "gu-heading-text", 3), e._uU(4, " Fusing History "), e.qZA(), e.TgZ(5, "gu-body-text", 4), e._uU(6, " A list of your past 60 fuses and their status. See your Immutable X inventory "), e.TgZ(7, "gu-simple-text-button", 5), e._UZ(8, "gu-icon", 6), e.qZA()()(), e.YNc(9, ya, 3, 2, "div", 7), e.qZA(), e.YNc(10, ka, 1, 0, "gu-loading-spinner", 8)), 2 & t && (e.xp6(9), e.Q6J("ngIf", !n.fusingRequestResponseLoading), e.xp6(1), e.Q6J("ngIf", n.fusingRequestResponseLoading))
+                    }), e.qZA(), e.TgZ(1, "div", 1)(2, "header", 2)(3, "gu-heading-text", 3), e._uU(4, " Fusing History "), e.qZA(), e.TgZ(5, "gu-body-text", 4), e._uU(6, " A list of your past 60 fuses and their status. See your Immutable X inventory "), e.TgZ(7, "gu-simple-text-button", 5), e._UZ(8, "gu-icon", 6), e.qZA()()(), e.YNc(9, Ma, 3, 2, "div", 7), e.qZA(), e.YNc(10, ya, 1, 0, "gu-loading-spinner", 8)), 2 & t && (e.xp6(9), e.Q6J("ngIf", !n.fusingRequestResponseLoading), e.xp6(1), e.Q6J("ngIf", n.fusingRequestResponseLoading))
                 },
                 directives: [l.O5, De.K, l.sg, l.mk],
-                pipes: [l.uU, l.rS, Me.XX, It, fa.A],
+                pipes: [l.uU, l.rS, Me.XX, It, ma.A],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.closeModal[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.closeModal[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;align-items:center;margin:auto;position:relative;padding-top:calc(var(--vh) * 3.5);padding-bottom:calc(var(--vh) * 4);width:calc(var(--vw) * 80);height:calc(var(--vh) * 85);border:2px solid #1D2F41;background:#0F1B27}.closeModal[_ngcontent-%COMP%]{position:absolute;top:calc(var(--vh) * 1.4);right:calc(var(--vh) * 1.4);cursor:pointer}.wrapper[_ngcontent-%COMP%]{overflow-y:auto}.header[_ngcontent-%COMP%]{display:flex;flex-direction:column;align-items:center;width:100%;padding-left:calc(var(--vw) * 2);padding-right:calc(var(--vw) * 2);margin-bottom:calc(var(--vw) * 2)}.header__title[_ngcontent-%COMP%]{padding-bottom:calc(var(--vh) * .8)}.tableSection[_ngcontent-%COMP%]{width:100%;padding-left:calc(var(--vw) * 3);padding-right:calc(var(--vw) * 3);display:flex;align-items:center;justify-content:center}.tableSection_noItem[_ngcontent-%COMP%]{position:absolute;transform:translate(-50%,-50%);top:50%;left:50%;display:flex;flex-direction:column;align-items:center}.tableSection__table[_ngcontent-%COMP%]{border-spacing:0;border-color:#1d2f41;width:100%}.tableSection__tableHeader[_ngcontent-%COMP%]{background-color:#1d2f41;padding-top:calc(var(--vw) * 1);padding-bottom:calc(var(--vw) * 1)}.tableSection__tableHeaderContent[_ngcontent-%COMP%]{display:flex;justify-content:center}.tableSection__tableHeaderIcon[_ngcontent-%COMP%]{cursor:pointer}.tableSection__rowEven[_ngcontent-%COMP%]{background-color:#f6f6f6}.tableSection__rowOdd[_ngcontent-%COMP%]{background-color:#d7d7d7}.tableSection__cell[_ngcontent-%COMP%]{width:calc(var(--vw) * 14.5);padding:10px;border-right:1px solid #464646;border-top:1px solid #464646;text-align:center}.tableSection__cell[_ngcontent-%COMP%]:first-child{background-color:#1d2f41;border-left:1px solid #464646}.tableSection__cellDate[_ngcontent-%COMP%]{display:block}.tableSection__cellFusingId[_ngcontent-%COMP%]{cursor:pointer}.tableSection__cellFusingId[_ngcontent-%COMP%]:hover{color:#0f1b27;border-color:#0f1b27}.tableSection_cellContentCost[_ngcontent-%COMP%]{display:flex;align-items:center;justify-content:center}"]
             }), o
         })();
-        var Pa = g(77535);
-        let Sa = (() => {
+        var Oa = g(77535);
+        let Pa = (() => {
             class o {
                 constructor(t, n) {
                     this.moduleConfigService = t, this.http = n, this.moduleConfig$ = this.moduleConfigService.loadConfigurations()
@@ -4804,9 +4852,9 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.LFG(Pa.L), e.LFG(rn.eN))
+                return new (t || o)(e.LFG(Oa.L), e.LFG(rn.eN))
             }, o.\u0275prov = e.Yz7({token: o, factory: o.\u0275fac, providedIn: "root"}), o
-        })(), Ta = (() => {
+        })(), Sa = (() => {
             class o {
                 constructor(t) {
                     this.imxApiService = t, this._godsInfo$ = new J.X(null), this.dataStore = {godsInfo: void 0}
@@ -4831,7 +4879,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.LFG(Sa))
+                return new (t || o)(e.LFG(Pa))
             }, o.\u0275prov = e.Yz7({token: o, factory: o.\u0275fac, providedIn: "root"}), o
         })(), vn = (() => {
             class o {
@@ -4887,11 +4935,11 @@
             }), o
         })();
 
-        function Ia(o, r) {
+        function Ta(o, r) {
             1 & o && (e.ynx(0), e.TgZ(1, "gu-body-text"), e._uU(2, "Wallet:"), e.qZA(), e._UZ(3, "cerberus-select-wallet-dropdown", 11), e.BQk())
         }
 
-        let Aa = (() => {
+        let Ia = (() => {
             class o {
                 constructor(t, n, i, a) {
                     this.fluxService = t, this.imxBalanceService = n, this.forgeWalletService = i, this.modalService = a, this.unsubscribe = new M.xQ, this.fluxBalance = 0
@@ -4924,17 +4972,17 @@
                 }
 
                 historyModal() {
-                    this.modalService.createModal(Oa, null, {
+                    this.modalService.createModal(ka, null, {
                         blurredBackground: !0,
                         canCloseFromOutside: !1,
-                        position: m.e1.Center,
-                        size: m.Cg.Workarea
+                        position: h.e1.Center,
+                        size: h.Cg.Workarea
                     })
                 }
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(_.TJ), e.Y36(Ta), e.Y36(Pe.d), e.Y36(I.Z))
+                return new (t || o)(e.Y36(_.TJ), e.Y36(Sa), e.Y36(Pe.d), e.Y36(I.Z))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["cerberus-forge-area-header"]],
@@ -4942,7 +4990,7 @@
                 vars: 9,
                 consts: [[1, "cardForgeArea__balanceArea-left"], [4, "ngIf"], ["size", "normal", "text", "History", "icon", "action_history", "leftIconPosition", "true", 1, "cardForgeArea__header-history__cta", 3, "click"], [1, "cardForgeArea__balanceArea-right"], [1, "cardForgeArea__balanceArea__balanceRow", "cardForgeArea__balanceArea__fluxBalanceRow"], ["iconLigature", "flux_symbol", 1, "cardForgeArea__balanceArea__balance__icon", "cardForgeArea__balanceArea__fluxBalance__icon"], [1, "cardForgeArea__balanceArea__balance__number", "cardForgeArea__balanceArea__fluxBalance__number"], ["src", "/assets/images/ui-embellishments/ui--simple-divider.png", "alt", "small divider", 1, "header__divider"], [1, "cardForgeArea__balanceArea__balanceRow", "cardForgeArea__balanceArea__godsBalanceRow"], ["iconLigature", "GUToken", "fillColor", "", 1, "cardForgeArea__balanceArea__balance__icon", "cardForgeArea__balanceArea__godsBalance__icon"], [1, "cardForgeArea__balanceArea__balance__number", "cardForgeArea__balanceArea__godsBalance__number"], ["truncateAddress", "true", 1, "forgeArea__header-selectWalletDropdown"]],
                 template: function (t, n) {
-                    1 & t && (e.TgZ(0, "div", 0), e.YNc(1, Ia, 4, 0, "ng-container", 1), e.TgZ(2, "gu-plain-square-button", 2), e.NdJ("click", function () {
+                    1 & t && (e.TgZ(0, "div", 0), e.YNc(1, Ta, 4, 0, "ng-container", 1), e.TgZ(2, "gu-plain-square-button", 2), e.NdJ("click", function () {
                         return n.historyModal()
                     }), e.qZA()(), e.TgZ(3, "div", 3)(4, "div", 4), e._UZ(5, "gu-icon", 5), e.TgZ(6, "h2", 6), e._uU(7), e.ALo(8, "numberAbbreviation"), e.qZA()(), e._UZ(9, "img", 7), e.TgZ(10, "div", 8), e._UZ(11, "gu-icon", 9), e.TgZ(12, "h2", 10), e._uU(13), e.ALo(14, "formatEther"), e.qZA()()()), 2 & t && (e.xp6(1), e.Q6J("ngIf", n.selectedWallet), e.xp6(6), e.hij(" ", e.xi3(8, 3, n.fluxBalance, 2), " "), e.xp6(6), e.hij(" ", n.godsBalance ? e.xi3(14, 6, n.godsBalance, 2) : "-", " "))
                 },
@@ -4950,7 +4998,7 @@
                 pipes: [Me.XX, It],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.cardForgeArea__balanceArea__balance__number[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.cardForgeArea__balanceArea__infoButton[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.cardForgeArea__balanceArea__balance__number[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 4.2);line-height:1.3}.cardForgeArea__balanceArea__infoButton[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;justify-content:space-between;align-items:center;padding-bottom:calc(var(--vh) * 1.1);border-bottom:calc(var(--vh) * .15) solid #1d2f41}.forgeArea__header-selectWalletDropdown[_ngcontent-%COMP%]{margin-left:calc(var(--vw) * 1);margin-right:calc(var(--vw) * 1);width:calc(var(--vw) * 11);z-index:1}.cardForgeArea__header-history__cta[_ngcontent-%COMP%]{width:calc(var(--vw) * 9)}.cardForgeArea__balanceArea-left[_ngcontent-%COMP%]{display:flex;align-items:center}.cardForgeArea__balanceArea-right[_ngcontent-%COMP%]{display:flex;justify-content:space-between;align-items:center}.cardForgeArea__balanceArea__balanceRow[_ngcontent-%COMP%]{display:flex;justify-content:center}.cardForgeArea__balanceArea__balance__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 4.4)}.cardForgeArea__balanceArea__balance__number[_ngcontent-%COMP%]{margin-left:calc(var(--vw) * .16)}.cardForgeArea__balanceArea__fluxBalance__icon[_ngcontent-%COMP%], .cardForgeArea__balanceArea__fluxBalance__number[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#f6f6f6 0%,#d7d7d7 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.cardForgeArea__balanceArea__godsBalance__icon[_ngcontent-%COMP%], .cardForgeArea__balanceArea__godsBalance__number[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.header__divider[_ngcontent-%COMP%]{margin-left:calc(var(--vh) * 1.1);margin-right:calc(var(--vh) * 1.1);height:calc(var(--vh) * 3.35);width:calc(var(--vh) * .2)}.cardForgeArea__balanceArea__infoButton[_ngcontent-%COMP%]{color:#7192b0;font-weight:700;text-transform:uppercase;text-align:center;cursor:pointer;white-space:nowrap}.cardForgeArea__balanceArea__infoButton__icon[_ngcontent-%COMP%]{margin-left:calc(var(--vw) * .2);margin-top:calc(var(--vh) * -.1);width:calc(var(--vh) * 2);height:calc(var(--vh) * 2);border-radius:50%;border:calc(var(--vh) * .15) solid #7192b0;display:inline-flex;vertical-align:top}.cardForgeArea__balanceArea__infoButton__icon[_ngcontent-%COMP%] > span[_ngcontent-%COMP%]{margin:auto;line-height:1;font-weight:700;font-style:normal}"]
             }), o
-        })(), Fa = (() => {
+        })(), Aa = (() => {
             class o {
             }
 
@@ -4969,17 +5017,17 @@
                 styles: ["[_nghost-%COMP%]{height:100%;width:86%;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto}.forgeArea__selectWalletDropdown[_ngcontent-%COMP%]{display:block;width:100%;margin-top:calc(var(--vh) * 1.6);margin-bottom:calc(var(--vh) * 1.4)}"]
             }), o
         })();
-        const Da = ["progressCircle"];
+        const Fa = ["progressCircle"];
 
-        function Ga(o, r) {
+        function Da(o, r) {
             if (1 & o && (e.O4$(), e._UZ(0, "circle", 16)), 2 & o) {
                 const t = e.oxw(2);
                 e.Udp("r", t.radius)("stroke-width", t.strokeWidth)("fill", t.fillColor)
             }
         }
 
-        function Za(o, r) {
-            if (1 & o && (e.O4$(), e.TgZ(0, "svg", 1)(1, "defs")(2, "linearGradient", 2), e._UZ(3, "stop", 3)(4, "stop", 4)(5, "stop", 5), e.qZA(), e.TgZ(6, "linearGradient", 6), e._UZ(7, "stop", 7)(8, "stop", 8)(9, "stop", 9), e.qZA(), e.TgZ(10, "linearGradient", 10), e._UZ(11, "stop", 11)(12, "stop", 12), e.qZA()(), e.YNc(13, Ga, 1, 6, "circle", 13), e._UZ(14, "circle", 14, 15), e.qZA()), 2 & o) {
+        function Ga(o, r) {
+            if (1 & o && (e.O4$(), e.TgZ(0, "svg", 1)(1, "defs")(2, "linearGradient", 2), e._UZ(3, "stop", 3)(4, "stop", 4)(5, "stop", 5), e.qZA(), e.TgZ(6, "linearGradient", 6), e._UZ(7, "stop", 7)(8, "stop", 8)(9, "stop", 9), e.qZA(), e.TgZ(10, "linearGradient", 10), e._UZ(11, "stop", 11)(12, "stop", 12), e.qZA()(), e.YNc(13, Da, 1, 6, "circle", 13), e._UZ(14, "circle", 14, 15), e.qZA()), 2 & o) {
                 const t = e.oxw();
                 e.Udp("width", t.width)("height", t.width), e.xp6(13), e.Q6J("ngIf", t.showBackgroundRing), e.xp6(1), e.Udp("r", t.radius)("stroke-width", t.insetInnerStroke ? .33 * t.strokeWidth : t.strokeWidth)("stroke", t.gradientForStroke ? "url(#" + t.gradientForStroke + "-gradient)" : t.strokeColor)("fill", t.fillColor)("stroke-dasharray", t.circumference + " " + t.circumference)("stroke-dashoffset", t.circumferenceOfCircularSegment), e.ekj("progressRing__circle--supressAnimation", t.supressAnimation)
             }
@@ -5018,7 +5066,7 @@
                 type: o,
                 selectors: [["app-progress-circle"]],
                 viewQuery: function (t, n) {
-                    if (1 & t && e.Gf(Da, 7), 2 & t) {
+                    if (1 & t && e.Gf(Fa, 7), 2 & t) {
                         let i;
                         e.iGM(i = e.CRH()) && (n.progressCircleDom = i.first)
                     }
@@ -5043,7 +5091,7 @@
                 vars: 1,
                 consts: [["class", "progressRing", 3, "width", "height", 4, "ngIf"], [1, "progressRing"], ["id", "gold-gradient", "x1", "0%", "y1", "0%", "x2", "100%", "y2", "100%"], ["offset", "0%", "stop-color", "#fff2d8"], ["offset", "50%", "stop-color", "#ebc98b"], ["offset", "100%", "stop-color", "#c6a052"], ["id", "aqua-gradient", "x1", "0%", "y1", "0%", "x2", "100%", "y2", "100%"], ["offset", "0%", "stop-color", "#affaed"], ["offset", "50%", "stop-color", "#8be1e0"], ["offset", "100%", "stop-color", "#54bbcd"], ["id", "whiteToAqua-gradient", "x1", "0%", "y1", "0%", "x2", "100%", "y2", "100%"], ["offset", "0%", "stop-color", "#ffffff"], ["offset", "100%", "stop-color", "#8be1e0"], ["class", "progressRing__circle--background", "fill", "transparent", "cx", "50%", "cy", "50%", 3, "r", "stroke-width", "fill", 4, "ngIf"], ["fill", "transparent", "cx", "50%", "cy", "50%", "stroke-linecap", "round", 1, "progressRing__circle"], ["progressCircle", ""], ["fill", "transparent", "cx", "50%", "cy", "50%", 1, "progressRing__circle--background"]],
                 template: function (t, n) {
-                    1 & t && e.YNc(0, Za, 16, 19, "svg", 0), 2 & t && e.Q6J("ngIf", n.percentage > 0 || n.showBackgroundRing)
+                    1 & t && e.YNc(0, Ga, 16, 19, "svg", 0), 2 & t && e.Q6J("ngIf", n.percentage > 0 || n.showBackgroundRing)
                 },
                 directives: [l.O5],
                 styles: ["[_nghost-%COMP%]{display:block}.progressRing[_ngcontent-%COMP%]{width:100%;height:100%;border-radius:50%}.progressRing__circle[_ngcontent-%COMP%]{transition:stroke-dashoffset .05s;transform:rotate(-90deg);transform-origin:50% 50%}.progressRing__circle--supressAnimation[_ngcontent-%COMP%]{transition:none}.progressRing__circle--background[_ngcontent-%COMP%]{stroke:#1d2f41}"]
@@ -5070,9 +5118,9 @@
                 styles: ["@keyframes rotate{0%{transform:rotate(0)}50%{transform:rotate(180deg)}to{transform:rotate(360deg)}}[_nghost-%COMP%]{position:relative;width:150px;height:150px;display:block;padding:calc(var(--vh) * .8);border-radius:50%;border:calc(var(--vw) * .2) solid transparent;animation:rotate linear 3.5s infinite;border-top-color:#3d5a7480;border-left-color:#8be1e0;animation-timing-function:cubic-bezier(.55,.38,.21,.88);animation-duration:3s;will-change:transform}[_nghost-%COMP%]   div[_ngcontent-%COMP%]{height:100%;padding:calc(var(--vh) * .8);border-radius:50%;border:calc(var(--vw) * .2) solid transparent;animation:rotate linear 3.5s infinite;border-top-color:#3d5a7480;border-left-color:#8be1e0;animation-timing-function:cubic-bezier(.55,.38,.21,.88);animation-duration:3s;will-change:transform}"]
             }), o
         })();
-        const Ba = ["forgeCard"];
+        const Za = ["forgeCard"];
 
-        function La(o, r) {
+        function Ba(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "div", 3, 4)(2, "app-card2", 5), e.NdJ("click", function () {
@@ -5089,36 +5137,36 @@
             }
         }
 
-        function Ua(o, r) {
+        function La(o, r) {
             if (1 & o && (e.TgZ(0, "div", 7), e._UZ(1, "gu-icon", 8), e.TgZ(2, "div", 9), e._uU(3), e.ALo(4, "numberAbbreviation"), e.qZA()()), 2 & o) {
                 const t = e.oxw(2);
                 e.xp6(3), e.hij(" ", e.xi3(4, 1, t.fluxTransactionCost, 2), " ")
             }
         }
 
-        function Ea(o, r) {
+        function Ua(o, r) {
             if (1 & o && (e.TgZ(0, "div", 7), e._UZ(1, "gu-icon", 10), e.TgZ(2, "div", 11), e._uU(3), e.ALo(4, "formatEther"), e.qZA()()), 2 & o) {
                 const t = e.oxw(2);
                 e.xp6(3), e.hij(" ", t.tokenTransactionCost ? e.xi3(4, 1, t.tokenTransactionCost, 2) : "-", " ")
             }
         }
 
-        function Na(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, La, 4, 2, "div", 1), e.YNc(2, Ua, 5, 4, "div", 2), e.YNc(3, Ea, 5, 4, "div", 2), e.BQk()), 2 & o) {
+        function Ea(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, Ba, 4, 2, "div", 1), e.YNc(2, La, 5, 4, "div", 2), e.YNc(3, Ua, 5, 4, "div", 2), e.BQk()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(1), e.Q6J("ngForOf", t.forgeCards.ids), e.xp6(1), e.Q6J("ngIf", t.fluxTransactionCost), e.xp6(1), e.Q6J("ngIf", t.tokenTransactionCost)
             }
         }
 
-        function Ra(o, r) {
+        function Na(o, r) {
             if (1 & o && (e.TgZ(0, "div", 3, 4), e._UZ(2, "app-card2", 12), e.qZA()), 2 & o) {
                 const t = r.$implicit;
                 e.xp6(2), e.Q6J("protoId", t.protoId)("quality", t.quality)
             }
         }
 
-        function Qa(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, Ra, 3, 2, "div", 1), e.BQk()), 2 & o) {
+        function Ra(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, Na, 3, 2, "div", 1), e.BQk()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(1), e.Q6J("ngForOf", t.fakeForgeCards)
             }
@@ -5155,7 +5203,7 @@
                 type: o,
                 selectors: [["cerberus-app-forge-cards"]],
                 viewQuery: function (t, n) {
-                    if (1 & t && e.Gf(Ba, 5), 2 & t) {
+                    if (1 & t && e.Gf(Za, 5), 2 & t) {
                         let i;
                         e.iGM(i = e.CRH()) && (n.forgeCardDoms = i)
                     }
@@ -5169,33 +5217,33 @@
                 vars: 2,
                 consts: [[4, "ngIf"], ["class", "cardsArea__card", 4, "ngFor", "ngForOf"], ["class", "cardsArea__amount", 4, "ngIf"], [1, "cardsArea__card"], ["forgeCard", ""], [3, "protoId", "quality", "click"], ["iconLigature", "close_x", 1, "cardsArea__card__close", 3, "click"], [1, "cardsArea__amount"], ["iconLigature", "flux_symbol", 1, "cardsArea__amount__icon"], [1, "cardsArea__amount__number"], ["iconLigature", "GUToken", 1, "cardsArea__amount__icon", "cardsArea__amount__icon--token"], [1, "cardsArea__amount__number", "cardsArea__amount__number--token"], [3, "protoId", "quality"]],
                 template: function (t, n) {
-                    1 & t && (e.YNc(0, Na, 4, 3, "ng-container", 0), e.YNc(1, Qa, 2, 1, "ng-container", 0)), 2 & t && (e.Q6J("ngIf", n.forgeCards), e.xp6(1), e.Q6J("ngIf", !n.forgeCards && n.fakeForgeCards.length))
+                    1 & t && (e.YNc(0, Ea, 4, 3, "ng-container", 0), e.YNc(1, Ra, 2, 1, "ng-container", 0)), 2 & t && (e.Q6J("ngIf", n.forgeCards), e.xp6(1), e.Q6J("ngIf", !n.forgeCards && n.fakeForgeCards.length))
                 },
                 directives: [l.O5, l.sg, Y],
                 pipes: [Me.XX, It],
                 styles: ["@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.cardsArea__amount__number[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.cardsArea__card__keepText[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.cardsArea__card__keepText[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.29)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex}.cardsArea__card[_ngcontent-%COMP%]{width:calc(var(--vw) * 7);margin-right:calc(var(--vw) * .2);padding-right:calc(var(--vw) * .5);padding-left:calc(var(--vw) * .15);padding-top:calc(var(--vh) * .6);transition:border .15s ease-in-out;border:calc(var(--vh) * .15) solid transparent;position:relative;display:flex;flex-direction:column;cursor:pointer;animation:.2s enter-card ease-in-out}.cardsArea__card[_ngcontent-%COMP%]:hover:not(.cardsArea__card--keep){border-color:#3d5a7480}@keyframes enter-card{0%{transform:translateY(15%);opacity:0}to{transform:translateY(0);opacity:1}}.cardsArea__card--keep[_ngcontent-%COMP%]{border-color:#3d5a74}.cardsArea__card__keepText[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * .35);text-transform:uppercase;font-weight:600;line-height:1.1;margin:0;margin-top:calc(var(--vh) * .2);text-align:center;color:#f6f6f6}.cardsArea__card__close[_ngcontent-%COMP%]{top:calc(var(--vh) * 1.05);right:calc(var(--vw) * .4);position:absolute;width:calc(var(--vw) * 1.2);height:calc(var(--vw) * 1.2);font-size:calc(calc(var(--vw) * 1.2) * .5);border-radius:50%;display:flex;border:calc(var(--vh) * .15) solid #7192b0;color:#f6f6f6;background:#0c1620;cursor:pointer}.cardsArea__card__close[_ngcontent-%COMP%]:hover{background:#7192b0}.cardsArea__card__close[_ngcontent-%COMP%]     i{margin:auto}.cardsArea__amount[_ngcontent-%COMP%]{padding-bottom:calc(var(--vh) * 1.5);width:calc(var(--vw) * 5);display:flex;flex-direction:column;align-items:center;justify-content:center}.cardsArea__amount__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 7.5);background:linear-gradient(to bottom,#f6f6f6 0%,#d7d7d7 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:calc(var(--vh) * -.5);line-height:1}.cardsArea__amount__number[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 3);background:linear-gradient(to bottom,#f6f6f6 0%,#d7d7d7 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1}.cardsArea__amount__icon--token[_ngcontent-%COMP%], .cardsArea__amount__number--token[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}"]
             }), o
         })();
-        const qa = ["previewCardAreaDom"], Ha = ["previewCardDom"], Ya = ["shimmerDom"], Ja = ["shimmerAreaDom"],
-            $a = ["smokeDom"], Wa = ["cardForgeArea"], za = ["ctaButton"], ja = ["forgeCards"],
-            Va = ["finalCircularFuse"];
+        const Qa = ["previewCardAreaDom"], qa = ["previewCardDom"], Ha = ["shimmerDom"], Ya = ["shimmerAreaDom"],
+            Ja = ["smokeDom"], $a = ["cardForgeArea"], Wa = ["ctaButton"], za = ["forgeCards"],
+            ja = ["finalCircularFuse"];
 
-        function Xa(o, r) {
+        function Va(o, r) {
             if (1 & o && e._UZ(0, "gu-paragraph-text", 27), 2 & o) {
                 const t = e.oxw();
                 e.Q6J("innerHTML", t.uiStateInformation.instructionalMessage, e.oJD)
             }
         }
 
-        function Ka(o, r) {
+        function Xa(o, r) {
             1 & o && (e.TgZ(0, "div", 28), e._UZ(1, "app-inderterminate-loading"), e.qZA())
         }
 
-        const es = function (o) {
+        const Ka = function (o) {
             return {"cardForgeArea__etherscanLink--final": o}
         };
 
-        function ts(o, r) {
+        function es(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "gu-paragraph-text", 29), e.NdJ("click", function () {
@@ -5206,17 +5254,17 @@
             }
             if (2 & o) {
                 const t = e.oxw();
-                e.Q6J("ngClass", e.VKq(1, es, t.completedTransactionTxHash))
+                e.Q6J("ngClass", e.VKq(1, Ka, t.completedTransactionTxHash))
             }
         }
 
-        const ns = function (o) {
+        const ts = function (o) {
             return {cardForgeArea__hideSelectWallet: o}
-        }, os = function () {
+        }, ns = function () {
             return {breakpoint: "x-large", bottomSize: "3x-large"}
-        }, is = function () {
+        }, os = function () {
             return {breakpoint: "2x-large", bottomSize: "6x-large"}
-        }, rs = function (o, r) {
+        }, is = function (o, r) {
             return [o, r]
         };
         y.p8.registerPlugin(se);
@@ -5228,7 +5276,7 @@
             initial: "Select a card to begin...",
             midway: `Select ${t} more <span>${o}</span> ${t > 1 ? "cards" : "card"} to forge a <span>${r}</span> card.`
         });
-        let as = (() => {
+        let rs = (() => {
             class o {
                 constructor(t, n, i, a, s, c, d, p, w, v, k, A, G, U, E) {
                     this.authService = t, this.analyticsService = n, this.cardsService = i, this.modalService = a, this.resizeService = s, this.forgeService = c, this.audioService = d, this.groupingService = p, this.socketService = w, this.fluxService = v, this.ethService = k, this.forgeWalletService = A, this.akuma = G, this.cerberusModalService = U, this.environment = E, this.startTime = +new Date, this.protoCards = [], this.uiStateInformation = {
@@ -5274,8 +5322,8 @@
                         (!n || !t || 0 === t.length) && this.modalService.createModal(hn, null, {
                             blurredBackground: !0,
                             canCloseFromOutside: !1,
-                            position: m.e1.Center,
-                            size: m.Cg.Workarea
+                            position: h.e1.Center,
+                            size: h.Cg.Workarea
                         })
                     })
                 }
@@ -5353,7 +5401,7 @@
                 }
 
                 handleUpdatedForgeCards(t) {
-                    return (0, ae.mG)(this, void 0, void 0, function* () {
+                    return (0, ae.__awaiter)(this, void 0, void 0, function* () {
                         const n = t && t.ids ? t.ids.length : 0,
                             i = yield this.forgeService.numberOfQualityToForge(t.quality);
                         if (n > 0) {
@@ -5417,8 +5465,8 @@
                     "You are locked from fusing because our bot prevention system detected unusual behavior" === t && this.modalService.createModal(_n.n, {}, {
                         blurredBackground: !0,
                         canCloseFromInside: !1,
-                        position: m.e1.Center,
-                        size: m.Cg.StretchableWorkarea
+                        position: h.e1.Center,
+                        size: h.Cg.StretchableWorkarea
                     }), this.mainTL.pause(), this.animateCircularProgress({
                         preFusePercentage: 0,
                         duration: 0
@@ -5584,12 +5632,12 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(h.mI), e.Y36(_.yD), e.Y36(_.dK), e.Y36(I.Z), e.Y36(K._), e.Y36(we), e.Y36(h.pk), e.Y36(ke), e.Y36(_.$c), e.Y36(_.TJ), e.Y36(h.ux), e.Y36(Pe.d), e.Y36(_.jt), e.Y36(L.Qz), e.Y36(h.Ho))
+                return new (t || o)(e.Y36(f.mI), e.Y36(_.yD), e.Y36(_.dK), e.Y36(I.Z), e.Y36(K._), e.Y36(we), e.Y36(f.pk), e.Y36(ke), e.Y36(_.$c), e.Y36(_.TJ), e.Y36(f.ux), e.Y36(Pe.d), e.Y36(_.jt), e.Y36(L.Qz), e.Y36(f.Ho))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["cerberus-forge-next-step"]],
                 viewQuery: function (t, n) {
-                    if (1 & t && (e.Gf(qa, 7), e.Gf(Ha, 7, e.SBq), e.Gf(Ya, 7), e.Gf(Ja, 7), e.Gf($a, 7), e.Gf(Wa, 7), e.Gf(za, 7), e.Gf(ja, 7), e.Gf(Va, 7)), 2 & t) {
+                    if (1 & t && (e.Gf(Qa, 7), e.Gf(qa, 7, e.SBq), e.Gf(Ha, 7), e.Gf(Ya, 7), e.Gf(Ja, 7), e.Gf($a, 7), e.Gf(Wa, 7), e.Gf(za, 7), e.Gf(ja, 7)), 2 & t) {
                         let i;
                         e.iGM(i = e.CRH()) && (n.previewCardAreaDom = i.first), e.iGM(i = e.CRH()) && (n.previewCardDom = i.first), e.iGM(i = e.CRH()) && (n.shimmerDom = i.first), e.iGM(i = e.CRH()) && (n.shimmerAreaDom = i.first), e.iGM(i = e.CRH()) && (n.smokeDom = i.first), e.iGM(i = e.CRH()) && (n.cardForgeAreaDom = i.first), e.iGM(i = e.CRH()) && (n.ctaButtonDom = i.first), e.iGM(i = e.CRH()) && (n.forgeCardsDom = i.first), e.iGM(i = e.CRH()) && (n.finalCircularFuseDom = i.first)
                     }
@@ -5598,31 +5646,31 @@
                 vars: 41,
                 consts: [["title", "Forge", 1, "cardBrowserArea", 3, "expandedViewMode", "activeGrouping", "protoCards", "inventoryCards"], [1, "cardForgeArea"], [1, "cardForgeArea_selectWallet", 3, "ngClass"], [1, "cardForgeArea__circularAreaContainer", 3, "hidden"], [1, "cardForgeArea__circularArea"], ["cardForgeArea", ""], [1, "cardForgeArea__circularArea__progressCircle", 3, "percentage", "width", "strokeWidth", "showBackgroundRing", "supressAnimation", "strokeColor", "insetInnerStroke"], ["gradientForStroke", "whiteToAqua", 1, "cardForgeArea__circularArea__progressCircle", "cardForgeArea__circularArea__progressCircle--finalProgress", 3, "percentage", "width", "strokeWidth", "showBackgroundRing", "supressAnimation", "insetInnerStroke"], ["finalCircularFuse", ""], ["kind", "help", "align", "center", "class", "cardForgeArea__circularArea__instructionalText", 3, "innerHTML", 4, "ngIf"], [1, "cardForgeArea__ctaButton", 3, "text", "click"], ["ctaButton", ""], ["class", "cardForgeArea__circularArea__loading", 4, "ngIf"], [1, "cardForgeArea__circularArea__previewCardArea"], ["previewCardAreaDom", ""], ["src", "/assets/images/texture--smoke.webp", "alt", "", 1, "cardForgeArea__circularArea__previewCardArea__smoke"], ["smokeDom", ""], ["responsiveSrcsetSizes", "18.6vw", 1, "cardForgeArea__circularArea__previewCardArea__card", 3, "protoId", "quality"], ["previewCardDom", ""], [1, "cardForgeArea__circularArea__previewCardArea__shimmerArea"], ["shimmerAreaDom", ""], [1, "cardForgeArea__circularArea__previewCardArea__shimmerArea__shimmer"], ["shimmerDom", ""], ["top", "3x-large", 3, "responsiveSize"], ["class", "cardForgeArea__etherscanLink", "kind", "tag", "fillColor", "colors.apocyan.100", "align", "center", 3, "ngClass", "click", 4, "ngIf"], [1, "cardForgeArea__cardsToBeFused", 3, "fluxTransactionCost", "tokenTransactionCost", "fakeForgeCards"], ["forgeCards", ""], ["kind", "help", "align", "center", 1, "cardForgeArea__circularArea__instructionalText", 3, "innerHTML"], [1, "cardForgeArea__circularArea__loading"], ["kind", "tag", "fillColor", "colors.apocyan.100", "align", "center", 1, "cardForgeArea__etherscanLink", 3, "ngClass", "click"]],
                 template: function (t, n) {
-                    1 & t && (e._UZ(0, "cerberus-forge-card-list", 0), e.TgZ(1, "div", 1), e._UZ(2, "cerberus-forge-area-header")(3, "cerberus-forge-area-select-wallet", 2), e.TgZ(4, "div", 3)(5, "div", 4, 5), e._UZ(7, "app-progress-circle", 6)(8, "app-progress-circle", 7, 8), e.YNc(10, Xa, 1, 1, "gu-paragraph-text", 9), e.TgZ(11, "gu-primary-hex-button", 10, 11), e.NdJ("click", function () {
+                    1 & t && (e._UZ(0, "cerberus-forge-card-list", 0), e.TgZ(1, "div", 1), e._UZ(2, "cerberus-forge-area-header")(3, "cerberus-forge-area-select-wallet", 2), e.TgZ(4, "div", 3)(5, "div", 4, 5), e._UZ(7, "app-progress-circle", 6)(8, "app-progress-circle", 7, 8), e.YNc(10, Va, 1, 1, "gu-paragraph-text", 9), e.TgZ(11, "gu-primary-hex-button", 10, 11), e.NdJ("click", function () {
                         return n.ctaClick()
-                    }), e.qZA(), e.YNc(13, Ka, 2, 0, "div", 12), e.TgZ(14, "div", 13, 14), e._UZ(16, "img", 15, 16)(18, "app-card2", 17, 18), e.TgZ(20, "div", 19, 20), e._UZ(22, "i", 21, 22), e.qZA()()(), e.TgZ(24, "gu-vertical-space", 23), e.YNc(25, ts, 2, 3, "gu-paragraph-text", 24), e.qZA(), e._UZ(26, "cerberus-app-forge-cards", 25, 26), e.qZA()()), 2 & t && (e.ekj("cardBrowserArea--disabled", n.uiStateInformation.finalFusingInProgress || n.uiStateInformation.previewLoading || !n.selectedWallet), e.Q6J("expandedViewMode", n.ExpandedViewMode.FORGING)("activeGrouping", n.activeGrouping)("protoCards", n.protoCards)("inventoryCards", n.inventoryCards), e.xp6(3), e.Q6J("ngClass", e.VKq(34, ns, n.selectedWallet)), e.xp6(1), e.Q6J("hidden", !n.selectedWallet), e.xp6(3), e.Q6J("percentage", n.preFusePercentage.value)("width", 29 * n.vw)("strokeWidth", 2 * n.vh)("showBackgroundRing", !0)("supressAnimation", !0)("strokeColor", n.uiStateInformation.preFuseCicleStrokeColor)("insetInnerStroke", !0), e.xp6(1), e.Q6J("percentage", n.finalFusePercentage.value)("width", 29 * n.vw)("strokeWidth", 2 * n.vh)("showBackgroundRing", !1)("supressAnimation", !0)("insetInnerStroke", !0), e.xp6(2), e.Q6J("ngIf", n.uiStateInformation.instructionalMessage && !n.uiStateInformation.previewLoading && !n.uiStateInformation.finalFusingInProgress), e.xp6(1), e.Q6J("text", n.uiStateInformation.ctaText), e.uIk("disabled", n.uiStateInformation.disableCta), e.xp6(2), e.Q6J("ngIf", n.uiStateInformation.previewLoading), e.xp6(5), e.Q6J("protoId", null == n.previewCard ? null : n.previewCard.protoId)("quality", null == n.previewCard ? null : n.previewCard.quality), e.xp6(6), e.Q6J("responsiveSize", e.WLB(38, rs, e.DdM(36, os), e.DdM(37, is))), e.xp6(1), e.Q6J("ngIf", (null == n.transactionInProgress ? null : n.transactionInProgress.txHash) || n.completedTransactionTxHash), e.xp6(1), e.ekj("cardForgeArea__cardsToBeFused--disabled", n.uiStateInformation.finalFusingInProgress), e.Q6J("fluxTransactionCost", n.fluxTransactionCost)("tokenTransactionCost", n.tokenTransactionCost)("fakeForgeCards", n.fakeForgeCards))
+                    }), e.qZA(), e.YNc(13, Xa, 2, 0, "div", 12), e.TgZ(14, "div", 13, 14), e._UZ(16, "img", 15, 16)(18, "app-card2", 17, 18), e.TgZ(20, "div", 19, 20), e._UZ(22, "i", 21, 22), e.qZA()()(), e.TgZ(24, "gu-vertical-space", 23), e.YNc(25, es, 2, 3, "gu-paragraph-text", 24), e.qZA(), e._UZ(26, "cerberus-app-forge-cards", 25, 26), e.qZA()()), 2 & t && (e.ekj("cardBrowserArea--disabled", n.uiStateInformation.finalFusingInProgress || n.uiStateInformation.previewLoading || !n.selectedWallet), e.Q6J("expandedViewMode", n.ExpandedViewMode.FORGING)("activeGrouping", n.activeGrouping)("protoCards", n.protoCards)("inventoryCards", n.inventoryCards), e.xp6(3), e.Q6J("ngClass", e.VKq(34, ts, n.selectedWallet)), e.xp6(1), e.Q6J("hidden", !n.selectedWallet), e.xp6(3), e.Q6J("percentage", n.preFusePercentage.value)("width", 29 * n.vw)("strokeWidth", 2 * n.vh)("showBackgroundRing", !0)("supressAnimation", !0)("strokeColor", n.uiStateInformation.preFuseCicleStrokeColor)("insetInnerStroke", !0), e.xp6(1), e.Q6J("percentage", n.finalFusePercentage.value)("width", 29 * n.vw)("strokeWidth", 2 * n.vh)("showBackgroundRing", !1)("supressAnimation", !0)("insetInnerStroke", !0), e.xp6(2), e.Q6J("ngIf", n.uiStateInformation.instructionalMessage && !n.uiStateInformation.previewLoading && !n.uiStateInformation.finalFusingInProgress), e.xp6(1), e.Q6J("text", n.uiStateInformation.ctaText), e.uIk("disabled", n.uiStateInformation.disableCta), e.xp6(2), e.Q6J("ngIf", n.uiStateInformation.previewLoading), e.xp6(5), e.Q6J("protoId", null == n.previewCard ? null : n.previewCard.protoId)("quality", null == n.previewCard ? null : n.previewCard.quality), e.xp6(6), e.Q6J("responsiveSize", e.WLB(38, is, e.DdM(36, ns), e.DdM(37, os))), e.xp6(1), e.Q6J("ngIf", (null == n.transactionInProgress ? null : n.transactionInProgress.txHash) || n.completedTransactionTxHash), e.xp6(1), e.ekj("cardForgeArea__cardsToBeFused--disabled", n.uiStateInformation.finalFusingInProgress), e.Q6J("fluxTransactionCost", n.fluxTransactionCost)("tokenTransactionCost", n.tokenTransactionCost)("fakeForgeCards", n.fakeForgeCards))
                 },
-                directives: [_a, Aa, Fa, l.mk, At, l.O5, bn, Y, wn],
+                directives: [ua, Ia, Aa, l.mk, At, l.O5, bn, Y, wn],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{padding-top:calc(var(--vh) * 2);padding-left:calc(var(--vw) * 3);padding-right:calc(var(--vw) * 3);display:flex;height:100%}.cardBrowserArea[_ngcontent-%COMP%]{width:calc(var(--vw) * 44);margin-right:calc(var(--vw) * 2.34)}.cardBrowserArea--disabled[_ngcontent-%COMP%]{user-select:none;pointer-events:none;opacity:.5}.cardForgeArea[_ngcontent-%COMP%]{flex:1;display:flex;flex-flow:column nowrap;position:relative}.cardForgeArea__hideSelectWallet[_ngcontent-%COMP%]{display:none}.cardForgeArea__circularArea[_ngcontent-%COMP%]{display:flex;flex-direction:column;align-items:center;position:relative;transform:translateY(calc(var(--vh) * 13))}.cardForgeArea__circularArea__progressCircle[_ngcontent-%COMP%]{transform:rotate(180deg)}.cardForgeArea__circularArea__progressCircle--finalProgress[_ngcontent-%COMP%]{position:absolute;top:0;left:50%;transform:rotate(180deg) translate(50%);transform-origin:50% 50%}.cardForgeArea__circularArea__instructionalText[_ngcontent-%COMP%]{width:calc(var(--vh) * 21);position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}.cardForgeArea__circularArea__instructionalText[_ngcontent-%COMP%]     span{text-transform:capitalize;font-weight:700}.cardForgeArea__circularArea__instructionalText[_ngcontent-%COMP%]     a{color:#affaed}.cardForgeArea__circularArea__previewCardArea[_ngcontent-%COMP%]{top:calc(var(--vh) * -1.3);margin-left:calc(var(--vw) * -.8);user-select:none;pointer-events:none;width:calc(var(--vw) * 18.6);position:absolute;z-index:1;transform:translateY(10%);cursor:pointer}.cardForgeArea__circularArea__previewCardArea__smoke[_ngcontent-%COMP%]{width:calc(var(--vw) * 35);bottom:calc(var(--vh) * 10);position:absolute;left:54%;transform:translate(-50%) scale(.6);transform-origin:50% 100%;opacity:0}.cardForgeArea__circularArea__previewCardArea__card[_ngcontent-%COMP%]{filter:drop-shadow(0 calc(var(--vh) * .5) calc(var(--vw) * 2) black);opacity:0}.cardForgeArea__circularArea__previewCardArea__shimmerArea[_ngcontent-%COMP%]{top:calc(var(--vh) * 4.3);bottom:calc(var(--vh) * 2.3);left:calc(var(--vw) * 2.55);right:calc(var(--vw) * 1.15);position:absolute;overflow:hidden;opacity:0}.cardForgeArea__circularArea__previewCardArea__shimmerArea__shimmer[_ngcontent-%COMP%]{position:absolute;width:150%;height:35%;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,white 50%,rgba(255,255,255,0) 100%);transform:rotate(15deg) translateY(-120%);top:0;left:-25%;mix-blend-mode:overlay}.cardForgeArea__ctaButton[_ngcontent-%COMP%]{position:absolute;bottom:0;left:50%;transform:translate(-50%,-10%);min-width:145px}.cardForgeArea__etherscanLink[_ngcontent-%COMP%]{display:flex;width:100%;justify-content:center;text-transform:uppercase;text-decoration:underline;cursor:pointer}.cardForgeArea__etherscanLink--final[_ngcontent-%COMP%]{position:absolute;bottom:calc(var(--vh) * 3.24)}.cardForgeArea__cardsToBeFused[_ngcontent-%COMP%]{height:calc(var(--vh) * 18.66);margin-bottom:calc(var(--vh) * 3.24);margin-top:auto;display:flex;width:100%;justify-content:center}.cardForgeArea__cardsToBeFused--disabled[_ngcontent-%COMP%]{user-select:none;pointer-events:none}.cardForgeArea__circularArea__loading[_ngcontent-%COMP%]{position:absolute;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center}"]
             }), o
         })();
-        var ss = g(19444);
+        var as = g(19444);
 
-        function cs(o, r) {
+        function ss(o, r) {
             if (1 & o && (e.TgZ(0, "div", 3), e._uU(1), e.qZA()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(1), e.Oqu(t.title)
             }
         }
 
-        function ls(o, r) {
+        function cs(o, r) {
             if (1 & o && (e.TgZ(0, "div", 4), e._uU(1), e.qZA()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(1), e.Oqu(t.message)
             }
         }
 
-        function ds(o, r) {
+        function ls(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "div", 5)(1, "gu-primary-hex-button", 6), e.NdJ("click", function () {
@@ -5681,32 +5729,32 @@
                 vars: 3,
                 consts: [["class", "title-section", 4, "ngIf"], ["class", "message-section", 4, "ngIf"], ["class", "action-section", 4, "ngIf"], [1, "title-section"], [1, "message-section"], [1, "action-section"], [1, "okButton", 3, "disabled", "text", "click"], [1, "cancelButton", 3, "click"]],
                 template: function (t, n) {
-                    1 & t && (e.YNc(0, cs, 2, 1, "div", 0), e.YNc(1, ls, 2, 1, "div", 1), e.YNc(2, ds, 4, 2, "div", 2)), 2 & t && (e.Q6J("ngIf", n.title), e.xp6(1), e.Q6J("ngIf", n.message), e.xp6(1), e.Q6J("ngIf", n.showButtons))
+                    1 & t && (e.YNc(0, ss, 2, 1, "div", 0), e.YNc(1, cs, 2, 1, "div", 1), e.YNc(2, ls, 4, 2, "div", 2)), 2 & t && (e.Q6J("ngIf", n.title), e.xp6(1), e.Q6J("ngIf", n.message), e.xp6(1), e.Q6J("ngIf", n.showButtons))
                 },
                 directives: [l.O5],
                 styles: ['h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.cancelButton[_ngcontent-%COMP%], .message-section[_ngcontent-%COMP%], .title-section[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.title-section[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9);line-height:1.2;font-weight:600}.cancelButton[_ngcontent-%COMP%], .message-section[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{border:calc(var(--vh) * .15) solid #527493;background-color:#0c1620;position:relative;display:block;color:#f6f6f6;padding:calc(var(--vw) * 1.3);width:calc(var(--vw) * 20);display:flex;flex-flow:column nowrap;align-items:center}.down[_nghost-%COMP%]:before{border:calc(var(--vh) * 1.7) solid transparent;border-top-color:#527493;left:50%;bottom:calc(calc(var(--vh) * 1.7) * -2);transform:translate(-50%)}.up[_nghost-%COMP%]:before{border:calc(var(--vh) * 1.7) solid transparent;border-bottom-color:#527493;left:50%;top:calc(calc(var(--vh) * 1.7) * -2);transform:translate(-50%)}.right[_nghost-%COMP%]:before{border:calc(var(--vh) * 1.7) solid transparent;border-left-color:#527493;top:50%;right:calc(calc(var(--vh) * 1.7) * -2);transform:translateY(-50%)}.left[_nghost-%COMP%]:before{border:calc(var(--vh) * 1.7) solid transparent;border-right-color:#527493;top:50%;left:calc(calc(var(--vh) * 1.7) * -2);transform:translateY(-50%)}[_nghost-%COMP%]:before{content:"";position:absolute;width:0;height:0}.title-section[_ngcontent-%COMP%]{padding-bottom:calc(var(--vw) * 1.3);border-bottom:calc(var(--vh) * .15) solid #fff}.message-section[_ngcontent-%COMP%]{padding-bottom:calc(var(--vw) * 1.3);text-align:center}.action-section[_ngcontent-%COMP%]{width:100%;display:flex;flex-direction:row-reverse;align-items:center;justify-content:center}.cancelButton[_ngcontent-%COMP%]{margin-right:calc(var(--vw) * 1);text-transform:uppercase;font-weight:700;color:#8be1e0;flex-grow:0;cursor:pointer}.okButton[_ngcontent-%COMP%]{flex-grow:1}']
             }), o
         })();
-        const gs = ["previewCardAreaDom"], ps = ["previewCardDom"], us = ["shimmerDom"], _s = ["shimmerAreaDom"],
-            hs = ["smokeDom"], ms = ["cardForgeArea"], fs = ["ctaButton"], Cs = ["forgeCards"],
-            vs = ["finalCircularFuse"];
+        const ds = ["previewCardAreaDom"], gs = ["previewCardDom"], ps = ["shimmerDom"], us = ["shimmerAreaDom"],
+            _s = ["smokeDom"], hs = ["cardForgeArea"], ms = ["ctaButton"], fs = ["forgeCards"],
+            Cs = ["finalCircularFuse"];
 
-        function bs(o, r) {
+        function vs(o, r) {
             if (1 & o && e._UZ(0, "gu-paragraph-text", 33), 2 & o) {
                 const t = e.oxw();
                 e.Q6J("innerHTML", t.uiStateInformation.instructionalMessage, e.oJD)
             }
         }
 
-        function ws(o, r) {
+        function bs(o, r) {
             1 & o && (e.TgZ(0, "div", 34), e._UZ(1, "app-inderterminate-loading"), e.qZA())
         }
 
-        const xs = function (o) {
+        const ws = function (o) {
             return {"cardForgeArea__etherscanLink--final": o}
         };
 
-        function Ms(o, r) {
+        function xs(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "gu-paragraph-text", 35), e.NdJ("click", function () {
@@ -5717,7 +5765,7 @@
             }
             if (2 & o) {
                 const t = e.oxw();
-                e.Q6J("ngClass", e.VKq(1, xs, t.completedTransactionTxHash))
+                e.Q6J("ngClass", e.VKq(1, ws, t.completedTransactionTxHash))
             }
         }
 
@@ -5776,8 +5824,8 @@
                         (!n || !t || 0 === t.length) && this.modalService.createModal(hn, null, {
                             blurredBackground: !0,
                             canCloseFromOutside: !1,
-                            position: m.e1.Center,
-                            size: m.Cg.Workarea
+                            position: h.e1.Center,
+                            size: h.Cg.Workarea
                         })
                     })
                 }
@@ -5856,7 +5904,7 @@
                 }
 
                 handleUpdatedForgeCards(t) {
-                    return (0, ae.mG)(this, void 0, void 0, function* () {
+                    return (0, ae.__awaiter)(this, void 0, void 0, function* () {
                         const n = t && t.ids ? t.ids.length : 0,
                             i = yield this.forgeService.numberOfQualityToForge(t.quality);
                         if (n > 0) {
@@ -5897,11 +5945,11 @@
                             this.startFusing(), this.modalService.destroyTopModal()
                         },
                         direction: "up"
-                    }, {position: m.e1.Custom, customPosition: ".cardForgeArea__ctaButton:bottom"})
+                    }, {position: h.e1.Custom, customPosition: ".cardForgeArea__ctaButton:bottom"})
                 }
 
                 startFusing() {
-                    this.uiStateInformation.finalFusingInProgress = !0, this.forgeService.setTransactionInProgress(Object.assign(Object.assign({}, this.forgeCards), {reference: (0, ss.v4)()})), this.waitForFinalFuseResponseAnimation(), this.forgeService.submitForge().pipe((0, x.q)(1), (0, ue.w)(t => (this.forgeService.setTransactionInProgress(Object.assign(Object.assign({}, this.transactionInProgress), {txHash: t})), this.logEtherscanLink(this.transactionInProgress.txHash), this.forgeService.postTxHashForTracking({
+                    this.uiStateInformation.finalFusingInProgress = !0, this.forgeService.setTransactionInProgress(Object.assign(Object.assign({}, this.forgeCards), {reference: (0, as.v4)()})), this.waitForFinalFuseResponseAnimation(), this.forgeService.submitForge().pipe((0, x.q)(1), (0, ue.w)(t => (this.forgeService.setTransactionInProgress(Object.assign(Object.assign({}, this.transactionInProgress), {txHash: t})), this.logEtherscanLink(this.transactionInProgress.txHash), this.forgeService.postTxHashForTracking({
                         tx_hash: t,
                         reference: this.transactionInProgress.reference,
                         user_id: this.authService.getUserId()
@@ -5947,7 +5995,7 @@
 
                 handleSocketMessage(t) {
                     const {status: n, confirmations: i, reference: a} = t;
-                    if ((0, ae._T)(t, ["status", "confirmations", "reference"]), !this.transactionInProgress || a !== this.transactionInProgress.reference) return !1;
+                    if ((0, ae.__rest)(t, ["status", "confirmations", "reference"]), !this.transactionInProgress || a !== this.transactionInProgress.reference) return !1;
                     switch (n) {
                         case"not_found":
                             this.handleFuseFailure("not found!");
@@ -5968,8 +6016,8 @@
                     console.error("Forge->handleValidationFail()", t), "You are locked from fusing because our bot prevention system detected unusual behavior" === t && this.modalService.createModal(_n.n, {}, {
                         blurredBackground: !0,
                         canCloseFromInside: !1,
-                        position: m.e1.Center,
-                        size: m.Cg.StretchableWorkarea
+                        position: h.e1.Center,
+                        size: h.Cg.StretchableWorkarea
                     }), this.mainTL.pause(), this.animateCircularProgress({
                         preFusePercentage: 0,
                         duration: 0
@@ -6084,9 +6132,21 @@
                 }
 
                 createPreForgeAnimation() {
-                    this.uiStateInformation.previewLoading = !1;
-                    this.uiStateInformation.disableCta = !1;
-                    return;
+                    const t = this.previewCardDom.nativeElement, n = this.shimmerAreaDom.nativeElement,
+                        i = y.p8.timeline({repeat: -1, paused: !0});
+                    i.to([n, t], {duration: 2, y: "-9%", ease: "power2.inOut"}).to([n, t], {
+                        duration: 2,
+                        y: "-12%",
+                        ease: "power2.inOut"
+                    }), this.mainTL.set([n, t], {y: "0%", opacity: 0}).to([n, t], {
+                        duration: .7,
+                        y: "-12%",
+                        opacity: 1,
+                        ease: "power2.inOut",
+                        onComplete: () => {
+                            this.uiStateInformation.previewLoading = !1, this.uiStateInformation.disableCta = !1
+                        }
+                    }).add(i.play(), "previewCardFloating")
                 }
 
                 animateCircularProgress({preFusePercentage: t, duration: n = .65}) {
@@ -6106,19 +6166,19 @@
                     this.modalService.createModal(mn, null, {
                         blurredBackground: !0,
                         canCloseFromOutside: !1,
-                        position: m.e1.Center,
-                        size: m.Cg.Workarea
+                        position: h.e1.Center,
+                        size: h.Cg.Workarea
                     })
                 }
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(h.mI), e.Y36(_.yD), e.Y36(_.dK), e.Y36(I.Z), e.Y36(K._), e.Y36(we), e.Y36(h.pk), e.Y36(ke), e.Y36(_.$c), e.Y36(_.TJ), e.Y36(h.ux), e.Y36(Pe.d), e.Y36(_.jt))
+                return new (t || o)(e.Y36(f.mI), e.Y36(_.yD), e.Y36(_.dK), e.Y36(I.Z), e.Y36(K._), e.Y36(we), e.Y36(f.pk), e.Y36(ke), e.Y36(_.$c), e.Y36(_.TJ), e.Y36(f.ux), e.Y36(Pe.d), e.Y36(_.jt))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["cerberus-app-forge-flux"]],
                 viewQuery: function (t, n) {
-                    if (1 & t && (e.Gf(gs, 7), e.Gf(ps, 7, e.SBq), e.Gf(us, 7), e.Gf(_s, 7), e.Gf(hs, 7), e.Gf(ms, 7), e.Gf(fs, 7), e.Gf(Cs, 7), e.Gf(vs, 7)), 2 & t) {
+                    if (1 & t && (e.Gf(ds, 7), e.Gf(gs, 7, e.SBq), e.Gf(ps, 7), e.Gf(us, 7), e.Gf(_s, 7), e.Gf(hs, 7), e.Gf(ms, 7), e.Gf(fs, 7), e.Gf(Cs, 7)), 2 & t) {
                         let i;
                         e.iGM(i = e.CRH()) && (n.previewCardAreaDom = i.first), e.iGM(i = e.CRH()) && (n.previewCardDom = i.first), e.iGM(i = e.CRH()) && (n.shimmerDom = i.first), e.iGM(i = e.CRH()) && (n.shimmerAreaDom = i.first), e.iGM(i = e.CRH()) && (n.smokeDom = i.first), e.iGM(i = e.CRH()) && (n.cardForgeAreaDom = i.first), e.iGM(i = e.CRH()) && (n.ctaButtonDom = i.first), e.iGM(i = e.CRH()) && (n.forgeCardsDom = i.first), e.iGM(i = e.CRH()) && (n.finalCircularFuseDom = i.first)
                     }
@@ -6129,23 +6189,23 @@
                 template: function (t, n) {
                     1 & t && (e._UZ(0, "cerberus-half-screen-cards-list", 0), e.TgZ(1, "div", 1)(2, "h1", 2), e._uU(3, " The Forge "), e.qZA(), e.TgZ(4, "div", 3)(5, "label", 4), e._uU(6, "Flux"), e.qZA(), e.TgZ(7, "div", 5), e._UZ(8, "gu-icon", 6), e.TgZ(9, "h2", 7), e._uU(10), e.ALo(11, "numberAbbreviation"), e.qZA()(), e.TgZ(12, "a", 8), e.NdJ("click", function () {
                         return n.fluxInfoModal()
-                    }), e._uU(13, " Fusing costs "), e.TgZ(14, "i", 9)(15, "span"), e._uU(16, "?"), e.qZA()()()(), e.TgZ(17, "div", 10, 11), e._UZ(19, "app-progress-circle", 12)(20, "app-progress-circle", 13, 14), e.YNc(22, bs, 1, 1, "gu-paragraph-text", 15), e.TgZ(23, "gu-primary-hex-button", 16, 17), e.NdJ("click", function () {
+                    }), e._uU(13, " Fusing costs "), e.TgZ(14, "i", 9)(15, "span"), e._uU(16, "?"), e.qZA()()()(), e.TgZ(17, "div", 10, 11), e._UZ(19, "app-progress-circle", 12)(20, "app-progress-circle", 13, 14), e.YNc(22, vs, 1, 1, "gu-paragraph-text", 15), e.TgZ(23, "gu-primary-hex-button", 16, 17), e.NdJ("click", function () {
                         return n.ctaClick()
-                    }), e.qZA(), e.YNc(25, ws, 2, 0, "div", 18), e.TgZ(26, "div", 19, 20), e._UZ(28, "img", 21, 22)(30, "app-card2", 23, 24), e.TgZ(32, "div", 25, 26), e._UZ(34, "i", 27, 28), e.qZA()()(), e.TgZ(36, "gu-vertical-space", 29), e.YNc(37, Ms, 2, 3, "gu-paragraph-text", 30), e.qZA(), e._UZ(38, "cerberus-app-forge-cards", 31, 32), e.qZA()), 2 & t && (e.ekj("cardBrowserArea--disabled", n.uiStateInformation.finalFusingInProgress || n.uiStateInformation.previewLoading), e.Q6J("expandedViewMode", n.ExpandedViewMode.FORGING)("activeGrouping", n.activeGrouping)("protoCards", n.protoCards)("inventoryCards", n.inventoryCards), e.xp6(10), e.hij(" ", e.xi3(11, 31, n.fluxBalance, 2), " "), e.xp6(9), e.Q6J("percentage", n.preFusePercentage.value)("width", 29 * n.vw)("strokeWidth", 2 * n.vh)("showBackgroundRing", !0)("supressAnimation", !0)("strokeColor", n.uiStateInformation.preFuseCicleStrokeColor)("insetInnerStroke", !0), e.xp6(1), e.Q6J("percentage", n.finalFusePercentage.value)("width", 29 * n.vw)("strokeWidth", 2 * n.vh)("showBackgroundRing", !1)("supressAnimation", !0)("insetInnerStroke", !0), e.xp6(2), e.Q6J("ngIf", n.uiStateInformation.instructionalMessage && !n.uiStateInformation.previewLoading && !n.uiStateInformation.finalFusingInProgress), e.xp6(1), e.Q6J("text", n.uiStateInformation.ctaText), e.uIk("disabled", n.uiStateInformation.disableCta), e.xp6(2), e.Q6J("ngIf", n.uiStateInformation.previewLoading), e.xp6(5), e.Q6J("protoId", null == n.previewCard ? null : n.previewCard.protoId)("quality", null == n.previewCard ? null : n.previewCard.quality), e.xp6(7), e.Q6J("ngIf", (null == n.transactionInProgress ? null : n.transactionInProgress.txHash) || n.completedTransactionTxHash), e.xp6(1), e.ekj("cardForgeArea__cardsToBeFused--disabled", n.uiStateInformation.finalFusingInProgress), e.Q6J("fluxTransactionCost", n.fluxTransactionCost)("fakeForgeCards", n.fakeForgeCards))
+                    }), e.qZA(), e.YNc(25, bs, 2, 0, "div", 18), e.TgZ(26, "div", 19, 20), e._UZ(28, "img", 21, 22)(30, "app-card2", 23, 24), e.TgZ(32, "div", 25, 26), e._UZ(34, "i", 27, 28), e.qZA()()(), e.TgZ(36, "gu-vertical-space", 29), e.YNc(37, xs, 2, 3, "gu-paragraph-text", 30), e.qZA(), e._UZ(38, "cerberus-app-forge-cards", 31, 32), e.qZA()), 2 & t && (e.ekj("cardBrowserArea--disabled", n.uiStateInformation.finalFusingInProgress || n.uiStateInformation.previewLoading), e.Q6J("expandedViewMode", n.ExpandedViewMode.FORGING)("activeGrouping", n.activeGrouping)("protoCards", n.protoCards)("inventoryCards", n.inventoryCards), e.xp6(10), e.hij(" ", e.xi3(11, 31, n.fluxBalance, 2), " "), e.xp6(9), e.Q6J("percentage", n.preFusePercentage.value)("width", 29 * n.vw)("strokeWidth", 2 * n.vh)("showBackgroundRing", !0)("supressAnimation", !0)("strokeColor", n.uiStateInformation.preFuseCicleStrokeColor)("insetInnerStroke", !0), e.xp6(1), e.Q6J("percentage", n.finalFusePercentage.value)("width", 29 * n.vw)("strokeWidth", 2 * n.vh)("showBackgroundRing", !1)("supressAnimation", !0)("insetInnerStroke", !0), e.xp6(2), e.Q6J("ngIf", n.uiStateInformation.instructionalMessage && !n.uiStateInformation.previewLoading && !n.uiStateInformation.finalFusingInProgress), e.xp6(1), e.Q6J("text", n.uiStateInformation.ctaText), e.uIk("disabled", n.uiStateInformation.disableCta), e.xp6(2), e.Q6J("ngIf", n.uiStateInformation.previewLoading), e.xp6(5), e.Q6J("protoId", null == n.previewCard ? null : n.previewCard.protoId)("quality", null == n.previewCard ? null : n.previewCard.quality), e.xp6(7), e.Q6J("ngIf", (null == n.transactionInProgress ? null : n.transactionInProgress.txHash) || n.completedTransactionTxHash), e.xp6(1), e.ekj("cardForgeArea__cardsToBeFused--disabled", n.uiStateInformation.finalFusingInProgress), e.Q6J("fluxTransactionCost", n.fluxTransactionCost)("fakeForgeCards", n.fakeForgeCards))
                 },
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.cardForgeArea__heading[_ngcontent-%COMP%], .cardForgeArea__fluxBalanceArea__balance__number[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.cardForgeArea__fluxBalanceArea__infoButton[_ngcontent-%COMP%], .cardForgeArea__fluxBalanceArea__label[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.cardForgeArea__fluxBalanceArea__balance__number[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 4.2);line-height:1.3}.cardForgeArea__heading[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 5);line-height:1.3}.cardForgeArea__fluxBalanceArea__infoButton[_ngcontent-%COMP%], .cardForgeArea__fluxBalanceArea__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{padding-top:calc(var(--vh) * 2);padding-left:calc(var(--vw) * 3);padding-right:calc(var(--vw) * 3);display:flex;height:100%}.cardBrowserArea[_ngcontent-%COMP%]{width:calc(var(--vw) * 44);margin-right:calc(var(--vw) * 2.34)}.cardBrowserArea--disabled[_ngcontent-%COMP%]{user-select:none;pointer-events:none;opacity:.5}.cardForgeArea[_ngcontent-%COMP%]{flex:1;display:flex;flex-flow:column nowrap;position:relative}.cardForgeArea__heading[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-align:center;text-transform:uppercase}.cardForgeArea__fluxBalanceArea[_ngcontent-%COMP%]{position:absolute;top:0;right:0;display:flex;flex-direction:column}.cardForgeArea__fluxBalanceArea__label[_ngcontent-%COMP%]{color:#f6f6f6;font-weight:700;text-transform:uppercase;text-align:center;margin:0}.cardForgeArea__fluxBalanceArea__balanceRow[_ngcontent-%COMP%]{margin-bottom:calc(var(--vh) * .5);display:flex;justify-content:center}.cardForgeArea__fluxBalanceArea__balance__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 4.4);background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.cardForgeArea__fluxBalanceArea__balance__number[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-left:calc(var(--vw) * -.1)}.cardForgeArea__fluxBalanceArea__infoButton[_ngcontent-%COMP%]{color:#7192b0;font-weight:700;text-transform:uppercase;text-align:center;cursor:pointer;white-space:nowrap}.cardForgeArea__fluxBalanceArea__infoButton__icon[_ngcontent-%COMP%]{margin-left:calc(var(--vw) * .2);margin-top:calc(var(--vh) * -.1);width:calc(var(--vh) * 2);height:calc(var(--vh) * 2);border-radius:50%;border:calc(var(--vh) * .15) solid #7192b0;display:inline-flex;vertical-align:top}.cardForgeArea__fluxBalanceArea__infoButton__icon[_ngcontent-%COMP%] > span[_ngcontent-%COMP%]{margin:auto;line-height:1;font-weight:700;font-style:normal}.cardForgeArea__circularArea[_ngcontent-%COMP%]{display:flex;flex-direction:column;align-items:center;position:relative;transform:translateY(calc(var(--vh) * 13))}.cardForgeArea__circularArea__progressCircle[_ngcontent-%COMP%]{transform:rotate(180deg)}.cardForgeArea__circularArea__progressCircle--finalProgress[_ngcontent-%COMP%]{position:absolute;top:0;left:50%;transform:rotate(180deg) translate(50%);transform-origin:50% 50%}.cardForgeArea__circularArea__instructionalText[_ngcontent-%COMP%]{width:calc(var(--vh) * 21);position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}.cardForgeArea__circularArea__instructionalText[_ngcontent-%COMP%]     span{text-transform:capitalize;font-weight:700}.cardForgeArea__circularArea__instructionalText[_ngcontent-%COMP%]     a{color:#affaed}.cardForgeArea__circularArea__previewCardArea[_ngcontent-%COMP%]{top:calc(var(--vh) * -1.3);margin-left:calc(var(--vw) * -.8);user-select:none;pointer-events:none;width:calc(var(--vw) * 18.6);position:absolute;z-index:1;transform:translateY(10%);cursor:pointer}.cardForgeArea__circularArea__previewCardArea__smoke[_ngcontent-%COMP%]{width:calc(var(--vw) * 35);bottom:calc(var(--vh) * 10);position:absolute;left:54%;transform:translate(-50%) scale(.6);transform-origin:50% 100%;opacity:0}.cardForgeArea__circularArea__previewCardArea__card[_ngcontent-%COMP%]{filter:drop-shadow(0 calc(var(--vh) * .5) calc(var(--vw) * 2) black);opacity:0}.cardForgeArea__circularArea__previewCardArea__shimmerArea[_ngcontent-%COMP%]{top:calc(var(--vh) * 4.3);bottom:calc(var(--vh) * 2.3);left:calc(var(--vw) * 2.55);right:calc(var(--vw) * 1.15);position:absolute;overflow:hidden;opacity:0}.cardForgeArea__circularArea__previewCardArea__shimmerArea__shimmer[_ngcontent-%COMP%]{position:absolute;width:150%;height:35%;background:linear-gradient(to bottom,rgba(255,255,255,0) 0%,white 50%,rgba(255,255,255,0) 100%);transform:rotate(15deg) translateY(-120%);top:0;left:-25%;mix-blend-mode:overlay}.cardForgeArea__ctaButton[_ngcontent-%COMP%]{position:absolute;bottom:0;left:50%;transform:translate(-50%,-10%);min-width:145px}.cardForgeArea__etherscanLink[_ngcontent-%COMP%]{display:flex;width:100%;justify-content:center;text-transform:uppercase;text-decoration:underline;cursor:pointer}.cardForgeArea__etherscanLink--final[_ngcontent-%COMP%]{position:absolute;bottom:calc(var(--vh) * 3.24)}.cardForgeArea__cardsToBeFused[_ngcontent-%COMP%]{height:calc(var(--vh) * 18.66);margin-bottom:calc(var(--vh) * 3.24);margin-top:auto;display:flex;width:100%;justify-content:center}.cardForgeArea__cardsToBeFused--disabled[_ngcontent-%COMP%]{user-select:none;pointer-events:none}.cardForgeArea__circularArea__loading[_ngcontent-%COMP%]{position:absolute;width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center}"]
             }), o
         })();
 
-        function ys(o, r) {
+        function Ms(o, r) {
             1 & o && (e.ynx(0), e._UZ(1, "cerberus-forge-next-step"), e.BQk())
         }
 
-        function ks(o, r) {
+        function ys(o, r) {
             1 & o && e._UZ(0, "cerberus-app-forge-flux")
         }
 
-        let Os = (() => {
+        let ks = (() => {
             class o {
                 constructor(t) {
                     this.featureFlagsService = t, this.unsubscribe = new M.xQ, this.Flags = _.vU, this.ffFusingNextStepEnabled = !1
@@ -6167,7 +6227,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(h.B3))
+                return new (t || o)(e.Y36(f.B3))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["cerberus-forge-routing"]],
@@ -6175,32 +6235,32 @@
                 vars: 2,
                 consts: [[4, "ngIf", "ngIfElse"], ["elseBlock", ""]],
                 template: function (t, n) {
-                    if (1 & t && (e.YNc(0, ys, 2, 0, "ng-container", 0), e.YNc(1, ks, 1, 0, "ng-template", null, 1, e.W1O)), 2 & t) {
+                    if (1 & t && (e.YNc(0, Ms, 2, 0, "ng-container", 0), e.YNc(1, ys, 1, 0, "ng-template", null, 1, e.W1O)), 2 & t) {
                         const i = e.MAs(2);
                         e.Q6J("ngIf", n.ffFusingNextStepEnabled)("ngIfElse", i)
                     }
                 },
-                directives: [l.O5, as, Mn],
+                directives: [l.O5, rs, Mn],
                 styles: ["[_nghost-%COMP%]{display:block}"]
             }), o
         })();
 
-        function Ps(o, r) {
+        function Os(o, r) {
             if (1 & o && e._UZ(0, "gu-reward-display", 11), 2 & o) {
                 const t = e.oxw().$implicit;
                 e.Q6J("imageUrl", t.image_url)("text", t.title)
             }
         }
 
-        function Ss(o, r) {
+        function Ps(o, r) {
             if (1 & o && e._UZ(0, "gu-reward-display", 12), 2 & o) {
                 const t = e.oxw().$implicit;
                 e.Q6J("text", t.title)
             }
         }
 
-        function Ts(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, Ps, 1, 2, "gu-reward-display", 9), e.YNc(2, Ss, 1, 1, "gu-reward-display", 10), e.BQk()), 2 & o) {
+        function Ss(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, Os, 1, 2, "gu-reward-display", 9), e.YNc(2, Ps, 1, 1, "gu-reward-display", 10), e.BQk()), 2 & o) {
                 const t = r.$implicit;
                 e.xp6(1), e.Q6J("ngIf", "image" === t.type), e.xp6(1), e.Q6J("ngIf", "stars" === t.type)
             }
@@ -6231,14 +6291,14 @@
                 vars: 1,
                 consts: [[1, "backgroundImagery"], ["bottom", "medium", 1, "header"], ["src", "/assets/images/ui-embellishments/ui--deco-divider.svg", "alt", "small divider", 1, "header__divider", "header__divider--left"], ["size", "large", "fillGradient", "gradients.gold.simple", "align", "center"], ["src", "/assets/images/ui-embellishments/ui--deco-divider.svg", "alt", "small divider", 1, "header__divider"], ["align", "center", "fillColor", "colors.light.100", "kind", "large", 1, "titleText"], ["top", "2x-large", "bottom", "4x-large", 1, "rewardsSection"], [4, "ngFor", "ngForOf"], ["size", "large", "text", "CONFIRM", 1, "cta", 3, "click"], ["class", "rewardsSection__reward", 3, "imageUrl", "text", 4, "ngIf"], ["class", "rewardsSection__reward", "iconLigature", "collectable_stars", 3, "text", 4, "ngIf"], [1, "rewardsSection__reward", 3, "imageUrl", "text"], ["iconLigature", "collectable_stars", 1, "rewardsSection__reward", 3, "text"]],
                 template: function (t, n) {
-                    1 & t && (e._UZ(0, "div", 0), e.TgZ(1, "gu-vertical-space", 1), e._UZ(2, "img", 2), e.TgZ(3, "gu-heading-text", 3), e._uU(4, " Collect your rewards! "), e.qZA(), e._UZ(5, "img", 4), e.qZA(), e.TgZ(6, "gu-paragraph-text", 5), e._uU(7, " These items have been added to your inventory.\n"), e.qZA(), e.TgZ(8, "gu-vertical-space", 6), e.YNc(9, Ts, 3, 2, "ng-container", 7), e.qZA(), e.TgZ(10, "gu-primary-hex-button", 8), e.NdJ("click", function () {
+                    1 & t && (e._UZ(0, "div", 0), e.TgZ(1, "gu-vertical-space", 1), e._UZ(2, "img", 2), e.TgZ(3, "gu-heading-text", 3), e._uU(4, " Collect your rewards! "), e.qZA(), e._UZ(5, "img", 4), e.qZA(), e.TgZ(6, "gu-paragraph-text", 5), e._uU(7, " These items have been added to your inventory.\n"), e.qZA(), e.TgZ(8, "gu-vertical-space", 6), e.YNc(9, Ss, 3, 2, "ng-container", 7), e.qZA(), e.TgZ(10, "gu-primary-hex-button", 8), e.NdJ("click", function () {
                         return n.close()
                     }), e.qZA()), 2 & t && (e.xp6(9), e.Q6J("ngForOf", n.rewards))
                 },
                 directives: [l.sg, l.O5],
                 styles: ["@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-direction:column;justify-content:center;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);height:calc(var(--vh) * 100);width:calc(var(--vw) * 100);margin-top:28px;background-image:linear-gradient(180deg,#1d2f41 0%,#0f1b27 100%)}.backgroundImagery[_ngcontent-%COMP%]{user-select:none;pointer-events:none;position:absolute;top:0;left:0;width:100%;height:100%;background-size:cover;background-image:url(https://images.godsunchained.com/art2/1024/1325.webp);opacity:.05}.header[_ngcontent-%COMP%]{display:flex;justify-content:center}.header__divider[_ngcontent-%COMP%]{margin:0 16px}.header__divider--left[_ngcontent-%COMP%]{transform:rotate(180deg)}.rewardsSection[_ngcontent-%COMP%]{display:flex;justify-content:center}.rewardsSection__reward[_ngcontent-%COMP%]{margin:0 8px}.cta[_ngcontent-%COMP%]{margin:0 auto}"]
             }), o
-        })(), Is = (() => {
+        })(), Ts = (() => {
             class o {
                 constructor(t, n) {
                     this.activeModal = t, this.storageService = n
@@ -6254,7 +6314,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(L.mX), e.Y36(h.qy))
+                return new (t || o)(e.Y36(L.mX), e.Y36(f.qy))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["cerberus-notify-user"]],
@@ -6271,48 +6331,48 @@
                 styles: ["[_nghost-%COMP%]{display:flex;flex-direction:column;max-width:650px;text-align:center}.modal__header[_ngcontent-%COMP%]{background:linear-gradient(90deg,#c6a052 2.93%,#ebc98b 25.01%,#fff2d8 50.44%,#ebc98b 74.21%,#c6a052 96.95%);box-shadow:0 2px 5px #0000004d;height:3px;width:100%}.modal__content[_ngcontent-%COMP%]{background:linear-gradient(90deg,#0f1b27 1.39%,#0f1b27 12.6%,#1d2f41 50.06%,#0f1b27 87.64%,#0f1b27 98.63%);box-sizing:border-box;border:2px solid #3D5A74;display:flex;flex-direction:column;padding:0 calc(var(--vw) * 1.5);align-items:center}.modal__btnsGroup[_ngcontent-%COMP%]{display:flex;justify-content:space-evenly;padding:20px 0;width:50%}.modal__btn[_ngcontent-%COMP%]{padding:15px;margin:10px}.modal__closeButton[_ngcontent-%COMP%]{position:absolute;top:20px;right:20px;z-index:1;font-size:calc(var(--vh) * 2);color:#8be1e0;cursor:pointer}.modal__closeButton[_ngcontent-%COMP%]:hover{color:#fff}.notifyText[_ngcontent-%COMP%]{text-align:left}"]
             }), o
         })();
-        var Bt = g(87168), As = g(5284);
+        var Bt = g(87168), Is = g(5284);
 
-        function Fs(o, r) {
+        function As(o, r) {
             1 & o && e._UZ(0, "div", 22)
         }
 
-        function Ds(o, r) {
+        function Fs(o, r) {
             if (1 & o && e._UZ(0, "img", 23), 2 & o) {
                 const t = e.oxw().$implicit, n = e.oxw();
                 e.Q6J("src", n.isFinalLevel(t.level) ? "/gu-assets/images/rewards-progress/final-gem-point.png" : "/gu-assets/images/rewards-progress/gem-point.png", e.LSH)
             }
         }
 
-        const Gs = function (o, r) {
+        const Ds = function (o, r) {
             return {
                 "progressBarContainer__nextReward__milestoneImage--inactive": o,
                 "progressBarContainer__nextReward__lastMilestoneImage--inactive": r
             }
         };
 
-        function Zs(o, r) {
+        function Gs(o, r) {
             if (1 & o && e._UZ(0, "img", 24), 2 & o) {
                 const t = e.oxw().$implicit, n = e.oxw();
-                e.Q6J("ngClass", e.WLB(2, Gs, !n.isFinalLevel(t.level), n.isFinalLevel(t.level)))("src", n.isFinalLevel(t.level) ? "/gu-assets/images/rewards-progress/final-empty-point.png" : "/gu-assets/images/rewards-progress/empty-point.png", e.LSH)
+                e.Q6J("ngClass", e.WLB(2, Ds, !n.isFinalLevel(t.level), n.isFinalLevel(t.level)))("src", n.isFinalLevel(t.level) ? "/gu-assets/images/rewards-progress/final-empty-point.png" : "/gu-assets/images/rewards-progress/empty-point.png", e.LSH)
             }
         }
 
-        function Bs(o, r) {
+        function Zs(o, r) {
             if (1 & o && (e.ynx(0), e.TgZ(1, "div")(2, "gu-simple-text", 25)(3, "strong"), e._uU(4), e.qZA()(), e.TgZ(5, "gu-simple-text", 26), e._uU(6), e.ALo(7, "titlecase"), e.qZA()(), e.BQk()), 2 & o) {
                 const t = r.$implicit;
                 e.xp6(4), e.Oqu(t.count), e.xp6(2), e.hij(" x ", e.lcZ(7, 2, "neutral" === t.god ? t.rarity : t.god), " Packs ")
             }
         }
 
-        const Ls = function (o, r) {
+        const Bs = function (o, r) {
             return {progressBarContainer__nextReward__level: o, progressBarContainer__lastReward__level: r}
         };
 
-        function Us(o, r) {
-            if (1 & o && (e.TgZ(0, "div", 14), e._UZ(1, "reward-state", 15), e.YNc(2, Fs, 1, 0, "div", 16), e.TgZ(3, "picture"), e.YNc(4, Ds, 1, 1, "img", 17), e.YNc(5, Zs, 1, 5, "img", 18), e.qZA(), e.TgZ(6, "gu-paragraph-text", 19), e._uU(7), e.qZA(), e.TgZ(8, "div", 20), e.YNc(9, Bs, 8, 4, "ng-container", 21), e.qZA()()), 2 & o) {
+        function Ls(o, r) {
+            if (1 & o && (e.TgZ(0, "div", 14), e._UZ(1, "reward-state", 15), e.YNc(2, As, 1, 0, "div", 16), e.TgZ(3, "picture"), e.YNc(4, Fs, 1, 1, "img", 17), e.YNc(5, Gs, 1, 5, "img", 18), e.qZA(), e.TgZ(6, "gu-paragraph-text", 19), e._uU(7), e.qZA(), e.TgZ(8, "div", 20), e.YNc(9, Zs, 8, 4, "ng-container", 21), e.qZA()()), 2 & o) {
                 const t = r.$implicit, n = e.oxw();
-                e.xp6(1), e.Q6J("rewardLevel", t.level)("isAchieved", t.achieved)("playerLevel", n.currentPlayerlevel)("finalRewardLevel", 6)("diety", n.getDietyType(t.reward)), e.xp6(1), e.Q6J("ngIf", t.achieved), e.xp6(2), e.Q6J("ngIf", t.achieved), e.xp6(1), e.Q6J("ngIf", !t.achieved), e.xp6(1), e.Q6J("ngClass", e.WLB(11, Ls, !n.isFinalLevel(t.level), n.isFinalLevel(t.level))), e.xp6(1), e.hij(" Level ", t.level, ""), e.xp6(2), e.Q6J("ngForOf", t.reward)
+                e.xp6(1), e.Q6J("rewardLevel", t.level)("isAchieved", t.achieved)("playerLevel", n.currentPlayerlevel)("finalRewardLevel", 6)("diety", n.getDietyType(t.reward)), e.xp6(1), e.Q6J("ngIf", t.achieved), e.xp6(2), e.Q6J("ngIf", t.achieved), e.xp6(1), e.Q6J("ngIf", !t.achieved), e.xp6(1), e.Q6J("ngClass", e.WLB(11, Bs, !n.isFinalLevel(t.level), n.isFinalLevel(t.level))), e.xp6(1), e.hij(" Level ", t.level, ""), e.xp6(2), e.Q6J("ngForOf", t.reward)
             }
         }
 
@@ -6357,7 +6417,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(j.$z), e.Y36(L.mX), e.Y36(ce.MZ), e.Y36(be.F0), e.Y36(h.Ho), e.Y36(_.jt))
+                return new (t || o)(e.Y36(j.$z), e.Y36(L.mX), e.Y36(ce.MZ), e.Y36(be.F0), e.Y36(f.Ho), e.Y36(_.jt))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["cerberus-progression-rewards"]],
@@ -6367,7 +6427,7 @@
                 template: function (t, n) {
                     1 & t && (e.TgZ(0, "gu-icon", 0), e.NdJ("click", function () {
                         return n.close()
-                    }), e.qZA(), e.TgZ(1, "picture", 1), e._UZ(2, "source", 2)(3, "img", 3), e.qZA(), e.TgZ(4, "div", 4)(5, "gu-heading-text", 5), e._uU(6, " Player Progress "), e.qZA(), e.TgZ(7, "gu-heading-text", 6), e._UZ(8, "gu-icon", 7), e._uU(9, " New Player Rewards "), e.qZA(), e.TgZ(10, "gu-simple-text", 8), e._uU(11, " Earn up to "), e.TgZ(12, "strong"), e._uU(13, "24 CORE PACKS"), e.qZA(), e._uU(14, " by playing ranked matches. "), e.qZA(), e.TgZ(15, "div", 9), e._UZ(16, "app-progress-bar", 10), e.TgZ(17, "div", 11), e.YNc(18, Us, 10, 14, "div", 12), e.qZA()(), e.TgZ(19, "gu-primary-hex-button", 13), e.NdJ("click", function () {
+                    }), e.qZA(), e.TgZ(1, "picture", 1), e._UZ(2, "source", 2)(3, "img", 3), e.qZA(), e.TgZ(4, "div", 4)(5, "gu-heading-text", 5), e._uU(6, " Player Progress "), e.qZA(), e.TgZ(7, "gu-heading-text", 6), e._UZ(8, "gu-icon", 7), e._uU(9, " New Player Rewards "), e.qZA(), e.TgZ(10, "gu-simple-text", 8), e._uU(11, " Earn up to "), e.TgZ(12, "strong"), e._uU(13, "24 CORE PACKS"), e.qZA(), e._uU(14, " by playing ranked matches. "), e.qZA(), e.TgZ(15, "div", 9), e._UZ(16, "app-progress-bar", 10), e.TgZ(17, "div", 11), e.YNc(18, Ls, 10, 14, "div", 12), e.qZA()(), e.TgZ(19, "gu-primary-hex-button", 13), e.NdJ("click", function () {
                         return n.openPacks()
                     }), e.qZA()()), 2 & t && (e.xp6(16), e.Q6J("percentage", n.progressBarPercent)("height", 12)("showDivider", !1)("animateFirstValue", !0), e.xp6(2), e.Q6J("ngForOf", n.newPlayerRewards))
                 },
@@ -6375,28 +6435,28 @@
             }), o
         })();
 
-        function Es(o, r) {
+        function Us(o, r) {
             if (1 & o && (e.TgZ(0, "gu-heading-text", 14), e._uU(1), e.qZA()), 2 & o) {
                 const t = e.oxw(2);
-                e.xp6(1), e.hij(" ", null == t.account ? null : t.account.username + ' - ' + t.user.user_id, " ")
+                e.xp6(1), e.hij(" ", null == t.account ? null : t.account.username  + ' - ' + t.user.user_id, " ")
             }
         }
 
-        function Ns(o, r) {
+        function Es(o, r) {
             if (1 & o && (e.TgZ(0, "gu-heading-text", 15), e._uU(1), e.qZA()), 2 & o) {
                 const t = e.oxw(2);
-                e.xp6(1), e.hij(" ", null == t.account ? null : t.account.username + ' - ' + t.user.user_id, " ")
+                e.xp6(1), e.hij(" ", null == t.account ? null : t.account.username  + ' - ' + t.user.user_id, " ")
             }
         }
 
-        const Rs = function (o) {
+        const Ns = function (o) {
             return {glow: o}
         };
 
-        function Qs(o, r) {
+        function Rs(o, r) {
             if (1 & o) {
                 const t = e.EpF();
-                e.TgZ(0, "div", 16)(1, "div", 17)(2, "gu-body-text", 18), e._uU(3, " Next milestone - "), e.qZA(), e.TgZ(4, "gu-body-text", 19), e._uU(5), e.qZA()(), e._UZ(6, "gu-hex-progress-bar", 20), e.TgZ(7, "div", 21), e.NdJ("click", function () {
+                e.TgZ(0, "div", 16)(1, "div", 17)(2, "gu-body-text", 18), e._uU(3, ""), e.qZA(), e.TgZ(4, "gu-body-text", 19), e._uU(5), e.qZA()(), e._UZ(6, "gu-hex-progress-bar", 20), e.TgZ(7, "div", 21), e.NdJ("click", function () {
                     e.CHM(t);
                     const i = e.oxw(2);
                     return !!i.isNewUserEligibleForRewards && i.openRewardsModal()
@@ -6404,16 +6464,16 @@
             }
             if (2 & o) {
                 const t = e.oxw(2);
-                e.xp6(5), e.hij(" Level ", t.user.level + 1, " "), e.xp6(1), e.Q6J("progress", t.xpProgress), e.xp6(2), e.Q6J("autoClose", !t.isNewUserWithUnopenedPacks)("title", t.isNewUserWithUnopenedPacks ? "Click to see <br/> unlocked rewards" : t.nextReward.god + " Core " + t.nextReward.rarity + " pack"), e.xp6(1), e.Q6J("ngClass", e.VKq(7, Rs, t.isNewUserWithUnopenedPacks)), e.xp6(1), e.Q6J("god", t.nextReward.god)("rarity", t.nextReward.rarity)
+                e.xp6(5), e.hij("Next milestone in " + t.user.xp_to_next + " XP - Level ", t.user.level + 1, " "), e.xp6(1), e.Q6J("progress", t.xpProgress), e.xp6(2), e.Q6J("autoClose", !t.isNewUserWithUnopenedPacks)("title", t.isNewUserWithUnopenedPacks ? "Click to see <br/> unlocked rewards" : t.nextReward.god + " Core " + t.nextReward.rarity + " pack"), e.xp6(1), e.Q6J("ngClass", e.VKq(7, Ns, t.isNewUserWithUnopenedPacks)), e.xp6(1), e.Q6J("god", t.nextReward.god)("rarity", t.nextReward.rarity)
             }
         }
 
-        function qs(o, r) {
+        function Qs(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "div", 2)(1, "div", 3)(2, "div", 4), e._UZ(3, "img", 5), e.qZA(), e.TgZ(4, "div", 6)(5, "div", 7)(6, "gu-primary-hex-button", 8), e.NdJ("click", function () {
                     return e.CHM(t), e.oxw().showUpcomingDailyRewardsInfo()
-                }), e._uU(7, "Daily $GODS Rewards "), e.qZA(), e.TgZ(8, "div", 9)(9, "gu-body-text", 10), e._uU(10), e.qZA(), e.YNc(11, Es, 2, 1, "gu-heading-text", 11), e.YNc(12, Ns, 2, 1, "gu-heading-text", 12), e.YNc(13, Qs, 11, 9, "div", 13), e.qZA()()()()()
+                }), e._uU(7, "Daily $GODS Rewards "), e.qZA(), e.TgZ(8, "div", 9)(9, "gu-body-text", 10), e._uU(10), e.qZA(), e.YNc(11, Us, 2, 1, "gu-heading-text", 11), e.YNc(12, Es, 2, 1, "gu-heading-text", 12), e.YNc(13, Rs, 11, 9, "div", 13), e.qZA()()()()()
             }
             if (2 & o) {
                 const t = e.oxw();
@@ -6451,7 +6511,7 @@
 
                 initUserDetails() {
                     (0, D.aj)([this.guUserService.extendedAccountProperties$, this.authService.account$, this.progressionService.accountThresholds$]).pipe((0, u.R)(this.unsubscribe), (0, S.h)(([t, n, i]) => !!i.length && !!n)).subscribe(([t, n, i]) => {
-                        this.account = n, this.user = t, this.userNameContainsEmoji = As.uA.stringContainsEmoji(this.account.username), this.xpProgress = et({
+                        this.account = n, this.user = t, this.userNameContainsEmoji = Is.uA.stringContainsEmoji(this.account.username), this.xpProgress = et({
                             xp: t.total_xp,
                             levelThresholds: i
                         });
@@ -6489,7 +6549,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(ce.MZ), e.Y36(j.$z), e.Y36(Oe.F), e.Y36(h.mI), e.Y36(L.Qz), e.Y36(_.jt))
+                return new (t || o)(e.Y36(ce.MZ), e.Y36(j.$z), e.Y36(Oe.F), e.Y36(f.mI), e.Y36(L.Qz), e.Y36(_.jt))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-player-stats"]],
@@ -6498,22 +6558,26 @@
                 vars: 1,
                 consts: [["class", "wrapper", 4, "ngIf"], [1, "background-filter"], [1, "wrapper"], [1, "columns", "is-gapless", "wrapper__sections"], [1, "column", "is-5-hidden"], ["src", "/assets/images/internal-logos/logo--gods-unchained-flat.svg", 1, "logo"], [1, "column", "is-7", "wrapper__section-right"], [1, "headerRight"], ["type", "secondary", "icon", "collectable_fragment", "iconPosition", "left", "theme", "gunmetal", 3, "click"], [1, "statsWrapper"], ["size", "x-small", "fontWeight", "bold", "fillColor", "colors.gunmetal.100", 1, "playerRank"], ["size", "x-small", "class", "playerName", "fillColor", "colors.gold.500", 4, "ngIf"], ["size", "x-small", "class", "playerName", "fillGradient", "gradients.gold.simple", 4, "ngIf"], ["class", "progress-bar", 4, "ngIf"], ["size", "x-small", "fillColor", "colors.gold.500", 1, "playerName"], ["size", "x-small", "fillGradient", "gradients.gold.simple", 1, "playerName"], [1, "progress-bar"], [1, "milestone"], ["size", "small", "fontWeight", "regular"], ["size", "small", "fontWeight", "bold"], [3, "progress"], [3, "click"], [1, "progress-bar__reward", 3, "autoClose", "title"], [1, "progress-bar__reward-squares", 3, "ngClass"], ["set", "core", 1, "progress-bar__reward-image", 3, "god", "rarity"]],
                 template: function (t, n) {
-                    1 & t && (e.YNc(0, qs, 14, 6, "div", 0), e._UZ(1, "div", 1)), 2 & t && e.Q6J("ngIf", n.user)
+                    1 & t && (e.YNc(0, Qs, 14, 6, "div", 0), e._UZ(1, "div", 1)), 2 & t && e.Q6J("ngIf", n.user)
                 },
                 directives: [l.O5, De.K, l.mk],
                 styles: ['h1[_ngcontent-%COMP%],h2[_ngcontent-%COMP%],h3[_ngcontent-%COMP%],h4[_ngcontent-%COMP%],h5[_ngcontent-%COMP%],h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%],label[_ngcontent-%COMP%],a[_ngcontent-%COMP%],div[_ngcontent-%COMP%],input[_ngcontent-%COMP%],button[_ngcontent-%COMP%],p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%],h2[_ngcontent-%COMP%],h3[_ngcontent-%COMP%],h4[_ngcontent-%COMP%],h5[_ngcontent-%COMP%],h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}[_nghost-%COMP%]{height:100%;display:flex;flex-wrap:wrap;position:relative}.wrapper[_ngcontent-%COMP%]{width:100%;background-size:cover;background-position:left -120px top 13%;padding:8px;border-radius:4px;max-height:100%;}.wrapper__sections[_ngcontent-%COMP%]{height:100%}.wrapper__section-right[_ngcontent-%COMP%]{height:100%;}.background-filter[_ngcontent-%COMP%]{display:none;}.logo[_ngcontent-%COMP%]{width:132px;height:41px;}.headerRight[_ngcontent-%COMP%]{display:flex;width:100%;height:100%;flex-direction:column-reverse;align-items:flex-start;}.statsWrapper[_ngcontent-%COMP%]{display:flex;flex-direction:column;flex-grow:1;width:400px;}.milestone[_ngcontent-%COMP%]{margin-bottom:8px;}.playerName[_ngcontent-%COMP%]{line-height:1.1 !important}.statDisplays__stat[_ngcontent-%COMP%]{display:flex;margin-right:calc(var(--vw) * 1.5)}.progress-bar[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .6);margin-bottom:calc(var(--vh) * 2.2);width:100%;position:relative}.progress-bar__reward[_ngcontent-%COMP%]{position:absolute;top:0;right:-52px;width:52px;height:52px;display:flex;transform:translate(-17%,20%);}.progress-bar__reward[_ngcontent-%COMP%] .tooltipBubble--top {margin-top:-24px}.progress-bar__reward-squares[_ngcontent-%COMP%]{position:absolute;width:100%;height:100%;transform:rotate(45deg);border:1px solid var(--gu-yellow);padding:4.8px;background:var(--gu-blue-dark);}.progress-bar__reward-squares[_ngcontent-%COMP%]:before {content:"";display:block;width:100%;height:100%;border:1px solid var(--gu-blue-hover);}.glow[_ngcontent-%COMP%]{box-shadow:0 0 10px #e5e5e5}.progress-bar__reward-image[_ngcontent-%COMP%]{margin:auto;width:48px;transform:translateY(-6%)}gu-hex-progress-bar[_ngcontent-%COMP%]{flex:1;}@media screen and (min-width:1920px) {.background-filter[_ngcontent-%COMP%]{border-radius:8px}.wrapper[_ngcontent-%COMP%]{padding:16px;border-radius:8px}.wrapper[_ngcontent-%COMP%]{background-position:left -50px top 13%}.logo[_ngcontent-%COMP%]{width:220px;height:69px}}']
             }), o
         })();
 
-        function Hs(o, r) {
+        function qs(o, r) {
             if (1 & o && (e._UZ(0, "img", 4), e.ALo(1, "lowercase")), 2 & o) {
                 const t = e.oxw();
                 e.MGl("src", "/gu-assets/images/gods/no-background/", e.lcZ(1, 1, t.god), "-color-cob.webp", e.LSH)
             }
         }
 
-        function Ys(o, r) {
+        function Hs(o, r) {
             1 & o && e._UZ(0, "gu-icon", 5)
+        }
+
+        function Ys(o, r) {
+            1 & o && e._UZ(0, "gu-icon", 10)
         }
 
         function Js(o, r) {
@@ -6525,11 +6589,7 @@
         }
 
         function Ws(o, r) {
-            1 & o && e._UZ(0, "gu-icon", 10)
-        }
-
-        function zs(o, r) {
-            if (1 & o && (e.ynx(0), e.TgZ(1, "div", 6), e.YNc(2, Js, 1, 0, "gu-icon", 7), e.qZA(), e.TgZ(3, "div", 8), e.YNc(4, $s, 1, 0, "gu-icon", 7), e.qZA(), e.TgZ(5, "div", 9), e.YNc(6, Ws, 1, 0, "gu-icon", 7), e.qZA(), e.BQk()), 2 & o) {
+            if (1 & o && (e.ynx(0), e.TgZ(1, "div", 6), e.YNc(2, Ys, 1, 0, "gu-icon", 7), e.qZA(), e.TgZ(3, "div", 8), e.YNc(4, Js, 1, 0, "gu-icon", 7), e.qZA(), e.TgZ(5, "div", 9), e.YNc(6, $s, 1, 0, "gu-icon", 7), e.qZA(), e.BQk()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(1), e.ekj("winCircle--complete", t.wins >= 2), e.xp6(1), e.Q6J("ngIf", t.wins >= 2), e.xp6(1), e.ekj("winCircle--complete", t.wins >= 1), e.xp6(1), e.Q6J("ngIf", t.wins >= 1), e.xp6(1), e.ekj("winCircle--complete", t.wins >= 3), e.xp6(1), e.Q6J("ngIf", t.wins >= 3)
             }
@@ -6594,7 +6654,7 @@
                 vars: 3,
                 consts: [[1, "wrapper"], ["alt", "God portrait", "class", "godImage", 3, "src", 4, "ngIf"], ["iconLigature", "padlock", "class", "lock", 4, "ngIf"], [4, "ngIf"], ["alt", "God portrait", 1, "godImage", 3, "src"], ["iconLigature", "padlock", 1, "lock"], [1, "winCircle", "winCircle--0"], ["iconLigature", "game_wins", "class", "winCircle__icon", 4, "ngIf"], [1, "winCircle", "winCircle--1"], [1, "winCircle", "winCircle--2"], ["iconLigature", "game_wins", 1, "winCircle__icon"]],
                 template: function (t, n) {
-                    1 & t && (e.TgZ(0, "div", 0), e.YNc(1, Hs, 2, 3, "img", 1), e.YNc(2, Ys, 1, 0, "gu-icon", 2), e.YNc(3, zs, 7, 9, "ng-container", 3), e.qZA()), 2 & t && (e.xp6(1), e.Q6J("ngIf", n.god), e.xp6(1), e.Q6J("ngIf", !n.god), e.xp6(1), e.Q6J("ngIf", n.wins > 0))
+                    1 & t && (e.TgZ(0, "div", 0), e.YNc(1, qs, 2, 3, "img", 1), e.YNc(2, Hs, 1, 0, "gu-icon", 2), e.YNc(3, Ws, 7, 9, "ng-container", 3), e.qZA()), 2 & t && (e.xp6(1), e.Q6J("ngIf", n.god), e.xp6(1), e.Q6J("ngIf", !n.god), e.xp6(1), e.Q6J("ngIf", n.wins > 0))
                 },
                 directives: [l.O5],
                 pipes: [l.i8],
@@ -6622,28 +6682,28 @@
             }, o.\u0275pipe = e.Yjl({name: "dateTo", type: o, pure: !0}), o
         })();
 
-        function js(o, r) {
+        function zs(o, r) {
             if (1 & o && e._UZ(0, "app-flux-god-portrait", 20), 2 & o) {
                 const t = r.$implicit, n = e.oxw();
                 e.Q6J("index", t)("wins", null == n.gauntletSlots[t] ? null : n.gauntletSlots[t].wins)("god", null == n.gauntletSlots[t] ? null : n.gauntletSlots[t].god)("unlock", null == n.gauntletSlots[t] ? null : n.gauntletSlots[t].unlock)
             }
         }
 
-        function Vs(o, r) {
+        function js(o, r) {
             if (1 & o && (e.TgZ(0, "div", 21), e._uU(1), e.ALo(2, "dateTo"), e.qZA()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(1), e.hij(" New Gauntlet begins in ", e.Dn7(2, 1, t.refreshDate, t.nowDate, !1), " ")
             }
         }
 
-        function Xs(o, r) {
+        function Vs(o, r) {
             1 & o && (e.TgZ(0, "div", 21), e._uU(1, " Win a game to unlock your gauntlet. "), e.qZA())
         }
 
-        const Ks = function () {
+        const Xs = function () {
             return [0, 1, 2, 3, 4, 5]
         };
-        let ec = (() => {
+        let Ks = (() => {
             class o {
                 constructor(t, n) {
                     this.modalService = t, this.gauntletService = n, this.gauntletSlots = [], this.gauntletFlux = 0, this.unsubscribe = new M.xQ, this.close = () => {
@@ -6685,9 +6745,9 @@
                 vars: 5,
                 consts: [[1, "gradientOverlay"], [1, "leftArea"], [1, "leftArea__subTitle"], [1, "leftArea__title"], [1, "leftArea__description"], [1, "leftArea__item"], [1, "leftArea__item__number"], [1, "leftArea__item__textArea"], [1, "leftArea__item__textArea__top"], [1, "leftArea__item__textArea__bottom"], [1, "rightArea"], [1, "rightArea__gauntlet"], [3, "index", "wins", "god", "unlock", 4, "ngFor", "ngForOf"], [1, "rightArea__gauntlet__flux"], [1, "rightArea__gauntlet__flux__text"], [1, "rightArea__gauntlet__flux__balance"], ["iconLigature", "flux_symbol", 1, "rightArea__gauntlet__flux__balance__icon"], [1, "rightArea__gauntlet__flux__balance__value"], ["class", "rightArea__countdown", 4, "ngIf"], ["size", "large", "text", "BEGIN", 1, "acceptButton", 3, "click"], [3, "index", "wins", "god", "unlock"], [1, "rightArea__countdown"]],
                 template: function (t, n) {
-                    1 & t && (e._UZ(0, "div", 0), e.TgZ(1, "div", 1)(2, "div", 2), e._uU(3, " Flux and Fusing "), e.qZA(), e.TgZ(4, "div", 3), e._uU(5, " gauntlet of the gods "), e.qZA(), e.TgZ(6, "div", 4), e._uU(7, " Battle for each god and be rewarded for your effort "), e.qZA(), e.TgZ(8, "div", 5)(9, "div", 6), e._uU(10, " 1 "), e.qZA(), e.TgZ(11, "div", 7)(12, "div", 8), e._uU(13, " Win Ranked Constructed games "), e.qZA(), e.TgZ(14, "div", 9), e._uU(15, " Unlock gods as you move around the circle "), e.qZA()()(), e.TgZ(16, "div", 5)(17, "div", 6), e._uU(18, " 2 "), e.qZA(), e.TgZ(19, "div", 7)(20, "div", 8), e._uU(21, " Earn Flux "), e.qZA(), e.TgZ(22, "div", 9), e._uU(23, " Fuse identical cards into a better version "), e.qZA()()(), e.TgZ(24, "div", 5)(25, "div", 6), e._uU(26, " 3 "), e.qZA(), e.TgZ(27, "div", 7)(28, "div", 8), e._uU(29, " Enter the Forge "), e.qZA(), e.TgZ(30, "div", 9), e._uU(31, " Use Flux to fuse identical cards into better versions "), e.qZA()()(), e.TgZ(32, "div", 5)(33, "div", 6), e._uU(34, " 4 "), e.qZA(), e.TgZ(35, "div", 7)(36, "div", 8), e._uU(37, " Trade your wares "), e.qZA(), e.TgZ(38, "div", 9), e._uU(39, " Sell cards on the Marketplace for ETH "), e.qZA()()()(), e.TgZ(40, "div", 10)(41, "div", 11), e.YNc(42, js, 1, 4, "app-flux-god-portrait", 12), e.TgZ(43, "div", 13)(44, "div", 14), e._uU(45, " flux "), e.qZA(), e.TgZ(46, "div", 15), e._UZ(47, "gu-icon", 16), e.TgZ(48, "div", 17), e._uU(49), e.qZA()()()(), e.YNc(50, Vs, 3, 5, "div", 18), e.YNc(51, Xs, 2, 0, "div", 18), e.qZA(), e.TgZ(52, "gu-primary-hex-button", 19), e.NdJ("click", function () {
+                    1 & t && (e._UZ(0, "div", 0), e.TgZ(1, "div", 1)(2, "div", 2), e._uU(3, " Flux and Fusing "), e.qZA(), e.TgZ(4, "div", 3), e._uU(5, " gauntlet of the gods "), e.qZA(), e.TgZ(6, "div", 4), e._uU(7, " Battle for each god and be rewarded for your effort "), e.qZA(), e.TgZ(8, "div", 5)(9, "div", 6), e._uU(10, " 1 "), e.qZA(), e.TgZ(11, "div", 7)(12, "div", 8), e._uU(13, " Win Ranked Constructed games "), e.qZA(), e.TgZ(14, "div", 9), e._uU(15, " Unlock gods as you move around the circle "), e.qZA()()(), e.TgZ(16, "div", 5)(17, "div", 6), e._uU(18, " 2 "), e.qZA(), e.TgZ(19, "div", 7)(20, "div", 8), e._uU(21, " Earn Flux "), e.qZA(), e.TgZ(22, "div", 9), e._uU(23, " Fuse identical cards into a better version "), e.qZA()()(), e.TgZ(24, "div", 5)(25, "div", 6), e._uU(26, " 3 "), e.qZA(), e.TgZ(27, "div", 7)(28, "div", 8), e._uU(29, " Enter the Forge "), e.qZA(), e.TgZ(30, "div", 9), e._uU(31, " Use Flux to fuse identical cards into better versions "), e.qZA()()(), e.TgZ(32, "div", 5)(33, "div", 6), e._uU(34, " 4 "), e.qZA(), e.TgZ(35, "div", 7)(36, "div", 8), e._uU(37, " Trade your wares "), e.qZA(), e.TgZ(38, "div", 9), e._uU(39, " Sell cards on the Marketplace for ETH "), e.qZA()()()(), e.TgZ(40, "div", 10)(41, "div", 11), e.YNc(42, zs, 1, 4, "app-flux-god-portrait", 12), e.TgZ(43, "div", 13)(44, "div", 14), e._uU(45, " flux "), e.qZA(), e.TgZ(46, "div", 15), e._UZ(47, "gu-icon", 16), e.TgZ(48, "div", 17), e._uU(49), e.qZA()()()(), e.YNc(50, js, 3, 5, "div", 18), e.YNc(51, Vs, 2, 0, "div", 18), e.qZA(), e.TgZ(52, "gu-primary-hex-button", 19), e.NdJ("click", function () {
                         return n.close()
-                    }), e.qZA()), 2 & t && (e.xp6(42), e.Q6J("ngForOf", e.DdM(4, Ks)), e.xp6(7), e.hij(" ", n.gauntletFlux, " "), e.xp6(1), e.Q6J("ngIf", n.gauntletSlots.length && n.refreshDate), e.xp6(1), e.Q6J("ngIf", !n.gauntletSlots.length))
+                    }), e.qZA()), 2 & t && (e.xp6(42), e.Q6J("ngForOf", e.DdM(4, Xs)), e.xp6(7), e.hij(" ", n.gauntletFlux, " "), e.xp6(1), e.Q6J("ngIf", n.gauntletSlots.length && n.refreshDate), e.xp6(1), e.Q6J("ngIf", !n.gauntletSlots.length))
                 },
                 directives: [l.sg, Pn, l.O5],
                 pipes: [Sn],
@@ -6695,11 +6755,11 @@
             }), o
         })();
 
-        function tc(o, r) {
+        function ec(o, r) {
             1 & o && e._UZ(0, "app-rectangular-spinner", 4)
         }
 
-        function nc(o, r) {
+        function tc(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-cards-list", 5), e.NdJ("selectCardId", function (i) {
@@ -6712,7 +6772,7 @@
             }
         }
 
-        function oc(o, r) {
+        function nc(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-active-deck", 6), e.NdJ("selectCards", function (i) {
@@ -6728,7 +6788,7 @@
         let Tn = (() => {
             class o {
                 constructor(t, n, i, a, s, c, d) {
-                    this.decksService = t, this.cardsService = n, this.modalService = i, this.moduleConfigService = a, this.audioService = s, this.akumaService = c, this.sealedService = d, this.filters = _.iZ.standardCardFilters(f.nE.All, f.PE.AscID, "genesis", ""), this.availableFilters = [{
+                    this.decksService = t, this.cardsService = n, this.modalService = i, this.moduleConfigService = a, this.audioService = s, this.akumaService = c, this.sealedService = d, this.filters = _.iZ.standardCardFilters(m.nE.All, m.PE.AscID, "genesis", ""), this.availableFilters = [{
                         name: "Quality",
                         options: _.iZ.qualityOptions
                     }, {name: "Rarity", options: _.iZ.rarityOptions}, {
@@ -6783,7 +6843,7 @@
                         this.sealedMode = t;
                         const a = t.protos.map((s, c) => {
                             const d = this.decksService.generateUniqueCardId(P.B_.SEALED_DECK, s, c);
-                            return new f.Zb(d, s, 5, n.get(s))
+                            return new m.Zb(d, s, 5, n.get(s))
                         });
                         this.customInventoryCardsMap = this.createInventoryCardsMap(a), this.inventoryCards = a, this.protoCards = i, this.loading = !1
                     })
@@ -6808,7 +6868,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(te.D), e.Y36(_.dK), e.Y36(I.Z), e.Y36(_.LE), e.Y36(h.pk), e.Y36(_.jt), e.Y36(X.H))
+                return new (t || o)(e.Y36(te.D), e.Y36(_.dK), e.Y36(I.Z), e.Y36(_.LE), e.Y36(f.pk), e.Y36(_.jt), e.Y36(X.H))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-sealed-deck-builder"]],
@@ -6816,23 +6876,23 @@
                 vars: 4,
                 consts: [[3, "closeButtonClickFn"], ["class", "spinner", 4, "ngIf"], ["class", "card-selection", 3, "protoCards", "inventoryCards", "god", "filterCardIds", "customInventoryCardsMap", "selectCardId", 4, "ngIf"], [3, "deckCards", "deckSelectMode", "gameModeID", "deck", "forAI", "selectCards", 4, "ngIf"], [1, "spinner"], [1, "card-selection", 3, "protoCards", "inventoryCards", "god", "filterCardIds", "customInventoryCardsMap", "selectCardId"], [3, "deckCards", "deckSelectMode", "gameModeID", "deck", "forAI", "selectCards"]],
                 template: function (t, n) {
-                    1 & t && (e._UZ(0, "app-modal-sidebar", 0), e.YNc(1, tc, 1, 0, "app-rectangular-spinner", 1), e.YNc(2, nc, 1, 5, "app-cards-list", 2), e.YNc(3, oc, 1, 5, "app-active-deck", 3)), 2 & t && (e.Q6J("closeButtonClickFn", n.destroyModal), e.xp6(1), e.Q6J("ngIf", n.loading), e.xp6(1), e.Q6J("ngIf", !n.loading), e.xp6(1), e.Q6J("ngIf", n.activeDeck))
+                    1 & t && (e._UZ(0, "app-modal-sidebar", 0), e.YNc(1, ec, 1, 0, "app-rectangular-spinner", 1), e.YNc(2, tc, 1, 5, "app-cards-list", 2), e.YNc(3, nc, 1, 5, "app-active-deck", 3)), 2 & t && (e.Q6J("closeButtonClickFn", n.destroyModal), e.xp6(1), e.Q6J("ngIf", n.loading), e.xp6(1), e.Q6J("ngIf", !n.loading), e.xp6(1), e.Q6J("ngIf", n.activeDeck))
                 },
                 directives: [ye, l.O5, ot, St, un],
                 styles: ["[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;padding:0 calc(var(--vh) * 7.7);padding-top:calc(var(--vh) * 4.5);height:100%}app-cards-list[_ngcontent-%COMP%]{flex:1}app-active-deck[_ngcontent-%COMP%]{height:calc(var(--vh) * 37)}.spinner[_ngcontent-%COMP%]{margin:auto}.exportCta[_ngcontent-%COMP%]{position:absolute;top:calc(var(--vh) * 3);right:calc(var(--vh) * 17)}"]
             }), o
         })();
         g(21960), g(90473), g(85353), g(66678), g(43337), g(77064), g(263);
-        var ic = g(98590);
+        var oc = g(98590);
 
-        function rc(o, r) {
+        function ic(o, r) {
             1 & o && e._UZ(0, "app-card2", 10), 2 & o && e.Q6J("protoId", r.$implicit)
         }
 
-        const ac = function (o, r, t) {
+        const rc = function (o, r, t) {
             return {"bottomSection__cards--three": o, "bottomSection__cards--four": r, "bottomSection__cards--five": t}
         };
-        let sc = (() => {
+        let ac = (() => {
             class o {
                 constructor(t) {
                     this.activeModal = t, this.unownedProtos = []
@@ -6859,26 +6919,26 @@
                 template: function (t, n) {
                     1 & t && (e.TgZ(0, "gu-two-section-modal", 0), e.NdJ("onCloseSealedDeckModal", function () {
                         return n.secondaryCtaClick()
-                    }), e.TgZ(1, "gu-paragraph-text", 1), e._uU(2, " Some cards could not be imported "), e.qZA(), e.TgZ(3, "gu-heading-text", 2), e._uU(4, " You don't own these cards "), e.qZA(), e.TgZ(5, "gu-paragraph-text", 3), e._uU(6), e.qZA(), e.TgZ(7, "gu-vertical-space", 4)(8, "gu-vertical-space", 5), e.YNc(9, rc, 1, 1, "app-card2", 6), e.qZA()(), e.TgZ(10, "gu-vertical-space", 7)(11, "gu-secondary-hex-button", 8), e.NdJ("click", function () {
+                    }), e.TgZ(1, "gu-paragraph-text", 1), e._uU(2, " Some cards could not be imported "), e.qZA(), e.TgZ(3, "gu-heading-text", 2), e._uU(4, " You don't own these cards "), e.qZA(), e.TgZ(5, "gu-paragraph-text", 3), e._uU(6), e.qZA(), e.TgZ(7, "gu-vertical-space", 4)(8, "gu-vertical-space", 5), e.YNc(9, ic, 1, 1, "app-card2", 6), e.qZA()(), e.TgZ(10, "gu-vertical-space", 7)(11, "gu-secondary-hex-button", 8), e.NdJ("click", function () {
                         return n.secondaryCtaClick()
                     }), e.qZA(), e.TgZ(12, "gu-primary-hex-button", 9), e.NdJ("click", function () {
                         return n.primaryCtaClick()
-                    }), e.qZA()()()), 2 & t && (e.xp6(6), e.AsE(" ", n.unownedProtos.length, " card", 1 === n.unownedProtos.length ? "" : "s", " missing. Hit continue to continue deck building "), e.xp6(2), e.Q6J("ngClass", e.kEZ(4, ac, n.unownedProtos.length <= 3, 4 == n.unownedProtos.length, n.unownedProtos.length >= 5)), e.xp6(1), e.Q6J("ngForOf", n.unownedProtos))
+                    }), e.qZA()()()), 2 & t && (e.xp6(6), e.AsE(" ", n.unownedProtos.length, " card", 1 === n.unownedProtos.length ? "" : "s", " missing. Hit continue to continue deck building "), e.xp6(2), e.Q6J("ngClass", e.kEZ(4, rc, n.unownedProtos.length <= 3, 4 == n.unownedProtos.length, n.unownedProtos.length >= 5)), e.xp6(1), e.Q6J("ngForOf", n.unownedProtos))
                 },
                 directives: [l.mk, l.sg, Y],
                 styles: [".bottomSection__cards--three[_ngcontent-%COMP%]{display:flex;flex-flow:row wrap;justify-content:center}.bottomSection__cards--three[_ngcontent-%COMP%]   .bottomSection__cards__card[_ngcontent-%COMP%]{width:240px}.bottomSection__cards--four[_ngcontent-%COMP%]{display:flex;flex-flow:row wrap;justify-content:center}.bottomSection__cards--four[_ngcontent-%COMP%]   .bottomSection__cards__card[_ngcontent-%COMP%]{width:200px}.bottomSection__cards--five[_ngcontent-%COMP%]{display:grid;grid-template-columns:repeat(5,1fr)}.bottomSection__cards--five[_ngcontent-%COMP%]   .bottomSection__cards__card[_ngcontent-%COMP%]{width:160px}.bottomSection__cards__card[_ngcontent-%COMP%]{margin:0 16px;width:160px}.ctaSection[_ngcontent-%COMP%]{display:flex;flex-flow:row nowrap}.ctaSection__button[_ngcontent-%COMP%]{min-width:200px}.ctaSection__button[_ngcontent-%COMP%]:nth-child(2){margin-left:16px}"]
             }), o
         })();
-        const lc = o => (o => {
+        const cc = o => (o => {
             if (!o || !o.length) return !1;
             const [r, t, n, i, ...a] = o.split("_");
             return !(!(r && t && n && i) || a.length || "GU" !== r || isNaN(parseInt(t)) || isNaN(parseInt(n)) || !i.match(/.{1,3}/g))
         })(o.value) ? null : {deckCode: !0};
-        var dc = g(83920), gc = g(45821);
+        var lc = g(83920), dc = g(45821);
         let In = (() => {
             class o {
                 constructor(t, n, i, a, s) {
-                    this.activeModal = t, this.deckCodeService = n, this.decksService = i, this.modalService = a, this.cerberusModalService = s, this.loading = !1, this.control = new T.NI("", [T.kI.required, lc])
+                    this.activeModal = t, this.deckCodeService = n, this.decksService = i, this.modalService = a, this.cerberusModalService = s, this.loading = !1, this.control = new T.NI("", [T.kI.required, cc])
                 }
 
                 importClick() {
@@ -6894,7 +6954,7 @@
                 }
 
                 showUnownedCardsModal(t, n, i) {
-                    const a = this.cerberusModalService.open(sc);
+                    const a = this.cerberusModalService.open(ac);
                     a.componentInstance.unownedProtos = n, a.result.then(({success: c}) => {
                         c && this.openDeckbuilder(i, t)
                     }, () => {
@@ -6906,8 +6966,8 @@
                         this.loading = !1, this.decksService.updateDeckSelectMode(!1), this.activeModal.close(), this.decksService.selectActiveDeck(i), this.modalService.createModal(Ye, {}, {
                             blurredBackground: !0,
                             canCloseFromOutside: !1,
-                            position: m.e1.Center,
-                            size: m.Cg.Workarea
+                            position: h.e1.Center,
+                            size: h.Cg.Workarea
                         })
                     }, i => {
                         this.loading = !1, this.showErrorModal()
@@ -6915,7 +6975,7 @@
                 }
 
                 showErrorModal(t = "Something went wrong, try again, or contact our support team.") {
-                    const i = this.cerberusModalService.open(ic.I, {
+                    const i = this.cerberusModalService.open(oc.I, {
                         defaultStylings: !1,
                         centered: !0
                     }).componentInstance;
@@ -6936,11 +6996,11 @@
                         return n.importClick()
                     }), e._uU(16, " Import "), e.qZA()()), 2 & t && (e.xp6(8), e.Q6J("value", n.control.value)("valid", n.control.valid)("formControl", n.control)("disabled", n.control.disabled), e.xp6(1), e.Q6J("control", n.control), e.xp6(6), e.Q6J("loading", n.loading)("disabled", !n.control.valid))
                 },
-                directives: [dc._, T.JJ, T.oH, gc.n],
+                directives: [lc._, T.JJ, T.oH, dc.n],
                 styles: ["[_nghost-%COMP%]{position:relative;display:flex;flex-direction:column;padding:0 60px;align-items:center;max-width:100vw;width:750px}[_nghost-%COMP%] > *[_ngcontent-%COMP%]{position:relative}.inputSection[_ngcontent-%COMP%]{display:flex;justify-content:center;align-items:center;min-height:80px;width:100%;flex-direction:column}.inputSection__input[_ngcontent-%COMP%]{width:100%;margin-bottom:4px}.copySection__cta[_ngcontent-%COMP%]{min-width:120px}.copySection__cta--copied[_ngcontent-%COMP%]{cursor:default}"]
             }), o
         })();
-        const pc = [{
+        const gc = [{
             name: "deception",
             title: "Ludia",
             description: "Goddess of Deception",
@@ -6978,7 +7038,7 @@
             unavailable: !1
         }];
 
-        function uc(o, r) {
+        function pc(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "gu-plain-square-button", 7), e.NdJ("click", function () {
@@ -6987,7 +7047,7 @@
             }
         }
 
-        function _c(o, r) {
+        function uc(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "div", 8), e.NdJ("click", function () {
@@ -7004,7 +7064,7 @@
             }
         }
 
-        function hc(o, r) {
+        function _c(o, r) {
             1 & o && (e.TgZ(0, "div", 14), e._UZ(1, "img", 15)(2, "img", 16)(3, "img", 17)(4, "img", 18)(5, "img", 19)(6, "img", 20), e.qZA())
         }
 
@@ -7012,7 +7072,7 @@
             class o {
                 constructor(t, n, i, a, s, c) {
                     this.modalService = t, this.decksService = n, this.authService = i, this.audioService = a, this.akumaService = s, this.cerberusModalService = c, this.deckSelect = !1, this.onGodSelect = () => {
-                    }, this.gods = pc, this.unsubscribe = new M.xQ, this.GuGameModeType = P.tO, this.Flags = _.vU, this.close = () => {
+                    }, this.gods = gc, this.unsubscribe = new M.xQ, this.GuGameModeType = P.tO, this.Flags = _.vU, this.close = () => {
                         this.akumaService.postControlEvent("gu", "GodChoose", "", "close", "Btn", "pressed"), this.modalService.destroyTopModal()
                     }
                 }
@@ -7030,8 +7090,8 @@
                         this.deckSelect ? this.decksService.updateDeckSelectMode(!0, this.gameModeId, this.forAI) : this.decksService.updateDeckSelectMode(!1), this.close(), this.modalService.createModal(Ye, {deckSelectMode: this.deckSelect}, {
                             blurredBackground: !0,
                             canCloseFromOutside: !0,
-                            position: m.e1.Center,
-                            size: m.Cg.Workarea
+                            position: h.e1.Center,
+                            size: h.Cg.Workarea
                         })
                     })
                 }
@@ -7046,7 +7106,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(I.Z), e.Y36(te.D), e.Y36(h.mI), e.Y36(h.pk), e.Y36(_.jt), e.Y36(L.Qz))
+                return new (t || o)(e.Y36(I.Z), e.Y36(te.D), e.Y36(f.mI), e.Y36(f.pk), e.Y36(_.jt), e.Y36(L.Qz))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-god-select-modal"]],
@@ -7059,23 +7119,23 @@
                 },
                 decls: 9,
                 vars: 4,
-                consts: [[3, "closeButtonClickFn"], [1, "pageTitle"], [1, "pageDescription"], ["backgroundFillColor", "colors.gunmetal.700", "borderColor", "colors.apocyan.500", "borderColorHover", "colors.apocyan.100", "fillColor", "colors.apocyan.300", "leftIconPosition", "true", "icon", "action_download", "class", "importDeckCta", 3, "click", 4, "featureFlagIf"], [1, "godListing"], ["class", "god", 3, "god--unavailable", "click", "mouseenter", 4, "ngFor", "ngForOf"], ["class", "sealedPreloadSection", "style", "width: 1px; height: 1px; visibility: hidden; overflow: hidden", 4, "ngIf"], ["backgroundFillColor", "colors.gunmetal.700", "borderColor", "colors.apocyan.500", "borderColorHover", "colors.apocyan.100", "fillColor", "colors.apocyan.300", "leftIconPosition", "true", "icon", "action_download", 1, "importDeckCta", 3, "click"], [1, "god", 3, "click", "mouseenter"], [1, "god__inner"], ["alt", "Illustration of God", 1, "god__image", 3, "src"], [1, "god__title"], [1, "god__description"], [1, "god__playStyle", 3, "innerHTML"], [1, "sealedPreloadSection", 2, "width", "1px", "height", "1px", "visibility", "hidden", "overflow", "hidden"], ["src", "https://images.godsunchained.com/god-art/1024/nature--aeona.webp"], ["src", "https://images.godsunchained.com/god-art/1024/war--auros.webp"], ["src", "https://images.godsunchained.com/god-art/1024/magic--elyrian.webp"], ["src", "https://images.godsunchained.com/god-art/1024/death--malissus.webp"], ["src", "https://images.godsunchained.com/god-art/1024/light--thaeriel.webp"], ["src", "https://images.godsunchained.com/god-art/1024/deception--ludia.webp"]],
+                consts: [[3, "closeButtonClickFn"], [1, "pageTitle"], [1, "pageDescription"], ["backgroundFillColor", "colors.gunmetal.700", "borderColor", "colors.apocyan.500", "borderColorHover", "colors.apocyan.100", "fillColor", "colors.apocyan.300", "leftIconPosition", "true", "icon", "action_download", "class", "importDeckCta", 3, "click", 4, "featureFlagIf"], [1, "godListing"], ["class", "god", "data-test-id", "chooseGod", 3, "god--unavailable", "click", "mouseenter", 4, "ngFor", "ngForOf"], ["class", "sealedPreloadSection", "style", "width: 1px; height: 1px; visibility: hidden; overflow: hidden", 4, "ngIf"], ["backgroundFillColor", "colors.gunmetal.700", "borderColor", "colors.apocyan.500", "borderColorHover", "colors.apocyan.100", "fillColor", "colors.apocyan.300", "leftIconPosition", "true", "icon", "action_download", 1, "importDeckCta", 3, "click"], ["data-test-id", "chooseGod", 1, "god", 3, "click", "mouseenter"], [1, "god__inner"], ["alt", "Illustration of God", 1, "god__image", 3, "src"], [1, "god__title"], [1, "god__description"], [1, "god__playStyle", 3, "innerHTML"], [1, "sealedPreloadSection", 2, "width", "1px", "height", "1px", "visibility", "hidden", "overflow", "hidden"], ["src", "https://images.godsunchained.com/god-art/1024/nature--aeona.webp"], ["src", "https://images.godsunchained.com/god-art/1024/war--auros.webp"], ["src", "https://images.godsunchained.com/god-art/1024/magic--elyrian.webp"], ["src", "https://images.godsunchained.com/god-art/1024/death--malissus.webp"], ["src", "https://images.godsunchained.com/god-art/1024/light--thaeriel.webp"], ["src", "https://images.godsunchained.com/god-art/1024/deception--ludia.webp"]],
                 template: function (t, n) {
-                    1 & t && (e._UZ(0, "app-modal-sidebar", 0), e.TgZ(1, "h1", 1), e._uU(2, "Choose a God"), e.qZA(), e.TgZ(3, "p", 2), e._uU(4, "Each deck must be aligned to a God. Choose which one you'd like to build around."), e.qZA(), e.YNc(5, uc, 2, 0, "gu-plain-square-button", 3), e.TgZ(6, "div", 4), e.YNc(7, _c, 8, 6, "div", 5), e.qZA(), e.YNc(8, hc, 7, 0, "div", 6)), 2 & t && (e.Q6J("closeButtonClickFn", n.close), e.xp6(5), e.Q6J("featureFlagIf", n.Flags.deckCodesEnabled), e.xp6(2), e.Q6J("ngForOf", n.gods), e.xp6(1), e.Q6J("ngIf", n.gameModeType === n.GuGameModeType.SEALED_DECK))
+                    1 & t && (e._UZ(0, "app-modal-sidebar", 0), e.TgZ(1, "h1", 1), e._uU(2, "Choose a God"), e.qZA(), e.TgZ(3, "p", 2), e._uU(4, "Each deck must be aligned to a God. Choose which one you'd like to build around."), e.qZA(), e.YNc(5, pc, 2, 0, "gu-plain-square-button", 3), e.TgZ(6, "div", 4), e.YNc(7, uc, 8, 6, "div", 5), e.qZA(), e.YNc(8, _c, 7, 0, "div", 6)), 2 & t && (e.Q6J("closeButtonClickFn", n.close), e.xp6(5), e.Q6J("featureFlagIf", n.Flags.deckCodesEnabled), e.xp6(2), e.Q6J("ngForOf", n.gods), e.xp6(1), e.Q6J("ngIf", n.gameModeType === n.GuGameModeType.SEALED_DECK))
                 },
                 directives: [ye, nt.w, l.sg, l.O5],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif;font-weight:400}.pageTitle[_ngcontent-%COMP%], .god__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained, serif;font-weight:700}.god__description[_ngcontent-%COMP%], .god__playStyle[_ngcontent-%COMP%], .pageDescription[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif}.god__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 3.7);line-height:1.3}.pageTitle[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 5);line-height:1.3}.god__description[_ngcontent-%COMP%], .god__playStyle[_ngcontent-%COMP%], .pageDescription[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.god__playStyle[_ngcontent-%COMP%], .pageDescription[_ngcontent-%COMP%]{line-height:1.4}[_nghost-%COMP%]{width:100%;height:calc(calc(var(--vh) * 100) - 28px - 80px);display:flex;flex-flow:column nowrap;text-align:center;padding:0 80px;padding-top:calc(var(--vh) * 5)}.pageTitle[_ngcontent-%COMP%]{margin-bottom:calc(var(--vh) * 1);background:var(--gu-yellow);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.pageDescription[_ngcontent-%COMP%]{color:var(--gu-gray);}.godListing[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1);grid-column-gap:calc(var(--vw) * .6);display:grid;grid-template-columns:repeat(6, 1fr)}.god[_ngcontent-%COMP%]{width:calc(var(--vw) * 14.84);height:calc(var(--vh) * 63);display:flex;background:linear-gradient(to bottom, #affaed 0%, #8be1e0 50%, #54bbcd 100%);border-radius:calc(var(--vh) * .4);color:var(--gu-gray);cursor:pointer}.god[_ngcontent-%COMP%]:hover:not(.god--unavailable) .god__image[_ngcontent-%COMP%]{opacity:1;z-index:1;}.god--unavailable[_ngcontent-%COMP%]{color:#7192b0;background:#1d2f41;cursor:default}.god--unavailable[_ngcontent-%COMP%] .god__inner[_ngcontent-%COMP%]{background:#0c1620}.god--unavailable[_ngcontent-%COMP%] .god__image[_ngcontent-%COMP%]{opacity:.1;}.god__inner[_ngcontent-%COMP%]{padding:calc(var(--vw) * 1.5);margin:calc(var(--vh) * .18);flex:1;border-radius:calc(var(--vh) * .4);background:var(--gu-blue-dark);overflow:hidden;position:relative}.god__image[_ngcontent-%COMP%]{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.35;}.god__title[_ngcontent-%COMP%]{position:relative}.god__description[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .5);padding-bottom:calc(var(--vh) * 2.96);color:var(--gu-gray);position:relative}.god__playStyle[_ngcontent-%COMP%]{position:relative;padding:8px;background:rgba(0, 0, 0, 0.25);}.sealedPreloadSection[_ngcontent-%COMP%]{width:1px;height:1px;visibility:hidden;overflow:hidden}.importDeckCta[_ngcontent-%COMP%]{position:absolute;right:100px}"]
             }), o
         })();
 
-        function mc(o, r) {
+        function hc(o, r) {
             if (1 & o && e._UZ(0, "app-modal-sidebar", 8), 2 & o) {
                 const t = e.oxw();
                 e.Q6J("closeButtonClickFn", t.destroyModal)
             }
         }
 
-        function fc(o, r) {
+        function mc(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "gu-plain-square-button", 9), e.NdJ("click", function () {
@@ -7084,7 +7144,7 @@
             }
         }
 
-        function Cc(o, r) {
+        function fc(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-deck", 10), e.NdJ("selectDeck", function (i) {
@@ -7165,7 +7225,7 @@
                         gameModeId: this.gameModeId,
                         forAI: this.forAI,
                         deckSelect: this.deckBuilderDeckSelect
-                    }, {blurredBackground: !0, canCloseFromOutside: !1, position: m.e1.Center, size: m.Cg.Workarea})
+                    }, {blurredBackground: !0, canCloseFromOutside: !1, position: h.e1.Center, size: h.Cg.Workarea})
                 }
 
                 getFilteredStream(t, n) {
@@ -7189,13 +7249,13 @@
                     this.akumaService.postControlEvent("gu", "MyDecks", "", "deckChosen", "Btn", "pressed"), this.deckBuilderDeckSelect ? this.deckBuilderDeckSelect && (this.decksService.updateDeckSelectMode(!0, this.gameModeId, this.forAI), this.audioService.workshopCustomize.play(), this.decksService.selectActiveDeck(t), this.modalService.createModal(Ye, {}, {
                         blurredBackground: !0,
                         canCloseFromOutside: !1,
-                        position: m.e1.Center,
-                        size: m.Cg.Workarea
+                        position: h.e1.Center,
+                        size: h.Cg.Workarea
                     })) : (this.audioService.workshopCustomize.play(), this.decksService.updateDeckSelectMode(!1), this.decksService.selectActiveDeck(t), this.modalService.createModal(Ye, {}, {
                         blurredBackground: !0,
                         canCloseFromOutside: !1,
-                        position: m.e1.Center,
-                        size: m.Cg.Workarea
+                        position: h.e1.Center,
+                        size: h.Cg.Workarea
                     }))
                 }
 
@@ -7205,7 +7265,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(te.D), e.Y36(I.Z), e.Y36(_.jt), e.Y36(h.pk), e.Y36(L.Qz))
+                return new (t || o)(e.Y36(te.D), e.Y36(I.Z), e.Y36(_.jt), e.Y36(f.pk), e.Y36(L.Qz))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-my-decks"]],
@@ -7221,13 +7281,13 @@
                 },
                 decls: 10,
                 vars: 8,
-                consts: [[3, "closeButtonClickFn", 4, "ngIf"], [1, "titleAndFiltering"], [1, "titleAndFiltering__filtering", 3, "godFilters", "displayGroupingName", "godFilterChangeList"], [1, "titleAndFiltering__title"], ["backgroundFillColor", "colors.gunmetal.700", "borderColor", "colors.apocyan.500", "borderColorHover", "colors.apocyan.100", "fillColor", "colors.apocyan.300", "leftIconPosition", "true", "icon", "action_download", "class", "importDeckCta", 3, "click", 4, "featureFlagIf"], [1, "decksListing"], ["text", "Create a Deck", 1, "createButton", 3, "click"], ["class", "deck", "width", "calc(var(--vw) * 8.6)", "emptyContainerWidth", "calc(var(--vw) * 8.6)", "emptyContainerHeight", "calc(var(--vh) * 22)", 3, "displayGauntlet", "deck", "showDeckName", "hideGodName", "selectDeck", 4, "ngFor", "ngForOf", "ngForTrackBy"], [3, "closeButtonClickFn"], ["backgroundFillColor", "colors.gunmetal.700", "borderColor", "colors.apocyan.500", "borderColorHover", "colors.apocyan.100", "fillColor", "colors.apocyan.300", "leftIconPosition", "true", "icon", "action_download", 1, "importDeckCta", 3, "click"], ["width", "calc(var(--vw) * 8.6)", "emptyContainerWidth", "calc(var(--vw) * 8.6)", "emptyContainerHeight", "calc(var(--vh) * 22)", 1, "deck", 3, "displayGauntlet", "deck", "showDeckName", "hideGodName", "selectDeck"]],
+                consts: [[3, "closeButtonClickFn", 4, "ngIf"], [1, "titleAndFiltering"], [1, "titleAndFiltering__filtering", 3, "godFilters", "displayGroupingName", "godFilterChangeList"], [1, "titleAndFiltering__title"], ["backgroundFillColor", "colors.gunmetal.700", "borderColor", "colors.apocyan.500", "borderColorHover", "colors.apocyan.100", "fillColor", "colors.apocyan.300", "leftIconPosition", "true", "icon", "action_download", "class", "importDeckCta", 3, "click", 4, "featureFlagIf"], ["data-test-id", "decksListing", 1, "decksListing"], ["text", "Create a Deck", "data-test-id", "createDeck", 1, "createButton", 3, "click"], ["class", "deck", "data-test-id", "deck", "width", "calc(var(--vw) * 8.6)", "emptyContainerWidth", "calc(var(--vw) * 8.6)", "emptyContainerHeight", "calc(var(--vh) * 22)", 3, "displayGauntlet", "deck", "showDeckName", "hideGodName", "selectDeck", 4, "ngFor", "ngForOf", "ngForTrackBy"], [3, "closeButtonClickFn"], ["backgroundFillColor", "colors.gunmetal.700", "borderColor", "colors.apocyan.500", "borderColorHover", "colors.apocyan.100", "fillColor", "colors.apocyan.300", "leftIconPosition", "true", "icon", "action_download", 1, "importDeckCta", 3, "click"], ["data-test-id", "deck", "width", "calc(var(--vw) * 8.6)", "emptyContainerWidth", "calc(var(--vw) * 8.6)", "emptyContainerHeight", "calc(var(--vh) * 22)", 1, "deck", 3, "displayGauntlet", "deck", "showDeckName", "hideGodName", "selectDeck"]],
                 template: function (t, n) {
-                    1 & t && (e.YNc(0, mc, 1, 1, "app-modal-sidebar", 0), e.TgZ(1, "header", 1)(2, "app-grouping-bar", 2), e.NdJ("godFilterChangeList", function (a) {
+                    1 & t && (e.YNc(0, hc, 1, 1, "app-modal-sidebar", 0), e.TgZ(1, "header", 1)(2, "app-grouping-bar", 2), e.NdJ("godFilterChangeList", function (a) {
                         return n.godFilterChange(a)
-                    }), e.qZA(), e.TgZ(3, "h3", 3), e._uU(4, "My Decks"), e.qZA(), e.YNc(5, fc, 2, 0, "gu-plain-square-button", 4), e.qZA(), e.TgZ(6, "div", 5)(7, "app-create-new-button", 6), e.NdJ("click", function () {
+                    }), e.qZA(), e.TgZ(3, "h3", 3), e._uU(4, "My Decks"), e.qZA(), e.YNc(5, mc, 2, 0, "gu-plain-square-button", 4), e.qZA(), e.TgZ(6, "div", 5)(7, "app-create-new-button", 6), e.NdJ("click", function () {
                         return n.newDeck()
-                    }), e.qZA(), e.YNc(8, Cc, 1, 4, "app-deck", 7), e.ALo(9, "async"), e.qZA()), 2 & t && (e.Q6J("ngIf", n.modalHosted), e.xp6(2), e.Q6J("godFilters", n.godFilters)("displayGroupingName", !1), e.xp6(3), e.Q6J("featureFlagIf", n.Flags.deckCodesEnabled), e.xp6(3), e.Q6J("ngForOf", e.lcZ(9, 6, n.filteredDecks$))("ngForTrackBy", n.trackDecksBy))
+                    }), e.qZA(), e.YNc(8, fc, 1, 4, "app-deck", 7), e.ALo(9, "async"), e.qZA()), 2 & t && (e.Q6J("ngIf", n.modalHosted), e.xp6(2), e.Q6J("godFilters", n.godFilters)("displayGroupingName", !1), e.xp6(3), e.Q6J("featureFlagIf", n.Flags.deckCodesEnabled), e.xp6(3), e.Q6J("ngForOf", e.lcZ(9, 6, n.filteredDecks$))("ngForTrackBy", n.trackDecksBy))
                 },
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.titleAndFiltering__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.titleAndFiltering__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-direction:column;height:100%;}[_nghost-%COMP%].modal-hosted{padding-top:28px}.titleAndFiltering[_ngcontent-%COMP%]{display:flex;padding-top:calc(var(--vh) * 2);top:calc(var(--vh) * 1.5);justify-content:space-between;align-items:center;margin:0 80px;min-height:calc(calc(var(--vh) * 9) - calc(var(--vh) * 1.5));padding:20px 0}.titleAndFiltering__title[_ngcontent-%COMP%]{text-transform:uppercase;color:#f6f6f6}.decksListing[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(8,1fr);align-items:start;grid-auto-rows:min-content;grid-column-gap:calc(var(--vw) * 1.6);padding:0 calc(var(--vw) * 4.16);padding-top:calc(var(--vh) * 4);height:100%;overflow:hidden;overflow-y:auto}.decksListing[_ngcontent-%COMP%] > *[_ngcontent-%COMP%]:last-child{margin-bottom:calc(var(--vh) * 6)}.createButton[_ngcontent-%COMP%]{width:calc(var(--vw) * 8.6);height:calc(var(--vh) * 23.5);margin-top:calc(var(--vh) * .5);justify-self:center}"],
                 data: {
@@ -7248,19 +7308,19 @@
                 }
             }), o
         })();
-        const vc = ["In this event, you will receive temporary copies of cards from Core and Welcome Set. These cards are not added to your account or to your wallet, rather they exist only for this event and disappear when it is over.", "From this sealed collection, you build a deck to play against others in the event. Everyone's sealed collection is random. You'll get cards from every domain, and can put any card you get into your sealed deck. For instance, you play with Light and Deception and War in the same deck!", "At the beginning of your run, before you receive cards, you will choose your domain. Several cards you receive will always be from the domain you choose. The rest will be randomly chosen from across Core and Welcome Set.", "Play until you reach 9 wins or 3 losses. Win more games to get bigger prizes. You'll win Stars, cards, and maybe even a trinket! Click below for complete rules and prize details."];
+        const Cc = ["In this event, you will receive temporary copies of cards from Core and Welcome Set. These cards are not added to your account or to your wallet, rather they exist only for this event and disappear when it is over.", "From this sealed collection, you build a deck to play against others in the event. Everyone's sealed collection is random. You'll get cards from every domain, and can put any card you get into your sealed deck. For instance, you play with Light and Deception and War in the same deck!", "At the beginning of your run, before you receive cards, you will choose your domain. Several cards you receive will always be from the domain you choose. The rest will be randomly chosen from across Core and Welcome Set.", "Play until you reach 9 wins or 3 losses. Win more games to get bigger prizes. You'll win Stars, cards, and maybe even a trinket! Click below for complete rules and prize details."];
 
-        function bc(o, r) {
+        function vc(o, r) {
             if (1 & o && (e.TgZ(0, "gu-vertical-space", 7), e._UZ(1, "gu-paragraph-text", 8), e.qZA()), 2 & o) {
                 const t = r.$implicit;
                 e.xp6(1), e.Q6J("text", t)
             }
         }
 
-        let wc = (() => {
+        let bc = (() => {
             class o {
                 constructor(t, n) {
-                    this.activeModal = t, this.akuma = n, this.infoTexts = vc
+                    this.activeModal = t, this.akuma = n, this.infoTexts = Cc
                 }
 
                 ngOnInit() {
@@ -7287,7 +7347,7 @@
                 template: function (t, n) {
                     1 & t && (e.TgZ(0, "gu-two-section-modal", 0), e.NdJ("onCloseSealedDeckModal", function () {
                         return n.closeModal()
-                    }), e.TgZ(1, "gu-paragraph-text", 1), e._uU(2, " Sealed Deck Event: Core + Welcome Set "), e.qZA(), e.TgZ(3, "gu-heading-text", 2), e._uU(4, " Rules & Prizes "), e.qZA(), e.TgZ(5, "gu-vertical-space", 3), e.YNc(6, bc, 2, 1, "gu-vertical-space", 4), e.qZA(), e.TgZ(7, "gu-primary-hex-button", 5), e.NdJ("click", function () {
+                    }), e.TgZ(1, "gu-paragraph-text", 1), e._uU(2, " Sealed Deck Event: Core + Welcome Set "), e.qZA(), e.TgZ(3, "gu-heading-text", 2), e._uU(4, " Rules & Prizes "), e.qZA(), e.TgZ(5, "gu-vertical-space", 3), e.YNc(6, vc, 2, 1, "gu-vertical-space", 4), e.qZA(), e.TgZ(7, "gu-primary-hex-button", 5), e.NdJ("click", function () {
                         return n.clickFullDetails()
                     }), e._uU(8, " Full Details "), e.TgZ(9, "span"), e._UZ(10, "gu-icon", 6), e.qZA()()()), 2 & t && (e.xp6(6), e.Q6J("ngForOf", n.infoTexts))
                 },
@@ -7296,11 +7356,11 @@
             }), o
         })();
 
-        function xc(o, r) {
+        function wc(o, r) {
             1 & o && e._UZ(0, "div", 3), 2 & o && e.ekj("winBoxes__win--filled", r.$implicit)
         }
 
-        let Mc = (() => {
+        let xc = (() => {
             class o {
                 constructor() {
                     this.maxWins = 5, this.winCount = 0, this.winElements = new Array(this.maxWins).fill(!1)
@@ -7329,18 +7389,18 @@
                 vars: 3,
                 consts: [[1, "winBoxes"], ["class", "winBoxes__win", 3, "winBoxes__win--filled", 4, "ngFor", "ngForOf"], [1, "winSummary"], [1, "winBoxes__win"]],
                 template: function (t, n) {
-                    1 & t && (e.TgZ(0, "div", 0), e.YNc(1, xc, 1, 2, "div", 1), e.qZA(), e.TgZ(2, "div", 2), e._uU(3), e.qZA()), 2 & t && (e.xp6(1), e.Q6J("ngForOf", n.winElements), e.xp6(2), e.AsE("", n.winCount, " ", 1 == n.winCount ? "win" : "wins", ""))
+                    1 & t && (e.TgZ(0, "div", 0), e.YNc(1, wc, 1, 2, "div", 1), e.qZA(), e.TgZ(2, "div", 2), e._uU(3), e.qZA()), 2 & t && (e.xp6(1), e.Q6J("ngForOf", n.winElements), e.xp6(2), e.AsE("", n.winCount, " ", 1 == n.winCount ? "win" : "wins", ""))
                 },
                 directives: [l.sg],
                 styles: ['h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.winSummary[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.winSummary[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.29)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap}.winBoxes[_ngcontent-%COMP%]{display:flex}.winBoxes__win[_ngcontent-%COMP%]{border:calc(var(--vh) * .18) solid #527493;background:#0f1b27;margin-right:calc(var(--vh) * 1.3);position:relative;width:calc(var(--vh) * 2);height:calc(var(--vh) * 2)}.winBoxes__win[_ngcontent-%COMP%]:after{content:"";position:absolute;width:calc(var(--vh) * 1.3);height:calc(var(--vh) * .18);right:calc(calc(var(--vh) * .18) * -1);top:50%;background:#527493;transform:translate(100%,-50%)}.winBoxes__win[_ngcontent-%COMP%]:last-child{margin-right:0}.winBoxes__win[_ngcontent-%COMP%]:last-child:after{display:none}.winBoxes__win--filled[_ngcontent-%COMP%]{border-width:0;background:url(win-box-background.bfd8ca476bd783be.svg);background-repeat:no-repeat;background-size:contain}.winBoxes__win--filled[_ngcontent-%COMP%]:after{right:0;background:#8be1e0}.winSummary[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .6);text-align:center;color:#7192b0}']
             }), o
         })();
 
-        function yc(o, r) {
+        function Mc(o, r) {
             1 & o && e._UZ(0, "div", 3), 2 & o && e.ekj("lossBoxes__loss--filled", r.$implicit)
         }
 
-        let kc = (() => {
+        let yc = (() => {
             class o {
                 constructor() {
                     this.maxLosses = 3, this.lossCount = 0, this.lossElements = new Array(this.maxLosses).fill(!1)
@@ -7369,14 +7429,14 @@
                 vars: 3,
                 consts: [[1, "lossBoxes"], ["class", "lossBoxes__loss", 3, "lossBoxes__loss--filled", 4, "ngFor", "ngForOf"], [1, "lossSummary"], [1, "lossBoxes__loss"]],
                 template: function (t, n) {
-                    1 & t && (e.TgZ(0, "div", 0), e.YNc(1, yc, 1, 2, "div", 1), e.qZA(), e.TgZ(2, "div", 2), e._uU(3), e.qZA()), 2 & t && (e.xp6(1), e.Q6J("ngForOf", n.lossElements), e.xp6(2), e.AsE("", n.lossCount, " ", 1 == n.lossCount ? "loss" : "losses", ""))
+                    1 & t && (e.TgZ(0, "div", 0), e.YNc(1, Mc, 1, 2, "div", 1), e.qZA(), e.TgZ(2, "div", 2), e._uU(3), e.qZA()), 2 & t && (e.xp6(1), e.Q6J("ngForOf", n.lossElements), e.xp6(2), e.AsE("", n.lossCount, " ", 1 == n.lossCount ? "loss" : "losses", ""))
                 },
                 directives: [l.sg],
                 styles: ['h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.lossSummary[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.lossSummary[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.29)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap}.lossBoxes[_ngcontent-%COMP%]{display:flex}.lossBoxes__loss[_ngcontent-%COMP%]{border:calc(var(--vh) * .18) solid #527493;background:#0f1b27;margin-right:calc(var(--vh) * 1.1);position:relative;width:calc(var(--vh) * 1.4);height:calc(var(--vh) * 1.4)}.lossBoxes__loss[_ngcontent-%COMP%]:after{content:"";position:absolute;width:calc(var(--vh) * 1.1);height:calc(var(--vh) * .18);right:calc(calc(var(--vh) * .18) * -1);top:50%;background:#527493;transform:translate(100%,-50%)}.lossBoxes__loss[_ngcontent-%COMP%]:last-child{margin-right:0}.lossBoxes__loss[_ngcontent-%COMP%]:last-child:after{display:none}.lossBoxes__loss--filled[_ngcontent-%COMP%]{border-width:0;background:url(loss-box-background.6418540d28bb1124.svg);background-repeat:no-repeat;background-size:contain}.lossBoxes__loss--filled[_ngcontent-%COMP%]:after{right:0;background:#e8a1a1}.lossSummary[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .5);text-align:center;color:#7192b0}']
             }), o
         })();
-        const Oc = [[["", "slot", "inlinebeforetext"]], [["", "slot", "inlineaftertext"]], [["", "slot", "aftereverything"]]],
-            Pc = ["[slot='inlineBeforeText']", "[slot='inlineAfterText']", "[slot='afterEverything']"];
+        const kc = [[["", "slot", "inlinebeforetext"]], [["", "slot", "inlineaftertext"]], [["", "slot", "aftereverything"]]],
+            Oc = ["[slot='inlineBeforeText']", "[slot='inlineAfterText']", "[slot='afterEverything']"];
         let st = (() => {
             class o {
                 constructor() {
@@ -7392,96 +7452,96 @@
                 type: o,
                 selectors: [["app-create-new-button"]],
                 inputs: {text: "text"},
-                ngContentSelectors: Pc,
+                ngContentSelectors: Oc,
                 decls: 6,
                 vars: 1,
                 consts: [["iconLigature", "add_item", 1, "icon"], [1, "text"]],
                 template: function (t, n) {
-                    1 & t && (e.F$t(Oc), e._UZ(0, "gu-icon", 0), e.TgZ(1, "div", 1), e.Hsn(2), e._uU(3), e.Hsn(4, 1), e.qZA(), e.Hsn(5, 2)), 2 & t && (e.xp6(3), e.hij(" ", n.text, " "))
+                    1 & t && (e.F$t(kc), e._UZ(0, "gu-icon", 0), e.TgZ(1, "div", 1), e.Hsn(2), e._uU(3), e.Hsn(4, 1), e.qZA(), e.Hsn(5, 2)), 2 & t && (e.xp6(3), e.hij(" ", n.text, " "))
                 },
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.text[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.text[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{transition:transform .15s ease-in-out;display:flex;flex-direction:column;justify-content:center;align-items:center;height:100%;border:calc(var(--vh) * .15) solid #e0c58f;cursor:pointer}[_nghost-%COMP%]:hover{transform:scale(1.05)}.icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 3.5);margin-bottom:calc(var(--vh) * 1);line-height:1;color:#e0c58f}.text[_ngcontent-%COMP%]{color:#e0c58f;width:70%;text-align:center}"]
             }), o
         })();
 
-        function Sc(o, r) {
+        function Pc(o, r) {
             if (1 & o && e._UZ(0, "app-card2", 12), 2 & o) {
                 const t = e.oxw().$implicit, n = e.oxw(2);
                 e.Q6J("protoId", n.topThreeCards[t].proto)("quality", n.topThreeCards[t].quality)("sound", !1)
             }
         }
 
-        function Tc(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, Sc, 1, 3, "app-card2", 11), e.BQk()), 2 & o) {
+        function Sc(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, Pc, 1, 3, "app-card2", 11), e.BQk()), 2 & o) {
                 const t = r.$implicit, n = e.oxw(2);
                 e.xp6(1), e.Q6J("ngIf", n.topThreeCards[t])
             }
         }
 
-        function Ic(o, r) {
+        function Tc(o, r) {
             if (1 & o && e._UZ(0, "app-god-badge", 13), 2 & o) {
                 const t = e.oxw(2);
                 e.Q6J("god", null == t.deck ? null : t.deck.god)
             }
         }
 
-        function Ac(o, r) {
+        function Ic(o, r) {
             if (1 & o && e._UZ(0, "app-flux-god-portrait", 14), 2 & o) {
                 const t = e.oxw(2);
                 e.Q6J("wins", t.gauntletSlot.wins)("god", t.gauntletSlot.god)("unlock", t.gauntletSlot.unlock)
             }
         }
 
-        function Fc(o, r) {
+        function Ac(o, r) {
             if (1 & o && e._UZ(0, "app-flux-god-portrait", 14), 2 & o) {
                 const t = e.oxw(2);
                 e.Q6J("wins", 0)("god", t.deck.god)("unlock", !0)
             }
         }
 
-        const Dc = function () {
+        const Fc = function () {
             return [2, 1, 0]
         };
 
-        function Gc(o, r) {
+        function Dc(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "div", 4), e.NdJ("click", function () {
                     return e.CHM(t), e.oxw().clickDeck()
-                }), e.YNc(1, Tc, 2, 1, "ng-container", 5), e.YNc(2, Ic, 1, 1, "app-god-badge", 6), e.YNc(3, Ac, 1, 3, "app-flux-god-portrait", 7), e.YNc(4, Fc, 1, 3, "app-flux-god-portrait", 7), e.TgZ(5, "div", 8), e._UZ(6, "gu-icon", 9), e.TgZ(7, "div", 10), e._uU(8), e.qZA()()()
+                }), e.YNc(1, Sc, 2, 1, "ng-container", 5), e.YNc(2, Tc, 1, 1, "app-god-badge", 6), e.YNc(3, Ic, 1, 3, "app-flux-god-portrait", 7), e.YNc(4, Ac, 1, 3, "app-flux-god-portrait", 7), e.TgZ(5, "div", 8), e._UZ(6, "gu-icon", 9), e.TgZ(7, "div", 10), e._uU(8), e.qZA()()()
             }
             if (2 & o) {
                 const t = e.oxw();
-                e.xp6(1), e.Q6J("ngForOf", e.DdM(5, Dc)), e.xp6(1), e.Q6J("ngIf", !t.displayGauntlet), e.xp6(1), e.Q6J("ngIf", t.displayGauntlet && t.gauntletSlot), e.xp6(1), e.Q6J("ngIf", t.displayGauntlet && !t.gauntletSlot), e.xp6(4), e.hij("", t.deckCardCount, " / 30")
+                e.xp6(1), e.Q6J("ngForOf", e.DdM(5, Fc)), e.xp6(1), e.Q6J("ngIf", !t.displayGauntlet), e.xp6(1), e.Q6J("ngIf", t.displayGauntlet && t.gauntletSlot), e.xp6(1), e.Q6J("ngIf", t.displayGauntlet && !t.gauntletSlot), e.xp6(4), e.hij("", t.deckCardCount, " / 30")
             }
         }
 
-        function Zc(o, r) {
+        function Gc(o, r) {
             if (1 & o && (e.TgZ(0, "footer", 15), e._uU(1), e.ALo(2, "titlecase"), e.qZA()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(1), e.hij(" ", e.lcZ(2, 1, t.deck.god), "\n")
             }
         }
 
-        function Bc(o, r) {
+        function Zc(o, r) {
             if (1 & o && e._UZ(0, "app-god-badge", 19), 2 & o) {
                 const t = e.oxw(2);
                 e.Q6J("god", t.deck.god)
             }
         }
 
-        function Lc(o, r) {
+        function Bc(o, r) {
             if (1 & o && (e.TgZ(0, "div", 20), e._uU(1), e.qZA()), 2 & o) {
                 const t = e.oxw(2);
                 e.xp6(1), e.hij(" ", null == t.deck ? null : t.deck.god, " ")
             }
         }
 
-        function Uc(o, r) {
+        function Lc(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-create-new-button", 16), e.NdJ("click", function () {
                     return e.CHM(t), e.oxw().onEmptyDeckClick()
-                }), e.YNc(1, Bc, 1, 1, "app-god-badge", 17), e.YNc(2, Lc, 2, 1, "div", 18), e.qZA()
+                }), e.YNc(1, Zc, 1, 1, "app-god-badge", 17), e.YNc(2, Bc, 2, 1, "div", 18), e.qZA()
             }
             if (2 & o) {
                 const t = e.oxw();
@@ -7489,7 +7549,7 @@
             }
         }
 
-        function Ec(o, r) {
+        function Uc(o, r) {
             if (1 & o && (e.TgZ(0, "div", 21), e._uU(1), e.qZA()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(1), e.hij(" ", null == t.deck ? null : t.deck.name, "\n")
@@ -7560,7 +7620,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(_.dK), e.Y36(Ge.F), e.Y36(h.pk), e.Y36(Fe))
+                return new (t || o)(e.Y36(_.dK), e.Y36(Ge.F), e.Y36(f.pk), e.Y36(Fe))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-deck"]],
@@ -7585,9 +7645,9 @@
                 features: [e.TTD],
                 decls: 4,
                 vars: 4,
-                consts: [["class", "stackOfCards", 3, "click", 4, "ngIf"], ["class", "godInfo", 4, "ngIf"], ["class", "emptyDeckContainer", 3, "text", "ngStyle", "click", 4, "ngIf"], ["class", "deckName", 4, "ngIf"], [1, "stackOfCards", 3, "click"], [4, "ngFor", "ngForOf"], ["size", "small", "class", "godBadge", 3, "god", 4, "ngIf"], ["class", "fluxGodPortrait", 3, "wins", "god", "unlock", 4, "ngIf"], [1, "deckLockedOverlay"], ["iconLigature", "padlock", 1, "deckLockedOverlay__icon"], [1, "deckLockedOverlay__text"], ["class", "deckCard", 3, "protoId", "quality", "sound", 4, "ngIf"], [1, "deckCard", 3, "protoId", "quality", "sound"], ["size", "small", 1, "godBadge", 3, "god"], [1, "fluxGodPortrait", 3, "wins", "god", "unlock"], [1, "godInfo"], [1, "emptyDeckContainer", 3, "text", "ngStyle", "click"], ["size", "small", "class", "godBadge", "slot", "afterEverything", 3, "god", 4, "ngIf"], ["class", "godName", "slot", "inlineBeforeText", 4, "ngIf"], ["size", "small", "slot", "afterEverything", 1, "godBadge", 3, "god"], ["slot", "inlineBeforeText", 1, "godName"], [1, "deckName"]],
+                consts: [["class", "stackOfCards", 3, "click", 4, "ngIf"], ["class", "godInfo", 4, "ngIf"], ["class", "emptyDeckContainer", 3, "text", "ngStyle", "click", 4, "ngIf"], ["class", "deckName", "data-test-id", "deckName", 4, "ngIf"], [1, "stackOfCards", 3, "click"], [4, "ngFor", "ngForOf"], ["size", "small", "class", "godBadge", 3, "god", 4, "ngIf"], ["class", "fluxGodPortrait", 3, "wins", "god", "unlock", 4, "ngIf"], [1, "deckLockedOverlay"], ["iconLigature", "padlock", 1, "deckLockedOverlay__icon"], [1, "deckLockedOverlay__text"], ["class", "deckCard", "data-test-id", "deckCard", 3, "protoId", "quality", "sound", 4, "ngIf"], ["data-test-id", "deckCard", 1, "deckCard", 3, "protoId", "quality", "sound"], ["size", "small", 1, "godBadge", 3, "god"], [1, "fluxGodPortrait", 3, "wins", "god", "unlock"], [1, "godInfo"], [1, "emptyDeckContainer", 3, "text", "ngStyle", "click"], ["size", "small", "class", "godBadge", "slot", "afterEverything", 3, "god", 4, "ngIf"], ["class", "godName", "slot", "inlineBeforeText", 4, "ngIf"], ["size", "small", "slot", "afterEverything", 1, "godBadge", 3, "god"], ["slot", "inlineBeforeText", 1, "godName"], ["data-test-id", "deckName", 1, "deckName"]],
                 template: function (t, n) {
-                    1 & t && (e.YNc(0, Gc, 9, 6, "div", 0), e.YNc(1, Zc, 3, 3, "footer", 1), e.YNc(2, Uc, 3, 4, "app-create-new-button", 2), e.YNc(3, Ec, 2, 1, "div", 3)), 2 & t && (e.Q6J("ngIf", 3 === (null == n.topThreeCards ? null : n.topThreeCards.length)), e.xp6(1), e.Q6J("ngIf", 3 === (null == n.topThreeCards ? null : n.topThreeCards.length)), e.xp6(1), e.Q6J("ngIf", !n.topThreeCards || n.topThreeCards.length < 3), e.xp6(1), e.Q6J("ngIf", n.showDeckName))
+                    1 & t && (e.YNc(0, Dc, 9, 6, "div", 0), e.YNc(1, Gc, 3, 3, "footer", 1), e.YNc(2, Lc, 3, 4, "app-create-new-button", 2), e.YNc(3, Uc, 2, 1, "div", 3)), 2 & t && (e.Q6J("ngIf", 3 === (null == n.topThreeCards ? null : n.topThreeCards.length)), e.xp6(1), e.Q6J("ngIf", 3 === (null == n.topThreeCards ? null : n.topThreeCards.length) && !n.hideGodName), e.xp6(1), e.Q6J("ngIf", !n.topThreeCards || n.topThreeCards.length < 3), e.xp6(1), e.Q6J("ngIf", n.showDeckName))
                 },
                 directives: [l.O5, l.sg, Y, gn, Pn, st, l.PC],
                 pipes: [l.rS],
@@ -7595,7 +7655,7 @@
             }), o
         })();
 
-        function Nc(o, r) {
+        function Ec(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "gu-loadout-part", 26), e.NdJ("click", function () {
@@ -7610,14 +7670,14 @@
             }
         }
 
-        function Rc(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, Nc, 1, 4, "gu-loadout-part", 25), e.BQk()), 2 & o) {
+        function Nc(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, Ec, 1, 4, "gu-loadout-part", 25), e.BQk()), 2 & o) {
                 const t = r.$implicit, n = e.oxw();
                 e.xp6(1), e.Q6J("ngIf", t[0].owned || !t[0].owned && n.showUnownedBoards)
             }
         }
 
-        function Qc(o, r) {
+        function Rc(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "gu-loadout-part", 28), e.NdJ("click", function () {
@@ -7632,14 +7692,14 @@
             }
         }
 
-        function qc(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, Qc, 1, 6, "gu-loadout-part", 27), e.BQk()), 2 & o) {
+        function Qc(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, Rc, 1, 6, "gu-loadout-part", 27), e.BQk()), 2 & o) {
                 const t = r.$implicit, n = e.oxw();
                 e.xp6(1), e.Q6J("ngIf", t[0].owned || !t[0].owned && n.showUnownedTrinkets)
             }
         }
 
-        function Hc(o, r) {
+        function qc(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "gu-plain-square-button", 29), e.NdJ("click", function () {
@@ -7648,14 +7708,14 @@
             }
         }
 
-        function Yc(o, r) {
+        function Hc(o, r) {
             if (1 & o && (e.TgZ(0, "gu-heading-text", 30), e._uU(1), e.qZA()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(1), e.Oqu(t.selectedBoard.name)
             }
         }
 
-        function Jc(o, r) {
+        function Yc(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "gu-primary-hex-button", 31), e.NdJ("click", function () {
@@ -7668,17 +7728,17 @@
             }
         }
 
-        function $c(o, r) {
+        function Jc(o, r) {
             if (1 & o && e._UZ(0, "img", 34), 2 & o) {
                 const t = e.oxw(2);
                 e.MGl("src", "https://images.godsunchained.com/collectables/boards/", t.selectedBoard.proto, "--preview.webp", e.LSH)
             }
         }
 
-        function Wc(o, r) {
+        function $c(o, r) {
             if (1 & o) {
                 const t = e.EpF();
-                e.ynx(0), e.YNc(1, $c, 1, 1, "img", 32), e.TgZ(2, "gu-circular-close-button", 33), e.NdJ("click", function () {
+                e.ynx(0), e.YNc(1, Jc, 1, 1, "img", 32), e.TgZ(2, "gu-circular-close-button", 33), e.NdJ("click", function () {
                     return e.CHM(t), e.oxw().clearBoard()
                 }), e.qZA(), e.BQk()
             }
@@ -7688,11 +7748,11 @@
             }
         }
 
-        function zc(o, r) {
+        function Wc(o, r) {
             1 & o && (e.TgZ(0, "gu-paragraph-text", 35), e._uU(1, " choose a board "), e.qZA())
         }
 
-        function jc(o, r) {
+        function zc(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "i", 36), e.NdJ("click", function () {
@@ -7702,9 +7762,9 @@
         }
 
         g(65694), g(40760);
-        const Vc = function () {
+        const jc = function () {
             return {breakpoint: "x-large", size: "large"}
-        }, Xc = function (o) {
+        }, Vc = function (o) {
             return [o]
         };
         let Dn = (() => {
@@ -7861,9 +7921,9 @@
                         return n.close()
                     }), e._UZ(2, "gu-icon", 2), e._uU(3, " Back "), e.qZA(), e.TgZ(4, "gu-heading-text", 3), e._uU(5, " build your loadout "), e.qZA()(), e.TgZ(6, "section", 4)(7, "div", 5)(8, "header", 6)(9, "gu-heading-text", 7), e._uU(10, " Boards "), e.qZA(), e.TgZ(11, "gu-checkbox", 8), e.NdJ("change", function () {
                         return n.showUnownedBoards = !n.showUnownedBoards
-                    }), e.TgZ(12, "gu-body-text", 9), e._uU(13, " Show unowned "), e.qZA()()(), e.TgZ(14, "div", 10)(15, "div", 11), e.YNc(16, Rc, 2, 1, "ng-container", 12), e.qZA()()(), e.TgZ(17, "div", 13)(18, "header", 6)(19, "gu-heading-text", 7), e._uU(20, " Trinkets "), e.qZA(), e.TgZ(21, "gu-checkbox-input", 14), e.NdJ("onCheck", function () {
+                    }), e.TgZ(12, "gu-body-text", 9), e._uU(13, " Show unowned "), e.qZA()()(), e.TgZ(14, "div", 10)(15, "div", 11), e.YNc(16, Nc, 2, 1, "ng-container", 12), e.qZA()()(), e.TgZ(17, "div", 13)(18, "header", 6)(19, "gu-heading-text", 7), e._uU(20, " Trinkets "), e.qZA(), e.TgZ(21, "gu-checkbox-input", 14), e.NdJ("onCheck", function () {
                         return n.showUnownedTrinkets = !n.showUnownedTrinkets
-                    }), e.qZA()(), e.TgZ(22, "div", 10)(23, "div", 11), e.YNc(24, qc, 2, 1, "ng-container", 12), e.qZA()()()(), e.TgZ(25, "header", 15), e.YNc(26, Hc, 2, 0, "gu-plain-square-button", 16), e.YNc(27, Yc, 2, 1, "gu-heading-text", 17), e.YNc(28, Jc, 1, 1, "gu-primary-hex-button", 18), e.qZA(), e.TgZ(29, "section", 19), e.YNc(30, Wc, 3, 1, "ng-container", 20), e.YNc(31, zc, 2, 0, "gu-paragraph-text", 21), e.TgZ(32, "gu-selected-trinket", 22), e.NdJ("xButtonClick", function () {
+                    }), e.qZA()(), e.TgZ(22, "div", 10)(23, "div", 11), e.YNc(24, Qc, 2, 1, "ng-container", 12), e.qZA()()()(), e.TgZ(25, "header", 15), e.YNc(26, qc, 2, 0, "gu-plain-square-button", 16), e.YNc(27, Hc, 2, 1, "gu-heading-text", 17), e.YNc(28, Yc, 1, 1, "gu-primary-hex-button", 18), e.qZA(), e.TgZ(29, "section", 19), e.YNc(30, $c, 3, 1, "ng-container", 20), e.YNc(31, Wc, 2, 0, "gu-paragraph-text", 21), e.TgZ(32, "gu-selected-trinket", 22), e.NdJ("xButtonClick", function () {
                         return n.clearSelected("left")
                     })("trinketClick", function () {
                         return n.selectTrinket("left")
@@ -7871,14 +7931,14 @@
                         return n.clearSelected("right")
                     })("trinketClick", function () {
                         return n.selectTrinket("right")
-                    }), e.qZA()(), e.YNc(34, jc, 1, 0, "i", 24)), 2 & t && (e.xp6(4), e.Q6J("responsiveSize", e.VKq(18, Xc, e.DdM(17, Vc))), e.xp6(7), e.Q6J("value", n.showUnownedBoards), e.xp6(5), e.Q6J("ngForOf", n.allBoards), e.xp6(5), e.Q6J("checked", n.showUnownedTrinkets), e.xp6(3), e.Q6J("ngForOf", n.allTrinkets), e.xp6(2), e.Q6J("ngIf", n.selectedBoard || n.selectedTrinkets.get("left") || n.selectedTrinkets.get("right")), e.xp6(1), e.Q6J("ngIf", n.selectedBoard), e.xp6(1), e.Q6J("ngIf", n.selectedBoard), e.xp6(1), e.ekj("selectedLoadoutItems--active", !!n.selectedBoard), e.xp6(1), e.Q6J("ngIf", n.selectedBoard), e.xp6(1), e.Q6J("ngIf", !n.selectedBoard), e.xp6(1), e.Q6J("trinket", n.selectedTrinkets.get("left"))("highlight", !!n.tempTrinket), e.xp6(1), e.Q6J("trinket", n.selectedTrinkets.get("right"))("highlight", !!n.tempTrinket), e.xp6(1), e.Q6J("ngIf", n.tempTrinket))
+                    }), e.qZA()(), e.YNc(34, zc, 1, 0, "i", 24)), 2 & t && (e.xp6(4), e.Q6J("responsiveSize", e.VKq(18, Vc, e.DdM(17, jc))), e.xp6(7), e.Q6J("value", n.showUnownedBoards), e.xp6(5), e.Q6J("ngForOf", n.allBoards), e.xp6(5), e.Q6J("checked", n.showUnownedTrinkets), e.xp6(3), e.Q6J("ngForOf", n.allTrinkets), e.xp6(2), e.Q6J("ngIf", n.selectedBoard || n.selectedTrinkets.get("left") || n.selectedTrinkets.get("right")), e.xp6(1), e.Q6J("ngIf", n.selectedBoard), e.xp6(1), e.Q6J("ngIf", n.selectedBoard), e.xp6(1), e.ekj("selectedLoadoutItems--active", !!n.selectedBoard), e.xp6(1), e.Q6J("ngIf", n.selectedBoard), e.xp6(1), e.Q6J("ngIf", !n.selectedBoard), e.xp6(1), e.Q6J("trinket", n.selectedTrinkets.get("left"))("highlight", !!n.tempTrinket), e.xp6(1), e.Q6J("trinket", n.selectedTrinkets.get("right"))("highlight", !!n.tempTrinket), e.xp6(1), e.Q6J("ngIf", n.tempTrinket))
                 },
                 directives: [l.sg, l.O5],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-direction:column;width:100%;height:100%;padding:0 64px}.modalHeader[_ngcontent-%COMP%]{width:100%;height:48px;margin:24px 0;display:flex;justify-content:center;align-items:center;position:relative}.modalHeader__backBtn[_ngcontent-%COMP%]{position:absolute;top:50%;left:0;transform:translateY(-50%);cursor:pointer;text-transform:uppercase;color:#7192b0}.modalHeader__backBtn[_ngcontent-%COMP%]:hover{color:#f6f6f6}.loadoutItemsArea[_ngcontent-%COMP%]{height:70%;display:flex;justify-content:space-between;position:relative}.loadoutItemsArea__listingArea[_ngcontent-%COMP%]{flex:1;height:100%;position:relative;display:flex;flex-direction:column}.loadoutItemsArea__listingArea[_ngcontent-%COMP%]:first-child{margin-right:64px}.loadoutItemsArea__listingArea__overflow[_ngcontent-%COMP%]{height:100%;overflow:hidden;overflow-y:auto}.loadoutItemsArea__listingArea--trinkets[_ngcontent-%COMP%]{opacity:.35}.loadoutItemsArea__listingArea__header[_ngcontent-%COMP%]{position:relative;background:linear-gradient(to left,#0F1B27 0%,#1D2F41 100%);border:1px solid #1D2F41;display:flex;align-items:center;height:60px;padding:0 32px;margin-bottom:8px}.loadoutItemsArea__listingArea__header__checkbox[_ngcontent-%COMP%]{margin-left:auto}.loadoutItemsArea__listingArea__list[_ngcontent-%COMP%]{display:grid;grid-gap:16px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));border-bottom:20px solid transparent;margin-right:16px}.middleHeader[_ngcontent-%COMP%]{height:60px;background:linear-gradient(to left,#0F1B27 0%,#1D2F41 100%);border:1px solid #1D2F41;display:flex;position:relative;align-items:center;justify-content:flex-start;padding:0 12px}.middleHeader__saveBtn[_ngcontent-%COMP%]{position:absolute;right:12px}.middleHeader__heading[_ngcontent-%COMP%]{margin:0 auto}.selectedLoadoutItems[_ngcontent-%COMP%]{height:35%;max-height:340px;position:relative;border-bottom:none;display:flex;align-items:center;justify-content:center}.selectedLoadoutItems__clearBoardButton[_ngcontent-%COMP%]{position:absolute;top:8px;left:8px}.selectedLoadoutItems__img[_ngcontent-%COMP%]{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center}.selectedLoadoutItems__trinket[_ngcontent-%COMP%]{position:absolute;top:50%;transform:translateY(-45%);width:10%;min-width:120px;max-width:190px}.selectedLoadoutItems__trinket--left[_ngcontent-%COMP%]{left:22.7%}.selectedLoadoutItems__trinket--right[_ngcontent-%COMP%]{right:22.7%}.selectedLoadoutItems__noSelectedBoardsTitle[_ngcontent-%COMP%]{text-transform:uppercase}.loadoutItemsArea__listingArea__list__board[_ngcontent-%COMP%], .loadoutItemsArea__listingArea__list__trinket[_ngcontent-%COMP%]{cursor:pointer;transition:.1s ease-in;transition-property:filter,transform}.loadoutItemsArea__listingArea__list__trinket--selected[_ngcontent-%COMP%], .loadoutItemsArea__listingArea__list__board--selected[_ngcontent-%COMP%]{transform:scale(1.07);filter:drop-shadow(0 0 calc(var(--vh) * 1.5) rgba(89,168,205,.8))}.loadoutItemsArea__listingArea__list__board--disabled[_ngcontent-%COMP%], .loadoutItemsArea__listingArea__list__trinket--disabled[_ngcontent-%COMP%]{opacity:.4;user-select:none;pointer-events:none}.selectedLoadoutItems__saveBtn[_ngcontent-%COMP%]{position:absolute;top:0;right:0;transform:translateY(-50%)}.clickAnywhereOverlay[_ngcontent-%COMP%]{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(15,27,39,.8);z-index:2}.selectedLoadoutItems__trinket[_ngcontent-%COMP%], .modalHeader[_ngcontent-%COMP%], .loadoutItemsArea__listingArea__list__item--aboveAll[_ngcontent-%COMP%]{z-index:3}.loadoutItemsArea__listingArea__list__item--aboveAll[_ngcontent-%COMP%]{position:relative}"]
             }), o
         })();
 
-        function Kc(o, r) {
+        function Xc(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "gu-loadout-display", 6), e.NdJ("click", function () {
@@ -7918,8 +7978,8 @@
                     this.akumaService.postControlEvent("gu", "Loadouts", "", "createLoadout", "Btn", "pressed"), this.modalService.createModal(Dn, {gameModeId: this.gameModeId}, {
                         blurredBackground: !0,
                         canCloseFromOutside: !1,
-                        position: m.e1.Center,
-                        size: m.Cg.Workarea
+                        position: h.e1.Center,
+                        size: h.Cg.Workarea
                     })
                 }
 
@@ -7927,8 +7987,8 @@
                     this.modalService.createModal(Dn, {loadout: t, gameModeId: this.gameModeId}, {
                         blurredBackground: !0,
                         canCloseFromOutside: !1,
-                        position: m.e1.Center,
-                        size: m.Cg.Workarea
+                        position: h.e1.Center,
+                        size: h.Cg.Workarea
                     })
                 }
             }
@@ -7945,14 +8005,14 @@
                 template: function (t, n) {
                     1 & t && (e._UZ(0, "app-modal-sidebar", 0), e.TgZ(1, "header", 1)(2, "h3", 2), e._uU(3, "Loadouts"), e.qZA()(), e.TgZ(4, "div", 3)(5, "app-create-new-button", 4), e.NdJ("click", function () {
                         return n.createLoadout()
-                    }), e.qZA(), e.YNc(6, Kc, 1, 2, "gu-loadout-display", 5), e.qZA()), 2 & t && (e.Q6J("closeButtonClickFn", n.close), e.xp6(6), e.Q6J("ngForOf", n.loadouts))
+                    }), e.qZA(), e.YNc(6, Xc, 1, 2, "gu-loadout-display", 5), e.qZA()), 2 & t && (e.Q6J("closeButtonClickFn", n.close), e.xp6(6), e.Q6J("ngForOf", n.loadouts))
                 },
                 directives: [ye, st, l.sg],
                 styles: ['h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.titleAndFiltering__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.titleAndFiltering__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-direction:column;width:100%;height:100%;padding:0 80px}.loadoutItemsArea[_ngcontent-%COMP%]{flex:1;display:flex;justify-content:space-between}.loadoutItemsArea__listing[_ngcontent-%COMP%]{width:48%;border:1px dashed gold}.selectedLoadoutItems[_ngcontent-%COMP%]{height:calc(var(--vh) * 30);border:1px dashed gold}[_nghost-%COMP%]{display:block;padding:calc(var(--vh) * 7.4) 0 0;height:calc(calc(var(--vh) * 100) - 28px - 80px)}.titleAndFiltering[_ngcontent-%COMP%]{position:absolute;top:0;left:calc(var(--vw) * 4.16);right:calc(var(--vw) * 4.16);height:calc(var(--vh) * 7.4);display:flex;justify-content:center;padding-top:calc(var(--vh) * 3)}.titleAndFiltering[_ngcontent-%COMP%]:before{content:"";position:absolute;left:0;bottom:0;width:100%;background:#1d2f41;height:calc(var(--vh) * .25)}.titleAndFiltering__title[_ngcontent-%COMP%]{text-transform:uppercase;color:#f6f6f6}.loadoutsListing[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(8,1fr);align-items:start;grid-auto-rows:min-content;padding:0 calc(var(--vw) * 4.16);padding-top:calc(var(--vh) * 6);height:100%;overflow:hidden;overflow-y:auto}']
             }), o
         })();
 
-        function el(o, r) {
+        function Kc(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "gu-loadout-display", 2), e.NdJ("click", function () {
@@ -7965,7 +8025,7 @@
             }
         }
 
-        function tl(o, r) {
+        function el(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-create-new-button", 3), e.NdJ("click", function () {
@@ -7974,7 +8034,7 @@
             }
         }
 
-        let nl = (() => {
+        let tl = (() => {
             class o {
                 constructor(t, n, i, a, s) {
                     this.audioService = t, this.modalService = n, this.guGameService = i, this.loadoutService = a, this.akumaService = s, this.gameModeId = 0, this.unsubscribe = new M.xQ
@@ -8011,14 +8071,14 @@
                     this.logSelectLoadout(), this.audioService.transitionWorkshop.play(), this.modalService.createModal(Gn, {gameModeId: this.gameModeId}, {
                         blurredBackground: !0,
                         canCloseFromOutside: !0,
-                        position: m.e1.Center,
-                        size: m.Cg.Workarea
+                        position: h.e1.Center,
+                        size: h.Cg.Workarea
                     })
                 }
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(h.pk), e.Y36(I.Z), e.Y36(ee.xV), e.Y36(xe), e.Y36(_.jt))
+                return new (t || o)(e.Y36(f.pk), e.Y36(I.Z), e.Y36(ee.xV), e.Y36(xe), e.Y36(_.jt))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-game-mode-loadout"]],
@@ -8027,14 +8087,14 @@
                 vars: 2,
                 consts: [["class", "loadout", 3, "board", "trinkets", "hideText", "click", 4, "ngIf"], ["class", "create-button", "text", "Choose Loadout", 3, "click", 4, "ngIf"], [1, "loadout", 3, "board", "trinkets", "hideText", "click"], ["text", "Choose Loadout", 1, "create-button", 3, "click"]],
                 template: function (t, n) {
-                    1 & t && (e.YNc(0, el, 1, 3, "gu-loadout-display", 0), e.YNc(1, tl, 1, 0, "app-create-new-button", 1)), 2 & t && (e.Q6J("ngIf", n.loadout), e.xp6(1), e.Q6J("ngIf", !n.loadout))
+                    1 & t && (e.YNc(0, Kc, 1, 3, "gu-loadout-display", 0), e.YNc(1, el, 1, 0, "app-create-new-button", 1)), 2 & t && (e.Q6J("ngIf", n.loadout), e.xp6(1), e.Q6J("ngIf", !n.loadout))
                 },
                 directives: [l.O5, st],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{width:100%;height:100%;display:flex;transition:transform .15s ease-in-out;position:relative;cursor:pointer}[_nghost-%COMP%]:hover{transform:scale(1.02)}.create-button[_ngcontent-%COMP%]{position:absolute;width:100%;height:calc(var(--vh) * 14);top:0;left:0}.loadout[_ngcontent-%COMP%]  .board__titleArea__title{margin-bottom:calc(var(--vh) * 1.4)}.loadout[_ngcontent-%COMP%]  .innerContainer__qualityBar{height:calc(var(--vh) * .4)}.loadout[_ngcontent-%COMP%]  .icon{font-size:calc(var(--vh) * 2)}.loadout[_ngcontent-%COMP%]  .board__titleArea__title{font-size:calc(var(--vh) * 1.8)}.loadout[_ngcontent-%COMP%]  .board__titleArea__quality{font-size:calc(var(--vh) * 1)}"]
             }), o
         })();
-        var ol = g(36787), il = g(61715), Zn = g(63764);
-        let rl = (() => {
+        var nl = g(36787), ol = g(61715), Zn = g(63764);
+        let il = (() => {
             class o {
                 onClick(t) {
                     t.stopPropagation()
@@ -8053,47 +8113,47 @@
                 }
             }), o
         })();
-        var al = g(236);
-        const sl = ["queueBtnContainer"];
+        var rl = g(236);
+        const al = ["queueBtnContainer"];
 
-        function cl(o, r) {
+        function sl(o, r) {
             1 & o && e.GkF(0)
         }
 
-        function ll(o, r) {
+        function cl(o, r) {
             if (1 & o && (e.TgZ(0, "div", 9)(1, "div", 10), e._uU(2), e.qZA()()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(2), e.hij(" ", t.mode.type === t.GuGameModeType.DIRECT_CHALLENGE ? "Start" : "Play", " ")
             }
         }
 
-        function dl(o, r) {
+        function ll(o, r) {
             if (1 & o && (e.TgZ(0, "div", 9)(1, "div", 13), e._uU(2, "In Queue"), e.qZA(), e.TgZ(3, "div", 10), e._uU(4), e.ALo(5, "duration"), e.qZA()()), 2 & o) {
                 const t = e.oxw(2);
                 e.xp6(4), e.Oqu(e.lcZ(5, 1, t.secondsElapsed))
             }
         }
 
-        function gl(o, r) {
+        function dl(o, r) {
             1 & o && (e.ynx(0), e.TgZ(1, "div", 14), e._uU(2, "Hold to cancel"), e.qZA(), e.BQk())
         }
 
-        function pl(o, r) {
-            if (1 & o && (e.YNc(0, dl, 6, 3, "div", 11), e.YNc(1, gl, 3, 0, "ng-container", 12)), 2 & o) {
+        function gl(o, r) {
+            if (1 & o && (e.YNc(0, ll, 6, 3, "div", 11), e.YNc(1, dl, 3, 0, "ng-container", 12)), 2 & o) {
                 const t = e.oxw();
                 e.Q6J("ngIf", !t.isHovered), e.xp6(1), e.Q6J("ngIf", t.isHovered)
             }
         }
 
-        const ul = function (o, r, t, n) {
+        const pl = function (o, r, t, n) {
             return {hovered: o, active: r, pressed: t, "queue-button-container--disabled": n}
-        }, _l = function (o, r) {
+        }, ul = function (o, r) {
             return {"width.px": o, "height.px": r}
         };
-        let hl = (() => {
+        let _l = (() => {
             class o {
                 constructor(t, n, i, a, s, c, d, p, w, v, k, A, G, U) {
-                    this.playService = t, this.auth = n, this.queueService = i, this.el = a, this.guGameService = s, this.resizeService = c, this.modalService = d, this.gameService = p, this.loadoutService = w, this.audioService = v, this.akumaService = k, this.cerberusModal = A, this.featureFlagService = G, this.environment = U, this.disabled = !1, this.openDeckSelect = new e.vpe, this.secondsElapsed = 0, this.progressCirclePercentage = 0, this.echoPercentage = 50, this.isPressed = !1, this.isHovered = !1, this.timeUntilCancel = 150, this.unsubscribe = new M.xQ, this.gameModeReady = !1, this.GuGameModeType = P.tO, this.disableButton = !1, this.MIN_GAMES_PLAYED = 10, this.AFTER_EVERY_X_GAMES = 5, this.launchQueueTries = 0
+                    this.playService = t, this.auth = n, this.queueService = i, this.el = a, this.guGameService = s, this.resizeService = c, this.modalService = d, this.gameService = p, this.loadoutService = w, this.audioService = v, this.akumaService = k, this.cerberusModal = A, this.featureFlagService = G, this.environment = U, this.disabled = !1, this.openDeckSelect = new e.vpe, this.secondsElapsed = 0, this.progressCirclePercentage = 0, this.echoPercentage = 50, this.isPressed = !1, this.isHovered = !1, this.timeUntilCancel = 1, this.unsubscribe = new M.xQ, this.gameModeReady = !1, this.GuGameModeType = P.tO, this.disableButton = !1, this.MIN_GAMES_PLAYED = 10, this.AFTER_EVERY_X_GAMES = 5, this.launchQueueTries = 0
                 }
 
                 ngOnInit() {
@@ -8129,7 +8189,7 @@
                 watchForHover() {
                     const t = (0, ge.R)(this.btnContainer.nativeElement, "mouseenter").pipe((0, O.U)(() => !0)),
                         n = (0, ge.R)(this.btnContainer.nativeElement, "mouseleave").pipe((0, O.U)(() => !1));
-                    (0, ol.T)(t, n).pipe((0, u.R)(this.unsubscribe), (0, xt.b)(10), (0, b.b)(i => {
+                    (0, nl.T)(t, n).pipe((0, u.R)(this.unsubscribe), (0, xt.b)(10), (0, b.b)(i => {
                         this.isHovered = i, i ? this.audioService.arenaHoverStart.play() : (this.isPressed = !1, this.progressCirclePercentage = 0)
                     })).subscribe()
                 }
@@ -8156,8 +8216,8 @@
                     this.modalService.createModal(Zn.S, {title: t, text: n}, {
                         blurredBackground: !0,
                         canCloseFromInside: !1,
-                        position: m.e1.Center,
-                        size: m.Cg.StretchableWorkarea
+                        position: h.e1.Center,
+                        size: h.Cg.StretchableWorkarea
                     })
                 }
 
@@ -8315,7 +8375,7 @@
                 }
 
                 initTimer() {
-                    this.updateTimer(), this.timer = (0, il.F)(1e3), this.timer.pipe((0, u.R)(this.unsubscribe), (0, b.b)(t => this.updateTimer())).subscribe()
+                    this.updateTimer(), this.timer = (0, ol.F)(1e3), this.timer.pipe((0, u.R)(this.unsubscribe), (0, b.b)(t => this.updateTimer())).subscribe()
                 }
 
                 updateTimer() {
@@ -8333,12 +8393,12 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(z.GT), e.Y36(h.mI), e.Y36(vt.g), e.Y36(e.SBq), e.Y36(ee.xV), e.Y36(K._), e.Y36(I.Z), e.Y36(tt.hM), e.Y36(xe), e.Y36(h.pk), e.Y36(_.jt), e.Y36(L.Qz), e.Y36(h.B3), e.Y36(h.Ho))
+                return new (t || o)(e.Y36(z.GT), e.Y36(f.mI), e.Y36(vt.g), e.Y36(e.SBq), e.Y36(ee.xV), e.Y36(K._), e.Y36(I.Z), e.Y36(tt.hM), e.Y36(xe), e.Y36(f.pk), e.Y36(_.jt), e.Y36(L.Qz), e.Y36(f.B3), e.Y36(f.Ho))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-gu-queue-button"]],
                 viewQuery: function (t, n) {
-                    if (1 & t && e.Gf(sl, 7), 2 & t) {
+                    if (1 & t && e.Gf(al, 7), 2 & t) {
                         let i;
                         e.iGM(i = e.CRH()) && (n.btnContainer = i.first)
                     }
@@ -8364,60 +8424,60 @@
                 template: function (t, n) {
                     if (1 & t && (e.TgZ(0, "div", 0, 1), e.NdJ("mousedown", function (a) {
                         return 0 === a.button && n.onMouseDown()
-                    }), e.TgZ(2, "div", 2), e._UZ(3, "app-progress-circle", 3), e.qZA(), e.TgZ(4, "div", 4)(5, "div", 5), e.YNc(6, cl, 1, 0, "ng-container", 6), e.qZA()()(), e.YNc(7, ll, 3, 1, "ng-template", null, 7, e.W1O), e.YNc(9, pl, 2, 2, "ng-template", null, 8, e.W1O)), 2 & t) {
+                    }), e.TgZ(2, "div", 2), e._UZ(3, "app-progress-circle", 3), e.qZA(), e.TgZ(4, "div", 4)(5, "div", 5), e.YNc(6, sl, 1, 0, "ng-container", 6), e.qZA()()(), e.YNc(7, cl, 3, 1, "ng-template", null, 7, e.W1O), e.YNc(9, gl, 2, 2, "ng-template", null, 8, e.W1O)), 2 & t) {
                         const i = e.MAs(8), a = e.MAs(10);
-                        e.s9C("id", null == n.mode ? null : n.mode.name), e.Q6J("ngClass", e.l5B(10, ul, n.isHovered, n.isActive, n.isPressed, n.disableButton || n.disabled))("ngStyle", e.WLB(15, _l, n.width, n.height)), e.xp6(3), e.Q6J("percentage", n.progressCirclePercentage)("strokeColor", "red")("strokeWidth", .06 * n.width)("width", n.width), e.xp6(3), e.Q6J("ngIf", n.isActive)("ngIfThen", a)("ngIfElse", i)
+                        e.s9C("id", null == n.mode ? null : n.mode.name), e.Q6J("ngClass", e.l5B(10, pl, n.isHovered, n.isActive, n.isPressed, n.disableButton || n.disabled))("ngStyle", e.WLB(15, ul, n.width, n.height)), e.xp6(3), e.Q6J("percentage", n.progressCirclePercentage)("strokeColor", "red")("strokeWidth", .06 * n.width)("width", n.width), e.xp6(3), e.Q6J("ngIf", n.isActive)("ngIfThen", a)("ngIfElse", i)
                     }
                 },
-                directives: [rl, l.mk, l.PC, At, l.O5],
-                pipes: [al.u],
+                directives: [il, l.mk, l.PC, At, l.O5],
+                pipes: [rl.u],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif;font-weight:400}.buttonText__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained, serif;font-weight:700}.buttonText__label[_ngcontent-%COMP%], .buttonText__hold[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif}.buttonText__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.buttonText__hold[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.buttonText__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.29)}[_nghost-%COMP%]{display:inline-block;position:relative;transform-origin:50% 50%;transition:all .15s ease-in-out;background:var(--gu-blue-dark);border-radius:50%;}[_nghost-%COMP%]:hover {transform:scale(1.05);}.queue-button-container[_ngcontent-%COMP%]{user-select:none;cursor:pointer;height:100%;border-radius:50%;overflow:hidden}.queue-button-container.pressed[_ngcontent-%COMP%]{box-shadow:inset 2px 2px 5px #000}.queue-button-container--disabled[_ngcontent-%COMP%]{user-select:none;pointer-events:none;opacity:.6}.outer-circle[_ngcontent-%COMP%]{height:100%;background:var(--gu-yellow);}.inner-circle[_ngcontent-%COMP%]{position:absolute;left:50%;top:50%;width:88%;height:88%;transform:translate(-50%, -50%);border-radius:50%;transition:all .15s ease;background:var(--gu-blue-dark);}.inner-circle-content[_ngcontent-%COMP%]{height:100%;display:flex}.buttonText[_ngcontent-%COMP%]{margin:auto;display:flex;flex-flow:column nowrap;text-align:center;color:#f6f6f6}.buttonText__title[_ngcontent-%COMP%]{line-height:1}.buttonText__hold[_ngcontent-%COMP%]{font-weight:600}.buttonText__label[_ngcontent-%COMP%]{font-weight:600;text-transform:uppercase;color:#e0c58f}"]
             }), o
         })();
         var Bn = g(14618), Ln = g(69931);
 
-        function ml(o, r) {
+        function hl(o, r) {
             1 & o && e._UZ(0, "img", 7), 2 & o && e.Q6J("src", "/gu-assets/images/arena/update-lock.svg", e.LSH)
         }
 
-        function fl(o, r) {
+        function ml(o, r) {
             1 & o && e._UZ(0, "img", 7), 2 & o && e.Q6J("src", "/gu-assets/images/arena/update-error.svg", e.LSH)
         }
 
-        function Cl(o, r) {
+        function fl(o, r) {
             1 & o && e.GkF(0)
         }
 
-        const vl = function () {
+        const Cl = function () {
             return ["/game/gu/temple"]
         };
 
-        function bl(o, r) {
-            1 & o && (e.TgZ(0, "div", 8)(1, "h6", 9), e._uU(2, "Please Open Packs"), e.qZA(), e._UZ(3, "gu-primary-hex-button", 10), e.qZA()), 2 & o && (e.xp6(3), e.Q6J("routerLink", e.DdM(1, vl)))
+        function vl(o, r) {
+            1 & o && (e.TgZ(0, "div", 8)(1, "h6", 9), e._uU(2, "Please Open Packs"), e.qZA(), e._UZ(3, "gu-primary-hex-button", 10), e.qZA()), 2 & o && (e.xp6(3), e.Q6J("routerLink", e.DdM(1, Cl)))
         }
 
-        function wl(o, r) {
+        function bl(o, r) {
             if (1 & o && (e.TgZ(0, "div", 8)(1, "div", 11)(2, "div", 12), e._uU(3), e.qZA(), e.TgZ(4, "div", 13), e._uU(5), e.qZA()(), e._UZ(6, "app-progress-bar", 14), e.TgZ(7, "h5", 15), e._uU(8), e.qZA()()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(3), e.hij("Level ", null == t.playerProperties ? null : t.playerProperties.level, ""), e.xp6(2), e.hij("Level ", null == t.lock ? null : t.lock.lvlReq, ""), e.xp6(1), e.Q6J("percentage", t.percentage)("height", t.progressBarHeight)("showDivider", !0)("animateFirstValue", !0), e.xp6(2), e.hij("Reach level ", null == t.lock ? null : t.lock.lvlReq, " to unlock")
             }
         }
 
-        function xl(o, r) {
+        function wl(o, r) {
             if (1 & o && (e.TgZ(0, "div", 20), e._uU(1), e.qZA()), 2 & o) {
                 const t = e.oxw(3);
                 e.xp6(1), e.hij("", t.updatePercentage, " %")
             }
         }
 
-        function Ml(o, r) {
-            if (1 & o && (e.ynx(0), e.TgZ(1, "h6", 9), e._uU(2, " DOWNLOAD IN PROGRESS "), e.qZA(), e.TgZ(3, "gu-paragraph-text", 18), e._uU(4, " You may not queue for a match until the update is complete "), e.qZA(), e.YNc(5, xl, 2, 1, "div", 19), e.BQk()), 2 & o) {
+        function xl(o, r) {
+            if (1 & o && (e.ynx(0), e.TgZ(1, "h6", 9), e._uU(2, " DOWNLOAD IN PROGRESS "), e.qZA(), e.TgZ(3, "gu-paragraph-text", 18), e._uU(4, " You may not queue for a match until the update is complete "), e.qZA(), e.YNc(5, wl, 2, 1, "div", 19), e.BQk()), 2 & o) {
                 const t = e.oxw(2);
                 e.xp6(5), e.Q6J("ngIf", void 0 !== t.updatePercentage)
             }
         }
 
-        function yl(o, r) {
+        function Ml(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.ynx(0), e.TgZ(1, "h6", 9), e._uU(2, "UPDATE REQUIRED"), e.qZA(), e.TgZ(3, "gu-primary-hex-button", 21), e.NdJ("click", function () {
@@ -8426,7 +8486,7 @@
             }
         }
 
-        function kl(o, r) {
+        function yl(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.ynx(0), e.TgZ(1, "h6", 9), e._uU(2, " DOWNLOAD FAILED "), e.qZA(), e.TgZ(3, "gu-paragraph-text", 18), e._uU(4, " Check your internet connection, and that you have sufficient disk space. "), e.qZA(), e.TgZ(5, "gu-primary-hex-button", 22), e.NdJ("click", function () {
@@ -8435,36 +8495,36 @@
             }
         }
 
-        function Ol(o, r) {
-            if (1 & o && (e._UZ(0, "div", 16), e.TgZ(1, "div", 8), e.YNc(2, Ml, 6, 1, "ng-container", 17), e.YNc(3, yl, 4, 0, "ng-container", 17), e.YNc(4, kl, 6, 0, "ng-container", 17), e.qZA()), 2 & o) {
+        function kl(o, r) {
+            if (1 & o && (e._UZ(0, "div", 16), e.TgZ(1, "div", 8), e.YNc(2, xl, 6, 1, "ng-container", 17), e.YNc(3, Ml, 4, 0, "ng-container", 17), e.YNc(4, yl, 6, 0, "ng-container", 17), e.qZA()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(2), e.Q6J("ngIf", t.isUpdating && !t.updateError), e.xp6(1), e.Q6J("ngIf", t.isUpdateRequired && !t.isUpdating && !t.updateError), e.xp6(1), e.Q6J("ngIf", t.updateError)
             }
         }
 
-        function Pl(o, r) {
+        function Ol(o, r) {
             1 & o && e._UZ(0, "div", 16)
         }
 
-        function Sl(o, r) {
+        function Pl(o, r) {
             1 & o && e._UZ(0, "div", 25)
         }
 
-        function Tl(o, r) {
+        function Sl(o, r) {
             if (1 & o && (e.TgZ(0, "div", 20), e._uU(1), e.qZA()), 2 & o) {
                 const t = e.oxw(3);
                 e.xp6(1), e.hij("", t.assetsUpdatePercentage, " %")
             }
         }
 
-        function Il(o, r) {
-            if (1 & o && (e.ynx(0), e.TgZ(1, "h6", 9), e._uU(2, " UPDATE IN PROGRESS "), e.qZA(), e.TgZ(3, "gu-paragraph-text", 18), e._uU(4, " You may not queue for a match until the update is complete "), e.qZA(), e.YNc(5, Tl, 2, 1, "div", 19), e.BQk()), 2 & o) {
+        function Tl(o, r) {
+            if (1 & o && (e.ynx(0), e.TgZ(1, "h6", 9), e._uU(2, " UPDATE IN PROGRESS "), e.qZA(), e.TgZ(3, "gu-paragraph-text", 18), e._uU(4, " You may not queue for a match until the update is complete "), e.qZA(), e.YNc(5, Sl, 2, 1, "div", 19), e.BQk()), 2 & o) {
                 const t = e.oxw(2);
                 e.xp6(5), e.Q6J("ngIf", void 0 !== t.assetsUpdatePercentage)
             }
         }
 
-        function Al(o, r) {
+        function Il(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.ynx(0), e.TgZ(1, "h6", 9), e._uU(2, " DOWNLOAD FAILED "), e.qZA(), e.TgZ(3, "gu-paragraph-text", 18), e._uU(4, " Check your internet connection, and that you have sufficient disk space. "), e.qZA(), e.TgZ(5, "gu-primary-hex-button", 22), e.NdJ("click", function () {
@@ -8473,18 +8533,18 @@
             }
         }
 
-        function Fl(o, r) {
-            if (1 & o && (e.YNc(0, Pl, 1, 0, "div", 23), e.YNc(1, Sl, 1, 0, "div", 24), e.TgZ(2, "div", 8), e.YNc(3, Il, 6, 1, "ng-container", 17), e.YNc(4, Al, 6, 0, "ng-container", 17), e.qZA()), 2 & o) {
+        function Al(o, r) {
+            if (1 & o && (e.YNc(0, Ol, 1, 0, "div", 23), e.YNc(1, Pl, 1, 0, "div", 24), e.TgZ(2, "div", 8), e.YNc(3, Tl, 6, 1, "ng-container", 17), e.YNc(4, Il, 6, 0, "ng-container", 17), e.qZA()), 2 & o) {
                 const t = e.oxw();
                 e.Q6J("ngIf", !t.assetsUpdateError), e.xp6(1), e.Q6J("ngIf", t.assetsUpdateError), e.xp6(2), e.Q6J("ngIf", !t.assetsUpdateError), e.xp6(1), e.Q6J("ngIf", t.assetsUpdateError)
             }
         }
 
-        function Dl(o, r) {
+        function Fl(o, r) {
             1 & o && (e.TgZ(0, "div", 8)(1, "h6", 9), e._uU(2, "Locked"), e.qZA()())
         }
 
-        let Gl = (() => {
+        let Dl = (() => {
             class o {
                 constructor(t, n, i, a, s) {
                     this.progressionService = t, this.guUserService = n, this.resizeService = i, this.ngrxStore = a, this.guGameService = s, this.isUpdating = !1, this.updateError = !1, this.isUpdateRequired = !1, this.isAssetsUpdateRequired = !1, this.assetsUpdateError = !1, this.assetsUpdateInProgress = !1, this.updatePercentage = 0, this.LockType = P.Gn, this.unsubscribe = new M.xQ
@@ -8549,7 +8609,7 @@
                 vars: 3,
                 consts: [["class", "lock__icon", 3, "src", 4, "ngIf"], [4, "ngTemplateOutlet"], ["cards", ""], ["level", ""], ["update", ""], ["updateAssets", ""], ["locked", ""], [1, "lock__icon", 3, "src"], [1, "lock__contentArea"], [1, "heading"], ["text", "Temple", 1, "lock_action_button", 3, "routerLink"], [1, "lock__contentArea__rankArea"], [1, "rank", "middle"], [1, "rank", "right"], [1, "lock__contentArea__progressBar", 3, "percentage", "height", "showDivider", "animateFirstValue"], [1, "lock__contentArea__reachHint"], [1, "lock__contentArea__dividerNormal"], [4, "ngIf"], ["kind", "tag", 1, "heading__info"], ["class", "heading__percentage", 4, "ngIf"], [1, "heading__percentage"], ["text", "Update", 1, "lock_action_button", 3, "click"], ["text", "Retry", 1, "lock_action_button", 3, "click"], ["class", "lock__contentArea__dividerNormal", 4, "ngIf"], ["class", "lock__contentArea__dividerError", 4, "ngIf"], [1, "lock__contentArea__dividerError"]],
                 template: function (t, n) {
-                    if (1 & t && (e.YNc(0, ml, 1, 1, "img", 0), e.YNc(1, fl, 1, 1, "img", 0), e.YNc(2, Cl, 1, 0, "ng-container", 1), e.YNc(3, bl, 4, 2, "ng-template", null, 2, e.W1O), e.YNc(5, wl, 9, 7, "ng-template", null, 3, e.W1O), e.YNc(7, Ol, 5, 3, "ng-template", null, 4, e.W1O), e.YNc(9, Fl, 5, 4, "ng-template", null, 5, e.W1O), e.YNc(11, Dl, 3, 0, "ng-template", null, 6, e.W1O)), 2 & t) {
+                    if (1 & t && (e.YNc(0, hl, 1, 1, "img", 0), e.YNc(1, ml, 1, 1, "img", 0), e.YNc(2, fl, 1, 0, "ng-container", 1), e.YNc(3, vl, 4, 2, "ng-template", null, 2, e.W1O), e.YNc(5, bl, 9, 7, "ng-template", null, 3, e.W1O), e.YNc(7, kl, 5, 3, "ng-template", null, 4, e.W1O), e.YNc(9, Al, 5, 4, "ng-template", null, 5, e.W1O), e.YNc(11, Fl, 3, 0, "ng-template", null, 6, e.W1O)), 2 & t) {
                         const i = e.MAs(4), a = e.MAs(6), s = e.MAs(8), c = e.MAs(10), d = e.MAs(12);
                         e.Q6J("ngIf", !n.assetsUpdateError && !n.updateError), e.xp6(1), e.Q6J("ngIf", n.assetsUpdateError || n.updateError), e.xp6(1), e.Q6J("ngTemplateOutlet", n.lock.type === n.LockType.CARDS ? i : n.lock.type === n.LockType.UPDATE ? s : n.lock.type === n.LockType.ASSETS_UPDATE ? c : n.lock.type === n.LockType.LEVEL ? a : d)
                     }
@@ -8559,11 +8619,11 @@
             }), o
         })();
 
-        function Zl(o, r) {
+        function Gl(o, r) {
             1 & o && e._UZ(0, "app-card2", 10), 2 & o && e.Q6J("protoId", r.$implicit)
         }
 
-        let Bl = (() => {
+        let Zl = (() => {
             class o {
                 constructor(t) {
                     this.activeModal = t, this.protos = [], this.god = "neutral", this.onContinueClicked = () => {
@@ -8599,7 +8659,7 @@
                 template: function (t, n) {
                     1 & t && (e.TgZ(0, "gu-two-section-modal", 0), e.NdJ("onCloseSealedDeckModal", function () {
                         return n.closeModal()
-                    }), e.TgZ(1, "gu-paragraph-text", 1), e._uU(2), e.ALo(3, "titlecase"), e.qZA(), e.TgZ(4, "gu-heading-text", 2), e._uU(5, " Sealed Deck Event "), e.qZA(), e.TgZ(6, "gu-vertical-space", 3)(7, "gu-vertical-space", 4), e.YNc(8, Zl, 1, 1, "app-card2", 5), e.qZA(), e.TgZ(9, "gu-vertical-space", 6)(10, "gu-paragraph-text", 7), e._uU(11), e.qZA()(), e.TgZ(12, "gu-vertical-space", 6)(13, "gu-paragraph-text", 8), e._uU(14, " Build a deck using any 30 of those cards you want, even those from other domains. Earn enough victories, and you will get to keep these three cards and win other prizes! "), e.qZA()()(), e.TgZ(15, "gu-primary-hex-button", 9), e.NdJ("click", function () {
+                    }), e.TgZ(1, "gu-paragraph-text", 1), e._uU(2), e.ALo(3, "titlecase"), e.qZA(), e.TgZ(4, "gu-heading-text", 2), e._uU(5, " Sealed Deck Event "), e.qZA(), e.TgZ(6, "gu-vertical-space", 3)(7, "gu-vertical-space", 4), e.YNc(8, Gl, 1, 1, "app-card2", 5), e.qZA(), e.TgZ(9, "gu-vertical-space", 6)(10, "gu-paragraph-text", 7), e._uU(11), e.qZA()(), e.TgZ(12, "gu-vertical-space", 6)(13, "gu-paragraph-text", 8), e._uU(14, " Build a deck using any 30 of those cards you want, even those from other domains. Earn enough victories, and you will get to keep these three cards and win other prizes! "), e.qZA()()(), e.TgZ(15, "gu-primary-hex-button", 9), e.NdJ("click", function () {
                         return n.clickContinue()
                     }), e._uU(16, " Continue "), e.qZA()()), 2 & t && (e.Q6J("background", n.god), e.xp6(2), e.hij(" You have chosen to align with the God of ", e.lcZ(3, 4, n.god), " "), e.xp6(6), e.Q6J("ngForOf", n.protos), e.xp6(3), e.hij(" You have received the blessing of ", n.totalCards, " cards to use during this event. "))
                 },
@@ -8608,9 +8668,9 @@
                 styles: [".bottomSection__cards[_ngcontent-%COMP%]{display:flex;justify-content:center}.bottomSection__cards__card[_ngcontent-%COMP%]{margin:0 16px;width:180px}@media only screen and (min-width: 1400px){.bottomSection__cards__card[_ngcontent-%COMP%]{width:240px}}"]
             }), o
         })();
-        var Ll = g(55943);
+        var Bl = g(55943);
 
-        function Ul(o, r) {
+        function Ll(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "gu-vertical-space", 5)(1, "gu-vertical-space", 6)(2, "gu-paragraph-text", 7), e._uU(3), e.ALo(4, "date"), e.qZA()(), e.TgZ(5, "gu-special-hex-button", 8), e.NdJ("click", function () {
@@ -8623,37 +8683,37 @@
             }
         }
 
-        const El = function () {
+        const Ul = function () {
             return ["days", "hours", "minutes", "seconds"]
         };
 
-        function Nl(o, r) {
+        function El(o, r) {
             if (1 & o && (e.TgZ(0, "gu-vertical-space", 11)(1, "gu-vertical-space", 12)(2, "gu-paragraph-text", 13), e._uU(3, " Thank you for joining! The event will commence in: "), e.qZA()(), e._UZ(4, "gu-countdown-timer", 14), e.qZA()), 2 & o) {
                 const t = e.oxw();
-                e.xp6(4), e.Q6J("targetTime", t.startTimestamp)("showFields", e.DdM(2, El))
+                e.xp6(4), e.Q6J("targetTime", t.startTimestamp)("showFields", e.DdM(2, Ul))
             }
         }
 
-        function Rl(o, r) {
+        function Nl(o, r) {
             1 & o && e.GkF(0)
         }
 
-        function Ql(o, r) {
-            if (1 & o && (e.TgZ(0, "gu-vertical-space", 15)(1, "gu-vertical-space", 16)(2, "gu-paragraph-text", 17), e._uU(3, " Your Record "), e.qZA()(), e.YNc(4, Rl, 1, 0, "ng-container", 18), e.qZA()), 2 & o) {
+        function Rl(o, r) {
+            if (1 & o && (e.TgZ(0, "gu-vertical-space", 15)(1, "gu-vertical-space", 16)(2, "gu-paragraph-text", 17), e._uU(3, " Your Record "), e.qZA()(), e.YNc(4, Nl, 1, 0, "ng-container", 18), e.qZA()), 2 & o) {
                 e.oxw();
                 const t = e.MAs(5);
                 e.xp6(4), e.Q6J("ngTemplateOutlet", t)
             }
         }
 
-        function ql(o, r) {
+        function Ql(o, r) {
             1 & o && e.GkF(0)
         }
 
-        function Hl(o, r) {
+        function ql(o, r) {
             if (1 & o) {
                 const t = e.EpF();
-                e.TgZ(0, "gu-vertical-space", 19)(1, "gu-vertical-space", 20)(2, "gu-paragraph-text", 17), e._uU(3, " You have completed your run! "), e.qZA()(), e.YNc(4, ql, 1, 0, "ng-container", 18), e.TgZ(5, "gu-special-hex-button", 21), e.NdJ("click", function () {
+                e.TgZ(0, "gu-vertical-space", 19)(1, "gu-vertical-space", 20)(2, "gu-paragraph-text", 17), e._uU(3, " You have completed your run! "), e.qZA()(), e.YNc(4, Ql, 1, 0, "ng-container", 18), e.TgZ(5, "gu-special-hex-button", 21), e.NdJ("click", function () {
                     return e.CHM(t), e.oxw().clickCollectRewards()
                 }), e._uU(6, " Collect Rewards "), e.qZA()()
             }
@@ -8664,7 +8724,7 @@
             }
         }
 
-        function Yl(o, r) {
+        function Hl(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "gu-paragraph-text", 28), e.NdJ("click", function () {
@@ -8677,20 +8737,20 @@
             }
         }
 
-        const Jl = function () {
+        const Yl = function () {
             return {breakpoint: "x-large", bottomSize: "x-large"}
-        }, $l = function (o) {
+        }, Jl = function (o) {
             return [o]
         };
 
-        function Wl(o, r) {
-            if (1 & o && (e.TgZ(0, "gu-vertical-space", 22)(1, "gu-paragraph-text", 23), e._uU(2, " WINS "), e.qZA(), e._UZ(3, "gu-progress-step-counter", 24), e.qZA(), e.TgZ(4, "gu-vertical-space", 25)(5, "gu-paragraph-text", 23), e._uU(6, " LOSSES "), e.qZA(), e._UZ(7, "gu-progress-step-counter", 26), e.YNc(8, Yl, 2, 2, "gu-paragraph-text", 27), e.qZA()), 2 & o) {
+        function $l(o, r) {
+            if (1 & o && (e.TgZ(0, "gu-vertical-space", 22)(1, "gu-paragraph-text", 23), e._uU(2, " WINS "), e.qZA(), e._UZ(3, "gu-progress-step-counter", 24), e.qZA(), e.TgZ(4, "gu-vertical-space", 25)(5, "gu-paragraph-text", 23), e._uU(6, " LOSSES "), e.qZA(), e._UZ(7, "gu-progress-step-counter", 26), e.YNc(8, Hl, 2, 2, "gu-paragraph-text", 27), e.qZA()), 2 & o) {
                 const t = e.oxw();
-                e.Q6J("responsiveSize", e.VKq(7, $l, e.DdM(6, Jl))), e.xp6(3), e.Q6J("filledSteps", t.wins)("totalSteps", t.gameMode.properties.max_wins), e.xp6(4), e.Q6J("filledSteps", t.losses)("totalSteps", t.gameMode.properties.max_losses), e.xp6(1), e.Q6J("ngIf", t.sealedModeStatus === t.SealedModeStatus.STARTED)
+                e.Q6J("responsiveSize", e.VKq(7, Jl, e.DdM(6, Yl))), e.xp6(3), e.Q6J("filledSteps", t.wins)("totalSteps", t.gameMode.properties.max_wins), e.xp6(4), e.Q6J("filledSteps", t.losses)("totalSteps", t.gameMode.properties.max_losses), e.xp6(1), e.Q6J("ngIf", t.sealedModeStatus === t.SealedModeStatus.STARTED)
             }
         }
 
-        let zl = (() => {
+        let Wl = (() => {
             class o {
                 constructor(t, n, i, a, s, c, d, p, w, v, k) {
                     this.audioService = t, this.sealedService = n, this.modalService = i, this.starsService = a, this.cerberusModalService = s, this.decksService = c, this.akuma = d, this.cardsService = p, this.packService = w, this.loadoutService = v, this.guGameService = k, this.sealedModeStatus = X.r.AVAILABLE, this.wins = 0, this.losses = 0, this.userStarTotal = 0, this.unsubscribe = new M.xQ, this.SealedModeStatus = X.r
@@ -8732,8 +8792,8 @@
                     this.cardsService.fetchInventory(), this.packService.fetchUnopenedPacks(), this.loadoutService.fetchData(), this.modalService.destroyTopModal(), this.modalService.createModal(yn, {rewards: t}, {
                         blurredBackground: !0,
                         canCloseFromOutside: !1,
-                        position: m.e1.Center,
-                        size: m.Cg.Fullscreen
+                        position: h.e1.Center,
+                        size: h.Cg.Fullscreen
                     }), this.sealedService.fetchSealed()
                 }
 
@@ -8748,7 +8808,7 @@
                 }
 
                 openWelcomeModal(t, n, i, a) {
-                    const c = this.cerberusModalService.open(Bl).componentInstance;
+                    const c = this.cerberusModalService.open(Zl).componentInstance;
                     c.god = t, c.protos = n, c.totalCards = a, c.onContinueClicked = this.onWelcomeModalContinueClicked.bind(this, n, i)
                 }
 
@@ -8756,8 +8816,8 @@
                     this.audioService.clickItemV2.play(), this.akuma.postEvent("Screen", "sealeddeckGodchosen_opened"), this.modalService.createModal(Tn, {}, {
                         blurredBackground: !0,
                         canCloseFromOutside: !0,
-                        position: m.e1.Center,
-                        size: m.Cg.Workarea
+                        position: h.e1.Center,
+                        size: h.Cg.Workarea
                     })
                 }
 
@@ -8769,7 +8829,7 @@
                             this.collectRewards()
                         },
                         direction: "down"
-                    }, {position: m.e1.Custom, customPosition: ".winsLosses__dropCta:top"})
+                    }, {position: h.e1.Custom, customPosition: ".winsLosses__dropCta:top"})
                 }
 
                 clickJoinNow() {
@@ -8777,21 +8837,21 @@
                         gameModeType: P.tO.SEALED_DECK,
                         gameModeId: P.B_.SEALED_DECK,
                         onGodSelect: this.onGodSelect.bind(this)
-                    }, {blurredBackground: !0, canCloseFromOutside: !1, position: m.e1.Center, size: m.Cg.Workarea})
+                    }, {blurredBackground: !0, canCloseFromOutside: !1, position: h.e1.Center, size: h.Cg.Workarea})
                 }
 
                 showInfoModal(t, n) {
                     this.modalService.createModal(Zn.S, {title: t, text: n}, {
                         blurredBackground: !0,
                         canCloseFromInside: !1,
-                        position: m.e1.Center,
-                        size: m.Cg.StretchableWorkarea
+                        position: h.e1.Center,
+                        size: h.Cg.StretchableWorkarea
                     })
                 }
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(h.pk), e.Y36(X.H), e.Y36(I.Z), e.Y36(_.cM), e.Y36(Ll.Q), e.Y36(te.D), e.Y36(_.jt), e.Y36(_.dK), e.Y36(Oe.F), e.Y36(xe), e.Y36(ee.xV))
+                return new (t || o)(e.Y36(f.pk), e.Y36(X.H), e.Y36(I.Z), e.Y36(_.cM), e.Y36(Bl.Q), e.Y36(te.D), e.Y36(_.jt), e.Y36(_.dK), e.Y36(Oe.F), e.Y36(xe), e.Y36(ee.xV))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["gu-sealed-mode-card"]],
@@ -8804,7 +8864,7 @@
                 vars: 4,
                 consts: [["top", "x-small", "class", "section availableSection", 4, "ngIf"], ["top", "x-small", "class", "section waitingToStartSection", 4, "ngIf"], ["top", "x-small", "class", "section startedSection", 4, "ngIf"], ["top", "x-small", "class", "section rewardsSection", 4, "ngIf"], ["winsLossesTemplate", ""], ["top", "x-small", 1, "section", "availableSection"], ["bottom", "medium", 1, "availableSection__infoText"], ["align", "center", "fillColor", "colors.gunmetal.100"], [1, "availableSection__joinCta", 3, "disabled", "click"], [1, "availableSection__joinCta__price"], ["iconLigature", "collectable_stars", "fillGradientTarget", "top", "fillGradient", "gradients.apocyan.simple", 1, "availableSection__joinCta__icon"], ["top", "x-small", 1, "section", "waitingToStartSection"], ["bottom", "medium", 1, "waitingToStartSection__infoText"], ["align", "center", "fillColor", "colors.light.100", "fontWeight", "bold", "kind", "large"], ["size", "small", 1, "waitingToStartSection__countdown", 3, "targetTime", "showFields"], ["top", "x-small", 1, "section", "startedSection"], ["bottom", "medium", 1, "startedSection__infoText"], ["align", "left", "fillColor", "colors.light.100", "fontWeight", "bold", "kind", "large"], [4, "ngTemplateOutlet"], ["top", "x-small", 1, "section", "rewardsSection"], ["top", "large", "bottom", "medium", 1, "rewardsSection__infoText"], [1, "rewardsSection__joinCta", 3, "click"], ["bottom", "small", 1, "winsLosses", 3, "responsiveSize"], ["align", "center", "fillColor", "colors.gunmetal.100", "kind", "tag", 1, "winsLosses__tag"], ["fillGradient", "gradients.apocyan.simple", "fillGradientTarget", "top left", "bridgeColor", "colors.apocyan.300", "squareSize", "calc(var(--vh) * 2)", 1, "winsLosses__progress", 3, "filledSteps", "totalSteps"], [1, "winsLosses"], ["fillGradient", "gradients.god.war", "fillGradientTarget", "top left", "bridgeColor", "colors.god.war.tertiary", "squareSize", "calc(var(--vh) * 2)", 1, "winsLosses__progress", 3, "filledSteps", "totalSteps"], ["class", "winsLosses__dropCta", "align", "center", "fillColor", "colors.god.war.secondary", "kind", "tag", 3, "winsLosses__dropCta--disabled", "click", 4, "ngIf"], ["align", "center", "fillColor", "colors.god.war.secondary", "kind", "tag", 1, "winsLosses__dropCta", 3, "click"]],
                 template: function (t, n) {
-                    1 & t && (e.YNc(0, Ul, 10, 7, "gu-vertical-space", 0), e.YNc(1, Nl, 5, 3, "gu-vertical-space", 1), e.YNc(2, Ql, 5, 1, "gu-vertical-space", 2), e.YNc(3, Hl, 7, 1, "gu-vertical-space", 3), e.YNc(4, Wl, 9, 9, "ng-template", null, 4, e.W1O)), 2 & t && (e.Q6J("ngIf", n.sealedModeStatus === n.SealedModeStatus.AVAILABLE), e.xp6(1), e.Q6J("ngIf", n.sealedModeStatus === n.SealedModeStatus.WAITING_TO_START), e.xp6(1), e.Q6J("ngIf", n.sealedModeStatus === n.SealedModeStatus.STARTED), e.xp6(1), e.Q6J("ngIf", n.sealedModeStatus === n.SealedModeStatus.REWARDS_AVAILABLE))
+                    1 & t && (e.YNc(0, Ll, 10, 7, "gu-vertical-space", 0), e.YNc(1, El, 5, 3, "gu-vertical-space", 1), e.YNc(2, Rl, 5, 1, "gu-vertical-space", 2), e.YNc(3, ql, 7, 1, "gu-vertical-space", 3), e.YNc(4, $l, 9, 9, "ng-template", null, 4, e.W1O)), 2 & t && (e.Q6J("ngIf", n.sealedModeStatus === n.SealedModeStatus.AVAILABLE), e.xp6(1), e.Q6J("ngIf", n.sealedModeStatus === n.SealedModeStatus.WAITING_TO_START), e.xp6(1), e.Q6J("ngIf", n.sealedModeStatus === n.SealedModeStatus.STARTED), e.xp6(1), e.Q6J("ngIf", n.sealedModeStatus === n.SealedModeStatus.REWARDS_AVAILABLE))
                 },
                 directives: [l.O5, l.tP],
                 pipes: [l.uU],
@@ -8812,28 +8872,28 @@
             }), o
         })();
 
-        function jl(o, r) {
+        function zl(o, r) {
             if (1 & o && (e.ynx(0), e._uU(1), e.ALo(2, "date"), e.BQk()), 2 & o) {
                 const t = e.oxw(2);
                 e.xp6(1), e.hij(" Event Starts: ", e.Dn7(2, 1, t.gameMode.properties.start_time_server, "EEEE h:mmaa", "AEDT"), " AEDT ")
             }
         }
 
-        function Vl(o, r) {
+        function jl(o, r) {
             if (1 & o && (e.ynx(0), e._uU(1), e.ALo(2, "dateTo"), e.BQk()), 2 & o) {
                 const t = e.oxw(2);
                 e.xp6(1), e.hij(" Time Remaining: ", e.Dn7(2, 1, t.gameMode.end_timestamp_server, t.nowDate, !1), " ")
             }
         }
 
-        function Xl(o, r) {
-            if (1 & o && (e.TgZ(0, "gu-vertical-space", 19), e.YNc(1, jl, 3, 5, "ng-container", 14), e.YNc(2, Vl, 3, 5, "ng-container", 14), e.qZA()), 2 & o) {
+        function Vl(o, r) {
+            if (1 & o && (e.TgZ(0, "gu-vertical-space", 19), e.YNc(1, zl, 3, 5, "ng-container", 14), e.YNc(2, jl, 3, 5, "ng-container", 14), e.qZA()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(1), e.Q6J("ngIf", t.sealedModeStatus === t.SealedModeStatus.AVAILABLE || t.sealedModeStatus === t.SealedModeStatus.WAITING_TO_START), e.xp6(1), e.Q6J("ngIf", t.sealedModeStatus === t.SealedModeStatus.STARTED || t.sealedModeStatus === t.SealedModeStatus.REWARDS_AVAILABLE)
             }
         }
 
-        function Kl(o, r) {
+        function Xl(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "gu-vertical-space", 20)(1, "a", 21), e.NdJ("click", function () {
@@ -8846,36 +8906,36 @@
             }
         }
 
-        function ed(o, r) {
+        function Kl(o, r) {
             if (1 & o && (e.TgZ(0, "div", 22), e._uU(1), e.ALo(2, "dateTo"), e.qZA()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(1), e.hij(" ", e.Dn7(2, 1, t.refreshDate, t.nowDate, !1), " ")
             }
         }
 
-        function td(o, r) {
+        function ed(o, r) {
             if (1 & o && (e.TgZ(0, "div", 23), e._UZ(1, "app-win-visualisation", 24)(2, "app-loss-visualisation", 25), e.qZA()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(1), e.Q6J("winCount", t.wins), e.xp6(1), e.Q6J("lossCount", t.losses)
             }
         }
 
-        function nd(o, r) {
+        function td(o, r) {
             1 & o && (e.TgZ(0, "div", 31), e._UZ(1, "img", 32)(2, "div", 33), e.TgZ(3, "label", 34), e._uU(4, "Weekend Event"), e.qZA()())
         }
 
-        function od(o, r) {
-            if (1 & o && (e.TgZ(0, "div", 26, 27), e.YNc(2, nd, 5, 0, "div", 28), e._UZ(3, "img", 29), e.TgZ(4, "div", 30), e._uU(5), e.qZA()()), 2 & o) {
+        function nd(o, r) {
+            if (1 & o && (e.TgZ(0, "div", 26, 27), e.YNc(2, td, 5, 0, "div", 28), e._UZ(3, "img", 29), e.TgZ(4, "div", 30), e._uU(5), e.qZA()()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(2), e.Q6J("ngIf", t.gameMode.properties.sub_type === t.GuGameModeSubType.WEEKEND_EVENT), e.xp6(1), e.MGl("src", "/gu-assets/images/rank-progress/gu-progress-rank-cracks--", t.shieldCrackCount, ".svg", e.LSH), e.xp6(1), e.ekj("cardHeader__shield__rankInitials--maxRank", t.isMaxRank), e.xp6(1), e.hij(" ", t.currentRankInitials, " ")
             }
         }
 
-        function id(o, r) {
+        function od(o, r) {
             1 & o && (e.TgZ(0, "div", 46), e._uU(1, " vs "), e.qZA())
         }
 
-        function rd(o, r) {
+        function id(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-deck", 47), e.NdJ("selectDeck", function (i) {
@@ -8888,12 +8948,12 @@
             }
         }
 
-        function ad(o, r) {
+        function rd(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.ynx(0), e.TgZ(1, "div", 41)(2, "app-deck", 42), e.NdJ("selectDeck", function (i) {
                     return e.CHM(t), e.oxw(2).selectDeck(i)
-                }), e.qZA(), e.YNc(3, id, 2, 0, "div", 43), e.YNc(4, rd, 1, 3, "app-deck", 44), e.qZA(), e._UZ(5, "app-game-mode-loadout", 45), e.BQk()
+                }), e.qZA(), e.YNc(3, od, 2, 0, "div", 43), e.YNc(4, id, 1, 3, "app-deck", 44), e.qZA(), e._UZ(5, "app-game-mode-loadout", 45), e.BQk()
             }
             if (2 & o) {
                 const t = e.oxw(2);
@@ -8901,24 +8961,24 @@
             }
         }
 
-        function sd(o, r) {
+        function ad(o, r) {
             if (1 & o && (e.TgZ(0, "div", 50), e._UZ(1, "i", 51), e.TgZ(2, "gu-simple-text", 52)(3, "strong"), e._uU(4), e.qZA()()()), 2 & o) {
                 const t = r.$implicit;
                 e.xp6(4), e.Oqu(t)
             }
         }
 
-        function cd(o, r) {
-            if (1 & o && (e.TgZ(0, "div", 48), e.YNc(1, sd, 5, 1, "div", 49), e.qZA()), 2 & o) {
+        function sd(o, r) {
+            if (1 & o && (e.TgZ(0, "div", 48), e.YNc(1, ad, 5, 1, "div", 49), e.qZA()), 2 & o) {
                 const t = e.oxw(2);
                 e.xp6(1), e.Q6J("ngForOf", t.tutorialBullets)
             }
         }
 
-        function ld(o, r) {
+        function cd(o, r) {
             if (1 & o) {
                 const t = e.EpF();
-                e.TgZ(0, "div", 35), e.YNc(1, ad, 6, 6, "ng-container", 36), e.YNc(2, cd, 2, 1, "ng-template", null, 37, e.W1O), e.TgZ(4, "div", 38)(5, "app-gu-queue-button", 39, 40), e.NdJ("openDeckSelect", function (i) {
+                e.TgZ(0, "div", 35), e.YNc(1, rd, 6, 6, "ng-container", 36), e.YNc(2, sd, 2, 1, "ng-template", null, 37, e.W1O), e.TgZ(4, "div", 38)(5, "app-gu-queue-button", 39, 40), e.NdJ("openDeckSelect", function (i) {
                     return e.CHM(t), e.oxw().openDeckSelect(i)
                 }), e.qZA()()()
             }
@@ -8928,14 +8988,14 @@
             }
         }
 
-        function dd(o, r) {
+        function ld(o, r) {
             if (1 & o && (e.TgZ(0, "div", 53)(1, "div", 54), e._uU(2), e.ALo(3, "titlecase"), e.qZA(), e.TgZ(4, "div", 55), e._uU(5), e.ALo(6, "titlecase"), e.qZA(), e._UZ(7, "app-progress-bar", 56), e.qZA()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(2), e.Oqu(e.lcZ(3, 9, t.currentRankName)), e.xp6(3), e.hij(" ", e.lcZ(6, 11, t.nextRankName), " "), e.xp6(2), e.Q6J("forGameModeCard", !0)("showDivider", !0)("dividerPercentage", t.gameModeRank.safety_line)("percentage", t.gameModeRank.win_points)("height", t.progressBarHeight)("animateFirstValue", !1)("supressAnimation", !0)
             }
         }
 
-        function gd(o, r) {
+        function dd(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "div", 57)(1, "app-flux-progress-box", 58), e.NdJ("click", function () {
@@ -8944,49 +9004,55 @@
             }
         }
 
-        function pd(o, r) {
+        function gd(o, r) {
         }
 
-        function ud(o, r) {
+        function pd(o, r) {
             1 & o && (e.TgZ(0, "div")(1, "div", 61)(2, "picture"), e._UZ(3, "img", 62), e.qZA(), e.TgZ(4, "picture"), e._UZ(5, "img", 63), e.qZA(), e.TgZ(6, "div", 64), e._uU(7, " New players receive "), e.TgZ(8, "strong"), e._uU(9, "3 Core Packs "), e.qZA(), e.TgZ(10, "app-tooltip", 65), e._UZ(11, "gu-icon", 66), e.qZA()()()()), 2 & o && (e.xp6(10), e.Q6J("title", "Core Packs hold <br/> non-blockchain cards that can <br/> be used to expand your decks.")("position", "left"))
         }
 
-        function _d(o, r) {
+        function ud(o, r) {
             1 & o && (e.TgZ(0, "gu-paragraph-text", 78), e._uU(1, " Your code must be 3 - 40 characters long. "), e.qZA())
         }
 
-        function hd(o, r) {
+        function _d(o, r) {
             1 & o && (e.TgZ(0, "gu-paragraph-text", 79), e._uU(1, " Create a code or use one given to you by another mortal. "), e.qZA())
         }
 
-        const md = function (o, r) {
+        const hd = function (o, r) {
             return {"directChallenge__form__field__input--invalid": o, "directChallenge__form__field__input--valid": r}
         };
 
-        function fd(o, r) {
+        function md(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "div", 67)(1, "div", 68)(2, "gu-paragraph-text", 69), e._uU(3, " Challenge code "), e.qZA(), e.TgZ(4, "app-tooltip", 70), e._UZ(5, "gu-icon", 71), e.qZA()(), e.TgZ(6, "form", 72)(7, "div", 73), e._UZ(8, "input", 74), e.TgZ(9, "gu-icon", 75), e.NdJ("click", function () {
                     return e.CHM(t), e.oxw().toggleVisibility()
-                }), e.qZA()(), e.YNc(10, _d, 2, 0, "gu-paragraph-text", 76), e.YNc(11, hd, 2, 0, "gu-paragraph-text", 77), e.qZA()()
+                }), e.qZA()(), e.YNc(10, ud, 2, 0, "gu-paragraph-text", 76), e.YNc(11, _d, 2, 0, "gu-paragraph-text", 77), e.qZA()()
             }
             if (2 & o) {
                 const t = e.oxw();
-                e.xp6(6), e.Q6J("formGroup", t.formGroup), e.xp6(2), e.Q6J("type", t.challengeCodeVisible ? "text" : "password")("ngClass", e.WLB(6, md, t.challengeCode.invalid && t.challengeCode.touched, t.challengeCode.valid)), e.xp6(1), e.Q6J("iconLigature", t.challengeCodeVisible ? "action_hidePassword" : "action_showPassword"), e.xp6(1), e.Q6J("ngIf", t.challengeCode.invalid && t.challengeCode.touched), e.xp6(1), e.Q6J("ngIf", !t.challengeCode.invalid || !t.challengeCode.touched)
+                e.xp6(6), e.Q6J("formGroup", t.formGroup), e.xp6(2), e.Q6J("type", t.challengeCodeVisible ? "text" : "password")("ngClass", e.WLB(6, hd, t.challengeCode.invalid && t.challengeCode.touched, t.challengeCode.valid)), e.xp6(1), e.Q6J("iconLigature", t.challengeCodeVisible ? "action_hidePassword" : "action_showPassword"), e.xp6(1), e.Q6J("ngIf", t.challengeCode.invalid && t.challengeCode.touched), e.xp6(1), e.Q6J("ngIf", !t.challengeCode.invalid || !t.challengeCode.touched)
+            }
+        }
+
+        function fd(o, r) {
+            if (1 & o) {
+                const t = e.EpF();
+                e.TgZ(0, "a", 80), e.NdJ("click", function () {
+                    return e.CHM(t), e.oxw().openLink("https://blog.godsunchained.com/2021/03/19/play-to-earn-with-weekend-ranked/")
+                }), e._uU(1, " Event: Play to earn packs with Weekend Ranked!\n"), e.qZA()
             }
         }
 
         function Cd(o, r) {
-        }
-
-        function vd(o, r) {
             if (1 & o && e._UZ(0, "app-lock", 81), 2 & o) {
                 const t = e.oxw();
                 e.Q6J("lock", t.gameMode.lock)
             }
         }
 
-        function bd(o, r) {
+        function vd(o, r) {
             if (1 & o && e._UZ(0, "gu-sealed-mode-card", 82), 2 & o) {
                 const t = e.oxw();
                 e.Q6J("queueActive", t.queueActive)("gameMode", t.gameMode)("sealedModeStatus", t.sealedModeStatus)
@@ -9095,14 +9161,14 @@
                     this.akumaService.postControlEvent("gu", "Arena", "", "addDeck", "Btn", "pressed", {mode_name: this.gameMode.name}), this.gameMode.type === P.tO.SEALED_DECK ? (this.audioService.clickItemV2.play(), this.decksService.selectActiveDeckById(this.sealedMode.deck_id), this.decksService.updateDeckSelectMode(!0, P.B_.SEALED_DECK), this.modalService.createModal(Tn, {}, {
                         blurredBackground: !0,
                         canCloseFromOutside: !0,
-                        position: m.e1.Center,
-                        size: m.Cg.Workarea
+                        position: h.e1.Center,
+                        size: h.Cg.Workarea
                     })) : (this.audioService.transitionWorkshop.play(), this.modalService.createModal(Lt, {
                         gameModeId: this.gameMode.id,
                         gameModeType: this.gameMode.type,
                         forAI: n,
                         modalHosted: !0
-                    }, {blurredBackground: !0, canCloseFromOutside: !1, position: m.e1.Center, size: m.Cg.Workarea}))
+                    }, {blurredBackground: !0, canCloseFromOutside: !1, position: h.e1.Center, size: h.Cg.Workarea}))
                 }
 
                 getPlayDeck(t) {
@@ -9113,11 +9179,11 @@
                 }
 
                 openGauntletProgress() {
-                    this.akumaService.postControlEvent("gu", "Arena", "", "gatherFlux", "Btn", "pressed"), this.modalService.createModal(ec, null, {
+                    this.akumaService.postControlEvent("gu", "Arena", "", "gatherFlux", "Btn", "pressed"), this.modalService.createModal(Ks, null, {
                         blurredBackground: !0,
                         canCloseFromOutside: !1,
-                        position: m.e1.Center,
-                        size: m.Cg.Workarea
+                        position: h.e1.Center,
+                        size: h.Cg.Workarea
                     })
                 }
 
@@ -9135,12 +9201,12 @@
                 }
 
                 openSealedDeckInfoModal() {
-                    this.akumaService.postEvent("Control", "arenaHome_rulesBtn_pressed"), this.audioService.clickItemV2.play(), this.cerberusModalService.open(wc)
+                    this.akumaService.postEvent("Control", "arenaHome_rulesBtn_pressed"), this.audioService.clickItemV2.play(), this.cerberusModalService.open(bc)
                 }
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(ee.xV), e.Y36(I.Z), e.Y36(K._), e.Y36(j.$z), e.Y36(e.SBq), e.Y36(e.sBO), e.Y36(T.qu), e.Y36(vt.g), e.Y36(_.jt), e.Y36(h.pk), e.Y36(L.Qz), e.Y36(X.H), e.Y36(te.D), e.Y36(L.Qz), e.Y36(h.Ho))
+                return new (t || o)(e.Y36(ee.xV), e.Y36(I.Z), e.Y36(K._), e.Y36(j.$z), e.Y36(e.SBq), e.Y36(e.sBO), e.Y36(T.qu), e.Y36(vt.g), e.Y36(_.jt), e.Y36(f.pk), e.Y36(L.Qz), e.Y36(X.H), e.Y36(te.D), e.Y36(L.Qz), e.Y36(f.Ho))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-game-mode-card"]],
@@ -9161,26 +9227,26 @@
                 vars: 17,
                 consts: [["alt", "background imagery", 1, "backgroundImagery", 3, "src"], [1, "cardHeader"], [1, "columnLeft"], [1, "cardHeader__heading"], ["bottom", "medium", "class", "cardHeader__subheading cardHeader__subheading--sealed", 4, "ngIf"], [1, "cardHeader__subheading"], ["top", "small", 4, "ngIf"], ["class", "cardHeader__timer", 4, "ngIf"], ["class", "cardHeader__winsAndLosses", 4, "ngIf"], ["class", "cardHeader__shield", 4, "ngIf"], ["class", "modeActionsArea", 4, "ngIf"], ["class", "progressArea", 4, "ngIf"], ["class", "fluxProgress", 4, "ngIf", "ngIfElse"], ["notRankedConstructed", ""], [4, "ngIf"], ["class", "directChallenge", 4, "ngIf"], ["class", "subtype__description", 3, "click", 4, "ngIf"], [3, "lock", 4, "ngIf"], ["class", "sealedModeCard", 3, "queueActive", "gameMode", "sealedModeStatus", 4, "ngIf"], ["bottom", "medium", 1, "cardHeader__subheading", "cardHeader__subheading--sealed"], ["top", "small"], [1, "cardHeader__subheading", "cardHeader__subheading--link", 3, "click"], [1, "cardHeader__timer"], [1, "cardHeader__winsAndLosses"], [3, "winCount"], [1, "cardHeader__winsAndLosses__losses", 3, "lossCount"], [1, "cardHeader__shield"], ["leftShield", ""], ["class", "cardHeader__subtypeRibbon", 4, "ngIf"], [1, "cardHeader__shield__image", 3, "src"], [1, "cardHeader__shield__rankInitials"], [1, "cardHeader__subtypeRibbon"], ["src", "/gu-assets/images/misc/gu-gmc-snipe.svg", 1, "cardHeader__subtypeRibbon__image"], [1, "cardHeader__subtypeRibbon__live"], [1, "cardHeader__subtypeRibbon__label"], [1, "modeActionsArea"], [4, "ngIf", "ngIfElse"], ["tutorialPoints", ""], [1, "modeActionsArea__ctas"], ["diameterVwMultiplier", "6.25", 3, "mode", "deck", "opponentsDeck", "challengeCode", "accountProperties", "disabled", "openDeckSelect"], ["queueButton", ""], [1, "gameCardDecks"], ["width", "calc(var(--vw) * 5.4)", "emptyContainerHeight", "calc(var(--vh) * 14)", "emptyContainerWidth", "calc(var(--vw) * 5.3)", 1, "gameCardDecks__deck", 3, "deck", "emptyText", "hideGodName", "selectDeck"], ["class", "vsText", 4, "ngIf"], ["width", "calc(var(--vw) * 5.3)", "emptyContainerHeight", "calc(var(--vh) * 14)", "emptyContainerWidth", "calc(var(--vw) * 5.3)", "class", "aiDeck", "class", "gameCardDecks__deck", 3, "deck", "emptyText", "hideGodName", "selectDeck", 4, "ngIf"], [1, "loadout", 3, "gameModeId"], [1, "vsText"], ["width", "calc(var(--vw) * 5.3)", "emptyContainerHeight", "calc(var(--vh) * 14)", "emptyContainerWidth", "calc(var(--vw) * 5.3)", 1, "gameCardDecks__deck", 3, "deck", "emptyText", "hideGodName", "selectDeck"], [1, "tutorialCard__bulletPoints"], ["class", "tutorialCard__bulletPoint", 4, "ngFor", "ngForOf"], [1, "tutorialCard__bulletPoint"], [1, "bullet"], ["fillColor", "colors.light.300"], [1, "progressArea"], [1, "progressArea__leftRank"], [1, "progressArea__rightRank"], ["dividerOpacity", "medium", "color", "aqua", 1, "progressArea__bar", 3, "forGameModeCard", "showDivider", "dividerPercentage", "percentage", "height", "animateFirstValue", "supressAnimation"], [1, "fluxProgress"], [3, "click"], ["leftArea__subTitle", ""], ["leftArea__title", ""], [1, "tutorial__freeStuff"], ["src", "/gu-assets/images/tutorial/free-stuff-banner-tutorial.png", 1, "tutorial__freeStuff__bgImage"], ["src", "/gu-assets/images/tutorial/free-core-pack.png", 1, "tutorial__freeStuff__cardImage"], [1, "cardHeader__subheading", "tutorial__freeStuff__text"], [1, "tutorial__freeStuff__tooltip", 3, "title", "position"], ["iconLigature", "little_help"], [1, "directChallenge"], [1, "directChallenge__heading"], ["kind", "small", "fontWeight", "bold", "fillColor", "colors.light.100"], ["size", "large", "title", "The first 2 mortals to enter the <br>same code will be matched <br>together. Make the code unique, <br>and only share it with the <br>mortal you want to challenge.", 1, "directChallenge__heading__icon"], ["title", "", "iconLigature", "help", "fillColor", "colors.gunmetal.100"], [1, "directChallenge__form", 3, "formGroup"], [1, "directChallenge__form__field"], ["name", "challengeCode", "formControlName", "challengeCode", "placeholder", "Enter a unique code", 1, "directChallenge__form__field__input", 3, "type", "ngClass"], ["fillColor", "colors.gunmetal.100", 1, "directChallenge__form__field__icon", 3, "iconLigature", "click"], ["kind", "help", "fontStyle", "italic", "fillColor", "colors.god.war.primary", 4, "ngIf"], ["kind", "help", "fontStyle", "italic", "fillColor", "colors.light.700", 4, "ngIf"], ["kind", "help", "fontStyle", "italic", "fillColor", "colors.god.war.primary"], ["kind", "help", "fontStyle", "italic", "fillColor", "colors.light.700"], [1, "subtype__description", 3, "click"], [3, "lock"], [1, "sealedModeCard", 3, "queueActive", "gameMode", "sealedModeStatus"]],
                 template: function (t, n) {
-                    if (1 & t && (e._UZ(0, "img", 0), e.TgZ(1, "header", 1)(2, "div", 2)(3, "h1", 3), e._uU(4), e.qZA(), e.YNc(5, Xl, 3, 2, "gu-vertical-space", 4), e.TgZ(6, "div", 5), e._uU(7), e.qZA(), e.YNc(8, Kl, 3, 1, "gu-vertical-space", 6), e.YNc(9, ed, 3, 5, "div", 7), e.YNc(10, td, 3, 2, "div", 8), e.qZA(), e.YNc(11, od, 6, 5, "div", 9), e.qZA(), e.YNc(12, ld, 7, 10, "div", 10), e.YNc(13, dd, 8, 13, "div", 11), e.YNc(14, gd, 6, 0, "div", 12), e.YNc(15, pd, 0, 0, "ng-template", null, 13, e.W1O), e.YNc(17, ud, 12, 2, "div", 14), e.YNc(18, fd, 12, 9, "div", 15), e.YNc(19, Cd, 2, 0, "a", 16), e.YNc(20, vd, 1, 1, "app-lock", 17), e.YNc(21, bd, 1, 3, "gu-sealed-mode-card", 18)), 2 & t) {
+                    if (1 & t && (e._UZ(0, "img", 0), e.TgZ(1, "header", 1)(2, "div", 2)(3, "h1", 3), e._uU(4), e.qZA(), e.YNc(5, Vl, 3, 2, "gu-vertical-space", 4), e.TgZ(6, "div", 5), e._uU(7), e.qZA(), e.YNc(8, Xl, 3, 1, "gu-vertical-space", 6), e.YNc(9, Kl, 3, 5, "div", 7), e.YNc(10, ed, 3, 2, "div", 8), e.qZA(), e.YNc(11, nd, 6, 5, "div", 9), e.qZA(), e.YNc(12, cd, 7, 10, "div", 10), e.YNc(13, ld, 8, 13, "div", 11), e.YNc(14, dd, 6, 0, "div", 12), e.YNc(15, gd, 0, 0, "ng-template", null, 13, e.W1O), e.YNc(17, pd, 12, 2, "div", 14), e.YNc(18, md, 12, 9, "div", 15), e.YNc(19, fd, 2, 0, "a", 16), e.YNc(20, Cd, 1, 1, "app-lock", 17), e.YNc(21, vd, 1, 3, "gu-sealed-mode-card", 18)), 2 & t) {
                         const i = e.MAs(16);
                         e.Q6J("src", n.gameMode.image_url, e.LSH), e.xp6(4), e.Oqu(n.gameMode.name), e.xp6(1), e.Q6J("ngIf", n.gameMode.id === n.GuGameModeId.SEALED_DECK), e.xp6(2), e.Oqu(n.gameMode.description), e.xp6(1), e.Q6J("ngIf", n.gameMode.id === n.GuGameModeId.DIRECT_CHALLENGE || n.gameMode.id === n.GuGameModeId.SEALED_DECK), e.xp6(1), e.Q6J("ngIf", 1 === n.gameMode.rotation && n.refreshDate), e.xp6(1), e.Q6J("ngIf", n.wins > 0 || n.losses > 0), e.xp6(1), e.Q6J("ngIf", n.gameMode.ranked && n.gameModeRank), e.xp6(1), e.Q6J("ngIf", n.gameMode.id !== n.GuGameModeId.SEALED_DECK || n.sealedModeStatus === n.SealedModeStatus.STARTED), e.xp6(1), e.Q6J("ngIf", n.gameMode.ranked && n.gameModeRank && !n.isMaxRank), e.xp6(1), e.Q6J("ngIf", n.gameMode.id === n.GuGameModeId.RANKED_CONSTRUCTED)("ngIfElse", i), e.xp6(3), e.Q6J("ngIf", n.gameMode.id === n.GuGameModeId.TUTORIAL), e.xp6(1), e.Q6J("ngIf", n.gameMode.id === n.GuGameModeId.DIRECT_CHALLENGE), e.xp6(1), e.Q6J("ngIf", n.gameMode.properties.sub_type === n.GuGameModeSubType.WEEKEND_EVENT), e.xp6(1), e.Q6J("ngIf", n.gameMode.lock && n.isPrimaryCard), e.xp6(1), e.Q6J("ngIf", n.gameMode.id === n.GuGameModeId.SEALED_DECK)
                     }
                 },
-                directives: [l.O5, Mc, kc, Fn, nl, l.sg, hl, Qe, Xt, De.K, T._Y, T.JL, T.sg, T.Fj, T.JJ, T.u, l.mk, Gl, zl],
+                directives: [l.O5, xc, yc, Fn, tl, l.sg, _l, Qe, Xt, De.K, T._Y, T.JL, T.sg, T.Fj, T.JJ, T.u, l.mk, Dl, Wl],
                 pipes: [l.uU, Sn, l.rS],
                 styles: ['h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif;font-weight:400}.cardHeader__shield__rankInitials[_ngcontent-%COMP%], .cardHeader__shield__rankInitials.cardHeader__shield__rankInitials--maxRank[_ngcontent-%COMP%], .cardHeader__heading[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained, serif;font-weight:700}.subtype__description[_ngcontent-%COMP%],.directChallenge__form__inputHint[_ngcontent-%COMP%],.progressArea__rightRank[_ngcontent-%COMP%],.progressArea__leftRank[_ngcontent-%COMP%],.vsText[_ngcontent-%COMP%],.cardHeader__stats[_ngcontent-%COMP%],.cardHeader__subheading[_ngcontent-%COMP%],.directChallenge__form__field__input[_ngcontent-%COMP%],.cardHeader__timer[_ngcontent-%COMP%]{font-family:Open Sans, sans-serif}.cardHeader__shield__rankInitials.cardHeader__shield__rankInitials--maxRank[_ngcontent-%COMP%],.cardHeader__heading[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 3.7);line-height:1.3}.cardHeader__shield__rankInitials[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 4.2);line-height:1.3}.cardHeader__timer[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9)}.directChallenge__form__inputHint[_ngcontent-%COMP%],.progressArea__rightRank[_ngcontent-%COMP%],.progressArea__leftRank[_ngcontent-%COMP%],.vsText[_ngcontent-%COMP%],.cardHeader__stats[_ngcontent-%COMP%],.cardHeader__subheading[_ngcontent-%COMP%],.directChallenge__form__field__input[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}.directChallenge__form__field__input[_ngcontent-%COMP%]{line-height:1.4}.subtype__description[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.11)}[_nghost-%COMP%]{border-radius:calc(var(--vw) * .45);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-start;height:100%;position:relative;padding:calc(var(--vh) * 2.22) calc(var(--vw) * 1.09);background:var(--gu-blue-dark);}[_nghost-%COMP%]:after {content:"";border-radius:calc(var(--vw) * .45);position:absolute;top:0;bottom:0;left:0;right:0;pointer-events:none;user-select:none;z-index:1}.darkBackground[_nghost-%COMP%] .backgroundImagery[_ngcontent-%COMP%]{opacity:.08;}.backgroundImagery[_ngcontent-%COMP%]{user-select:none;pointer-events:none;position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.85;}.cardHeader[_ngcontent-%COMP%]{display:flex;position:relative}.cardHeader[_ngcontent-%COMP%] .columnLeft[_ngcontent-%COMP%]{min-height:calc(var(--vh) * 11.55);flex:1}.cardHeader__heading[_ngcontent-%COMP%]{text-transform:uppercase;line-height:.95;background:linear-gradient(to bottom, #fff2d8 0%, #ebc98b 50%, #c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:calc(var(--vh) * 1)}.cardHeader__subheading[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * .05);color:#f6f6f6}.cardHeader__subheading--sealed[_ngcontent-%COMP%]{color:#7192b0}.cardHeader__subheading--link[_ngcontent-%COMP%]{text-transform:capitalize;text-decoration:underline;cursor:pointer}.cardHeader__timer[_ngcontent-%COMP%]{color:#7192b0}.cardHeader__winsAndLosses[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2);display:flex}.cardHeader__winsAndLosses__losses[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .4);margin-left:calc(var(--vh) * 1.6);padding-left:calc(var(--vh) * 1.6);position:relative}.cardHeader__winsAndLosses__losses[_ngcontent-%COMP%]:before {height:calc(var(--vh) * 1.4);top:0;left:0;width:calc(var(--vh) * .15);content:"";position:absolute;background:#7192b0}.cardHeader__winsAndLosses__losses[_ngcontent-%COMP%] .lossSummary {margin-top:calc(var(--vh) * .7)}.cardHeader__stats[_ngcontent-%COMP%]{color:#fff9}.cardHeader__shield[_ngcontent-%COMP%]{width:calc(var(--vw) * 5);margin-right:calc(var(--vw) * .2);position:relative;align-self:flex-start}.cardHeader__shield__image[_ngcontent-%COMP%]{width:100%;display:block;filter:drop-shadow(0 calc(var(--vh) * .1) calc(var(--vh) * 3.24) rgba(252, 247, 212, .3))}.cardHeader__shield__rankInitials[_ngcontent-%COMP%]{position:absolute;top:50%;left:50%;transform:translate(-50%, -60%);text-transform:uppercase;color:#f6f6f6}.cardHeader__shield__rankInitials.cardHeader__shield__rankInitials--maxRank[_ngcontent-%COMP%]{transform:translate(-50%, -68%)}.modeActionsArea[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 3);padding-right:calc(var(--vw) * .9);display:flex;justify-content:space-between;align-items:flex-start}.cardHeader__subtypeRibbon[_ngcontent-%COMP%]{position:relative;z-index:1;margin-bottom:calc(var(--vh) * .5)}.cardHeader__subtypeRibbon__image[_ngcontent-%COMP%]{position:absolute;width:calc(var(--vw) * 6.5)}.cardHeader__subtypeRibbon__label[_ngcontent-%COMP%]{position:absolute;right:calc(var(--vw) * -.4);top:3px;font-size:calc(var(--vw) * .6);color:#fff;font-weight:700}.cardHeader__subtypeRibbon__live[_ngcontent-%COMP%]{width:calc(var(--vw) * .2);height:calc(var(--vw) * .2);background-color:#fff;border-radius:50%;top:calc(var(--vw) * .5);left:calc(var(--vw) * .3);position:relative}.cardHeader__subtypeRibbon__live[_ngcontent-%COMP%]:after {content:"";display:block;width:calc(var(--vw) * .2);height:calc(var(--vw) * .2);background-color:#fff;animation:ping .8s ease-in-out infinite both;position:absolute;border-radius:50%}@keyframes ping {0% {transform:scale(1);opacity:1}80% {transform:scale(2.6);opacity:.3}to {transform:scale(3.2);opacity:0}}.gameCardDecks[_ngcontent-%COMP%]{display:flex;flex-flow:column nowrap;justify-content:space-between;width:calc(var(--vw) * 6.5);margin-top:calc(var(--vh) * -1)}.gameCardDecks__deck[_ngcontent-%COMP%] .emptyDeckContainer {margin-top:calc(var(--vh) * 1)}.gameCardDecks__deck[_ngcontent-%COMP%] .emptyDeckContainer .emptyDeckContainer__inner:before {margin-bottom:calc(var(--vh) * .5);font-size:calc(var(--vh) * 2);font-family:gu-cons;font-feature-settings:"liga" 1, normal;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;vertical-align:middle;letter-spacing:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"add_item";line-height:1;display:block;color:inherit}.modeActionsArea__ctas[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.5);display:flex;flex-flow:column nowrap;align-items:center}.modeActionsArea__ctas.hidden[_ngcontent-%COMP%]{opacity:0;user-select:none;pointer-events:none}.modeActionsArea__ctas--noMargin[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * -.5)}.vsText[_ngcontent-%COMP%]{line-height:.9;margin:auto;margin-top:calc(var(--vh) * .9);margin-bottom:calc(var(--vh) * .9);font-weight:600;color:#f6f6f6}.progressArea[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 3);padding-left:calc(var(--vw) * .9);padding-right:calc(var(--vw) * .9);display:flex;flex-flow:row wrap;align-items:flex-end;color:#f6f6f6;position:relative}.progressArea__leftRank[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * .15);font-weight:700}.progressArea__rightRank[_ngcontent-%COMP%]{padding-right:calc(var(--vw) * .15);color:#FBC02D;margin-left:auto;font-weight:bold;}.progressArea__bar[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .4);width:100%}.progress-title[_ngcontent-%COMP%]{height:calc(var(--vh) * .92)}.tempLockedConsumablePlaceholder[_ngcontent-%COMP%]{margin-left:calc(var(--vw) * -.5);position:relative;border:calc(var(--vh) * .25) dashed rgba(224, 197, 143, .3);background-color:#58411326;border-radius:calc(var(--vh) * .4);display:flex}.tempLockedConsumablePlaceholder__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 4);color:#e0c58f4d;line-height:1;margin:auto}.tempQuestsPlaceholder[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * .75);padding-right:calc(var(--vw) * .75);display:flex;justify-content:space-between;margin-top:auto;position:relative}.tempQuestsPlaceholder__quest[_ngcontent-%COMP%]{width:calc(var(--vw) * 4.79);height:calc(var(--vw) * 4.79);border-radius:50%;border:calc(var(--vh) * .25) dashed rgba(224, 197, 143, .3);background-color:#58411326;display:flex}.tempQuestsPlaceholder__quest__icon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 3);color:#e0c58f4d;line-height:1;margin:auto}.subtype__description[_ngcontent-%COMP%]{cursor:pointer;border-width:2px;border-style:solid;border-image-source:linear-gradient(to bottom, #fffdf0 0%, #fbebc1 14%, #e6c675 26%, #f6df6e 41%, #b27e18 59%, #deab61 73%, #a67b4b 85%, #664320 100%);border-image-slice:1;text-align:center;margin:calc(var(--vh) * 1) auto 0;padding:calc(var(--vh) * 1) 0;width:90%;color:#fff;background-color:#182531;font-weight:700;position:relative}.subtype__description__readModeLink[_ngcontent-%COMP%]{background:linear-gradient(to bottom, #fff2d8 0%, #ebc98b 50%, #c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;cursor:pointer}.loadout[_ngcontent-%COMP%]{height:calc(var(--vh) * 14);width:calc(var(--vw) * 5.4)}.fluxProgress[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * .75);padding-right:calc(var(--vw) * .75);height:calc(var(--vh) * 14);display:flex;margin-top:auto;position:relative;cursor:pointer}.fluxProgress[_ngcontent-%COMP%] app-flux-progress-box[_ngcontent-%COMP%]{padding-left:calc(var(--vh) * 4);padding-right:calc(var(--vh) * 4)}.directChallenge[_ngcontent-%COMP%]{display:flex;flex-direction:column;margin-top:32px;position:relative}.directChallenge__heading[_ngcontent-%COMP%]{display:flex}.directChallenge__heading__icon[_ngcontent-%COMP%]{margin-left:8px;cursor:pointer;display:flex;text-align:center}.directChallenge__form[_ngcontent-%COMP%]{display:flex;flex-flow:column nowrap;align-self:center;width:100%}.directChallenge__form__field[_ngcontent-%COMP%]{display:flex;align-items:center;margin:8px 0}.directChallenge__form__field__input[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 1.48);padding-left:calc(var(--vw) * .83);padding-right:calc(var(--vw) * .83);padding-top:calc(var(--vh) * 1.29);padding-bottom:calc(var(--vh) * 1.29);margin-bottom:0;background:#182531;color:#f6f6f6;border:calc(var(--vh) * .15) solid #0f1b27;border-radius:calc(var(--vh) * .4);margin-top:0;width:100%;padding-right:20px;font-size:16px}.directChallenge__form__field__input[_ngcontent-%COMP%]::-webkit-input-placeholder {color:#fff}.directChallenge__form__field__input[_ngcontent-%COMP%]:disabled {border-color:#979797;color:#979797}.directChallenge__form__field__input--invalid[_ngcontent-%COMP%]{border-color:#ff8b01}.directChallenge__form__field__input--valid[_ngcontent-%COMP%]{border-color:#8be1e0}.directChallenge__form__field__icon[_ngcontent-%COMP%]{position:absolute;right:12px;cursor:pointer}.directChallenge__form__inputHint[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * .6);text-shadow:0 1px 1px rgba(0, 0, 0, .3)}.sealedModeCard[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2.5)}.tutorialCard__bulletPoints[_ngcontent-%COMP%]{margin:10px;z-index:1}.bullet[_ngcontent-%COMP%]{padding:4px;border-radius:2px;display:flex;transform:rotate(-45deg);margin-right:10px}.tutorialCard__bulletPoint[_ngcontent-%COMP%]{display:flex;align-items:center;margin:10px 0}.tutorial__freeStuff[_ngcontent-%COMP%]{position:relative}.tutorial__freeStuff__bgImage[_ngcontent-%COMP%]{width:100%;display:block;margin-top:35px}.tutorial__freeStuff__cardImage[_ngcontent-%COMP%]{position:absolute;top:-3vh;left:0px;height:6vw}.tutorial__freeStuff__text[_ngcontent-%COMP%]{position:absolute;top:40%;left:20%}.tutorial__freeStuff__tooltip[_ngcontent-%COMP%]{display:inline;text-align:center}']
             }), o
         })();
-        const wd = ["otherModesContainer"];
+        const bd = ["otherModesContainer"];
 
-        function xd(o, r) {
+        function wd(o, r) {
             if (1 & o && e._UZ(0, "app-game-mode-card", 4, 5), 2 & o) {
                 const t = e.oxw();
                 e.Q6J("gameMode", t.gameModes[0])("allDecks", t.allDecks)("isPrimaryCard", !0)("accountProperties", t.accountProperties)
             }
         }
 
-        function Md(o, r) {
+        function xd(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-game-mode-card", 7), e.NdJ("click", function (i) {
@@ -9193,17 +9259,17 @@
             }
         }
 
-        function yd(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, Md, 1, 8, "app-game-mode-card", 6), e.BQk()), 2 & o) {
+        function Md(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, xd, 1, 8, "app-game-mode-card", 6), e.BQk()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(1), e.Q6J("ngForOf", t.otherCompModes)
             }
         }
 
-        const kd = function (o) {
+        const yd = function (o) {
             return {otherModes__disable: o}
         };
-        let Od = (() => {
+        let kd = (() => {
             class o {
                 constructor(t, n, i, a, s, c) {
                     this.resizeService = t, this.guGameService = n, this.akumaService = i, this.audioService = a, this.authService = s, this.userService = c, this.maxZIndexValue = 9, this.unsubscribe = new M.xQ, this.userWallets = [], t.viewPortUnits$.pipe((0, u.R)(this.unsubscribe), (0, b.b)(({vw: d}) => this.vw = 2.5 * d)).subscribe()
@@ -9302,12 +9368,12 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(K._), e.Y36(ee.xV), e.Y36(_.jt), e.Y36(h.pk), e.Y36(h.mI), e.Y36(ce.MZ))
+                return new (t || o)(e.Y36(K._), e.Y36(ee.xV), e.Y36(_.jt), e.Y36(f.pk), e.Y36(f.mI), e.Y36(ce.MZ))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-game-mode-switcher"]],
                 viewQuery: function (t, n) {
-                    if (1 & t && (e.Gf(Un, 5, e.SBq), e.Gf(wd, 5)), 2 & t) {
+                    if (1 & t && (e.Gf(Un, 5, e.SBq), e.Gf(bd, 5)), 2 & t) {
                         let i;
                         e.iGM(i = e.CRH()) && (n.primaryModeCard = i.first), e.iGM(i = e.CRH()) && (n.otherModesContainer = i.first)
                     }
@@ -9318,7 +9384,7 @@
                 vars: 5,
                 consts: [["class", "primaryMode", 3, "gameMode", "allDecks", "isPrimaryCard", "accountProperties", 4, "ngIf"], [1, "otherModes", 3, "ngClass"], ["otherModesContainer", ""], [4, "ngIf"], [1, "primaryMode", 3, "gameMode", "allDecks", "isPrimaryCard", "accountProperties"], ["primaryModeCard", ""], ["class", "otherModes__mode", 3, "gameMode", "allDecks", "accountProperties", "isPrimaryCard", "otherModes__mode--fadedOut", "click", 4, "ngFor", "ngForOf"], [1, "otherModes__mode", 3, "gameMode", "allDecks", "accountProperties", "isPrimaryCard", "click"]],
                 template: function (t, n) {
-                    1 & t && (e.YNc(0, xd, 2, 4, "app-game-mode-card", 0), e.TgZ(1, "div", 1, 2), e.YNc(3, yd, 2, 1, "ng-container", 3), e.qZA()), 2 & t && (e.Q6J("ngIf", n.gameModes[0]), e.xp6(1), e.Q6J("ngClass", e.VKq(3, kd, n.gameModes[0].lock)), e.xp6(2), e.Q6J("ngIf", n.otherCompModes))
+                    1 & t && (e.YNc(0, wd, 2, 4, "app-game-mode-card", 0), e.TgZ(1, "div", 1, 2), e.YNc(3, Md, 2, 1, "ng-container", 3), e.qZA()), 2 & t && (e.Q6J("ngIf", n.gameModes[0]), e.xp6(1), e.Q6J("ngClass", e.VKq(3, yd, n.gameModes[0].lock)), e.xp6(2), e.Q6J("ngIf", n.otherCompModes))
                 },
                 directives: [l.O5, Un, l.mk, l.sg],
                 styles: ['[_nghost-%COMP%]{display:flex}.primaryMode[_ngcontent-%COMP%]{width:calc(var(--vw) * 26.56);z-index:10}.otherModes[_ngcontent-%COMP%]{flex:1;margin-left:calc(var(--vw) * 1.7);position:relative}.otherModes__disable[_ngcontent-%COMP%]{pointer-events:none;opacity:.6}.otherModes__mode[_ngcontent-%COMP%]{position:absolute;top:0;left:0;width:calc(var(--vw) * 26.56)}.otherModes__mode[_ngcontent-%COMP%]:not([data-stack-order-index="0"]) {cursor:pointer}.otherModes__mode[_ngcontent-%COMP%]:not([data-stack-order-index="0"]) .modeActionsArea {user-select:none;pointer-events:none}.otherModes__mode[_ngcontent-%COMP%]:not([data-stack-order-index="0"]):hover .backgroundImagery {opacity:.6;}.otherModes__mode[_ngcontent-%COMP%]:not([data-stack-order-index="0"]):hover.darkBackground .backgroundImagery {opacity:.25;}']
@@ -9329,7 +9395,7 @@
             var o
         })();
 
-        class Pd {
+        class Od {
             constructor(r, t, n, i, a, s, c) {
                 this.title = r, this.description = t, this.imageURL = n, this.linkURL = i, this.startTimestamp = Date.parse(a), this.endTimestamp = Date.parse(s), this.priority = c
             }
@@ -9408,7 +9474,7 @@
                 }
 
                 convertToNewsItems(t) {
-                    return t.map(n => new Pd(n.title, n.description, n.image_url, n.link_url, n.start_timestamp, n.end_timestamp, n.priority))
+                    return t.map(n => new Od(n.title, n.description, n.image_url, n.link_url, n.start_timestamp, n.end_timestamp, n.priority))
                 }
             }
 
@@ -9417,11 +9483,11 @@
             }, o.\u0275prov = e.Yz7({token: o, factory: o.\u0275fac}), o
         })();
 
-        function Sd(o, r) {
+        function Pd(o, r) {
             1 & o && (e.TgZ(0, "figure", 2), e._UZ(1, "img", 3), e.TgZ(2, "figcaption", 4)(3, "h6", 5), e._uU(4, "Marketplace Overlay"), e.qZA(), e.TgZ(5, "div", 6), e._uU(6, " Want to sell your content in your stream? "), e.qZA()(), e._UZ(7, "gu-primary-hex-button", 7), e.qZA())
         }
 
-        function Td(o, r) {
+        function Sd(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "figure", 2), e._UZ(1, "img", 8), e.TgZ(2, "figcaption", 4)(3, "h6", 5), e._uU(4), e.qZA(), e.TgZ(5, "div", 6), e._uU(6), e.qZA()(), e.TgZ(7, "gu-primary-hex-button", 9), e.NdJ("click", function () {
@@ -9436,14 +9502,14 @@
             }
         }
 
-        function Id(o, r) {
-            if (1 & o && (e.ynx(0), e.YNc(1, Td, 8, 3, "figure", 0), e.BQk()), 2 & o) {
+        function Td(o, r) {
+            if (1 & o && (e.ynx(0), e.YNc(1, Sd, 8, 3, "figure", 0), e.BQk()), 2 & o) {
                 const t = r.$implicit, n = e.oxw();
                 e.xp6(1), e.Q6J("ngIf", n.canDisplay(t))
             }
         }
 
-        let Ad = (() => {
+        let Id = (() => {
             class o {
                 constructor(t) {
                     this.akumaService = t
@@ -9477,7 +9543,7 @@
                 vars: 2,
                 consts: [["class", "newsItem", 4, "ngIf"], [4, "ngFor", "ngForOf"], [1, "newsItem"], ["src", "https://images.godsunchained.com/marketing/Hyperion-1024x533.jpeg", 1, "newsItem__image"], [1, "newsItem__caption"], [1, "newsItem__caption__heading"], [1, "newsItem__caption__subHeading"], ["text", "MORE", "kind", "secondary", 1, "newsItem__linkButton"], [1, "newsItem__image", 3, "src"], ["text", "MORE", "kind", "secondary", 1, "newsItem__linkButton", 3, "click"]],
                 template: function (t, n) {
-                    1 & t && (e.YNc(0, Sd, 8, 0, "figure", 0), e.YNc(1, Id, 2, 1, "ng-container", 1)), 2 & t && (e.Q6J("ngIf", (null == n.newsItems ? null : n.newsItems.length) > 0 && n.isUserStreamer()), e.xp6(1), e.Q6J("ngForOf", n.newsItems))
+                    1 & t && (e.YNc(0, Pd, 8, 0, "figure", 0), e.YNc(1, Td, 2, 1, "ng-container", 1)), 2 & t && (e.Q6J("ngIf", (null == n.newsItems ? null : n.newsItems.length) > 0 && n.isUserStreamer()), e.xp6(1), e.Q6J("ngForOf", n.newsItems))
                 },
                 directives: [l.O5, l.sg],
                 styles: ['h1[_ngcontent-%COMP%],h2[_ngcontent-%COMP%],h3[_ngcontent-%COMP%],h4[_ngcontent-%COMP%],h5[_ngcontent-%COMP%],h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%],label[_ngcontent-%COMP%],a[_ngcontent-%COMP%],div[_ngcontent-%COMP%],input[_ngcontent-%COMP%],button[_ngcontent-%COMP%],p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.newsItem__caption__heading[_ngcontent-%COMP%],h1[_ngcontent-%COMP%],h2[_ngcontent-%COMP%],h3[_ngcontent-%COMP%],h4[_ngcontent-%COMP%],h5[_ngcontent-%COMP%],h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.newsItem__caption__subHeading[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.newsItem__caption__heading[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.8);line-height:1.4}.newsItem__caption__subHeading[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.6)}[_nghost-%COMP%]{padding-left:calc(var(--vw) * 1);padding-right:calc(var(--vw) * 1.5);display:flex;flex-flow:column nowrap;justify-content:flex-start;height:100%;overflow-y:auto}.newsItem[_ngcontent-%COMP%]{margin:0;border-radius:4px;overflow:hidden;margin-left:calc(var(--vw) * -1);margin-right:calc(var(--vw) * -1);height:calc(var(--vh) * 23);margin-bottom:8px;flex:0 0 auto;position:relative;background:var(--gu-blue-dark);}.newsItem[_ngcontent-%COMP%]:after {content:"";position:absolute;top:0;bottom:0;left:0;right:0;pointer-events:none;user-select:none;z-index:1}.newsItem[_ngcontent-%COMP%]:hover .newsItem__image[_ngcontent-%COMP%]{opacity:.7}.newsItem__image[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * -1);margin-bottom:calc(var(--vh) * -1);width:100%;height:calc(100% + var(--vh) * 2);display:block;object-fit:cover;object-position:center;opacity:.35;transition:opacity .15s ease-in-out;z-index:0}.newsItem__caption[_ngcontent-%COMP%]{position:absolute;top:50%;transform:translateY(-50%);line-height:1;left:calc(var(--vw) * 1.77);z-index:2}.newsItem__cardpacks[_ngcontent-%COMP%]{position:absolute;top:calc(var(--vh) * 13)}.newsItem__cardpacks[_ngcontent-%COMP%] img[_ngcontent-%COMP%]{width:calc(var(--vw) * 6);margin-left:calc(var(--vw) * 1)}.newsItem__cardpacks[_ngcontent-%COMP%] img.godpack[_ngcontent-%COMP%]{width:calc(var(--vw) * 4)}.newsItem__caption__heading[_ngcontent-%COMP%]{color:var(--gu-gray);}.newsItem__caption__subHeading[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * .05);color:var(--gu-gray);}.newsItem__linkButton[_ngcontent-%COMP%]{top:50%;transform:translateY(-50%);min-width:calc(var(--vw) * 7.2);position:absolute;right:calc(var(--vw) * 1.77);cursor:pointer;z-index:2}']
@@ -9518,36 +9584,36 @@
                 template: function (t, n) {
                     1 & t && e._UZ(0, "app-news-list", 0), 2 & t && e.Q6J("userType", n.userType)("newsItems", n.newsItems)
                 },
-                directives: [Ad],
+                directives: [Id],
                 styles: ["[_nghost-%COMP%]{display:block}"]
             }), o
         })();
-        const Fd = ["refreshSection"], Dd = function (o) {
+        const Ad = ["refreshSection"], Fd = function (o) {
             return {"gameModes--refreshing": o}
         };
 
-        function Gd(o, r) {
+        function Dd(o, r) {
             if (1 & o && e._UZ(0, "app-game-mode-switcher", 7), 2 & o) {
                 const t = e.oxw(2);
-                e.Q6J("gameModes", t.allGameModes)("allDecks", t.allDecks)("ngClass", e.VKq(3, Dd, t.fadeGameModeSwitcher))
+                e.Q6J("gameModes", t.allGameModes)("allDecks", t.allDecks)("ngClass", e.VKq(3, Fd, t.fadeGameModeSwitcher))
             }
         }
 
-        function Zd(o, r) {
-            if (1 & o && (e.ynx(0), e.TgZ(1, "div", 1), e._UZ(2, "app-player-stats", 2), e.YNc(3, Gd, 1, 5, "app-game-mode-switcher", 3), e.qZA(), e.TgZ(4, "h2", 4, 5), e._uU(6), e.qZA(), e._UZ(7, "app-news-provider", 6), e.BQk()), 2 & o) {
+        function Gd(o, r) {
+            if (1 & o && (e.ynx(0), e.TgZ(1, "div", 1), e._UZ(2, "app-player-stats", 2), e.YNc(3, Dd, 1, 5, "app-game-mode-switcher", 3), e.qZA(), e.TgZ(4, "h2", 4, 5), e._uU(6), e.qZA(), e._UZ(7, "app-news-provider", 6), e.BQk()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(3), e.Q6J("ngIf", t.allGameModes && !!t.allGameModes.length), e.xp6(1), e.Q6J("hidden", !t.refreshing), e.xp6(2), e.hij(" ", t.refreshMsg, " ")
             }
         }
 
-        let Bd = (() => {
+        let Zd = (() => {
             class o {
                 constructor(t, n, i, a, s, c, d, p, w, v, k) {
                     this.gameService = t, this.decksService = n, this.guUserService = i, this.progressionService = a, this.modalService = s, this.sealedService = c, this.cerberusModalService = d, this.cardsService = p, this.packService = w, this.loadoutService = v, this.storageService = k, this.unsubscribe = new M.xQ, this.loaded = !1, this.refreshing = !1, this.refreshMsg = "REFRESHING...", this.fadeGameModeSwitcher = !1, this.fetchDecks()
                 }
 
                 notifyUser() {
-                    this.storageService.get(["_USER_NOTIFIED"]) || this.cerberusModalService.open(Is, {centered: !0})
+                    this.storageService.get(["_USER_NOTIFIED"]) || this.cerberusModalService.open(Ts, {centered: !0})
                 }
 
                 ngOnInit() {
@@ -9563,8 +9629,8 @@
                         this.cardsService.fetchInventory(), this.packService.fetchUnopenedPacks(), this.loadoutService.fetchData(), this.modalService.createModal(yn, {rewards: t}, {
                             blurredBackground: !0,
                             canCloseFromOutside: !1,
-                            position: m.e1.Center,
-                            size: m.Cg.Fullscreen
+                            position: h.e1.Center,
+                            size: h.Cg.Fullscreen
                         }), this.sealedService.fetchSealed()
                     })
                 }
@@ -9621,12 +9687,12 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(ee.xV), e.Y36(te.D), e.Y36(ce.MZ), e.Y36(j.$z), e.Y36(I.Z), e.Y36(X.H), e.Y36(L.Qz), e.Y36(_.dK), e.Y36(Oe.F), e.Y36(xe), e.Y36(h.qy))
+                return new (t || o)(e.Y36(ee.xV), e.Y36(te.D), e.Y36(ce.MZ), e.Y36(j.$z), e.Y36(I.Z), e.Y36(X.H), e.Y36(L.Qz), e.Y36(_.dK), e.Y36(Oe.F), e.Y36(xe), e.Y36(f.qy))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-game-modes"]],
                 viewQuery: function (t, n) {
-                    if (1 & t && e.Gf(Fd, 7), 2 & t) {
+                    if (1 & t && e.Gf(Ad, 7), 2 & t) {
                         let i;
                         e.iGM(i = e.CRH()) && (n.refreshSection = i.first)
                     }
@@ -9635,25 +9701,25 @@
                 vars: 1,
                 consts: [[4, "ngIf"], [1, "columnLeft"], [1, "playerStats"], ["class", "gameModes", 3, "gameModes", "allDecks", "ngClass", 4, "ngIf"], [1, "refreshSection", 3, "hidden"], ["refreshSection", ""], [1, "columnRight"], [1, "gameModes", 3, "gameModes", "allDecks", "ngClass"]],
                 template: function (t, n) {
-                    1 & t && e.YNc(0, Zd, 8, 3, "ng-container", 0), 2 & t && e.Q6J("ngIf", n.loaded)
+                    1 & t && e.YNc(0, Gd, 8, 3, "ng-container", 0), 2 & t && e.Q6J("ngIf", n.loaded)
                 },
-                directives: [l.O5, On, Od, l.mk, Nn],
+                directives: [l.O5, On, kd, l.mk, Nn],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.refreshSection[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.refreshSection[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.22);line-height:1.4}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{height:calc(calc(var(--vh) * 100) - 28px - 80px);display:flex;justify-content:space-between;padding:calc(var(--vh) * 2) calc(var(--vw) * 3) 0}.columnLeft[_ngcontent-%COMP%]{width:calc(var(--vw) * 62.5)}.columnRight[_ngcontent-%COMP%]{width:calc(var(--vw) * 28)}.playerStats[_ngcontent-%COMP%]{height:calc(var(--vh) * 23)}.gameModes[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2.5);height:calc(var(--vh) * 55);transition:all .25s ease-in}.gameModes--refreshing[_ngcontent-%COMP%]{opacity:.5;filter:brightness(.5);user-select:none;pointer-events:none}.refreshSection[_ngcontent-%COMP%]{opacity:0;position:absolute;left:calc(var(--vw) * 28.5);top:calc(var(--vh) * 60)}.demo[_ngcontent-%COMP%]{width:100%;overflow:auto;margin-bottom:calc(var(--vh) * 5)}.cardsListing--eight[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(8,1fr);align-items:start;grid-auto-rows:min-content}.cardsListing--four[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(4,1fr);align-items:start;grid-auto-rows:min-content}.cardsListing--ten[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(10,1fr);align-items:start;grid-auto-rows:min-content}.cardsListing--five[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(5,1fr);align-items:start;grid-auto-rows:min-content}.cardsListing--moo[_ngcontent-%COMP%]{width:20vw}"]
             }), o
         })();
 
-        function Ld(o, r) {
+        function Bd(o, r) {
             1 & o && (e.TgZ(0, "div", 3), e._UZ(1, "app-rectangular-spinner", 4), e.qZA())
         }
 
-        function Ud(o, r) {
+        function Ld(o, r) {
             if (1 & o && e._UZ(0, "app-cards-list", 5), 2 & o) {
                 const t = e.oxw();
                 e.Q6J("protoCards", t.protoCards)("inventoryCards", t.inventoryCards)("title", "Cards")("sound", !1)
             }
         }
 
-        let Ed = (() => {
+        let Ud = (() => {
             class o {
                 constructor(t, n) {
                     this.cardsService = t, this.modalService = n, this.protoCards = [], this.unsubscribe = new M.xQ, this.close = () => {
@@ -9685,18 +9751,18 @@
                 vars: 3,
                 consts: [[3, "closeButtonClickFn"], ["class", "loadingContainer", 4, "ngIf"], ["class", "card-selection", 3, "protoCards", "inventoryCards", "title", "sound", 4, "ngIf"], [1, "loadingContainer"], [1, "loadingContainer__spinner"], [1, "card-selection", 3, "protoCards", "inventoryCards", "title", "sound"]],
                 template: function (t, n) {
-                    1 & t && (e._UZ(0, "app-modal-sidebar", 0), e.YNc(1, Ld, 2, 0, "div", 1), e.YNc(2, Ud, 1, 4, "app-cards-list", 2)), 2 & t && (e.Q6J("closeButtonClickFn", n.close), e.xp6(1), e.Q6J("ngIf", !n.protoCards.length), e.xp6(1), e.Q6J("ngIf", n.protoCards.length))
+                    1 & t && (e._UZ(0, "app-modal-sidebar", 0), e.YNc(1, Bd, 2, 0, "div", 1), e.YNc(2, Ld, 1, 4, "app-cards-list", 2)), 2 & t && (e.Q6J("closeButtonClickFn", n.close), e.xp6(1), e.Q6J("ngIf", !n.protoCards.length), e.xp6(1), e.Q6J("ngIf", n.protoCards.length))
                 },
                 directives: [ye, l.O5, ot, St],
                 styles: ["[_nghost-%COMP%]{display:block;height:100%;padding:0 calc(var(--vw) * 4.16);height:calc(calc(var(--vh) * 100) - 28px - 80px);padding-top:calc(var(--vh) * 4)}[_nghost-%COMP%]     app-filter-sort-bar.sectionHeader__filterArea{right:0}.loadingContainer[_ngcontent-%COMP%]{display:flex;height:100%}.loadingContainer__spinner[_ngcontent-%COMP%]{margin:auto}"]
             }), o
         })();
 
-        function Nd(o, r) {
+        function Ed(o, r) {
             1 & o && e._UZ(0, "app-rectangular-spinner", 2)
         }
 
-        function Rd(o, r) {
+        function Nd(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "app-card2", 23), e.NdJ("click", function () {
@@ -9709,34 +9775,34 @@
             }
         }
 
-        function Qd(o, r) {
+        function Rd(o, r) {
             1 & o && (e.TgZ(0, "div", 18), e._UZ(1, "img", 24), e.TgZ(2, "h1", 11), e._uU(3, "Icons"), e.qZA(), e._UZ(4, "gu-primary-hex-button", 20), e.qZA())
         }
 
-        const qd = function (o) {
+        const Qd = function (o) {
             return {label: "Total", icon: "game_wins", value: o}
-        }, Hd = function (o) {
+        }, qd = function (o) {
             return [o]
         };
 
-        function Yd(o, r) {
+        function Hd(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.ynx(0), e.TgZ(1, "section", 3)(2, "div", 4), e._UZ(3, "app-player-stats", 5), e.qZA(), e.TgZ(4, "div", 6)(5, "div", 7), e.NdJ("click", function () {
                     return e.CHM(t), e.oxw().openInventoryCardsModal()
-                }), e._UZ(6, "img", 8), e.TgZ(7, "div", 9), e.YNc(8, Rd, 1, 4, "app-card2", 10), e.qZA(), e.TgZ(9, "h1", 11), e._uU(10, "Cards"), e.qZA(), e._UZ(11, "gu-primary-hex-button", 12), e.qZA(), e.TgZ(12, "div", 13), e._UZ(13, "img", 14), e.TgZ(14, "h1", 11), e._uU(15, "Boards"), e.qZA(), e.TgZ(16, "gu-primary-hex-button", 15), e.NdJ("click", function () {
+                }), e._UZ(6, "img", 8), e.TgZ(7, "div", 9), e.YNc(8, Nd, 1, 4, "app-card2", 10), e.qZA(), e.TgZ(9, "h1", 11), e._uU(10, "Cards"), e.qZA(), e._UZ(11, "gu-primary-hex-button", 12), e.qZA(), e.TgZ(12, "div", 13), e._UZ(13, "img", 14), e.TgZ(14, "h1", 11), e._uU(15, "Boards"), e.qZA(), e.TgZ(16, "gu-primary-hex-button", 15), e.NdJ("click", function () {
                     return e.CHM(t), e.oxw().openMyBoardsModal()
                 }), e.qZA()(), e.TgZ(17, "div", 13), e._UZ(18, "img", 16), e.TgZ(19, "h1", 11), e._uU(20, "Trinkets"), e.qZA(), e.TgZ(21, "gu-primary-hex-button", 17), e.NdJ("click", function () {
                     return e.CHM(t), e.oxw().openMyBoardsModal()
-                }), e.qZA()(), e.TgZ(22, "div", 18), e._UZ(23, "img", 19), e.TgZ(24, "h1", 11), e._uU(25, "Emotes"), e.qZA(), e._UZ(26, "gu-primary-hex-button", 20), e.qZA(), e.YNc(27, Qd, 5, 0, "div", 21), e.qZA()(), e._UZ(28, "app-news-provider", 22), e.BQk()
+                }), e.qZA()(), e.TgZ(22, "div", 18), e._UZ(23, "img", 19), e.TgZ(24, "h1", 11), e._uU(25, "Emotes"), e.qZA(), e._UZ(26, "gu-primary-hex-button", 20), e.qZA(), e.YNc(27, Rd, 5, 0, "div", 21), e.qZA()(), e._UZ(28, "app-news-provider", 22), e.BQk()
             }
             if (2 & o) {
                 const t = e.oxw();
-                e.xp6(3), e.MGl("leftLabel", "Collection Level ", t.userCollectionLevel, "")("rightLabel", "Level ", t.userCollectionLevel + 1, ""), e.Q6J("progressPercent", t.collectionProgress)("statDisplays", e.VKq(8, Hd, e.VKq(6, qd, t.user.won_matches))), e.xp6(5), e.Q6J("ngForOf", t.topCards), e.xp6(19), e.Q6J("ngIf", !1)
+                e.xp6(3), e.MGl("leftLabel", "Collection Level ", t.userCollectionLevel, "")("rightLabel", "Level ", t.userCollectionLevel + 1, ""), e.Q6J("progressPercent", t.collectionProgress)("statDisplays", e.VKq(8, qd, e.VKq(6, Qd, t.user.won_matches))), e.xp6(5), e.Q6J("ngForOf", t.topCards), e.xp6(19), e.Q6J("ngIf", !1)
             }
         }
 
-        let Jd = (() => {
+        let Yd = (() => {
             class o {
                 constructor(t, n, i, a, s, c, d) {
                     this.guUserService = t, this.authService = n, this.progressionService = i, this.cardsService = a, this.utils = s, this.modalService = c, this.audioService = d, this.showProgressBar = !1, this.loading = !1, this.accountLoaded = !1, this.topCards = [], this.unsubscribe = new M.xQ, this.inGame = !1, this.collectionProgress = 50, this.userCollectionLevel = 1
@@ -9763,11 +9829,11 @@
                 }
 
                 openInventoryCardsModal() {
-                    this.audioService.transitionWorkshop.play(), this.modalService.createModal(Ed, {modalHosted: !0}, {
+                    this.audioService.transitionWorkshop.play(), this.modalService.createModal(Ud, {modalHosted: !0}, {
                         blurredBackground: !0,
                         canCloseFromOutside: !0,
-                        position: m.e1.Center,
-                        size: m.Cg.Workarea
+                        position: h.e1.Center,
+                        size: h.Cg.Workarea
                     })
                 }
 
@@ -9776,21 +9842,21 @@
                 }
 
                 calcTopCards(t, n) {
-                    this.topCards = [];
+                    this.topCards = this.utils.calcTopCards(t, n, 5)
                 }
 
                 openMyBoardsModal() {
                     this.audioService.transitionWorkshop.play(), this.modalService.createModal(Gn, {modalHosted: !0}, {
                         blurredBackground: !0,
                         canCloseFromOutside: !0,
-                        position: m.e1.Center,
-                        size: m.Cg.Workarea
+                        position: h.e1.Center,
+                        size: h.Cg.Workarea
                     })
                 }
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(ce.MZ), e.Y36(h.mI), e.Y36(j.$z), e.Y36(_.dK), e.Y36(Ge.F), e.Y36(I.Z), e.Y36(h.pk))
+                return new (t || o)(e.Y36(ce.MZ), e.Y36(f.mI), e.Y36(j.$z), e.Y36(_.dK), e.Y36(Ge.F), e.Y36(I.Z), e.Y36(f.pk))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-inventory"]],
@@ -9799,32 +9865,32 @@
                 vars: 2,
                 consts: [["class", "loadingSpinner", 4, "ngIf"], [4, "ngIf"], [1, "loadingSpinner"], [1, "mainContentColumn"], [1, "mainContentColumn__playerRow"], [1, "mainContentColumn__playerRow__playerStats", 3, "leftLabel", "rightLabel", "progressPercent", "statDisplays"], [1, "mainContentColumn__possessionGroups"], [1, "possessionGroup", 3, "click"], ["src", "/gu-assets/images/art/sorcerer-breaking-chains.webp", "alt", "", 1, "possessionGroup__background"], [1, "possessionGroup__items"], ["class", "possessionGroup__items__item", "appSingleCardHoverFX", "", 3, "protoId", "quality", "columnsCount", "cardIndex", "click", 4, "ngFor", "ngForOf"], [1, "possessionGroup__title"], ["text", "MORE CARDS", "data-test-id", "moreCardsButton", 1, "possessionGroup__cta"], [1, "possessionGroup"], ["src", "/gu-assets/images/art/game-setting-outside-temple.webp", "alt", "", 1, "possessionGroup__background"], ["text", "MORE BOARDS", 1, "possessionGroup__cta", 3, "click"], ["src", "/gu-assets/images/art/crypto-kitties-vs-gods-unchained.webp", "alt", "", 1, "possessionGroup__background"], ["text", "MORE TRINKETS", 1, "possessionGroup__cta", 3, "click"], [1, "possessionGroup", "possessionGroup--disabled"], ["src", "/gu-assets/images/art/agrodor-protector.webp", "alt", "", 1, "possessionGroup__background"], ["text", "COMING SOON", 1, "possessionGroup__cta"], ["class", "possessionGroup possessionGroup--disabled", 4, "ngIf"], [1, "newsListingColumn"], ["appSingleCardHoverFX", "", 1, "possessionGroup__items__item", 3, "protoId", "quality", "columnsCount", "cardIndex", "click"], ["src", "/gu-assets/images/art/rune-djinn.webp", "alt", "", 1, "possessionGroup__background"]],
                 template: function (t, n) {
-                    1 & t && (e.YNc(0, Nd, 1, 0, "app-rectangular-spinner", 0), e.YNc(1, Yd, 29, 10, "ng-container", 1)), 2 & t && (e.Q6J("ngIf", n.loading), e.xp6(1), e.Q6J("ngIf", !n.inGame && n.user))
+                    1 & t && (e.YNc(0, Ed, 1, 0, "app-rectangular-spinner", 0), e.YNc(1, Hd, 29, 10, "ng-container", 1)), 2 & t && (e.Q6J("ngIf", n.loading), e.xp6(1), e.Q6J("ngIf", !n.inGame && n.user))
                 },
                 directives: [l.O5, ot, On, l.sg, Y, yt, Nn],
                 styles: ['h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.possessionGroup__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.mainContentColumn__playerRow__recentAquisitions__subheading[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.possessionGroup__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.mainContentColumn__playerRow__recentAquisitions__subheading[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{height:calc(calc(var(--vh) * 100) - 28px - 80px);display:flex;padding:calc(var(--vh) * 2) calc(var(--vw) * 4.16) 0 calc(var(--vw) * 4.16);justify-content:space-between}.loadingSpinner[_ngcontent-%COMP%]{margin:auto}.mainContentColumn[_ngcontent-%COMP%]{width:calc(var(--vw) * 62.5)}.mainContentColumn__playerRow[_ngcontent-%COMP%]{display:flex}.mainContentColumn__playerRow__playerStats[_ngcontent-%COMP%]{width:calc(var(--vw) * 35);margin-right:calc(var(--vw) * 2.08)}.mainContentColumn__playerRow__recentAquisitions[_ngcontent-%COMP%]{flex:1}.mainContentColumn__playerRow__recentAquisitions__subheading[_ngcontent-%COMP%]{margin-bottom:calc(var(--vh) * 1);color:#527493}.recentAquisitions__itemListing[_ngcontent-%COMP%]{height:calc(var(--vh) * 16.85);display:flex;justify-content:space-between}.recentAquisitions__itemListing__item[_ngcontent-%COMP%]{width:calc(var(--vw) * 6.66);background:yellowgreen}.mainContentColumn__possessionGroups[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2.5);position:relative}.possessionGroup[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 3);padding-bottom:calc(var(--vh) * 2);height:calc(var(--vh) * 37);padding-left:calc(var(--vw) * 1.5);padding-right:calc(var(--vw) * 1.5);border-radius:2px;overflow:hidden;box-shadow:0 calc(var(--vh) * .6) calc(var(--vh) * 3) calc(var(--vh) * .2) #00000026;position:absolute;top:0;left:0;width:100%;display:flex;flex-flow:row wrap;align-items:flex-end;justify-content:stretch;background:#0c1620;overflow:visible}.possessionGroup[_ngcontent-%COMP%]:after{content:"";border-radius:2px;position:absolute;top:0;bottom:0;left:0;right:0;box-shadow:inset 0 0 calc(var(--vh) * .9) calc(var(--vh) * .3) #fff0,inset 0 0 calc(var(--vh) * .2) #fff0;pointer-events:none;user-select:none;z-index:1}.possessionGroup[_ngcontent-%COMP%]:after{user-select:none;pointer-events:none;content:"";border:calc(var(--vh) * .15) solid rgba(255,255,255,.07);position:absolute;bottom:0;left:0;right:0}.possessionGroup[_ngcontent-%COMP%]:nth-child(1){position:relative;z-index:5}.possessionGroup[_ngcontent-%COMP%]:nth-child(2){top:calc(calc(var(--vh) * 7.3) * 1);z-index:4}.possessionGroup[_ngcontent-%COMP%]:nth-child(3){top:calc(calc(var(--vh) * 7.3) * 2);z-index:3}.possessionGroup[_ngcontent-%COMP%]:nth-child(4){top:calc(calc(var(--vh) * 7.3) * 3);z-index:2}.possessionGroup[_ngcontent-%COMP%]:nth-child(5){top:calc(calc(var(--vh) * 7.3) * 4);z-index:1}.possessionGroup__background[_ngcontent-%COMP%]{position:absolute;top:0;left:0;width:100%;height:100%;opacity:.3;object-fit:cover;object-position:center}.possessionGroup__items[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * 1);padding-right:calc(var(--vw) * 1);grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(5,1fr);align-items:start;grid-auto-rows:min-content;width:100%;position:relative;align-self:flex-start}.possessionGroup__items__item[_ngcontent-%COMP%]{filter:drop-shadow(calc(var(--vh) * 1.75) calc(var(--vh) * .1) calc(var(--vh) * 1.75) rgba(0,0,0,.5))}.possessionGroup__items__item[_ngcontent-%COMP%]:last-child{margin:0}.possessionGroup__title[_ngcontent-%COMP%]{text-transform:uppercase;background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;position:relative}.possessionGroup__cta[_ngcontent-%COMP%]{margin-left:auto}.newsListingColumn[_ngcontent-%COMP%]{width:calc(var(--vw) * 28)}.possessionGroup--disabled[_ngcontent-%COMP%]   .possessionGroup__cta[_ngcontent-%COMP%]{user-select:none;pointer-events:none;filter:grayscale(1);opacity:.2}.possessionGroup--disabled[_ngcontent-%COMP%]   .possessionGroup__title[_ngcontent-%COMP%]{-webkit-text-fill-color:inherit;background-clip:inherit;background:transparent;color:#7192b0}.possessionGroup--disabled[_ngcontent-%COMP%]   .possessionGroup__background[_ngcontent-%COMP%]{opacity:.1}']
             }), o
         })();
 
-        function $d(o, r) {
+        function Jd(o, r) {
             1 & o && e._UZ(0, "gu-icon", 13)
         }
 
-        function Wd(o, r) {
-            if (1 & o && (e.TgZ(0, "div", 9), e._UZ(1, "img", 10), e.YNc(2, $d, 1, 0, "gu-icon", 11), e.TgZ(3, "div", 12), e._uU(4), e.TgZ(5, "span"), e._uU(6), e.ALo(7, "titlecase"), e.qZA(), e._uU(8), e.qZA()()), 2 & o) {
+        function $d(o, r) {
+            if (1 & o && (e.TgZ(0, "div", 9), e._UZ(1, "img", 10), e.YNc(2, Jd, 1, 0, "gu-icon", 11), e.TgZ(3, "div", 12), e._uU(4), e.TgZ(5, "span"), e._uU(6), e.ALo(7, "titlecase"), e.qZA(), e._uU(8), e.qZA()()), 2 & o) {
                 const t = r.$implicit, n = r.last;
                 e.xp6(1), e.MGl("src", "/gu-assets/images/cardpacks/cropped/", t.type, ".webp", e.LSH), e.xp6(1), e.Q6J("ngIf", !n), e.xp6(2), e.hij(" ", t.count, " "), e.xp6(1), e.Gre("pack__label__colored ", t.type.toLowerCase(), ""), e.xp6(1), e.hij(" ", e.lcZ(7, 8, t.type), " "), e.xp6(2), e.hij(" ", 1 === t.count ? "Pack" : "Packs", " ")
             }
         }
 
-        function zd(o, r) {
-            if (1 & o && (e.TgZ(0, "div", 7), e.YNc(1, Wd, 9, 10, "div", 8), e.qZA()), 2 & o) {
+        function Wd(o, r) {
+            if (1 & o && (e.TgZ(0, "div", 7), e.YNc(1, $d, 9, 10, "div", 8), e.qZA()), 2 & o) {
                 const t = e.oxw();
                 e.xp6(1), e.Q6J("ngForOf", t.packGroups)
             }
         }
 
-        let jd = (() => {
+        let zd = (() => {
             class o {
                 constructor(t, n, i) {
                     this.packService = t, this.utils = n, this.modalService = i
@@ -9851,7 +9917,7 @@
                 vars: 2,
                 consts: [[1, "welcomeTitle"], [1, "welcomeSubTitle"], ["class", "packListing", 4, "ngIf"], [1, "footerArea"], [1, "footerArea__visitTempleText"], [1, "footerArea__templteIcon", 3, "iconLigature"], ["size", "large", "text", "Continue", 1, "footerArea__continueCta", 3, "click"], [1, "packListing"], ["class", "pack", 4, "ngFor", "ngForOf"], [1, "pack"], [1, "pack__cardPackImage", 3, "src"], ["class", "pack__spacerPlusIcon", "iconLigature", "Mana", 4, "ngIf"], [1, "pack__label"], ["iconLigature", "Mana", 1, "pack__spacerPlusIcon"]],
                 template: function (t, n) {
-                    1 & t && (e.TgZ(0, "h2", 0), e._uU(1, "Welcome to Gods Unchained!"), e.qZA(), e.TgZ(2, "div", 1), e._uU(3, "As part of your welcome pack we have given you:"), e.qZA(), e.YNc(4, zd, 2, 1, "div", 2), e.TgZ(5, "footer", 3)(6, "div", 4), e._uU(7, " Please visit the Temple "), e._UZ(8, "gu-icon", 5), e._uU(9, " to Open them "), e.qZA(), e.TgZ(10, "gu-primary-hex-button", 6), e.NdJ("click", function () {
+                    1 & t && (e.TgZ(0, "h2", 0), e._uU(1, "Welcome to Gods Unchained!"), e.qZA(), e.TgZ(2, "div", 1), e._uU(3, "As part of your welcome pack we have given you:"), e.qZA(), e.YNc(4, Wd, 2, 1, "div", 2), e.TgZ(5, "footer", 3)(6, "div", 4), e._uU(7, " Please visit the Temple "), e._UZ(8, "gu-icon", 5), e._uU(9, " to Open them "), e.qZA(), e.TgZ(10, "gu-primary-hex-button", 6), e.NdJ("click", function () {
                         return n.continue()
                     }), e.qZA()()), 2 & t && (e.xp6(4), e.Q6J("ngIf", n.packGroups), e.xp6(4), e.Q6J("iconLigature", "temple"))
                 },
@@ -9860,7 +9926,7 @@
                 styles: ['h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.welcomeTitle[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.pack__label[_ngcontent-%COMP%], .footerArea__visitTempleText[_ngcontent-%COMP%], .welcomeSubTitle[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.welcomeTitle[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 4.2);line-height:1.3}.footerArea__visitTempleText[_ngcontent-%COMP%], .welcomeSubTitle[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9);line-height:1.2;font-weight:600}.pack__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.9)}[_nghost-%COMP%]{width:calc(var(--vw) * 80);height:calc(var(--vh) * 80);padding-top:calc(var(--vh) * 8.33);display:flex;flex-flow:column nowrap;position:relative;text-align:center;margin:auto;margin-top:calc(var(--vh) * 2);background:#0c1620}[_nghost-%COMP%]:before{content:"";background-image:url(/gu-assets/images/backgrounds/gods.webp);background-size:cover;background-position:center;opacity:.4;position:absolute;top:0;left:0;right:0;bottom:0;box-shadow:inset 0 0 0 1px #fff3}[_nghost-%COMP%] > *[_ngcontent-%COMP%]{position:relative}.welcomeTitle[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.welcomeSubTitle[_ngcontent-%COMP%]{margin-top:calc(var(--vh) * 2);color:#fff}.packListing[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * 9.25);display:flex;justify-content:center}.pack[_ngcontent-%COMP%]{height:calc(var(--vh) * 25);padding-right:calc(var(--vw) * 5.2);display:flex;flex-flow:column nowrap;align-items:center;position:relative}.pack[_ngcontent-%COMP%]:last-child{padding:0}.pack__cardPackImage[_ngcontent-%COMP%]{width:calc(var(--vw) * 12.18)}.pack__label[_ngcontent-%COMP%]{padding-left:calc(var(--vw) * .8);padding-top:calc(var(--vh) * 2);font-weight:600}.pack__label__colored.death[_ngcontent-%COMP%]{color:#2359ff}.pack__label__colored.deception[_ngcontent-%COMP%]{color:#e320ff}.pack__label__colored.light[_ngcontent-%COMP%]{color:#fbe29f}.pack__label__colored.magic[_ngcontent-%COMP%]{color:#003953}.pack__label__colored.nature[_ngcontent-%COMP%]{color:#2acf00}.pack__label__colored.war[_ngcontent-%COMP%]{color:#df2600}.pack__spacerPlusIcon[_ngcontent-%COMP%]{right:calc(var(--vw) * 2.4);font-size:calc(var(--vh) * 2);top:50%;position:absolute;line-height:1;transform:translateY(-50%)}.pack__spacerPlusIcon[_ngcontent-%COMP%], .footerArea__templteIcon[_ngcontent-%COMP%]{background:linear-gradient(to bottom,#fff2d8 0%,#ebc98b 50%,#c6a052 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.footerArea[_ngcontent-%COMP%]{display:flex;flex-flow:column nowrap;align-items:center;margin-top:auto;position:relative}.footerArea__templteIcon[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.2);line-height:1}.footerArea__continueCta[_ngcontent-%COMP%]{transform:translateY(50%)}']
             }), o
         })();
-        var Vd = g(5231);
+        var jd = g(5231);
         let Rn = (() => {
             class o {
                 constructor(t, n, i, a, s, c, d, p) {
@@ -9874,11 +9940,11 @@
 
                 letUserIn(t) {
                     this.userHasStarterPacks$(t).pipe((0, x.q)(1)).subscribe(n => {
-                        !0 === n && this.modalService.createModal(jd, {onClose: null}, {
+                        !0 === n && this.modalService.createModal(zd, {onClose: null}, {
                             canCloseFromOutside: !1,
-                            position: m.e1.Center,
+                            position: h.e1.Center,
                             blurredBackground: !0,
-                            size: m.Cg.Workarea
+                            size: h.Cg.Workarea
                         })
                     })
                 }
@@ -9926,25 +9992,25 @@
 
                 forceManualUpdateModal() {
                     const t = this.launcherDownloadLink();
-                    this.modalService.createModal(Vd.s, {
+                    this.modalService.createModal(jd.s, {
                         title: "Launcher Update",
                         message: "The Immutable Launcher must be manually updated to 0.10.0, please download, close, and install.",
                         okButtonText: "DOWNLOAD NOW",
                         onOk: () => window.open(t)
                     }, {
                         canCloseFromOutside: !1,
-                        position: m.e1.Center,
-                        size: m.Cg.StretchableFullscreen,
+                        position: h.e1.Center,
+                        size: h.Cg.StretchableFullscreen,
                         blurredBackground: !0
                     })
                 }
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.LFG(tt.hM), e.LFG(h.mI), e.LFG(I.Z), e.LFG(Oe.F), e.LFG(h.qy), e.LFG(e.z2F), e.LFG(j.$z), e.LFG(L.Qz))
+                return new (t || o)(e.LFG(tt.hM), e.LFG(f.mI), e.LFG(I.Z), e.LFG(Oe.F), e.LFG(f.qy), e.LFG(e.z2F), e.LFG(j.$z), e.LFG(L.Qz))
             }, o.\u0275prov = e.Yz7({token: o, factory: o.\u0275fac}), o
         })();
-        const Xd = [{
+        const Vd = [{
             path: "",
             component: ui,
             canActivate: [Rn],
@@ -9952,17 +10018,17 @@
                 path: Z.deckBuilder,
                 component: Ye,
                 data: {state: Z.deckBuilder, reuse: !0}
-            }, {path: Z.arena, component: Bd, data: {state: Z.arena}}, {
+            }, {path: Z.arena, component: Zd, data: {state: Z.arena}}, {
                 path: Z.workshop,
                 component: Lt,
                 data: {state: Z.workshop}
             }, {path: Z.openPacks, component: ve.kM, data: {state: Z.openPacks}}, {
                 path: Z.collections,
-                component: Jd,
+                component: Yd,
                 data: {state: Z.collections}
             }, {
                 path: Z.forge,
-                component: Os,
+                component: ks,
                 data: {state: Z.forge, featureFlag: _.vU.forgeEnabled},
                 canActivate: [gt]
             }, {
@@ -9977,19 +10043,19 @@
                 canActivate: [gt]
             }]
         }];
-        let Kd = (() => {
+        let Xd = (() => {
             class o {
             }
 
             return o.\u0275fac = function (t) {
                 return new (t || o)
-            }, o.\u0275mod = e.oAB({type: o}), o.\u0275inj = e.cJS({imports: [[be.Bz.forChild(Xd)], be.Bz]}), o
+            }, o.\u0275mod = e.oAB({type: o}), o.\u0275inj = e.cJS({imports: [[be.Bz.forChild(Vd)], be.Bz]}), o
         })();
         const Qn = function (o) {
             return {selected: o}
         };
 
-        function eg(o, r) {
+        function Kd(o, r) {
             if (1 & o) {
                 const t = e.EpF();
                 e.ynx(0), e.TgZ(1, "app-tooltip", 4)(2, "button", 5), e.NdJ("click", function () {
@@ -10003,7 +10069,7 @@
             }
         }
 
-        let tg = (() => {
+        let eg = (() => {
             class o {
                 constructor(t) {
                     this.audio = t, this.godFilters = [], this.displayGroupingName = !0, this.godFilterChangeList = new e.vpe, this.activeGodFilters = []
@@ -10030,7 +10096,7 @@
             }
 
             return o.\u0275fac = function (t) {
-                return new (t || o)(e.Y36(h.pk))
+                return new (t || o)(e.Y36(f.pk))
             }, o.\u0275cmp = e.Xpm({
                 type: o,
                 selectors: [["app-grouping-bar"]],
@@ -10042,32 +10108,32 @@
                 template: function (t, n) {
                     1 & t && (e.TgZ(0, "app-tooltip", 0)(1, "button", 1), e.NdJ("click", function () {
                         return n.selectAllGodFilters()
-                    }), e._UZ(2, "gu-icon", 2), e.qZA()(), e.YNc(3, eg, 4, 8, "ng-container", 3)), 2 & t && (e.xp6(1), e.Q6J("ngClass", e.VKq(2, Qn, n.isAllGodFiltersSelected)), e.xp6(2), e.Q6J("ngForOf", n.godFilters))
+                    }), e._UZ(2, "gu-icon", 2), e.qZA()(), e.YNc(3, Kd, 4, 8, "ng-container", 3)), 2 & t && (e.xp6(1), e.Q6J("ngClass", e.VKq(2, Qn, n.isAllGodFiltersSelected)), e.xp6(2), e.Q6J("ngForOf", n.godFilters))
                 },
                 directives: [De.K, l.mk, l.sg],
                 styles: ["[_nghost-%COMP%]{display:flex}.groupingButton[_ngcontent-%COMP%]{width:calc(var(--vw) * 1.8);height:calc(var(--vw) * 1.8);border:calc(var(--vh) * .15) solid #182531;border-radius:calc(var(--vh) * .4);background:#0c1620;color:#7192b0;display:flex;padding:0;outline:none}.groupingButton.selected[_ngcontent-%COMP%]{background:#3d5a74;border-color:#7192b0;color:#f6f6f6}.groupingButton[_ngcontent-%COMP%]:hover{color:#f6f6f6;background:#3d5a74;border-color:#3d5a74}.groupingButtonAndTooltip[_ngcontent-%COMP%]{margin-right:calc(var(--vw) * .5)}.groupingButton--all[_ngcontent-%COMP%]   .groupingButton__godIcon[_ngcontent-%COMP%]{font-size:calc(var(--vw) * 1.1)}.groupingButton__godIcon[_ngcontent-%COMP%]{font-size:calc(var(--vw) * 1.3);margin:auto;line-height:1;display:flex}"]
             }), o
         })();
-        const ng = ["groupsContainer"];
+        const tg = ["groupsContainer"];
 
-        function og(o, r) {
+        function ng(o, r) {
             if (1 & o && e._UZ(0, "app-inventory-cards", 7), 2 & o) {
                 const t = e.oxw();
                 e.Q6J("showBundle", !0)("expandedViewMode", t.expandedViewMode)("columns", 4)("showCardCounts", !1)("showUnowned", !1)("displayedGroupedProtos", t.displayedGroupedProtos)("filterCardIds", t.filterCardIds)
             }
         }
 
-        function ig(o, r) {
+        function og(o, r) {
             if (1 & o && e._UZ(0, "app-group-quality", 8), 2 & o) {
                 const t = e.oxw();
                 e.Q6J("columns", 4)("showCardCounts", !1)("expandedViewMode", t.expandedViewMode)("showUnowned", !1)("displayedGroupedQualities", t.displayedGroupedQualities)("filterCardIds", t.filterCardIds)
             }
         }
 
-        let rg = (() => {
+        let ig = (() => {
             class o {
                 constructor(t, n, i) {
-                    this.resizeService = t, this.groupingService = n, this.filterService = i, this.activeGrouping = this.groupingService.defaultGrouping, this.filterCardIds = [], this.selectCardId = new e.vpe, this.GroupingType = F, this.selectedHeaders = [], this.showUnowned = !0, this.activeSort = f.PE.AscMana, this.sortOptions = [new B("Mana", "filter_mana", f.PE.AscMana, f.PE.DescMana), new B("Health", "filter_health", f.PE.AscHealth, f.PE.DescHealth), new B("Attack", "filter_attack", f.PE.AscAttack, f.PE.DescAttack), new B("Tribe", "filter_tribe", f.PE.AscTribe, f.PE.DescTribe), new B("Type", "filter_type", f.PE.AscType, f.PE.DescType), new B("God", "filter_god", f.PE.AscGod, f.PE.DescGod), new B("Rarity", "filter_rarity", f.PE.AscRarity, f.PE.DescRarity), new B("Set", "filter_set", f.PE.AscSet, f.PE.DescSet)], this.allGroupedProtos = [], this.allGroupedQualities = [], this.unsubscribe = new M.xQ, this.watchForResize()
+                    this.resizeService = t, this.groupingService = n, this.filterService = i, this.activeGrouping = this.groupingService.defaultGrouping, this.filterCardIds = [], this.selectCardId = new e.vpe, this.GroupingType = F, this.selectedHeaders = [], this.showUnowned = !0, this.activeSort = m.PE.AscMana, this.sortOptions = [new B("Mana", "filter_mana", m.PE.AscMana, m.PE.DescMana), new B("Health", "filter_health", m.PE.AscHealth, m.PE.DescHealth), new B("Attack", "filter_attack", m.PE.AscAttack, m.PE.DescAttack), new B("Tribe", "filter_tribe", m.PE.AscTribe, m.PE.DescTribe), new B("Type", "filter_type", m.PE.AscType, m.PE.DescType), new B("God", "filter_god", m.PE.AscGod, m.PE.DescGod), new B("Rarity", "filter_rarity", m.PE.AscRarity, m.PE.DescRarity), new B("Set", "filter_set", m.PE.AscSet, m.PE.DescSet)], this.allGroupedProtos = [], this.allGroupedQualities = [], this.unsubscribe = new M.xQ, this.watchForResize()
                 }
 
                 checkForVariousChanges(t) {
@@ -10183,7 +10249,7 @@
                 type: o,
                 selectors: [["cerberus-half-screen-cards-list"]],
                 viewQuery: function (t, n) {
-                    if (1 & t && (e.Gf(ng, 7), e.Gf(Y, 5)), 2 & t) {
+                    if (1 & t && (e.Gf(tg, 7), e.Gf(Y, 5)), 2 & t) {
                         let i;
                         e.iGM(i = e.CRH()) && (n.groupsContainer = i.first), e.iGM(i = e.CRH()) && (n.cardComponents = i)
                     }
@@ -10201,7 +10267,7 @@
                 features: [e.TTD],
                 decls: 8,
                 vars: 9,
-                consts: [[1, "sectionHeader"], [1, "sectionHeader__title"], [1, "sectionHeader__filterArea", 3, "showFilters", "sortOptions", "selectedHeaders", "cardGrouping", "unownedCheckboxVisible", "sortChange", "groupingHeaderChange"], ["infiniteScroll", "", 1, "cardsListingArea", 3, "scrollWindow", "scrolled"], ["groupsContainer", ""], ["mode", "proto", 3, "showBundle", "expandedViewMode", "columns", "showCardCounts", "showUnowned", "displayedGroupedProtos", "filterCardIds", 4, "ngIf"], [3, "columns", "showCardCounts", "expandedViewMode", "showUnowned", "displayedGroupedQualities", "filterCardIds", 4, "ngIf"], ["mode", "proto", 3, "showBundle", "expandedViewMode", "columns", "showCardCounts", "showUnowned", "displayedGroupedProtos", "filterCardIds"], [3, "columns", "showCardCounts", "expandedViewMode", "showUnowned", "displayedGroupedQualities", "filterCardIds"]],
+                consts: [[1, "sectionHeader"], [1, "sectionHeader__title"], [1, "sectionHeader__filterArea", 3, "showFilters", "sortOptions", "selectedHeaders", "cardGrouping", "unownedCheckboxVisible", "sortChange", "groupingHeaderChange"], ["infiniteScroll", "", "data-test-id", "cardsListingHalfScreen", 1, "cardsListingArea", 3, "scrollWindow", "scrolled"], ["groupsContainer", ""], ["mode", "proto", 3, "showBundle", "expandedViewMode", "columns", "showCardCounts", "showUnowned", "displayedGroupedProtos", "filterCardIds", 4, "ngIf"], [3, "columns", "showCardCounts", "expandedViewMode", "showUnowned", "displayedGroupedQualities", "filterCardIds", 4, "ngIf"], ["mode", "proto", 3, "showBundle", "expandedViewMode", "columns", "showCardCounts", "showUnowned", "displayedGroupedProtos", "filterCardIds"], [3, "columns", "showCardCounts", "expandedViewMode", "showUnowned", "displayedGroupedQualities", "filterCardIds"]],
                 template: function (t, n) {
                     1 & t && (e.TgZ(0, "header", 0)(1, "h3", 1), e._uU(2), e.qZA(), e.TgZ(3, "app-filter-sort-bar", 2), e.NdJ("sortChange", function (a) {
                         return n.sortChange(a)
@@ -10209,15 +10275,15 @@
                         return n.groupingHeaderChange(a)
                     }), e.qZA()(), e.TgZ(4, "section", 3, 4), e.NdJ("scrolled", function () {
                         return n.loadGroup()
-                    }), e.YNc(6, og, 1, 7, "app-inventory-cards", 5), e.YNc(7, ig, 1, 6, "app-group-quality", 6), e.qZA()), 2 & t && (e.xp6(2), e.Oqu(n.title), e.xp6(1), e.Q6J("showFilters", !1)("sortOptions", n.sortOptions)("selectedHeaders", n.selectedHeaders)("cardGrouping", n.protoGrouping)("unownedCheckboxVisible", !1), e.xp6(1), e.Q6J("scrollWindow", !1), e.xp6(2), e.Q6J("ngIf", n.activeGrouping.groupingType !== n.GroupingType.Quality), e.xp6(1), e.Q6J("ngIf", n.activeGrouping.groupingType === n.GroupingType.Quality))
+                    }), e.YNc(6, ng, 1, 7, "app-inventory-cards", 5), e.YNc(7, og, 1, 6, "app-group-quality", 6), e.qZA()), 2 & t && (e.xp6(2), e.Oqu(n.title), e.xp6(1), e.Q6J("showFilters", !1)("sortOptions", n.sortOptions)("selectedHeaders", n.selectedHeaders)("cardGrouping", n.protoGrouping)("unownedCheckboxVisible", !1), e.xp6(1), e.Q6J("scrollWindow", !1), e.xp6(2), e.Q6J("ngIf", n.activeGrouping.groupingType !== n.GroupingType.Quality), e.xp6(1), e.Q6J("ngIf", n.activeGrouping.groupingType === n.GroupingType.Quality))
                 },
                 directives: [wt, dt, l.O5, Ot, Pt],
                 styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.sectionHeader__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.godArea__label[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif}.sectionHeader__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}.godArea__label[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;height:100%}.sectionHeader[_ngcontent-%COMP%]{height:calc(var(--vh) * 8.5);position:relative}.sectionHeader__groupings[_ngcontent-%COMP%]{position:absolute}.sectionHeader__title[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .3);padding-bottom:calc(var(--vh) * .8);text-transform:uppercase;line-height:1;position:absolute;width:100%;text-align:center;color:#f6f6f6;border-bottom:solid #1d2f41;border-width:calc(var(--vh) * .25)}.sectionHeader__rightSideArea[_ngcontent-%COMP%]{padding-top:calc(var(--vh) * .8);position:absolute;right:0;top:0;display:flex;align-items:flex-start;height:100%}.sectionHeader__filterArea[_ngcontent-%COMP%]{bottom:calc(var(--vh) * 1);right:0;position:absolute}.sectionHeader__godArea[_ngcontent-%COMP%]{user-select:none;pointer-events:none;position:absolute;right:0;top:0;display:flex;align-items:flex-start}app-god-badge[_ngcontent-%COMP%]{user-select:auto;pointer-events:auto;margin-top:calc(var(--vh) * 1)}.godArea__label[_ngcontent-%COMP%]{color:#7192b0;padding-top:calc(var(--vh) * 1.1);padding-right:calc(var(--vw) * 2)}.cardsListingArea[_ngcontent-%COMP%]{overflow:hidden;overflow-y:auto;flex:1}  app-card{cursor:pointer}"]
             }), o
         })();
-        const ag = function (o, r) {
+        const rg = function (o, r) {
             return {rewardState__nextReward__container: o, rewardState__lastReward__container: r}
-        }, sg = function (o, r, t, n, i, a) {
+        }, ag = function (o, r, t, n, i, a) {
             return {
                 "rewardState__nextReward__innerSquares--done": o,
                 "rewardState__lastReward__innerSquares--done": r,
@@ -10226,10 +10292,10 @@
                 "rewardState__nextReward__innerSquares--notDone": i,
                 "rewardState__lastReward__innerSquares--notDone": a
             }
-        }, cg = function (o, r) {
+        }, sg = function (o, r) {
             return {rewardState__nextReward__packImage: o, rewardState__lastReward__packImage: r}
         };
-        let lg = (() => {
+        let cg = (() => {
             class o {
                 isNextLevel() {
                     return this.rewardLevel === this.playerLevel + 1
@@ -10255,12 +10321,12 @@
                 vars: 18,
                 consts: [[3, "className", "ngClass"], [3, "ngClass"], ["alt", "", 3, "ngClass", "src"]],
                 template: function (t, n) {
-                    1 & t && (e.TgZ(0, "div", 0), e._UZ(1, "i", 1), e.TgZ(2, "picture"), e._UZ(3, "img", 2), e.qZA()()), 2 & t && (e.Q6J("className", n.isAchieved || n.isNextLevel() ? "activeState" : "inactiveState")("ngClass", e.WLB(5, ag, !n.isFinalLevel(), n.isFinalLevel())), e.xp6(1), e.Q6J("ngClass", e.HTZ(8, sg, !n.isFinalLevel() && n.isAchieved, n.isFinalLevel() && n.isAchieved, !n.isFinalLevel() && !n.isAchieved && n.isNextLevel(), n.isFinalLevel() && !n.isAchieved && n.isNextLevel(), !n.isFinalLevel() && !n.isAchieved && !n.isNextLevel(), n.isFinalLevel() && !n.isAchieved && !n.isNextLevel())), e.xp6(2), e.MGl("src", "/gu-assets/images/cardpacks/", n.diety, ".webp", e.LSH), e.Q6J("ngClass", e.WLB(15, cg, !n.isFinalLevel(), n.isFinalLevel())))
+                    1 & t && (e.TgZ(0, "div", 0), e._UZ(1, "i", 1), e.TgZ(2, "picture"), e._UZ(3, "img", 2), e.qZA()()), 2 & t && (e.Q6J("className", n.isAchieved || n.isNextLevel() ? "activeState" : "inactiveState")("ngClass", e.WLB(5, rg, !n.isFinalLevel(), n.isFinalLevel())), e.xp6(1), e.Q6J("ngClass", e.HTZ(8, ag, !n.isFinalLevel() && n.isAchieved, n.isFinalLevel() && n.isAchieved, !n.isFinalLevel() && !n.isAchieved && n.isNextLevel(), n.isFinalLevel() && !n.isAchieved && n.isNextLevel(), !n.isFinalLevel() && !n.isAchieved && !n.isNextLevel(), n.isFinalLevel() && !n.isAchieved && !n.isNextLevel())), e.xp6(2), e.MGl("src", "/gu-assets/images/cardpacks/", n.diety, ".webp", e.LSH), e.Q6J("ngClass", e.WLB(15, sg, !n.isFinalLevel(), n.isFinalLevel())))
                 },
                 directives: [l.mk],
                 styles: ['.rewardState__nextReward__innerSquares--done[_ngcontent-%COMP%]{position:absolute;width:50px;height:50px;transform:rotate(45deg);border:1px solid #AFFAED;padding:4px;background:#0F1B27}.rewardState__nextReward__innerSquares--done[_ngcontent-%COMP%]:before{content:"";display:block;width:100%;height:100%;border:1px solid #54BBCD}.rewardState__lastReward__innerSquares--done[_ngcontent-%COMP%]{position:absolute;width:60px;height:60px;transform:rotate(45deg);border:1px solid #AFFAED;padding:4px;background:#0F1B27}.rewardState__lastReward__innerSquares--done[_ngcontent-%COMP%]:before{content:"";display:block;width:100%;height:100%;border:1px solid #54BBCD}.rewardState__nextReward__innerSquares--next[_ngcontent-%COMP%]{position:absolute;width:50px;height:50px;transform:rotate(45deg);border:1px solid #FBE29F;padding:4px;background:#0F1B27}.rewardState__nextReward__innerSquares--next[_ngcontent-%COMP%]:before{content:"";display:block;width:100%;height:100%;border:1px solid #FFD76E}.rewardState__lastReward__innerSquares--next[_ngcontent-%COMP%]{position:absolute;width:60px;height:60px;transform:rotate(45deg);border:1px solid #FBE29F;padding:4px;background:#0F1B27}.rewardState__lastReward__innerSquares--next[_ngcontent-%COMP%]:before{content:"";display:block;width:100%;height:100%;border:1px solid #FFD76E}.rewardState__nextReward__innerSquares--notDone[_ngcontent-%COMP%]{position:absolute;width:50px;height:50px;transform:rotate(45deg);border:1px solid #7F7F7F;padding:4px;background:#0F1B27}.rewardState__nextReward__innerSquares--notDone[_ngcontent-%COMP%]:before{content:"";display:block;width:100%;height:100%;border:1px solid #464646}.rewardState__lastReward__innerSquares--notDone[_ngcontent-%COMP%]{position:absolute;width:60px;height:60px;transform:rotate(45deg);border:1px solid #7F7F7F;padding:4px;background:#0F1B27}.rewardState__lastReward__innerSquares--notDone[_ngcontent-%COMP%]:before{content:"";display:block;width:100%;height:100%;border:1px solid #464646}.rewardState__nextReward__container[_ngcontent-%COMP%]{display:flex;flex-direction:column;align-items:center;margin-bottom:20px;margin-top:6px}.rewardState__nextReward__packImage[_ngcontent-%COMP%]{margin:auto;width:42px;transform:translate(0)}.rewardState__lastReward__packImage[_ngcontent-%COMP%]{margin:auto;width:57px;transform:translate(0)}.activeState[_ngcontent-%COMP%]{opacity:1}.inactiveState[_ngcontent-%COMP%]{opacity:.6}']
             }), o
-        })(), dg = (() => {
+        })(), lg = (() => {
             class o {
                 constructor() {
                 }
@@ -10270,10 +10336,10 @@
                 return new (t || o)
             }, o.\u0275mod = e.oAB({type: o}), o.\u0275inj = e.cJS({
                 providers: [He, En, l.JJ, te.D, Rn, _.TJ, we, Fe, ke, ce.MZ, xe, I.Z, j.$z],
-                imports: [[L.Zd, ve.ic, l.ez, T.u5, Kd, Kn, T.UX, to.m, ve.W2, eo.P]]
+                imports: [[L.Zd, ve.ic, l.ez, T.u5, Xd, Kn, T.UX, to.m, ve.W2, eo.P]]
             }), o
         })();
-        e.B6R(Mn, [rg, At, l.O5, bn, Y, l.mk, wn], [Me.XX]), e.B6R(Lt, [l.O5, ye, tg, nt.w, st, l.sg, Fn], [l.Ov]), e.B6R(kn, [Qe, l.sg, lg, l.O5, l.mk], [l.rS])
+        e.B6R(Mn, [ig, At, l.O5, bn, Y, l.mk, wn], [Me.XX]), e.B6R(Lt, [l.O5, ye, eg, nt.w, st, l.sg, Fn], [l.Ov]), e.B6R(kn, [Qe, l.sg, cg, l.O5, l.mk], [l.rS])
     }, 31459: (Ut, Se, g) => {
         g.d(Se, {AZ: () => e.A, h4: () => ct, XX: () => S});
         var e = g(76638);
