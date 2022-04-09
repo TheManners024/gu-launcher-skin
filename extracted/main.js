@@ -339,21 +339,21 @@ function createWindow(frontEndUrl) {
     // }
     win.loadURL(frontEndUrl);
     var handleRedirect = function (e, url) {
-        if (e && url) {
-            try {
-                e.preventDefault();
-            } catch (e) {
-                console.error(e);
-            }
-        }
-        if (e && !url) {
-            url = e?.url;
-        }
         if (url != win.webContents.getURL()) {
-            return electron_1.shell.openExternal(url);
+            e.preventDefault();
+            electron_1.shell.openExternal(url);
         }
     };
+    var handleWindowOpen = function (details) {
+        if (details?.url && details?.url != win.webContents.getURL()) {
+            electron_1.shell.openExternal(details.url);
+            return {action: 'deny'};
+        }
+        return {action: 'allow'};
+    };
     win.webContents.on('will-navigate', handleRedirect);
+    // win.webContents.on('new-window', handleRedirect);
+    win.webContents.setWindowOpenHandler(handleWindowOpen);
 
     /**
      * Intercept the request to get the starter decks and always return empty array
@@ -406,8 +406,6 @@ function createWindow(frontEndUrl) {
         callback({redirectURL: `inject://${url}`});
     });
 
-    // win.webContents.on('new-window', handleRedirect);
-    win.webContents.setWindowOpenHandler(handleRedirect);
     electron_1.Menu.setApplicationMenu(electron_1.Menu.buildFromTemplate(template));
     console.log('Main electron window created', JSON.stringify(win));
 }
