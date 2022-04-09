@@ -1,4 +1,19 @@
 // noinspection BadExpressionStatementJS,JSStringConcatenationToES6Template
+function getGlobalRouteContent(navLinkFn) {
+    const userId = window.bridge.store.get('user_id');
+    // needs to return a method that gets invoked and receives an environment
+    return (env) => {
+        const links = navLinkFn(env);
+        if (userId) {
+            links.guDecksProfile = {
+                shortName: "GU Decks",
+                url: `https://gudecks.com/meta/player-stats?userId=${userId}`,
+                icon: "game_wins"
+            }
+        }
+        return links;
+    }
+}
 
 (self.webpackChunkdesktop = self.webpackChunkdesktop || []).push([[179], {
     63764: (q, R, s) => {
@@ -16574,7 +16589,7 @@ return $.\u0275fac = function (x) {
     var a = {};
     s.r(a), s.d(a, {J: () => Le, Y: () => Ve});
     var _ = {};
-    s.r(_), s.d(_, {routeContent: () => je, userMenuItemsContent: () => tt});
+    s.r(_), s.d(_, {routeContent: () => getGlobalRouteContent(je), userMenuItemsContent: () => tt});
     const i = [{
         name: "lysander",
         title: "Lysander: Champion of Light",
@@ -16774,7 +16789,7 @@ return $.\u0275fac = function (x) {
                 blog: {shortName: "blog", url: "//blog.godsunchained.com"},
                 guide: {shortName: "guide", url: "//blog.godsunchained.com/learn-to-play"},
                 referrals: {shortName: "Referrals", path: "game/gu/referrals"},
-                combatRecorder: {shortName: "Review a game", url: "https://gufaq.com/logs"}
+                combatRecorder: {shortName: "Review game", url: "https://gufaq.com/logs"}
             }
         }
     }), tt = me => ({

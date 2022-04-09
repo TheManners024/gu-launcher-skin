@@ -1748,10 +1748,10 @@
                 }
 
                 initRouteChanges() {
-                    this.navigation.currentRoute$.pipe((0, u.R)(this.unsubscribe)).subscribe(t => {
-                        const n = Object.keys(Z).filter(i => Z[i] == t)[0];
-                        this.akumaService.postControlEvent("gu", "Arena", "", n, "Mnu", "pressed")
-                    })
+                    // this.navigation.currentRoute$.pipe((0, u.R)(this.unsubscribe)).subscribe(t => {
+                    //     const n = Object.keys(Z).filter(i => Z[i] == t)[0];
+                    //     this.akumaService.postControlEvent("gu", "Arena", "", n, "Mnu", "pressed")
+                    // })
                 }
 
                 initUserProperties() {
@@ -1769,19 +1769,19 @@
                 }
 
                 profileClicked() {
-                    this.akumaService.postControlEvent("gu", "Arena", "", "profile", "Mnu", "pressed")
+                    // this.akumaService.postControlEvent("gu", "Arena", "", "profile", "Mnu", "pressed")
                 }
 
                 onLogoClick(t) {
-                    this.akumaService.postControlEvent("gu", "Arena", "", "immutableLogo", "Btn", "pressed")
+                    // this.akumaService.postControlEvent("gu", "Arena", "", "immutableLogo", "Btn", "pressed")
                 }
 
                 onExternalNavItemClick(t) {
-                    this.akumaService.postControlEvent("gu", "Arena", "", t.detail.navItem.shortName, "Btn", "pressed")
+                    // this.akumaService.postControlEvent("gu", "Arena", "", t.detail.navItem.shortName, "Btn", "pressed")
                 }
 
                 onMenuDropDownOpen(t) {
-                    this.akumaService.postControlEvent("gu", "Arena", "", t.detail.navItem.shortName, "Mnu", "pressed")
+                    // this.akumaService.postControlEvent("gu", "Arena", "", t.detail.navItem.shortName, "Mnu", "pressed")
                 }
 
                 onUserDetailsClick(t) {

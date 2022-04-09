@@ -312,20 +312,23 @@ function createWindow(frontEndUrl) {
     win = new electron_1.BrowserWindow({
         frame: false,
         autoHideMenuBar: true,
-        backgroundColor: '#000d1a',
+        backgroundColor: '#0f1b27',
         fullscreen: fullscreen,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
             nodeIntegration: false,
             enableRemoteModule: true,
-            contextIsolation: false
+            contextIsolation: false,
+            nativeWindowOpen: true
         },
         height: settingsWS.height,
         width: settingsWS.width,
         resizable: false,
         fullscreenable: true,
         show: false,
-        darkTheme: true
+        darkTheme: true,
+        hasShadow: false,
+        transparent: true
     });
     // ? APP BAR LOGIC
     // modalHandler(win);
@@ -338,21 +341,18 @@ function createWindow(frontEndUrl) {
     //     electron_1.systemPreferences.setAppLevelAppearance('dark');
     // }
     win.loadURL(frontEndUrl);
-    var handleRedirect = function (e, url) {
-        if (url != win.webContents.getURL()) {
-            e.preventDefault();
-            electron_1.shell.openExternal(url);
-        }
-    };
+
     var handleWindowOpen = function (details) {
-        if (details?.url && details?.url != win.webContents.getURL()) {
+        console.log('calling window open');
+        if (details?.url && details.url != win.webContents.getURL()) {
+            console.log('opening external');
+
             electron_1.shell.openExternal(details.url);
             return {action: 'deny'};
         }
         return {action: 'allow'};
     };
-    win.webContents.on('will-navigate', handleRedirect);
-    // win.webContents.on('new-window', handleRedirect);
+
     win.webContents.setWindowOpenHandler(handleWindowOpen);
 
     /**
