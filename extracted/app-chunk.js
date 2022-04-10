@@ -559,7 +559,14 @@
 
                 ngAfterViewInit() {
                     this.getViewData().pipe().subscribe(() => {
-                        this.setColorOfProgressBar(), this.progressionAnimationData.percentage = this.previousRankedProgression.win_points, this.progressionAnimationData.progressSafetyLine = this.previousRankedProgression.safety_line, this.setRankLevelLabels(this.previousRankedProgression), this.setShieldCracking(this.calcNewCracksCount(this.previousRankedProgression)), this.changeDetector.detectChanges(), this.loading = !1, this.createAnimationTimeline()
+                        this.setColorOfProgressBar();
+                        this.progressionAnimationData.percentage = this.previousRankedProgression.win_points;
+                        this.progressionAnimationData.progressSafetyLine = this.previousRankedProgression.safety_line;
+                        this.setRankLevelLabels(this.previousRankedProgression);
+                        this.setShieldCracking(this.calcNewCracksCount(this.previousRankedProgression));
+                        this.changeDetector.detectChanges();
+                        this.loading = !1;
+                        this.createAnimationTimeline();
                     })
                 }
 
@@ -568,28 +575,7 @@
                 }
 
                 createAnimationTimeline() {
-                    if (this.isMaxRank) return !1;
-                    this.setColorOfProgressBar(), this.progressionTL = y.p8.timeline({
-                        paused: !0,
-                        delay: 1,
-                        onUpdate: () => this.setColorOfProgressBar()
-                    });
-                    const t = this.nextRankedProgression.rank_level - this.previousRankedProgression.rank_level;
-                    t > 0 ? this.levelUp() : t < 0 && this.levelDown(), this.progressionTL.to(this.progressionAnimationData, 1, {
-                        percentage: this.nextRankedProgression.win_points,
-                        ease: "power2.inOut"
-                    });
-                    const n = this.calcNewCracksCount(this.nextRankedProgression);
-                    n !== this.progressionAnimationData.shieldCrackCount && this.progressionTL.fromTo(this.leftShield.nativeElement, {
-                        x: "-4px",
-                        y: "-50%"
-                    }, {
-                        duration: .5,
-                        x: "4px",
-                        y: "-50%",
-                        ease: ft,
-                        clearProps: "x"
-                    }).add(() => this.setShieldCracking(n), "-=0.3"), this.progressionTL.play()
+                    return !1;
                 }
 
                 calcNewCracksCount(t) {
@@ -954,7 +940,7 @@
                     this.authService = t, this.playService = n, this.guGameService = i, this.progressionService = a, this.modalService = s, this.guUserService = c, this.changeDetector = d, this.resizeService = p, this.gauntletService = w, this.analyticsService = v, this.packService = k, this.filterService = A, this.starsService = G, this.cdr = U, this.fluxService = E, this.sealedService = de, this.unsubscribe = new M.xQ, this.xpData = {
                         latest_xp: [],
                         latest_total_xp: 0
-                    }, this.showContinueButton = !1, this.loading = !0, this.specialRewards = [], this.animationState = {
+                    }, this.showContinueButton = !0, this.loading = !0, this.specialRewards = [], this.animationState = {
                         percentage: 0,
                         progressStepText: "",
                         progressStepValue: 0,
@@ -1001,23 +987,12 @@
 
                 createProgressionAnimationTimeline(t) {
                     return (0, ae.__awaiter)(this, void 0, void 0, function* () {
-                        this.progressionTL = y.p8.timeline({
-                            paused: !0,
-                            delay: .5
-                        }), t.forEach((n, i) => this.addXpStepToProgressBar(n, i)), yield(0, ut.w)(0), this.progressionTL.add(() => {
-                            var n;
-                            (null === (n = this.starsUpgradeVideo) || void 0 === n ? void 0 : n.nativeElement) && (this.starsUpgradeVideo.nativeElement.pause(), this.starsOpenVideo.nativeElement.pause())
-                        }), this.hasEarnedRewards && this.animateInRewards(), this.gauntletToasts && this.animateInGauntletToasts(), this.animateInCtaButton(), this.progressionTL.play()
-                    })
+                        yield(0, ut.w)(0);
+                    });
                 }
 
                 animateInGauntletToasts() {
-                    this.progressionTL.to(this.gauntletToasts.nativeElement, {
-                        duration: .5,
-                        y: 0,
-                        opacity: 1,
-                        ease: "power2.inOut"
-                    })
+                    return;
                 }
 
                 hasLevelledUp(t) {
@@ -1025,100 +1000,48 @@
                 }
 
                 addXpStepToProgressBar(t, n) {
-                    if (0 === t.xp) return;
-                    this.progressionTL.addLabel(`xpStep-${n}`, "+=0.5");
-                    const i = this.animationState.xp + t.xp;
-                    this.animationState.xp = i;
-                    const a = Ct({xp: i, levelThresholds: this.thresholds});
-                    this.hasLevelledUp(a) && (this.progressionTL.to(this.animationState, {
-                        duration: 1,
-                        percentage: 100,
-                        ease: "power2.inOut"
-                    }).add(() => {
-                        this.displayProgress.lvl = a
-                    }), this.levelUpOnce(), this.animationState.currentLevel = a);
-                    const s = et({xp: i, levelThresholds: this.thresholds});
-                    this.progressionTL.to(this.animationState, 1, {
-                        percentage: s,
-                        ease: "power2.inOut"
-                    }), this.animateTextLabel(t, n)
+                    return;
                 }
 
                 animateTextLabel(t, n) {
-                    const i = this.progressStepInfoText.nativeElement;
-                    this.progressionTL.add(() => {
-                        this.animationState.progressStepText = t.display_name, this.animationState.progressStepValue = t.xp, this.changeDetector.detectChanges()
-                    }, `xpStep-${n}`).set(i, {x: "-40%", opacity: 0}, `xpStep-${n}`).to(i, {
-                        duration: 1.5,
-                        x: "0%",
-                        opacity: 1,
-                        ease: "power2.inOut"
-                    }, `xpStep-${n}`)
+                    return;
                 }
 
                 levelUpOnce() {
                     const t = this.progressBar.progressBarDom.nativeElement;
                     this.progressionTL.set(t, {boxShadow: `0 0 ${2 * this.vh}px ${.5 * this.vh}px rgba(${(0, je.hexToCssRgbString)(Ve.colors.apocyan[300])}, 0.4)`}).to(t, {
-                        duration: .3,
+                        duration: 0,
                         boxShadow: `0 0 ${3.5 * this.vh}px ${4 * this.vh}px rgba(${(0, je.hexToCssRgbString)(Ve.colors.apocyan[300])}, 0.7)`
                     }).to(t, {
-                        duration: .2,
+                        duration: 0,
                         boxShadow: `0 0 ${5 * this.vh}px ${2 * this.vh}px rgba(${(0, je.hexToCssRgbString)(Ve.colors.apocyan[300])}, 0)`
                     }).to(t, {
-                        duration: .2,
+                        duration: 0,
                         boxShadow: `0 0 ${2 * this.vh}px ${.5 * this.vh}px rgba(${(0, je.hexToCssRgbString)(Ve.colors.apocyan[300])}, 0.4)`
                     }), this.progressionTL.to(this.animationState, {
-                        duration: .4,
+                        duration: 0,
                         percentage: 0,
                         ease: "power2.inOut"
                     }, "-=0.2")
                 }
 
                 animateInCtaButton() {
-                    this.progressionTL.to(this.continueButton.nativeElement, {
-                        opacity: 1,
-                        scale: 1,
-                        ease: "power2.inOut",
-                        duration: .5,
-                        onComplete: () => {
-                            this.animationState.disableCta = !1
-                        }
-                    })
+                    this.animationState.disableCta = !1;
                 }
 
                 animateInRewards() {
-                    this.progressionTL.to(this.initialProgress.nativeElement, {
-                        duration: .5,
-                        opacity: 0,
-                        ease: "power2.inOut"
-                    }).to(this.rewardsContainer.nativeElement, {
-                        duration: .5,
-                        opacity: 1,
-                        scale: 1,
-                        ease: "power2.inOut"
-                    }, "-=0.3"), Array.from(this.rewardItems.nativeElement.children).forEach((t, n) => {
-                        this.progressionTL.to(t, {
-                            duration: .2,
-                            opacity: 1,
-                            ease: "power2.inOut"
-                        }, n > 0 ? "-=0.3" : "-=0").to(t, {
-                            duration: .3,
-                            transform: "scale(1.2)",
-                            ease: "power2.inOut"
-                        }, "-=0.15").to(t, {duration: .2, transform: "scale(1)", ease: "power2.inOut"})
-                    })
+                    return;
                 }
 
                 continue() {
-                    var t, n, i, a, s, c, d, p, w, v;
-                    if (this.animationState.disableCta) return !1;
-                    (null === (n = null === (t = this.starsRewardInfo) || void 0 === t ? void 0 : t.clusters) || void 0 === n ? void 0 : n.length) >= 1 && (null === (a = null === (i = this.starsRewardInfo) || void 0 === i ? void 0 : i.clusters[0]) || void 0 === a ? void 0 : a.cluster_id) !== (null === (s = this.starsRewardInfo) || void 0 === s ? void 0 : s.max_clusters) && this.animationState.currentStarVial !== (null === (c = this.starsRewardInfo) || void 0 === c ? void 0 : c.clusters[(null === (p = null === (d = this.starsRewardInfo) || void 0 === d ? void 0 : d.clusters) || void 0 === p ? void 0 : p.length) - 1].cluster_name) ? (this.playStarUpgrades(), this.animationState.disableCta = !0) : (null === (w = this.starsRewardInfo) || void 0 === w ? void 0 : w.stars) && this.animationState.currentTotalStars !== (null === (v = this.starsRewardInfo) || void 0 === v ? void 0 : v.stars) ? (this.playOpenStarVial(), this.animationState.disableCta = !0) : (this.guUserService.fetchExtendedAccount(), this.guGameService.getGameMode$(this.gameModeId).pipe((0, x.q)(1)).subscribe(k => {
-                        this.close(), k && k.ranked ? this.modalService.createModal(yo, {gameModeId: this.gameModeId}, {
+                    this.guGameService.getGameMode$(this.gameModeId).pipe((0, x.q)(1)).subscribe(k => {
+                        this.close();
+                        k && k.ranked ? this.modalService.createModal(yo, {gameModeId: this.gameModeId}, {
                             blurredBackground: !1,
                             canCloseFromOutside: !1,
                             size: h.Cg.Fullscreen
                         }) : this.playService.setPlaying(z.OC.OUT, this.gameModeId)
-                    }))
+                    });
                 }
 
                 close() {
