@@ -8967,7 +8967,7 @@
             if (1 & o) {
                 const t = e.EpF();
                 e.TgZ(0, "a", 80), e.NdJ("click", function () {
-                    return e.CHM(t), e.oxw().openLink("https://blog.godsunchained.com/2021/03/19/play-to-earn-with-weekend-ranked/")
+                    return e.CHM(t), e.oxw().openLink("https://blog.godsunchained.com/2022/02/19/play-to-earn-with-weekend-ranked/")
                 }), e._uU(1, " Event: Play to earn packs with Weekend Ranked!\n"), e.qZA()
             }
         }
