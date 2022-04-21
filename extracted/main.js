@@ -387,7 +387,7 @@ function createWindow(frontEndUrl) {
         let url = null;
         if (details.url.match(/main[.].+[.]js$/)) {
             url = path.normalize(`${__dirname}/app-main.js`);
-        } else if (details.url.endsWith('.css')) {
+        } else if (details.url.match(/styles[.].*[.]css$/)) {
             url = path.normalize(`${__dirname}/app-styles.css`);
         } else if (details.url.match(/957[.].+[.]js$/) != null) {
             url = path.normalize(`${__dirname}/app-chunk.js`);
