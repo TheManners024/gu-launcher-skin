@@ -1,8 +1,31 @@
 # im-launcher
 
+**You need node installed so you can install the npm dependencies for this project and build / run it locally.**
+
+### Setup
+
+1. cd into the extracted folder from the command line and run `npm i`. You'll know you have the right folder if you see 
+package.json when you use `dir` (windows) or `ls` (mac).
+
+### Building the app
+Before you build you should do the following:
+
 1. Remember to `export CSC_IDENTITY_AUTO_DISCOVERY=false` on the command line before
 running `npm run pack` to disable signing!
-2. Remember to turn off devtools!
+2. Remember to turn off devtools! main.js -> comment out the `win.webContents.openDevTools();`. You can open dev tools 
+at any time with ctrl+k / cmd+k . This should be off by default when I push changes so if your interest is just building
+after cloning this repo you shouldn't have to worry about this (it's already commented out).
+3. Run `npm run pack`. The app should build to the 'dist' folder. If you're on windows then I assume it won't build the 
+mac version and won't error out if it can't.
+4. You can launch the .exe from the folder it's in. 
+5. You shouldn't need to login since it's basically the same application and reading from the same storage domain that
+the regular launcher does.
+
+### Running the app
+
+1. Run `npm run start` to launch the app. 
+   - optionally uncomment `win.webContents.openDevTools();` from main.js so dev tools open on app launch.
+
 
 ### Locations of interest
 #### App Main
