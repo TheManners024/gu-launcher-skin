@@ -8050,7 +8050,7 @@
         function cl(o, r) {
             if (1 & o && (e.TgZ(0, "div", 9)(1, "div", 10), e._uU(2), e.qZA()()), 2 & o) {
                 const t = e.oxw();
-                e.xp6(2), e.hij(" ", t.mode.type === t.GuGameModeType.DIRECT_CHALLENGE ? "Start" : "Play", " ")
+                e.xp6(2), e.hij(" ", t.mode.type === t.GuGameModeType.DIRECT_CHALLENGE ? "Play" : "Play", " ")
             }
         }
 
@@ -8062,7 +8062,7 @@
         }
 
         function dl(o, r) {
-            1 & o && (e.ynx(0), e.TgZ(1, "div", 14), e._uU(2, "Hold to cancel"), e.qZA(), e.BQk())
+            1 & o && (e.ynx(0), e.TgZ(1, "div", 14), e._uU(2, "Cancel"), e.qZA(), e.BQk())
         }
 
         function gl(o, r) {
