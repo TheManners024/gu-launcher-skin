@@ -3238,6 +3238,19 @@ cerberus-draggable-titlebar:not(.fake-selector) {
     background: none !important;
 }
 
+cerberus-navbar-user-avatar {
+    display: none !important;
+}
+
+cerberus-navbar-logo {
+    display: none !important;
+}
+
+cerberus-navbar-main-menu:not(.fake-selector) {
+    margin: auto 8px;
+    padding: 0 16px;
+}
+
 gu-plain-square-button {
     --textFillColor: var(--gu-blue) !important;
     --borderColor: var(--gu-blue) !important;
