@@ -20095,6 +20095,160 @@ return $.\u0275fac = function (y) {
     height: 100%;
     object-fit: contain;
   }
+  
+ /**
+ * Temple pack and cards
+ */
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+.container {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -0.5);
+    margin-left: calc(var(--bs-gutter-x) * -0.5);
+}
+
+.grid-row {
+    display: grid;
+    grid-template-rows: 40px auto;
+    grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 8px;
+    column-gap: 10px;
+    padding: 4px 8px;
+}
+
+.grid-row h5 {
+    grid-column: 1/-1;
+    line-height: 40px;
+    margin: 0;
+}
+
+.grid-col-all {
+    grid-column: 1 / -1;
+}
+
+.pack.common {
+    border-right: solid 15px var(--gu-common);
+    border-top: solid 2px var(--gu-common);
+}
+
+.pack.rare {
+    border-right: solid 15px var(--gu-rare);
+    border-top: solid 2px var(--gu-rare);
+}
+
+.pack.epic {
+    border-right: solid 15px var(--gu-epic);
+    border-top: solid 3px var(--gu-epic);
+}
+
+.pack.legendary {
+    border-right: solid 15px var(--gu-legendary);
+    border-top: solid 2px var(--gu-legendary);
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.justify-content-between {
+    justify-content: space-between !important;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.d-flex h3 {
+    margin: 0;
+}
+
+.gu-card {
+    border-radius: 8px;
+    padding: 8px 4px;
+}
+
+.pack {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/**
+ * Rare effects
+ */
+.gu-card-rare.shine-1 {
+    box-shadow: inset 0px 0px 120px -30px var(--gu-common), 0px 0px 5px 0px var(--gu-rare);
+}
+
+.gu-card-rare.shine-2 {
+    box-shadow: inset 0px 0px 120px -30px var(--gu-legendary), 0px 0px 5px 0px var(--gu-rare);
+}
+
+.gu-card-rare.shine-3 {
+    box-shadow: inset 0px 0px 120px -30px var(--gu-epic), 0px 0px 5px 0px var(--gu-rare);
+}
+
+/**
+ * Epic effects
+ */
+.gu-card-epic.shine-1 {
+    box-shadow: inset 0px 0px 120px -30px var(--gu-common), 0px 0px 5px 0px var(--gu-epic);
+}
+
+.gu-card-epic.shine-2 {
+    box-shadow: inset 0px 0px 120px -30px var(--gu-legendary), 0px 0px 5px 0px var(--gu-epic);
+}
+
+.gu-card-epic.shine-3 {
+    box-shadow: inset 0px 0px 120px -30px var(--gu-epic), 0px 0px 5px 0px var(--gu-epic);
+}
+
+/**
+ * Legendary effects
+ */
+.gu-card-legendary.shine-1 {
+    box-shadow: inset 0px 0px 120px -30px var(--gu-common), 0px 0px 5px 0px var(--gu-legendary);
+}
+
+.gu-card-legendary.shine-2 {
+    box-shadow: inset 0px 0px 120px -30px var(--gu-legendary), 0px 0px 5px 0px var(--gu-legendary);
+}
+
+.gu-card-legendary.shine-3 {
+    box-shadow: inset 0px 0px 120px -30px var(--gu-epic), 0px 0px 5px 0px var(--gu-legendary);
+}
+
+.gu-card-rare {
+    box-shadow: 0px 0px 5px 0px var(--gu-rare);
+    border-bottom: solid 2px var(--gu-rare);
+}
+
+.gu-card-epic {
+    box-shadow: 0px 0px 5px 0px var(--gu-epic);
+    border-bottom: solid 2px var(--gu-epic);
+}
+
+.gu-card-legendary {
+    box-shadow: 0px 0px 5px 0px var(--gu-legendary);
+    border-bottom: solid 2px var(--gu-legendary);
+}
 `, Lt = k => Pt.PW[k];
     customElements.define("gu-temple-pack-card-listing", (0, oe.x1)({
         renderer: function no({}) {
@@ -20209,47 +20363,55 @@ return $.\u0275fac = function (y) {
             </picture>
           </div>
         ` : null}
-    ${q.cards ? q.cards.map((re, Se) => xe.dy`
-            <div class="perspectiveWrapper">
-              <div class=${(0, be.$)({cardWrapper: !0})} @click=${() => j(Se)}>
-                <div class="cardWrapper__frontFace">
-                  <i class="cardWrapper__frontFace__bloom cardWrapper__frontFace__bloom--${re.rarity}"></i>
-                  <gu-card-picture
-                    protoId=${re.proto}
-                    quality=${re.quality}
-                    class="cardWrapper__frontFace__card"
-                  ></gu-card-picture>
-
-                  ${null}
-                </div>
-                <picture class="cardWrapper__rearFace">
-                  <source
-                    type="image/webp"
-                    srcset="
-                      //images.godsunchained.com/rear-card-face-images/1024/regular-gu-rear-card-face.webp 1024w,
-                      //images.godsunchained.com/rear-card-face-images/720/regular-gu-rear-card-face.webp   720w,
-                      //images.godsunchained.com/rear-card-face-images/512/regular-gu-rear-card-face.webp   512w,
-                      //images.godsunchained.com/rear-card-face-images/256/regular-gu-rear-card-face.webp   256w
-                    "
-                  />
-                  <source
-                    type="image/png"
-                    srcset="
-                      //images.godsunchained.com/rear-card-face-images/1024/regular-gu-rear-card-face.png 1024w,
-                      //images.godsunchained.com/rear-card-face-images/720/regular-gu-rear-card-face.png   720w,
-                      //images.godsunchained.com/rear-card-face-images/512/regular-gu-rear-card-face.png   512w,
-                      //images.godsunchained.com/rear-card-face-images/256/regular-gu-rear-card-face.png   256w
-                    "
-                  />
-                  <img
-                    src="//images.godsunchained.com/rear-card-face-images/256/regular-gu-rear-card-face.png"
-                    alt="GodsUnchained rear card face image"
-                    class="cardWrapper__rearFace__img"
-                  />
-                </picture>
-              </div>
-            </div>
-          `) : null}
+    ${q.cards ? xe.dy`
+<div class="container">
+    <div class="row grid-row pack mt-4 ${q.rarity}">
+        <div class="d-flex grid-col-all justify-content-between align-items-center">
+            <h3 class="text-capitalize">${q.set}</h3>
+            <h3 class="text-capitalize">${q.rarity}</h3>
+        </div>
+        ${q.cards ? q.cards.map((re, Se) => xe.dy`
+<div class="perspectiveWrapper ${q.set === 'core' ? 'show-card' : ''}">
+  <div class="cardWrapper">
+    <div class="cardWrapper__frontFace">
+      <div class="gu-card gu-card-${re.rarity} shine-${re.quality}">
+           <gu-card-picture
+            protoId=${re.proto}
+            quality=${re.quality}
+           ></gu-card-picture>
+      </div>
+      <picture class="cardWrapper__rearFace">
+          <source
+            type="image/webp"
+            srcset="
+              //images.godsunchained.com/rear-card-face-images/1024/regular-gu-rear-card-face.webp 1024w,
+              //images.godsunchained.com/rear-card-face-images/720/regular-gu-rear-card-face.webp   720w,
+              //images.godsunchained.com/rear-card-face-images/512/regular-gu-rear-card-face.webp   512w,
+              //images.godsunchained.com/rear-card-face-images/256/regular-gu-rear-card-face.webp   256w
+            "
+          />
+          <source
+            type="image/png"
+            srcset="
+              //images.godsunchained.com/rear-card-face-images/1024/regular-gu-rear-card-face.png 1024w,
+              //images.godsunchained.com/rear-card-face-images/720/regular-gu-rear-card-face.png   720w,
+              //images.godsunchained.com/rear-card-face-images/512/regular-gu-rear-card-face.png   512w,
+              //images.godsunchained.com/rear-card-face-images/256/regular-gu-rear-card-face.png   256w
+            "
+          />
+          <img
+            src="//images.godsunchained.com/rear-card-face-images/256/regular-gu-rear-card-face.png"
+            alt="GodsUnchained rear card face image"
+            class="cardWrapper__rearFace__img"
+          />
+      </picture>
+    </div>
+  </div>
+</div>
+        `) : null}
+    </div>
+</div>
+    ` : null}
   `
         }, props: {properties: {volume: {type: Number}}, styles: hs}
     }));
@@ -20708,51 +20870,7 @@ return $.\u0275fac = function (y) {
                 ds = eo && !k.length && nt;
             return xe.dy`
     <div class="videoAspectRatio" ?domRef=${(0, Ce.Q)(L)}>
-      <img class="videoAspectRatio__img" alt="ratio image" src="/assets/images/ratio-images/16-x-9-ratio.png" />
-
-      <gu-controllable-vimeo-embed
-        class="introVideo"
-        videoId="405676137"
-        autoPlay
-        pauseOnEndFrame
-        muted
-        @onVideoEnd=${() => re({type: et, payload: !0})}
-        ?domRef=${(0, Ce.Q)(m)}
-        .volume=${p}
-      ></gu-controllable-vimeo-embed>
-
-      <gu-controllable-vimeo-embed
-        class=${(0, be.$)({packOpenVideo: !0, "packOpenVideo--hidden": !De})}
-        pauseOnEndFrame
-        startPausedOnFirstFrame
-        videoId=${Se}
-        @onVideoLoading=${() => {
-                re($e(!0))
-            }}
-        @onVideoReady=${() => {
-                re($e(!1))
-            }}
-        @onVideoEnd=${() => {
-                re(ne(!1))
-            }}
-        @onVideoProgress=${Re => {
-                const {percent: Nt} = Re.detail;
-                Nt >= .425 && !Ge && re({type: ge, payload: !0})
-            }}
-        ?domRef=${(0, Ce.Q)(D)}
-        .volume=${p}
-      ></gu-controllable-vimeo-embed>
-
-      <i class="targetDropArea" ?domRef=${(0, Ce.Q)(j)}></i>
-
-      ${nt && !De ? xe.dy`
-            <gu-paragraph-text
-              class="helpText"
-              data-test-id="helpText"
-              kind="small"
-              text=${Ke.set ? qs ? "Please wait, loading ..." : "Drag a pack here to open it" : "You have no packs."}
-            ></gu-paragraph-text>
-          ` : null}
+      <img class="videoAspectRatio__img" alt="ratio image" src="/assets/images/ratio-images/16-x-9-ratio.png" />      
 
       <gu-temple-pack-card-listing></gu-temple-pack-card-listing>
 
@@ -20763,34 +20881,27 @@ return $.\u0275fac = function (y) {
               <gu-primary-hex-button
                 size="large"
                 type="primary"
-                @click=${() => {
-                this.dispatchEvent(new CustomEvent("onBuyPacks"))
-            }}
+                href=${`imtbl://${b.gv.routeContent().home.path}`}
                 class="ctasArea__cta ctasArea__cta--buyPacksCta"
                 data-test-id="buyPacksCTA"
               >
-                Buy Packs
+                Play to Unlock
               </gu-primary-hex-button>
             ` : null}
-        <!-- @NOTE: While a card sale is active, direct users toward buying packs, not playing the game
-          ${ds ? xe.dy`
-              <gu-primary-hex-button
-                size="large"
-                type="primary"
-                href=${`imtbl://${b.gv.routeContent({}).home.path}`}
-                class="ctasArea__cta ctasArea__cta--buyPacksCta"
-              >
-                Play to unlock
-              </gu-primary-hex-button>
-            ` : null} -->
-        ${eo && k.length && !ve ? xe.dy`
+        ${k.length ? xe.dy`
               <gu-primary-hex-button size="large" type="primary" @click=${() => {
-                lt.p8.set(q.current, {clearProps: "all"}), re({type: Q}), re(bt(k))
+                lt.p8.set(q.current, {clearProps: "all"});
+                re({type: Q});
+                cs();
+                re(ne(!1));
+                re({type: Se, payload: !0});
             }} class="ctasArea__cta">
-                Next Pack
+                Open Pack
               </gu-primary-hex-button>
               <gu-vertical-space top="large">
-                <gu-heading-text size="2x-small" align="center"> ${k.length} packs left </gu-heading-text>
+                <gu-heading-text size="2x-small" align="center">
+                &nbsp;${k.length - 1 > 0 ? (k.length - 1 > 1 ? k.length - 1 + ' packs left' : k.length - 1 + ' pack left') : ''}
+                </gu-heading-text>
               </gu-vertical-space>
             ` : null}
       </div>

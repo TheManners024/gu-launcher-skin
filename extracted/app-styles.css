@@ -3055,6 +3055,10 @@ body {
     --gu-red: #F44336;
     --gu-indigo: #3F51B5;
     --gu-purple: #9C27B0;
+    --gu-common: #E0E0E0;
+    --gu-rare: #03A9F4;
+    --gu-epic: #673AB7;
+    --gu-legendary: #FBC02D;
 }
 
 label {

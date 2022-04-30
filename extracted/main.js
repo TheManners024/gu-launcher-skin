@@ -381,7 +381,8 @@ function createWindow(frontEndUrl) {
             'https://master.desktop.godsunchained.com/gu-assets/images/misc/gu-gmc-snipe.svg',
             'https://master.desktop.godsunchained.com/assets/images/ui-embellishments/ui--divider-complex-2.svg',
             'https://master.desktop.godsunchained.com/new-relic.*.js',
-            'https://deck.prod.prod.godsunchained.com/deck'
+            'https://deck.prod.prod.godsunchained.com/deck',
+            'https://www.facebook.com/*'
         ]
     }, (details, callback) => {
         let url = null;
@@ -401,6 +402,8 @@ function createWindow(frontEndUrl) {
             url = path.normalize(`${__dirname}/${details.url.split('.com').pop()}`);
         } else if (details.url.match(/.*deck\.prod\.prod\.godsunchained\.com\/deck$/) != null) {
             return callback({redirectURL: 'intercept://deck.prod.prod.godsunchained.com/deck'})
+        } else if (details.url.match(/.*facebook.com.*/i)) { // why is this a thing
+            return callback({cancel: true});
         }
 
         callback({redirectURL: `inject://${url}`});
