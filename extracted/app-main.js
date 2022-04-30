@@ -20139,7 +20139,7 @@ return $.\u0275fac = function (y) {
     grid-template-columns: repeat(5, 1fr);
     margin-bottom: 8px;
     column-gap: 10px;
-    padding: 4px 8px;
+    padding: 8px;
 }
 
 .grid-row h5 {
@@ -20196,6 +20196,7 @@ return $.\u0275fac = function (y) {
 .pack {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    background: rgba(0,0,0,0.85);
 }
 
 /**
@@ -20432,6 +20433,11 @@ return $.\u0275fac = function (y) {
     display: flex;
     flex-flow: column nowrap;
     overflow: hidden;
+    background-image: url(https://images.godsunchained.com/art2/1920/1442.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: difference;
+    background-color: var(--gu-blue-dark);
   }
 
   .videoAspectRatio {
