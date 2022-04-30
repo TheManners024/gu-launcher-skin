@@ -2487,7 +2487,7 @@
                 },
                 directives: [Yi],
                 pipes: [Me.h4, Me.XX],
-                styles: ["[_nghost-%COMP%]{display:block;position:relative;z-index:22}gu-header-bar[_ngcontent-%COMP%]{background:transparent;position:absolute;top:0;left:0;width:100%}"]
+                styles: ["[_nghost-%COMP%]{box-shadow: 0 3px 3px rgb(0 0 0 / 30%), 0 3px 3px rgb(0 0 0 / 30%);background:var(--gu-blue-dark);display:block;position:relative;z-index:22}gu-header-bar[_ngcontent-%COMP%]{background:transparent;position:absolute;top:0;left:0;width:100%}"]
             }), o
         })();
         var ot = g(39765), zi = g(25774), ji = g(97993);
@@ -2670,7 +2670,7 @@
                         return n.closeButtonClick()
                     }), e.qZA(), e.Hsn(1))
                 },
-                styles: ["[_nghost-%COMP%]{padding-top:calc(var(--vh) * 4.5);display:flex;flex-flow:column nowrap;align-items:center;width:calc(var(--vh) * 7.7);position:absolute;top:0;left:0;height:100%}.closeButton[_ngcontent-%COMP%]{width:calc(var(--vh) * 3);height:calc(var(--vh) * 3);font-size:calc(var(--vh) * 1.7);border-radius:50%;display:flex;line-height:1;border:2px solid var(--gu-blue);color:var(--gu-blue);cursor:pointer}.closeButton[_ngcontent-%COMP%]:hover{border-color:var(--gu-yellow);color:var(--gu-yellow)}.closeButton[_ngcontent-%COMP%]     i{margin:auto;line-height:1}"]
+                styles: ["[_nghost-%COMP%]{z-index:23;padding-top:calc(var(--vh) * 4.5);display:flex;flex-flow:column nowrap;align-items:center;width:calc(var(--vh) * 7.7);position:absolute;top:0;left:0;height:100%}.closeButton[_ngcontent-%COMP%]{width:calc(var(--vh) * 3);height:calc(var(--vh) * 3);font-size:calc(var(--vh) * 1.7);border-radius:50%;display:flex;line-height:1;border:2px solid var(--gu-blue);color:var(--gu-blue);cursor:pointer}.closeButton[_ngcontent-%COMP%]:hover{border-color:var(--gu-yellow);color:var(--gu-yellow)}.closeButton[_ngcontent-%COMP%]     i{margin:auto;line-height:1}"]
             }), o
         })(), it = (() => {
             class o {
@@ -4632,7 +4632,7 @@
                 }
 
                 clickCard(t) {
-                    this.audioService.clickItemV1.play(), this.selectCards.emit([t])
+                    this.audioService.clickItemV1.play(), this.bundle.cards.length >= 2 ? this.openBundleChooser() : this.selectCards.emit([t])
                 }
 
                 onChooserSelectCards(t) {
@@ -4652,7 +4652,7 @@
                 consts: [[1, "bundleContainer"], [1, "bundleLabel"], [1, "cardLayers", 3, "click"], ["class", "cardLayers__card", "appCardBundleHoverFX", "", 3, "translateY", "protoId", "quality", "ngStyle", "click", 4, "ngFor", "ngForOf"], [3, "gameModeType", "gameModeId", "cards", "closeBundleChooser", "chooserSelectCards", 4, "ngIf"], ["appCardBundleHoverFX", "", 1, "cardLayers__card", 3, "translateY", "protoId", "quality", "ngStyle", "click"], [3, "gameModeType", "gameModeId", "cards", "closeBundleChooser", "chooserSelectCards"]],
                 template: function (t, n) {
                     1 & t && (e.TgZ(0, "div", 0)(1, "div", 1), e._uU(2), e.ALo(3, "titlecase"), e.qZA(), e.TgZ(4, "div", 2), e.NdJ("click", function () {
-                        console.log('bundle clicked');
+                        return n.openBundleChooser();
                     }), e.YNc(5, Ga, 1, 7, "app-card2", 3), e.qZA()(), e.YNc(6, Ba, 1, 5, "app-card-chooser-overlay", 4)), 2 & t && (e.xp6(2), e.Oqu(e.lcZ(3, 3, n.bundle.header)), e.xp6(3), e.Q6J("ngForOf", n.bundle.cards), e.xp6(1), e.Q6J("ngIf", n.showCardChooserOverlay))
                 },
                 directives: [l.sg, J, Aa, l.PC, l.O5, Za],
@@ -4976,8 +4976,18 @@
                             defaultStylings: !1,
                             centered: !0
                         }).componentInstance;
-                        v.title = "You\u2019re about to leave", v.text = "Make sure you've saved your deck.", v.secondaryCtaText = "Cancel", v.primaryCtaText = "Confirm", v.onPrimaryCtaClick = () => {
-                            this.modalService.destroyTopModal(), this.akumaService.postControlEvent("gu", "MyDecks", "", "close", "Btn", "pressed")
+                        v.title = "Please confirm";
+                        v.text = "You will lose any unsaved changes. Are you sure you want to continue?";
+                        v.secondaryCtaText = "Save changes";
+                        v.primaryCtaText = "Continue";
+                        v.onPrimaryCtaClick = () => {
+                            this.modalService.destroyTopModal();
+                            this.akumaService.postControlEvent("gu", "MyDecks", "", "close", "Btn", "pressed");
+                        };
+                        v.onSecondaryCtaClick = () => {
+                            this.decksService.saveActiveDeck().subscribe();
+                            this.modalService.destroyTopModal();
+                            this.akumaService.postControlEvent("gu", "MyDecks", "", "close", "Btn", "pressed");
                         }
                     }
                 }
@@ -7545,7 +7555,7 @@
                     1 & t && (e._UZ(0, "app-modal-sidebar", 0), e.YNc(1, Hc, 1, 0, "app-rectangular-spinner", 1), e.YNc(2, Yc, 1, 5, "app-cards-list", 2), e.YNc(3, Jc, 1, 5, "app-active-deck", 3)), 2 & t && (e.Q6J("closeButtonClickFn", n.destroyModal), e.xp6(1), e.Q6J("ngIf", n.loading), e.xp6(1), e.Q6J("ngIf", !n.loading), e.xp6(1), e.Q6J("ngIf", n.activeDeck))
                 },
                 directives: [ye, l.O5, it, Tt, mn],
-                styles: ["[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;padding:0 calc(var(--vh) * 7.7);padding-top:calc(var(--vh) * 4.5);height:100%}app-cards-list[_ngcontent-%COMP%]{flex:1}app-active-deck[_ngcontent-%COMP%]{height:calc(var(--vh) * 37)}.spinner[_ngcontent-%COMP%]{margin:auto}.exportCta[_ngcontent-%COMP%]{position:absolute;top:calc(var(--vh) * 3);right:calc(var(--vh) * 17)}"]
+                styles: ["[_nghost-%COMP%]{display:flex;flex-flow:column nowrap;padding:0 calc(var(--vh) * 7.7);padding-top:calc(var(--vh) * 4.5);height:100%}app-cards-list[_ngcontent-%COMP%]{flex:1}app-active-deck[_ngcontent-%COMP%]{height:calc(var(--vh) * 37)}.spinner[_ngcontent-%COMP%]{margin:auto}.exportCta[_ngcontent-%COMP%]{position:absolute;top:calc(var(--vh) * 5);right:calc(var(--vh) * 17)}"]
             }), o
         })();
         g(21960), g(90473), g(85353), g(66678), g(43337), g(51256), g(263);
@@ -7954,7 +7964,7 @@
                         return n.newDeck()
                     }), e.qZA(), e.YNc(8, sl, 1, 4, "app-deck", 7), e.ALo(9, "async"), e.qZA()), 2 & t && (e.Q6J("ngIf", n.modalHosted), e.xp6(2), e.Q6J("godFilters", n.godFilters)("displayGroupingName", !1), e.xp6(3), e.Q6J("featureFlagIf", n.Flags.deckCodesEnabled), e.xp6(3), e.Q6J("ngForOf", e.lcZ(9, 6, n.filteredDecks$))("ngForTrackBy", n.trackDecksBy))
                 },
-                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.titleAndFiltering__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.titleAndFiltering__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-direction:column;height:100%;}[_nghost-%COMP%].modal-hosted{padding-top:28px}.titleAndFiltering[_ngcontent-%COMP%]{display:flex;padding-top:calc(var(--vh) * 2);top:calc(var(--vh) * 1.5);justify-content:space-between;align-items:center;margin:0 80px;min-height:calc(calc(var(--vh) * 9) - calc(var(--vh) * 1.5));padding:20px 0}.titleAndFiltering__title[_ngcontent-%COMP%]{text-transform:uppercase;color:#f6f6f6}.decksListing[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(8,1fr);align-items:start;grid-auto-rows:min-content;grid-column-gap:calc(var(--vw) * 1.6);padding:0 calc(var(--vw) * 4.16);padding-top:calc(var(--vh) * 4);height:100%;overflow:hidden;overflow-y:auto}.decksListing[_ngcontent-%COMP%] > *[_ngcontent-%COMP%]:last-child{margin-bottom:calc(var(--vh) * 6)}.createButton[_ngcontent-%COMP%]{width:calc(var(--vw) * 8.6);height:calc(var(--vh) * 23.5);margin-top:calc(var(--vh) * .5);justify-self:center}"],
+                styles: ["h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{margin:0}body[_ngcontent-%COMP%], label[_ngcontent-%COMP%], a[_ngcontent-%COMP%], div[_ngcontent-%COMP%], input[_ngcontent-%COMP%], button[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{font-family:Open Sans,sans-serif;font-weight:400}.titleAndFiltering__title[_ngcontent-%COMP%], h1[_ngcontent-%COMP%], h2[_ngcontent-%COMP%], h3[_ngcontent-%COMP%], h4[_ngcontent-%COMP%], h5[_ngcontent-%COMP%], h6[_ngcontent-%COMP%]{font-family:Unchained,serif;font-weight:700}.titleAndFiltering__title[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 2.96);line-height:1.3}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{display:flex;flex-direction:column;height:100%;}[_nghost-%COMP%].modal-hosted{padding-top:28px}.titleAndFiltering[_ngcontent-%COMP%]{display:flex;padding-top:calc(var(--vh) * 2);top:calc(var(--vh) * 1.5);justify-content:space-between;align-items:center;min-height:calc(calc(var(--vh) * 9) - calc(var(--vh) * 1.5));padding:20px 80px;box-shadow:0 3px 3px rgb(0 0 0 / 30%), 0 3px 3px rgb(0 0 0 / 30%);z-index:22;background:var(--gu-blue-dark)}.titleAndFiltering__title[_ngcontent-%COMP%]{text-transform:uppercase;color:#f6f6f6}.decksListing[_ngcontent-%COMP%]{grid-row-gap:calc(var(--vh) * 3.5);grid-column-gap:calc(var(--vw) * 1.2);display:grid;grid-template-columns:repeat(8,1fr);align-items:start;grid-auto-rows:min-content;grid-column-gap:calc(var(--vw) * 1.6);padding:0 calc(var(--vw) * 4.16);padding-top:calc(var(--vh) * 4);height:100%;overflow:hidden;overflow-y:auto}.decksListing[_ngcontent-%COMP%] > *[_ngcontent-%COMP%]:last-child{margin-bottom:calc(var(--vh) * 6)}.createButton[_ngcontent-%COMP%]{width:calc(var(--vw) * 8.6);height:calc(var(--vh) * 23.5);margin-top:calc(var(--vh) * .5);justify-self:center}"],
                 data: {
                     animation: [(0, C.X$)("deck", [(0, C.eR)(":enter", [(0, C.oB)({
                         transform: "scale(1.0)",

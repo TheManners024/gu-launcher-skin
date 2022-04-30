@@ -538,13 +538,13 @@ function getGlobalRouteContent(navLinkFn) {
                         }
                         for (const gm of Z) {
                           if (gm.id === 0) { // Solo
-                              gm.image_url = 'https://images.godsunchained.com/art2/1024/1492.jpg';
+                              gm.image_url = 'https://images.godsunchained.com/art2/1280/1492.jpg';
                           }
                           if (gm.id === 101) { // Tutorial
-                              gm.image_url = 'https://images.godsunchained.com/art2/1024/16.jpg';
+                              gm.image_url = 'https://images.godsunchained.com/art2/1280/1547.jpg';
                           }
                           if (gm.id === 6) { // Direct Challenge
-                              gm.image_url = 'https://images.godsunchained.com/art2/1280/42.jpg';
+                              gm.image_url = 'https://images.godsunchained.com/art2/1280/1600.jpg';
                           }
                           if (gm.id === 13) { // Rank Constructed
                               gm.image_url = 'https://images.godsunchained.com/art2/1280/101305.jpg';
@@ -3568,7 +3568,7 @@ return $.\u0275fac = function (y) {
                     return L.openSettings("immutable")
                 }), o._UZ(7, "gu-icon", 7), o.qZA(), o._UZ(8, "div", 8))
             },
-            styles: ["[_nghost-%COMP%]{width:100%;height:28px;z-index:23;background:#1D2F41;display:flex;flex-direction:row-reverse;padding-right:8px}.draggable[_ngcontent-%COMP%]{flex:1;-webkit-app-region:drag}.electronMenuItem[_ngcontent-%COMP%]{cursor:pointer;display:flex;width:28px}.electronMenuItem[_ngcontent-%COMP%]:hover   .electronMenuItem__icon[_ngcontent-%COMP%]{color:#f6f6f6}.electronMenuItem__icon[_ngcontent-%COMP%]{font-size:14px;margin:auto;text-shadow:0 2px 0 rgba(39,39,39,.4);color:#7192b0}"]
+            styles: ["[_nghost-%COMP%]{width:100%;height:28px;z-index:22;background:#1D2F41;display:flex;flex-direction:row-reverse;padding-right:8px}.draggable[_ngcontent-%COMP%]{flex:1;-webkit-app-region:drag}.electronMenuItem[_ngcontent-%COMP%]{cursor:pointer;display:flex;width:28px}.electronMenuItem[_ngcontent-%COMP%]:hover   .electronMenuItem__icon[_ngcontent-%COMP%]{color:#f6f6f6}.electronMenuItem__icon[_ngcontent-%COMP%]{font-size:14px;margin:auto;text-shadow:0 2px 0 rgba(39,39,39,.4);color:#7192b0}"]
         }), f
     })();
     var ts = s(39765), vs = s(25774), _t = s(97993);
@@ -11901,6 +11901,9 @@ return $.\u0275fac = function (y) {
         min-width: ${(0, e.asCssProp)((0, n.gridUnits)(85))};
         width: ${(0, e.asCssProp)((0, n.gridUnits)(85))};
         position: relative;
+        padding: 8px;
+        border-radius: 4px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
         padding-top: ${(0, e.asCssProp)((0, n.gridUnits)(8))};
       }
 
@@ -11977,12 +11980,16 @@ return $.\u0275fac = function (y) {
         margin: ${(0, e.asCssProp)((0, n.gridUnits)(1))};
         font-size: 20px;
         cursor: pointer;
+        z-index: 1;
       }
 
       .specialBanner {
         position: absolute;
-        top: ${(0, e.asCssProp)((0, n.gridUnits)(-2))};
-        left: ${(0, e.asCssProp)((0, n.gridUnits)(-2))};
+        top: 0px;
+        left: ${(0, e.asCssProp)((0, n.gridUnits)(-1))};
+        background: var(--gu-blue-dark);
+        border-left: solid 4px var(--gu-blue-hover);
+        border-bottom: solid 1px var(--gu-blue-hover);
       }
     `
         }
@@ -12090,7 +12097,7 @@ return $.\u0275fac = function (y) {
         static get styles() {
             return i.iv`
       :host {
-        width: ${(0, e.asCssProp)((0, n.gridUnits)(56))};
+        width: 100%;
       }
 
       gu-vertical-space {
@@ -16482,6 +16489,7 @@ return $.\u0275fac = function (y) {
     })(), be = (() => {
         class W {
             constructor(J, ie, ge, fe) {
+                console.log('fe: ', fe);
                 this.moduleCFR = J, this.injector = ie, this.modalStack = ge, this.config = fe
             }
 
@@ -19138,7 +19146,7 @@ return $.\u0275fac = function (y) {
                 1 & n && (l.F$t(), l.Hsn(0), l._UZ(1, "gu-paragraph-text", 0, 1)), 2 & n && (l.xp6(1), l.Q6J("kind", "large" === e.size ? "small" : "x-small")("ngClass", l.qbA(3, v, "top" === e.position, "left" === e.position, "right" === e.position, "bottom" === e.position, "large" === e.size))("innerHTML", e.title, l.oJD))
             },
             directives: [a.mk],
-            styles: ['.tooltipBubble[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes upAndDown2{0%{transform:translateY(-2%)}50%{transform:translateY(2%)}to{transform:translateY(-2%)}}@keyframes shine2{0%{filter:brightness(.96) hue-rotate(0deg)}50%{filter:brightness(1.12) hue-rotate(-10deg)}to{filter:brightness(.96) hue-rotate(0deg)}}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}[_nghost-%COMP%]{display:block;position:relative}[_nghost-%COMP%]:hover   .tooltipBubble[_ngcontent-%COMP%]{opacity:1}[_nghost-%COMP%]:hover   .tooltipBubble.tooltipBubble--top[_ngcontent-%COMP%]{transform:translate(-50%,calc(-100% + (calc(var(--vh) * 1.7) * .5)))}[_nghost-%COMP%]:hover   .tooltipBubble.tooltipBubble--bottom[_ngcontent-%COMP%]{transform:translate(-50%,calc(100% - (calc(var(--vh) * 1.7) * .5)))}[_nghost-%COMP%]:hover   .tooltipBubble.tooltipBubble--left[_ngcontent-%COMP%]{transform:translate(calc(-100% - (calc(var(--vw) * .5) * .5) * .5),-50%)}[_nghost-%COMP%]:hover   .tooltipBubble.tooltipBubble--right[_ngcontent-%COMP%]{transform:translate(calc(0% + (calc(var(--vw) * .5) * .5) * .5),-50%)}.openTooltip[_nghost-%COMP%]   .tooltipBubble[_ngcontent-%COMP%]{opacity:1}.openTooltip[_nghost-%COMP%]   .tooltipBubble.tooltipBubble--top[_ngcontent-%COMP%]{transform:translate(-50%,calc(-100% + (calc(var(--vh) * 1.7) * .5)))}.openTooltip[_nghost-%COMP%]   .tooltipBubble.tooltipBubble--bottom[_ngcontent-%COMP%]{transform:translate(-50%,calc(100% - (calc(var(--vh) * 1.7) * .5)))}.openTooltip[_nghost-%COMP%]   .tooltipBubble.tooltipBubble--left[_ngcontent-%COMP%]{transform:translate(calc(-100% - (calc(var(--vw) * .5) * .5) * .5),-50%)}.openTooltip[_nghost-%COMP%]   .tooltipBubble.tooltipBubble--right[_ngcontent-%COMP%]{transform:translate(calc(0% + (calc(var(--vw) * .5) * .5) * .5),-50%)}.tooltipBubble[_ngcontent-%COMP%]{z-index:1;text-transform:capitalize;padding:calc(var(--vh) * 1.3);padding-top:calc(var(--vh) * .8);padding-bottom:calc(var(--vh) * .8);font-weight:600;user-select:none;pointer-events:none;position:absolute;background:#0f1b27;border:calc(var(--vh) * .15) solid #3d5a74;color:#92abc2;white-space:nowrap;border-radius:calc(var(--vh) * .4);opacity:0;left:50%;text-align:center}.tooltipBubble[_ngcontent-%COMP%]:before{content:"";position:absolute;left:50%;border:calc(var(--vh) * .7) solid transparent;transform:translate(-50%)}.tooltipBubble--large[_ngcontent-%COMP%]{font-weight:400;font-size:16px;padding:16px;text-transform:none}.tooltipBubble--top[_ngcontent-%COMP%]{top:0;transform:translate(-50%,-100%);margin-top:calc(calc(var(--vh) * 1.7) * -1)}.tooltipBubble--top[_ngcontent-%COMP%]:before{border-top-color:#3d5a74;bottom:calc(calc(calc(var(--vh) * .7) * -2) - calc(var(--vh) * .15))}.tooltipBubble--bottom[_ngcontent-%COMP%]{bottom:0;transform:translate(-50%,100%);margin-top:calc(var(--vh) * 1.7)}.tooltipBubble--bottom[_ngcontent-%COMP%]:before{border-bottom-color:#3d5a74;top:calc(calc(calc(var(--vh) * .7) * -2) - calc(var(--vh) * .15))}.tooltipBubble--left[_ngcontent-%COMP%]{left:0;top:50%}.tooltipBubble--left[_ngcontent-%COMP%]:before{left:100%;transform:translateY(50%);border-left-color:#3d5a74;right:calc(calc(calc(var(--vh) * .7) * -2) - calc(var(--vh) * .15));bottom:50%}.tooltipBubble--right[_ngcontent-%COMP%]{margin-left:10px;top:50%}.tooltipBubble--right[_ngcontent-%COMP%]:before{right:100%;transform:translateY(50%);border-right-color:#3d5a74;left:calc(calc(calc(var(--vh) * .7) * -2) - calc(var(--vh) * .15));bottom:50%}']
+            styles: ['.tooltipBubble[_ngcontent-%COMP%]{font-size:calc(var(--vh) * 1.48)}@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes upAndDown2{0%{transform:translateY(-2%)}50%{transform:translateY(2%)}to{transform:translateY(-2%)}}@keyframes shine2{0%{filter:brightness(.96) hue-rotate(0deg)}50%{filter:brightness(1.12) hue-rotate(-10deg)}to{filter:brightness(.96) hue-rotate(0deg)}}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}[_nghost-%COMP%]{display:block;position:relative}[_nghost-%COMP%]:hover   .tooltipBubble[_ngcontent-%COMP%]{opacity:1}[_nghost-%COMP%]:hover   .tooltipBubble.tooltipBubble--top[_ngcontent-%COMP%]{transform:translate(-50%,calc(-100% + (calc(var(--vh) * 1.7) * .5)))}[_nghost-%COMP%]:hover   .tooltipBubble.tooltipBubble--bottom[_ngcontent-%COMP%]{transform:translate(-50%,calc(100% - (calc(var(--vh) * 1.7) * .5)))}[_nghost-%COMP%]:hover   .tooltipBubble.tooltipBubble--left[_ngcontent-%COMP%]{transform:translate(calc(-100% - (calc(var(--vw) * .5) * .5) * .5),-50%)}[_nghost-%COMP%]:hover   .tooltipBubble.tooltipBubble--right[_ngcontent-%COMP%]{transform:translate(calc(0% + (calc(var(--vw) * .5) * .5) * .5),-50%)}.openTooltip[_nghost-%COMP%]   .tooltipBubble[_ngcontent-%COMP%]{opacity:1}.openTooltip[_nghost-%COMP%]   .tooltipBubble.tooltipBubble--top[_ngcontent-%COMP%]{transform:translate(-50%,calc(-100% + (calc(var(--vh) * 1.7) * .5)))}.openTooltip[_nghost-%COMP%]   .tooltipBubble.tooltipBubble--bottom[_ngcontent-%COMP%]{transform:translate(-50%,calc(100% - (calc(var(--vh) * 1.7) * .5)))}.openTooltip[_nghost-%COMP%]   .tooltipBubble.tooltipBubble--left[_ngcontent-%COMP%]{transform:translate(calc(-100% - (calc(var(--vw) * .5) * .5) * .5),-50%)}.openTooltip[_nghost-%COMP%]   .tooltipBubble.tooltipBubble--right[_ngcontent-%COMP%]{transform:translate(calc(0% + (calc(var(--vw) * .5) * .5) * .5),-50%)}.tooltipBubble[_ngcontent-%COMP%]{z-index:30;text-transform:capitalize;padding:calc(var(--vh) * 1.3);padding-top:calc(var(--vh) * .8);padding-bottom:calc(var(--vh) * .8);font-weight:600;user-select:none;pointer-events:none;position:absolute;background:#0f1b27;border:calc(var(--vh) * .15) solid #3d5a74;color:#92abc2;white-space:nowrap;border-radius:calc(var(--vh) * .4);opacity:0;left:50%;text-align:center}.tooltipBubble[_ngcontent-%COMP%]:before{content:"";position:absolute;left:50%;border:calc(var(--vh) * .7) solid transparent;transform:translate(-50%)}.tooltipBubble--large[_ngcontent-%COMP%]{font-weight:400;font-size:16px;padding:16px;text-transform:none}.tooltipBubble--top[_ngcontent-%COMP%]{top:0;transform:translate(-50%,-100%);margin-top:calc(calc(var(--vh) * 1.7) * -1)}.tooltipBubble--top[_ngcontent-%COMP%]:before{border-top-color:#3d5a74;bottom:calc(calc(calc(var(--vh) * .7) * -2) - calc(var(--vh) * .15))}.tooltipBubble--bottom[_ngcontent-%COMP%]{bottom:0;transform:translate(-50%,100%);margin-top:calc(var(--vh) * 1.7)}.tooltipBubble--bottom[_ngcontent-%COMP%]:before{border-bottom-color:#3d5a74;top:calc(calc(calc(var(--vh) * .7) * -2) - calc(var(--vh) * .15))}.tooltipBubble--left[_ngcontent-%COMP%]{left:0;top:50%}.tooltipBubble--left[_ngcontent-%COMP%]:before{left:100%;transform:translateY(50%);border-left-color:#3d5a74;right:calc(calc(calc(var(--vh) * .7) * -2) - calc(var(--vh) * .15));bottom:50%}.tooltipBubble--right[_ngcontent-%COMP%]{margin-left:10px;top:50%}.tooltipBubble--right[_ngcontent-%COMP%]:before{right:100%;transform:translateY(50%);border-right-color:#3d5a74;left:calc(calc(calc(var(--vh) * .7) * -2) - calc(var(--vh) * .15));bottom:50%}']
         }), d
     })()
 }, 25774

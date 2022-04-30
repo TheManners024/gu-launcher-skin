@@ -3211,6 +3211,23 @@ html {
     scrollbar-color: #3D5A74 var(--gu-blue-dark);
 }
 
+main::before {
+    background-image: url(https://images.godsunchained.com/art2/1920/1524.jpg);
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    content: " ";
+    z-index: 0;
+    opacity: 0.075;
+    background-blend-mode: luminosity;
+    background-color: var(--gu-blue-dark);
+}
+
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px
@@ -3239,7 +3256,7 @@ textarea:focus {
 }
 
 cerberus-draggable-titlebar:not(.fake-selector) {
-    background: none !important;
+    background: var(--gu-blue-dark) !important;
 }
 
 cerberus-navbar-user-avatar {
@@ -3254,6 +3271,22 @@ cerberus-navbar-main-menu:not(.fake-selector) {
     margin: auto 8px;
     padding: 0 16px;
 }
+
+cerberus-confirm-modal .ctaSection__button[type="secondary"] {
+    /*border: solid 1px transparent;*/
+    /*transition: color 280ms cubic-bezier(.4,0,.2,1), border-color 280ms cubic-bezier(.4,0,.2,1);*/
+}
+
+cerberus-confirm-modal .ctaSection__button[type="secondary"]:hover {
+    /*color: var(--gu-blue);*/
+    /*border-color: var(--gu-blue);*/
+}
+
+cerberus-confirm-modal .ctaSection__button[type="primary"]:not(:hover) {
+    color: var(--gu-red);
+    border: solid 1px var(--gu-red);
+}
+
 
 gu-plain-square-button {
     --textFillColor: var(--gu-blue) !important;
@@ -3665,6 +3698,7 @@ cerberus-forge-card-list.cardBrowserArea .sectionHeader .sectionHeader__title {
     color: var(--gu-blue-hover) !important;
     background: var(--gu-blue-dark) !important;
     border-color: var(--gu-blue-hover) !important;
+    z-index: 22;
 }
 
 gu-paragraph-text.tooltipBubble--top:before {
