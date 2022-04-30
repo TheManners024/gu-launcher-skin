@@ -20881,28 +20881,26 @@ return $.\u0275fac = function (y) {
                 }, Eo = () => {
                     console.log("RESET TEMPLE CODE"), re({type: Ue}), lt.p8.set(q.current, {clearProps: "all"})
                 }, qs = nt && !De && ye, eo = !Ke.set || Object.keys(je).length === Ke.cards.length,
-                ds = eo && !k.length && nt;
+                ds = eo && !k.length;
             return xe.dy`
     <div class="videoAspectRatio" ?domRef=${(0, Ce.Q)(L)}>
       <img class="videoAspectRatio__img" alt="ratio image" src="/assets/images/ratio-images/16-x-9-ratio.png" />      
 
       <gu-temple-pack-card-listing></gu-temple-pack-card-listing>
 
-      <div
-        class=${(0, be.$)({ctasArea: !0})}
-      >
+      <div class="ctasArea">
         ${ds ? xe.dy`
               <gu-primary-hex-button
                 size="large"
                 type="primary"
-                href=${`imtbl://${b.gv.routeContent().home.path}`}
+                href=${`imtbl://${b.gv.routeContent({}).home.path}`}
                 class="ctasArea__cta ctasArea__cta--buyPacksCta"
                 data-test-id="buyPacksCTA"
               >
                 Play to Unlock
               </gu-primary-hex-button>
             ` : null}
-        ${k.length ? xe.dy`
+        ${!!k.length ? xe.dy`
               <gu-primary-hex-button size="large" type="primary" @click=${() => {
                 lt.p8.set(q.current, {clearProps: "all"});
                 re({type: Q});
@@ -20921,7 +20919,7 @@ return $.\u0275fac = function (y) {
       </div>
 
       ${nt ? xe.dy` <gu-temple-chest-layer .unOpenedChests=${V} .volume=${p}></gu-temple-chest-layer> ` : null}
-      ${Ke.set ? xe.dy`
+      ${!!Ke.set ? xe.dy`
             <gu-card-pack-picture
               type="temple"
               set=${Ke.set}
