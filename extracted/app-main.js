@@ -21378,7 +21378,7 @@ return $.\u0275fac = function (y) {
                 }
             },
             directives: [l.O5, l.sg],
-            styles: ["[_nghost-%COMP%]{display: flex;flex-flow: column nowrap;align-items: center}.background[_ngcontent-%COMP%], .background__picture[_ngcontent-%COMP%]{display: none;}.storeSection[_ngcontent-%COMP%]{position: relative;overflow-y: auto;width: 100%}.storeSection__header[_ngcontent-%COMP%]{padding: 0 8px}.storeSection__header[_ngcontent-%COMP%] gu-paragraph-text[_ngcontent-%COMP%]{max-width: 630px;margin: auto}.storeSection__specials[_ngcontent-%COMP%]{display: flex;flex-wrap: wrap;justify-content: center}.emptyStateSection[_ngcontent-%COMP%]{position: relative;margin: auto}"]
+            styles: ["[_nghost-%COMP%]{background:var(--gu-blue-dark);display: flex;flex-flow: column nowrap;align-items: center}.background[_ngcontent-%COMP%], .background__picture[_ngcontent-%COMP%]{display: none;}.storeSection[_ngcontent-%COMP%]{background-image:url(https://images.godsunchained.com/art2/1920/1683.jpg);background-size:cover;background-position:center;background-color:#000000cc;background-blend-mode:luminosity;position: relative;overflow-y: auto;width: 100%}.storeSection__header[_ngcontent-%COMP%]{padding: 0 8px}.storeSection__header[_ngcontent-%COMP%] gu-paragraph-text[_ngcontent-%COMP%]{max-width: 630px;margin: auto}.storeSection__specials[_ngcontent-%COMP%]{display: flex;flex-wrap: wrap;justify-content: center}.emptyStateSection[_ngcontent-%COMP%]{position: relative;margin: auto}"]
         }), k
     })();
 

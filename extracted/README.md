@@ -110,6 +110,11 @@ something lower like 150
 - calcThumbnail() will need to be edited so we can have our top card from the deck be a card from a neutral domain.
 - calcTopCards() needs to be updated to accept deckId as a final parameter and use that to fetch the preferred showcase
 card from localStorage.
+- Fix workshop modal when leaving deck builder. Add ability to save deck or cancel.
+- Navbar shadows and background image updates.
+- Add pack open background image.
+- Game mode card image updates.
+- Workshop bg image
 
 ### Other stuff
 
