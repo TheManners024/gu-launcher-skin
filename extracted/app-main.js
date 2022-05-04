@@ -16044,7 +16044,6 @@ return $.\u0275fac = function (y) {
                 lore: {shortName: "lore", url: "//blog.godsunchained.com/category/lore"},
                 blog: {shortName: "blog", url: "//blog.godsunchained.com"},
                 guide: {shortName: "guide", url: "//blog.godsunchained.com/learn-to-play"},
-                referrals: {shortName: "Referrals", path: "game/gu/referrals"},
                 combatRecorder: {shortName: "Review game", url: "https://gufaq.com/logs"}
             }
         }
@@ -20893,7 +20892,7 @@ return $.\u0275fac = function (y) {
               <gu-primary-hex-button
                 size="large"
                 type="primary"
-                href=${`imtbl://${b.gv.routeContent({}).home.path}`}
+                href=${`${b.gv.routeContent({}).home.path}`}
                 class="ctasArea__cta ctasArea__cta--buyPacksCta"
                 data-test-id="buyPacksCTA"
               >
@@ -21370,15 +21369,15 @@ return $.\u0275fac = function (y) {
             selectors: [["cerberus-star-store-route"]],
             decls: 8,
             vars: 2,
-            consts: [[1, "background"], [1, "background__picture"], ["srcset", "\n        /assets/images/misc-art/misc-art--star-store@1x.webp 2284w,\n        /assets/images/misc-art/misc-art--star-store@1x.webp 1714w,\n        /assets/images/misc-art/misc-art--star-store@1x.webp 1142w,\n        /assets/images/misc-art/misc-art--star-store@1x.webp  572w\n      ", "type", "image/webp"], ["srcset", "\n        /assets/images/misc-art/misc-art--star-store@1x.jpg 2284w,\n        /assets/images/misc-art/misc-art--star-store@1x.jpg 1714w,\n        /assets/images/misc-art/misc-art--star-store@1x.jpg 1142w,\n        /assets/images/misc-art/misc-art--star-store@1x.jpg  572w\n      ", "type", "image/jpg"], ["src", "/assets/images/misc-art/misc-art--star-store@1x.jpg", "alt", "", 1, "background__picture__img"], [4, "ngIf", "ngIfElse"], ["emptyStateSection", ""], [1, "storeSection"], ["top", "x-large", 1, "storeSection__header"], ["size", "x-large", "fillGradient", "gradients.gold.simple", "align", "center"], ["kind", "large", "align", "center", "fillColor", "colors.light.100"], ["top", "x-large", 1, "storeSection__specials"], [4, "ngFor", "ngForOf"], ["class", "storeSection__specials__item", 3, "price", "imageUrl", "name", "durationType", "endTimestamp", "title", "onBuyItem", "onMoreInfo", 4, "ngIf"], [1, "storeSection__specials__item", 3, "price", "imageUrl", "name", "durationType", "endTimestamp", "title", "onBuyItem", "onMoreInfo"], [1, "emptyStateSection"]],
+            consts: [[1, "background"], [1, "background__picture"], ["srcset", "", "type", "image/webp"], ["srcset", "", "type", "image/jpg"], ["src", "", "alt", "", 1, "background__picture__img"], [4, "ngIf", "ngIfElse"], ["emptyStateSection", ""], [1, "storeSection"], ["top", "x-large", 1, "storeSection__header"], ["size", "x-large", "fillGradient", "gradients.gold.simple", "align", "center"], ["kind", "large", "align", "center", "fillColor", "colors.light.100"], ["top", "x-large", 1, "storeSection__specials"], [4, "ngFor", "ngForOf"], ["class", "storeSection__specials__item", 3, "price", "imageUrl", "name", "durationType", "endTimestamp", "title", "onBuyItem", "onMoreInfo", 4, "ngIf"], [1, "storeSection__specials__item", 3, "price", "imageUrl", "name", "durationType", "endTimestamp", "title", "onBuyItem", "onMoreInfo"], [1, "emptyStateSection"]],
             template: function (p, R) {
-                if (1 & p && (t.TgZ(0, "div", 0)(1, "picture", 1), t._UZ(2, "source", 2)(3, "source", 3)(4, "img", 4), t.qZA()(), t.YNc(5, Bt, 11, 1, "ng-container", 5), t.YNc(6, zs, 5, 0, "ng-template", null, 6, t.W1O)), 2 & p) {
+                if (1 & p && (t.TgZ(0, "div", 0)(1, "div", 1), t._UZ(2, "source", 2)(3, "source", 3)(4, "img", 4), t.qZA()(), t.YNc(5, Bt, 11, 1, "ng-container", 5), t.YNc(6, zs, 5, 0, "ng-template", null, 6, t.W1O)), 2 & p) {
                     const q = t.MAs(7);
                     t.xp6(5), t.Q6J("ngIf", R.currentItemsToDisplay)("ngIfElse", q)
                 }
             },
             directives: [l.O5, l.sg],
-            styles: ["[_nghost-%COMP%]{background:var(--gu-blue-dark);display: flex;flex-flow: column nowrap;align-items: center}.background[_ngcontent-%COMP%], .background__picture[_ngcontent-%COMP%]{display: none;}.storeSection[_ngcontent-%COMP%]{background-image:url(https://images.godsunchained.com/art2/1920/1683.jpg);background-size:cover;background-position:center;background-color:#000000cc;background-blend-mode:luminosity;position: relative;overflow-y: auto;width: 100%}.storeSection__header[_ngcontent-%COMP%]{padding: 0 8px}.storeSection__header[_ngcontent-%COMP%] gu-paragraph-text[_ngcontent-%COMP%]{max-width: 630px;margin: auto}.storeSection__specials[_ngcontent-%COMP%]{display: flex;flex-wrap: wrap;justify-content: center}.emptyStateSection[_ngcontent-%COMP%]{position: relative;margin: auto}"]
+            styles: ["[_nghost-%COMP%]{background:var(--gu-blue-dark);display: flex;flex-flow: column nowrap;align-items: center}.background[_ngcontent-%COMP%], .background__picture[_ngcontent-%COMP%]{display: none;}.storeSection[_ngcontent-%COMP%]{min-height:100%;background-image:url(https://images.godsunchained.com/art2/1920/1683.jpg);background-size:cover;background-position:center;background-color:#000000cc;background-blend-mode:luminosity;position: relative;overflow-y: auto;width: 100%}.storeSection__header[_ngcontent-%COMP%]{padding: 0 8px}.storeSection__header[_ngcontent-%COMP%] gu-paragraph-text[_ngcontent-%COMP%]{max-width: 630px;margin: auto}.storeSection__specials[_ngcontent-%COMP%]{display: flex;flex-wrap: wrap;justify-content: center}.emptyStateSection[_ngcontent-%COMP%]{position: relative;margin: auto}"]
         }), k
     })();
 

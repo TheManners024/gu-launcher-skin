@@ -3296,7 +3296,7 @@ gu-plain-square-button {
 }
 
 gu-primary-hex-button:not(.fake-selector) {
-    border-radius: 25px;
+    border-radius: 4px;
     background: var(--gu-blue-dark);
     z-index: 9;
     text-align: center;
