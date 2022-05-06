@@ -371,14 +371,17 @@ function createWindow(frontEndUrl) {
         callback(path);
     });
     // For future reference
+    // https://master.desktop.godsunchained.com/main.bf0fbe0b1765632c.js
     // https://master.desktop.godsunchained.com/runtime.dda8f66dbd773a5e.js
     // https://master.desktop.godsunchained.com/polyfills.4ecc533a6c680949.js
     // https://master.desktop.godsunchained.com/vendor.2f5ff66239d95a12.js
-    // https://master.desktop.godsunchained.com/main.bf0fbe0b1765632c.js
     // https://master.desktop.godsunchained.com/900.cdbfa5f7689195d8.js
     electron_1.session.defaultSession.webRequest.onBeforeRequest({
         urls: [
             'https://master.desktop.godsunchained.com/main.*.js',
+            'https://master.desktop.godsunchained.com/runtime.*.js',
+            'https://master.desktop.godsunchained.com/polyfill.*.js',
+            'https://master.desktop.godsunchained.com/vendor.*.js',
             'https://master.desktop.godsunchained.com/900.*.js',
             'https://master.desktop.godsunchained.com/styles.*.css',
             'https://master.desktop.godsunchained.com/gu-assets/images/rank-progress/gu-progress-rank-cracks--*.svg',
@@ -386,27 +389,53 @@ function createWindow(frontEndUrl) {
             'https://master.desktop.godsunchained.com/assets/images/ui-embellishments/ui--divider-complex-2.svg',
             'https://master.desktop.godsunchained.com/new-relic.*.js',
             'https://deck.prod.prod.godsunchained.com/deck',
-            'https://www.facebook.com/*'
+            'https://www.facebook.com/*',
+            'https://connect.facebook.net/*',
+            'https://www.googletagmanager.com/*',
+            'https://akuma.immutable.com/*'
         ]
     }, (details, callback) => {
         let url = null;
         if (details.url.match(/main[.].+[.]js$/)) {
             url = path.normalize(`${__dirname}/app-main.js`);
-        } else if (details.url.match(/styles[.].*[.]css$/)) {
+        }
+        else if (details.url.match(/runtime[.].+[.]js$/)) {
+            url = path.normalize(`${__dirname}/source/app-runtime.js`);
+        }
+        else if (details.url.match(/polyfill[.].+[.]js$/)) {
+            url = path.normalize(`${__dirname}/source/app-polyfill.js`);
+        }
+        else if (details.url.match(/vendor[.].+[.]js$/)) {
+            url = path.normalize(`${__dirname}/source/app-vendor.js`);
+        }
+        else if (details.url.match(/styles[.].*[.]css$/)) {
             url = path.normalize(`${__dirname}/app-styles.css`);
-        } else if (details.url.match(/900[.].+[.]js$/) != null) {
+        }
+        else if (details.url.match(/900[.].+[.]js$/) != null) {
             url = path.normalize(`${__dirname}/app-chunk.js`);
-        } else if (details.url.match(/gu-progress-rank-cracks--[\d][.]svg$/) != null) {
+        }
+        else if (details.url.match(/gu-progress-rank-cracks--[\d][.]svg$/) != null) {
             url = path.normalize(`${__dirname}/${details.url.split('.com').pop()}`);
-        } else if (details.url.endsWith('new-relic.prod.js')) {
+        }
+        else if (details.url.endsWith('new-relic.prod.js')) {
             return callback({cancel: true, redirectURL: undefined});
-        } else if (details.url.endsWith('gu-gmc-snipe.svg')) {
+        }
+        else if (details.url.endsWith('gu-gmc-snipe.svg')) {
             url = path.normalize(`${__dirname}/${details.url.split('.com').pop()}`);
-        } else if (details.url.endsWith('ui--divider-complex-2.svg')) {
+        }
+        else if (details.url.endsWith('ui--divider-complex-2.svg')) {
             url = path.normalize(`${__dirname}/${details.url.split('.com').pop()}`);
-        } else if (details.url.match(/.*deck\.prod\.prod\.godsunchained\.com\/deck$/) != null) {
+        }
+        else if (details.url.match(/.*deck\.prod\.prod\.godsunchained\.com\/deck$/) != null) {
             return callback({redirectURL: 'intercept://deck.prod.prod.godsunchained.com/deck'})
-        } else if (details.url.match(/.*facebook.com.*/i)) { // why is this a thing
+        }
+        else if (details.url.match(/.*facebook[.].*/i)) { // why is this a thing
+            return callback({cancel: true});
+        }
+        else if (details.url.match(/.*googletagmanager[.].*/i)) {
+            return callback({cancel: true});
+        }
+        else if (details.url.match(/.*akuma[.]immutable[.].*/i)) {
             return callback({cancel: true});
         }
 
