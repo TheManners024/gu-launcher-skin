@@ -516,26 +516,6 @@ function getGlobalRouteContent(navLinkFn) {
 
                 fetchGameModes(H = !1) {
                     (0, i.aj)([this.fetchPlayerGameModes$(), this.getLock$(), this.fetchPlayerRanks$()]).pipe((0, u.q)(1), (0, r.U)(([Z, de, xe]) => Z.map(be => this.transformGameModes(be, de, xe))), (0, e.b)(Z => {
-                        if (!Z.find((gm) => gm.id === 13)) {
-                            Z.push({
-                                "id": 13,
-                                "name": "Ranked",
-                                "description": "Rise the ranks, unlock rewards and earn flux for card crafting",
-                                "required_level": 0,
-                                "properties": {
-                                  "link": "https://blog.godsunchained.com/2020/09/18/weekend-ranked-constructed-september-2020-update-3/",
-                                  "sub_type": 2,
-                                  "type": 1
-                                },
-                                "ranked": true,
-                                "order": 2,
-                                "end_time": "2022-05-02T12:00:00.470963Z",
-                                "image_url": "https://images.godsunchained.com/misc/rank_constructed.webp",
-                                "paid": false,
-                                "rotation": 1,
-                                "end_time_remaining": 233198
-                            });
-                        }
                         for (const gm of Z) {
                           if (gm.id === 0) { // Solo
                               gm.image_url = 'https://images.godsunchained.com/art2/1280/1492.jpg';
@@ -2116,7 +2096,7 @@ return $.\u0275fac = function (y) {
                 }), i.YNc(2, n, 0, 0, "ng-template", null, 2, i.W1O), i.qZA()), 2 & x && (i.xp6(1), i.Q6J("ngStyle", $.styles))
             },
             directives: [d.PC],
-            styles: ["@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{position:fixed;top:0;left:0;width:100%;height:100%;display:block}.bgOverlay[_ngcontent-%COMP%]{position:absolute;right:0;left:0;top:0;bottom:0;background-color:#0c1620;opacity:.7}.bgOverlay--transparent[_ngcontent-%COMP%]{background:transparent}.modalContentContainer[_ngcontent-%COMP%]{position:absolute;top:0;left:0;opacity:1}"]
+            styles: ["@keyframes blink{0%{opacity:.2}20%{opacity:1}to{opacity:.2}}@keyframes glowing{0%{box-shadow:0 0 -10px #28a1ee}40%{box-shadow:0 0 10px #28a1ee}60%{box-shadow:0 0 10px #28a1ee}to{box-shadow:0 0 -10px #28a1ee}}@keyframes moving-gradient{0%{background-position:left}to{background-position:right}}@keyframes spin{to{transform:rotate(360deg)}}[_nghost-%COMP%]{position:fixed;top:0;left:0;width:100%;height:100%;display:block}.bgOverlay[_ngcontent-%COMP%]{position:absolute;right:0;left:0;top:0;bottom:0;background-color:#0c1620;opacity:.7}.bgOverlay--transparent[_ngcontent-%COMP%]{background:transparent}.modalContentContainer[_ngcontent-%COMP%]{padding-top:28px;position:absolute;top:0;left:0;opacity:1}"]
         }), I
     })();
     var r = s(52492), b = s(44416), P = s(6674);
@@ -5341,11 +5321,12 @@ return $.\u0275fac = function (y) {
     justify-content: center;
     align-items: center;
     border-radius: ${(0, e.asCssProp)((0, n.gridUnits)(.75))};
-    background: ${(0, e.asCssProp)(r.colors.gunmetal[700])};
-    border: ${(0, e.asCssProp)((0, n.gridUnits)(.5))} solid ${(0, e.asCssProp)(r.colors.gunmetal[500])};
-    color: ${(0, e.asCssProp)(r.colors.gunmetal[100])};
+    background: var(--gu-blue-dark) !important;
+    border: solid 1px var(--gu-blue) !important;
+    color: var(--gu-blue) !important;
     flex-grow: 0;
     height: ${(0, e.asCssProp)((0, n.gridUnits)(9))};
+    transition: color 280ms cubic-bezier(.4,0,.2,1) border-color 280ms cubic-bezier(.4,0,.2,1);
   }
 
   /* Button content styles
@@ -5435,20 +5416,19 @@ return $.\u0275fac = function (y) {
   /*  HOVER & MOUSEDOWN FX
   ----------------------------------------------------------------------------------- */
   :host(:hover) {
-    background: ${(0, e.asCssProp)(r.colors.gunmetal[500])};
-    border: ${(0, e.asCssProp)((0, n.gridUnits)(.5))} solid ${(0, e.asCssProp)(r.colors.gunmetal[300])};
-    color: ${(0, e.asCssProp)(r.colors.light[300])};
+    border-color: var(--gu-yellow) !important;
+    color: var(--gu-yellow) !important;
   }
 
   :host(:active) {
-    background: ${(0, e.asCssProp)(r.colors.gunmetal[500])};
-    border: ${(0, e.asCssProp)((0, n.gridUnits)(.5))} solid ${(0, e.asCssProp)(r.colors.light[300])};
-    color: ${(0, e.asCssProp)(r.colors.light[100])};
+    // background: transparent;
+    // border-color: var(--gu-yellow);
+    // color: var(--gu-yellow);
   }
 
   :host([borderColorHover]:hover),
   :host([borderColorHover]:hover) ::slotted(*) {
-    box-shadow: 0px 0px ${(0, e.asCssProp)((0, n.gridUnits)(1))} var(--borderColorHover);
+    // box-shadow: 0px 0px ${(0, e.asCssProp)((0, n.gridUnits)(1))} var(--borderColorHover);
   }
 
   ${(0, e.asCssProp)(H.fillColoringRules)}
@@ -5934,19 +5914,6 @@ return $.\u0275fac = function (y) {
   }
 `;
     const Ee = i.dy`
-  <div class="waveArtwork">
-    <picture class="waveArtwork__side waveArtwork__side--top">
-      <source srcset="/assets/images/hex-button/hex-button--top-wave-art.webp" type="image/webp" />
-      <source srcset="/assets/images/hex-button/hex-button--top-wave-art.png" type="image/png" />
-      <img src="/assets/images/hex-button/hex-button--top-wave-art.png" />
-    </picture>
-
-    <picture class="waveArtwork__side waveArtwork__side--bottom">
-      <source srcset="/assets/images/hex-button/hex-button--bottom-wave-art.webp" type="image/webp" />
-      <source srcset="/assets/images/hex-button/hex-button--bottom-wave-art.png" type="image/png" />
-      <img src="/assets/images/hex-button/hex-button--bottom-wave-art.png" />
-    </picture>
-  </div>
 `;
     customElements.define("gu-special-hex-flat-button", (0, Y.x)({
         renderer: function it({color: z, text: g, loading: A, loadingColor: X}) {
@@ -20898,6 +20865,9 @@ return $.\u0275fac = function (y) {
               >
                 Play to Unlock
               </gu-primary-hex-button>
+              <gu-vertical-space top="large">
+                <gu-heading-text size="2x-small" align="center">&nbsp;</gu-heading-text>
+              </gu-vertical-space>
             ` : null}
         ${!!k.length ? xe.dy`
               <gu-primary-hex-button size="large" type="primary" @click=${() => {
