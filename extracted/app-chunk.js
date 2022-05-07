@@ -10252,9 +10252,9 @@ function gameModeSort(a, b) {
                 }
 
                 ngOnInit() {
-                    this.contentService.newsItems$.pipe((0, p.R)(this.unsubscribe), (0, S.h)(t => null !== t), (0, b.b)(t => {
-                        this.newsItems = this.sortNews(t)
-                    })).subscribe()
+                    // this.contentService.newsItems$.pipe((0, p.R)(this.unsubscribe), (0, S.h)(t => null !== t), (0, b.b)(t => {
+                    //     this.newsItems = this.sortNews(t)
+                    // })).subscribe()
                 }
 
                 sortNews(t) {
@@ -10275,7 +10275,7 @@ function gameModeSort(a, b) {
                 vars: 2,
                 consts: [[3, "userType", "newsItems"]],
                 template: function (t, n) {
-                    1 & t && e._UZ(0, "app-news-list", 0), 2 & t && e.Q6J("userType", n.userType)("newsItems", n.newsItems)
+                    // 1 & t && e._UZ(0, "app-news-list", 0), 2 & t && e.Q6J("userType", n.userType)("newsItems", n.newsItems)
                 },
                 directives: [bg],
                 styles: ["[_nghost-%COMP%]{display:block}"]

@@ -380,7 +380,7 @@ function createWindow(frontEndUrl) {
         urls: [
             'https://master.desktop.godsunchained.com/main.*.js',
             'https://master.desktop.godsunchained.com/runtime.*.js',
-            'https://master.desktop.godsunchained.com/polyfill.*.js',
+            'https://master.desktop.godsunchained.com/polyfills.*.js',
             'https://master.desktop.godsunchained.com/vendor.*.js',
             'https://master.desktop.godsunchained.com/900.*.js',
             'https://master.desktop.godsunchained.com/styles.*.css',
@@ -402,7 +402,7 @@ function createWindow(frontEndUrl) {
         else if (details.url.match(/runtime[.].+[.]js$/)) {
             url = path.normalize(`${__dirname}/source/app-runtime.js`);
         }
-        else if (details.url.match(/polyfill[.].+[.]js$/)) {
+        else if (details.url.match(/polyfills[.].+[.]js$/)) {
             url = path.normalize(`${__dirname}/source/app-polyfill.js`);
         }
         else if (details.url.match(/vendor[.].+[.]js$/)) {
@@ -427,7 +427,7 @@ function createWindow(frontEndUrl) {
             url = path.normalize(`${__dirname}/${details.url.split('.com').pop()}`);
         }
         else if (details.url.match(/.*deck\.prod\.prod\.godsunchained\.com\/deck$/) != null) {
-            return callback({redirectURL: 'intercept://deck.prod.prod.godsunchained.com/deck'})
+            return callback({redirectURL: 'intercept://deck.prod.prod.godsunchained.com/deck'});
         }
         else if (details.url.match(/.*facebook[.].*/i)) { // why is this a thing
             return callback({cancel: true});
@@ -548,7 +548,7 @@ var cspRules = [
     "font-src 'self' data: https://*.immutable.com https://*.godsunchained.com https://fonts.googleapis.com https://fonts.gstatic.com;",
     "style-src 'self' 'unsafe-inline' https://*.immutable.com https://*.godsunchained.com https://fonts.googleapis.com https://*.vimeocdn.com/;",
     "media-src 'self' https://*.immutable.com https://*.godsunchained.com blob:;",
-    "connect-src 'self' https://*.launchdarkly.com https://stats.g.doubleclick.net https://api.rollbar.com https://www.google-analytics.com https://d2kgdofmel8ecp.cloudfront.net ws://localhost:* https://*.godsunchained.com https://*.immutable.com https://*.apollo.gg https://api.coinmarketcap.com wss://*.immutable.com ws://*.immutable.com https://*.infura.io https://www.facebook.com/tr/ https://vimeo.com/api/ https://*.vimeocdn.com/ https://*.akamaized.net/ https://*.vimeo.com https://bam.nr-data.net;",
+    "connect-src 'self' 'unsafe-eval' intercept: intercept://*.godsunchained.com https://*.launchdarkly.com https://stats.g.doubleclick.net https://api.rollbar.com https://www.google-analytics.com https://d2kgdofmel8ecp.cloudfront.net ws://localhost:* https://*.godsunchained.com https://*.immutable.com https://*.apollo.gg https://api.coinmarketcap.com wss://*.immutable.com ws://*.immutable.com https://*.infura.io https://vimeo.com/api/ https://*.vimeocdn.com/ https://*.akamaized.net/ https://*.vimeo.com https://bam.nr-data.net;",
     "form-action 'self' https://*.godsunchained.com https://*.immutable.com https://*.apollo.gg;",
     "frame-src 'self' https://www.google.com/ https://player.vimeo.com/ https://*.immutable.com https://*.godsunchained.com https://www.recaptcha.net;",
     "child-src 'self' *.vimeo.com *.vimeocdn.com;",
