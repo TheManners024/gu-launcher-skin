@@ -3289,10 +3289,6 @@ cerberus-confirm-modal .ctaSection__button[type="primary"]:not(:hover) {
 
 
 gu-plain-square-button {
-    --textFillColor: var(--gu-blue) !important;
-    --borderColor: var(--gu-blue) !important;
-    --borderColorHover: var(--gu-blue-hover) !important;
-    --backgroundFillColor: var(--gu-blue-dark) !important;
     transition: color 280ms cubic-bezier(.4,0,.2,1), border-color 280ms cubic-bezier(.4,0,.2,1);
 }
 

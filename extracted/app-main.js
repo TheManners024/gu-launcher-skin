@@ -5322,7 +5322,7 @@ return $.\u0275fac = function (y) {
     align-items: center;
     border-radius: ${(0, e.asCssProp)((0, n.gridUnits)(.75))};
     background: var(--gu-blue-dark) !important;
-    border: solid 1px var(--gu-blue) !important;
+    border: solid 1px transparent !important;
     color: var(--gu-blue) !important;
     flex-grow: 0;
     height: ${(0, e.asCssProp)((0, n.gridUnits)(9))};
