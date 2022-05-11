@@ -3651,7 +3651,7 @@ app-create-new-button > .text {
 }
 
 .deckName {
-    color: var(--gu-yellow) !important;
+    color: var(--gu-gray) !important;
     font-weight: bold !important;
     font-size: 10px !important;
     word-break: break-word;
