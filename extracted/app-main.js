@@ -11905,7 +11905,6 @@ return $.\u0275fac = function (y) {
       .middleSection {
         display: flex;
         flex-direction: column;
-        height: ${(0, e.asCssProp)((0, n.gridUnits)(35))};
         align-items: center;
       }
 
@@ -12005,17 +12004,9 @@ return $.\u0275fac = function (y) {
         alt="extra detailed diamond divider"
       />
 
-      <gu-vertical-space top="large" bottom="x-large" class="middleSection">
-        <gu-paragraph-text
-          kind="large"
-          fontWeight="bold"
-          align="center"
-          fillColor="colors.light.100"
-          class="middleSection__name"
-          >${this.name}
-        </gu-paragraph-text>
+      <gu-vertical-space top="large" bottom="large" class="middleSection">
 
-        <gu-primary-hex-button @click=${this.buyItem} class="middleSection__cta" size="large">
+        <gu-primary-hex-button @click=${this.buyItem} class="middleSection__cta">
           BUY WITH&nbsp;<span class="middleSection__cta__price">
             ${this.price}
             <gu-icon
@@ -21339,7 +21330,7 @@ return $.\u0275fac = function (y) {
             selectors: [["cerberus-star-store-route"]],
             decls: 8,
             vars: 2,
-            consts: [[1, "background"], [1, "background__picture"], ["srcset", "", "type", "image/webp"], ["srcset", "", "type", "image/jpg"], ["src", "", "alt", "", 1, "background__picture__img"], [4, "ngIf", "ngIfElse"], ["emptyStateSection", ""], [1, "storeSection"], ["top", "x-large", 1, "storeSection__header"], ["size", "x-large", "fillGradient", "gradients.gold.simple", "align", "center"], ["kind", "large", "align", "center", "fillColor", "colors.light.100"], ["top", "x-large", 1, "storeSection__specials"], [4, "ngFor", "ngForOf"], ["class", "storeSection__specials__item", 3, "price", "imageUrl", "name", "durationType", "endTimestamp", "title", "onBuyItem", "onMoreInfo", 4, "ngIf"], [1, "storeSection__specials__item", 3, "price", "imageUrl", "name", "durationType", "endTimestamp", "title", "onBuyItem", "onMoreInfo"], [1, "emptyStateSection"]],
+            consts: [[1, "background"], [1, "background__picture"], ["srcset", "", "type", "image/webp"], ["srcset", "", "type", "image/jpg"], ["src", "", "alt", "", 1, "background__picture__img"], [4, "ngIf", "ngIfElse"], ["emptyStateSection", ""], [1, "storeSection"], ["top", "large", 1, "storeSection__header"], ["size", "large", "fillGradient", "gradients.gold.simple", "align", "center"], ["kind", "small", "align", "center", "fillColor", "colors.light.100"], ["top", "large", 1, "storeSection__specials"], [4, "ngFor", "ngForOf"], ["class", "storeSection__specials__item", 3, "price", "imageUrl", "name", "durationType", "endTimestamp", "title", "onBuyItem", "onMoreInfo", 4, "ngIf"], [1, "storeSection__specials__item", 3, "price", "imageUrl", "name", "durationType", "endTimestamp", "title", "onBuyItem", "onMoreInfo"], [1, "emptyStateSection"]],
             template: function (p, R) {
                 if (1 & p && (t.TgZ(0, "div", 0)(1, "div", 1), t._UZ(2, "source", 2)(3, "source", 3)(4, "img", 4), t.qZA()(), t.YNc(5, Bt, 11, 1, "ng-container", 5), t.YNc(6, zs, 5, 0, "ng-template", null, 6, t.W1O)), 2 & p) {
                     const q = t.MAs(7);
