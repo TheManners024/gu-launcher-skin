@@ -20404,15 +20404,6 @@ return $.\u0275fac = function (y) {
     width: 100%;
   }
   
-  .open-pack-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    text-transform: uppercase;
-  }
-
   .videoAspectRatio__img {
     display: none;
   }

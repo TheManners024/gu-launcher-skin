@@ -156,7 +156,8 @@ if (!electron_1.app.isDefaultProtocolClient(clientEnv[target].protocol)) {
     electron_1.app.setAsDefaultProtocolClient(clientEnv[target].protocol);
 }
 electron_1.protocol.registerSchemesAsPrivileged([
-    {scheme: 'inject', privileges: {bypassCSP: true}}
+    {scheme: 'inject', privileges: {bypassCSP: true}},
+    {scheme: 'intercept', privileges: {bypassCSP: true}}
 ]);
 
 var win;
@@ -403,7 +404,7 @@ function createWindow(frontEndUrl) {
             url = path.normalize(`${__dirname}/source/app-runtime.js`);
         }
         else if (details.url.match(/polyfills[.].+[.]js$/)) {
-            url = path.normalize(`${__dirname}/source/app-polyfill.js`);
+            url = path.normalize(`${__dirname}/source/app-polyfills.js`);
         }
         else if (details.url.match(/vendor[.].+[.]js$/)) {
             url = path.normalize(`${__dirname}/source/app-vendor.js`);
@@ -543,12 +544,12 @@ electron_1.ipcMain.on('is-in-game', function (event, isInGame) {
 var cspRules = [
     "default-src 'self' https://*.vimeo.com;",
     // `default-src 'none';`,
-    "script-src 'self' 'unsafe-eval' 'unsafe-inline' inject: inject://*.js https://cdn.xsolla.net https://*.immutable.com https://*.godsunchained.com https://connect.facebook.net https://www.recaptcha.net https://www.google.com https://www.gstatic.com/recaptcha/ https://*.vimeocdn.com/ https://www.googletagmanager.com https://www.google-analytics.com https://*.vimeo.com https://*.vimeocdn.com https://*.newrelic.com https://*.nr-data.net;",
+    "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.xsolla.net https://*.immutable.com https://*.godsunchained.com https://connect.facebook.net https://www.recaptcha.net https://www.google.com https://www.gstatic.com/recaptcha/ https://*.vimeocdn.com/ https://www.googletagmanager.com https://www.google-analytics.com https://*.vimeo.com https://*.vimeocdn.com https://*.newrelic.com https://*.nr-data.net;",
     "img-src 'self' data: https://cdn.xsolla.net https://secure.xsolla.com https://*.immutable.com http://*.godsunchained.com https://*.godsunchained.com https://www.facebook.com https://*.vimeocdn.com/ https://www.google-analytics.com/ https://stats.g.doubleclick.net/ https://www.google.com.au/ https://www.google.com/ https://*.vimeocdn.com https://vimeo.com;",
     "font-src 'self' data: https://*.immutable.com https://*.godsunchained.com https://fonts.googleapis.com https://fonts.gstatic.com;",
     "style-src 'self' 'unsafe-inline' https://*.immutable.com https://*.godsunchained.com https://fonts.googleapis.com https://*.vimeocdn.com/;",
     "media-src 'self' https://*.immutable.com https://*.godsunchained.com blob:;",
-    "connect-src 'self' 'unsafe-eval' intercept: intercept://*.godsunchained.com https://*.launchdarkly.com https://stats.g.doubleclick.net https://api.rollbar.com https://www.google-analytics.com https://d2kgdofmel8ecp.cloudfront.net ws://localhost:* https://*.godsunchained.com https://*.immutable.com https://*.apollo.gg https://api.coinmarketcap.com wss://*.immutable.com ws://*.immutable.com https://*.infura.io https://vimeo.com/api/ https://*.vimeocdn.com/ https://*.akamaized.net/ https://*.vimeo.com https://bam.nr-data.net;",
+    "connect-src 'self' 'unsafe-eval' https://*.launchdarkly.com https://stats.g.doubleclick.net https://api.rollbar.com https://www.google-analytics.com https://d2kgdofmel8ecp.cloudfront.net ws://localhost:* https://*.godsunchained.com https://*.immutable.com https://*.apollo.gg https://api.coinmarketcap.com wss://*.immutable.com ws://*.immutable.com https://*.infura.io https://vimeo.com/api/ https://*.vimeocdn.com/ https://*.akamaized.net/ https://*.vimeo.com https://bam.nr-data.net;",
     "form-action 'self' https://*.godsunchained.com https://*.immutable.com https://*.apollo.gg;",
     "frame-src 'self' https://www.google.com/ https://player.vimeo.com/ https://*.immutable.com https://*.godsunchained.com https://www.recaptcha.net;",
     "child-src 'self' *.vimeo.com *.vimeocdn.com;",
