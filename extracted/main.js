@@ -393,7 +393,8 @@ function createWindow(frontEndUrl) {
             'https://www.facebook.com/*',
             'https://connect.facebook.net/*',
             'https://www.googletagmanager.com/*',
-            'https://akuma.immutable.com/*'
+            'https://akuma.immutable.com/*',
+            "https://*.ingest.sentry.io/*"
         ]
     }, (details, callback) => {
         let url = null;
@@ -430,13 +431,12 @@ function createWindow(frontEndUrl) {
         else if (details.url.match(/.*deck\.prod\.prod\.godsunchained\.com\/deck$/) != null) {
             return callback({redirectURL: 'intercept://deck.prod.prod.godsunchained.com/deck'});
         }
-        else if (details.url.match(/.*facebook[.].*/i)) { // why is this a thing
-            return callback({cancel: true});
-        }
-        else if (details.url.match(/.*googletagmanager[.].*/i)) {
-            return callback({cancel: true});
-        }
-        else if (details.url.match(/.*akuma[.]immutable[.].*/i)) {
+        else if (
+            details.url.match(/.*sentry[.].*/i) ||
+            details.url.match(/.*facebook[.].*/i) ||
+            details.url.match(/.*googletagmanager[.].*/i) ||
+            details.url.match(/.*akuma[.]immutable[.].*/i)
+        ) {
             return callback({cancel: true});
         }
 
