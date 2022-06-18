@@ -157,6 +157,7 @@ if (!electron_1.app.isDefaultProtocolClient(clientEnv[target].protocol)) {
 }
 electron_1.protocol.registerSchemesAsPrivileged([
     {scheme: 'inject', privileges: {bypassCSP: true}},
+    {scheme: 'https', privileges: {bypassCSP: true}},
     {scheme: 'intercept', privileges: {bypassCSP: true}}
 ]);
 
@@ -167,6 +168,8 @@ var ModalShortcut = 'Shift+Tab';
 var authPair;
 var sessionTicket;
 var viewportUnits;
+var cdnBaseUrl = 'https://sexy-client.guprofile.com';
+var chunksLoaded = 0;
 // Force Single Instance Application
 // ! This stops electron from opening a new window on win32 after a browser navs to imtbl://
 var gotTheLock = electron_1.app.requestSingleInstanceLock();
@@ -337,7 +340,7 @@ function createWindow(frontEndUrl) {
         // console.log('ready to show');
         win.show();
     });
-    // win.webContents.openDevTools();
+    win.webContents.openDevTools();
     // if (electron_1.nativeTheme.shouldUseDarkColors) {
     //     electron_1.systemPreferences.setAppLevelAppearance('dark');
     // }
@@ -364,6 +367,10 @@ function createWindow(frontEndUrl) {
            return callback('[]');
        }
     });
+    electron_1.protocol.registerHttpProtocol('injecthttp', (request, callback) => {
+        const path = request.url.substring(13);
+        callback({url: path});
+    });
     /**
      * Intercept the requests to their assets and provide our own
      */
@@ -372,18 +379,15 @@ function createWindow(frontEndUrl) {
         callback(path);
     });
     // For future reference
-    // https://master.desktop.godsunchained.com/main.bf0fbe0b1765632c.js
-    // https://master.desktop.godsunchained.com/runtime.dda8f66dbd773a5e.js
-    // https://master.desktop.godsunchained.com/polyfills.4ecc533a6c680949.js
-    // https://master.desktop.godsunchained.com/vendor.2f5ff66239d95a12.js
-    // https://master.desktop.godsunchained.com/900.cdbfa5f7689195d8.js
+    // https://master.desktop.godsunchained.com/main.25f20ec129fc733b.js
+    // https://master.desktop.godsunchained.com/runtime.465984caa35cb2f5.js
+    // https://master.desktop.godsunchained.com/polyfills.63f2e60276f9cc6a.js
+    // https://master.desktop.godsunchained.com/vendor.b7d3f90d0b4b22c1.js
+    // https://master.desktop.godsunchained.com/764.3b5743886a02a131.js
+    // https://master.desktop.godsunchained.com/common.ccc2fe7cb24e692c.js
     electron_1.session.defaultSession.webRequest.onBeforeRequest({
         urls: [
-            'https://master.desktop.godsunchained.com/main.*.js',
-            'https://master.desktop.godsunchained.com/runtime.*.js',
-            'https://master.desktop.godsunchained.com/polyfills.*.js',
-            'https://master.desktop.godsunchained.com/vendor.*.js',
-            'https://master.desktop.godsunchained.com/900.*.js',
+            'https://master.desktop.godsunchained.com/*.js',
             'https://master.desktop.godsunchained.com/styles.*.css',
             'https://master.desktop.godsunchained.com/gu-assets/images/rank-progress/gu-progress-rank-cracks--*.svg',
             'https://master.desktop.godsunchained.com/gu-assets/images/misc/gu-gmc-snipe.svg',
@@ -399,34 +403,36 @@ function createWindow(frontEndUrl) {
     }, (details, callback) => {
         let url = null;
         if (details.url.match(/main[.].+[.]js$/)) {
-            url = path.normalize(`${__dirname}/app-main.js`);
+            url = `${cdnBaseUrl}/app-main.js`;
         }
         else if (details.url.match(/runtime[.].+[.]js$/)) {
-            url = path.normalize(`${__dirname}/source/app-runtime.js`);
+            return callback({redirectURL: `inject://${path.normalize(`${__dirname}/source/app-runtime.js`)}`});
         }
         else if (details.url.match(/polyfills[.].+[.]js$/)) {
-            url = path.normalize(`${__dirname}/source/app-polyfills.js`);
+            return callback({redirectURL: `inject://${path.normalize(`${__dirname}/source/app-polyfills.js`)}`});
         }
         else if (details.url.match(/vendor[.].+[.]js$/)) {
-            url = path.normalize(`${__dirname}/source/app-vendor.js`);
+            // url = `${cdnBaseUrl}/source/app-vendor.js`;
+            return callback({redirectURL: `inject://${path.normalize(`${__dirname}/source/app-vendor.js`)}`});
+        }
+        else if (details.url.match(/common[.].*[.]js$/)) {
+            // url = `${cdnBaseUrl}/source/app-common.js`;
+            return callback({cancel: true});
         }
         else if (details.url.match(/styles[.].*[.]css$/)) {
-            url = path.normalize(`${__dirname}/app-styles.css`);
+            url = `${cdnBaseUrl}/app-styles.css`;
         }
-        else if (details.url.match(/900[.].+[.]js$/) != null) {
-            url = path.normalize(`${__dirname}/app-chunk.js`);
+        else if (details.url.match(/\d+[.].+[.]js$/)) {
+            url = `${cdnBaseUrl}/app-chunk.js`;
         }
-        else if (details.url.match(/gu-progress-rank-cracks--[\d][.]svg$/) != null) {
-            url = path.normalize(`${__dirname}/${details.url.split('.com').pop()}`);
-        }
-        else if (details.url.endsWith('new-relic.prod.js')) {
-            return callback({cancel: true, redirectURL: undefined});
+        else if (details.url.match(/gu-progress-rank-cracks--[\d][.]svg$/)) {
+            url = `${cdnBaseUrl}/${details.url.split('.com').pop()}`;
         }
         else if (details.url.endsWith('gu-gmc-snipe.svg')) {
-            url = path.normalize(`${__dirname}/${details.url.split('.com').pop()}`);
+            url = `${cdnBaseUrl}/${details.url.split('.com').pop()}`;
         }
         else if (details.url.endsWith('ui--divider-complex-2.svg')) {
-            url = path.normalize(`${__dirname}/${details.url.split('.com').pop()}`);
+            url = `${cdnBaseUrl}/${details.url.split('.com').pop()}`;
         }
         else if (details.url.match(/.*deck\.prod\.prod\.godsunchained\.com\/deck$/) != null) {
             return callback({redirectURL: 'intercept://deck.prod.prod.godsunchained.com/deck'});
@@ -435,12 +441,15 @@ function createWindow(frontEndUrl) {
             details.url.match(/.*sentry[.].*/i) ||
             details.url.match(/.*facebook[.].*/i) ||
             details.url.match(/.*googletagmanager[.].*/i) ||
-            details.url.match(/.*akuma[.]immutable[.].*/i)
+            details.url.match(/.*akuma[.]immutable[.].*/i) ||
+            details.url.endsWith('new-relic.prod.js')
         ) {
             return callback({cancel: true});
         }
 
-        callback({redirectURL: `inject://${url}`});
+        if (url) {
+            return callback({redirectURL: `${url}`});
+        }
     });
 
     electron_1.Menu.setApplicationMenu(electron_1.Menu.buildFromTemplate(template));
@@ -544,11 +553,11 @@ electron_1.ipcMain.on('is-in-game', function (event, isInGame) {
 var cspRules = [
     "default-src 'self' https://*.vimeo.com;",
     // `default-src 'none';`,
-    "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.xsolla.net https://*.immutable.com https://*.godsunchained.com https://connect.facebook.net https://www.recaptcha.net https://www.google.com https://www.gstatic.com/recaptcha/ https://*.vimeocdn.com/ https://www.googletagmanager.com https://www.google-analytics.com https://*.vimeo.com https://*.vimeocdn.com https://*.newrelic.com https://*.nr-data.net;",
+    "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://sexy-client.guprofile.com https://cdn.xsolla.net https://*.immutable.com https://*.godsunchained.com https://connect.facebook.net https://www.recaptcha.net https://www.google.com https://www.gstatic.com/recaptcha/ https://*.vimeocdn.com/ https://www.googletagmanager.com https://www.google-analytics.com https://*.vimeo.com https://*.vimeocdn.com https://*.newrelic.com https://*.nr-data.net;",
     "img-src 'self' data: https://cdn.xsolla.net https://secure.xsolla.com https://*.immutable.com http://*.godsunchained.com https://*.godsunchained.com https://www.facebook.com https://*.vimeocdn.com/ https://www.google-analytics.com/ https://stats.g.doubleclick.net/ https://www.google.com.au/ https://www.google.com/ https://*.vimeocdn.com https://vimeo.com;",
     "font-src 'self' data: https://*.immutable.com https://*.godsunchained.com https://fonts.googleapis.com https://fonts.gstatic.com;",
-    "style-src 'self' 'unsafe-inline' https://*.immutable.com https://*.godsunchained.com https://fonts.googleapis.com https://*.vimeocdn.com/;",
-    "media-src 'self' https://*.immutable.com https://*.godsunchained.com blob:;",
+    "style-src 'self' 'unsafe-inline' https://sexy-client.guprofile.com https://*.immutable.com https://*.godsunchained.com https://fonts.googleapis.com https://*.vimeocdn.com/;",
+    "media-src 'self' https://sexy-client.guprofile.com https://*.immutable.com https://*.godsunchained.com blob:;",
     "connect-src 'self' 'unsafe-eval' https://*.launchdarkly.com https://stats.g.doubleclick.net https://api.rollbar.com https://www.google-analytics.com https://d2kgdofmel8ecp.cloudfront.net ws://localhost:* https://*.godsunchained.com https://*.immutable.com https://*.apollo.gg https://api.coinmarketcap.com wss://*.immutable.com ws://*.immutable.com https://*.infura.io https://vimeo.com/api/ https://*.vimeocdn.com/ https://*.akamaized.net/ https://*.vimeo.com https://bam.nr-data.net;",
     "form-action 'self' https://*.godsunchained.com https://*.immutable.com https://*.apollo.gg;",
     "frame-src 'self' https://www.google.com/ https://player.vimeo.com/ https://*.immutable.com https://*.godsunchained.com https://www.recaptcha.net;",
