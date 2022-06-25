@@ -15987,7 +15987,6 @@ return $.\u0275fac = function (y) {
             pageTitle: "Collections: Your collections"
         },
         workshop: {shortName: "workshop", path: "game/gu/my-decks", icon: "nav_workshop"},
-        forge: {path: "game/gu/forge", icon: "nav_forge", shortName: "forge", featureFlag: fe.v.forgeEnabled},
         openPacks: {shortName: "open packs", path: "game/gu/temple", icon: "nav_temple"},
         learn: {
             shortName: "learn",

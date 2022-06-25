@@ -3914,3 +3914,19 @@ gu-controllable-vimeo-embed.introVideo {
     display: none;
 }
 
+.user-info__user-rank {
+    display: none;
+}
+
+.user-info__right-side {
+    color: var(--gu-green);
+}
+
+.user-info__right-side > .user-info__top-row > div > gu-icon,
+.user-info__right-side > .user-info__top-row > div > gu-simple-text {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+}
+
