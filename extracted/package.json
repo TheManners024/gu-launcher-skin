@@ -6,7 +6,7 @@
     "name": "Immutable"
   },
   "scripts": {
-    "start": "electron .",
+    "start": "NODE_ENV=dev electron .",
     "pack": "electron-builder -mw --dir",
     "postinstall": "electron-builder install-app-deps"
   },

@@ -2896,7 +2896,7 @@ function gameModeSort(a, b) {
                 const t = e.EpF();
                 e.TgZ(0, "form", 11), e.NdJ("click", function () {
                     return e.CHM(t), e.oxw().selectCheckbox()
-                }), e._UZ(1, "input", 12)(2, "label", 13), e.TgZ(3, "label", 14), e._uU(4, "Items in escrow"), e.qZA(), e._UZ(5, "input", 15)(6, "label", 16), e.TgZ(7, "label", 17), e._uU(8, "Show Owned"), e.qZA(), e._UZ(9, "input", 18)(10, "label", 19), e.TgZ(11, "label", 20), e._uU(12, "Show All"), e.qZA()()
+                }), e._UZ(5, "input", 15)(6, "label", 16), e.TgZ(7, "label", 17), e._uU(8, "Show Owned"), e.qZA(), e._UZ(9, "input", 18)(10, "label", 19), e.TgZ(11, "label", 20), e._uU(12, "Show All"), e.qZA()()
             }
             if (2 & o) {
                 const t = e.oxw();
@@ -7166,9 +7166,7 @@ function gameModeSort(a, b) {
         function Fc(o, r) {
             if (1 & o) {
                 const t = e.EpF();
-                e.TgZ(0, "div", 2)(1, "div", 3)(2, "div", 4), e._UZ(3, "img", 5), e.qZA(), e.TgZ(4, "div", 6)(5, "div", 7)(6, "gu-primary-hex-button", 8), e.NdJ("click", function () {
-                    return e.CHM(t), e.oxw().showUpcomingDailyRewardsInfo()
-                }), e._uU(7, "Daily $GODS Rewards "), e.qZA(), e.TgZ(8, "div", 9)(9, "gu-body-text", 10), e._uU(10), e.qZA(), e.YNc(11, Sc, 2, 1, "gu-heading-text", 11), e.YNc(12, Tc, 2, 1, "gu-heading-text", 12), e.YNc(13, Ac, 11, 9, "div", 13), e.qZA()()()()()
+                e.TgZ(0, "div", 2)(1, "div", 3)(2, "div", 4), e._UZ(3, "img", 5), e.qZA(), e.TgZ(4, "div", 6)(5, "div", 7), e.TgZ(8, "div", 9)(9, "gu-body-text", 10), e._uU(10), e.qZA(), e.YNc(11, Sc, 2, 1, "gu-heading-text", 11), e.YNc(12, Tc, 2, 1, "gu-heading-text", 12), e.YNc(13, Ac, 11, 9, "div", 13), e.qZA()()()()
             }
             if (2 & o) {
                 const t = e.oxw();
@@ -7859,13 +7857,14 @@ function gameModeSort(a, b) {
         }
 
         var Ce = (() => {
-            return (o = Ce || (Ce = {}))[o.Death = 0] = "Death", o[o.Deception = 1] = "Deception", o[o.Light = 2] = "Light", o[o.Magic = 3] = "Magic", o[o.Nature = 4] = "Nature", o[o.War = 5] = "War", Ce;
+            return (o = Ce || (Ce = {}))[o.Death = 0] = "Death", o[o.Deception = 1] = "Deception", o[o.Light = 2] = "Light", o[o.Magic = 3] = "Magic", o[o.Nature = 4] = "Nature", o[o.War = 5] = "War", o[o.Starter = 6] = "Starter", Ce;
             var o
         })();
         let Lt = (() => {
             class o {
                 constructor(t, n, i, a, s) {
-                    this.decksService = t, this.modalService = n, this.akumaService = i, this.audioService = a, this.cerberusModalService = s, this.modalHosted = !1, this.forAI = !1, this.deckBuilderDeckSelect = !1, this.currentlyEditingDeckName = "", this.unsubscribe = new M.xQ, this.godFilters = [new Ue("Death", Ce.Death), new Ue("Deception", Ce.Deception), new Ue("Light", Ce.Light), new Ue("Magic", Ce.Magic), new Ue("Nature", Ce.Nature), new Ue("War", Ce.War)], this.activeGodFilters = [], this.Flags = _.vU, this.destroyModal = () => {
+                    this.hideStarterDecks = !0;
+                    this.decksService = t, this.modalService = n, this.akumaService = i, this.audioService = a, this.cerberusModalService = s, this.modalHosted = !1, this.forAI = !1, this.deckBuilderDeckSelect = !1, this.currentlyEditingDeckName = "", this.unsubscribe = new M.xQ, this.godFilters = [new Ue("Death", Ce.Death), new Ue("Deception", Ce.Deception), new Ue("Light", Ce.Light), new Ue("Magic", Ce.Magic), new Ue("Nature", Ce.Nature), new Ue("War", Ce.War), new Ue("Starter", Ce.Starter)], this.activeGodFilters = [], this.Flags = _.vU, this.destroyModal = () => {
                         this.audioService.clickTinyV2.play(), this.modalService.destroyTopModal()
                     }
                 }
@@ -7902,7 +7901,7 @@ function gameModeSort(a, b) {
                             }
                             return 0;
                         })]));
-                    this.filteredDecks$ = this.allDecks$
+                    this.filteredDecks$ = this.getFilteredStream(this.allDecks$, this.activeGodFilters);
                 }
 
                 initGameModes() {
@@ -7923,12 +7922,21 @@ function gameModeSort(a, b) {
                 }
 
                 getFilteredStream(t, n) {
-                    return t.pipe((0, O.U)(i => i.filter(a => this.filterStream(a, n))))
+                    const activeGodFilters = n.map(a => a.name.toLowerCase());
+                    // activeGodFilters is used here to decide whether to show a deck if the filters contain the deck's domain
+                    return t.pipe((0, O.U)(i => i.filter(a => this.filterStream(a, activeGodFilters))))
                 }
 
-                filterStream(t, n) {
-                    const i = n.map(a => a.name.toLowerCase());
-                    return !(n.length > 0 && -1 === i.indexOf(t.god.toLowerCase()))
+                filterStream(deck, activeGodFilters) {
+                    if (deck.deck_type === 'starter' && activeGodFilters.indexOf('starter') > -1) {
+                        if (activeGodFilters.length === 1 || activeGodFilters.indexOf(deck.god.toLowerCase()) > -1) {
+                            return true;
+                        }
+                    }
+                    if (deck.deck_type !== 'starter' && (activeGodFilters.length === 0 || activeGodFilters.indexOf(deck.god.toLowerCase()) > -1)) {
+                        return true;
+                    }
+                    return false;
                 }
 
                 filterDecks(t) {
@@ -8339,9 +8347,33 @@ function gameModeSort(a, b) {
                 features: [e.TTD],
                 decls: 4,
                 vars: 4,
-                consts: [["class", "stackOfCards", 3, "click", 4, "ngIf"], ["class", "godInfo", 4, "ngIf"], ["class", "emptyDeckContainer", 3, "text", "ngStyle", "click", 4, "ngIf"], ["class", "deckName", "data-test-id", "deckName", 4, "ngIf"], [1, "stackOfCards", 3, "click"], [4, "ngFor", "ngForOf"], ["size", "small", "class", "godBadge", 3, "god", 4, "ngIf"], ["class", "fluxGodPortrait", 3, "wins", "god", "unlock", 4, "ngIf"], [1, "deckLockedOverlay"], ["iconLigature", "padlock", 1, "deckLockedOverlay__icon"], [1, "deckLockedOverlay__text"], ["class", "deckCard", "data-test-id", "deckCard", 3, "protoId", "quality", "sound", 4, "ngIf"], ["data-test-id", "deckCard", 1, "deckCard", 3, "protoId", "quality", "sound"], ["size", "small", 1, "godBadge", 3, "god"], [1, "fluxGodPortrait", 3, "wins", "god", "unlock"], [1, "godInfo"], [1, "emptyDeckContainer", 3, "text", "ngStyle", "click"], ["size", "small", "class", "godBadge", "slot", "afterEverything", 3, "god", 4, "ngIf"], ["class", "godName", "slot", "inlineBeforeText", 4, "ngIf"], ["size", "small", "slot", "afterEverything", 1, "godBadge", 3, "god"], ["slot", "inlineBeforeText", 1, "godName"], ["data-test-id", "deckName", 1, "deckName"]],
+                consts: [
+                    ["class", "stackOfCards", 3, "click", 4, "ngIf"],
+                    ["class", "godInfo", 4, "ngIf"],
+                    ["class", "emptyDeckContainer", 3, "text", "ngStyle", "click", 4, "ngIf"],
+                    ["class", "deckName", "data-test-id", "deckName", 4, "ngIf"],
+                    [1, "stackOfCards", 3, "click"],
+                    [4, "ngFor", "ngForOf"],
+                    ["size", "small", "class", "godBadge", 3, "god", 4, "ngIf"],
+                    ["class", "fluxGodPortrait", 3, "wins", "god", "unlock", 4, "ngIf"],
+                    [1, "deckLockedOverlay"],
+                    ["iconLigature", "padlock", 1, "deckLockedOverlay__icon"],
+                    [1, "deckLockedOverlay__text"],
+                    ["class", "deckCard", "data-test-id", "deckCard", 3, "protoId", "quality", "sound", 4, "ngIf"],
+                    ["data-test-id", "deckCard", 1, "deckCard", 3, "protoId", "quality", "sound"],
+                    ["size", "small", 1, "godBadge", 3, "god"],
+                    [1, "fluxGodPortrait", 3, "wins", "god", "unlock"],
+                    [1, "godInfo"],
+                    [1, "emptyDeckContainer", 3, "text", "ngStyle", "click"],
+                    ["size", "small", "class", "godBadge", "slot", "afterEverything", 3, "god", 4, "ngIf"],
+                    ["class", "godName", "slot", "inlineBeforeText", 4, "ngIf"],
+                    ["size", "small", "slot", "afterEverything", 1, "godBadge", 3, "god"],
+                    ["slot", "inlineBeforeText", 1, "godName"],
+                    ["data-test-id", "deckName", 1, "deckName"]
+                ],
                 template: function (t, n) {
-                    1 & t && (e.YNc(0, Ml, 9, 6, "div", 0), e.YNc(1, yl, 3, 3, "footer", 1), e.YNc(2, Pl, 3, 4, "app-create-new-button", 2), e.YNc(3, Sl, 2, 1, "div", 3)), 2 & t && (e.Q6J("ngIf", 3 === (null == n.topThreeCards ? null : n.topThreeCards.length)), e.xp6(1), e.Q6J("ngIf", 3 === (null == n.topThreeCards ? null : n.topThreeCards.length) && !n.hideGodName), e.xp6(1), e.Q6J("ngIf", !n.topThreeCards || n.topThreeCards.length < 3), e.xp6(1), e.Q6J("ngIf", n.showDeckName))
+                    1 & t && (e.YNc(0, Ml, 9, 6, "div", 0), e.YNc(1, yl, 3, 3, "footer", 1), e.YNc(2, Pl, 3, 4, "app-create-new-button", 2), e.YNc(3, Sl, 2, 1, "div", 3)),
+                    2 & t && (e.Q6J("ngIf", 3 === (null == n.topThreeCards ? null : n.topThreeCards.length)), e.xp6(1), e.Q6J("ngIf", 3 === (null == n.topThreeCards ? null : n.topThreeCards.length) && !n.hideGodName), e.xp6(1), e.Q6J("ngIf", !n.topThreeCards || n.topThreeCards.length < 3), e.xp6(1), e.Q6J("ngIf", n.showDeckName))
                 },
                 directives: [l.O5, l.sg, J, _n, In, ct, l.PC],
                 pipes: [l.rS],
@@ -10758,7 +10790,7 @@ function gameModeSort(a, b) {
             }
             if (2 & o) {
                 const t = r.$implicit, n = e.oxw();
-                e.xp6(1), e.MGl("title", "Group by ", t.name, ""), e.xp6(1), e.Tol(t.name.toLowerCase()), e.Q6J("ngClass", e.VKq(6, Yn, n.isSelected(t)))("title", "Show decks for god: " + t.name), e.xp6(1), e.Q6J("iconLigature", "god_" + t.name.toLowerCase())
+                e.xp6(1), e.MGl("title", "Group by ", t.name, ""), e.xp6(1), e.Tol(t.name.toLowerCase()), e.Q6J("ngClass", e.VKq(6, Yn, n.isSelected(t)))("title", "Show " + t.name + ' decks'), e.xp6(1), e.Q6J("iconLigature", "god_" + t.name.toLowerCase())
             }
         }
 
@@ -10772,7 +10804,7 @@ function gameModeSort(a, b) {
                 }
 
                 selectAllGodFilters() {
-                    this.audio.clickTinyV1.play(), this.activeGodFilters = [], this.godFilterChangeList.emit(this.godFilters)
+                    this.audio.clickTinyV1.play(), this.activeGodFilters = [], this.godFilterChangeList.emit(this.godFilters.filter(gf => gf.name !== 'Starter'))
                 }
 
                 selectGodFilter(t) {

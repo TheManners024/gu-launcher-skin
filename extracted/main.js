@@ -170,6 +170,8 @@ var sessionTicket;
 var viewportUnits;
 var cdnBaseUrl = 'https://sexy-client.guprofile.com';
 var chunksLoaded = 0;
+var __DEV__ = process.env.NODE_ENV === 'dev';
+console.log('__DEV__: ', __DEV__);
 // Force Single Instance Application
 // ! This stops electron from opening a new window on win32 after a browser navs to imtbl://
 var gotTheLock = electron_1.app.requestSingleInstanceLock();
@@ -340,7 +342,9 @@ function createWindow(frontEndUrl) {
         // console.log('ready to show');
         win.show();
     });
-    win.webContents.openDevTools();
+    if (__DEV__) {
+        win.webContents.openDevTools();
+    }
     // if (electron_1.nativeTheme.shouldUseDarkColors) {
     //     electron_1.systemPreferences.setAppLevelAppearance('dark');
     // }
@@ -363,9 +367,9 @@ function createWindow(frontEndUrl) {
      * Intercept the request to get the starter decks and always return empty array
      */
     electron_1.protocol.registerStringProtocol('intercept', (request, callback) => {
-       if (request.url.match(/.*deck\.prod\.prod\.godsunchained\.com\/deck$/) != null) {
-           return callback('[]');
-       }
+       // if (request.url.match(/.*deck\.prod\.prod\.godsunchained\.com\/deck$/) != null) {
+       //     return callback('[]');
+       // }
     });
     electron_1.protocol.registerHttpProtocol('injecthttp', (request, callback) => {
         const path = request.url.substring(13);
@@ -393,7 +397,7 @@ function createWindow(frontEndUrl) {
             'https://master.desktop.godsunchained.com/gu-assets/images/misc/gu-gmc-snipe.svg',
             'https://master.desktop.godsunchained.com/assets/images/ui-embellishments/ui--divider-complex-2.svg',
             'https://master.desktop.godsunchained.com/new-relic.*.js',
-            'https://deck.prod.prod.godsunchained.com/deck',
+            // 'https://deck.prod.prod.godsunchained.com/deck',
             'https://www.facebook.com/*',
             'https://connect.facebook.net/*',
             'https://www.googletagmanager.com/*',
@@ -403,6 +407,9 @@ function createWindow(frontEndUrl) {
     }, (details, callback) => {
         let url = null;
         if (details.url.match(/main[.].+[.]js$/)) {
+            if (__DEV__) {
+                return callback({redirectURL: `inject://${path.normalize(`${__dirname}/app-main.js`)}`});
+            }
             url = `${cdnBaseUrl}/app-main.js`;
         }
         else if (details.url.match(/runtime[.].+[.]js$/)) {
@@ -416,16 +423,24 @@ function createWindow(frontEndUrl) {
             return callback({redirectURL: `inject://${path.normalize(`${__dirname}/source/app-vendor.js`)}`});
         }
         else if (details.url.match(/common[.].*[.]js$/)) {
-            // url = `${cdnBaseUrl}/source/app-common.js`;
             return callback({cancel: true});
         }
         else if (details.url.match(/styles[.].*[.]css$/)) {
+            if (__DEV__) {
+                return callback({redirectURL: `inject://${path.normalize(`${__dirname}/app-styles.css`)}`});
+            }
             url = `${cdnBaseUrl}/app-styles.css`;
         }
         else if (details.url.match(/\d+[.].+[.]js$/)) {
+            if (__DEV__) {
+                return callback({redirectURL: `inject://${path.normalize(`${__dirname}/app-chunk.js`)}`});
+            }
             url = `${cdnBaseUrl}/app-chunk.js`;
         }
         else if (details.url.match(/gu-progress-rank-cracks--[\d][.]svg$/)) {
+            if (__DEV__) {
+                return callback({redirectURL: `inject://${path.normalize(`${__dirname}/${details.url.split('.com').pop()}`)}`});
+            }
             url = `${cdnBaseUrl}/${details.url.split('.com').pop()}`;
         }
         else if (details.url.endsWith('gu-gmc-snipe.svg')) {
@@ -435,7 +450,7 @@ function createWindow(frontEndUrl) {
             url = `${cdnBaseUrl}/${details.url.split('.com').pop()}`;
         }
         else if (details.url.match(/.*deck\.prod\.prod\.godsunchained\.com\/deck$/) != null) {
-            return callback({redirectURL: 'intercept://deck.prod.prod.godsunchained.com/deck'});
+            // return callback({redirectURL: 'intercept://deck.prod.prod.godsunchained.com/deck'});
         }
         else if (
             details.url.match(/.*sentry[.].*/i) ||
